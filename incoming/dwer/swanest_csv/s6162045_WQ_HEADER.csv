@@ -1,0 +1,38 @@
+Data File Name,s6162045_WQ.csv
+Location,swanest_csv/
+Station Status,Active
+Lat,-31.904372594
+Long,-31.904372594
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6162045
+Site Description,6162045
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),1166.9783
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Bottom Depth (m),Decimal
+QC,String
+Cloud Cover (%),Decimal
+QC,String
+Conductivity (\muS/cm),Decimal
+QC,String
+O2 Saturation (%),Decimal
+QC,String
+Oxygen (mg/L),Decimal
+QC,String
+pH (),Decimal
+QC,String
+Salinity (psu),Decimal
+QC,String
+Secchi depth (m),Decimal
+QC,String
+Temperature (^{\circ}C),Decimal
+QC,String
+Turbidity (NTU),Decimal
+QC,String
+Wind Direction ((ø)),Decimal
+QC,String
+Wind Speed (m/s),Decimal
+QC,String

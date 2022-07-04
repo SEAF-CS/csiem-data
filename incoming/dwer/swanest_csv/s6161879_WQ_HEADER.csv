@@ -1,0 +1,70 @@
+Data File Name,s6161879_WQ.csv
+Location,swanest_csv/
+Station Status,Active
+Lat,-31.898440277
+Long,-31.898440277
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161879
+Site Description,6161879
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),770.8839
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Total Alkalinity (mg/L),Decimal
+QC,String
+Bottom Depth (m),Decimal
+QC,String
+Dissolved Organic Carbon (mg/L),Decimal
+QC,String
+Chlorophyll-a (\mug/L),Decimal
+QC,String
+Chlorophyll-b (\mug/L),Decimal
+QC,String
+Chlorophyll-c (\mug/L),Decimal
+QC,String
+Chlorophyll sample volume ((mL)),Decimal
+QC,String
+Cloud Cover (%),Decimal
+QC,String
+Conductivity (\muS/cm),Decimal
+QC,String
+Dissolved Organic Nitrogen (mg/L),Decimal
+QC,String
+Nitrate (mg/L),Decimal
+QC,String
+Total TKN (mg/L),Decimal
+QC,String
+Total Nitrogen (mg/L),Decimal
+QC,String
+Ammonium (mg/L),Decimal
+QC,String
+O2 Saturation (%),Decimal
+QC,String
+Oxygen (mg/L),Decimal
+QC,String
+Total Phosphorus (mg/L),Decimal
+QC,String
+pH (),Decimal
+QC,String
+Phaeophytin a (mg/L),Decimal
+QC,String
+Filterable Reactive Phosphate (mg/L),Decimal
+QC,String
+Salinity (psu),Decimal
+QC,String
+Secchi depth (m),Decimal
+QC,String
+Reactive Silica (mg/L),Decimal
+QC,String
+Total Suspended Solids (mg/L),Decimal
+QC,String
+Temperature (^{\circ}C),Decimal
+QC,String
+Turbidity (NTU),Decimal
+QC,String
+Wind Direction ((ø)),Decimal
+QC,String
+Wind Speed (m/s),Decimal
+QC,String
