@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6161870_Chlorophyll_c_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-31.951371818
+Long,115.913400409
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161870
+Site Description,6161870
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),7034.3371
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Chlorophyll-c (\mug/L),Decimal
+QC,String

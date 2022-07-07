@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6160262_Cloud_Cover_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-31.963657373
+Long,115.848779930
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6160262
+Site Description,6160262
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),10215.1637
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Cloud Cover (%),Decimal
+QC,String

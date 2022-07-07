@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,616088_Min_Discharge_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-31.862700965
+Long,116.013984561
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,616088
+Site Description,616088
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),3532.2353
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Min Discharge (m/s),Decimal
+QC,String

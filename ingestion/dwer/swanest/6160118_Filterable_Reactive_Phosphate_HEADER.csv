@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6160118_Filterable_Reactive_Phosphate_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Inactive
+Lat,-31.878074630
+Long,115.992277595
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6160118
+Site Description,6160118
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),19.3823
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Filterable Reactive Phosphate (mg/L),Decimal
+QC,String

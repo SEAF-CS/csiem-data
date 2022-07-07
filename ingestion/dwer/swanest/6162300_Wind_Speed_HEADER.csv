@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6162300_Wind_Speed_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-31.900481015
+Long,115.961691096
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6162300
+Site Description,6162300
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),10755.7167
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Wind Speed (m/s),Decimal
+QC,String

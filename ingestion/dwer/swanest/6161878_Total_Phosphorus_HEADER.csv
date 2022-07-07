@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6161878_Total_Phosphorus_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-31.921403755
+Long,115.940132419
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161878
+Site Description,6161878
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),9387.9045
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Total Phosphorus (mg/L),Decimal
+QC,String

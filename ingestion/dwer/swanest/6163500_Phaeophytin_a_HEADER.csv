@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6163500_Phaeophytin_a_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Inactive
+Lat,-31.856300025
+Long,115.995599956
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6163500
+Site Description,6163500
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min), NaN
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Phaeophytin a (mg/L),Decimal
+QC,String

@@ -1,0 +1,18 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Data File Name,6160258_Total_Suspended_Solids_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-32.017126042
+Long,115.784128632
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6160258
+Site Description,6160258
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),20224.9968
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Total Suspended Solids (mg/L),Decimal
+QC,String
