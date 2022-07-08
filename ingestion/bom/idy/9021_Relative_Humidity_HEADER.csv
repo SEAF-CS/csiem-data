@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9021_Relative_Humidity_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-31.92750000
+Long,115.97640000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9021
+Site Description,PERTH AIRPORT                           
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),28.5729
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Relative Humidity (%),Decimal
+QC,String

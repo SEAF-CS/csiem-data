@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9215_Max_Wind_Speed_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-31.95600000
+Long,115.76190000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9215
+Site Description,SWANBOURNE                              
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),29.3356
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Max Wind Speed (m/s),Decimal
+QC,String

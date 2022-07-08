@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9255_Cloud_height_of_fourth_group_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Inactive
+Lat,-32.22720000
+Long,115.69940000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9255
+Site Description,COLPOYS POINT                           
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min), NaN
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Cloud height of fourth group (ft),Decimal
+QC,String

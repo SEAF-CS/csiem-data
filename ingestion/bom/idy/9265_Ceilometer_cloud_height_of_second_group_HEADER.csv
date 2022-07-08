@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9265_Ceilometer_cloud_height_of_second_group_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Inactive
+Lat,-31.82560000
+Long,115.73860000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9265
+Site Description,HILLARYS BOAT HARBOUR NTC AWS           
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min), NaN
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Ceilometer cloud height of second group (ft),Decimal
+QC,String

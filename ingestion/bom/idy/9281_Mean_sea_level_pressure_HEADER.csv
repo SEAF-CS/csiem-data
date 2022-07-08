@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9281_Mean_sea_level_pressure_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-31.81120000
+Long,116.02270000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9281
+Site Description,MILLENDON (SWAN VALLEY)                 
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),29.8436
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Mean sea level pressure (hPa),Decimal
+QC,String

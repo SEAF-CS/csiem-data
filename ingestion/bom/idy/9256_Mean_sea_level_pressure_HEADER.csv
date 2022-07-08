@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9256_Mean_sea_level_pressure_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-32.24330000
+Long,115.68390000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9256
+Site Description,GARDEN ISLAND HSF                       
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),49.5281
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Mean sea level pressure (hPa),Decimal
+QC,String

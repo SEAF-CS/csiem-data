@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9225_Wind_Direction_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-31.91920000
+Long,115.87280000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9225
+Site Description,PERTH METRO                             
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),30.2959
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Wind Direction (ø),Decimal
+QC,String

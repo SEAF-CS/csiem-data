@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9091_Cloud_amount_of_fourth_group_in_eighths_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Inactive
+Lat,-31.98890000
+Long,115.83110000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9091
+Site Description,INNER DOLPHIN PYLON                     
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min), NaN
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Cloud amount of fourth group in eighths (oktas),Decimal
+QC,String

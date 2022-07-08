@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9193_Ceilometer_sky_clear_flag_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-32.00690000
+Long,115.50220000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9193
+Site Description,ROTTNEST ISLAND                         
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),32.3007
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Ceilometer sky clear flag (),Decimal
+QC,String

@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9053_Cloud_height_of_second_group_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-31.66690000
+Long,116.01890000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9053
+Site Description,PEARCE RAAF                             
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),523.5026
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Cloud height of second group (ft),Decimal
+QC,String

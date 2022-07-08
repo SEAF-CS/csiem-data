@@ -1,0 +1,18 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9172_Wet_Bulb_Air_Temperature_DATA.csv
+Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Station Status,Active
+Lat,-32.10110000
+Long,115.87940000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9172
+Site Description,JANDAKOT AERO                           
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Sampling Rate (min),29.0107
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Wet Bulb Air Temperature (^{\circ}C),Decimal
+QC,String
