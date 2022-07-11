@@ -1,7 +1,7 @@
 Agency Name,Bureau of Meteorology
 Agency Code,BOM
-Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9240_Air_Temperature_DATA.csv
-Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Data File Name,9240_Air_Temperature_DATA.csv
+Location,csiem-data\ingestion\bom\idy\
 Station Status,Active
 Lat,-32.00720000
 Long,116.13690000

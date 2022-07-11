@@ -1,7 +1,7 @@
 Agency Name,Bureau of Meteorology
 Agency Code,BOM
-Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\9053_Cloud_amount_of_third_group_in_eighths_DATA.csv
-Location,C:\Users\00065525\Github\csiem-data\ingestion\bom\idy\
+Data File Name,9053_Cloud_amount_of_third_group_in_eighths_DATA.csv
+Location,csiem-data\ingestion\bom\idy\
 Station Status,Active
 Lat,-31.66690000
 Long,116.01890000
