@@ -1,5 +1,7 @@
 Agency Name,Bureau of Meteorology
 Agency Code,BOM
+Program,Weather
+Project,IDY
 Data File Name,9265_Mean_sea_level_pressure_DATA.csv
 Location,csiem-data\ingestion\bom\idy\
 Station Status,Active

@@ -1,0 +1,20 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANEST
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\dwer\swanest/6161837_Total_Nitrogen_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-32.027503947
+Long,115.901182458
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161837
+Site Description,6161837
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),6692.7729
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Total Nitrogen (mg/L),Decimal
+QC,String

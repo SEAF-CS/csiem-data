@@ -1,0 +1,20 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANEST
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\dwer\swanest/6161838_Wind_Direction_DATA.csv
+Location,ingestion/dwer/swanest
+Station Status,Active
+Lat,-32.030813081
+Long,115.872233129
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161838
+Site Description,6161838
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Sampling Rate (min),13883.1260
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Wind Direction (ø),Decimal
+QC,String

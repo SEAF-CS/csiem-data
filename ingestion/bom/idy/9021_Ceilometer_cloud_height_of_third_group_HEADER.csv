@@ -1,5 +1,7 @@
 Agency Name,Bureau of Meteorology
 Agency Code,BOM
+Program,Weather
+Project,IDY
 Data File Name,9021_Ceilometer_cloud_height_of_third_group_DATA.csv
 Location,csiem-data\ingestion\bom\idy\
 Station Status,Active

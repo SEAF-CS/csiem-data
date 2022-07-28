@@ -1,5 +1,7 @@
 Agency Name,Department of Transport
 Agency Code,DOT
+Program,Coastal Data
+Project,Tide
 Data File Name,FFFBH01_Tidal_Height.csv
 Location,ingestion/dot/tide
 Station Status,Active

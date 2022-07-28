@@ -1,5 +1,7 @@
 Agency Name,Bureau of Meteorology
 Agency Code,BOM
+Program,Weather
+Project,IDY
 Data File Name,9021_Present_weather_in_code_DATA.csv
 Location,csiem-data\ingestion\bom\idy\
 Station Status,Active

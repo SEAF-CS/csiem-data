@@ -1,6 +1,8 @@
 Agency Name,Department of Water and Environmental Regulation
 Agency Code,DWER
-Data File Name,6160263_Chlorophyll_b_DATA.csv
+Program,Estuary
+Project,SWANEST
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\dwer\swanest/6160263_Chlorophyll_b_DATA.csv
 Location,ingestion/dwer/swanest
 Station Status,Active
 Lat,-31.954845290
