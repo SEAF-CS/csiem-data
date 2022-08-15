@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANEST
+Data File Name,616099_Mean_Stage_Height_DATA.csv
+Location,data-warehouse/csv/dwer/swanest
+Station Status,Active
+Lat,   NaN
+Long,   NaN
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,616099
+Site Description,616099
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),1440.0000
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Mean Stage Height (m),Decimal
+QC,String

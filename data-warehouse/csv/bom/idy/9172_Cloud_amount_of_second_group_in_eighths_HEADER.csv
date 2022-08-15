@@ -1,0 +1,21 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Program,Weather
+Project,IDY
+Data File Name,9172_Cloud_amount_of_second_group_in_eighths_DATA.csv
+Location,data-warehouse/csv/bom/idy
+Station Status,Inactive
+Lat,-32.10110000
+Long,115.87940000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9172
+Site Description,JANDAKOT AERO                           
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Data Classification,MET General
+Sampling Rate (min),1276.7325
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Cloud amount of second group in eighths (oktas),Decimal
+QC,String

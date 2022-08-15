@@ -1,0 +1,225 @@
+Global Attributes
+Project,Western Australian Marine Science Institute (WAMSI), Westport Theme 5 
+Author,Tanziha Mahjabin
+Principal_investigator,Charitha Pattiaratchi
+Principal_investigator_email,chari.pattiaratchi@uwa.edu.au
+Location,Cockburn_Sound
+Instrument_model,RDI 1200 kHz -Workhorse ADCP
+Serial_Number,2303
+Raw_filename,March2303.mat
+Instrument_sample_interval,5 minutes
+Geospatial_lat_min,-32.2044
+Geospatial_lat_max,-32.2044
+Geospatial_lon_min,115.75
+Geospatial_lon_max,115.75
+Instrument_nominal_depth,10
+Site_depth_at_deployment,11
+Local_time_zone,8
+Data_period,31-Jan-2022 17:37:59  UTC to 20-Feb-2022 13:37:11  UTC
+Original_NETCDF,UWA_CS6_ADCP_2303.nc
+
+Variables
+
+TIME
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,time
+long_name,time
+units,Days since 1950-01-01 00:00:00 UTC
+calendar,gregorian
+axis,T
+valid_min,0
+valid_max,90000
+FillValue,999999
+
+LATITUDE
+
+Dimensions
+
+Dim: 1 x 1
+
+Attributes
+
+standard_name,latitude
+long_name,latitude
+units,degrees_north
+axis,Y
+reference_datum,geographical coordinates, WGS84 projection
+valid_min,-90
+valid_max,90
+FillValue,999999
+
+LONGITUDE
+
+Dimensions
+
+Dim: 1 x 1
+
+Attributes
+
+standard_name,longitude
+long_name,longitude
+units,degrees_east
+axis,X
+reference_datum,geographical coordinates, WGS84 projection
+valid_min,-180
+valid_max,180
+FillValue,999999
+
+CELL
+
+Dimensions
+
+Dim: 55 x 1
+
+Attributes
+
+standard_name,cells_ranges
+long_name,cells_ranges
+units,metres
+each_cell_size,0.25
+
+UCUR
+
+Dimensions
+
+Dim: 55 x 3449
+
+Attributes
+
+standard_name,eastward_sea_water_velocity
+long_name,eastward_sea_water_velocity
+units,m s-1
+positive,eastward
+reference_datum,sea surface
+valid_min,-10
+valid_max,10
+FillValue,999999
+
+VCUR
+
+Dimensions
+
+Dim: 55 x 3449
+
+Attributes
+
+standard_name,northward_sea_water_velocity
+long_name,northward_sea_water_velocity
+units,m s-1
+positive,northward
+valid_min,-10
+valid_max,10
+FillValue,999999
+
+TEMPERATURE
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,sea_water_temperature
+long_name,sea_water_temperature
+units,Celsius
+valid_min,-2.5
+valid_max,40
+FillValue,999999
+
+SALINITY
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,sea_water_practical_salinity
+long_name,sea_water_practical_salinity
+units,psu
+valid_min,2
+valid_max,41
+FillValue,999999
+
+SPEED_OF_SOUND
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,speed_of_sound
+long_name,speed_of_sound
+units,m s-1
+FillValue,999999
+
+HEADING
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,platform_yaw_angle
+long_name,platform_yaw_angle
+units,Degrees clockwise from true North
+valid_min,0
+valid_max,360
+FillValue,999999
+magnetic_declination,30.7502
+
+PITCH
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,platform_pitch_angle
+long_name,platform_pitch_angle
+units,degrees
+valid_min,-180
+valid_max,180
+FillValue,999999
+
+ROLL
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,platform_roll_angle
+long_name,platform_roll_angle
+units,degrees
+valid_min,-180
+valid_max,180
+FillValue,999999
+
+PRESSURE_SENSOR_DEPTH
+
+Dimensions
+
+Dim: 3449 x 1
+
+Attributes
+
+standard_name,pressure_sensor_depth
+long_name,pressure_sensor_depth
+units,metres
+positive,down
+reference_datum,sea surface
+valid_min,0
+valid_max,12000
+FillValue,999999
+

@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANEST
+Data File Name,6162995_Dissolved_Organic_Carbon_DATA.csv
+Location,data-warehouse/csv/dwer/swanest
+Station Status,Active
+Lat,   NaN
+Long,   NaN
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6162995
+Site Description,6162995
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),22076.8204
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Dissolved Organic Carbon (mg/L),Decimal
+QC,String

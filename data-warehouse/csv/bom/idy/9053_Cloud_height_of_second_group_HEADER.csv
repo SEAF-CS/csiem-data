@@ -1,0 +1,21 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Program,Weather
+Project,IDY
+Data File Name,9053_Cloud_height_of_second_group_DATA.csv
+Location,data-warehouse/csv/bom/idy
+Station Status,Active
+Lat,-31.66690000
+Long,116.01890000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9053
+Site Description,PEARCE RAAF                             
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Data Classification,MET General
+Sampling Rate (min),523.5026
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Cloud height of second group (ft),Decimal
+QC,String

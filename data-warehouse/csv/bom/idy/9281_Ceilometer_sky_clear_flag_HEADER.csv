@@ -1,0 +1,21 @@
+Agency Name,Bureau of Meteorology
+Agency Code,BOM
+Program,Weather
+Project,IDY
+Data File Name,9281_Ceilometer_sky_clear_flag_DATA.csv
+Location,data-warehouse/csv/bom/idy
+Station Status,Active
+Lat,-31.81120000
+Long,116.02270000
+Time Zone,GMT +8
+Vertical Datum, 
+National Station ID,9281
+Site Description,MILLENDON (SWAN VALLEY)                 
+Bad or Unavailable Data Value,-9999
+Contact Email,climatedata@bom.gov.au
+Data Classification,MET General
+Sampling Rate (min),29.8780
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Ceilometer sky clear flag (),Decimal
+QC,String

@@ -1,0 +1,21 @@
+Agency Name,Department of Transport
+Agency Code,DOT
+Program,Coastal Data
+Project,Tide
+Data File Name,RKMGL01_Tidal_Height.csv
+Location,data-warehouse/csv/dot/tide
+Station Status,Inactive
+Lat,-32.274431
+Long,115.703344
+Time Zone,GMT +8
+Vertical Datum,Chart datum which is 2.527m below Benchmark DMH 073 
+National Station ID,RKMGL01
+Site Description,Mangles Bay
+Bad or Unavailable Data Value,-9999
+Contact Email,tides@transport.wa.gov.au
+Data Classification,HYDRO Level
+Sampling Rate (min),9.0831
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Tidal Height (m),Decimal
+QC,String

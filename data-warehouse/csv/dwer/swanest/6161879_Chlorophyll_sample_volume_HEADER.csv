@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANEST
+Data File Name,6161879_Chlorophyll_sample_volume_DATA.csv
+Location,data-warehouse/csv/dwer/swanest
+Station Status,Active
+Lat,   NaN
+Long,   NaN
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161879
+Site Description,6161879
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),6431.3725
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Chlorophyll sample volume (mL),Decimal
+QC,String

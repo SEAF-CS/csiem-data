@@ -12,3 +12,17 @@ incoming/wamsi/wwmsp5/.DS_Store
 .DS_Store
 incoming/.DS_Store
 incoming/bom/ngis/timeseriesData/level_WA.csv
+data-lake/bom/HM01X_Data_009021_9999999910143263.txt
+data-lake/bom/HM01X_Data_009172_9999999910143263.txt
+data-lake/bom/HM01X_Data_009193_9999999910143263.txt
+data-lake/bom/HM01X_Data_009214_9999999910143263.txt
+data-lake/bom/HM01X_Data_009215_9999999910143263.txt
+data-lake/bom/HM01X_Data_009225_9999999910143263.txt
+data-lake/uwa/.DS_Store
+data-lake/uwa/oi/.DS_Store
+data-lake/wamsi/.DS_Store
+data-lake/wamsi/wwmsp5/.DS_Store
+.DS_Store
+data-lake/.DS_Store
+data-lake/bom/ngis/timeseriesData/level_WA.csv
+data-lake/wamsi/wwmsp5/Pressure

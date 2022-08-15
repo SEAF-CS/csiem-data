@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANEST
+Data File Name,6142980_Secchi_depth_DATA.csv
+Location,data-warehouse/csv/dwer/swanest
+Station Status,Active
+Lat,   NaN
+Long,   NaN
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6142980
+Site Description,6142980
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),46000.0000
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Secchi depth (m),Decimal
+QC,String
