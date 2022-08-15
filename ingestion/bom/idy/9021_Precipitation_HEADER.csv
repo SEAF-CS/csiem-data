@@ -13,6 +13,7 @@ National Station ID,9021
 Site Description,PERTH AIRPORT                           
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
+Data Classification,MET General
 Sampling Rate (min),34.1982
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal

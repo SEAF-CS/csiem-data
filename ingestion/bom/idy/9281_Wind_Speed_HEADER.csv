@@ -13,6 +13,7 @@ National Station ID,9281
 Site Description,MILLENDON (SWAN VALLEY)                 
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
+Data Classification,MET General
 Sampling Rate (min),29.8787
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal

@@ -2,7 +2,7 @@ Agency Name,Department of Water and Environmental Regulation
 Agency Code,DWER
 Program,Estuary
 Project,SWANEST
-Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\dwer\swanest/6160262_Filterable_Reactive_Phosphate_DATA.csv
+Data File Name,C:\Users\00065525\Github\csiem-data\ingestion\dwer\swanest\6160262_Filterable_Reactive_Phosphate_DATA.csv
 Location,ingestion/dwer/swanest
 Station Status,Active
 Lat,-31.963657373
@@ -13,6 +13,7 @@ National Station ID,6160262
 Site Description,6160262
 Bad or Unavailable Data Value,NaN
 Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
 Sampling Rate (min),11713.1192
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
