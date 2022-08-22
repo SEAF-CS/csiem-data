@@ -1,0 +1,11 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),27-11-2018 09:17:02,0.2,7.010000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),27-11-2018 09:18:37,0.5,7.060000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),27-11-2018 09:21:40,1,6.950000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),27-11-2018 09:29:27,1.1,6.250000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),27-11-2018 09:30:08,1.4,6.220000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),04-12-2018 09:09:14,0.223,6.520000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),04-12-2018 09:09:47,0.526,6.510000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),04-12-2018 09:11:15,1.003,5.110000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),04-12-2018 09:11:59,1.326,4.880000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Oxygen (mg/L),04-12-2018 09:13:12,1.613,4.780000,Good

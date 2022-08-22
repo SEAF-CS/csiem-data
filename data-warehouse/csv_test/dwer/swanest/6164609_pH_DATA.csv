@@ -1,0 +1,7 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027517,115.913222,GMT +8,mAHD,6164609,6164609,WQ Grab,pH (),19-05-2015 08:09:16,0.231,8.390000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027517,115.913222,GMT +8,mAHD,6164609,6164609,WQ Grab,pH (),19-05-2015 08:09:53,0.521,8.220000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027517,115.913222,GMT +8,mAHD,6164609,6164609,WQ Grab,pH (),19-05-2015 08:10:23,1.054,8.120000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027517,115.913222,GMT +8,mAHD,6164609,6164609,WQ Grab,pH (),19-05-2015 08:10:51,1.539,8.050000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027517,115.913222,GMT +8,mAHD,6164609,6164609,WQ Grab,pH (),19-05-2015 08:11:31,2.025,7.640000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027517,115.913222,GMT +8,mAHD,6164609,6164609,WQ Grab,pH (),19-05-2015 08:12:03,2.337,7.350000,Good

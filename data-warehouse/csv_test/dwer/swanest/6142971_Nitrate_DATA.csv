@@ -1,0 +1,3 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.152366,115.720158,GMT +8,mAHD,6142971,6142971,WQ Grab,Nitrate (mg/L),19-07-2021 13:41:00,0 - 18.5,0.034000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.152366,115.720158,GMT +8,mAHD,6142971,6142971,WQ Grab,Nitrate (mg/L),02-08-2021 13:41:00,0 - 18.4,0.053000,Good

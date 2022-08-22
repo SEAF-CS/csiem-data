@@ -1,0 +1,13 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),01-02-2021 12:34:00,0 - 8.7,0.000300,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),01-03-2021 11:59:00,0 - 8.6,0.000200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),19-07-2021 13:17:00,0 - 9.1,0.000300,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),02-08-2021 13:18:00,0 - 8.8,0.000300,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),07-09-2021 12:52:00,0 - 9,0.000500,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),23-10-2021 11:15:00,0 - 8.8,0.000200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),09-11-2021 12:49:00,0 - 8.2,0.000200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),01-02-2022 12:35:00,0 - 8.5,0.000200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),08-03-2022 12:25:00,0 - 9.1,0.000100,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),07-04-2022 12:25:00,0 - 9.5,0.000100,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),02-05-2022 13:15:00,0 - 9.6,0.000200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Chlorophyll-c (\mug/L),02-06-2022 13:58:00,0 - 9.5,0.000200,Good

@@ -1,0 +1,20 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),15-01-2021 13:21:00,NaN,10.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),02-02-2021 11:38:01,NaN,0.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),02-03-2021 12:17:01,NaN,15.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),07-04-2021 12:46:00,NaN,90.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),07-05-2021 13:01:01,NaN,15.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),03-06-2021 13:42:01,NaN,5.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),20-07-2021 13:17:01,NaN,100.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),03-08-2021 13:32:01,NaN,70.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),08-09-2021 13:22:01,NaN,70.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),22-10-2021 12:40:01,NaN,30.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),10-11-2021 11:57:01,NaN,0.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),09-12-2021 12:02:01,NaN,30.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),05-01-2022 11:20:01,NaN,0.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),02-02-2022 13:58:01,NaN,0.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),07-03-2022 11:57:01,NaN,5.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),06-04-2022 12:38:01,NaN,5.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),04-05-2022 14:24:01,NaN,40.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),01-06-2022 14:02:01,NaN,100.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.198595,115.684831,GMT +8,mAHD,6142989,6142989,WQ Grab,Cloud Cover (%),12-07-2022 14:33:01,NaN,50.000000,Good

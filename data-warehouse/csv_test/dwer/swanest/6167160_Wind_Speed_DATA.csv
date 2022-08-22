@@ -1,0 +1,3 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Wind Speed (m/s),16-12-2019 10:16:00,NaN,1.581000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Wind Speed (m/s),06-01-2020 11:16:00,NaN,5.100000,Good

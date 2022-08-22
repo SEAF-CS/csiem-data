@@ -1,0 +1,11 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),09-12-2019 11:06:00,0,0.003200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),09-12-2019 11:06:01,0 - 5.5,0.003500,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),16-12-2019 10:16:01,0,0.002800,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),16-12-2019 10:16:03,0 - 5.5,0.003200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),23-12-2019 10:33:00,0,0.002800,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),23-12-2019 10:33:01,0 - 5,0.002900,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),30-12-2019 09:12:00,0 - 5.5,0.001700,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),30-12-2019 09:12:01,0,0.001600,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),06-01-2020 11:16:01,0,0.001000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-31.998889,115.844250,GMT +8,mAHD,6167160,6167160,WQ Grab,Chlorophyll-a (\mug/L),06-01-2020 11:16:03,0 - 5.5,0.001600,Good

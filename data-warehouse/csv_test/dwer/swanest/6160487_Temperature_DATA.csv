@@ -1,0 +1,11 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),27-11-2018 09:17:02,0.2,20.049000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),27-11-2018 09:18:37,0.5,19.910000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),27-11-2018 09:21:40,1,19.684000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),27-11-2018 09:29:27,1.1,20.980000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),27-11-2018 09:30:08,1.4,21.709000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),04-12-2018 09:09:14,0.223,23.865000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),04-12-2018 09:09:47,0.526,23.866000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),04-12-2018 09:11:15,1.003,24.335000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),04-12-2018 09:11:59,1.326,24.344000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.023285,115.884958,GMT +8,mAHD,6160487,6160487,WQ Grab,Temperature (^{\circ}C),04-12-2018 09:13:12,1.613,24.294000,Good

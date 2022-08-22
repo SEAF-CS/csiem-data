@@ -1,0 +1,9 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),25-02-2004 12:48:00,0 - 1,0.000800,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),25-02-2004 12:48:01,1 - 2,0.001600,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),26-02-2004 10:00:00,0 - 1,0.000800,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),26-02-2004 10:00:01,1.5,0.001400,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),26-02-2004 13:22:00,0 - 1,0.000500,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),26-02-2004 16:05:00,NaN,0.001000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),27-02-2004 00:00:01,1.5 - 2,0.000800,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.019964,115.927744,GMT +8,mAHD,6161892,6161892,WQ Grab,Phaeophytin a (mg/L),27-02-2004 00:00:02,0.2,0.000500,Good

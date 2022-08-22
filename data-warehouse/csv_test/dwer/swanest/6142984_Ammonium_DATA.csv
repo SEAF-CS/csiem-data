@@ -1,0 +1,7 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Ammonium (mg/L),01-03-2021 11:59:00,0 - 8.6,0.000900,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Ammonium (mg/L),01-06-2021 12:51:00,0 - 9.7,0.004200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Ammonium (mg/L),19-07-2021 13:17:00,0 - 9.1,0.006900,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Ammonium (mg/L),02-08-2021 13:18:00,0 - 8.8,0.013000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Ammonium (mg/L),02-05-2022 13:15:00,0 - 9.6,0.000600,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.182803,115.739090,GMT +8,mAHD,6142984,6142984,WQ Grab,Ammonium (mg/L),02-06-2022 13:58:00,0 - 9.5,0.001500,Good

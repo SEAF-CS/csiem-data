@@ -1,0 +1,4 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027504,115.901182,GMT +8,mAHD,6161837,6161837,WQ Grab,Total Alkalinity (mg/L),20-02-2007 07:53:00,0,130000.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027504,115.901182,GMT +8,mAHD,6161837,6161837,WQ Grab,Total Alkalinity (mg/L),19-06-2007 08:31:00,0 - 0.5,120000.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.027504,115.901182,GMT +8,mAHD,6161837,6161837,WQ Grab,Total Alkalinity (mg/L),21-06-2011 08:48:00,0,100000.000000,Good

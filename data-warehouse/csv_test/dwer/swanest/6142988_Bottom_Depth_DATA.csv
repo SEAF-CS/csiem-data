@@ -1,0 +1,8 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),15-01-2021 12:51:01,NaN,-12.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),02-02-2021 11:12:01,NaN,-8.800000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),02-03-2021 11:55:01,NaN,-8.300000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),07-04-2021 12:18:01,NaN,-9.900000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),07-05-2021 12:22:01,NaN,-9.600000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),03-06-2021 13:18:01,NaN,-11.300000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.215297,115.696612,GMT +8,mAHD,6142988,6142988,WQ Grab,Bottom Depth (m),20-07-2021 12:45:01,NaN,-13.000000,Good

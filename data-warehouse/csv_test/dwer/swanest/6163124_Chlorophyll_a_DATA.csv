@@ -1,0 +1,53 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),02-01-2000 10:36:00,0 - 2.5,0.004600,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),04-01-2000 10:26:00,0 - 2,0.012000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),05-01-2000 14:38:00,0 - 2,0.017000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),06-01-2000 15:09:00,0 - 2,0.005000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),07-01-2000 15:51:00,0 - 2.7,0.006000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),08-01-2000 09:43:00,0 - 2,0.008000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),09-01-2000 09:29:00,0 - 2,0.012000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),10-01-2000 15:15:00,0 - 2.5,0.026000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),11-01-2000 15:10:00,0 - 2,0.025000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),12-01-2000 10:30:00,0 - 2,0.027000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),18-01-2000 07:58:00,0 - 2.5,0.020000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-01-2000 13:21:00,0 - 2,0.031000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),25-01-2000 11:07:00,0 - 2.5,0.004000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),28-01-2000 12:45:00,0 - 2,0.017000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),01-02-2000 10:12:00,0 - 2.5,0.030000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),04-02-2000 12:06:00,0 - 2.5,0.026000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),08-02-2000 10:33:00,0 - 2.5,0.016000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),15-02-2000 13:14:00,0 - 2.5,0.009000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),18-02-2000 09:15:00,0 - 2.5,0.025000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),22-02-2000 08:54:00,0 - 2.5,0.018000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),25-02-2000 10:15:00,0 - 2.5,0.020000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),29-02-2000 09:25:00,0 - 2.5,0.014000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),03-03-2000 10:14:00,0 - 2.5,0.006000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),08-03-2000 11:24:00,0 - 2.5,0.002000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),10-03-2000 11:01:00,0 - 2.5,0.003000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),15-03-2000 11:51:00,0 - 2.5,0.004000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),17-03-2000 10:42:00,0 - 2.5,0.004000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-03-2000 11:30:00,0 - 2.5,0.001000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),24-03-2000 11:02:00,0 - 2.5,0.005000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),31-03-2000 09:58:00,0 - 2,0.003000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),07-04-2000 11:00:00,0 - 2.5,0.003000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),14-04-2000 10:28:00,0 - 2.5,0.003000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),19-04-2000 11:19:00,0 - 2,0.001000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),20-04-2000 15:23:00,0,0.003000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-04-2000 14:29:00,0,0.003000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),22-04-2000 11:24:00,0,0.010000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),27-04-2000 14:40:01,0 - 2,0.008000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),02-05-2000 09:33:00,0 - 2.5,0.006000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),09-05-2000 09:29:00,0 - 2,0.007000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),12-05-2000 09:53:00,0 - 2,0.004000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),20-01-2003 17:55:00,0 - 0.5,0.014000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),20-01-2003 17:55:01,2,0.011000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-01-2003 11:07:00,0 - 0.5,0.011000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-01-2003 11:07:01,2,0.004400,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-01-2003 15:17:00,0 - 0.5,0.013000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),21-01-2003 15:17:01,2,0.009000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),22-01-2003 10:35:00,0 - 0.5,0.011000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),22-01-2003 10:35:01,2,0.003200,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),23-01-2003 11:20:00,0 - 0.5,0.021000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),23-01-2003 11:20:01,2,0.005800,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),24-01-2003 09:05:00,0 - 0.5,0.012000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll-a (\mug/L),24-01-2003 09:05:01,2,0.006500,Good

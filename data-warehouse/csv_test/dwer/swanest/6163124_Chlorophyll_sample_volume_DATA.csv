@@ -1,0 +1,13 @@
+Agency Name,Agency Code,Program,Project,Station Status,Lat,Long,Time Zone,Vertical Datum,National Station ID,Site Description,Data Classification,Variable,Date,Depth,Data,QC
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),20-01-2003 17:55:00,0 - 0.5,460.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),20-01-2003 17:55:01,2,650.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),21-01-2003 11:07:00,0 - 0.5,895.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),21-01-2003 11:07:01,2,1000.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),21-01-2003 15:17:00,0 - 0.5,500.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),21-01-2003 15:17:01,2,500.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),22-01-2003 10:35:00,0 - 0.5,500.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),22-01-2003 10:35:01,2,500.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),23-01-2003 11:20:00,0 - 0.5,500.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),23-01-2003 11:20:01,2,500.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),24-01-2003 09:05:00,0 - 0.5,1000.000000,Good
+Department of Water and Environmental Regulation,DWER,Estuary,SWANEST,Active,-32.022888,115.933131,GMT +8,mAHD,6163124,6163124,WQ Grab,Chlorophyll sample volume (mL),24-01-2003 09:05:01,2,915.000000,Good
