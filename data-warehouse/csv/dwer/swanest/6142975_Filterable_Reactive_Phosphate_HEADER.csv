@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6142975_Filterable_Reactive_Phosphate_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.209850521
+Long,115.759565504
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6142975

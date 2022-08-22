@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6161086_Chlorophyll_c_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-31.864403994
+Long,116.009082729
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6161086

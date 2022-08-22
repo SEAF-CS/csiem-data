@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,616092_Max_Stage_Height_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.078355233
+Long,115.978799149
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,616092

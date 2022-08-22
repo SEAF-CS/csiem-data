@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6160262_Total_Nitrogen_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-31.963657373
+Long,115.848779930
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6160262

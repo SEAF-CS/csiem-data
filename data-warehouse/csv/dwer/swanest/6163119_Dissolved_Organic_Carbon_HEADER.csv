@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6163119_Dissolved_Organic_Carbon_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.033899909
+Long,115.949900980
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6163119

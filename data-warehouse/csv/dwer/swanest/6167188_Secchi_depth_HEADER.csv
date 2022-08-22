@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6167188_Secchi_depth_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.022782027
+Long,115.901366003
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6167188

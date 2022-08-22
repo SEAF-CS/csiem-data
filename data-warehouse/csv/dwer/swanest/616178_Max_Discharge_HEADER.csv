@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,616178_Max_Discharge_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-31.883961063
+Long,116.094790172
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,616178

@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6164609_Conductivity_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Inactive
-Lat,   NaN
-Long,   NaN
+Lat,-32.027517496
+Long,115.913222362
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6164609

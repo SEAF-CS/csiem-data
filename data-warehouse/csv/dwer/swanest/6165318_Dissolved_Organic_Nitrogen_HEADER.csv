@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6165318_Dissolved_Organic_Nitrogen_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.017219367
+Long,115.853224684
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6165318

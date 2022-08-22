@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6160764_Total_Suspended_Solids_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-31.939806945
+Long,115.908172832
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6160764

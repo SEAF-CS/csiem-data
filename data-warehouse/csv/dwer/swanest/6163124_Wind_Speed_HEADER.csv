@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6163124_Wind_Speed_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.022887882
+Long,115.933131172
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6163124

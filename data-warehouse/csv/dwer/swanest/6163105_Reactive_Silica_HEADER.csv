@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6163105_Reactive_Silica_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.022599878
+Long,115.926699910
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6163105

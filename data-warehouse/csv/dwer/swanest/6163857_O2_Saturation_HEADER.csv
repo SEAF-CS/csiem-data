@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6163857_O2_Saturation_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Inactive
-Lat,   NaN
-Long,   NaN
+Lat,-31.883876230
+Long,115.991249113
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6163857

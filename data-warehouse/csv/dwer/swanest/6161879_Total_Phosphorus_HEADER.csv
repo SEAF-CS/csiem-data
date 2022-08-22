@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6161879_Total_Phosphorus_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-31.898440277
+Long,115.959250125
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6161879

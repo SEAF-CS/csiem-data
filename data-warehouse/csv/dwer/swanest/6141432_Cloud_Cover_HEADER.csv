@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6141432_Cloud_Cover_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Active
-Lat,   NaN
-Long,   NaN
+Lat,-32.274499976
+Long,115.702500010
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6141432

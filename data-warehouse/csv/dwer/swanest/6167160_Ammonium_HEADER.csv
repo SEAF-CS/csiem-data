@@ -5,8 +5,8 @@ Project,SWANEST
 Data File Name,6167160_Ammonium_DATA.csv
 Location,data-warehouse/csv/dwer/swanest
 Station Status,Inactive
-Lat,   NaN
-Long,   NaN
+Lat,-31.998888973
+Long,115.844249917
 Time Zone,GMT +8
 Vertical Datum,mAHD
 National Station ID,6167160
