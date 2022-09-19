@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,CANEST
+Data File Name,6161838_Oxygen_DATA.csv
+Location,data-warehouse/csv/dwer/canest
+Station Status,Active
+Lat,-32.030813081
+Long,115.872233129
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6161838
+Site Description,6161838
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),1581.7775
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Oxygen (mg/L),Decimal
+QC,String

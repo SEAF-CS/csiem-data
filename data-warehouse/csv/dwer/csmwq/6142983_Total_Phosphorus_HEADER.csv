@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,CSMWQ
+Data File Name,6142983_Total_Phosphorus_DATA.csv
+Location,data-warehouse/csv/dwer/csmwq
+Station Status,Active
+Lat,-32.248231528
+Long,115.712530827
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6142983
+Site Description,6142983
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),43598.6111
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Total Phosphorus (mg/L),Decimal
+QC,String

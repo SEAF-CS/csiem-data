@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,CANEST
+Data File Name,6163346_Total_TKN_DATA.csv
+Location,data-warehouse/csv/dwer/canest
+Station Status,Inactive
+Lat,-32.022422557
+Long,115.915559104
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6163346
+Site Description,6163346
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),16612.2961
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Total TKN (mg/L),Decimal
+QC,String

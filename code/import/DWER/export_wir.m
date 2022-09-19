@@ -2,6 +2,14 @@ clear all; close all;
 load swan.mat;
 tic
 
+[snum,sstr] = xlsread('../../actions/Projects.xlsx','A2:D10000');
+
+for k = 1:length(snum(:,1))
+    thesites{k} = num2str(snum(k,1));
+end
+theproject = sstr(:,1);
+
+
 [snum,sstr] = xlsread('../../../data-lake/variable_key.xlsx','Key','A2:D10000');
 
 varID = sstr(:,1);
@@ -21,10 +29,33 @@ sites = fieldnames(swan);
 
 for i = 1:length(sites)
     %outdir = [outputdir,sites{i},'/'];
-    outdir = [outputdir];
-    if ~exist(outdir,'dir')
-        mkdir(outdir);
+    
+    schx = regexprep(sites{i},'s','');
+    
+        sss = find(strcmpi(thesites,schx)==1);
+    
+    
+    if ~isempty(sss)
+        
+        proj = theproject{sss};
+        oldproj = 'swanest';
+        %header.Project = proj;
+        %newfile = regexprep(newfile,lower(oldproj),lower(proj));
+        outdir = regexprep(outputdir,lower(oldproj),lower(proj));
+        if ~exist(outdir,'dir')
+            mkdir(outdir);
+        end
+    else
+        proj = 'swanest';
+        outdir = [outputdir];
+        if ~exist(outdir,'dir')
+            mkdir(outdir);
+        end    
     end
+    
+    
+    
+
     
     vars = fieldnames(swan.(sites{i}));
     
@@ -53,9 +84,14 @@ for i = 1:length(sites)
         
         fprintf(fid,'Date,Depth,%s,QC\n','Data');
         
+%         for k = 1:length(swan.(sites{i}).(vars{j}).Date)
+%             fprintf(fid,'%s,%s,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
+%                 swan.(sites{i}).(vars{j}).Depth_Chx{k},swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
+%         end
+        
         for k = 1:length(swan.(sites{i}).(vars{j}).Date)
-            fprintf(fid,'%s,%s,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
-                swan.(sites{i}).(vars{j}).Depth_Chx{k},swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
+            fprintf(fid,'%s,%4.4f,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
+                swan.(sites{i}).(vars{j}).Depth(k),swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
         end
         fclose(fid);
         
@@ -67,9 +103,9 @@ for i = 1:length(sites)
         fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');
         fprintf(fid,'Agency Code,DWER\n');
         fprintf(fid,'Program,Estuary\n');
-        fprintf(fid,'Project,SWANEST\n');
+        fprintf(fid,'Project,%s\n',proj);
         fprintf(fid,'Data File Name,%s\n',regexprep(filename,outdir,''));
-        fprintf(fid,'Location,data-warehouse/csv/dwer/swanest\n');
+        fprintf(fid,'Location,%s\n',['data-warehouse/csv/dwer/',lower(proj)]);
         
         if max(swan.(sites{i}).(vars{j}).Date) >= datenum(2020,01,01)
             fprintf(fid,'Station Status,Active\n',outputdir);

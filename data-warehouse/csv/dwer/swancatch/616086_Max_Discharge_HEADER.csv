@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,SWANCATCH
+Data File Name,616086_Max_Discharge_DATA.csv
+Location,data-warehouse/csv/dwer/swancatch
+Station Status,Active
+Lat,-31.900081094
+Long,116.007611462
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,616086
+Site Description,616086
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),2444.3832
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Max Discharge (m/s),Decimal
+QC,String

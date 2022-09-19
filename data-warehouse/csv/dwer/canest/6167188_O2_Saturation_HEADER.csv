@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,CANEST
+Data File Name,6167188_O2_Saturation_DATA.csv
+Location,data-warehouse/csv/dwer/canest
+Station Status,Active
+Lat,-32.022782027
+Long,115.901366003
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6167188
+Site Description,6167188
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),2606.1242
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+O2 Saturation (%),Decimal
+QC,String

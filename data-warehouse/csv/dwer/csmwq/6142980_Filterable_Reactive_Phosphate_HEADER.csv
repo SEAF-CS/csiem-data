@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,CSMWQ
+Data File Name,6142980_Filterable_Reactive_Phosphate_DATA.csv
+Location,data-warehouse/csv/dwer/csmwq
+Station Status,Active
+Lat,-32.229518181
+Long,115.697969306
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6142980
+Site Description,6142980
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),46000.0000
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Filterable Reactive Phosphate (mg/L),Decimal
+QC,String

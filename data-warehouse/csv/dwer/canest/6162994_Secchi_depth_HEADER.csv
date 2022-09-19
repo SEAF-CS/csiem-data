@@ -1,0 +1,21 @@
+Agency Name,Department of Water and Environmental Regulation
+Agency Code,DWER
+Program,Estuary
+Project,CANEST
+Data File Name,6162994_Secchi_depth_DATA.csv
+Location,data-warehouse/csv/dwer/canest
+Station Status,Active
+Lat,-32.021467647
+Long,115.921002331
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,6162994
+Site Description,6162994
+Bad or Unavailable Data Value,NaN
+Contact Email,wir@water.wa.gov.au
+Data Classification,WQ Grab
+Sampling Rate (min),10108.9064
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Secchi depth (m),Decimal
+QC,String
