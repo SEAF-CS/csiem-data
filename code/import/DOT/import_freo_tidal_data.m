@@ -116,6 +116,7 @@ fprintf(fid,'National Station ID,FFFBH01\n');
 fprintf(fid,'Site Description,Fremantle Fishing Boat Harbour Tide Station\n');
 fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
 fprintf(fid,'Contact Email,tides@transport.wa.gov.au\n');
+fprintf(fid,'Variable ID,var00180\n');
 fprintf(fid,'Data Classification,HYDRO Level\n');
 
 SD = mean(diff(adate));

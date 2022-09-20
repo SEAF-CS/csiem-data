@@ -13,6 +13,7 @@ National Station ID,9215
 Site Description,SWANBOURNE
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
+Variable ID,⏿
 Data Classification,MET General
 Sampling Rate (min),29.3356
 Date,dd-mm-yyyy HH:MM:SS

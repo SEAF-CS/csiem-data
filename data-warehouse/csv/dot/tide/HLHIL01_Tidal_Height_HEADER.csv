@@ -13,6 +13,7 @@ National Station ID,HLHIL01
 Site Description,Hillarys
 Bad or Unavailable Data Value,-9999
 Contact Email,tides@transport.wa.gov.au
+Variable ID,var00180
 Data Classification,HYDRO Level
 Sampling Rate (min),16.3519
 Date,dd-mm-yyyy HH:MM:SS

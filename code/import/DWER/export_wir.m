@@ -120,7 +120,7 @@ for i = 1:length(sites)
         fprintf(fid,'Site Description,%s\n',regexprep(sites{i},'s',''));
         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
         fprintf(fid,'Contact Email,wir@water.wa.gov.au\n');
-        
+        fprintf(fid,'Variable ID,%s\n',ID);
         switch var_full
             
             case 'Max Discharge'

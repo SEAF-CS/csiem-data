@@ -13,6 +13,7 @@ National Station ID,9255
 Site Description,COLPOYS POINT
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
+Variable ID,␧
 Data Classification,MET General
 Sampling Rate (min),28.8102
 Date,dd-mm-yyyy HH:MM:SS

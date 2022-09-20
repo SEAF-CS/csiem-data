@@ -13,6 +13,7 @@ National Station ID,9256
 Site Description,GARDEN ISLAND HSF
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
+Variable ID,␨
 Data Classification,MET General
 Sampling Rate (min),51.6331
 Date,dd-mm-yyyy HH:MM:SS

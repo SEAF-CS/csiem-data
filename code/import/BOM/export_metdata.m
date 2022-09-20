@@ -116,6 +116,7 @@ for i = 1:length(sites)
                 fprintf(fid,'Site Description,%s\n',aSite);
                 fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
                 fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
+                fprintf(fid,'Variable ID,%s\n',ID);
                 fprintf(fid,'Data Classification,MET General\n');
 
                 SD = mean(diff(mdate));
