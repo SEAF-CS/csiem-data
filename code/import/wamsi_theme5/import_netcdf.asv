@@ -1,0 +1,88 @@
+clear all; close all;
+
+addpath(genpath('../../functions/'));
+
+filepath = '../../../data-lake/wamsi/wwmsp5/';
+
+filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
+filelist = filelist(~[filelist.isdir]);  %remove folders from list
+
+% Conversion
+[snum,sstr] = xlsread('Conversions_mh.xlsx','A2:D1000');
+
+oldheader = sstr(:,1);
+newheader = sstr(:,3);
+conv = snum(:,1);
+
+theme5 = [];
+
+
+for i = 1:length(filelist)
+    
+    disp(filelist(i).name);
+    
+    filename = [filelist(i).folder,'/',filelist(i).name];
+    
+    headerfile = regexprep(filename,'.nc','.txt');
+    
+    fid = fopen(headerfile,'rt');
+    
+    for k = 1:17
+        fline = fgetl(fid);
+    end
+    fline = fgetl(fid);
+    
+    spt = split(fline,',');
+    
+    tt = split(spt{2},'_');
+    
+    site = tt{2};
+    
+    data = tfv_readnetcdf(filename);
+    
+    
+    mtime = datenum(1950,01,01,00,00,00) + data.TIME;
+    
+    [x,y] = ll2utm(data.LATITUDE,data.LONGITUDE);
+    
+    vars = fieldnames(data);
+    
+    for j = 1:length(vars)
+        
+        sss = find(strcmpi(oldheader,vars{j}) == 1);
+        
+        if ~isempty(sss)
+            
+            if ~isfield(theme5,site)
+                theme5.(site).(newheader{sss}).Date(:,1) = mtime;
+                theme5.(site).(newheader{sss}).Data(:,1) = data.(vars{j}) * conv(sss);
+                if isfield(data,'DEPTH')
+                    theme5.(site).(newheader{sss}).Depth(:,1) = data.DEPTH;
+                else
+                    theme5.(site).(newheader{sss}).Depth(1:length(mtime),1) = 0;
+                end
+                
+                theme5.(site).(newheader{sss}).X = X;
+                theme5.(site).(newheader{sss}).Y = Y;
+                theme5.(site).(newheader{sss}).Title = site;
+                theme5.(site).(newheader{sss}).Variable_Name = headers{j};
+                theme5.(site).(newheader{sss}).Units = '';
+                
+            else
+                if isfield(theme5.(site),vars{j})
+                    
+                    
+                    
+                else
+                    
+                    
+                
+                
+                
+                
+            
+        
+    
+    
+end
+    
