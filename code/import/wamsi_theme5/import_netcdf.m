@@ -121,13 +121,13 @@ end
 
 
 save theme5.mat theme5 -mat -v7.3;
-
-
-load swan_new.mat;
-
-for i = 1:length(sites)
-    
-        swan.(sites{i}) = theme5.(sites{i});
-
-end
-save swan_new_2.mat swan -mat -v7.3;
+% 
+% 
+% load swan_new.mat;
+% 
+% for i = 1:length(sites)
+%     
+%         swan.(sites{i}) = theme5.(sites{i});
+% 
+% end
+% save swan_new_2.mat swan -mat -v7.3;
