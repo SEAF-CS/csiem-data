@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),19.3823
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Filterable Reactive Phosphate (mg/L),Decimal
+Variable,Filterable Reactive Phosphate (mg/L)
 QC,String

@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),1609.5112
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Oxygen (mg/L),Decimal
+Variable,Oxygen (mg/L)
 QC,String

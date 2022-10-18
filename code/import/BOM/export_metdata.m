@@ -84,14 +84,14 @@ for i = 1:length(sites)
                 
                 writefile = [num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
                 
-                fid = fopen(filename,'wt');
-                
-                fprintf(fid,'Date,Depth,Data,QC\n');
-                
-                for k = 1:length(mdate)
-                    fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'dd-mm-yyyy HH:MM:SS'),' ',mdata(k),QC{k});
-                end
-                fclose(fid);
+%                 fid = fopen(filename,'wt');
+%                 
+%                 fprintf(fid,'Date,Depth,Data,QC\n');
+%                 
+%                 for k = 1:length(mdate)
+%                     fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'dd-mm-yyyy HH:MM:SS'),' ',mdata(k),QC{k});
+%                 end
+%                 fclose(fid);
                 
                 headerfile = regexprep(filename,'_DATA','_HEADER');
                 
@@ -116,7 +116,7 @@ for i = 1:length(sites)
                 fprintf(fid,'Site Description,%s\n',aSite);
                 fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
                 fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
-                fprintf(fid,'Variable ID,%s\n',ID);
+                fprintf(fid,'Variable ID,%s\n',varID{varint});
                 fprintf(fid,'Data Classification,MET General\n');
 
                 SD = mean(diff(mdate));
@@ -128,7 +128,7 @@ for i = 1:length(sites)
                 
                 %thevar = [varName{sss},' (',varUnit{sss},')'];
                 
-                fprintf(fid,'%s,Decimal\n',[varName{varint},' (',varUnit{varint},')']);
+                fprintf(fid,'Variable,%s\n',[varName{varint},' (',varUnit{varint},')']);
                 fprintf(fid,'QC,String\n');
                 
                 fclose(fid);

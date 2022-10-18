@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),10165.7355
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Secchi depth (m),Decimal
+Variable,Secchi depth (m)
 QC,String

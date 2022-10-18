@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),12366.3037
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Ammonium (mg/L),Decimal
+Variable,Ammonium (mg/L)
 QC,String

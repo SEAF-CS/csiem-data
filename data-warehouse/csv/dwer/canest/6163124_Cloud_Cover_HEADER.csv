@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),13820.2090
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Cloud Cover (%),Decimal
+Variable,Cloud Cover (%)
 QC,String

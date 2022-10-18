@@ -13,10 +13,10 @@ National Station ID,9172
 Site Description,JANDAKOT AERO
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
-Variable ID,⏔
+Variable ID,var00152
 Data Classification,MET General
 Sampling Rate (min),28.9876
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Precipitation (m),Decimal
+Variable,Precipitation (m)
 QC,String

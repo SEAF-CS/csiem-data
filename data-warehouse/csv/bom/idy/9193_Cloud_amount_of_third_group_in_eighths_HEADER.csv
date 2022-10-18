@@ -13,10 +13,10 @@ National Station ID,9193
 Site Description,ROTTNEST ISLAND
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
-Variable ID,⏩
+Variable ID,var00162
 Data Classification,MET General
 Sampling Rate (min),44.4601
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Cloud amount of third group in eighths (oktas),Decimal
+Variable,Cloud amount of third group in eighths (oktas)
 QC,String

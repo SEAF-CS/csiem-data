@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),1542.9059
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Discharge (ML),Decimal
+Variable,Discharge (ML)
 QC,String

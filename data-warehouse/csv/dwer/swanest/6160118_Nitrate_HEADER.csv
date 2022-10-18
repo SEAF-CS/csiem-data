@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min), NaN
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Nitrate (mg/L),Decimal
+Variable,Nitrate (mg/L)
 QC,String

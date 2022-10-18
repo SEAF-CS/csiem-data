@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),19842.1640
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Total Suspended Solids (mg/L),Decimal
+Variable,Total Suspended Solids (mg/L)
 QC,String

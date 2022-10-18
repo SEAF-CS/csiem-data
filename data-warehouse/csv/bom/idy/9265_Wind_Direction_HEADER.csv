@@ -13,10 +13,10 @@ National Station ID,9265
 Site Description,HILLARYS BOAT HARBOUR NTC AWS
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
-Variable ID,␱
+Variable ID,var00129
 Data Classification,MET General
 Sampling Rate (min),29.3649
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Wind Direction (ø),Decimal
+Variable,Wind Direction (ø)
 QC,String

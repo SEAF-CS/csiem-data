@@ -13,10 +13,10 @@ National Station ID,9053
 Site Description,PEARCE RAAF
 Bad or Unavailable Data Value,-9999
 Contact Email,climatedata@bom.gov.au
-Variable ID,⍝
+Variable ID,var00172
 Data Classification,MET General
 Sampling Rate (min),43.8760
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Ceilometer sky clear flag (),Decimal
+Variable,Ceilometer sky clear flag ()
 QC,String

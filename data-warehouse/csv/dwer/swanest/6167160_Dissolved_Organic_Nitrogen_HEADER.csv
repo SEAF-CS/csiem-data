@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),4481.7778
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Dissolved Organic Nitrogen (mg/L),Decimal
+Variable,Dissolved Organic Nitrogen (mg/L)
 QC,String

@@ -128,7 +128,7 @@ fprintf(fid,'Depth,Decimal\n');
 
 %thevar = [varName{sss},' (',varUnit{sss},')'];
 
-fprintf(fid,'Tidal Height (m),Decimal\n');
+fprintf(fid,'Variable,Tidal Height (m)\n');
 fprintf(fid,'QC,String\n');
 
 fclose(fid);

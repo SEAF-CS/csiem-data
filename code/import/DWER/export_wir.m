@@ -84,15 +84,15 @@ for i = 1:length(sites)
         
         fprintf(fid,'Date,Depth,%s,QC\n','Data');
         
-%         for k = 1:length(swan.(sites{i}).(vars{j}).Date)
-%             fprintf(fid,'%s,%s,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
-%                 swan.(sites{i}).(vars{j}).Depth_Chx{k},swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
-%         end
-        
         for k = 1:length(swan.(sites{i}).(vars{j}).Date)
-            fprintf(fid,'%s,%4.4f,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
-                swan.(sites{i}).(vars{j}).Depth(k),swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
+            fprintf(fid,'%s,%s,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
+                swan.(sites{i}).(vars{j}).Depth_Chx{k},swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
         end
+        
+%         for k = 1:length(swan.(sites{i}).(vars{j}).Date)
+%             fprintf(fid,'%s,%4.4f,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
+%                 swan.(sites{i}).(vars{j}).Depth(k),swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
+%         end
         fclose(fid);
         
         
@@ -159,7 +159,7 @@ for i = 1:length(sites)
             
             thevar = [varName{sss},' (',varUnit{sss},')'];
             
-            fprintf(fid,'%s,Decimal\n',thevar);
+            fprintf(fid,'Variable,%s\n',thevar);
             fprintf(fid,'QC,String\n');
             
         fclose(fid);

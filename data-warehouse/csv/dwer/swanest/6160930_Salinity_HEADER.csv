@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),1609.1003
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Salinity (psu),Decimal
+Variable,Salinity (psu)
 QC,String

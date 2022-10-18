@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),20159.7576
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Reactive Silica (mg/L),Decimal
+Variable,Reactive Silica (mg/L)
 QC,String

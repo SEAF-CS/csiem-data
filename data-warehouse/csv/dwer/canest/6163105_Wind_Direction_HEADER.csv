@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),14510.1104
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Wind Direction (ø),Decimal
+Variable,Wind Direction (ø)
 QC,String
