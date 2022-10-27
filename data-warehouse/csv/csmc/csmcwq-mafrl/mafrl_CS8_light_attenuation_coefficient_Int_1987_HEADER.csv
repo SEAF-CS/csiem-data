@@ -1,0 +1,22 @@
+Agency Name,Cockburn Sound Management Council
+Agency Code,CSMC
+Program,Cockburn Sound Marine Water Quality Monitoring
+Project,CSMWQ-MAFRL
+Data File Name,mafrl_CS8_light_attenuation_coefficient_Int_1987_DATA.csv
+Location,data-warehouse/csv/csmc/csmwq-mafrl
+Station Status,Inactive
+Lat,-32.197565326
+Long,115.719832875
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,CS8
+Site Description,Cockburn Sound central basin
+Bad or Unavailable Data Value,NaN
+Contact Email,
+Variable ID,var00216
+Data Classification,WQ Grab
+Sampling Rate (min),11630.7692
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Variable,light attenuation coefficient (m-1)
+QC,String

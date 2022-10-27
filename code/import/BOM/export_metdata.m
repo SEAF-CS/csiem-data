@@ -78,74 +78,70 @@ for i = 1:length(sites)
             if ~isempty(mdata)
                 
                 convint = find(strcmpi(avarID,varID{varint}) == 1);
-                mdata = mdata * conv(convint);
                 
-                filename = [outdir,num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
-                
-                writefile = [num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
-                
-%                 fid = fopen(filename,'wt');
-%                 
-%                 fprintf(fid,'Date,Depth,Data,QC\n');
-%                 
-%                 for k = 1:length(mdate)
-%                     fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'dd-mm-yyyy HH:MM:SS'),' ',mdata(k),QC{k});
-%                 end
-%                 fclose(fid);
-                
-                headerfile = regexprep(filename,'_DATA','_HEADER');
-                
-                fid = fopen(headerfile,'wt');
-                fprintf(fid,'Agency Name,Bureau of Meteorology\n');
-                fprintf(fid,'Agency Code,BOM\n');
-                fprintf(fid,'Program,Weather\n');
-                fprintf(fid,'Project,IDY\n');
-                fprintf(fid,'Data File Name,%s\n',writefile);
-                fprintf(fid,'Location,%s\n',writepath);
-                
-                if max(mdate) >= datenum(2019,01,01)
-                    fprintf(fid,'Station Status,Active\n');
-                else
-                    fprintf(fid,'Station Status,Inactive\n');
+                if strcmpi(varID{varint},'var00152') == 0
+                    
+                    mdata = mdata * conv(convint);
+                    
+                    filename = [outdir,num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
+                    
+                    writefile = [num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
+                    
+                    fid = fopen(filename,'wt');
+                    
+                    fprintf(fid,'Date,Depth,Data,QC\n');
+                    
+                    for k = 1:length(mdate)
+                        fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'dd-mm-yyyy HH:MM:SS'),' ',mdata(k),QC{k});
+                    end
+                    fclose(fid);
+                    
+                    headerfile = regexprep(filename,'_DATA','_HEADER');
+                    
+                    fid = fopen(headerfile,'wt');
+                    fprintf(fid,'Agency Name,Bureau of Meteorology\n');
+                    fprintf(fid,'Agency Code,BOM\n');
+                    fprintf(fid,'Program,Weather\n');
+                    fprintf(fid,'Project,IDY\n');
+                    fprintf(fid,'Data File Name,%s\n',writefile);
+                    fprintf(fid,'Location,%s\n',writepath);
+                    
+                    if max(mdate) >= datenum(2019,01,01)
+                        fprintf(fid,'Station Status,Active\n');
+                    else
+                        fprintf(fid,'Station Status,Inactive\n');
+                    end
+                    fprintf(fid,'Lat,%8.8f\n',aLat);
+                    fprintf(fid,'Long,%8.8f\n',aLon);
+                    fprintf(fid,'Time Zone,GMT +8\n');
+                    fprintf(fid,'Vertical Datum, \n');
+                    fprintf(fid,'National Station ID,%s\n',num2str(ID));
+                    fprintf(fid,'Site Description,%s\n',aSite);
+                    fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
+                    fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
+                    fprintf(fid,'Variable ID,%s\n',varID{varint});
+                    fprintf(fid,'Data Classification,MET General\n');
+                    
+                    SD = mean(diff(mdate));
+                    
+                    fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
+                    
+                    fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+                    fprintf(fid,'Depth,Decimal\n');
+                    
+                    %thevar = [varName{sss},' (',varUnit{sss},')'];
+                    
+                    fprintf(fid,'Variable,%s\n',[varName{varint},' (',varUnit{varint},')']);
+                    fprintf(fid,'QC,String\n');
+                    
+                    fclose(fid);
+                    
                 end
-                fprintf(fid,'Lat,%8.8f\n',aLat);
-                fprintf(fid,'Long,%8.8f\n',aLon);
-                fprintf(fid,'Time Zone,GMT +8\n');
-                fprintf(fid,'Vertical Datum, \n');
-                fprintf(fid,'National Station ID,%s\n',num2str(ID));
-                fprintf(fid,'Site Description,%s\n',aSite);
-                fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
-                fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
-                fprintf(fid,'Variable ID,%s\n',varID{varint});
-                fprintf(fid,'Data Classification,MET General\n');
-
-                SD = mean(diff(mdate));
-                
-                fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
-                
-                fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
-                fprintf(fid,'Depth,Decimal\n');
-                
-                %thevar = [varName{sss},' (',varUnit{sss},')'];
-                
-                fprintf(fid,'Variable,%s\n',[varName{varint},' (',varUnit{varint},')']);
-                fprintf(fid,'QC,String\n');
-                
-                fclose(fid);
-                
             end
             
         end
         
     end
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

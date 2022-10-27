@@ -1,0 +1,22 @@
+Agency Name,Cockburn Sound Management Council
+Agency Code,CSMC
+Program,Cockburn Sound Marine Water Quality Monitoring
+Project,CSMWQ-MAFRL
+Data File Name,mafrl_SC_Chlorophyll-a_Int_2007_DATA.csv
+Location,data-warehouse/csv/csmc/csmwq-mafrl
+Station Status,Inactive
+Lat,-32.254164605
+Long,115.684284924
+Time Zone,GMT +8
+Vertical Datum,mAHD
+National Station ID,SC
+Site Description,South Control removed 1/12/2008
+Bad or Unavailable Data Value,NaN
+Contact Email,
+Variable ID,var00014
+Data Classification,WQ Grab
+Sampling Rate (min),11520.0000
+Date,dd-mm-yyyy HH:MM:SS
+Depth,Decimal
+Variable,Chlorophyll-a (\mug/L)
+QC,String

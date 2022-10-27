@@ -57,6 +57,7 @@ agency.theme5 = import_agency_conv('THEME5');
 agency.dot = import_agency_conv('DOT');
 agency.bom = import_agency_conv('BOM');
 agency.dwer = import_agency_conv('DWER');
+agency.mafrl = import_agency_conv('MAFRL');
 
 
 save agency.mat agency -mat;
