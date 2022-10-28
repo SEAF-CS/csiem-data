@@ -1,0 +1,13 @@
+name: Run MATLAB Script on ubuntu
+on: [push]
+jobs:
+  my-job:
+    name: Run MATLAB Script
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Run script
+        uses: matlab-actions/run-command@v1
+        with:
+          command: code/actions/test.m
