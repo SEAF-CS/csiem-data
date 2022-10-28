@@ -13,3 +13,11 @@ jobs:
         uses: matlab-actions/run-command@v1
         with:
           command: addpath(genpath('code')), test
+      - name: update binaries and push to remote
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull
+          git add -A
+          git commit -m "Update results"
+          git push
