@@ -15,7 +15,7 @@ Geospatial_lon_max,115.729
 Instrument_nominal_depth,7
 Site_depth_at_deployment,20
 Local_time_zone,8
-Data_period,15-Apr-2021 21:20:39  UTC to 11-May-2021 07:04:39  UTC
+Data_period,16-Apr-2021 08:20:39  UTC to 11-May-2021 18:04:39  UTC
 Original_NETCDF,UWA_CS3_SBE_3353.nc
 
 Variables

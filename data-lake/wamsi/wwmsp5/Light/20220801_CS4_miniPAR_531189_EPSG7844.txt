@@ -1,0 +1,138 @@
+Global Attributes
+Project,Western Australian Marine Science Institute (WAMSI), Westport Theme 5 
+Author,Tanziha Mahjabin
+Principal_investigator,Charitha Pattiaratchi
+Principal_investigator_email,chari.pattiaratchi@uwa.edu.au
+Location,Cockburn_Sound
+Instrument_model,PME_miniPAR_logger
+Serial_Number,531189
+Raw_filename,Combined_531189.txt
+Instrument_sample_interval,5 min
+Geospatial_lat_min,-32.2044
+Geospatial_lat_max,-32.2044
+Geospatial_lon_min,115.75
+Geospatial_lon_max,115.75
+Site_depth_at_deployment,11
+Local_time_zone,8
+Data_period,31-May-2022 02:35:00  UTC to 01-Aug-2022 06:05:00  UTC
+Original_NETCDF,UWA_CS4_PAR_531189.nc
+
+Variables
+
+TIME
+
+Dimensions
+
+Dim: 17899 x 1
+
+Attributes
+
+standard_name,time
+long_name,time
+units,Days since 1950-01-01 00:00:00 UTC
+calendar,gregorian
+axis,T
+valid_min,0
+valid_max,90000
+FillValue,999999
+
+LATITUDE
+
+Dimensions
+
+Dim: 1 x 1
+
+Attributes
+
+standard_name,latitude
+long_name,latitude
+units,degrees_north
+axis,Y
+reference_datum,geographical coordinates, WGS84 projection
+valid_min,-90
+valid_max,90
+FillValue,999999
+
+LONGITUDE
+
+Dimensions
+
+Dim: 1 x 1
+
+Attributes
+
+standard_name,longitude
+long_name,longitude
+units,degrees_east
+axis,X
+reference_datum,geographical coordinates, WGS84 projection
+valid_min,-180
+valid_max,180
+FillValue,999999
+
+TEMPERATURE
+
+Dimensions
+
+Dim: 17899 x 1
+
+Attributes
+
+standard_name,sea_water_temperature
+long_name,sea_water_temperature
+units,celsius
+valid_min,-2.5
+valid_max,40
+FillValue,999999
+
+PAR
+
+Dimensions
+
+Dim: 17899 x 1
+
+Attributes
+
+standard_name,photosynthetically_active_radiation
+long_name,photosynthetically_active_radiation
+units,Micromole per second and square meter
+valid_min,0
+valid_max,1000
+FillValue,999999
+
+ACCELERATIONX
+
+Dimensions
+
+Dim: 17899 x 1
+
+Attributes
+
+standard_name,acceleration_in_x_direction
+long_name,acceleration_in_x_direction
+units,m s-2
+
+ACCELERATIONY
+
+Dimensions
+
+Dim: 17899 x 1
+
+Attributes
+
+standard_name,acceleration_in_y_direction
+long_name,acceleration_in_y_direction
+units,m s-2
+
+ACCELERATIONZ
+
+Dimensions
+
+Dim: 17899 x 1
+
+Attributes
+
+standard_name,acceleration_in_z_direction
+long_name,acceleration_in_z_direction
+units,m s-2
+

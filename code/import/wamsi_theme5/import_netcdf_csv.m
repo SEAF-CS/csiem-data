@@ -22,7 +22,7 @@ agencyvars = fieldnames(agency.theme5);
 
 theme5 = [];
 
-load ../../actions/varskey.mat;
+load ../../actions/varkey.mat;
 allvars = fieldnames(varkey);
 
 for i = 1:length(filelist)
@@ -33,7 +33,11 @@ for i = 1:length(filelist)
     
     headerfile = regexprep(filename,'.nc','.txt');
     
+
     
+    thedepth = ncreadatt(filename,'/','Site_depth_at_deployment');
+    
+    disp(thedepth);
     
     tt = split(filelist(i).name,'_');
     
@@ -48,53 +52,116 @@ for i = 1:length(filelist)
     
     vars = fieldnames(data);
     
+    %
+    %
     for j = 1:length(vars)
-        
-        %sss = find(strcmpi(oldheader,vars{j}) == 1);
-        
-        sss = []; 
-        
-        for kk = 1:length(agencyvars)
-        
-            if strcmpi(agency.theme5.(agencyvars{kk}).Old,vars{j}) == 1
-                sss = kk;
+        pdate = [];
+        pdata = [];
+        pdepth = [];
+        pQC = {};
+        foundvar = 0;
+        for k = 1:length(agencyvars)
+            if strcmpi(agency.theme5.(agencyvars{k}).Old,vars{j}) == 1
+                foundvar = k;
             end
         end
-        if ~isempty(sss)
+        
+        if foundvar ~=0
+            pdate = mtime;
+            pdata = data.(vars{j}) * agency.theme5.(agencyvars{foundvar}).Conv;
+            if isfield(data,'DEPTH')
+                pdepth = data.DEPTH;
+            else
+                pdepth(1:length(pdate),1) = str2num(thedepth);
+            end
+            pQC(1:length(pdate)) = {'n'};
             
-            for k = 1:length(allvars)
-                
-                %theme5.(site).(newheader{sss}).Date(:,1) = mtime;
-                
-                if strcmpi(varkey.(allvars{k}).tfvName,newheader{sss}) == 1
-                
-                    
-                    
-                
             
+            varname = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Name;
+            varunits = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Unit;
+            
+            thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
+            datafile = regexprep(filelist(i).name,'.nc',thetxt);
+            fullfile = [outdir,datafile];
+            headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
+            
+            fid = fopen(fullfile,'wt');
+            fprintf(fid,'Date,Depth,Data,QC\n');
+            for nn = 1:length(pdata)
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(pdate(nn),'dd-mm-yyyy HH:MM:SS'),pdepth(nn),pdata(nn),pQC{nn});
+            end
+            fclose(fid);
+            
+            fid = fopen(headerfile,'wt');
+            fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
+            fprintf(fid,'Agency Code,WAMSI\n');
+            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
+            fprintf(fid,'Project,WWMSP5.1\n');
+            fprintf(fid,'Data File Name,%s\n',datafile);
+            fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp5']);
+            
+            
+            fprintf(fid,'Station Status,Static\n');
+            fprintf(fid,'Lat,%6.9f\n',data.LATITUDE);
+            fprintf(fid,'Long,%6.9f\n',data.LONGITUDE);
+            fprintf(fid,'Time Zone,GMT +8\n');
+            fprintf(fid,'Vertical Datum,mAHD\n');
+            fprintf(fid,'National Station ID,%s\n',site);
+            fprintf(fid,'Site Description,%s\n',site);
+            fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
+            fprintf(fid,'Contact Email,%s\n','Ivica Janekovic <ivica.janekovic@uwa.edu.au>');
+            fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
+            
+            fprintf(fid,'Data Classification,WQ Sensor\n');
+            
+            
+            SD = mean(diff(pdate));
+            
+            fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
+            
+            fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+            fprintf(fid,'Depth,Decimal\n');
+            
+            thevar = [varname,' (',varunits,')'];
+            
+            fprintf(fid,'Variable,%s\n',thevar);
+            fprintf(fid,'QC,String\n');
+            
+            fclose(fid);
+            
+            
+            
+            
+        end
+        
+        
+        
+        
+    end
+end
 %             if ~isfield(theme5,site)
 %                 theme5.(site).(newheader{sss}).Date(:,1) = mtime;
 %                 theme5.(site).(newheader{sss}).Data(:,1) = data.(vars{j}) * conv(sss);
 %                 if isfield(data,'DEPTH')
-%                     
+%
 %                     theme5.(site).(newheader{sss}).Depth(:,1) = data.DEPTH * -1;
 %                 else
 %                     theme5.(site).(newheader{sss}).Depth(1:length(mtime),1) = 0;
 %                 end
-%                 
+%
 %                 theme5.(site).(newheader{sss}).X = X;
 %                 theme5.(site).(newheader{sss}).Y = Y;
 %                 theme5.(site).(newheader{sss}).Title = site;
 %                 theme5.(site).(newheader{sss}).Variable_Name = vars{j};
 %                 theme5.(site).(newheader{sss}).Units = '';
-%                 
+%
 %             else
 %                 if isfield(theme5.(site),newheader{sss})
 %                     theme5.(site).(newheader{sss}).Date = [theme5.(site).(newheader{sss}).Date;mtime];
 %                     theme5.(site).(newheader{sss}).Data = [theme5.(site).(newheader{sss}).Data;data.(vars{j}) * conv(sss)];
-%                     
+%
 %                     if isfield(data,'DEPTH')
-%                         
+%
 %                         theme5.(site).(newheader{sss}).Depth = [theme5.(site).(newheader{sss}).Depth;data.DEPTH * -1];
 %                     else
 %                         dd(1:length(mtime),1) = 0;
@@ -104,12 +171,12 @@ for i = 1:length(filelist)
 %                     theme5.(site).(newheader{sss}).Date(:,1) = mtime;
 %                     theme5.(site).(newheader{sss}).Data(:,1) = data.(vars{j}) * conv(sss);
 %                     if isfield(data,'DEPTH')
-%                         
+%
 %                         theme5.(site).(newheader{sss}).Depth(:,1) = data.DEPTH * -1;
 %                     else
 %                         theme5.(site).(newheader{sss}).Depth(1:length(mtime),1) = 0;
 %                     end
-%                     
+%
 %                     theme5.(site).(newheader{sss}).X = X;
 %                     theme5.(site).(newheader{sss}).Y = Y;
 %                     theme5.(site).(newheader{sss}).Title = site;
@@ -117,43 +184,42 @@ for i = 1:length(filelist)
 %                     theme5.(site).(newheader{sss}).Units = '';
 %                 end
 %             end
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        end
-        
-    end
-    
-end
-
-sites = fieldnames(theme5);
-
-for i = 1:length(sites)
-    vars = fieldnames(theme5.(sites{i}));
-    for j = 1:length(vars)
-        [theme5.(sites{i}).(vars{j}).Date,int] = sort(theme5.(sites{i}).(vars{j}).Date);
-        theme5.(sites{i}).(vars{j}).Data = theme5.(sites{i}).(vars{j}).Data(int);
-        theme5.(sites{i}).(vars{j}).Depth = theme5.(sites{i}).(vars{j}).Depth(int);
-    end
-end
 
 
 
 
-save theme5.mat theme5 -mat -v7.3;
-% 
-% 
-% load swan_new.mat;
-% 
+
+
+
+
+
+%         end
+%
+%     end
+
+
+% sites = fieldnames(theme5);
+%
 % for i = 1:length(sites)
-%     
+%     vars = fieldnames(theme5.(sites{i}));
+%     for j = 1:length(vars)
+%         [theme5.(sites{i}).(vars{j}).Date,int] = sort(theme5.(sites{i}).(vars{j}).Date);
+%         theme5.(sites{i}).(vars{j}).Data = theme5.(sites{i}).(vars{j}).Data(int);
+%         theme5.(sites{i}).(vars{j}).Depth = theme5.(sites{i}).(vars{j}).Depth(int);
+%     end
+% end
+
+
+
+
+% save theme5.mat theme5 -mat -v7.3;
+%
+%
+% load swan_new.mat;
+%
+% for i = 1:length(sites)
+%
 %         swan.(sites{i}) = theme5.(sites{i});
-% 
+%
 % end
 % save swan_new_2.mat swan -mat -v7.3;
