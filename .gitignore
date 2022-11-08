@@ -27,3 +27,6 @@ data-lake/.DS_Store
 data-lake/bom/ngis/timeseriesData/level_WA.csv
 data-lake/wamsi/wwmsp5/Pressure
 code/import/wamsi_theme5/theme5.mat
+data-warehouse/SEAF
+data-warehouse/csv/wamsi/wwmsp5
+data-warehouse/parq/wamsi/wwmsp5

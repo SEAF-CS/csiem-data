@@ -269,7 +269,7 @@ while ~feof(fid)
             data.Station_ID = sline{2};
             
         case 'Site Description'
-            data.Site_Secription = sline{2};
+            data.Site_Description = sline{2};
             
         case 'Bad or Unavailable Data Value'
             data.Bad_Data_Code = sline{2};

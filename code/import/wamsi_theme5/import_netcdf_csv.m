@@ -6,6 +6,7 @@ filepath = '../../../data-lake/wamsi/wwmsp5/';
 
 outdir = '../../../data-warehouse/csv/wamsi/wwmsp5/';
 
+mkdir(outdir);
 
 filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
