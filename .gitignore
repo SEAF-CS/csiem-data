@@ -30,3 +30,5 @@ code/import/wamsi_theme5/theme5.mat
 data-warehouse/SEAF
 data-warehouse/csv/wamsi/wwmsp5
 data-warehouse/parq/wamsi/wwmsp5
+data-warehouse/seaf_v2
+data-warehouse/seaf_v3

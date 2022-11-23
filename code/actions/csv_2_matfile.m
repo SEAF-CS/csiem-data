@@ -4,7 +4,7 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfile = '../../data-warehouse/mat/cockburn.mat';
+outfile = '../../data-warehouse/mat/seaf.mat';
 
 filepath = '../../data-warehouse/csv/';
 
@@ -16,7 +16,7 @@ vars = fieldnames(varkey);
 
 fid = fopen('excluded_sites.csv','wt');
 
-cockburn = [];
+seaf = [];
 
 for i = 1:length(filelist)
     headerfile = [filelist(i).folder,'\',filelist(i).name];
@@ -29,8 +29,8 @@ for i = 1:length(filelist)
     
     agency = header.Agency_Code;
     sitecode = [agency,'_',header.Station_ID];
-    tfv_name = varkey.(header.Variable_ID).tfvName;
-    tfv_conv = varkey.(header.Variable_ID).tfvConv;
+    tfv_name = header.Variable_ID;
+    %tfv_conv = varkey.(header.Variable_ID).tfvConv;
     
     
     
@@ -40,23 +40,23 @@ for i = 1:length(filelist)
         [s,~,j] = unique(data.QC);
         QC_CODE = s{mode(j)};
         
-        if isfield(cockburn,sitecode)
+        if isfield(seaf,sitecode)
             
-            if ~isfield(cockburn.(sitecode),tfv_name)
+            if ~isfield(seaf.(sitecode),tfv_name)
                 
                 
-                cockburn.(sitecode).(tfv_name).QC = QC_CODE;
+                seaf.(sitecode).(tfv_name).QC = QC_CODE;
                 
-                cockburn.(sitecode).(tfv_name).Date = data.Date;
-                cockburn.(sitecode).(tfv_name).Data = data.Data * tfv_conv;
-                cockburn.(sitecode).(tfv_name).Data_Raw = double(data.Data);
-                cockburn.(sitecode).(tfv_name).Depth = data.Depth * -1;
-                cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
-                cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
+                seaf.(sitecode).(tfv_name).Date = data.Date;
+                seaf.(sitecode).(tfv_name).Data = data.Data;
+                seaf.(sitecode).(tfv_name).Data_Raw = double(data.Data);
+                seaf.(sitecode).(tfv_name).Depth = data.Depth * -1;
+                seaf.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
+                seaf.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
                 
-                cockburn.(sitecode).(tfv_name).X = header.X;
-                cockburn.(sitecode).(tfv_name).Y = header.Y;
-                cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
+                seaf.(sitecode).(tfv_name).X = header.X;
+                seaf.(sitecode).(tfv_name).Y = header.Y;
+                %seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
                 
                 
                 
@@ -66,37 +66,38 @@ for i = 1:length(filelist)
                 headerfield = fieldnames(header);
                 
                 for k = 1:length(headerfield)
-                    cockburn.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
+                    seaf.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
+                    
                 end
-                
-                
+                seaf.(sitecode).(tfv_name).Sentient_Hubs_Code = varkey.(header.Variable_ID).SH;
+                seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).Unit;
             else
-                cockburn.(sitecode).(tfv_name).Date = [cockburn.(sitecode).(tfv_name).Date;data.Date];
-                cockburn.(sitecode).(tfv_name).Data = [cockburn.(sitecode).(tfv_name).Data;data.Data * tfv_conv];
-                cockburn.(sitecode).(tfv_name).Data_Raw = [cockburn.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
-                cockburn.(sitecode).(tfv_name).Depth = [cockburn.(sitecode).(tfv_name).Depth;data.Depth * -1];
+                seaf.(sitecode).(tfv_name).Date = [seaf.(sitecode).(tfv_name).Date;data.Date];
+                seaf.(sitecode).(tfv_name).Data = [seaf.(sitecode).(tfv_name).Data;data.Data];
+                seaf.(sitecode).(tfv_name).Data_Raw = [seaf.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
+                seaf.(sitecode).(tfv_name).Depth = [seaf.(sitecode).(tfv_name).Depth;data.Depth * -1];
                 
-                cockburn.(sitecode).(tfv_name).Depth_T = [cockburn.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];
-                cockburn.(sitecode).(tfv_name).Depth_B = [cockburn.(sitecode).(tfv_name).Depth_B;data.Depth_B * -1];
+                seaf.(sitecode).(tfv_name).Depth_T = [seaf.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];
+                seaf.(sitecode).(tfv_name).Depth_B = [seaf.(sitecode).(tfv_name).Depth_B;data.Depth_B * -1];
                 
             end
             
         else
             
             
-            cockburn.(sitecode).(tfv_name).QC = QC_CODE;
+            seaf.(sitecode).(tfv_name).QC = QC_CODE;
             
-            cockburn.(sitecode).(tfv_name).Date = data.Date;
-            cockburn.(sitecode).(tfv_name).Data = data.Data * tfv_conv;
-            cockburn.(sitecode).(tfv_name).Data_Raw = double(data.Data);
-            cockburn.(sitecode).(tfv_name).Depth = data.Depth * -1;
+            seaf.(sitecode).(tfv_name).Date = data.Date;
+            seaf.(sitecode).(tfv_name).Data = data.Data;
+            seaf.(sitecode).(tfv_name).Data_Raw = double(data.Data);
+            seaf.(sitecode).(tfv_name).Depth = data.Depth * -1;
             
-            cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
-            cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
+            seaf.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
+            seaf.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
             
-            cockburn.(sitecode).(tfv_name).X = header.X;
-            cockburn.(sitecode).(tfv_name).Y = header.Y;
-            cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
+            seaf.(sitecode).(tfv_name).X = header.X;
+            seaf.(sitecode).(tfv_name).Y = header.Y;
+            %seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
             
             
             
@@ -104,9 +105,10 @@ for i = 1:length(filelist)
             headerfield = fieldnames(header);
             
             for k = 1:length(headerfield)
-                cockburn.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
+                seaf.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
             end
-            
+            seaf.(sitecode).(tfv_name).Sentient_Hubs_Code = varkey.(header.Variable_ID).SH;
+            seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).Unit;
         end
         
         
@@ -121,43 +123,43 @@ end
 
 fclose(fid);
 
-sites = fieldnames(cockburn);
+sites = fieldnames(seaf);
 
 for i = 1:length(sites)
-    vars = fieldnames(cockburn.(sites{i}));
+    vars = fieldnames(seaf.(sites{i}));
     for j = 1:length(vars)
         
-        datachx = sum(~isnan(cockburn.(sites{i}).(vars{j}).Depth_T));
+        datachx = sum(~isnan(seaf.(sites{i}).(vars{j}).Depth_T));
         
         if datachx == 0
-            cockburn.(sites{i}).(vars{j}) = rmfield(cockburn.(sites{i}).(vars{j}),'Depth_T');
-            cockburn.(sites{i}).(vars{j}) = rmfield(cockburn.(sites{i}).(vars{j}),'Depth_B');
+            seaf.(sites{i}).(vars{j}) = rmfield(seaf.(sites{i}).(vars{j}),'Depth_T');
+            seaf.(sites{i}).(vars{j}) = rmfield(seaf.(sites{i}).(vars{j}),'Depth_B');
             
             disp('No INT found');
             
-            cockburn.(sites{i}).(vars{j}).Depth_Integrated = 0;
+            seaf.(sites{i}).(vars{j}).Depth_Integrated = 0;
             
         else
-            cockburn.(sites{i}).(vars{j}).Depth_Integrated = 1;
+            seaf.(sites{i}).(vars{j}).Depth_Integrated = 1;
             %cockburn.(sites{i}).(vars{j}).Data_Classification = [cockburn.(sites{i}).(vars{j}).Data_Classification,' INT'];
         end
     end
 end
 for i = 1:length(sites)
-    vars = fieldnames(cockburn.(sites{i}));
+    vars = fieldnames(seaf.(sites{i}));
     for j = 1:length(vars)
         
-        [cockburn.(sites{i}).(vars{j}).Date,dint]  = sort(cockburn.(sites{i}).(vars{j}).Date);
-        cockburn.(sites{i}).(vars{j}).Data = cockburn.(sites{i}).(vars{j}).Data(dint);
-        cockburn.(sites{i}).(vars{j}).Data_Raw = cockburn.(sites{i}).(vars{j}).Data_Raw(dint);
-        cockburn.(sites{i}).(vars{j}).Depth = cockburn.(sites{i}).(vars{j}).Depth(dint);
-        if isfield(cockburn.(sites{i}).(vars{j}),'Depth_T')
-            cockburn.(sites{i}).(vars{j}).Depth_T = cockburn.(sites{i}).(vars{j}).Depth_T(dint);
-            cockburn.(sites{i}).(vars{j}).Depth_B = cockburn.(sites{i}).(vars{j}).Depth_B(dint);
+        [seaf.(sites{i}).(vars{j}).Date,dint]  = sort(seaf.(sites{i}).(vars{j}).Date);
+        seaf.(sites{i}).(vars{j}).Data = seaf.(sites{i}).(vars{j}).Data(dint);
+        seaf.(sites{i}).(vars{j}).Data_Raw = seaf.(sites{i}).(vars{j}).Data_Raw(dint);
+        seaf.(sites{i}).(vars{j}).Depth = seaf.(sites{i}).(vars{j}).Depth(dint);
+        if isfield(seaf.(sites{i}).(vars{j}),'Depth_T')
+            seaf.(sites{i}).(vars{j}).Depth_T = seaf.(sites{i}).(vars{j}).Depth_T(dint);
+            seaf.(sites{i}).(vars{j}).Depth_B = seaf.(sites{i}).(vars{j}).Depth_B(dint);
         end
     end
 end
-save(outfile,'cockburn','-mat','-v7.3');
+save(outfile,'seaf','-mat','-v7.3');
 
 
 end

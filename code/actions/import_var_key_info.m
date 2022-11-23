@@ -2,11 +2,11 @@ clear all; close all;
 
 filename = '../../data-lake/variable_key.xlsx';
 
-[snum,sstr] = xlsread(filename,'Key','A2:H10000');
+[snum,sstr] = xlsread(filename,'Key','A2:J10000');
 
 st = length(sstr) + 1;
 
-thearray = ['H2:H',num2str(st)];
+thearray = ['J2:J',num2str(st)];
 
 [~,~,scell] = xlsread(filename,'Key',thearray);
 for i = 1:length(scell)
@@ -17,9 +17,11 @@ varID = sstr(:,1);
 varName = sstr(:,2);
 varUnit = sstr(:,3);
 varSymbol = sstr(:,4);
-varProg = sstr(:,5);
-varCF = sstr(:,6);
-varCF_Unit = sstr(:,7);
+varLaTexUnit = sstr(:,5);
+varProg = sstr(:,6);
+varSH = sstr(:,7);
+varCF = sstr(:,8);
+varCF_Unit = sstr(:,9);
 for i = 1:length(varSymbol)
     if isempty(varSymbol{i})
         varSymbol(i) = varName(i);
@@ -38,6 +40,8 @@ for i = 1:length(varID)
     
     varkey.(varID{i}).Name = varName{i};
     varkey.(varID{i}).Unit = varUnit{i};
+    varkey.(varID{i}).LaTexUnit = varLaTexUnit{i};
+    varkey.(varID{i}).SH = varSH{i};
     varkey.(varID{i}).Symbol = varSymbol{i};
     varkey.(varID{i}).Programmatic = varProg{i};
     varkey.(varID{i}).CF = varCF{i};
