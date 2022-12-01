@@ -5,6 +5,7 @@ incoming/bom/HM01X_Data_009193_9999999910143263.txt
 incoming/bom/HM01X_Data_009214_9999999910143263.txt
 incoming/bom/HM01X_Data_009215_9999999910143263.txt
 incoming/bom/HM01X_Data_009225_9999999910143263.txt
+incoming/bom/
 incoming/uwa/.DS_Store
 incoming/uwa/oi/.DS_Store
 incoming/wamsi/.DS_Store
@@ -18,6 +19,8 @@ data-lake/bom/HM01X_Data_009193_9999999910143263.txt
 data-lake/bom/HM01X_Data_009214_9999999910143263.txt
 data-lake/bom/HM01X_Data_009215_9999999910143263.txt
 data-lake/bom/HM01X_Data_009225_9999999910143263.txt
+data-lake/bom/
+data-lake/imos/
 data-lake/uwa/.DS_Store
 data-lake/uwa/oi/.DS_Store
 data-lake/wamsi/.DS_Store
@@ -27,8 +30,8 @@ data-lake/.DS_Store
 data-lake/bom/ngis/timeseriesData/level_WA.csv
 data-lake/wamsi/wwmsp5/Pressure
 code/import/wamsi_theme5/theme5.mat
-data-warehouse/SEAF
-data-warehouse/csv/wamsi/wwmsp5
-data-warehouse/parq/wamsi/wwmsp5
-data-warehouse/seaf_v2
-data-warehouse/seaf_v3
+code/actions/Summary
+data-warehouse/mat
+data-warehouse/mat/cockburn.mat
+data-lake
+data-warehouse

@@ -62,7 +62,8 @@ agency.dot = import_agency_conv('DOT');
 agency.bom = import_agency_conv('BOM');
 agency.dwer = import_agency_conv('DWER');
 agency.mafrl = import_agency_conv('MAFRL');
-
+agency.imosbgc = import_agency_conv('IMOSBGC');
+agency.imosprofile = import_agency_conv('IMOSPROFILE');
 
 save agency.mat agency -mat;
 

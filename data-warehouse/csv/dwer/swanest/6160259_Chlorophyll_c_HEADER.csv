@@ -15,8 +15,8 @@ Bad or Unavailable Data Value,NaN
 Contact Email,wir@water.wa.gov.au
 Variable ID,var00132
 Data Classification,WQ Grab
-Sampling Rate (min),8282.2392
+Sampling Rate (min),10835.3184
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Variable,Chlorophyll-c (\mug/L)
+Variable,Chlorophyll-c (µg/L)
 QC,String

@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),337.6487
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Variable,Temperature (^{\circ}C)
+Variable,Temperature (C)
 QC,String

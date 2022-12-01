@@ -159,7 +159,10 @@ for i = 1:length(sites)
 end
 save(outfile,'cockburn','-mat','-v7.3');
 
+mkdir('Summary/Images');
+mkdir('Summary/GIS');
 
+summerise_data(outfile,'Summary/Images/','Summary/GIS/','cockbun.shp');
 end
 
 function data = import_datafile(filename)

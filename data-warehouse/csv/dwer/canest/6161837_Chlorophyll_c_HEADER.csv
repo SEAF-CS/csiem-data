@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),7486.6725
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Variable,Chlorophyll-c (\mug/L)
+Variable,Chlorophyll-c (µg/L)
 QC,String

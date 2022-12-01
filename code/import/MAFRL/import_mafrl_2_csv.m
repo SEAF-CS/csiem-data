@@ -10,6 +10,9 @@ load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
+
+
+
 thesiteval = fieldnames(sitekey.mafrl);
 thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
@@ -28,6 +31,8 @@ for i = 1:length(theyears)
     [~,sdate] = xlsread(thefile,num2str(theyears(i)),'B3:B10000');
     [~,headers] = xlsread(thefile,num2str(theyears(i)),'C1:ZZ1');
     [data,~] = xlsread(thefile,num2str(theyears(i)),'C3:ZZ10000');
+    
+    
     
     headers = regexprep(headers,'''','');
     
@@ -91,12 +96,15 @@ for i = 1:length(theyears)
                         end
                     end
                     
+                    
+                    
+                    
                     [lat,lon] = utm2ll(sitekey.mafrl.(thesiteval{foundsite}).X,sitekey.mafrl.(thesiteval{foundsite}).Y,-50);
                     
                     filevar = regexprep(varkey.(thevarval{thefoundvar}).Name,' ','_');
                     
                     filename = [outpath,sitekey.mafrl.(thesiteval{foundsite}).AED,'_',filevar,'_',agency.mafrl.(theagencyval{foundagency}).Depth,'_',num2str(theyears(i)),'_DATA.csv'];
-                    
+                    filename
                     fid = fopen(filename,'wt');
                     fprintf(fid,'Date,Depth,Data,QC\n');
                     for nn = 1:length(thedata)
@@ -105,7 +113,7 @@ for i = 1:length(theyears)
                     fclose(fid);
                     
                     headerfile = regexprep(filename,'_DATA','_HEADER');
-                    
+                    headerfile
                     fid = fopen(headerfile,'wt');
                     fprintf(fid,'Agency Name,Cockburn Sound Management Council\n');
                     fprintf(fid,'Agency Code,CSMC\n');

@@ -15,8 +15,8 @@ Bad or Unavailable Data Value,NaN
 Contact Email,wir@water.wa.gov.au
 Variable ID,var00007
 Data Classification,WQ Grab
-Sampling Rate (min),1815.6519
+Sampling Rate (min),2404.8376
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Variable,Temperature (^{\circ}C)
+Variable,Temperature (C)
 QC,String

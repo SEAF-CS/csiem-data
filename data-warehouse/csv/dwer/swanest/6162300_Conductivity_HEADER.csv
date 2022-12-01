@@ -15,8 +15,8 @@ Bad or Unavailable Data Value,NaN
 Contact Email,wir@water.wa.gov.au
 Variable ID,var00134
 Data Classification,WQ Grab
-Sampling Rate (min),1462.0390
+Sampling Rate (min),1493.4335
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Variable,Conductivity (\muS/cm)
+Variable,Conductivity (µS/cm)
 QC,String

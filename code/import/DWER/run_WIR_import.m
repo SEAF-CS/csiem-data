@@ -15,7 +15,7 @@ addpath(genpath('Functions'));
 
 dirlist = dir('../../../data-lake/dwer/swanest/');
 
-for i = 3:length(dirlist)
+for i = 46:length(dirlist)%3
     
     filelist = dir(['../../../data-lake/dwer/swanest/',dirlist(i).name,'/*.xlsx']);
     

@@ -1,7 +1,7 @@
 function import_site_key
 
 
-
+sitekey.imosbgc = read_site_sheet('IMOSBGC');
 sitekey.mafrl = read_site_sheet('MAFRL');
 sitekey.bom = read_site_sheet('BOM');
 sitekey.dwer = read_site_sheet('DWER');
@@ -19,7 +19,7 @@ filename = '../../data-lake/site_key.xlsx';
 if strcmpi(sheet,'MAFRL') == 0
     [snum,sstr] = xlsread(filename,sheet,'A2:H10000');
     
-    for i = 1:length(sstr)
+    for i = 1:size(sstr,1)
         data.(sstr{i,1}).AED = sstr{i,1};
         data.(sstr{i,1}).ID = sstr{i,2};
         data.(sstr{i,1}).Description = sstr{i,3};

@@ -18,5 +18,5 @@ Data Classification,WQ Grab
 Sampling Rate (min),0.5567
 Date,dd-mm-yyyy HH:MM:SS
 Depth,Decimal
-Variable,Conductivity (\muS/cm)
+Variable,Conductivity (µS/cm)
 QC,String
