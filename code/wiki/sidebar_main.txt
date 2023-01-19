@@ -1,0 +1,24 @@
+<img src="https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/aed-transparent-background.png">  
+
+
+# CSIEM Data Wiki
+
+## Overview
+
+- [Home][home]
+
+## Governance
+
+- [Data Catalogue][catalogue]
+- [Variable Catalogue][variables]
+- [TFV Variables][tfv]
+
+## Storage & Access
+
+- [Data Storage][access]
+
+[home]: https://github.com/AquaticEcoDynamics/csiem-data/wiki
+[catalogue]: https://github.com/AquaticEcoDynamics/csiem-data/wiki/Catalogue
+[variables]: https://github.com/AquaticEcoDynamics/csiem-data/wiki/Variables
+[tfv]: https://github.com/AquaticEcoDynamics/csiem-data/wiki/TFV_Variables
+[access]: https://github.com/AquaticEcoDynamics/csiem-data/wiki/Access

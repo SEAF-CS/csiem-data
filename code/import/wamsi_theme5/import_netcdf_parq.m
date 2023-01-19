@@ -2,9 +2,9 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = '../../../data-lake/wamsi/wwmsp5/';
+filepath = 'V:/data-lake/wamsi/wwmsp5/';
 
-outdir = '../../../data-warehouse/parq/wamsi/wwmsp5/';
+outdir = 'V:/data-warehouse/parq/wamsi/wwmsp5/';
 mkdir(outdir);
 
 filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder

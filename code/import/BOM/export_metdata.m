@@ -2,7 +2,7 @@ clear all; close all;
 
 load metdata.mat;
 
-[snum,sstr] = xlsread('../../../data-lake/variable_key.xlsx','Key','A2:D10000');
+[snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','Key','A2:D10000');
 
 varID = sstr(:,1);
 varName = sstr(:,2);
@@ -15,13 +15,13 @@ for i = 1:length(varSymbol)
     end
 end
 
-[snum,sstr] = xlsread('../../../data-lake/variable_key.xlsx','BOM','B2:D10000');
+[snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','BOM','B2:D10000');
 
 conv = snum(:,1);
 avarID = sstr(:,1);
 
 
-[snum,sstr] = xlsread('../../../data-lake/site_key.xlsx','BOM','A2:H10000');
+[snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
 
 sitename = sstr(:,3);
 siteid = snum(:,1);
@@ -30,7 +30,7 @@ Lon = snum(:,7);
 shortname = sstr(:,4);
 
 
-outdir = '../../../data-warehouse/csv/bom/idy/';
+outdir = 'V:/data-warehouse/csv/bom/idy/';
 
 writepath = 'data-warehouse/csv/bom/idy';
 

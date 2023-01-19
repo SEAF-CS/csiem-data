@@ -2,13 +2,13 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = '../../../data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+thefile = 'V:/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = '../../../data-warehouse/csv/imos/bgc/';
+outpath = 'V:/data-warehouse/csv/imos/bgc/';
 
 if ~exist(outpath,'dir')
     mkdir(outpath);

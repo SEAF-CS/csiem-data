@@ -2,7 +2,7 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = '../../../data-lake/csmc/csmcwq-mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
+thefile = 'V:/data-lake/csmc/csmcwq-mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
 
 theyears = [1983 1985 1986 1987 1990:1:1993 1997:1:2020];
 
@@ -18,7 +18,7 @@ thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
 
 
-outpath = '../../../data-warehouse/csv/csmc/csmcwq-mafrl/';
+outpath = 'V:/data-warehouse/csv/csmc/csmcwq-mafrl/';
 
 fiderr = fopen('errorfile.csv','wt');
 fprintf(fiderr,'Year,Site,Var,Foundsite,Foundvar\n');

@@ -2,13 +2,13 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = '../../../data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv';
+thefile = 'V:/data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = '../../../data-warehouse/csv/imos/amnmprofile/';
+outpath = 'V:/data-warehouse/csv/imos/amnmprofile/';
 
 if ~exist(outpath,'dir')
     mkdir(outpath);

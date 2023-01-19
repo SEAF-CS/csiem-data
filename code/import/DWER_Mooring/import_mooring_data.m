@@ -2,7 +2,7 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = '../../../data-lake/dwer/csmooring/';
+filepath = 'V:/data-lake/dwer/csmooring/';
 
 filelist = dir(fullfile(filepath, '**\*.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -10,22 +10,28 @@ filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 % Mapping.
 
-filename = '../../../data-mapping/DWER_CSMOORING.csv';
-
-[snum,sstr] = xlsread(filename,'A2:i100');
-
-stationID = snum(:,1);
-lat = snum(:,3);
-lon = snum(:,4);
-
-[X,Y] = ll2utm(lat,lon);
+% filename = '../../../data-mapping/DWER_CSMOORING.csv';
+% 
+% [snum,sstr] = xlsread(filename,'A2:i100');
+% 
+% stationID = snum(:,1);
+% lat = snum(:,3);
+% lon = snum(:,4);
+% 
+% [X,Y] = ll2utm(lat,lon);
 
 % Conversion
-[snum,sstr] = xlsread('Conversions_mh.xlsx','A2:D1000');
+% [snum,sstr] = xlsread('Conversions_mh.xlsx','A2:D1000');
 
-oldheader = sstr(:,1);
-newheader = sstr(:,3);
-conv = snum(:,1);
+load ../../actions/agency.mat;
+load ../../actions/sitekey.mat;
+
+sitelist = fieldnames(sitekey.dwermooring);
+varlist = fieldnames(agency.dwermooring);
+
+% oldheader = sstr(:,1);
+% newheader = sstr(:,3);
+% conv = snum(:,1);
 
 mooring = [];
 
@@ -44,7 +50,13 @@ for i = 1:length(filelist)
     
     thesite = str2num(regexprep(sites{3},'"',''));
     
+    
+    
     sitestr = ['s',num2str(thesite)];
+    
+    
+    for ii = 1
+    
     
     fline = fgetl(fid);
     hline = fgetl(fid);

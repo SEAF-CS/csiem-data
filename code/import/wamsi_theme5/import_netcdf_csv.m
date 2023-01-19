@@ -2,9 +2,9 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = '../../../data-lake/wamsi/wwmsp5/';
+filepath = 'V:/data-lake/wamsi/wwmsp5/';
 
-outdir = '../../../data-warehouse/csv/wamsi/wwmsp5/';
+outdir = 'V:/data-warehouse/csv/wamsi/wwmsp5/';
 
 mkdir(outdir);
 

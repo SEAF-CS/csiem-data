@@ -1,0 +1,7 @@
+# Variable Standardisation
+
+Fundamental to the data collation program is the concept of data standardisation. All data contained within the data lake is processed nightly into standardised data products.
+
+As part of this standardisation, all incoming variables need to be converted into a common variable name and unit. To facilitate this, a global variable translation glossary is being developed, which will allow the data engineers to quickly and transparently create importation scripts to process new datasets.
+
+break

@@ -2,7 +2,7 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = '../../../data-lake/wamsi/wwmsp5/';
+filepath = 'V:/data-lake/wamsi/wwmsp5/';
 
 filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list

@@ -5,6 +5,8 @@ sitekey.imosbgc = read_site_sheet('IMOSBGC');
 sitekey.mafrl = read_site_sheet('MAFRL');
 sitekey.bom = read_site_sheet('BOM');
 sitekey.dwer = read_site_sheet('DWER');
+sitekey.dwermooring = read_site_sheet('DWERMOORING');
+
 sitekey.dot = read_site_sheet('DOT');
 
 
@@ -14,7 +16,7 @@ save sitekey.mat sitekey -mat;
 end
 function data = read_site_sheet(sheet)
 
-filename = '../../data-lake/site_key.xlsx';
+filename = 'V:/data-lake/site_key.xlsx';
 
 if strcmpi(sheet,'MAFRL') == 0
     [snum,sstr] = xlsread(filename,sheet,'A2:H10000');

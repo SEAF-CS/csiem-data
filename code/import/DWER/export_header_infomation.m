@@ -1,6 +1,6 @@
 function export_header_infomation
 
-filepath = '../../../data-warehouse/csv//';
+filepath = 'V:/data-warehouse/csv//';
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list

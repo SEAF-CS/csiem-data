@@ -1,0 +1,21 @@
+# CSIEM Data Catalogue
+
+All data entering the sytem is recording in the ```csiem_data_catalogue.xlsx``` spreadsheet that can be found the data-lake directory in the cseim-data GitHub repository.  A summary overview diagram is shown below.
+
+![CSIEM Data Catalogue](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/dataflow.png "CSIEM Data Catalogue")
+
+A full outline of the latest CSIEM data catalogue is included below, subdivided into priorities. 
+
+* High Priority: Data not uploaded into the data-lake folder structure, and is required to drive the model
+* Medium Priority: Data not uploaded into the data-lake folder structure, and is required to validate the model
+* Low Priority: Data not uploaded into the data-lake folder structure, and is required to add context to other data sources
+* Import Reqired: Data that has been uploaded into the lake, but not ingested into the warehouse
+* Import Finalised: Data that has been ingested into the warehouse, and may require review.
+
+
+BREAK
+
+
+
+
+

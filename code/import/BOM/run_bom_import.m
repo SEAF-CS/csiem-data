@@ -17,7 +17,7 @@ if ~exist(rdir,'dir')
     mkdir(rdir);
 end
 
-unzip('../../../data-lake/bom/idy/idy.zip',rdir);
+unzip('V:/data-lake/bom/idy/idy.zip',rdir);
 
 % % % 
 getBoMmetdata(rdir,header_file);

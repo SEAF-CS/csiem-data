@@ -1,6 +1,6 @@
 clear all; close all;
 
-[snum,sstr] = xlsread('../../../data-lake/site_key.xlsx','BOM','A2:H10000');
+[snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
 
 sitename = sstr(:,3);
 siteid = snum(:,1);
@@ -8,7 +8,7 @@ Lat = snum(:,6);
 Lon = snum(:,7);
 shortname = sstr(:,4);
 
-basedir = '../../../data-lake/bom/rainfall/';
+basedir = 'V:/data-lake/bom/rainfall/';
 
 
 i = 1;

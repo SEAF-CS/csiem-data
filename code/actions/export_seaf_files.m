@@ -1,8 +1,8 @@
 clear all; close all;
 
-load('../../data-warehouse/mat/seaf.mat');
+load('V:/data-warehouse/mat/seaf.mat');
 
-outdir = '../../data-warehouse/seaf_v3/';
+outdir = 'V:/data-warehouse/marvl/';
 load varkey.mat;
 
 

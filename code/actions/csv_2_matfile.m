@@ -4,9 +4,10 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfile = '../../data-warehouse/mat/seaf.mat';
+outfile = 'V:/data-warehouse/mat/seaf.mat';
+tempfile = 'seaf.mat';
 
-filepath = '../../data-warehouse/csv/';
+filepath = 'V:/data-warehouse/csv/';
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -34,7 +35,7 @@ for i = 1:length(filelist)
     
     
     
-    if strcmpi(tfv_name,'N/A') == 0
+    %if strcmpi(tfv_name,'N/A') == 0
         
         data = import_datafile(datafile);
         [s,~,j] = unique(data.QC);
@@ -117,7 +118,7 @@ for i = 1:length(filelist)
         
         
         
-    end
+    %end
     
 end
 
@@ -159,7 +160,13 @@ for i = 1:length(sites)
         end
     end
 end
-save(outfile,'seaf','-mat','-v7.3');
+
+save(tempfile,'seaf','-mat','-v7.3');
+
+copyfile(tempfile,outfile,'f');
+
+delete(tempfile);
+%save(outfile,'seaf','-mat','-v7.3');
 
 
 end

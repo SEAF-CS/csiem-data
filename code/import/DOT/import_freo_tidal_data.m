@@ -1,7 +1,7 @@
 clear all; close all;
 
-main_dir = '../../../data-lake/dot/tide/FFFBH01/';
-outdir = '../../../data-warehouse/csv/dot/tide/';
+main_dir = 'V:/data-lake/dot/tide/FFFBH01/';
+outdir = 'V:/data-warehouse/csv/dot/tide/';
 if ~exist(outdir,'dir')
     mkdir(outdir);
 end
@@ -81,7 +81,7 @@ end
 
 depth = [];
 QC = 'n';
-filename = '../../../data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
+filename = 'V:/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');

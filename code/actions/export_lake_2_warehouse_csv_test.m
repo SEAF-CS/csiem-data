@@ -1,6 +1,6 @@
 function export_lake_2_warehouse_csv_test
 
-basedir = '../../data-warehouse/csv/';
+basedir = 'V:/data-warehouse/csv/';
 
 filelist = dir(fullfile(basedir, '**\*DATA.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list

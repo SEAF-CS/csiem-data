@@ -4,9 +4,10 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfile = '../../data-warehouse/mat/cockburn.mat';
+outfile = 'V:/data-warehouse/mat/cockburn.mat';
+tempfile = 'cockburn.mat';
 
-filepath = '../../data-warehouse/csv/';
+filepath = 'V:/data-warehouse/csv/';
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -157,12 +158,16 @@ for i = 1:length(sites)
         end
     end
 end
-save(outfile,'cockburn','-mat','-v7.3');
+save(tempfile,'cockburn','-mat','-v7.3');
+
+copyfile(tempfile,outfile,'f');
+
+delete(tempfile);
 
 mkdir('Summary/Images');
 mkdir('Summary/GIS');
 
-summerise_data(outfile,'Summary/Images/','Summary/GIS/','cockbun.shp');
+% summerise_data(outfile,'Summary/Images/','Summary/GIS/','cockbun.shp');
 end
 
 function data = import_datafile(filename)

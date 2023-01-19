@@ -1,3 +1,0 @@
-INSTRUCTIONS
-
-To link WIR_CS_bore_sites with files in the timeseriesData directory, join the SITE_ID field with Site Ref.

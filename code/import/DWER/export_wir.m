@@ -10,7 +10,7 @@ end
 theproject = sstr(:,1);
 
 
-[snum,sstr] = xlsread('../../../data-lake/variable_key.xlsx','Key','A2:D10000');
+[snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','Key','A2:D10000');
 
 varID = sstr(:,1);
 varName = sstr(:,2);
@@ -23,7 +23,7 @@ for i = 1:length(varSymbol)
     end
 end
 
-outputdir = '../../../data-warehouse/csv/dwer/swanest/';
+outputdir = 'V:/data-warehouse/csv/dwer/swanest/';
 
 sites = fieldnames(swan);
 

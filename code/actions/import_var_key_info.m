@@ -1,6 +1,6 @@
 clear all; close all;
 
-filename = '../../data-lake/variable_key.xlsx';
+filename = 'V:/data-lake/variable_key.xlsx';
 
 [snum,sstr] = xlsread(filename,'Key','A2:J10000');
 
@@ -24,7 +24,7 @@ varCF = sstr(:,8);
 varCF_Unit = sstr(:,9);
 for i = 1:length(varSymbol)
     if isempty(varSymbol{i})
-        varSymbol(i) = varName(i);
+        varSymbol(i) = varUnit(i);
     end
 end
 
@@ -61,6 +61,7 @@ agency.theme5 = import_agency_conv('THEME5');
 agency.dot = import_agency_conv('DOT');
 agency.bom = import_agency_conv('BOM');
 agency.dwer = import_agency_conv('DWER');
+agency.dwermooring = import_agency_conv('DWERMOORING');
 agency.mafrl = import_agency_conv('MAFRL');
 agency.imosbgc = import_agency_conv('IMOSBGC');
 agency.imosprofile = import_agency_conv('IMOSPROFILE');

@@ -2,7 +2,7 @@
 
 addpath(genpath('../../functions/'));
 
-[snum,sstr] = xlsread('../../../data-lake/site_key.xlsx','BOM','A2:H10000');
+[snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
 
 sitename = sstr(:,3);
 siteid = snum(:,1);
@@ -10,13 +10,13 @@ Lat = snum(:,6);
 Lon = snum(:,7);
 shortname = sstr(:,4);
 
-filepath = '../../../data-lake/bom/rainfall/';
+filepath = 'V:/data-lake/bom/rainfall/';
 
 filelist = dir(fullfile(filepath, '**\*.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 
-outdir = '../../../data-warehouse/csv/bom/rainfall/';
+outdir = 'V:/data-warehouse/csv/bom/rainfall/';
 writepath = 'data-warehouse/csv/bom/rainfall';
 if ~exist(outdir,'dir')
     mkdir(outdir);
