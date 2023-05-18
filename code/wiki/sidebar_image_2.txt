@@ -1,4 +1,5 @@
 [IDY]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/BOM_IDY
+[CSMWQ-MAFRL]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/CSMC_CSMWQ-MAFRL
 [Tide]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DOT_Tide
 [CANEST]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_CANEST
 [CSMWQ]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_CSMWQ

@@ -1,8 +1,18 @@
 clear all; close all;
 
-load('V:/data-warehouse/mat/seaf.mat');
 
-outdir = 'V:/data-warehouse/marvl/';
+runlocal = 0;
+if ~runlocal
+    
+    load('V:/data-warehouse/mat/seaf.mat');
+    
+    outdir = 'V:/data-warehouse/marvl/';
+else
+    load('Y:/csiem/data-warehouse/mat/seaf.mat');
+    
+    outdir = 'Y:/csiem/data-warehouse/marvl/';
+end
+
 load varkey.mat;
 
 
@@ -16,7 +26,7 @@ for i = 1:length(sites)
     for j = 1:length(vars)
         
         fulldir = [outdir,seaf.(sites{i}).(vars{j}).Agency_Code,'/',seaf.(sites{i}).(vars{j}).Program_Code,'/'];
-            
+        
         
         if ~exist(fulldir,'dir')
             mkdir(fulldir);
@@ -37,7 +47,7 @@ for i = 1:length(sites)
             if isnumeric(seaf.(sites{i}).(vars{j}).(datatype{k}))
                 seaf.(sites{i}).(vars{j}).(datatype{k}) = num2str(seaf.(sites{i}).(vars{j}).(datatype{k}));
             end
-                
+            
             fprintf(fid,'# %s,%s\n',regexprep(datatype{k},'_',' '),seaf.(sites{i}).(vars{j}).(datatype{k}));
             
         end
@@ -54,14 +64,14 @@ for i = 1:length(sites)
         fclose(fid);
     end
 end
-        
-        
-      
-        
-        
-        
-        
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
 

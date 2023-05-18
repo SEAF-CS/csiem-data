@@ -31,7 +31,7 @@ cd ../../actions
 
 cd ../import/MAFRL/
 
-import_mafrl_2_csv
+%import_mafrl_2_csv
 
 cd ../../actions
 

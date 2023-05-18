@@ -4,10 +4,23 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfile = 'V:/data-warehouse/mat/seaf.mat';
+runlocal = 0;
 tempfile = 'seaf.mat';
 
-filepath = 'V:/data-warehouse/csv/';
+if ~runlocal
+    
+    outfile = 'V:/data-warehouse/mat/seaf.mat';
+    
+    filepath = 'V:/data-warehouse/csv/';
+    
+else
+    
+    outfile = 'Y:/csiem/data-warehouse/mat/seaf.mat';
+    filepath = 'Y:/csiem/data-warehouse/csv/';
+    
+end
+
+%filepath = 'C:\Users\00065525\Github\csiem-data\code\import\MAFRL\csmcwq-mafrl\';
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -36,54 +49,14 @@ for i = 1:length(filelist)
     
     
     %if strcmpi(tfv_name,'N/A') == 0
+    
+    data = import_datafile(datafile);
+    [s,~,j] = unique(data.QC);
+    QC_CODE = s{mode(j)};
+    
+    if isfield(seaf,sitecode)
         
-        data = import_datafile(datafile);
-        [s,~,j] = unique(data.QC);
-        QC_CODE = s{mode(j)};
-        
-        if isfield(seaf,sitecode)
-            
-            if ~isfield(seaf.(sitecode),tfv_name)
-                
-                
-                seaf.(sitecode).(tfv_name).QC = QC_CODE;
-                
-                seaf.(sitecode).(tfv_name).Date = data.Date;
-                seaf.(sitecode).(tfv_name).Data = data.Data;
-                seaf.(sitecode).(tfv_name).Data_Raw = double(data.Data);
-                seaf.(sitecode).(tfv_name).Depth = data.Depth * -1;
-                seaf.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
-                seaf.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
-                
-                seaf.(sitecode).(tfv_name).X = header.X;
-                seaf.(sitecode).(tfv_name).Y = header.Y;
-                %seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
-                
-                
-                
-                
-                
-                
-                headerfield = fieldnames(header);
-                
-                for k = 1:length(headerfield)
-                    seaf.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
-                    
-                end
-                seaf.(sitecode).(tfv_name).Sentient_Hubs_Code = varkey.(header.Variable_ID).SH;
-                seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).Unit;
-            else
-                seaf.(sitecode).(tfv_name).Date = [seaf.(sitecode).(tfv_name).Date;data.Date];
-                seaf.(sitecode).(tfv_name).Data = [seaf.(sitecode).(tfv_name).Data;data.Data];
-                seaf.(sitecode).(tfv_name).Data_Raw = [seaf.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
-                seaf.(sitecode).(tfv_name).Depth = [seaf.(sitecode).(tfv_name).Depth;data.Depth * -1];
-                
-                seaf.(sitecode).(tfv_name).Depth_T = [seaf.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];
-                seaf.(sitecode).(tfv_name).Depth_B = [seaf.(sitecode).(tfv_name).Depth_B;data.Depth_B * -1];
-                
-            end
-            
-        else
+        if ~isfield(seaf.(sitecode),tfv_name)
             
             
             seaf.(sitecode).(tfv_name).QC = QC_CODE;
@@ -92,7 +65,6 @@ for i = 1:length(filelist)
             seaf.(sitecode).(tfv_name).Data = data.Data;
             seaf.(sitecode).(tfv_name).Data_Raw = double(data.Data);
             seaf.(sitecode).(tfv_name).Depth = data.Depth * -1;
-            
             seaf.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
             seaf.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
             
@@ -103,21 +75,62 @@ for i = 1:length(filelist)
             
             
             
+            
+            
             headerfield = fieldnames(header);
             
             for k = 1:length(headerfield)
                 seaf.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
+                
             end
             seaf.(sitecode).(tfv_name).Sentient_Hubs_Code = varkey.(header.Variable_ID).SH;
             seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).Unit;
+        else
+            seaf.(sitecode).(tfv_name).Date = [seaf.(sitecode).(tfv_name).Date;data.Date];
+            seaf.(sitecode).(tfv_name).Data = [seaf.(sitecode).(tfv_name).Data;data.Data];
+            seaf.(sitecode).(tfv_name).Data_Raw = [seaf.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
+            seaf.(sitecode).(tfv_name).Depth = [seaf.(sitecode).(tfv_name).Depth;data.Depth * -1];
+            
+            seaf.(sitecode).(tfv_name).Depth_T = [seaf.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];
+            seaf.(sitecode).(tfv_name).Depth_B = [seaf.(sitecode).(tfv_name).Depth_B;data.Depth_B * -1];
+            
         end
         
+    else
         
         
-        %cockburn.(sitecode).(tfv_name).QC = data.QC;
+        seaf.(sitecode).(tfv_name).QC = QC_CODE;
+        
+        seaf.(sitecode).(tfv_name).Date = data.Date;
+        seaf.(sitecode).(tfv_name).Data = data.Data;
+        seaf.(sitecode).(tfv_name).Data_Raw = double(data.Data);
+        seaf.(sitecode).(tfv_name).Depth = data.Depth * -1;
+        
+        seaf.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
+        seaf.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
+        
+        seaf.(sitecode).(tfv_name).X = header.X;
+        seaf.(sitecode).(tfv_name).Y = header.Y;
+        %seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
         
         
         
+        
+        headerfield = fieldnames(header);
+        
+        for k = 1:length(headerfield)
+            seaf.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
+        end
+        seaf.(sitecode).(tfv_name).Sentient_Hubs_Code = varkey.(header.Variable_ID).SH;
+        seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).Unit;
+    end
+    
+    
+    
+    %cockburn.(sitecode).(tfv_name).QC = data.QC;
+    
+    
+    
     %end
     
 end
@@ -165,7 +178,7 @@ save(tempfile,'seaf','-mat','-v7.3');
 
 copyfile(tempfile,outfile,'f');
 
-delete(tempfile);
+%delete(tempfile);
 %save(outfile,'seaf','-mat','-v7.3');
 
 

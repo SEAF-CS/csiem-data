@@ -1,5 +1,6 @@
 ## Data
 - [BOM: IDY][IDY]
+- [CSMC: CSMWQ-MAFRL][CSMWQ-MAFRL]
 - [DOT: Tide][Tide]
 - [DWER: CANEST][CANEST]
 - [DWER: CSMWQ][CSMWQ]

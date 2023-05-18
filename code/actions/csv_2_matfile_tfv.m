@@ -3,11 +3,22 @@ function csv_2_matfile
 addpath(genpath('../functions/'));
 
 load varkey.mat;
-
-outfile = 'V:/data-warehouse/mat/cockburn.mat';
+runlocal = 1;
 tempfile = 'cockburn.mat';
 
-filepath = 'V:/data-warehouse/csv/';
+if ~runlocal
+    
+    outfile = 'V:/data-warehouse/mat/cockburn.mat';
+    
+    filepath = 'V:/data-warehouse/csv/';
+    
+else
+    
+    outfile = 'Y:/csiem/Data/Offline/data-warehouse/mat/cockburn.mat';
+    filepath ='Y:/csiem/Data/Offline/data-warehouse/csv/';
+    
+end
+
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -55,8 +66,10 @@ for i = 1:length(filelist)
                 cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
                 cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
                 
-                cockburn.(sitecode).(tfv_name).X = header.X;
-                cockburn.(sitecode).(tfv_name).Y = header.Y;
+                cockburn.(sitecode).(tfv_name).X = header.Lon;
+                cockburn.(sitecode).(tfv_name).Y = header.Lat;
+                cockburn.(sitecode).(tfv_name).XUTM = header.X;
+                cockburn.(sitecode).(tfv_name).YUTM = header.Y;
                 cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
                 
                 
@@ -95,8 +108,10 @@ for i = 1:length(filelist)
             cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
             cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
             
-            cockburn.(sitecode).(tfv_name).X = header.X;
-            cockburn.(sitecode).(tfv_name).Y = header.Y;
+                cockburn.(sitecode).(tfv_name).X = header.Lon;
+                cockburn.(sitecode).(tfv_name).Y = header.Lat;
+                cockburn.(sitecode).(tfv_name).XUTM = header.X;
+                cockburn.(sitecode).(tfv_name).YUTM = header.Y;
             cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
             
             

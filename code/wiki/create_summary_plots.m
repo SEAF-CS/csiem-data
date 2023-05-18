@@ -1,7 +1,14 @@
 clear all; close all;
 
-load V:/data-warehouse/mat/seaf.mat;
+runlocal = 1;
 
+if ~runlocal
+    
+    load V:/data-warehouse/mat/seaf.mat;
+    
+else
+    load Y:/csiem/data-warehouse/mat/seaf.mat;
+end
 agencies = [];
 
 
@@ -48,17 +55,17 @@ for i = 1:length(uagencies)
         fprintf(sidebar,'- [%s][%s]\n',thecode,comp.(uagencies{i}).Project{j});
         
         fprintf(sidebar2,'[%s]: %s\n',comp.(uagencies{i}).Project{j},[' https://github.com/AquaticEcoDynamics/csiem-data/wiki/',regexprep(thefilename,'.md','')]);
-      
+        
         
         
         figure
         gx = geoaxes;
-
-%         mapshow('background.png');hold on
-%         
-%         axis equal;
-%         axis off;
-%         grid off;
+        
+        %         mapshow('background.png');hold on
+        %
+        %         axis equal;
+        %         axis off;
+        %         grid off;
         
         aLat = [];
         aLon = [];
@@ -70,31 +77,31 @@ for i = 1:length(uagencies)
             vars = fieldnames(seaf.(sites{k}));
             
             if strcmpi(comp.(uagencies{i}).Project{j},seaf.(sites{k}).(vars{1}).Program_Code) == 1
-                  geoscatter(seaf.(sites{k}).(vars{1}).Lat,seaf.(sites{k}).(vars{1}).Lon,"o",'filled','markerfacecolor','w');hold on
-%                 text(seaf.(sites{k}).(vars{1}).Lon + 0.05,seaf.(sites{k}).(vars{1}).Lat + 0.05,regexprep(seaf.(sites{k}).(vars{1}).Station_ID,'_',' '),...
-%                     'fontsize',4);
+                geoscatter(seaf.(sites{k}).(vars{1}).Lat,seaf.(sites{k}).(vars{1}).Lon,"o",'filled','markerfacecolor','w');hold on
+                %                 text(seaf.(sites{k}).(vars{1}).Lon + 0.05,seaf.(sites{k}).(vars{1}).Lat + 0.05,regexprep(seaf.(sites{k}).(vars{1}).Station_ID,'_',' '),...
+                %                     'fontsize',4);
                 aLat = [aLat;seaf.(sites{k}).(vars{1}).Lat];
                 aLon = [aLon;seaf.(sites{k}).(vars{1}).Lon];
                 aLab = [aLab;{regexprep(seaf.(sites{k}).(vars{1}).Station_ID,'_',' ')}];
                 aSites = [aSites;sites(k)];
             end
         end
-       
-         geobasemap('satellite'); pause(10);
+        
+        geobasemap('satellite'); pause(10);
         
         for kkk = 1:length(aLab)
             text(aLat(kkk),aLon(kkk),aLab{kkk},...
-                    'fontsize',8,'fontweight','bold','color','w');
+                'fontsize',8,'fontweight','bold','color','w');
         end
         nzoom = 8.9626;
         if strcmpi(uagencies{i},'IMOS') == 1
             gx.ZoomLevel = nzoom;
         end
         
-%         xlim([min(aLon)-0.5 max(aLon)+0.5]);
-%         ylim([min(aLat)-0.5 max(aLat)+0.5]);
-
-     %--% Paper Size
+        %         xlim([min(aLon)-0.5 max(aLon)+0.5]);
+        %         ylim([min(aLat)-0.5 max(aLat)+0.5]);
+        
+        %--% Paper Size
         set(gcf, 'PaperPositionMode', 'manual');
         set(gcf, 'PaperUnits', 'centimeters');
         xSize = 20;
@@ -102,7 +109,7 @@ for i = 1:length(uagencies)
         xLeft = (21-xSize)/2;
         yTop = (30-ySize)/2;
         set(gcf,'paperposition',[0 0 xSize ySize])
-
+        
         saveas(gcf,['../../../cseim-data-wiki/images/',uagencies{i},'_',comp.(uagencies{i}).Project{j},'.png']);
         
         close;
@@ -113,7 +120,7 @@ for i = 1:length(uagencies)
         
         
         
-
+        
         fprintf(thefid,'%s\n',txt);
         
         for kk = 1:length(aSites)
@@ -122,7 +129,7 @@ for i = 1:length(uagencies)
             filename = run_site_plots(aSites{kk},seaf);
             
             thefiletxt = ['Data Plots: [',aSites{kk},'](',filename,')'];
-        
+            
             fprintf(thefid,'%s\n',thefiletxt);
             
         end

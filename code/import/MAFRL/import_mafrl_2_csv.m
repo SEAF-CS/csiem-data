@@ -19,7 +19,7 @@ theagencyval = fieldnames(agency.mafrl);
 
 
 outpath = 'V:/data-warehouse/csv/csmc/csmcwq-mafrl/';
-
+%outpath = 'csmcwq-mafrl/';
 fiderr = fopen('errorfile.csv','wt');
 fprintf(fiderr,'Year,Site,Var,Foundsite,Foundvar\n');
 
@@ -72,6 +72,13 @@ for i = 1:length(theyears)
                     
                     thedata = data(sss,k) * agency.mafrl.(theagencyval{foundagency}).Conv;
                     thedate = datenum(sdate(sss),'dd/mm/yyyy');
+                    
+                    ggg = find(thedate < datenum(1832,01,01));
+                    if ~isempty(ggg)
+                        stop;
+                    end
+                    
+                    
                     thedepth = {};
                     QC = {};
                     
