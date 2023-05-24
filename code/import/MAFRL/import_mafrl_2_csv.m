@@ -5,7 +5,7 @@ addpath(genpath('../../functions/'));
 thefile = 'V:/data-lake/csmc/csmcwq-mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
 
 theyears = [1983 1985 1986 1987 1990:1:1993 1997:1:2020];
-
+%theyears = [2013];
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
@@ -30,7 +30,9 @@ for i = 1:length(theyears)
     [~,sites] = xlsread(thefile,num2str(theyears(i)),'A3:A10000');
     [~,sdate] = xlsread(thefile,num2str(theyears(i)),'B3:B10000');
     [~,headers] = xlsread(thefile,num2str(theyears(i)),'C1:ZZ1');
-    [data,~] = xlsread(thefile,num2str(theyears(i)),'C3:ZZ10000');
+    %[data,~] = xlsread(thefile,num2str(theyears(i)),'C3:ZZ10000');
+    [sdata,~,sraw] = xlsread(thefile,num2str(theyears(i)),'C3:ZZ10000');
+    data = fix_text_as_num(sdata,sraw);
     
     
     

@@ -3,7 +3,7 @@ function csv_2_matfile
 addpath(genpath('../functions/'));
 
 load varkey.mat;
-runlocal = 1;
+runlocal = 0;
 tempfile = 'cockburn.mat';
 
 if ~runlocal
@@ -83,7 +83,9 @@ for i = 1:length(filelist)
                     cockburn.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
                 end
                 
-                
+                cockburn.(sitecode).(tfv_name).X = cockburn.(sitecode).(tfv_name).Lon;
+                cockburn.(sitecode).(tfv_name).Y = cockburn.(sitecode).(tfv_name).Lat;
+                cockburn.(sitecode).(tfv_name).Agency = cockburn.(sitecode).(tfv_name).Agency_Code;
             else
                 cockburn.(sitecode).(tfv_name).Date = [cockburn.(sitecode).(tfv_name).Date;data.Date];
                 cockburn.(sitecode).(tfv_name).Data = [cockburn.(sitecode).(tfv_name).Data;data.Data * tfv_conv];
