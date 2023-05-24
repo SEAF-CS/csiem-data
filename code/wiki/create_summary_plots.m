@@ -1,6 +1,6 @@
 clear all; close all;
 
-runlocal = 1;
+runlocal = 0;
 
 if ~runlocal
     

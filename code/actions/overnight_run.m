@@ -31,7 +31,7 @@ cd ../../actions
 
 cd ../import/MAFRL/
 
-%import_mafrl_2_csv
+import_mafrl_2_csv
 
 cd ../../actions
 
@@ -65,6 +65,6 @@ export_seaf_files;
 
 cd ../wiki/
 
-run_wiki;;clear all; close all;
+run_wiki;clear all; close all;
 
 

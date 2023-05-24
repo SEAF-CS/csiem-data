@@ -85,6 +85,7 @@ for i = 1:length(filelist)
             end
             seaf.(sitecode).(tfv_name).Sentient_Hubs_Code = varkey.(header.Variable_ID).SH;
             seaf.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).Unit;
+
         else
             seaf.(sitecode).(tfv_name).Date = [seaf.(sitecode).(tfv_name).Date;data.Date];
             seaf.(sitecode).(tfv_name).Data = [seaf.(sitecode).(tfv_name).Data;data.Data];
