@@ -1,6 +1,6 @@
 clear all; close all;
 
-filename = 'V:/data-lake/variable_key.xlsx';
+filename = '../../data-governance/variable_key.xlsx';
 
 [snum,sstr] = xlsread(filename,'Key','A2:J10000');
 

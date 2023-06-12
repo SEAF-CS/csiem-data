@@ -13,20 +13,20 @@ addpath(genpath('Functions'));
 
 
 
-dirlist = dir('V:/data-lake/dwer/swanest/');
+dirlist = dir('D:\csiem/data-lake/dwer/swanest/');
 
 for i = 46:length(dirlist)%3
     
-    filelist = dir(['V:/data-lake/dwer/swanest/',dirlist(i).name,'/*.xlsx']);
+    filelist = dir(['D:\csiem\data-lake/dwer/swanest/',dirlist(i).name,'/*.xlsx']);
     
     if strcmpi(filelist(1).name,'WaterQualityDiscreteForSiteCrossTab.xlsx')
-        filename = ['V:/data-lake/dwer/swanest/',dirlist(i).name,'/WaterQualityDiscreteForSiteCrossTab.xlsx'];
+        filename = ['D:\csiem\data-lake/dwer/swanest/',dirlist(i).name,'/WaterQualityDiscreteForSiteCrossTab.xlsx'];
         type = 'WQ';
 %         if i ~= 9
          [rows,cols] = calculate_xls_size(filename);
 %         end
     else
-        filename = ['V:/data-lake/dwer/swanest/',dirlist(i).name,'/WaterLevelsContinuousForSiteCrossTab.xlsx'];
+        filename = ['D:\csiem\data-lake/dwer/swanest/',dirlist(i).name,'/WaterLevelsContinuousForSiteCrossTab.xlsx'];
         type = 'Level';
         [rows,cols] = calculate_xls_size_l(filename);
     end

@@ -3,7 +3,7 @@ function csv_2_matfile
 addpath(genpath('../functions/'));
 
 load varkey.mat;
-runlocal = 0;
+runlocal = 1;
 tempfile = 'cockburn.mat';
 
 if ~runlocal
@@ -14,11 +14,15 @@ if ~runlocal
     
 else
     
-    outfile = 'Y:/csiem/Data/Offline/data-warehouse/mat/cockburn.mat';
-    filepath ='Y:/csiem/Data/Offline/data-warehouse/csv/';
+    outfile = 'D:\csiem\data-warehouse/mat/cockburn.mat';
+    filepath ='D:\csiem\data-warehouse/csv/';
     
 end
 
+exclude_list = {...
+    'bom',...
+    'wamsi',...
+    };
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -31,30 +35,84 @@ fid = fopen('excluded_sites.csv','wt');
 cockburn = [];
 
 for i = 1:length(filelist)
-    headerfile = [filelist(i).folder,'\',filelist(i).name];
     
-    datafile = regexprep(headerfile,'HEADER','DATA');
+    excluded = 0;
     
-    disp(['Importing: ',filelist(i).name]);
+    for lll = 1:length(exclude_list)
+        kk = strfind(filelist(i).folder,exclude_list{lll});
+        if kk > 1
+            excluded = 1;
+        end
+    end
     
-    header = import_header(headerfile);
-    
-    agency = header.Agency_Code;
-    sitecode = [agency,'_',header.Station_ID];
-    tfv_name = varkey.(header.Variable_ID).tfvName;
-    tfv_conv = varkey.(header.Variable_ID).tfvConv;
-    
-    
-    
-    if strcmpi(tfv_name,'N/A') == 0
+    if excluded == 0
+        headerfile = [filelist(i).folder,'\',filelist(i).name];
         
-        data = import_datafile(datafile);
-        [s,~,j] = unique(data.QC);
-        QC_CODE = s{mode(j)};
+        datafile = regexprep(headerfile,'HEADER','DATA');
         
-        if isfield(cockburn,sitecode)
+        disp(['Importing: ',filelist(i).name]);
+        
+        header = import_header(headerfile);
+        
+        agency = header.Agency_Code;
+        sitecode = [agency,'_',header.Station_ID];
+        tfv_name = varkey.(header.Variable_ID).tfvName;
+        tfv_conv = varkey.(header.Variable_ID).tfvConv;
+        
+        
+        
+        if strcmpi(tfv_name,'N/A') == 0
             
-            if ~isfield(cockburn.(sitecode),tfv_name)
+            data = import_datafile(datafile);
+            [s,~,j] = unique(data.QC);
+            QC_CODE = s{mode(j)};
+            
+            if isfield(cockburn,sitecode)
+                
+                if ~isfield(cockburn.(sitecode),tfv_name)
+                    
+                    
+                    cockburn.(sitecode).(tfv_name).QC = QC_CODE;
+                    
+                    cockburn.(sitecode).(tfv_name).Date = data.Date;
+                    cockburn.(sitecode).(tfv_name).Data = data.Data * tfv_conv;
+                    cockburn.(sitecode).(tfv_name).Data_Raw = double(data.Data);
+                                        cockburn.(sitecode).(tfv_name).Depth = data.Depth * -1;
+                    cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
+                    cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
+                    
+                    cockburn.(sitecode).(tfv_name).X = header.Lon;
+                    cockburn.(sitecode).(tfv_name).Y = header.Lat;
+                    cockburn.(sitecode).(tfv_name).XUTM = header.X;
+                    cockburn.(sitecode).(tfv_name).YUTM = header.Y;
+                    cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
+                    
+                    
+                    
+                    
+                    
+                    
+                    headerfield = fieldnames(header);
+                    
+                    for k = 1:length(headerfield)
+                        cockburn.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
+                    end
+                    
+                    cockburn.(sitecode).(tfv_name).X = cockburn.(sitecode).(tfv_name).Lon;
+                    cockburn.(sitecode).(tfv_name).Y = cockburn.(sitecode).(tfv_name).Lat;
+                    cockburn.(sitecode).(tfv_name).Agency = cockburn.(sitecode).(tfv_name).Agency_Code;
+                else
+                    cockburn.(sitecode).(tfv_name).Date = [cockburn.(sitecode).(tfv_name).Date;data.Date];
+                    cockburn.(sitecode).(tfv_name).Data = [cockburn.(sitecode).(tfv_name).Data;data.Data * tfv_conv];
+                    cockburn.(sitecode).(tfv_name).Data_Raw = [cockburn.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
+                    cockburn.(sitecode).(tfv_name).Depth = [cockburn.(sitecode).(tfv_name).Depth;data.Depth * -1];
+                    
+                    cockburn.(sitecode).(tfv_name).Depth_T = [cockburn.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];
+                    cockburn.(sitecode).(tfv_name).Depth_B = [cockburn.(sitecode).(tfv_name).Depth_B;data.Depth_B * -1];
+                    
+                end
+                
+            else
                 
                 
                 cockburn.(sitecode).(tfv_name).QC = QC_CODE;
@@ -63,11 +121,11 @@ for i = 1:length(filelist)
                 cockburn.(sitecode).(tfv_name).Data = data.Data * tfv_conv;
                 cockburn.(sitecode).(tfv_name).Data_Raw = double(data.Data);
                 cockburn.(sitecode).(tfv_name).Depth = data.Depth * -1;
+                
                 cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
                 cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
                 
-                cockburn.(sitecode).(tfv_name).X = header.Lon;
-                cockburn.(sitecode).(tfv_name).Y = header.Lat;
+
                 cockburn.(sitecode).(tfv_name).XUTM = header.X;
                 cockburn.(sitecode).(tfv_name).YUTM = header.Y;
                 cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
@@ -75,64 +133,28 @@ for i = 1:length(filelist)
                 
                 
                 
-                
-                
                 headerfield = fieldnames(header);
                 
                 for k = 1:length(headerfield)
+                    
                     cockburn.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
                 end
-                
                 cockburn.(sitecode).(tfv_name).X = cockburn.(sitecode).(tfv_name).Lon;
                 cockburn.(sitecode).(tfv_name).Y = cockburn.(sitecode).(tfv_name).Lat;
                 cockburn.(sitecode).(tfv_name).Agency = cockburn.(sitecode).(tfv_name).Agency_Code;
-            else
-                cockburn.(sitecode).(tfv_name).Date = [cockburn.(sitecode).(tfv_name).Date;data.Date];
-                cockburn.(sitecode).(tfv_name).Data = [cockburn.(sitecode).(tfv_name).Data;data.Data * tfv_conv];
-                cockburn.(sitecode).(tfv_name).Data_Raw = [cockburn.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
-                cockburn.(sitecode).(tfv_name).Depth = [cockburn.(sitecode).(tfv_name).Depth;data.Depth * -1];
-                
-                cockburn.(sitecode).(tfv_name).Depth_T = [cockburn.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];
-                cockburn.(sitecode).(tfv_name).Depth_B = [cockburn.(sitecode).(tfv_name).Depth_B;data.Depth_B * -1];
                 
             end
             
-        else
             
             
-            cockburn.(sitecode).(tfv_name).QC = QC_CODE;
-            
-            cockburn.(sitecode).(tfv_name).Date = data.Date;
-            cockburn.(sitecode).(tfv_name).Data = data.Data * tfv_conv;
-            cockburn.(sitecode).(tfv_name).Data_Raw = double(data.Data);
-            cockburn.(sitecode).(tfv_name).Depth = data.Depth * -1;
-            
-            cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
-            cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
-            
-                cockburn.(sitecode).(tfv_name).X = header.Lon;
-                cockburn.(sitecode).(tfv_name).Y = header.Lat;
-                cockburn.(sitecode).(tfv_name).XUTM = header.X;
-                cockburn.(sitecode).(tfv_name).YUTM = header.Y;
-            cockburn.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
+            %cockburn.(sitecode).(tfv_name).QC = data.QC;
             
             
-            
-            
-            headerfield = fieldnames(header);
-            
-            for k = 1:length(headerfield)
-                cockburn.(sitecode).(tfv_name).(headerfield{k}) = header.(headerfield{k});
-            end
             
         end
         
-        
-        
-        %cockburn.(sitecode).(tfv_name).QC = data.QC;
-        
-        
-        
+    else
+        disp(filelist(i).folder);
     end
     
 end
