@@ -2,13 +2,13 @@ clear all; close all;
 
 filename = '../../data-governance/variable_key.xlsx';
 
-[snum,sstr] = xlsread(filename,'Key','A2:J10000');
+[snum,sstr] = xlsread(filename,'MASTER KEY','A2:J10000');
 
 st = length(sstr) + 1;
 
 thearray = ['J2:J',num2str(st)];
 
-[~,~,scell] = xlsread(filename,'Key',thearray);
+[~,~,scell] = xlsread(filename,'MASTER KEY',thearray);
 for i = 1:length(scell)
     varCFConv(i,1) = scell{i,1};
 end
@@ -49,9 +49,15 @@ for i = 1:length(varID)
     varkey.(varID{i}).CFConv = varCFConv(i);
     
     sss = find(strcmpi(tfvID,varID{i}) == 1);
-    varkey.(varID{i}).tfvName = tfvName{sss};
-    varkey.(varID{i}).tfvUnits = tfvUnits{sss};
-    varkey.(varID{i}).tfvConv = tfvConv(sss);
+    if ~isempty(sss)
+        varkey.(varID{i}).tfvName = tfvName{sss};
+        varkey.(varID{i}).tfvUnits = tfvUnits{sss};
+        varkey.(varID{i}).tfvConv = tfvConv(sss);
+    else
+        varkey.(varID{i}).tfvName = '';
+        varkey.(varID{i}).tfvUnits = '';
+        varkey.(varID{i}).tfvConv = NaN;
+    end
 end
 
 save varkey.mat varkey -mat;
