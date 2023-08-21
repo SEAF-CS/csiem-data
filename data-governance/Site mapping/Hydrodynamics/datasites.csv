@@ -1,0 +1,59 @@
+AED_ID,SiteID,Site_Name,Shortname,Easting,Northing,Latitude,Longitude,AgencyID,Agency_Name,Type_Data,Type_Station,Station_Status,InCS
+dotPTBAR02,PTBAR02,Barrack Street 02 Tide Station,PTBAR02,-1,-1,-31.959681,115.857261,DOT,Department of Transport,Hydrodynamic,Tide (water level),active,0
+dotHLHIL01,HLHIL01,Hillarys,HLHIL01,-1,-1,-31.825522,115.738589,DOT,Department of Transport,Hydrodynamic,Tide (water level),historic,0
+dotRKMGL01,RKMGL01,Mangles Bay Tide Station,RKMGL01,-1,-1,-32.274431,115.703344,DOT,Department of Transport,Hydrodynamic,Tide (water level),historic,1
+dotFFFBH01,FFFBH01,Fremantle Fishing Boat Harbour Tide Station,FFFBH01,-1,-1,-32.065543,115.748067,DOT,Department of Transport,Hydrodynamic,Tide (water level),active,1
+dotPLPEE01,PLPEE01,Peel Inlet Tide Station,PLPEE01,-1,-1,-32.592209,115.7139,DOT,Department of Transport,Hydrodynamic,Tide (water level),active,0
+dotMHMAN02,MHMAN02,Mandurah (Ocean Marina) Tide Station,MHMAN02,-1,-1,-32.521931,115.714178,DOT,Department of Transport,Hydrodynamic,Tide (water level),active,0
+dotDCH38,DCH38,Cottesloe (Deep Channel),DCH38,-1,-1,-31.977765,115.686678,DOT,Department of Transport,Hydrodynamic,Wave buoy,active,0
+dotRDW47,RDW47,Rottnest Island 02 Wave Station,RDW47,-1,-1,-32.094154,115.407789,DOT,Department of Transport,Hydrodynamic,Wave buoy,active,0
+dotMAN54,MAN54,Mandurah,MAN54,-1,-1,-32.452787,115.572227,DOT,Department of Transport,Hydrodynamic,Wave buoy,active,0
+dotOAM53,OAM53,Cockburn Wave Station,OAM53,-1,-1,-32.107765,115.691678,DOT,Department of Transport,Hydrodynamic,Wave buoy,historic,1
+dotDAW24,DAW24,Dawesville 03 Wave Station,DAW24,-1,-1,-32.100543,115.626678,DOT,Department of Transport,Hydrodynamic,Wave buoy,historic,1
+dotROT33,ROT33,Rottnest Island 01 Wave Station,ROT33,-1,-1,-32.111376,115.401955,DOT,Department of Transport,Hydrodynamic,Wave buoy,historic,0
+dotALK01,ALK01,Alkimos 1,ALK01,-1,-1,-31.628055,115.664166,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotALK02,ALK02,Alkimos 2,ALK02,-1,-1,-31.62,115.658611,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotORF01,ORF01,Ocean Reef,ORF01,-1,-1,-31.757539,115.721419,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotPTB01,PTB01,Port Beach,PTB01,-1,-1,-32.038311,115.741111,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotTRK01,TRK01,Two Rocks 1,TRK01,-1,-1,-31.494444,115.568055,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotTRK02,TRK02,Two Rocks 2,TRK02,-1,-1,-31.496516,115.580633,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotTRK03,TRK03,Two Rocks 3,TRK03,-1,-1,-31.496033,115.581367,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotTRK04,TRK04,Two Rocks 4,TRK04,-1,-1,-31.487972,115.576139,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotKWA01,KWA01,Kwinana,KWA01,-1,-1,-32.249389,115.752383,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,1
+dotMAN01,MAN01,Mandurah 1,MAN01,-1,-1,-32.468133,115.720733,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+dotMAN02,MAN02,Mandurah 2,MAN02,-1,-1,-32.4913,115.708767,DOT,Department of Transport,Hydrodynamic,AWAC (multi-sensor),historic,0
+fpa_stirling,Stirling,Stirling,Stirling,-1,-1,-32.2034,115.7443,FPA,Fremantle Ports Authority,Hydrodynamic,Tide (water level),active,1
+fpa_parmelia,Parmelia,Parmelia,Parmelia,-1,-1,-32.1297,115.7037,FPA,Fremantle Ports Authority,Hydrodynamic,Tide (water level),active,1
+fpa_northmole,Northmole,North Mole,Northmole,-1,-1,-32.0546,115.72403,FPA,Fremantle Ports Authority,Hydrodynamic,Tide (water level),active,1
+fpa_northernbasin,Northernbasin,Northern Basin,Northernbasin,-1,-1,-32.167083,115.7285,FPA,Fremantle Ports Authority,Hydrodynamic,AWAC (multi-sensor),historic,1
+fpa_spoilgrounds,Spoilgrounds,Spoil Grounds,Spoilgrounds,-1,-1,-32.184083,115.759222,FPA,Fremantle Ports Authority,Hydrodynamic,AWAC (multi-sensor),historic,1
+fpa_westernpower,Westernpower,Western Power,Westernpower,-1,-1,-32.197278,115.769972,FPA,Fremantle Ports Authority,Hydrodynamic,AWAC (multi-sensor),historic,1
+bom9265,BOM9265,Hillarys Boat Harbour,HILLARYS_BOAT_HARBOUR_NTC_AWS,-1,-1,-31.8256,115.7386,BOM,Bureau of Meteorology,Hydrodynamic,Tide (water level),active,0
+bmt_Northberth,Northberth,North Berth,Northberth,-1,-1,,,BMT,BMT,Hydrodynamic,Modelled,NA,1
+bmt_Midberth,Midberth,Mid Berth,Midberth,-1,-1,,,BMT,BMT,Hydrodynamic,Modelled,NA,1
+bmt_Southberth,Southberth,South Berth,Southberth,-1,-1,,,BMT,BMT,Hydrodynamic,Modelled,NA,1
+uwa_hillarys,Hillarys,Hillarys buoy,Hillarys,-1,-1,-31.8465995,115.642707,UWA,University of Western Australia,Hydrodynamic,Wave buoy,historic,0
+wwmsp5_CS1,CS1,CS1,CS1,-1,-1,-32.1463,115.6976,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+wwmsp5_CS2,CS2,CS2,CS2,-1,-1,-32.184,115.6971,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+wwmsp5_CS3,CS3,CS3,CS3,-1,-1,-32.2522,115.729,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+wwmsp5_CS4,CS4,CS4,CS4,-1,-1,-32.2044,115.75,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+wwmsp5_CS5,CS5,CS5,CS5,-1,-1,-32.1541,115.7421,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+wwmsp5_CS6,CS6,CS6,CS6,-1,-1,-32.096,115.7392,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+wwmsp5_CS7,CS7,CS7,CS7,-1,-1,-32.24847,115.6853,WWMSP5.1,WAMSI Westport Marine Science Program,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s01a,S01a,S01a,S01a,-1,-1,-32.201505,115.762214,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s01b,S01b,S01b,S01b,-1,-1,-32.201542,115.762299,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s01c,S01c,S01c,S01c,-1,-1,-32.201542,115.762299,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s01d,S01d,S01d,S01d,-1,-1,-32.200942,115.76271,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s02a,S02a,S02a,S02a,-1,-1,-32.18067,115.726147,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s02b,S02b,S02b,S02b,-1,-1,-32.180463,115.72615,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s02c,S02c,S02c,S02c,-1,-1,-32.168981,115.718228,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+jpplawac_s02d,S02d,S02d,S02d,-1,-1,-32.180925,115.730832,JPPL,James Point Pty Ltd,Hydrodynamic,AWAC (multi-sensor),historic,1
+coc_catherine1,Catherine1,Catherine 1,Catherine1,-1,-1,-32.078775,115.728092,COC,City of Cockburn,Hydrodynamic,AWAC (multi-sensor),historic,1
+coc_catherine2,Catherine2,Catherine 2,Catherine2,-1,-1,-32.090541,115.745646,COC,City of Cockburn,Hydrodynamic,AWAC (multi-sensor),historic,1
+ccl_awac1,ccl_awac1,CCL AWAC 1,ccl_awac1,-1,-1,-32.079398,115.70416,CCL,Cockburn Cement Limited,Hydrodynamic,AWAC (multi-sensor),historic,1
+ccl_awac2,ccl_awac2,CCL AWAC 2,ccl_awac2,-1,-1,-32.095191,115.679512,CCL,Cockburn Cement Limited,Hydrodynamic,AWAC (multi-sensor),historic,1
+wc_metocean_A,A,PSDP1 outlet,A,383751,6436707,-32.20019537,115.7666243,WC,Water Corporation,Hydrodynamic,AWAC (multi-sensor),historic,1
+wc_metocean_B,B,Central Cockburn Sound,B,381870,6435842,-32.2078009,115.7465643,WC,Water Corporation,Hydrodynamic,AWAC (multi-sensor),historic,1
+wc_metocean_C,C,Southern Cockburn Sound,C,378625,6432602,-32.23667713,115.711728,WC,Water Corporation,Hydrodynamic,AWAC (multi-sensor),historic,1
+wc_metocean_D,D,Northern Cockburn Sound,D,377078,6443240,-32.14056244,115.69668,WC,Water Corporation,Hydrodynamic,AWAC (multi-sensor),historic,1
+imos_nrsrot_ts,NRSROT,Rottnest Island,Rottnest Island,-1,-1,-31.9896,115.3852,IMOS,Integrated Marine Observing System,Hydrodynamic,AWAC (multi-sensor),historic,0
