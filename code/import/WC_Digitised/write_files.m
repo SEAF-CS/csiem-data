@@ -10,6 +10,7 @@ fprintf(fid,'Agency Name,%s\n',AgencyName);
 fprintf(fid,'Agency Code,%s\n',AgencyCode);
 fprintf(fid,'Program,%s\n',Program);
 fprintf(fid,'Project,%s\n',ProgramCode);
+fprintf(fid,'Tag,%s\n','WC-BMT');
 fprintf(fid,'Data File Name,%s\n',filename);
 fprintf(fid,'Location,%s\n',path);
 fprintf(fid,'Station Status,Inactive\n');

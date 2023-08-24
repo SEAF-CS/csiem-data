@@ -1,13 +1,13 @@
 clear all; close all;
 
-runlocal = 0;
+runlocal = 1;
 
 if ~runlocal
     
     load V:/data-warehouse/mat/seaf.mat;
     
 else
-    load Y:/csiem/data-warehouse/mat/seaf.mat;
+    load D:/csiem/data-warehouse/mat/seaf.mat;
 end
 agencies = [];
 

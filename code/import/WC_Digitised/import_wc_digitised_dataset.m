@@ -2,7 +2,7 @@ clear all; close all;
 
 load ../../actions/sitekey.mat
 
-xlsname = 'D:\Cloud\AED Dropbox\AED_Cockburn_db\CSIEM\Data\data-swamp\WC\WC-BMT\Digitised_DO.xlsx';
+xlsname = 'D:\csiem\data-lake\WCWA\WC-BMT\Digitised_DO.xlsx';
 
 
 outdir = 'D:\csiem\data-warehouse\csv\wc\digitised\';mkdir(outdir);
@@ -130,7 +130,7 @@ write_files(mdata,ddata,data,...
 
 mdata = [];ddata = [];data = [];
 
-[snum,~] = xlsread(xlsname,'Northbuoy_surf','A2:B100');
+[snum,~] = xlsread(xlsname,'Northbuoy_bed','A2:B100');
 
 mdata = calc_dates(snum(:,1));
 ddata(1:length(mdata),1) = 20;

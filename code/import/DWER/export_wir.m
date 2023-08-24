@@ -1,5 +1,60 @@
 clear all; close all;
 load swan.mat;
+
+
+
+
+sites = fieldnames(swan);
+pt = [];
+for i = 1:length(sites)
+    vars = fieldnames(swan.(sites{i}));
+    for j = 1:length(vars)
+        
+        thedepths = swan.(sites{i}).(vars{j}).Depth;
+        
+        for k = 1:length(thedepths)
+                switch swan.(sites{i}).(vars{j}).Sample_Type{k}
+                    
+                    case 'Standard sample (Bottom)'
+                        disp('bottom');
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'20'};
+                        
+                    case 'Standard sample (Surface)'
+                        disp('surface');
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0'};
+                    otherwise
+                        %swan.(sites{i}).(vars{j}).Depth(k) = 0;
+                end
+            end
+        end
+ 
+        
+end
+
+% for i = 1:length(sites)
+%     vars = fieldnames(swan.(sites{i}));
+%     if isfield(swan.(sites{i}),'WQ_var00134') & ~isfield(swan.(sites{i}),'WQ_var00006')
+%         swan.(sites{i}).WQ_var00006 = swan.(sites{i}).WQ_var00134;
+%         
+%         swan.(sites{i}).WQ_var00006.Data = cond2sal(swan.(sites{i}).WQ_var00134.Data);
+%         
+%         swan.(sites{i}).WQ_var00006.Variable_name = 'Salinity';
+%         swan.(sites{i}).WQ_var00006.Units = {'psu'};
+%         
+%     end
+%     
+% end
+
+
+        
+        
+
+%unique(pt)
+
+%stop;
+
+
+
 tic
 
 [snum,sstr] = xlsread('../../actions/Projects.xlsx','A2:D10000');
@@ -46,6 +101,7 @@ for i = 1:length(sites)
             mkdir(outdir);
         end
     else
+        stop
         proj = 'swanest';
         outdir = [outputdir];
         if ~exist(outdir,'dir')
@@ -85,6 +141,25 @@ for i = 1:length(sites)
         fprintf(fid,'Date,Depth,%s,QC\n','Data');
         
         for k = 1:length(swan.(sites{i}).(vars{j}).Date)
+            
+            bfg = swan.(sites{i}).(vars{j}).Depth_Chx{k};
+            if isnan(bfg)
+                %stop
+                switch swan.(sites{i}).(vars{j}).Sample_Type{k}
+                    
+                    case 'Standard sample (Bottom)'
+                        disp('bottom');
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'20'};
+                        
+                    case 'Standard sample (Surface)'
+                        disp('surface');
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0'};
+                    otherwise
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0'};
+                end
+            end
+            
+            
             fprintf(fid,'%s,%s,%6.6f,%s\n',datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
                 swan.(sites{i}).(vars{j}).Depth_Chx{k},swan.(sites{i}).(vars{j}).Data(k),swan.(sites{i}).(vars{j}).QC{k});
         end
@@ -104,6 +179,8 @@ for i = 1:length(sites)
         fprintf(fid,'Agency Code,DWER\n');
         fprintf(fid,'Program,Estuary\n');
         fprintf(fid,'Project,%s\n',proj);
+        thetag = ['DWER-',upper(proj)];
+        fprintf(fid,'Tag,%s\n',thetag);
         fprintf(fid,'Data File Name,%s\n',regexprep(filename,outdir,''));
         fprintf(fid,'Location,%s\n',['data-warehouse/csv/dwer/',lower(proj)]);
         

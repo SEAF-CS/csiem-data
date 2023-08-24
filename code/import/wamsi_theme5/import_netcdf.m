@@ -2,7 +2,7 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = 'V:/data-lake/wamsi/wwmsp5/';
+filepath = 'D:/csiem/data-lake/wamsi/wwmsp5/';
 
 filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -49,7 +49,7 @@ for i = 1:length(filelist)
             if ~isfield(theme5,site)
                 theme5.(site).(newheader{sss}).Date(:,1) = mtime;
                 theme5.(site).(newheader{sss}).Data(:,1) = data.(vars{j}) * conv(sss);
-                if isfield(data,'DEPTH')
+                if isfield(data,'DEPTH') 
                     
                     theme5.(site).(newheader{sss}).Depth(:,1) = data.DEPTH * -1;
                 else

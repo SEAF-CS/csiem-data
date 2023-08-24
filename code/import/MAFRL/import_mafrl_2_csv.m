@@ -2,7 +2,7 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = 'V:/data-lake/csmc/csmcwq-mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
+thefile = 'D:/csiem/data-lake/csmc/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
 
 theyears = [1983 1985 1986 1987 1990:1:1993 1997:1:2020];
 %theyears = [2013];
@@ -18,7 +18,7 @@ thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
 
 
-outpath = 'V:/data-warehouse/csv/csmc/csmcwq-mafrl/';
+outpath = 'D:/csiem/data-warehouse/csv/csmc/csmcwq/';
 %outpath = 'csmcwq-mafrl/';
 fiderr = fopen('errorfile.csv','wt');
 fprintf(fiderr,'Year,Site,Var,Foundsite,Foundvar\n');
@@ -127,7 +127,8 @@ for i = 1:length(theyears)
                     fprintf(fid,'Agency Name,Cockburn Sound Management Council\n');
                     fprintf(fid,'Agency Code,CSMC\n');
                     fprintf(fid,'Program,Cockburn Sound Marine Water Quality Monitoring\n');
-                    fprintf(fid,'Project,CSMWQ-MAFRL\n');
+                    fprintf(fid,'Project,CSMWQ\n');
+                    fprintf(fid,'Tag,CSMC-WQ\n');
                     fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
                     fprintf(fid,'Location,%s\n',['data-warehouse/csv/csmc/',lower('CSMWQ-MAFRL')]);
                     

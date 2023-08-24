@@ -1,10 +1,9 @@
-[IDY]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/BOM_IDY
-[CSMWQ-MAFRL]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/CSMC_CSMWQ-MAFRL
-[Tide]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DOT_Tide
 [CANEST]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_CANEST
+[CSMOORING]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_CSMOORING
 [CSMWQ]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_CSMWQ
 [SWANCATCH]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_SWANCATCH
 [SWANEST]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_SWANEST
+[swanest]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/DWER_swanest
 [BGC]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/IMOS_BGC
 [amnmprofile]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/IMOS_amnmprofile
-[WWMSP5.1]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/WAMSI_WWMSP5.1
+[WC_BMT]:  https://github.com/AquaticEcoDynamics/csiem-data/wiki/WC_WC_BMT

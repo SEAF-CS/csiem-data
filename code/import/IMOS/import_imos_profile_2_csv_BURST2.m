@@ -2,13 +2,13 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = 'V:/data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_Facility_-_WQM_and_CTD_burst_averaged_data_products_2019_2022.csv';
+thefile = 'D:/csiem/data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_Facility_-_WQM_and_CTD_burst_averaged_data_products_2019_2022.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = 'V:/data-warehouse/csv/imos/amnmprofile/';
+outpath = 'D:/csiem/data-warehouse/csv/imos/amnmprofile/';
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
@@ -108,6 +108,7 @@ for i = 12:length(headers)
                 fprintf(fid,'Agency Code,IMOS\n');
                 fprintf(fid,'Program,amnmprofile\n');
                 fprintf(fid,'Project,amnmprofile\n');
+                fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
                 fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
                 fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('bgc')]);
                 

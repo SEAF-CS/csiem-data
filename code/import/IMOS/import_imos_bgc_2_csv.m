@@ -2,13 +2,13 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = 'V:/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+thefile = 'D:/csiem/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = 'V:/data-warehouse/csv/imos/bgc/';
+outpath = 'D:/csiem/data-warehouse/csv/imos/bgc/';
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
@@ -100,6 +100,7 @@ for i = 9:length(headers)
             fprintf(fid,'Agency Code,IMOS\n');
             fprintf(fid,'Program,BGC\n');
             fprintf(fid,'Project,BGC\n');
+            fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
             fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('bgc')]);
             

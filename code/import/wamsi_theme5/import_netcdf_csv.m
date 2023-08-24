@@ -2,11 +2,16 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = 'V:/data-lake/wamsi/wwmsp5/';
+filepath = 'D:csiem/data-lake/wamsi/wwmsp5/';
 
-outdir = 'V:/data-warehouse/csv/wamsi/wwmsp5/';
+adcpfilepath = 'D:\csiem\data-lake\WAMSI\wwmsp5_adcp\ADCP\';
+
+
+outdir = 'D:csiem/data-warehouse/csv/wamsi/wwmsp5/';
 
 mkdir(outdir);
+
+plotdir = 'images/';mkdir(plotdir);
 
 filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -17,6 +22,9 @@ load ../../actions/agency.mat;
 
 agencyvars = fieldnames(agency.theme5);
 
+
+[~,adcp] = xlsread('missing_depths.xlsx','B2:C1000');
+
 % oldheader = sstr(:,1);
 % newheader = sstr(:,3);
 % conv = snum(:,1);
@@ -26,6 +34,8 @@ theme5 = [];
 load ../../actions/varkey.mat;
 allvars = fieldnames(varkey);
 
+fiddepth = fopen('No Depth.txt','wt');
+
 for i = 1:length(filelist)
     
     disp(filelist(i).name);
@@ -34,7 +44,7 @@ for i = 1:length(filelist)
     
     headerfile = regexprep(filename,'.nc','.txt');
     
-
+    
     
     thedepth = ncreadatt(filename,'/','Site_depth_at_deployment');
     
@@ -46,6 +56,17 @@ for i = 1:length(filelist)
     
     data = tfv_readnetcdf(filename);
     
+    dont_export = 1;
+    
+    if isfield(data,'Depth')
+        dont_export = 0;
+    end
+    if isfield(data,'PRESSURE')
+        dont_export = 0;
+    end
+    if isfield(data,'PRESSURE_SENSOR_DEPTH')
+        dont_export = 0;
+    end
     
     mtime = datenum(1950,01,01,00,00,00) + data.TIME;
     
@@ -53,82 +74,158 @@ for i = 1:length(filelist)
     
     vars = fieldnames(data);
     
-    %
-    %
-    for j = 1:length(vars)
-        pdate = [];
-        pdata = [];
-        pdepth = [];
-        pQC = {};
-        foundvar = 0;
-        for k = 1:length(agencyvars)
-            if strcmpi(agency.theme5.(agencyvars{k}).Old,vars{j}) == 1
-                foundvar = k;
-            end
+    bottom_tag = '';
+    
+    if dont_export
+        
+        ss = find(strcmpi(adcp(:,1),filelist(i).name) == 1);
+        
+        if ~isempty(ss)
+        dataadcp = tfv_readnetcdf([adcpfilepath,adcp{ss,2}]);
+        
+        mtimeadcp = datenum(1950,01,01,00,00,00) + dataadcp.TIME;
+        
+        if isfield(dataadcp,'PRESSURE_SENSOR_DEPTH');
+            %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE_SENSOR_DEPTH,mtime);
+            
+            depthmean = mean(dataadcp.PRESSURE_SENSOR_DEPTH);
+            
+        else
+            %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE,mtime);
+            depthmean = mean(dataadcp.PRESSURE);
+        end
+        data.DEPTH(1:length(mtime),1) = depthmean;
+        dont_export = 0;
+        else
+            disp(['Broken ADCP: ' ,filelist(i).name]);
+            
+           dont_export = 1; 
         end
         
-        if foundvar ~=0
-            pdate = mtime;
-            pdata = data.(vars{j}) * agency.theme5.(agencyvars{foundvar}).Conv;
-            if isfield(data,'DEPTH')
-                pdepth = data.DEPTH;
-            else
-                pdepth(1:length(pdate),1) = str2num(thedepth);
+        bottom_tag = '+0.3m';
+    end
+        
+        
+    
+    if ~dont_export
+        
+        for j = 1:length(vars)
+            pdate = [];
+            pdata = [];
+            pdepth = [];
+            pQC = {};
+            foundvar = 0;
+            for k = 1:length(agencyvars)
+                if strcmpi(agency.theme5.(agencyvars{k}).Old,vars{j}) == 1
+                    foundvar = k;
+                end
             end
-            pQC(1:length(pdate)) = {'n'};
-            
-            
-            varname = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Name;
-            varunits = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Unit;
-            
-            thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
-            datafile = regexprep(filelist(i).name,'.nc',thetxt);
-            fullfile = [outdir,datafile];
-            headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
-            
-            fid = fopen(fullfile,'wt');
-            fprintf(fid,'Date,Depth,Data,QC\n');
-            for nn = 1:length(pdata)
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(pdate(nn),'dd-mm-yyyy HH:MM:SS'),pdepth(nn),pdata(nn),pQC{nn});
+            switch vars{j}
+                case 'CELL'
+                    foundvar = 0 ;
+                case 'UCUR'
+                    foundvar = 0 ;                    
+                case 'VCUR'
+                    foundvar = 0 ; 
+                otherwise
             end
-            fclose(fid);
-            
-            fid = fopen(headerfile,'wt');
-            fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
-            fprintf(fid,'Agency Code,WAMSI\n');
-            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-            fprintf(fid,'Project,WWMSP5.1\n');
-            fprintf(fid,'Data File Name,%s\n',datafile);
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp5']);
             
             
-            fprintf(fid,'Station Status,Static\n');
-            fprintf(fid,'Lat,%6.9f\n',data.LATITUDE);
-            fprintf(fid,'Long,%6.9f\n',data.LONGITUDE);
-            fprintf(fid,'Time Zone,GMT +8\n');
-            fprintf(fid,'Vertical Datum,mAHD\n');
-            fprintf(fid,'National Station ID,%s\n',site);
-            fprintf(fid,'Site Description,%s\n',site);
-            fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-            fprintf(fid,'Contact Email,%s\n','Ivica Janekovic <ivica.janekovic@uwa.edu.au>');
-            fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
-            
-            fprintf(fid,'Data Classification,WQ Sensor\n');
-            
-            
-            SD = mean(diff(pdate));
-            
-            fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
-            
-            fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
-            fprintf(fid,'Depth,Decimal\n');
-            
-            thevar = [varname,' (',varunits,')'];
-            
-            fprintf(fid,'Variable,%s\n',thevar);
-            fprintf(fid,'QC,String\n');
-            
-            fclose(fid);
+            if foundvar ~=0
+                pdepth = [];
+                pdate = mtime;
+                pdata = data.(vars{j}) * agency.theme5.(agencyvars{foundvar}).Conv;
+                if isfield(data,'DEPTH')
+                    pdepth = data.DEPTH;
+                end
+                if isfield(data,'PRESSURE')
+                    pdepth = data.PRESSURE;
+                end
+                if isfield(data,'PRESSURE_SENSOR_DEPTH')
+                    pdepth = data.PRESSURE_SENSOR_DEPTH;
+                end
+                
+                
+                
+                
+                %
+                %                 pdepth(1:length(pdate),1) = str2num(thedepth);
+                %             end
+                %                 pQC(1:length(pdate)) = {'n'};
+                
+                if ~isempty(pdepth)
+                    
+                    [pdate_u,int] = unique(pdate);
+                    pdata_u = pdata(int);
+                    pdepth_u = pdepth(int);
+                    
+                    
+                    if length(pdata) == length(pdate)
+                        
+                        hourly = [min(pdate):1/24:max(pdate)];
+                        
+                        pdata_int  = interp1(pdate_u,pdata_u,hourly);
+                        pdepth_int = interp1(pdate_u,pdepth_u,hourly);
+                        pQC_int(1:length(hourly)) = {'n'};
+                        
+                        varname = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Name;
+                        varunits = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Unit;
+                        
+                        thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
+                        datafile = regexprep(filelist(i).name,'.nc',thetxt);
+                        fullfile = [outdir,datafile];
+                        headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
+                        
+                        fid = fopen(fullfile,'wt');
+                        fprintf(fid,'Date,Depth,Data,QC\n');
+                        for nn = 1:length(pdata_int)
+                            fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(hourly(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_int(nn),pdata_int(nn),pQC_int{nn});
+                        end
+                        fclose(fid);
+                        
+                        fid = fopen(headerfile,'wt');
+                        fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
+                        fprintf(fid,'Agency Code,WAMSI\n');
+                        fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
+                        fprintf(fid,'Project,WWMSP5.1\n');
+                        fprintf(fid,'Tag,WWMSP5.1-WQ\n');
+                        fprintf(fid,'Data File Name,%s\n',datafile);
+                        fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp5']);
+                        
+                        
+                        fprintf(fid,'Station Status,Static\n');
+                        fprintf(fid,'Lat,%6.9f\n',data.LATITUDE);
+                        fprintf(fid,'Long,%6.9f\n',data.LONGITUDE);
+                        fprintf(fid,'Time Zone,GMT +8\n');
+                        fprintf(fid,'Vertical Datum,mAHD\n');
+                        fprintf(fid,'National Station ID,%s\n',site);
+                        fprintf(fid,'Site Description,%s\n',site);
+                        fprintf(fid,'Mount Description,%s\n',bottom_tag);
+                        fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
+                        fprintf(fid,'Contact Email,%s\n','Ivica Janekovic <ivica.janekovic@uwa.edu.au>');
+                        fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
+                        
+                        fprintf(fid,'Data Classification,WQ Sensor\n');
+                        
+                        
+                        SD = mean(diff(pdate));
+                        
+                        fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
+                        
+                        fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+                        fprintf(fid,'Depth,Decimal\n');
+                        
+                        thevar = [varname,' (',varunits,')'];
+                        
+                        fprintf(fid,'Variable,%s\n',thevar);
+                        fprintf(fid,'QC,String\n');
+                        
+                        fclose(fid);
+                    end
+                    
+                end
+                
+            end
             
             
             
@@ -137,9 +234,14 @@ for i = 1:length(filelist)
         
         
         
+        plot_datafile(fullfile,plotdir);
+        
+    else
+        fprintf(fiddepth,'%s\n',filename);
         
     end
 end
+fclose(fiddepth);
 %             if ~isfield(theme5,site)
 %                 theme5.(site).(newheader{sss}).Date(:,1) = mtime;
 %                 theme5.(site).(newheader{sss}).Data(:,1) = data.(vars{j}) * conv(sss);

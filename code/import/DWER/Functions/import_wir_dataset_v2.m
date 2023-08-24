@@ -53,7 +53,7 @@ for i = 1:2:length(varargin)
             
             eval([fieldname '= [];']);
             
-            save(matfile,fieldname,'-mat');
+            save(matfile,fieldname,'-mat','-v7.3');
             
             append = 0;
             
@@ -93,7 +93,7 @@ if rmsite
     
     disp(['Removing site: ',rm_sitename,' from Matfile']);
     
-    save(matfile,fieldname,'-mat');
+    save(matfile,fieldname,'-mat','-v7.3');
     
     disp(['Updated Matfile save... Processing new data']);
 end
@@ -112,6 +112,8 @@ switch type
     case 'WQ'
         
         [data,headers] = import_xlsx_wq(filename,Column,Row,ver);
+        
+        
         
         swan_add = format_wq_data(data,headers,ver);
         
@@ -135,7 +137,7 @@ else
     
     eval([fieldname '= proc']);
     
-    save(matfile,fieldname,'-mat');
+    save(matfile,fieldname,'-mat','-v7.3');
     
 end
 
@@ -279,6 +281,8 @@ for i = 1:length(names)
                 swan_add.(Shortname{tt(1)}).(varname{j,2}).X = X(tt(1));
                 swan_add.(Shortname{tt(1)}).(varname{j,2}).Y = Y(tt(1));
                 if isfield(newswan.(names{i}),'Sample_Depths_M_1')
+                    
+                    
                     swan_add.(Shortname{tt(1)}).(varname{j,2}).Depth = newswan.(names{i}).Sample_Depths_M_1(sss(ww));
                 end
                 
@@ -403,6 +407,7 @@ u_sites(l)
                     swan_add.(Shortname{tt(1)}).(vars{j}).Data = newswan.(names{i}).(vars{j})(ww);
                     swan_add.(Shortname{tt(1)}).(vars{j}).X = X(tt(1));
                     swan_add.(Shortname{tt(1)}).(vars{j}).Y = Y(tt(1));
+                    
                     if isfield(newswan.(names{i}),'Sample_Depths_M_1')
                         swan_add.(Shortname{tt(1)}).(vars{j}).Depth = newswan.(names{i}).Sample_Depths_M_1(ww);
                     else
@@ -537,6 +542,7 @@ for i = 1:length(names)
                     swan_add.(Shortname{tt(1)}).(vars{j}).QC = newswan.(names{i}).([(vars{j}),'_QC'])(ww);
                     swan_add.(Shortname{tt(1)}).(vars{j}).X = X(tt(1));
                     swan_add.(Shortname{tt(1)}).(vars{j}).Y = Y(tt(1));
+                    swan_add.(Shortname{tt(1)}).(vars{j}).Sample_Type = newswan.(names{i}).Sample_Type(ww);
                     if isfield(newswan.(names{i}),'Sample_Depths_M_1')
                         swan_add.(Shortname{tt(1)}).(vars{j}).Depth = newswan.(names{i}).Sample_Depths_M_1(ww);
                     end
@@ -628,6 +634,7 @@ for i = 1:length(sites)
                     swan.(sites{i}).(new_name{ss(1)}).X  = swan2.(sites{i}).(vars{j}).X;
                     swan.(sites{i}).(new_name{ss(1)}).Units = units(ss(1));
                     swan.(sites{i}).(new_name{ss(1)}).Y  = swan2.(sites{i}).(vars{j}).Y;
+                    
                     if ~isempty(bb)
                         swan.(sites{i}).(new_name{ss(1)}).Title = Longname(bb(1));
                     else
@@ -639,12 +646,18 @@ for i = 1:length(sites)
                     swan.(sites{i}).(new_name{ss(1)}).Date = tdate;
                     swan.(sites{i}).(new_name{ss(1)}).Depth = tdepth;
                     swan.(sites{i}).(new_name{ss(1)}).QC = qc;
+                    if isfield(swan2.(sites{i}).(vars{j}),'Sample_Type')
+                        swan.(sites{i}).(new_name{ss(1)}).Sample_Type  = swan2.(sites{i}).(vars{j}).Sample_Type;
+                    else
+                        swan.(sites{i}).(new_name{ss(1)}).Sample_Type(1:length(qc),1) = {'surface data'};
+                    end
                     
                 else
                     swan.(sites{i}).(new_name{ss(1)}).Data = [swan.(sites{i}).(new_name{ss(1)}).Data;tdata_1];
                     swan.(sites{i}).(new_name{ss(1)}).Date = [swan.(sites{i}).(new_name{ss(1)}).Date; tdate ];
                     swan.(sites{i}).(new_name{ss(1)}).Depth = [swan.(sites{i}).(new_name{ss(1)}).Depth;tdepth];
                     swan.(sites{i}).(new_name{ss(1)}).QC = [swan.(sites{i}).(new_name{ss(1)}).QC;qc];
+                    swan.(sites{i}).(new_name{ss(1)}).Sample_Type  = [swan.(sites{i}).(new_name{ss(1)}).Sample_Type;swan2.(sites{i}).(vars{j}).Sample_Type];
                     
                 end
                 
@@ -832,6 +845,7 @@ for i = 1:length(sites)
                 proc.(sites{i}).(vars{j}).Date = [proc.(sites{i}).(vars{j}).Date;swan.(sites{i}).(vars{j}).Date];
                 proc.(sites{i}).(vars{j}).Depth = [proc.(sites{i}).(vars{j}).Depth;swan.(sites{i}).(vars{j}).Depth];
                 proc.(sites{i}).(vars{j}).QC = [proc.(sites{i}).(vars{j}).QC;swan.(sites{i}).(vars{j}).QC];
+                proc.(sites{i}).(vars{j}).Sample_Type = [proc.(sites{i}).(vars{j}).Sample_Type;swan.(sites{i}).(vars{j}).Sample_Type];
                 proc.(sites{i}).(vars{j}).Depth_Chx = [proc.(sites{i}).(vars{j}).Depth_Chx;swan.(sites{i}).(vars{j}).Depth_Chx];
                 
             end
@@ -847,7 +861,7 @@ for i = 1:length(sites)
 end
 
 eval([fieldname,' = proc;']);
-save(matfile,fieldname,'-mat');
+save(matfile,fieldname,'-mat','-v7.3');
 end
 
 function remove_NAN_matfile(matfile)
@@ -880,16 +894,18 @@ for i = 1:length(sites)
             eval([fname,'.',sites{i},'.',vars{j},'.Date = [];']);
             eval([fname,'.',sites{i},'.',vars{j},'.Depth = [];']);
             eval([fname,'.',sites{i},'.',vars{j},'.QC = [];']);
+            eval([fname,'.',sites{i},'.',vars{j},'.Sample_Type = [];']);
             eval([fname,'.',sites{i},'.',vars{j},'.Data = fdata.',sites{i},'.',vars{j},'.Data(ss);']);
             eval([fname,'.',sites{i},'.',vars{j},'.Depth = fdata.',sites{i},'.',vars{j},'.Depth(ss);']);
             eval([fname,'.',sites{i},'.',vars{j},'.Date = fdata.',sites{i},'.',vars{j},'.Date(ss);']);
             eval([fname,'.',sites{i},'.',vars{j},'.QC = fdata.',sites{i},'.',vars{j},'.QC(ss);']);
             eval([fname,'.',sites{i},'.',vars{j},'.Depth_Chx = fdata.',sites{i},'.',vars{j},'.Depth_Chx(ss);']);
+            eval([fname,'.',sites{i},'.',vars{j},'.Sample_Type = fdata.',sites{i},'.',vars{j},'.Sample_Type(ss);']);
         end
     end
 end
 
-save(matfile,fname,'-mat');
+save(matfile,fname,'-mat','-v7.3');
 end
 
 function summerise_sites(matfile)

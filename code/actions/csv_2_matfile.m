@@ -4,7 +4,7 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-runlocal = 0;
+runlocal = 1;
 tempfile = 'seaf.mat';
 
 if ~runlocal
@@ -15,10 +15,18 @@ if ~runlocal
     
 else
     
-    outfile = 'Y:/csiem/data-warehouse/mat/seaf.mat';
-    filepath = 'Y:/csiem/data-warehouse/csv/';
+    outfile = 'D:/csiem/data-warehouse/mat/seaf.mat';
+    filepath = 'D:/csiem/data-warehouse/csv/';
     
 end
+
+exclude_list = {...
+    'bom',...
+    'wamsi',...
+    'csmc',...
+    'dot',...
+    };
+
 
 %filepath = 'C:\Users\00065525\Github\csiem-data\code\import\MAFRL\csmcwq-mafrl\';
 
@@ -33,6 +41,17 @@ fid = fopen('excluded_sites.csv','wt');
 seaf = [];
 
 for i = 1:length(filelist)
+    
+        excluded = 0;
+        
+            for lll = 1:length(exclude_list)
+        kk = strfind(filelist(i).folder,exclude_list{lll});
+        if kk > 1
+            excluded = 1;
+        end
+    end
+    if excluded == 0
+
     headerfile = [filelist(i).folder,'\',filelist(i).name];
     
     datafile = regexprep(headerfile,'HEADER','DATA');
@@ -42,7 +61,8 @@ for i = 1:length(filelist)
     header = import_header(headerfile);
     
     agency = header.Agency_Code;
-    sitecode = [agency,'_',header.Station_ID];
+    program = header.Program_Code;
+    sitecode = [agency,'_',program,'_',header.Station_ID];
     tfv_name = header.Variable_ID;
     %tfv_conv = varkey.(header.Variable_ID).tfvConv;
     
@@ -132,8 +152,9 @@ for i = 1:length(filelist)
     
     
     
-    %end
-    
+    else
+        disp(filelist(i).folder);
+    end    
 end
 
 fclose(fid);

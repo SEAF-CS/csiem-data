@@ -1,7 +1,7 @@
 clear all; close all;
 addpath(genpath('../../functions/'));
 
-filepath = 'D:\Cloud\AED Dropbox\AED_Cockburn_db\CSIEM\Data\data-swamp\DWER\Moorings\OneDrive_2023-06-20\Cockburn Sound Mooring data\Cockburn Sound Buoy Data/';
+filepath = 'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
 
 filelist = dir(fullfile(filepath, '**\*.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -14,7 +14,7 @@ load ../../actions/varkey.mat;
 sitelist = fieldnames(sitekey.dwermooring);
 varlist = fieldnames(agency.dwermooring);
 
-outpath = 'E:\csiem\data-warehouse\csv\dwer\csmooring_v2\';
+outpath = 'D:\csiem\data-warehouse\csv\dwer\csmooring\';mkdir(outpath);
 
 for i = 1:length(filelist)
 
@@ -42,8 +42,15 @@ for i = 1:length(filelist)
 
     tabvars = fieldnames(tab);
 
-    if strcmpi(filelist(i).name,'filelist(i).name') == 1
-        mdate = datenum(tab.Var1(5:end),'HH:MM:SS dd/mm/yyyy');
+    
+    kk = strfind(filelist(i).name,'Par');
+    
+    if isempty(kk)
+        if strcmpi(filelist(i).name,'6147036_Water Quality.csv') == 0
+            mdate = datenum(tab.Var1(5:end),'HH:MM:SS dd/mm/yyyy');
+        else
+            mdate = datenum(tab.Var1(5:end));%,'dd/mm/yyyy HH:MM');
+        end
     else
         mdate = datenum(tab.Var1(5:end));%,'dd/mm/yyyy HH:MM');
     end
@@ -56,14 +63,14 @@ for i = 1:length(filelist)
 
         theheader = ['Var',num2str(sss)];
 
-        depth = tab.(theheader)(5:end) * -1;
+        depth = tab.(theheader)(5:end) * 1;
         depthdata.(['s',num2str(thesite)]).Depth = depth;
         depthdata.(['s',num2str(thesite)]).Mdate = mdate;
     else
         sss = length(headers) + 2;
 
         if i == 8
-            dval = -20;
+            dval = 20;
             depth(1:length(mdate),1) = dval; % Hack for bottom sensor.
         else
             depth = interp1(depthdata.(['s',num2str(thesite)]).Mdate,depthdata.(['s',num2str(thesite)]).Depth,mdate);
@@ -121,6 +128,7 @@ for i = 1:length(filelist)
         fprintf(fid,'Agency Code,DWER\n');
         fprintf(fid,'Program,Cockburn Sound Marine Water Quality Monitoring\n');
         fprintf(fid,'Project,CSMOORING\n');
+        fprintf(fid,'Tag,DWER-CSMOORING\n');
         fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
         fprintf(fid,'Location,%s\n',['data-warehouse/csv/dwer/csmooring_v2']);
 
