@@ -16,6 +16,11 @@ Some of the data files are missing depth data. For these datasets a mean depth w
 
 ![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/c8ea73e8-78a8-4d97-8196-213e6002226b)
 
+### Conversions
+
+![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/88d6e4ab-5a84-4e7e-9534-5cab0cf11f71)
+
+
 
 ## ADCP
 
@@ -40,3 +45,7 @@ Midway through the file extra columns appear, without any header information. Co
 ![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/b6551ee2-b766-4beb-8c8a-4428ee782559)
 
 The exact deployment height of the sensors is unknown and not listed in the Theme 5 report.
+
+### Conversions
+
+![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/b5692d41-9a7d-44fb-9377-4a1c869cde08)
