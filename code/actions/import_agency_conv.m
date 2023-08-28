@@ -1,6 +1,6 @@
 function data = import_agency_conv(sheet)
 
-filename = 'V:/data-lake/variable_key.xlsx';
+filename = '../../data-governance/variable_key.xlsx';
 
 if strcmpi(sheet,'MAFRL') == 0
 

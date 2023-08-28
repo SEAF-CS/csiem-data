@@ -10,6 +10,7 @@ load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
+plotdir = 'Images/';mkdir(plotdir);
 
 
 
@@ -89,10 +90,16 @@ for i = 1:length(theyears)
                             
                             case 'Int'
                                 thedepth(nn,1) = {['0 - ',num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)]};
+                                
+                                mount_tag = [];
                             case 'Surface'
                                 thedepth(nn,1) = {'0'};
+                                
+                                mount_tag = '-0.3 Below Surface';
+                                
                             case 'Bottom'
                                 thedepth(nn,1) = {num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)};
+                                mount_tag = '+0.3 Above Seabed';
                             otherwise
                         end
                         QC(nn,1) = {'N'};
@@ -140,6 +147,7 @@ for i = 1:length(theyears)
                     fprintf(fid,'Vertical Datum,mAHD\n');
                     fprintf(fid,'National Station ID,%s\n',sitekey.mafrl.(thesiteval{foundsite}).ID);
                     fprintf(fid,'Site Description,%s\n',sitekey.mafrl.(thesiteval{foundsite}).Description);
+                    fprintf(fid,'Mount Description,%s\n',mount_tag);
                     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                     fprintf(fid,'Contact Email,\n');
                     fprintf(fid,'Variable ID,%s\n',agency.mafrl.(theagencyval{foundagency}).ID);
@@ -160,7 +168,7 @@ for i = 1:length(theyears)
                     fprintf(fid,'QC,String\n');
                     
                     fclose(fid);
-                    
+                    plot_datafile(filename);
                     
                     
                     
@@ -173,6 +181,7 @@ for i = 1:length(theyears)
                 
                 
             end
+            
         end
     end
 end

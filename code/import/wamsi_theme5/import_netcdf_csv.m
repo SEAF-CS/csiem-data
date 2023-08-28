@@ -102,10 +102,11 @@ for i = 1:length(filelist)
            dont_export = 1; 
         end
         
-        bottom_tag = '+0.3m';
+        bottom_tag = 'Fixed +0.3m Above Seabed';
+    else
+        bottom_tag = 'Floating';
+        
     end
-        
-        
     
     if ~dont_export
         
@@ -202,7 +203,7 @@ for i = 1:length(filelist)
                         fprintf(fid,'Site Description,%s\n',site);
                         fprintf(fid,'Mount Description,%s\n',bottom_tag);
                         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-                        fprintf(fid,'Contact Email,%s\n','Ivica Janekovic <ivica.janekovic@uwa.edu.au>');
+                        fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
                         fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
                         
                         fprintf(fid,'Data Classification,WQ Sensor\n');
@@ -234,7 +235,7 @@ for i = 1:length(filelist)
         
         
         
-        plot_datafile(fullfile,plotdir);
+        plot_datafile(fullfile);
         
     else
         fprintf(fiddepth,'%s\n',filename);

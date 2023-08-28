@@ -74,7 +74,8 @@ for i = 1:length(filelist)
     if ~dont_export
         
         for j = 1:length(vars)
-            bottom_tag = [];
+            bottom_tag = 'Fixed';
+            
             if strcmpi(vars{j},'SALINITY') == 0
             
             pdate = [];
@@ -169,7 +170,7 @@ for i = 1:length(filelist)
                             fprintf(fid,'Mount Description,%s\n',bottom_tag);
 
                             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-                            fprintf(fid,'Contact Email,%s\n','Ivica Janekovic <ivica.janekovic@uwa.edu.au>');
+                            fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
                             fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
                             
                             fprintf(fid,'Data Classification,WQ Sensor\n');
@@ -200,7 +201,7 @@ for i = 1:length(filelist)
             
         end
         
-        plot_datafile(fullfile,plotdir);
+        plot_datafile(fullfile);
         
     else
         fprintf(fiddepth,'%s\n',filename);

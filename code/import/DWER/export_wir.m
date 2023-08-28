@@ -1,7 +1,9 @@
 clear all; close all;
 load swan.mat;
 
+addpath(genpath('../../functions'));
 
+plotdir = 'Images/';mkdir(plotdir);
 
 
 sites = fieldnames(swan);
@@ -241,7 +243,7 @@ for i = 1:length(sites)
             
         fclose(fid);
         
-        
+        plot_datafile(filename,plotdir);
     end
 end
         
