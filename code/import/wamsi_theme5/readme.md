@@ -38,3 +38,5 @@ All met has been imported from a single csv file "20220713_COL_CockburnCement_WS
 Midway through the file extra columns appear, without any header information. Columns AB and AC are assumed to be a continuation of columns T & U, column T - AA have been removed from import from row 32282 onwards.
 
 ![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/b6551ee2-b766-4beb-8c8a-4428ee782559)
+
+The exact deployment height of the sensors is unknown and not listed in the Theme 5 report.
