@@ -11,6 +11,8 @@ tft = split(filename,'/');
 data = import_datafile(filename);
 
 
+[~,headers] = xlsread(filename,'A1:D1');
+
 %     data.Depth = depth;
 %     data.Depth_T = depth1;
 %     data.Depth_B = depth2;
@@ -82,7 +84,11 @@ xlim([min(xarr) max(xarr)]);
 
 set(gca,'xtick',xarr,'xticklabel',datestr(xarr,'mm-yy'));
 
-ylabel('Depth(m)');
+if strcmpi(headers{2},'Height') == 1
+    ylabel('Height(m)');
+else
+    ylabel('Depth(m)');
+end
 
 
 title(titlestring);

@@ -189,6 +189,8 @@ for i = 1:length(filelist)
                             fprintf(fid,'QC,String\n');
                             
                             fclose(fid);
+                            
+                            plot_datafile(fullfile);
                         end
                         
                     end
@@ -201,7 +203,7 @@ for i = 1:length(filelist)
             
         end
         
-        plot_datafile(fullfile);
+        
         
     else
         fprintf(fiddepth,'%s\n',filename);

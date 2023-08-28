@@ -2,12 +2,12 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-filepath = 'D:csiem/data-lake/wamsi/wwmsp5/';
+filepath = 'D:csiem/data-lake/wamsi/wwmsp5_wq/';
 
 adcpfilepath = 'D:\csiem\data-lake\WAMSI\wwmsp5_adcp\ADCP\';
 
 
-outdir = 'D:csiem/data-warehouse/csv/wamsi/wwmsp5/';
+outdir = 'D:csiem/data-warehouse/csv/wamsi/wwmsp5_wq/';
 
 mkdir(outdir);
 
@@ -179,8 +179,8 @@ for i = 1:length(filelist)
                         
                         fid = fopen(fullfile,'wt');
                         fprintf(fid,'Date,Depth,Data,QC\n');
-                        for nn = 1:length(pdata_int)
-                            fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(hourly(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_int(nn),pdata_int(nn),pQC_int{nn});
+                        for nn = 1:length(pdata_u)
+                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(pdate_u(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_u(nn),pdata_u(nn));
                         end
                         fclose(fid);
                         

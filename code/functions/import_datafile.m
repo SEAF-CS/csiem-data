@@ -6,6 +6,7 @@ fid = fopen(filename,'rt');
 x  = 4;
 textformat = [repmat('%s ',1,x)];
 % read single line: number of x-values
+
 datacell = textscan(fid,textformat,'Headerlines',1,'Delimiter',',');
 fclose(fid);
 

@@ -1,0 +1,61 @@
+clear all; close all;
+
+addpath(genpath('../../functions/'));
+
+load ../../actions/agency.mat;
+load ../../actions/varkey.mat;
+load ../../actions/sitekey.mat;
+
+
+filename = 'D:csiem/data-lake/wamsi/wwmsp5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22).csv';
+
+outdir = 'D:csiem/data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'dir'); mkdir(outdir); end
+
+data = readtable(filename, 'ReadVariableNames', false, 'HeaderLines', 2);
+[~,headers] = xlsread(filename,'C2:ZZ2');
+
+mdate = datenum(data.Var1);
+
+agencyvars = fieldnames(agency.theme5met);
+
+sitedetails = sitekey.wwmsp5.wwmsp5_CCL;
+
+[UTMX,UTMY] = ll2utm(sitedetails.Lat,sitedetails.Lon);
+
+for i = 1:length(headers)
+    
+    for k = 1:length(agencyvars)
+        if strcmpi(agency.theme5met.(agencyvars{k}).Old,headers{i}) == 1
+            foundvar = k;
+        end
+    end
+    
+    varname = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Name;
+    varcode = agency.theme5.(agencyvars{foundvar}).ID;
+    varunits = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Unit;
+    
+    thedata = data.(['Var',num2str(i+2)]) * agency.theme5.(agencyvars{foundvar}).Conv;
+    
+    
+    hourly = [min(mdate):1/24:max(mdate)];
+    
+    thedata_hourly  = interp1(mdate,thedata,hourly);
+    theheight_hourly(1:length(thedata_hourly),1) = 2;
+    
+    
+    filename = [outdir,sitedetails.AED,'_',varkey.(agency.theme5.(agencyvars{foundvar}).ID).Name,'_DATA.csv'];
+    filename = regexprep(filename,' ','_');
+    
+    fid = fopen(filename,'wt');
+    fprintf(fid,'Date,Height,Data,QC\n');
+    for nn = 1:length(thedata_hourly)
+        fprintf(fid,'%s,%4.4f,%4.4f,N\n',datestr(hourly(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_int(nn),pdata_int(nn));
+    end
+    fclose(fid);
+    
+    stop
+end
+
+
+
+
