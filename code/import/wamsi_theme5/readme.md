@@ -18,7 +18,7 @@ Some of the data files are missing depth data. For these datasets a mean depth w
 
 ### Conversions
 
-![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/88d6e4ab-5a84-4e7e-9534-5cab0cf11f71)
+![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/28e7a4f3-e39e-4d85-8b03-a891de10568a)
 
 
 
@@ -48,4 +48,4 @@ The exact deployment height of the sensors is unknown and not listed in the Them
 
 ### Conversions
 
-![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/b5692d41-9a7d-44fb-9377-4a1c869cde08)
+![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/10218a8e-9bd9-41e9-91c6-e8efeaa6f3f9)
