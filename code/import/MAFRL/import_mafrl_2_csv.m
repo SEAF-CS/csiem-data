@@ -91,15 +91,15 @@ for i = 1:length(theyears)
                             case 'Int'
                                 thedepth(nn,1) = {['0 - ',num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)]};
                                 
-                                mount_tag = [];
+                                mount_tag = ['Integrated'];
                             case 'Surface'
                                 thedepth(nn,1) = {'0'};
                                 
-                                mount_tag = '-0.3 Below Surface';
+                                mount_tag = 'Fixed -0.5 Below Surface';
                                 
                             case 'Bottom'
                                 thedepth(nn,1) = {num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)};
-                                mount_tag = '+0.3 Above Seabed';
+                                mount_tag = 'Fixed +0.5 Above Seabed';
                             otherwise
                         end
                         QC(nn,1) = {'N'};
@@ -134,10 +134,10 @@ for i = 1:length(theyears)
                     fprintf(fid,'Agency Name,Cockburn Sound Management Council\n');
                     fprintf(fid,'Agency Code,CSMC\n');
                     fprintf(fid,'Program,Cockburn Sound Marine Water Quality Monitoring\n');
-                    fprintf(fid,'Project,CSMWQ\n');
+                    fprintf(fid,'Project,CSMC-WQ\n');
                     fprintf(fid,'Tag,CSMC-WQ\n');
                     fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
-                    fprintf(fid,'Location,%s\n',['data-warehouse/csv/csmc/',lower('CSMWQ-MAFRL')]);
+                    fprintf(fid,'Location,%s\n',['data-warehouse/csv/csmc/',lower('CSMWQ-WQ')]);
                     
                     
                     fprintf(fid,'Station Status,Inactive\n');

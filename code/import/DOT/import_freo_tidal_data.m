@@ -1,7 +1,7 @@
 clear all; close all;
 
-main_dir = 'V:/data-lake/dot/tide/FFFBH01/';
-outdir = 'V:/data-warehouse/csv/dot/tide/';
+main_dir = 'D:\csiem/data-lake/dot/tide/FFFBH01/';
+outdir = 'D:\csiem/data-warehouse/csv/dot/tide/';
 if ~exist(outdir,'dir')
     mkdir(outdir);
 end
@@ -77,11 +77,15 @@ for i = 1:length(sss)
         end
     end
 end
-
+deployment = 'Fixed';
+dPos = 'm from Datum';
+Ref = 'm from Datum';
+SMD = [];
+theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename = 'V:/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
+filename = 'D:\csiem/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');
@@ -100,6 +104,8 @@ fprintf(fid,'Agency Name,Department of Transport\n');
 fprintf(fid,'Agency Code,DOT\n');
 fprintf(fid,'Program,Coastal Data\n');
 fprintf(fid,'Project,Tide\n');
+fprintf(fid,'Tag,DOT-TIDE\n');
+
 fprintf(fid,'Data File Name,FFFBH01_Tidal_Height.csv\n');
 fprintf(fid,'Location,data-warehouse/csv/dot/tide\n');
 
@@ -111,9 +117,13 @@ end
 fprintf(fid,'Lat,-32.065543\n');
 fprintf(fid,'Long,115.748067\n');
 fprintf(fid,'Time Zone,GMT +8\n');
-fprintf(fid,'Vertical Datum,LWM Fremantle 1949     which is   2.752   m below Benchmark   DMH 098\n');
+fprintf(fid,'Vertical Datum,LWM Fremantle 1949 which is 2.752m below Benchmark DMH 098\n');
 fprintf(fid,'National Station ID,FFFBH01\n');
 fprintf(fid,'Site Description,Fremantle Fishing Boat Harbour Tide Station\n');
+                            fprintf(fid,'Deployment,%s\n',deployment);
+                            fprintf(fid,'Deployment Position,%s\n',dPos);
+                            fprintf(fid,'Vertical Reference,%s\n',Ref);
+                            fprintf(fid,'Site Mean Depth,%s\n',SMD);
 fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
 fprintf(fid,'Contact Email,tides@transport.wa.gov.au\n');
 fprintf(fid,'Variable ID,var00180\n');
@@ -132,7 +142,7 @@ fprintf(fid,'Variable,Tidal Height (m)\n');
 fprintf(fid,'QC,String\n');
 
 fclose(fid);
-
+plot_datafile(filename);
 
 %
 % main_dir = 'Tide/PTBAR02_Tides/';

@@ -46,7 +46,7 @@ nzoom = 8.9626;
 gx.ZoomLevel = nzoom;
 
 
-axes('position',[0.1 0.35 0.8 0.25]);
+axes('position',[0.1 0.375 0.8 0.25]);
 
 yyaxis left
 
@@ -90,7 +90,7 @@ else
     ylabel('Depth(m)');
 end
 
-
+xlabel('Date');
 title(titlestring);
 
 axes('position',[0.05 0.0 0.95 0.4]);axis off
@@ -98,7 +98,7 @@ vars = fieldnames(headerdata);
 XX = 10/length(vars);
 
 for kk = 1:length(vars)
-    if kk < 14
+    if kk < 16
         if ~isnumeric(headerdata.(vars{kk}))
             text(.0,1.2-(XX + (kk *0.05)),[vars{kk},': ',headerdata.(vars{kk})],'fontsize',6);
         else
@@ -106,9 +106,9 @@ for kk = 1:length(vars)
         end
     else
         if ~isnumeric(headerdata.(vars{kk}))
-            text(.6,1.2-(XX + ((kk-13) *0.05)),[vars{kk},': ',headerdata.(vars{kk})],'fontsize',6);
+            text(.6,1.2-(XX + ((kk-15) *0.05)),[vars{kk},': ',headerdata.(vars{kk})],'fontsize',6);
         else
-            text(.6,1.2-(XX + ((kk-13) *0.05)),[vars{kk},': ',num2str(headerdata.(vars{kk}))],'fontsize',6);
+            text(.6,1.2-(XX + ((kk-15) *0.05)),[vars{kk},': ',num2str(headerdata.(vars{kk}))],'fontsize',6);
         end
     end
     

@@ -120,6 +120,8 @@ for i = 19:length(headers)
             fprintf(fid,'Vertical Datum,mAHD\n');
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosbgc.(thesiteval{foundstation}).ID,'_PROFILE']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosbgc.(thesiteval{foundstation}).Description);
+                        fprintf(fid,'Mount Description,%s\n','Profile');
+
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
             fprintf(fid,'Variable ID,%s\n',agency.imosprofile.(theagencyval{foundvar}).ID);
@@ -140,6 +142,8 @@ for i = 19:length(headers)
             fprintf(fid,'QC,String\n');
             
             fclose(fid);
+            plot_datafile(filename);
+
             end
             
         end

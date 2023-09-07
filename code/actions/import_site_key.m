@@ -51,7 +51,20 @@ switch sheet
             data.(sstr{i,1}).Lat = snum(i,6);
             data.(sstr{i,1}).Lon = snum(i,7);
         end
+    case 'BOM'
 
+        [snum,sstr] = xlsread(filename,sheet,'A2:H10000');
+
+        for i = 1:size(sstr,1)
+            data.(sstr{i,1}).AED = sstr{i,1};
+            data.(sstr{i,1}).ID = snum(i,1);
+            data.(sstr{i,1}).Description = sstr{i,3};
+            data.(sstr{i,1}).Shortname = sstr{i,4};
+            data.(sstr{i,1}).X = snum(i,4);
+            data.(sstr{i,1}).Y = snum(i,5);
+            data.(sstr{i,1}).Lat = snum(i,6);
+            data.(sstr{i,1}).Lon = snum(i,7);
+        end
     otherwise
         [snum,sstr] = xlsread(filename,sheet,'A2:H10000');
 

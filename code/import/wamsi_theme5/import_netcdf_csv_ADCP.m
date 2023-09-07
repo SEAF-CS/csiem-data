@@ -108,7 +108,11 @@ for i = 1:length(filelist)
                         pdepth = data.PRESSURE_SENSOR_DEPTH;
                     end
                     
-                    
+                    deployment = 'Fixed';
+                    dPos = 'm below Surface';
+                    Ref = 'Water Surface';
+                    SMD = thedepth;
+                    theheader = 'Depth';
                     
                     
                     %
@@ -144,7 +148,7 @@ for i = 1:length(filelist)
                             headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
                             
                             fid = fopen(fullfile,'wt');
-                            fprintf(fid,'Date,Depth,Data,QC\n');
+                        fprintf(fid,'Date,%s,Data,QC\n',theheader);
                             for nn = 1:length(pdata_int)
                                 fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(hourly(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_int(nn),pdata_int(nn),pQC_int{nn});
                             end
@@ -167,7 +171,10 @@ for i = 1:length(filelist)
                             fprintf(fid,'Vertical Datum,mAHD\n');
                             fprintf(fid,'National Station ID,%s\n',site);
                             fprintf(fid,'Site Description,%s\n',site);
-                            fprintf(fid,'Mount Description,%s\n',bottom_tag);
+                            fprintf(fid,'Deployment,%s\n',deployment);
+                            fprintf(fid,'Deployment Position,%s\n',dPos);
+                            fprintf(fid,'Vertical Reference,%s\n',Ref);
+                            fprintf(fid,'Site Mean Depth,%s\n',SMD);
 
                             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                             fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');

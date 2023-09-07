@@ -45,6 +45,13 @@ for i = 1:length(headers)
     thedata_hourly  = interp1(u_mdate,u_thedata,hourly);
     theheight_hourly(1:length(thedata_hourly),1) = 2;
     
+    deployment = 'Fixed';
+    dPos = '2m above Ground';
+    Ref = 'm above Ground';
+    SMD = [];
+    theheader = 'Height';
+    
+    
     
     filename = [outdir,sitedetails.AED,'_',varkey.(agency.theme5met.(agencyvars{foundvar}).ID).Name,'_DATA.csv'];
     filename = regexprep(filename,' ','_');
@@ -74,7 +81,10 @@ for i = 1:length(headers)
     fprintf(fid,'Vertical Datum,mAHD\n');
     fprintf(fid,'National Station ID,%s\n',sitedetails.ID);
     fprintf(fid,'Site Description,%s\n',sitedetails.Description);
-    fprintf(fid,'Mount Description,%s\n','Fixed 2m Above Waterlevel');
+    fprintf(fid,'Deployment,%s\n',deployment);
+    fprintf(fid,'Deployment Position,%s\n',dPos);
+    fprintf(fid,'Vertical Reference,%s\n',Ref);
+    fprintf(fid,'Site Mean Depth,%s\n',[]);
     
     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
     fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');

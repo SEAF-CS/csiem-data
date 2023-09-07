@@ -55,6 +55,18 @@ while ~feof(fid)
         case 'Bad or Unavailable Data Value'
             data.Bad_Data_Code = sline{2};
             
+        case 'Deployment'
+            data.Deployment = sline{2}; 
+            
+        case 'Deployment Position'
+            data.Deployment_Position = sline{2};            
+            
+        case 'Vertical Reference'
+            data.Vertical_Reference = sline{2};
+            
+        case 'Site Mean Depth'
+            data.Site_Mean_Depth = sline{2};
+                        
         case 'Mount Description'
             data.Mount = sline{2};
             

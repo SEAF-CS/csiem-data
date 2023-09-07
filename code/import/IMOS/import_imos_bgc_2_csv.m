@@ -100,7 +100,7 @@ for i = 9:length(headers)
             fprintf(fid,'Agency Code,IMOS\n');
             fprintf(fid,'Program,BGC\n');
             fprintf(fid,'Project,BGC\n');
-            fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
+            fprintf(fid,'Tag,IMOS-BGC\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
             fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('bgc')]);
             
@@ -112,6 +112,8 @@ for i = 9:length(headers)
             fprintf(fid,'Vertical Datum,mAHD\n');
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosbgc.(thesiteval{foundstation}).ID,'_BGC']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosbgc.(thesiteval{foundstation}).Description);
+            fprintf(fid,'Mount Description,%s\n','Profile');
+
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
             fprintf(fid,'Variable ID,%s\n',agency.imosbgc.(theagencyval{foundvar}).ID);
@@ -132,6 +134,8 @@ for i = 9:length(headers)
             fprintf(fid,'QC,String\n');
             
             fclose(fid);
+            plot_datafile(filename);
+
             end
             
         end

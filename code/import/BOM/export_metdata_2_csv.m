@@ -1,36 +1,39 @@
 clear all; close all;
+addpath(genpath('../../functions/'));
 
 load metdata.mat;
 
-[snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','Key','A2:D10000');
+load ../../actions/varkey.mat;
+load ../../actions/agency.mat;
+load ../../actions/sitekey.mat;
 
-varID = sstr(:,1);
-varName = sstr(:,2);
-varUnit = sstr(:,3);
-varSymbol = sstr(:,4);
-
-for i = 1:length(varSymbol)
-    if isempty(varSymbol{i})
-        varSymbol(i) = varName(i);
-    end
-end
-
-[snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','BOM','B2:D10000');
-
-conv = snum(:,1);
-avarID = sstr(:,1);
+thesites = fieldnames(sitekey.bom);
+thevars = fieldnames(agency.bom);
 
 
-[snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
+%[snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','Key','A2:D10000');
 
-sitename = sstr(:,3);
-siteid = snum(:,1);
-Lat = snum(:,6);
-Lon = snum(:,7);
-shortname = sstr(:,4);
+% varID = sstr(:,1);
+% varName = sstr(:,2);
+% varUnit = sstr(:,3);
+% varSymbol = sstr(:,4);
+% 
+% for i = 1:length(varSymbol)
+%     if isempty(varSymbol{i})
+%         varSymbol(i) = varName(i);
+%     end
+% end
 
+% [snum,sstr] = xlsread('V:/data-lake/variable_key.xlsx','BOM','B2:D10000');
+% 
+% conv = snum(:,1);
+% avarID = sstr(:,1);
+% 
+% 
+% [snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
+% 
 
-outdir = 'V:/data-warehouse/csv/bom/idy/';
+outdir = 'D:/csiem/data-warehouse/csv/bom/idy/';
 
 writepath = 'data-warehouse/csv/bom/idy';
 
@@ -41,13 +44,17 @@ end
 sites = fieldnames(metdata);
 
 for i = 1:length(sites)
+    foundsite = 0;
+    for j = 1:length(thesites)
+        if strcmpi(sitekey.bom.(thesites{j}).Shortname,sites{i}) == 1
+            foundsite = j;
+        end
+    end
     
-    sss = find(strcmpi(shortname,sites{i}) == 1);
-    
-    aSite = sitename{sss};
-    aLat = Lat(sss);
-    aLon = Lon(sss);
-    ID = siteid(sss);
+%     aSite = sitename{sss};
+%     aLat = Lat(sss);
+%     aLon = Lon(sss);
+%     ID = siteid(sss);
     
     
     vars = fieldnames(metdata.(sites{i}));
@@ -62,10 +69,14 @@ for i = 1:length(sites)
     for j = 1:length(vars)
         
         tvar = regexprep(vars{j},'_',' ');
+        foundvar = [];
+        for k = 1:length(thevars)
+            if strcmpi(agency.bom.(thevars{k}).Old,tvar) == 1
+                foundvar = k;
+            end
+        end
         
-        varint = find(strcmpi(varName,tvar) == 1);
-        
-        if ~isempty(varint)
+        if ~isempty(foundvar)
             
             disp('valid data');
             
@@ -77,19 +88,21 @@ for i = 1:length(sites)
             
             if ~isempty(mdata)
                 
-                convint = find(strcmpi(avarID,varID{varint}) == 1);
+                conv = agency.bom.(thevars{foundvar}).Conv;
                 
-                if strcmpi(varID{varint},'var00152') == 0
+                disp([agency.bom.(thevars{foundvar}).Old,' ',num2str(agency.bom.(thevars{foundvar}).Conv)]);
+                
+                if strcmpi(agency.bom.(thevars{foundvar}).ID,'var00152') == 0
                     
-                    mdata = mdata * conv(convint);
+                    mdata = mdata * conv;
                     
-                    filename = [outdir,num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
+                    filename = [outdir,num2str(sitekey.bom.(thesites{foundsite}).ID),'_',regexprep(varkey.(agency.bom.(thevars{foundvar}).ID).Name,' ','_'),'_DATA.csv'];
                     
-                    writefile = [num2str(ID),'_',regexprep(varName{varint},' ','_'),'_DATA.csv'];
+                    writefile = [num2str(sitekey.bom.(thesites{foundsite}).ID),'_',regexprep(varkey.(agency.bom.(thevars{foundvar}).ID).Name,' ','_'),'_DATA.csv'];
                     
                     fid = fopen(filename,'wt');
                     
-                    fprintf(fid,'Date,Depth,Data,QC\n');
+                    fprintf(fid,'Date,Height,Data,QC\n');
                     
                     for k = 1:length(mdate)
                         fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'dd-mm-yyyy HH:MM:SS'),' ',mdata(k),QC{k});
@@ -103,6 +116,7 @@ for i = 1:length(sites)
                     fprintf(fid,'Agency Code,BOM\n');
                     fprintf(fid,'Program,Weather\n');
                     fprintf(fid,'Project,IDY\n');
+                    fprintf(fid,'Tag,BOM-IDY\n');
                     fprintf(fid,'Data File Name,%s\n',writefile);
                     fprintf(fid,'Location,%s\n',writepath);
                     
@@ -111,15 +125,16 @@ for i = 1:length(sites)
                     else
                         fprintf(fid,'Station Status,Inactive\n');
                     end
-                    fprintf(fid,'Lat,%8.8f\n',aLat);
-                    fprintf(fid,'Long,%8.8f\n',aLon);
+                    fprintf(fid,'Lat,%8.8f\n',sitekey.bom.(thesites{foundsite}).Lat);
+                    fprintf(fid,'Long,%8.8f\n',sitekey.bom.(thesites{foundsite}).Lon);
                     fprintf(fid,'Time Zone,GMT +8\n');
                     fprintf(fid,'Vertical Datum, \n');
-                    fprintf(fid,'National Station ID,%s\n',num2str(ID));
-                    fprintf(fid,'Site Description,%s\n',aSite);
+                    fprintf(fid,'National Station ID,%s\n',num2str(sitekey.bom.(thesites{foundsite}).ID));
+                    fprintf(fid,'Site Description,%s\n',sitekey.bom.(thesites{foundsite}).Description);
+                    fprintf(fid,'Mount Description,%s\n','Fixed +2m Above Ground');
                     fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
                     fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
-                    fprintf(fid,'Variable ID,%s\n',varID{varint});
+                    fprintf(fid,'Variable ID,%s\n',agency.bom.(thevars{foundvar}).ID);
                     fprintf(fid,'Data Classification,MET General\n');
                     
                     SD = mean(diff(mdate));
@@ -131,11 +146,11 @@ for i = 1:length(sites)
                     
                     %thevar = [varName{sss},' (',varUnit{sss},')'];
                     
-                    fprintf(fid,'Variable,%s\n',[varName{varint},' (',varUnit{varint},')']);
+                    fprintf(fid,'Variable,%s\n',[varkey.(agency.bom.(thevars{foundvar}).ID).Name,' (',varkey.(agency.bom.(thevars{foundvar}).ID).Unit,')']);
                     fprintf(fid,'QC,String\n');
                     
                     fclose(fid);
-                    
+                    plot_datafile(filename);
                 end
             end
             

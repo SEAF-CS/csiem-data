@@ -90,11 +90,14 @@ for i = 1:length(filelist)
             
             depthmean = mean(dataadcp.PRESSURE_SENSOR_DEPTH);
             
+            depthmean = thedepth;
+            
         else
             %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE,mtime);
             depthmean = mean(dataadcp.PRESSURE);
+            depthmean = thedepth;
         end
-        data.DEPTH(1:length(mtime),1) = depthmean;
+        data.DEPTH(1:length(mtime),1) = 0.3;%str2double(thedepth);
         dont_export = 0;
         else
             disp(['Broken ADCP: ' ,filelist(i).name]);
@@ -102,9 +105,20 @@ for i = 1:length(filelist)
            dont_export = 1; 
         end
         
-        bottom_tag = 'Fixed +0.3m Above Seabed';
+        deployment = 'Fixed';
+        dPos = '0.3m above Seabed';
+        Ref = 'm above Seabed';
+        SMD = thedepth;
+        theheader = 'Height';
+        %bottom_tag = 'Fixed +0.3m Above Seabed';
     else
-        bottom_tag = 'Floating';
+        %bottom_tag = 'Floating';
+        
+        deployment = 'Fixed';
+        dPos = 'm below Surface';
+        Ref = 'Water Surface';
+        SMD = thedepth;
+        theheader = 'Depth';
         
     end
     
@@ -163,7 +177,7 @@ for i = 1:length(filelist)
                     
                     if length(pdata) == length(pdate)
                         
-                        hourly = [min(pdate):1/24:max(pdate)];
+                        hourly = [min(pdate):15/(24*60):max(pdate)];
                         
                         pdata_int  = interp1(pdate_u,pdata_u,hourly);
                         pdepth_int = interp1(pdate_u,pdepth_u,hourly);
@@ -178,9 +192,9 @@ for i = 1:length(filelist)
                         headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
                         
                         fid = fopen(fullfile,'wt');
-                        fprintf(fid,'Date,Depth,Data,QC\n');
-                        for nn = 1:length(pdata_u)
-                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(pdate_u(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_u(nn),pdata_u(nn));
+                        fprintf(fid,'Date,%s,Data,QC\n',theheader);
+                        for nn = 1:length(pdata_int)
+                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(hourly(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_int(nn),pdata_int(nn));
                         end
                         fclose(fid);
                         
@@ -201,7 +215,10 @@ for i = 1:length(filelist)
                         fprintf(fid,'Vertical Datum,mAHD\n');
                         fprintf(fid,'National Station ID,%s\n',site);
                         fprintf(fid,'Site Description,%s\n',site);
-                        fprintf(fid,'Mount Description,%s\n',bottom_tag);
+                        fprintf(fid,'Deployment,%s\n',deployment);
+                        fprintf(fid,'Deployment Position,%s\n',dPos);
+                        fprintf(fid,'Vertical Reference,%s\n',Ref);
+                        fprintf(fid,'Site Mean Depth,%s\n',SMD);
                         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                         fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
                         fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
@@ -222,6 +239,7 @@ for i = 1:length(filelist)
                         fprintf(fid,'QC,String\n');
                         
                         fclose(fid);
+                        plot_datafile(fullfile);
                     end
                     
                 end
@@ -235,7 +253,7 @@ for i = 1:length(filelist)
         
         
         
-        plot_datafile(fullfile);
+        
         
     else
         fprintf(fiddepth,'%s\n',filename);
