@@ -10,7 +10,7 @@ filelist = filelist(~[filelist.isdir]);  %remove folders from list
 [conv,trans] = xlsread('translation.xlsx','A2:E100');
 
 
-fid = fopen('Reformatted_Data.csv','wt');
+fid = fopen('wwmsp_theme3.1_CTD_reformat_bbusch_working.csv','wt');
 
 fprintf(fid,'Date,X,Y,Depth (m),Height (mAHD),SampleID,Variable,Units,ReadingValue,VariableName,VariableType,VariableNameQualifier,AnalysisMethodCode,MeasurementInstrument,StandardUnits,LimitOfReporting,QualityCode,Filename,Weather Conditions,Observations\n');
 
