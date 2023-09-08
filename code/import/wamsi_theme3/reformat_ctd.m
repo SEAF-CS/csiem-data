@@ -7,9 +7,12 @@ basedir = 'D:\csiem\data-lake\WAMSI\wwmsp3.1_ctd\CTD\';
 filelist = dir(fullfile(basedir, '**\*.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
+[conv,trans] = xlsread('translation.xlsx','A2:E100');
+
+
 fid = fopen('Reformatted_Data.csv','wt');
 
-fprintf(fid,'X,Y,Z,SampleID,Variable,Units,ReadingValue,VariableName,VariableType,VariableNameQualifier,AnalysisMethodCode,MeasurementInstrument,StandardUnits,LimitOfReporting,QualityCode\n');
+fprintf(fid,'Date,X,Y,Depth (m),Height (mAHD),SampleID,Variable,Units,ReadingValue,VariableName,VariableType,VariableNameQualifier,AnalysisMethodCode,MeasurementInstrument,StandardUnits,LimitOfReporting,QualityCode,Filename,Weather Conditions,Observations\n');
 
 for i = 1:length(filelist)
     
@@ -58,8 +61,17 @@ for i = 1:length(filelist)
             sampleID = [datestr(thedate,'ddmmyyyy'),'_',ID];
             
             thedepth = data.Var2(j);
+            theheight = data.Var3(j);
+            theweather = ['"',data.Var17{1},'"'];
+            if sum(ismember(data.Properties.VariableNames,['Var',num2str(18)])) > 0
+                theobs = ['"',data.Var18{1},'"'];
+            else
+                theobs = [];
+            end
             
-            for k = 3:length(headers)
+            %theobs = regexprep(theobs,',',' ');
+            
+            for k = 4:16%length(headers)-2
                 
                 if sum(ismember(data.Properties.VariableNames,['Var',num2str(k)])) > 0
                     
@@ -67,21 +79,21 @@ for i = 1:length(filelist)
                     
                     if isnumeric(thedata)
                         if ~isnan(thedata)
-                            fprintf(fid,'%s,%s,%6.6f,%s,%s,To Be Added,%6.6f,%s,To Be Added,,Direct reading,Sea-Bird SBE19plus (sn01906585),To Be Added,,Excellent\n',...
-                                X,Y,thedepth,sampleID,headers{k},thedata,headers{k});
+                            fprintf(fid,'%s,%s,%s,%6.6f,%6.6f,%s,%s,%s,%6.6f,%s,%s,,Direct reading,Sea-Bird SBE19plus (sn01906585),%s,,Excellent,%s,%s,%s\n',...
+                                datestr(thedate,'dd-mm-yyyy HH:MM:SS'),X,Y,thedepth,theheight,sampleID,[trans{k-3,2},' | (',trans{k-3,3},')'],trans{k-3,3},thedata,trans{k-3,2},trans{k-3,5},trans{k-3,3},filelist(i).name,theweather,theobs);
                             
                         end
                     else
                         
-                        newdata = thedata{1};
-                        
-                        newdata = regexprep(newdata,',', ' ');
-                        
-                        if ~isempty(newdata)
-                            fprintf(fid,'%s,%s,%6.6f,%s,%s,To Be Added,%s,%s,To Be Added,,Direct reading,Sea-Bird SBE19plus (sn01906585),To Be Added,,Excellent\n',...
-                                X,Y,thedepth,sampleID,headers{k},newdata,headers{k});
-                            
-                        end
+%                         newdata = thedata{1};
+%                         
+%                         newdata = regexprep(newdata,',', ' ');
+%                         
+%                         if ~isempty(newdata)
+%                             fprintf(fid,'%s,%s,%6.6f,%6.6f,%s,%s,%s,%s,%s,To Be Added,,Direct reading,Sea-Bird SBE19plus (sn01906585),To Be Added,,Excellent,%s,%s,%s\n',...
+%                                 X,Y,thedepth,theheight,sampleID,trans{2,k-4},trans{3,k-4},newdata,headers{k},filelist(i).name,theweather,theobs);
+%                             
+%                         end
                     end
                     
                 end
