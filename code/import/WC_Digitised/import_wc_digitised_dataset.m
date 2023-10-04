@@ -1,11 +1,12 @@
 clear all; close all;
+addpath(genpath('../../functions/'));
 
 load ../../actions/sitekey.mat
 
 xlsname = 'D:\csiem\data-lake\WCWA\WC-BMT\Digitised_DO.xlsx';
 
 
-outdir = 'D:\csiem\data-warehouse\csv\wc\digitised\';mkdir(outdir);
+outdir = 'D:\csiem\data-warehouse\csv\wcwa\psdp-1.2\';mkdir(outdir);
 
 %____________________________________________________________
 mdata = [];ddata = [];data = [];
@@ -18,10 +19,10 @@ data = snum(:,2);
 Lat = sitekey.wc.wc_southbuoy.Lat;
 Lon = sitekey.wc.wc_southbuoy.Lon;
 filename = 'WC_Digitised_SB_Oxygen_2013';
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.wc_southbuoy.ID;
 SiteDesc = sitekey.wc.wc_southbuoy.Description;
 
@@ -42,10 +43,10 @@ data = snum(:,2);
 Lat = sitekey.wc.wc_southbuoy.Lat;
 Lon = sitekey.wc.wc_southbuoy.Lon;
 filename = 'WC_Digitised_SB_Oxygen_2013_Bottom';
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.wc_southbuoy.ID;
 SiteDesc = sitekey.wc.wc_southbuoy.Description;
 
@@ -67,10 +68,10 @@ data = snum(:,2);
 Lat = sitekey.wc.wc_centralbuoy.Lat;
 Lon = sitekey.wc.wc_centralbuoy.Lon;
 filename = 'WC_Digitised_CB_Oxygen_2013';
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.wc_centralbuoy.ID;
 SiteDesc = sitekey.wc.wc_centralbuoy.Description;
 
@@ -91,10 +92,10 @@ data = snum(:,2);
 Lat = sitekey.wc.wc_centralbuoy.Lat;
 Lon = sitekey.wc.wc_centralbuoy.Lon;
 filename = 'WC_Digitised_CB_Oxygen_2013_Bottom';
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.wc_centralbuoy.ID;
 SiteDesc = sitekey.wc.wc_centralbuoy.Description;
 
@@ -114,10 +115,10 @@ data = snum(:,2);
 Lat = sitekey.wc.wc_northbuoy.Lat;
 Lon = sitekey.wc.wc_northbuoy.Lon;
 filename = 'WC_Digitised_NB_Oxygen_2013';
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.wc_northbuoy.ID;
 SiteDesc = sitekey.wc.wc_northbuoy.Description;
 
@@ -138,10 +139,10 @@ data = snum(:,2);
 Lat = sitekey.wc.wc_northbuoy.Lat;
 Lon = sitekey.wc.wc_northbuoy.Lon;
 filename = 'WC_Digitised_NB_Oxygen_2013_Bottom';
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.wc_northbuoy.ID;
 SiteDesc = sitekey.wc.wc_northbuoy.Description;
 

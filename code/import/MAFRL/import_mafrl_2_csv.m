@@ -19,7 +19,7 @@ thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
 
 
-outpath = 'D:/csiem/data-warehouse/csv/csmc/csmcwq/';
+outpath = 'D:/csiem/data-warehouse/csv_holding/csmc/csmcwq/';
 %outpath = 'csmcwq-mafrl/';
 fiderr = fopen('errorfile.csv','wt');
 fprintf(fiderr,'Year,Site,Var,Foundsite,Foundvar\n');
@@ -89,17 +89,34 @@ for i = 1:length(theyears)
                         switch agency.mafrl.(theagencyval{foundagency}).Depth
                             
                             case 'Int'
-                                thedepth(nn,1) = {['0 - ',num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)]};
+                                thedepth(nn,1) = {[]};%{['0 - ',num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)]};
                                 
-                                mount_tag = ['Integrated'];
+                                deployment = ['Integrated'];
+                                pos = 'Water Column';
+                                ref = 'Water Surface';
+                                meandepth = num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth);
+                                
+                                type = 'Depth';
                             case 'Surface'
-                                thedepth(nn,1) = {'0'};
+                                thedepth(nn,1) = {'0.5'};
                                 
-                                mount_tag = 'Fixed -0.5 Below Surface';
+                                deployment = ['Fixed'];
                                 
+                                 pos = '0.5m below Surface';
+                                 ref = 'm below Surface';
+                                 meandepth = num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth);
+                                 
+                                 type = 'Depth';
                             case 'Bottom'
-                                thedepth(nn,1) = {num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)};
-                                mount_tag = 'Fixed +0.5 Above Seabed';
+                                
+                                deployment = ['Fixed'];
+                                thedepth(nn,1) = {'0.5'};
+                                %thedepth(nn,1) = {num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth)};
+                                pos = '0.5m above Seabed';
+                                ref = 'm above Seabed';
+                                meandepth = num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth);
+                                
+                                type = 'Height';
                             otherwise
                         end
                         QC(nn,1) = {'N'};
@@ -122,9 +139,9 @@ for i = 1:length(theyears)
                     filename = [outpath,sitekey.mafrl.(thesiteval{foundsite}).AED,'_',filevar,'_',agency.mafrl.(theagencyval{foundagency}).Depth,'_',num2str(theyears(i)),'_DATA.csv'];
                     filename
                     fid = fopen(filename,'wt');
-                    fprintf(fid,'Date,Depth,Data,QC\n');
+                    fprintf(fid,'Date,%s,Data,QC\n',type);
                     for nn = 1:length(thedata)
-                        fprintf(fid,'%s,%s,%4.4f,%s\n',datestr(thedate(nn),'dd-mm-yyyy HH:MM:SS'),thedepth{nn},thedata(nn),QC{nn});
+                        fprintf(fid,'%s,%s,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth{nn},thedata(nn),QC{nn});
                     end
                     fclose(fid);
                     
@@ -147,7 +164,15 @@ for i = 1:length(theyears)
                     fprintf(fid,'Vertical Datum,mAHD\n');
                     fprintf(fid,'National Station ID,%s\n',sitekey.mafrl.(thesiteval{foundsite}).ID);
                     fprintf(fid,'Site Description,%s\n',sitekey.mafrl.(thesiteval{foundsite}).Description);
-                    fprintf(fid,'Mount Description,%s\n',mount_tag);
+                    
+                    fprintf(fid,'Deployment,%s\n',deployment);
+                        fprintf(fid,'Deployment Position,%s\n',pos);
+                        fprintf(fid,'Vertical Reference,%s\n',ref);
+                        fprintf(fid,'Site Mean Depth,%s\n',meandepth);
+                    
+                    
+                    
+                    
                     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                     fprintf(fid,'Contact Email,\n');
                     fprintf(fid,'Variable ID,%s\n',agency.mafrl.(theagencyval{foundagency}).ID);
@@ -159,7 +184,7 @@ for i = 1:length(theyears)
                     
                     fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
                     
-                    fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+                    fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
                     fprintf(fid,'Depth,Decimal\n');
                     
                     thevar = [varkey.(thevarval{thefoundvar}).Name,' (',varkey.(thevarval{thefoundvar}).Unit,')'];
@@ -168,7 +193,7 @@ for i = 1:length(theyears)
                     fprintf(fid,'QC,String\n');
                     
                     fclose(fid);
-                    plot_datafile(filename);
+                    %plot_datafile(filename);
                     
                     
                     

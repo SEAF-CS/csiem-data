@@ -93,7 +93,7 @@ fprintf(fid,'Date,Depth,Data,QC\n');
 ggg = find(adate >= datenum(1970,01,01,00,00,00));
 
 for i = 1:length(ggg)
-    fprintf(fid,'%s,%s,%4.4f,%s\n',datestr(adate(ggg(i)),'dd-mm-yyyy HH:MM:SS'),depth,aheight(ggg(i)),QC);
+    fprintf(fid,'%s,%s,%4.4f,%s\n',datestr(adate(ggg(i)),'yyyy-mm-dd HH:MM:SS'),depth,aheight(ggg(i)),QC);
 end
 fclose(fid);
 
@@ -132,7 +132,7 @@ SD = mean(diff(adate));
 
 fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
 
-fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
 fprintf(fid,'Depth,Decimal\n');
 
 %thevar = [varName{sss},' (',varUnit{sss},')'];

@@ -34,7 +34,7 @@ gx = geoaxes('position',[0.1 0.72 0.8 0.25]);
 
 geoscatter(headerdata.Lat,headerdata.Lon,"o",'filled','markerfacecolor','w');hold on
 
-geobasemap('satellite'); pause(1);
+geobasemap('satellite'); pause(0.1);
 
 title(headerdata.Station_ID);
 

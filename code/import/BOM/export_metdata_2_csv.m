@@ -105,7 +105,7 @@ for i = 1:length(sites)
                     fprintf(fid,'Date,Height,Data,QC\n');
                     
                     for k = 1:length(mdate)
-                        fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'dd-mm-yyyy HH:MM:SS'),' ',mdata(k),QC{k});
+                        fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'yyyy-mm-dd HH:MM:SS'),' ',mdata(k),QC{k});
                     end
                     fclose(fid);
                     
@@ -141,7 +141,7 @@ for i = 1:length(sites)
                     
                     fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
                     
-                    fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+                    fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
                     fprintf(fid,'Depth,Decimal\n');
                     
                     %thevar = [varName{sss},' (',varUnit{sss},')'];
@@ -150,7 +150,7 @@ for i = 1:length(sites)
                     fprintf(fid,'QC,String\n');
                     
                     fclose(fid);
-                    plot_datafile(filename);
+                    %plot_datafile(filename);
                 end
             end
             
