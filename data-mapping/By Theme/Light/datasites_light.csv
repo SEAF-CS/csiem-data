@@ -1,74 +1,74 @@
 AED_ID,SiteID,Site_Name,Shortname,Easting,Northing,Latitude,Longitude,AgencyID,Agency_Name,Type_Data,Type_Station,Station_Status,InCS,Program
-mafrl_CS4,CS4,Cockburn Sound northern end deep,CS4,376829,6441686,-32.155,115.694,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS5,CS5,Cockburn Sound northern end deep,CS5,379308,6441958,-32.152,115.72,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS6A,CS6A,"Outside Northern Harbour, (replaced CS6)",CS6A,382749,6442651,-32.146,115.757,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS7,CS7,Jervoise Channel south of Southern Harbour,CS7,383323,6439972,-32.171,115.762,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS8,CS8,Cockburn Sound central basin,CS8,379337,6436947,-32.198,115.72,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS9,CS9,Kwinana Bulk Terminal (KBB2),CS9,383098,6435629,-32.21,115.76,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS10N,CS10N,Bulk Grain Terminal (CBH)(replaced CS10),CS10N,381593,6430569,-32.255,115.743,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS11,CS11,Mangles Bay deep water basin,CS11,378890,6429753,-32.262,115.714,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS12,CS12,Calista Channel WC Desalination Plant,CS12,383677,6436972,-32.198,115.766,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS9A,CS9A,Kwinana Bulk Jetty (KBJ),CS9A,382367,6432396,-32.239,115.751,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_G1,G1,Careening Bay HMAS Stirling,G1,377121,6433158,-32.231,115.696,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_G2,G2,Garden Island central HMAS Stirling,G2,376039,6436793,-32.199,115.685,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_G3,G3,Garden Island north HMAS Stirling,G3,375728,6441317,-32.158,115.682,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_WS4,WS4,Warnbro Sound central basin,WS4,379741,6421498,-32.337,115.722,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_WSSB,WSSB,Warnbro Sound Safety Bay shallow,WSSB,378444,6424599,-32.309,115.709,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-MAFRL_WSSB_L,WSSB-L,Warnbro Sound Safety Bay -  light,WSSB-L,379163,6423892,-32.315,115.716,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_NH3,NH3,Northern Harbour Jervoise Bay,NH3,383291,6443373,-32.14,115.763,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_SF,SF,Southern Flats shallow,SF,378716,6431322,-32.248,115.713,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_SF_L,SF-L,Southern Flats -  light attenuation / Secchi,SF-L,378627,6432177,-32.241,115.712,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CB,CB,Challenger Beach bank,CB,381133,6438605,-32.183,115.739,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS13,CS13,Cockburn Sound southern deep water,CS13,380207,6431054,-32.251,115.728,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_MB,MB,Mangles Bay shallow near shore,MB,378085,6428341,-32.275,115.705,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_MB_L,MB-L,Mangles Bay -  light attenuation / Secchi,MB-L,378164,6429077,-32.268,115.706,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_NC,NC,North Control removed 1/12/2002,NC,372954,6443318,-32.139,115.653,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_SC,SC,South Control removed 1/12/2008,SC,376063,6430632,-32.254,115.684,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-mafrl_CS10,CS10,Changed position from 2004/05 now CS1ON,CS10,381396,6430437,-32.257,115.741,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,,CSMC WQ
-dwer6141432,6141432,Cockburn Sound - Mangles Bay,MB,377806.2,6428398.52,-32.2745,115.7025,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142830,6142830,Cockburn Sound - Nh3,NH3,383291,6443373,-32.14002396,115.762558,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142971,6142971,Cockburn Sound - North,CS5,379308,6441958,-32.15236647,115.7201576,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142972,6142972,Cockburn Sound - Jervoise Bay North,CS6A,382749,6442651,-32.14647972,115.756724,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142973,6142973,Cockburn Sound - Jervoise Bay South,CS7,383323,6439972,-32.17070253,115.7624827,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142974,6142974,Cockburn Sound - Central,CS8,379337,6436947,-32.19756533,115.7198329,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142975,6142975,Cockburn Sound - East,CS9,383098,6435629,-32.20985052,115.7595655,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142976,6142976,Cockburn Sound - East,CS9A,382367,6432396,-32.23893373,115.7514119,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142977,6142977,Cockburn Sound - Rockingham Beach,CS10N,381396,6430437,-32.25650025,115.7408638,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142980,6142980,Garden Island Hmas Stirling - South,CSG1,377319,6433380,-32.22951818,115.6979693,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142983,6142983,Cockburn Sound - Southern Flats,CSSF,378716,6431322,-32.24823153,115.7125308,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142984,6142984,Cockburn Sound - Challenger Beach,CSCB,381133,6438605,-32.18280269,115.7390897,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142987,6142987,Cockburn Sound - Rockingham Beach,CS10,381328,6430636,-32.25469822,115.7401668,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142988,6142988,Garden Island Hmas Stirling - Central,CSG2,377172,6434955,-32.21529693,115.6966123,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6142989,6142989,Garden Island Hmas Stirling - North,CSG3,376039,6436793,-32.19859525,115.6848308,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6147030,6147030,North Cockburn Sound 4,NCS4T,377670,6441469,-32.15660018,115.7027292,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6147031,6147031,South Cockburn Sound 13,SCS13T,380207,6431055,-32.25080006,115.7283213,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6147034,6147034,South 2 - Cockburn Sound 11,S2CS11T,378890,6429753,-32.26240154,115.714178,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwer6147035,6147035,Cockburn Sound - Desalination Plant,DESAL,381303,6436687,-32.2001199,115.7406544,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMWQ
-dwermooring6147030,6147030,North Cockburn Sound 4,s6147030,-1,-1,-32.15660018,115.7027292,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147031,6147031,South Cockburn Sound 13,s6147031,-1,-1,-32.25080006,115.7283213,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147032,6147032,Eastern Margin Seagrass,s6147032,-1,-1,-32.19228159,115.7452496,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147033,6147033,Mangles Bay,s6147033,-1,-1,-32.27286493,115.7026804,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147034,6147034,South 2 - Cockburn Sound 11,s6147034,-1,-1,-32.26240154,115.714178,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147035,6147035,Cockburn Sound - Desalination Plant,s6147035,-1,-1,-32.2001199,115.7406544,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147036,6147036,North East - Garden Island Seagrass,s6147036,-1,-1,-32.15743127,115.6793039,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-dwermooring6147037,6147037,West Port,s6147037,-1,-1,-32.18669751,115.7598478,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-,,cs86,,-1,-1,,,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,,DWER CSMOORING
-wwmsp5_CS4,CS4,CS4,CS4,-1,-1,-32.2044,115.75,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,PAR,,,WWMSP5.1 AWAC
-wwmsp5_CS5,CS5,CS5,CS5,-1,-1,-32.1541,115.7421,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,PAR,,,WWMSP5.1 AWAC
-wwmsp5_CS6,CS6,CS6,CS6,-1,-1,-32.096,115.7392,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,PAR,,,WWMSP5.1 AWAC
-uwa_North,North,North,North,378097,6450256,-32.07739341,115.7083732,UWA,University of Western Australia,WQ_light,PAR,,,UWA OIGK
-uwa_West,West,West,West,375958,647939,,,UWA,University of Western Australia,WQ_light,PAR,,,UWA OIGK
-uwa_East,East,East,East,378391,6448988,-32.08886173,115.7113271,UWA,University of Western Australia,WQ_light,PAR,,,UWA OIGK
-wwmsp2_KwinanaShelf,KwinanaShelf,KwinanaShelf,KwinanaShelf,-1,-1,-32.19771,115.74725,WWMSP2.2,WAMSI Westport Marine Science Program,WQ_light,PAR,,,WWMSP2.2
-dwermooring6147030,6147030,North Cockburn Sound 4,s6147030,-1,-1,-32.15660018,115.7027292,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147031,6147031,South Cockburn Sound 13,s6147031,-1,-1,-32.25080006,115.7283213,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147032,6147032,Eastern Margin Seagrass,s6147032,-1,-1,-32.19228159,115.7452496,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147033,6147033,Mangles Bay,s6147033,-1,-1,-32.27286493,115.7026804,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147034,6147034,South 2 - Cockburn Sound 11,s6147034,-1,-1,-32.26240154,115.714178,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147035,6147035,Cockburn Sound - Desalination Plant,s6147035,-1,-1,-32.2001199,115.7406544,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147036,6147036,North East - Garden Island Seagrass,s6147036,-1,-1,-32.15743127,115.6793039,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-dwermooring6147037,6147037,West Port,s6147037,-1,-1,-32.18669751,115.7598478,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-,,cs86,,-1,-1,,,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,,DWER CSMOORING
-wwmsp5_CCL,CCL,Cockburn Cement,CCL,-1,-1,-32.132847,115.746858,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,Above-water,,,WWMSP5.1 MET
-dwermooring6147033,6147033,Mangles Bay,s6147033,-1,-1,-32.27286493,115.7026804,DWER,Department of Water and Environmental Regulation,WQ_light,Above-water,,,DWER CSMOORING
-dwermooringLandRefPAR,LandRefPAR,LandRefPAR,LandRefPAR,-1,-1,-32.1387734,115.7627123,DWER,Department of Water and Environmental Regulation,WQ_light,Above-water,,,DWER CSMOORING
+mafrl_CS4,CS4,Cockburn Sound northern end deep,CS4,376829,6441686,-32.155,115.694,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS5,CS5,Cockburn Sound northern end deep,CS5,379308,6441958,-32.152,115.72,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS6A,CS6A,"Outside Northern Harbour, (replaced CS6)",CS6A,382749,6442651,-32.146,115.757,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS7,CS7,Jervoise Channel south of Southern Harbour,CS7,383323,6439972,-32.171,115.762,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS8,CS8,Cockburn Sound central basin,CS8,379337,6436947,-32.198,115.72,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS9,CS9,Kwinana Bulk Terminal (KBB2),CS9,383098,6435629,-32.21,115.76,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS10N,CS10N,Bulk Grain Terminal (CBH)(replaced CS10),CS10N,381593,6430569,-32.255,115.743,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS11,CS11,Mangles Bay deep water basin,CS11,378890,6429753,-32.262,115.714,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS12,CS12,Calista Channel WC Desalination Plant,CS12,383677,6436972,-32.198,115.766,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS9A,CS9A,Kwinana Bulk Jetty (KBJ),CS9A,382367,6432396,-32.239,115.751,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_G1,G1,Careening Bay HMAS Stirling,G1,377121,6433158,-32.231,115.696,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_G2,G2,Garden Island central HMAS Stirling,G2,376039,6436793,-32.199,115.685,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_G3,G3,Garden Island north HMAS Stirling,G3,375728,6441317,-32.158,115.682,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_WS4,WS4,Warnbro Sound central basin,WS4,379741,6421498,-32.337,115.722,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,0,CSMC WQ
+mafrl_WSSB,WSSB,Warnbro Sound Safety Bay shallow,WSSB,378444,6424599,-32.309,115.709,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,0,CSMC WQ
+MAFRL_WSSB_L,WSSB-L,Warnbro Sound Safety Bay -  light,WSSB-L,379163,6423892,-32.315,115.716,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,0,CSMC WQ
+mafrl_NH3,NH3,Northern Harbour Jervoise Bay,NH3,383291,6443373,-32.14,115.763,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_SF,SF,Southern Flats shallow,SF,378716,6431322,-32.248,115.713,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_SF_L,SF-L,Southern Flats -  light attenuation / Secchi,SF-L,378627,6432177,-32.241,115.712,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CB,CB,Challenger Beach bank,CB,381133,6438605,-32.183,115.739,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS13,CS13,Cockburn Sound southern deep water,CS13,380207,6431054,-32.251,115.728,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_MB,MB,Mangles Bay shallow near shore,MB,378085,6428341,-32.275,115.705,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_MB_L,MB-L,Mangles Bay -  light attenuation / Secchi,MB-L,378164,6429077,-32.268,115.706,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_NC,NC,North Control removed 1/12/2002,NC,372954,6443318,-32.139,115.653,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_SC,SC,South Control removed 1/12/2008,SC,376063,6430632,-32.254,115.684,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+mafrl_CS10,CS10,Changed position from 2004/05 now CS1ON,CS10,381396,6430437,-32.257,115.741,CSMC,Cockburn Sound Management Council,WQ_light,Turbidity and extinction,,1,CSMC WQ
+dwer6141432,6141432,Cockburn Sound - Mangles Bay,MB,377806.2,6428398.52,-32.2745,115.7025,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142830,6142830,Cockburn Sound - Nh3,NH3,383291,6443373,-32.14002396,115.762558,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142971,6142971,Cockburn Sound - North,CS5,379308,6441958,-32.15236647,115.7201576,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142972,6142972,Cockburn Sound - Jervoise Bay North,CS6A,382749,6442651,-32.14647972,115.756724,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142973,6142973,Cockburn Sound - Jervoise Bay South,CS7,383323,6439972,-32.17070253,115.7624827,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142974,6142974,Cockburn Sound - Central,CS8,379337,6436947,-32.19756533,115.7198329,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142975,6142975,Cockburn Sound - East,CS9,383098,6435629,-32.20985052,115.7595655,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142976,6142976,Cockburn Sound - East,CS9A,382367,6432396,-32.23893373,115.7514119,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142977,6142977,Cockburn Sound - Rockingham Beach,CS10N,381396,6430437,-32.25650025,115.7408638,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142980,6142980,Garden Island Hmas Stirling - South,CSG1,377319,6433380,-32.22951818,115.6979693,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142983,6142983,Cockburn Sound - Southern Flats,CSSF,378716,6431322,-32.24823153,115.7125308,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142984,6142984,Cockburn Sound - Challenger Beach,CSCB,381133,6438605,-32.18280269,115.7390897,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142987,6142987,Cockburn Sound - Rockingham Beach,CS10,381328,6430636,-32.25469822,115.7401668,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142988,6142988,Garden Island Hmas Stirling - Central,CSG2,377172,6434955,-32.21529693,115.6966123,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6142989,6142989,Garden Island Hmas Stirling - North,CSG3,376039,6436793,-32.19859525,115.6848308,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6147030,6147030,North Cockburn Sound 4,NCS4T,377670,6441469,-32.15660018,115.7027292,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6147031,6147031,South Cockburn Sound 13,SCS13T,380207,6431055,-32.25080006,115.7283213,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6147034,6147034,South 2 - Cockburn Sound 11,S2CS11T,378890,6429753,-32.26240154,115.714178,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwer6147035,6147035,Cockburn Sound - Desalination Plant,DESAL,381303,6436687,-32.2001199,115.7406544,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMWQ
+dwermooring6147030,6147030,North Cockburn Sound 4,s6147030,-1,-1,-32.15660018,115.7027292,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147031,6147031,South Cockburn Sound 13,s6147031,-1,-1,-32.25080006,115.7283213,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147032,6147032,Eastern Margin Seagrass,s6147032,-1,-1,-32.19228159,115.7452496,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147033,6147033,Mangles Bay,s6147033,-1,-1,-32.27286493,115.7026804,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147034,6147034,South 2 - Cockburn Sound 11,s6147034,-1,-1,-32.26240154,115.714178,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147035,6147035,Cockburn Sound - Desalination Plant,s6147035,-1,-1,-32.2001199,115.7406544,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147036,6147036,North East - Garden Island Seagrass,s6147036,-1,-1,-32.15743127,115.6793039,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+dwermooring6147037,6147037,West Port,s6147037,-1,-1,-32.18669751,115.7598478,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+,,cs86,,-1,-1,,,DWER,Department of Water and Environmental Regulation,WQ_light,Turbidity and extinction,,1,DWER CSMOORING
+wwmsp5_CS4,CS4,CS4,CS4,-1,-1,-32.2044,115.75,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,PAR,,1,WWMSP5.1 AWAC
+wwmsp5_CS5,CS5,CS5,CS5,-1,-1,-32.1541,115.7421,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,PAR,,1,WWMSP5.1 AWAC
+wwmsp5_CS6,CS6,CS6,CS6,-1,-1,-32.096,115.7392,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,PAR,,0,WWMSP5.1 AWAC
+uwa_North,North,North,North,378097,6450256,-32.07739341,115.7083732,UWA,University of Western Australia,WQ_light,PAR,,0,UWA OIGK
+uwa_West,West,West,West,375958,6447952,-32.09794086,115.6854169,UWA,University of Western Australia,WQ_light,PAR,,0,UWA OIGK
+uwa_East,East,East,East,378391,6448988,-32.08886173,115.7113271,UWA,University of Western Australia,WQ_light,PAR,,0,UWA OIGK
+wwmsp2_KwinanaShelf,KwinanaShelf,KwinanaShelf,KwinanaShelf,-1,-1,-32.19771,115.74725,WWMSP2.2,WAMSI Westport Marine Science Program,WQ_light,Multi-spectral,,1,WWMSP2.2
+dwermooring6147030,6147030,North Cockburn Sound 4,s6147030,-1,-1,-32.15660018,115.7027292,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147031,6147031,South Cockburn Sound 13,s6147031,-1,-1,-32.25080006,115.7283213,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147032,6147032,Eastern Margin Seagrass,s6147032,-1,-1,-32.19228159,115.7452496,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147033,6147033,Mangles Bay,s6147033,-1,-1,-32.27286493,115.7026804,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147034,6147034,South 2 - Cockburn Sound 11,s6147034,-1,-1,-32.26240154,115.714178,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147035,6147035,Cockburn Sound - Desalination Plant,s6147035,-1,-1,-32.2001199,115.7406544,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147036,6147036,North East - Garden Island Seagrass,s6147036,-1,-1,-32.15743127,115.6793039,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+dwermooring6147037,6147037,West Port,s6147037,-1,-1,-32.18669751,115.7598478,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+,,cs86,,-1,-1,,,DWER,Department of Water and Environmental Regulation,WQ_light,Multi-spectral,,1,DWER CSMOORING
+wwmsp5_CCL,CCL,Cockburn Cement,CCL,-1,-1,-32.132847,115.746858,WWMSP5.1,WAMSI Westport Marine Science Program,WQ_light,Above-water,,1,WWMSP5.1 MET
+dwermooring6147033,6147033,Mangles Bay,s6147033,-1,-1,-32.27286493,115.7026804,DWER,Department of Water and Environmental Regulation,WQ_light,Above-water,,1,DWER CSMOORING
+dwermooringLandRefPAR,LandRefPAR,LandRefPAR,LandRefPAR,-1,-1,-32.1387734,115.7627123,DWER,Department of Water and Environmental Regulation,WQ_light,Above-water,,1,DWER CSMOORING
