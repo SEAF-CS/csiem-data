@@ -66,14 +66,46 @@ for i = 1:length(filelist)
         depth = tab.(theheader)(5:end) * 1;
         depthdata.(['s',num2str(thesite)]).Depth = depth;
         depthdata.(['s',num2str(thesite)]).Mdate = mdate;
+        
+        Index = find(contains(filelist(i).name,'Profile'));
+        
+        if ~isempty(Index)
+            dep = 'Profile';
+            pos = 'm from Surface';
+            ref = 'Water Surface';
+            SMD = [];
+        else
+            dep = 'Floating';
+            pos = 'm from Surface';
+            ref = 'Water Surface';
+            SMD = [];
+        end
+        
     else
         sss = length(headers) + 2;
 
         if i == 8
-            dval = 20;
+            dval = 0.5;
             depth(1:length(mdate),1) = dval; % Hack for bottom sensor.
+            
+            dep = 'Fixed';
+            pos = '0.5m from Seabed';
+            ref = 'm from Seabed';
+            SMD = [];
+            
         else
             depth = interp1(depthdata.(['s',num2str(thesite)]).Mdate,depthdata.(['s',num2str(thesite)]).Depth,mdate);
+            
+            if i == 9
+                    dep = 'Fixed';
+                    pos = '0.5m from Surface';
+                    ref = 'm from Surface';
+                    SMD = [];
+                    
+                    dval = 0.5;
+                    depth(1:length(mdate),1) = dval; % Hack for bottom sensor.
+                    
+            end
         end
 
     
@@ -111,12 +143,21 @@ for i = 1:length(filelist)
         filevar = regexprep(varkey.(varID).Name,' ','_');
 
         filename = [outpath,sitekey.dwermooring.(sitelist{foundsite}).AED,'_',filevar,'_DATA.csv'];
+        
+        if i == 8
+            filename = regexprep(filename,'_DATA','_Bottom_DATA');
+        end
+        
         filename
         fid = fopen(filename,'wt');
-        fprintf(fid,'Date,Depth,Data,QC\n');
+        if i == 8
+            fprintf(fid,'Date,Height,Data,QC\n');
+        else
+            fprintf(fid,'Date,Depth,Data,QC\n');
+        end
         for nn = 1:length(thedata)
             if ~isnan(thedata(nn))
-                fprintf(fid,'%s,%4.4f,%4.4f,%i\n',datestr(mdate(nn),'dd-mm-yyyy HH:MM:SS'),depth(nn),thedata(nn),theQC(nn));
+                fprintf(fid,'%s,%4.4f,%4.4f,%i\n',datestr(mdate(nn),'yyyy-mm-dd HH:MM:SS'),depth(nn),thedata(nn),theQC(nn));
             end
         end
         fclose(fid);
@@ -140,6 +181,10 @@ for i = 1:length(filelist)
         fprintf(fid,'Vertical Datum,mAHD\n');
         fprintf(fid,'National Station ID,%s\n',num2str(sitekey.dwermooring.(sitelist{foundsite}).ID));
         fprintf(fid,'Site Description,%s\n',sitekey.dwermooring.(sitelist{foundsite}).Description);
+        fprintf(fid,'Deployment,%s\n',dep);
+        fprintf(fid,'Deployment Position,%s\n',pos);
+        fprintf(fid,'Vertical Reference,%s\n',ref);
+        fprintf(fid,'Site Mean Depth,%s\n',[]);
         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
         fprintf(fid,'Contact Email,\n');
         fprintf(fid,'Variable ID,%s\n',agency.dwermooring.(varlist{foundvar}).ID);
@@ -151,7 +196,7 @@ for i = 1:length(filelist)
 
         fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
 
-        fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+        fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
         fprintf(fid,'Depth,Decimal\n');
 
         thevar = [varkey.(varID).Name,' (',varkey.(varID).Unit,')'];
@@ -161,7 +206,7 @@ for i = 1:length(filelist)
 
         fclose(fid);
 
-
+        plot_datafile(filename);
 
 
 

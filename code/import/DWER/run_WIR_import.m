@@ -64,7 +64,7 @@ end
 
 
 %
-save swan.mat swan -mat;
+save swan.mat swan -mat -v7.3;
 
 % import_drainage_data;
 % save('../modeltools/matfiles/swan.mat','swan','-mat');

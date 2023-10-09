@@ -20,8 +20,8 @@ else
 end
 
 exclude_list = {...
-    'bom',...
-    'dot',...
+%     'bom',...
+%     'dot',...
     };
 
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
@@ -37,11 +37,12 @@ cockburn = [];
 for i = 1:length(filelist)
     
     excluded = 0;
-    
-    for lll = 1:length(exclude_list)
-        kk = strfind(filelist(i).folder,exclude_list{lll});
-        if kk > 1
-            excluded = 1;
+    if ~isempty(exclude_list)
+        for lll = 1:length(exclude_list)
+            kk = strfind(filelist(i).folder,exclude_list{lll});
+            if kk > 1
+                excluded = 1;
+            end
         end
     end
     
@@ -82,9 +83,13 @@ for i = 1:length(filelist)
                     cockburn.(sitecode).(tfv_name).Date = data.Date;
                     cockburn.(sitecode).(tfv_name).Data = data.Data * tfv_conv;
                     cockburn.(sitecode).(tfv_name).Data_Raw = double(data.Data);
-                                        cockburn.(sitecode).(tfv_name).Depth = data.Depth * -1;
-                    cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
-                    cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
+                    if isfield(data,'Depth')
+                        cockburn.(sitecode).(tfv_name).Depth = data.Depth;% * -1;
+                    else
+                        cockburn.(sitecode).(tfv_name).Heright = data.Height;% * -1;
+                    end
+%                     cockburn.(sitecode).(tfv_name).Depth_T = data.Depth_T * -1;
+%                     cockburn.(sitecode).(tfv_name).Depth_B = data.Depth_B * -1;
                     
                     cockburn.(sitecode).(tfv_name).X = header.Lon;
                     cockburn.(sitecode).(tfv_name).Y = header.Lat;
@@ -110,6 +115,7 @@ for i = 1:length(filelist)
                     cockburn.(sitecode).(tfv_name).Date = [cockburn.(sitecode).(tfv_name).Date;data.Date];
                     cockburn.(sitecode).(tfv_name).Data = [cockburn.(sitecode).(tfv_name).Data;data.Data * tfv_conv];
                     cockburn.(sitecode).(tfv_name).Data_Raw = [cockburn.(sitecode).(tfv_name).Data_Raw;double(data.Data)];
+                    
                     cockburn.(sitecode).(tfv_name).Depth = [cockburn.(sitecode).(tfv_name).Depth;data.Depth * -1];
                     
                     cockburn.(sitecode).(tfv_name).Depth_T = [cockburn.(sitecode).(tfv_name).Depth_T;data.Depth_T * -1];

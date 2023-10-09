@@ -5,6 +5,29 @@ function peel_u = sort_WIR_data(peel)
 sites = fieldnames(peel);
 
 for i = 1:length(sites)
+    if isfield(peel.(sites{i}),'WQ_var00006') & isfield(peel.(sites{i}),'WQ_var00006_1')
+        peel.(sites{i}).WQ_var00006.Date = [peel.(sites{i}).WQ_var00006.Date;peel.(sites{i}).WQ_var00006_1.Date];
+        peel.(sites{i}).WQ_var00006.Data = [peel.(sites{i}).WQ_var00006.Data;peel.(sites{i}).WQ_var00006_1.Data];
+        peel.(sites{i}).WQ_var00006.Depth = [peel.(sites{i}).WQ_var00006.Depth;peel.(sites{i}).WQ_var00006_1.Depth];
+        peel.(sites{i}).WQ_var00006.Depth_Chx = [peel.(sites{i}).WQ_var00006.Depth_Chx;peel.(sites{i}).WQ_var00006_1.Depth_Chx];
+        peel.(sites{i}).WQ_var00006.Sample_Type = [peel.(sites{i}).WQ_var00006.Sample_Type;peel.(sites{i}).WQ_var00006_1.Sample_Type];
+        peel.(sites{i}).WQ_var00006.QC = [peel.(sites{i}).WQ_var00006.Sample_Type;peel.(sites{i}).WQ_var00006_1.QC];
+        
+        peel.(sites{i}) = rmfield(peel.(sites{i}),'WQ_var00006_1');
+    end
+    
+    if isfield(peel.(sites{i}),'WQ_var00006_1') & ~isfield(peel.(sites{i}),'WQ_var00006_1')
+        peel.(sites{i}).WQ_var00006 = peel.(sites{i}).WQ_var00006_1;
+        peel.(sites{i}) = rmfield(peel.(sites{i}),'WQ_var00006_1');
+    end
+    
+end
+
+
+        
+sites = fieldnames(peel);
+
+for i = 1:length(sites)
     
     vars = fieldnames(peel.(sites{i}));
     
@@ -15,12 +38,14 @@ for i = 1:length(sites)
         zdata = peel.(sites{i}).(vars{j}).Depth;
         qcdata = peel.(sites{i}).(vars{j}).QC;
         zcdata = peel.(sites{i}).(vars{j}).Depth_Chx;
+        stdata = peel.(sites{i}).(vars{j}).Sample_Type;
         
         xdata1 = [];
         ydata1 = [];
         zdata1 = [];
         qcdata1 = {};
         zddata1 = {};
+        stdata1 = {};
         
         inc = 1;
         u_array = [];
@@ -42,6 +67,7 @@ for i = 1:length(sites)
                         zdata1(inc,1) = zdata(ss(tt(1)));
                         qcdata1(inc,1) = qcdata(ss(tt(1)));
                         zcdata1(inc,1) = zcdata(ss(tt(1)));
+                        stdata1(inc,1) = stdata(ss(tt(1)));
                         inc = inc + 1;
                     else
                         xdata1(inc,1) = xdata(ss(1));
@@ -49,6 +75,7 @@ for i = 1:length(sites)
                         zdata1(inc,1) = zdata(ss(1));
                         qcdata1(inc,1) = qcdata(ss(1));
                         zcdata1(inc,1) = zcdata(ss(1));
+                        stdata1(inc,1) = stdata(ss(1));
                         inc = inc + 1;
                     end
                     
@@ -58,6 +85,7 @@ for i = 1:length(sites)
                     zdata1(inc,1) = zdata(ss(1));
                     qcdata1(inc,1) = qcdata(ss(1));
                     zcdata1(inc,1) = zcdata(ss(1));
+                    stdata1(inc,1) = stdata(ss(1));
                     inc = inc + 1;
                 end
                 
@@ -77,6 +105,7 @@ for i = 1:length(sites)
         
         peel_u.(sites{i}).(vars{j}).Depth_Chx = zcdata1(ind);
         
+        peel_u.(sites{i}).(vars{j}).Sample_Type = stdata1(ind);
     end
     
     %peel_u.TestSite = find_matching('AMM',peel_u.p019.WQ_NIT_AMM,'NIT',peel.p019.WQ_NIT_NIT);

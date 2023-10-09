@@ -60,7 +60,7 @@ for i = 1:length(headers)
     fid = fopen(filename,'wt');
     fprintf(fid,'Date,Height,Data,QC\n');
     for nn = 1:length(u_mdate)
-        fprintf(fid,'%s,%4.4f,%4.4f,N\n',datestr(u_mdate(nn),'dd-mm-yyyy HH:MM:SS'),u_thedepths(nn),u_thedata(nn));
+        fprintf(fid,'%s,%4.4f,%4.4f,N\n',datestr(u_mdate(nn),'yyyy-mm-dd HH:MM:SS'),u_thedepths(nn),u_thedata(nn));
     end
     fclose(fid);
     
@@ -97,7 +97,7 @@ for i = 1:length(headers)
     
     fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
     
-    fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+    fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
     fprintf(fid,'Depth,Decimal\n');
     
     thevar = [varname,' (',varunits,')'];

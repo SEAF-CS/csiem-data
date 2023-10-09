@@ -151,13 +151,16 @@ for i = 1:length(sites)
                     
                     case 'Standard sample (Bottom)'
                         disp('bottom');
-                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'20'};
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0.5'};
                         
                     case 'Standard sample (Surface)'
                         disp('surface');
-                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0'};
+                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0.5'};
                     otherwise
-                        swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0'};
+                        if strcmpi(proj,'CSMWQ') == 1
+                            swan.(sites{i}).(vars{j}).Depth_Chx(k) = {''};
+                        end
+                            
                 end
             end
             

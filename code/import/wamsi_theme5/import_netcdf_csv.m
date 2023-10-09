@@ -194,7 +194,7 @@ for i = 1:length(filelist)
                         fid = fopen(fullfile,'wt');
                         fprintf(fid,'Date,%s,Data,QC\n',theheader);
                         for nn = 1:length(pdata_int)
-                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(hourly(nn),'dd-mm-yyyy HH:MM:SS'),pdepth_int(nn),pdata_int(nn));
+                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(hourly(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_int(nn),pdata_int(nn));
                         end
                         fclose(fid);
                         
@@ -230,7 +230,7 @@ for i = 1:length(filelist)
                         
                         fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
                         
-                        fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+                        fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
                         fprintf(fid,'Depth,Decimal\n');
                         
                         thevar = [varname,' (',varunits,')'];

@@ -1,11 +1,12 @@
 clear all; close all;
+addpath(genpath('../../functions/'));
 
 load ../../actions/sitekey.mat
 
-xlsname = 'D:\Cloud\AED Dropbox\AED_Cockburn_db\CSIEM\Data\data-swamp\WC\WC-BMT\Digitised_DO.xlsx';
+xlsname = 'D:\csiem\data-lake\WCWA\WC-BMT\Digitised_DO.xlsx';
 
 
-outdir = 'D:\csiem\data-warehouse\csv\wc\digitised\';mkdir(outdir);
+outdir = 'D:\csiem\data-warehouse\csv\wcwa\psdp-1.2\';mkdir(outdir);
 
 [snum,~] = xlsread(xlsname,'PSDPsites','A2:A100');
 mdata = calc_dates(snum(:,1));
@@ -25,10 +26,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -52,10 +53,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -79,10 +80,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -106,10 +107,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -133,10 +134,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -160,10 +161,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -187,10 +188,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -214,10 +215,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -241,10 +242,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -268,10 +269,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -295,10 +296,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -323,10 +324,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -350,10 +351,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -377,10 +378,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -404,10 +405,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -431,10 +432,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -458,10 +459,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -485,10 +486,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -512,10 +513,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -539,10 +540,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
@@ -566,10 +567,10 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corp';
-AgencyCode = 'WC';
-Program =  'BMT Digitisaed';
-ProgramCode = 'WC_BMT';
+AgencyName = 'Water Corporation';
+AgencyCode = 'WCWA';
+Program =  'PSDP-1.2';
+ProgramCode = 'PSDP-1.2';
 SiteID = sitekey.wc.(thesite).ID;
 SiteDesc = sitekey.wc.(thesite).Description;
 
