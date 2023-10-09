@@ -1,0 +1,69 @@
+AED_ID,SiteID,Site_Name,Shortname,Easting,Northing,Latitude,Longitude,AgencyID,Agency_Name,Type_Data,Type_Station,Station_Status,InCS,Program,Depth
+wwmsp2sg_BecherPoint,BecherPoint,Becher Point,Becher Point,-1,-1,-32.37232299,115.706082,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.4
+wwmsp2sg_BecherPointSZ,BecherPointSZ,Becher Point SZ,Becher Point SZ,-1,-1,-32.366256,115.705302,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-2.8
+wwmsp2sg_BirdIsland,BirdIsland,Bird Island,Bird Island,-1,-1,-32.27733,115.69471,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-1.9
+wwmsp2sg_BoullangerIsland2.5,BoullangerIsland2.5,Boullanger Island 2.5,Boullanger Island 2.5,-1,-1,-30.31406,115.00243,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3
+wwmsp2sg_BoullangerIsland3.5,BoullangerIsland3.5,Boullanger Island 3.5,Boullanger Island 3.5,-1,-1,-30.31232,115.00273,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.6
+wwmsp2sg_BoullangerIsland5.5,BoullangerIsland5.5,Boullanger Island 5.5,Boullanger Island 5.5,-1,-1,-30.3114,115.00292,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-5.6
+wwmsp2sg_Buayanup,Buayanup,Buayanup,Buayanup,-1,-1,-33.65233,115.2484,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.6
+wwmsp2sg_BurnsRocks,BurnsRocks,Burns Rocks,Burns Rocks,-1,-1,-31.730138,115.708352,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-10.7
+wwmsp2sg_BusseltonJetty,BusseltonJetty,Busselton Jetty,Busselton Jetty,-1,-1,-33.63896,115.34315,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.8
+wwmsp2sg_CarnacIsland,CarnacIsland,Carnac Island,Carnac Island,-1,-1,-32.12077,115.6775,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-4
+wwmsp2sg_Causeway,Causeway,Causeway,Causeway,-1,-1,-32.26047998,115.70012,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-5.1
+wwmsp2sg_CervantesIsland,CervantesIsland,Cervantes Island,Cervantes Island,-1,-1,-30.52935,115.0485,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4.2
+wwmsp2sg_Coogee,Coogee,Coogee,Coogee,-1,-1,-32.11173,115.76136,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-4.9
+wwmsp2sg_Dunsborough,Dunsborough,Dunsborough,Dunsborough,-1,-1,-33.61654,115.12865,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.6
+wwmsp2sg_FishermansIsland2.5,FishermansIsland2.5,Fishermans Island 2.5,Fishermans Island 2.5,-1,-1,-30.13472,114.99792,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3
+wwmsp2sg_FishermansIsland3.5,FishermansIsland3.5,Fishermans Island 3.5,Fishermans Island 3.5,-1,-1,-30.12717,114.99594,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4.7
+wwmsp2sg_FishermansIsland5.5,FishermansIsland5.5,Fishermans Island 5.5,Fishermans Island 5.5,-1,-1,-30.13702,114.9912,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4.2
+wwmsp2sg_ForrestBeach,ForrestBeach,Forrest Beach,Forrest Beach,-1,-1,-33.57295,115.44908,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4.6
+wwmsp2sg_GardenIsland2.0m,GardenIsland2.0m,Garden Island 2.0m,Garden Island 2.0m,-1,-1,-32.15816,115.67134,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-2
+wwmsp2sg_GardenIsland2.5m,GardenIsland2.5m,Garden Island 2.5m,Garden Island 2.5m,-1,-1,-32.15985,115.6716,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-2.4
+wwmsp2sg_GardenIsland3.2m,GardenIsland3.2m,Garden Island 3.2m,Garden Island 3.2m,-1,-1,-32.15979,115.67257,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-3.1
+wwmsp2sg_GardenIsland5.5m,GardenIsland5.5m,Garden Island 5.5m,Garden Island 5.5m,-1,-1,-32.16018,115.67949,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-4.6
+wwmsp2sg_GardenIsland7.0m,GardenIsland7.0m,Garden Island 7.0m,Garden Island 7.0m,-1,-1,-32.15908,115.68062,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-6.8
+wwmsp2sg_GardenIslandDepthTransectNorth,GardenIslandDepthTransectNorth,Garden Island Depth Transect - North,Garden Island Depth Transect - North,-1,-1,-32.1589637,115.6808622,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,
+wwmsp2sg_GardenIslandDepthTransectSouth,GardenIslandDepthTransectSouth,Garden Island Depth Transect - South,Garden Island Depth Transect - South,-1,-1,-32.20289502,115.687114,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,
+wwmsp2sg_GardenIslandSettlement,GardenIslandSettlement,Garden Island Settlement,Garden Island Settlement,-1,-1,-32.21313,115.68872,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-1.2
+wwmsp2sg_GreenIsland,GreenIsland,Green Island,Green Island,-1,-1,-30.68093,115.10975,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-5.4
+wwmsp2sg_HillarysChannel,HillarysChannel,Hillarys Channel,Hillarys Channel,-1,-1,-31.822617,115.721312,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-5.9
+wwmsp2sg_JervoiseBay,JervoiseBay,Jervoise Bay,Jervoise Bay,-1,-1,-32.1723,115.77004,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-4.5
+wwmsp2sg_JurienImpactSite2.5,JurienImpactSite2.5,Jurien Impact Site 2.5,Jurien Impact Site 2.5,-1,-1,-30.33013,115.03149,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.9
+wwmsp2sg_KangarooPoint,KangarooPoint,Kangaroo Point,Kangaroo Point,-1,-1,-30.58201,115.08563,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4
+wwmsp2sg_Kwinana,Kwinana,Kwinana,Kwinana,-1,-1,-32.19181,115.74355,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-5.2
+wwmsp2sg_LuscombeBay,LuscombeBay,Luscombe Bay,Luscombe Bay,-1,-1,-32.16672,115.67521,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-1.5
+wwmsp2sg_ManglesBay,ManglesBay,Mangles Bay,Mangles Bay,-1,-1,-32.27244,115.71357,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-3.4
+wwmsp2sg_ManglesBayDepth,ManglesBayDepth,Mangles Bay Depth,Mangles Bay Depth,-1,-1,,,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,
+wwmsp2sg_MerseyPoint,MerseyPoint,Mersey Point,Mersey Point,-1,-1,-32.31039,115.70226,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-2.2
+wwmsp2sg_MS1,MS1,MS 1,MS 1,-1,-1,-33.60164098,115.136821,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-10.3
+wwmsp2sg_MS2,MS2,MS 2,MS 2,-1,-1,-33.62425997,115.203746,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-8.3
+wwmsp2sg_MS3,MS3,MS 3,MS 3,-1,-1,-33.62756697,115.295172,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-9.7
+wwmsp2sg_MS4,MS4,MS 4,MS 4,-1,-1,-33.57941201,115.41239,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-10.3
+wwmsp2sg_MS6,MS6,MS 6,MS 6,-1,-1,-33.60354099,115.360377,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-10.4
+wwmsp2sg_Mullaloo,Mullaloo,Mullaloo,Mullaloo,-1,-1,-31.781429,115.725362,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-10.3
+wwmsp2sg_NorthBeach,NorthBeach,North Beach,North Beach,-1,-1,-31.841652,115.735461,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-8.9
+wwmsp2sg_OceanReefInner,OceanReefInner,Ocean Reef Inner,Ocean Reef Inner,-1,-1,-31.761218,115.723089,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,
+wwmsp2sg_OceanReefOuter,OceanReefOuter,Ocean Reef Outer,Ocean Reef Outer,-1,-1,-31.774018,115.717537,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-8.9
+wwmsp2sg_OS1,OS1,OS 1,OS 1,-1,-1,-33.59011201,115.150849,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-18
+wwmsp2sg_OS2,OS2,OS 2,OS 2,-1,-1,-33.597905,115.211634,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-16.2
+wwmsp2sg_OS3,OS3,OS 3,OS 3,-1,-1,-33.594655,115.291166,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-16.4
+wwmsp2sg_OS4,OS4,OS 4,OS 4,-1,-1,-33.54436702,115.369983,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-16.1
+wwmsp2sg_OS6,OS6,OS 6,OS 6,-1,-1,-33.56837598,115.333367,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-16.3
+wwmsp2sg_PenguinIsland,PenguinIsland,Penguin Island,Penguin Island,-1,-1,-32.30144997,115.69378,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-2.9
+wwmsp2sg_PortGeographe,PortGeographe,Port Geographe,Port Geographe,-1,-1,-33.62846,115.3824,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.7
+wwmsp2sg_PortKennedy,PortKennedy,Port Kennedy,Port Kennedy,-1,-1,-32.36452304,115.726798,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-1.6
+wwmsp2sg_SealIsland,SealIsland,Seal Island,Seal Island,-1,-1,-32.29040002,115.695982,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4.1
+wwmsp2sg_Sorrento,Sorrento,Sorrento,Sorrento,-1,-1,-31.8298,115.740788,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-7.3
+wwmsp2sg_SouthernFlats,SouthernFlats,Southern Flats,Southern Flats,-1,-1,-32.24142,115.70671,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-2.1
+wwmsp2sg_SouthernFlatsDepth,SouthernFlatsDepth,Southern Flats Depth,Southern Flats Depth,-1,-1,,,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,
+wwmsp2sg_VasseDiversion,VasseDiversion,Vasse Diversion,Vasse Diversion,-1,-1,-33.64746,115.32379,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.9
+wwmsp2sg_Vasse-Wonnerup,Vasse-Wonnerup,Vasse-Wonnerup,Vasse-Wonnerup,-1,-1,-33.60188,115.42345,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-4.9
+wwmsp2sg_WarnbroSound2.0m,WarnbroSound2.0m,Warnbro Sound 2.0m,Warnbro Sound 2.0m,-1,-1,-32.3144,115.71409,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-2.1
+wwmsp2sg_WarnbroSound2.5m,WarnbroSound2.5m,Warnbro Sound 2.5m,Warnbro Sound 2.5m,-1,-1,-32.31476,115.71415,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-2.4
+wwmsp2sg_WarnbroSound3.2m,WarnbroSound3.2m,Warnbro Sound 3.2m,Warnbro Sound 3.2m,-1,-1,-32.3149,115.71425,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-3.1
+wwmsp2sg_WarnbroSound5.2m,WarnbroSound5.2m,Warnbro Sound 5.2m,Warnbro Sound 5.2m,-1,-1,-32.3162,115.71393,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-6
+wwmsp2sg_WarnbroSound7.0m,WarnbroSound7.0m,Warnbro Sound 7.0m,Warnbro Sound 7.0m,-1,-1,-32.31639,115.71428,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-11.8
+wwmsp2sg_WarnbroSoundDepthTransect,WarnbroSoundDepthTransect,Warnbro Sound Depth Transect,Warnbro Sound Depth Transect,-1,-1,-32.34505516,115.7427312,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,
+wwmsp2sg_WoodmanPoint,WoodmanPoint,Woodman Point,Woodman Point,-1,-1,-32.12859,115.73774,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,-3.8
+wwmsp2sg_WoodmanPointDepthTransect,WoodmanPointDepthTransect,Woodman Point Depth Transect,Woodman Point Depth Transect,-1,-1,-32.13707106,115.7187491,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,1,WWMSP2.2 SG,
+wwmsp2sg_WreckRock,WreckRock,Wreck Rock,Wreck Rock,-1,-1,-31.803238,115.718603,WWMSP,WAMSI Westport Marine Science Program,ECO_benthic,Seagrass & Macroalgae,,0,WWMSP2.2 SG,-5.7
