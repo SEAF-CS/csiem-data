@@ -8,6 +8,8 @@ sitekey.dwer = read_site_sheet('DWER');
 sitekey.dwermooring = read_site_sheet('DWERMOORING');
 sitekey.wc = read_site_sheet('WC');
 sitekey.wwmsp5 = read_site_sheet('WWMSP5');
+sitekey.wwmsp2 = read_site_sheet('WWMSP2');
+
 sitekey.dpird = read_site_sheet('DPIRD');
 
 sitekey.dot = read_site_sheet('DOT');
