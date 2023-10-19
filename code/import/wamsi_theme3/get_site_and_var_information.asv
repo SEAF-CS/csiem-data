@@ -1,0 +1,7 @@
+clear all; close all;
+
+data = readtable('wwmsp_theme3.1_CTD_reformat_bbusch_working.csv');
+
+sites = data.Site;
+sites = regexprep(sites,'site','');
+sites = regexprep(sites,'OA1_DEP','OA1_DEP

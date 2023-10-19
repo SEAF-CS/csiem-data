@@ -131,6 +131,12 @@ for i = 1:length(sites)
                     fprintf(fid,'Vertical Datum, \n');
                     fprintf(fid,'National Station ID,%s\n',num2str(sitekey.bom.(thesites{foundsite}).ID));
                     fprintf(fid,'Site Description,%s\n',sitekey.bom.(thesites{foundsite}).Description);
+                    fprintf(fid,'Deployment,%s\n','Fixed');
+                    fprintf(fid,'Deployment Position,%s\n','2m from Ground');
+                    fprintf(fid,'Vertical Reference,%s\n','m from Ground');
+                    fprintf(fid,'Site Mean Depth,%s\n','');
+                    
+                    
                     fprintf(fid,'Mount Description,%s\n','Fixed +2m Above Ground');
                     fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
                     fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
@@ -150,7 +156,7 @@ for i = 1:length(sites)
                     fprintf(fid,'QC,String\n');
                     
                     fclose(fid);
-                    %plot_datafile(filename);
+                    plot_datafile(filename);
                 end
             end
             

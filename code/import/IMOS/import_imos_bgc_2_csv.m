@@ -80,6 +80,10 @@ for i = 9:length(headers)
             
             thedepth = Depths(sss(ttt));
             thedate = mdates(sss(ttt));
+%             [thedate,timeind] = unique(thedates);
+%             thedepth = thedepth(timeind);
+%             thedata = thedata(timeind);
+            
             QC = 'N';
             
             
@@ -89,7 +93,7 @@ for i = 9:length(headers)
             fid = fopen(filename,'wt');
             fprintf(fid,'Date,Depth,Data,QC\n');
             for nn = 1:length(thedata)
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(thedate(nn),'dd-mm-yyyy HH:MM:SS'),thedepth(nn),thedata(nn),QC);
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth(nn),thedata(nn),QC);
             end
             fclose(fid);
             
@@ -112,7 +116,10 @@ for i = 9:length(headers)
             fprintf(fid,'Vertical Datum,mAHD\n');
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosbgc.(thesiteval{foundstation}).ID,'_BGC']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosbgc.(thesiteval{foundstation}).Description);
-            fprintf(fid,'Mount Description,%s\n','Profile');
+            fprintf(fid,'Deployment,%s\n','Profile');
+            fprintf(fid,'Deployment Position,%s\n','m from Surface');
+            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Site Mean Depth,%s\n','');
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
@@ -125,7 +132,7 @@ for i = 9:length(headers)
             
             fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
             
-            fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
+            fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
             fprintf(fid,'Depth,Decimal\n');
             
             thevar = [varkey.(thevarval{thefoundvar}).Name,' (',varkey.(thevarval{thefoundvar}).Unit,')'];

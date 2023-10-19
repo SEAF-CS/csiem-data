@@ -2,6 +2,8 @@ function import_site_key
 
 
 sitekey.imosbgc = read_site_sheet('IMOSBGC');
+sitekey.imosamnm = read_site_sheet('IMOSAMNM');
+
 sitekey.mafrl = read_site_sheet('MAFRL');
 sitekey.bom = read_site_sheet('BOM');
 sitekey.dwer = read_site_sheet('DWER');
@@ -9,6 +11,7 @@ sitekey.dwermooring = read_site_sheet('DWERMOORING');
 sitekey.wc = read_site_sheet('WC');
 sitekey.wwmsp5 = read_site_sheet('WWMSP5');
 sitekey.wwmsp2 = read_site_sheet('WWMSP2');
+sitekey.wwmsp3 = read_site_sheet('THEME3CTD');
 
 sitekey.dpird = read_site_sheet('DPIRD');
 

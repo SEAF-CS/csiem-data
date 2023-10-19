@@ -193,8 +193,8 @@ for i = 1:length(filelist)
                         
                         fid = fopen(fullfile,'wt');
                         fprintf(fid,'Date,%s,Data,QC\n',theheader);
-                        for nn = 1:length(pdata_int)
-                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(hourly(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_int(nn),pdata_int(nn));
+                        for nn = 1:length(pdate_u)
+                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(pdate_u(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_u(nn),pdata_u(nn));
                         end
                         fclose(fid);
                         

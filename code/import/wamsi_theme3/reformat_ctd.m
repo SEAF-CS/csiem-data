@@ -12,7 +12,7 @@ filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 fid = fopen('wwmsp_theme3.1_CTD_reformat_bbusch_working.csv','wt');
 
-fprintf(fid,'Date,X,Y,Depth (m),Height (mAHD),SampleID,Variable,Units,ReadingValue,VariableName,VariableType,VariableNameQualifier,AnalysisMethodCode,MeasurementInstrument,StandardUnits,LimitOfReporting,QualityCode,Filename,Weather Conditions,Observations\n');
+fprintf(fid,'Date,X,Y,Depth (m),Height (mAHD),Site,SampleID,Variable,Units,ReadingValue,VariableName,VariableType,VariableNameQualifier,AnalysisMethodCode,MeasurementInstrument,StandardUnits,LimitOfReporting,QualityCode,Filename,Weather Conditions,Observations\n');
 
 for i = 1:length(filelist)
     
@@ -60,6 +60,8 @@ for i = 1:length(filelist)
             
             sampleID = [datestr(thedate,'ddmmyyyy'),'_',ID];
             
+            thesite = ['site',ID];
+            
             thedepth = data.Var2(j);
             theheight = data.Var3(j);
             theweather = ['"',data.Var17{1},'"'];
@@ -79,8 +81,8 @@ for i = 1:length(filelist)
                     
                     if isnumeric(thedata)
                         if ~isnan(thedata)
-                            fprintf(fid,'%s,%s,%s,%6.6f,%6.6f,%s,%s,%s,%6.6f,%s,%s,,Direct reading,Sea-Bird SBE19plus (sn01906585),%s,,Excellent,%s,%s,%s\n',...
-                                datestr(thedate,'dd-mm-yyyy HH:MM:SS'),X,Y,thedepth,theheight,sampleID,[trans{k-3,2},' | (',trans{k-3,3},')'],trans{k-3,3},thedata,trans{k-3,2},trans{k-3,5},trans{k-3,3},filelist(i).name,theweather,theobs);
+                            fprintf(fid,'%s,%s,%s,%6.6f,%6.6f,%s,%s,%s,%s,%6.6f,%s,%s,,Direct reading,Sea-Bird SBE19plus (sn01906585),%s,,Excellent,%s,%s,%s\n',...
+                                datestr(thedate,'dd-mm-yyyy HH:MM:SS'),X,Y,thedepth,theheight,thesite,sampleID,[trans{k-3,2},' | (',trans{k-3,3},')'],trans{k-3,3},thedata,trans{k-3,2},trans{k-3,5},trans{k-3,3},filelist(i).name,theweather,theobs);
                             
                         end
                     else
