@@ -70,7 +70,7 @@ for i = 1:length(filelist)
         sitecode = [agency,'_',program,'_',header.Station_ID];
         sitecode = regexprep(sitecode,'\.','');
         sitecode = [sitecode,'_',header.Deployment,'_',num2str(i)];
-        
+        sitecode = regexprep(sitecode,'-','_');
         %sitecode = [agency,'_',num2str(randi(10000,1))];
         %sitecode = [agency,'_',num2str(i)];
         tfv_name = varkey.(header.Variable_ID).tfvName;
