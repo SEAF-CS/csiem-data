@@ -61,7 +61,7 @@ for i = 1:length(filelist)
         smd = import_header_smd(regexprep(headerfile,'HEADER','SMD'));
         header.calc_SMD = smd.calc_SMD;
         header.mAHD = smd.mAHD;
-        
+        header.Data_File_Name = regexprep(filelist(i).name,'HEADER','DATA');
         program = regexprep(header.Program_Code,'-','_');
 
         agency = header.Agency_Code;
@@ -91,7 +91,7 @@ for i = 1:length(filelist)
             QC_CODE = s{mode(j)};
             
             if isfield(cockburn,sitecode)
-                
+                stop
                 if ~isfield(cockburn.(sitecode),tfv_name)
                     
                     
