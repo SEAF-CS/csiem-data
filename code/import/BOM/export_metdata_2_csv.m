@@ -105,7 +105,7 @@ for i = 1:length(sites)
                     fprintf(fid,'Date,Height,Data,QC\n');
                     
                     for k = 1:length(mdate)
-                        fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'yyyy-mm-dd HH:MM:SS'),' ',mdata(k),QC{k});
+                        fprintf(fid,'%s,%s,%8.5f,%s\n',datestr(mdate(k),'yyyy-mm-dd HH:MM:SS'),'2',mdata(k),QC{k});
                     end
                     fclose(fid);
                     
