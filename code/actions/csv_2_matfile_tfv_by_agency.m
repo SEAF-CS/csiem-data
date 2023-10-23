@@ -20,7 +20,7 @@ unique_agency = unique(agency);
 
 inc = 1;
 
-for ag = 3:length(unique_agency)
+for ag = 5:length(unique_agency)
 
     find_agency = find(strcmpi(agency,unique_agency(ag)) == 1);
 
@@ -118,7 +118,7 @@ for ag = 3:length(unique_agency)
 
                     end
                 case 'Floating'
-                    if isum(ismember(tt2.Properties.VariableNames,'Height'))
+                    if sum(ismember(tt2.Properties.VariableNames,'Height'))
                         thedata = [];
                         for k = 1:length(tt2.Height)
                             thedata(k,1) = str2double(tt2.Height{k});
@@ -178,7 +178,7 @@ for ag = 3:length(unique_agency)
         if MB > 1700
             save([outfilepath,unique_agency{ag},'.mat'],'cockburn','-mat','-v7.3');
         else
-            save([outfilepath,unique_agency{ag},'.mat'],'cockburn','-mat','-v7.3');
+            save([outfilepath,unique_agency{ag},'.mat'],'cockburn','-mat');
         end
     end
     clear cockburn
