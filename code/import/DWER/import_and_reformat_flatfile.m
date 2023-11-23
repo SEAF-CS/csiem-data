@@ -1,7 +1,12 @@
-clear all; close all;
+function  import_and_reformat_flatfile%  clear all; close all;
+indir = 'D:\csiem/data-warehouse/csv_holding/dwer/swanest/';
 
-data = readtable('WIR_FLATFILE_ALL_DATA.csv');
 
+opts = detectImportOptions([indir,'WIR_FLATFILE_ALL_DATA.csv']);
+opts = setvartype(opts, 'Depth', 'string');
+
+data = readtable([indir,'WIR_FLATFILE_ALL_DATA.csv'],opts);
+data.Depth = fillmissing(data.Depth,'constant'," ");
 addpath(genpath('../../functions'));
 
 
@@ -41,7 +46,7 @@ for i = 1:length(sites)
                 
                 uproj = unique(data.ProgramCode(sss));
                 
-                outdir = [outputdir,uproj{1},'/'];
+                outdir = [outputdir,lower(uproj{1}),'/'];
                 if ~exist(outdir,'dir')
                     mkdir(outdir);
                 end
@@ -52,7 +57,7 @@ for i = 1:length(sites)
                 uLat = unique(data.Lat(sss));
                 uVarID = unique(data.VarID(sss));
                 uVarFull = unique(data.VarFull(sss));
-                
+                uVarCat = unique(data.DataCategory(sss));
                 filename = [outdir,usite{1},'_',regexprep(uvar{1},' ','_'),'_',udep{1},'_DATA.csv'];
                     
                 upos = unique(data.DeploymentPosition(sss));
@@ -116,7 +121,7 @@ for i = 1:length(sites)
                 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                 fprintf(fid,'Contact Email,wir@water.wa.gov.au\n');
                 fprintf(fid,'Variable ID,%s\n',uVarID{1});
-
+                fprintf(fid,'Data Category,%s\n',uVarCat{1});
                 
                 fprintf(fid,'Sampling Rate (min), \n');
                 
@@ -130,7 +135,7 @@ for i = 1:length(sites)
                 
                 fclose(fid);
                 
-                plot_datafile(filename);
+                %plot_datafile(filename);
                 
                 
                 

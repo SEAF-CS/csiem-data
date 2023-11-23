@@ -1,4 +1,4 @@
-clear all; close all;
+function reformat_ctd
 
 addpath(genpath('../../functions/'));
 
@@ -9,8 +9,9 @@ filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 [conv,trans] = xlsread('translation.xlsx','A2:E100');
 
+outdir = 'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
 
-fid = fopen('wwmsp_theme3.1_CTD_reformat_bbusch_working.csv','wt');
+fid = fopen([outdir,'wwmsp_theme3.1_CTD_reformat_bbusch_working.csv'],'wt');
 
 fprintf(fid,'Date,X,Y,Depth (m),Height (mAHD),Site,SampleID,Variable,Units,ReadingValue,VariableName,VariableType,VariableNameQualifier,AnalysisMethodCode,MeasurementInstrument,StandardUnits,LimitOfReporting,QualityCode,Filename,Weather Conditions,Observations\n');
 

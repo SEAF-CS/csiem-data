@@ -41,7 +41,7 @@ for i = 1:2:length(varargin)
             
             matfile = varargin{i+1};
             
-            fieldname = regexprep(matfile,'.mat','');
+%             fieldname = regexprep(matfile,'.mat','');
             
             append = 1;
             
@@ -49,14 +49,16 @@ for i = 1:2:length(varargin)
         case 'Create'
             matfile = varargin{i+1};
             
-            fieldname = regexprep(matfile,'.mat','');
+%             fieldname = regexprep(matfile,'.mat','');
+%             
+%             eval([fieldname '= [];']);
             
-            eval([fieldname '= [];']);
-            
-            save(matfile,fieldname,'-mat','-v7.3');
+            %save(matfile,fieldname,'-mat');
             
             append = 0;
-            
+        case 'fieldname'
+            fieldname = varargin{i+1};
+            eval([fieldname '= [];']);
             
         case 'Row'
             
@@ -93,7 +95,7 @@ if rmsite
     
     disp(['Removing site: ',rm_sitename,' from Matfile']);
     
-    save(matfile,fieldname,'-mat','-v7.3');
+    save(matfile,fieldname,'-mat');
     
     disp(['Updated Matfile save... Processing new data']);
 end
@@ -137,7 +139,7 @@ else
     
     eval([fieldname '= proc']);
     
-    save(matfile,fieldname,'-mat','-v7.3');
+    save(matfile,fieldname,'-mat');
     
 end
 
@@ -861,7 +863,7 @@ for i = 1:length(sites)
 end
 
 eval([fieldname,' = proc;']);
-save(matfile,fieldname,'-mat','-v7.3');
+save(matfile,fieldname,'-mat');
 end
 
 function remove_NAN_matfile(matfile)
@@ -905,7 +907,7 @@ for i = 1:length(sites)
     end
 end
 
-save(matfile,fname,'-mat','-v7.3');
+save(matfile,fname,'-mat');
 end
 
 function summerise_sites(matfile)

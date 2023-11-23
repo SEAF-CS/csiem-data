@@ -1,7 +1,7 @@
-clear all; close all;
+function export_metdata_2_csv
 addpath(genpath('../../functions/'));
 
-load metdata.mat;
+load D:\csiem/data-warehouse/csv_holding/bom/idy/metdata.mat;
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
@@ -141,7 +141,7 @@ for i = 1:length(sites)
                     fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
                     fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
                     fprintf(fid,'Variable ID,%s\n',agency.bom.(thevars{foundvar}).ID);
-                    fprintf(fid,'Data Classification,MET General\n');
+                    fprintf(fid,'Data Category,%s\n',varkey.(agency.bom.(thevars{foundvar}).ID).Category);
                     
                     SD = mean(diff(mdate));
                     
@@ -156,7 +156,7 @@ for i = 1:length(sites)
                     fprintf(fid,'QC,String\n');
                     
                     fclose(fid);
-                    plot_datafile(filename);
+                    %plot_datafile(filename);
                 end
             end
             

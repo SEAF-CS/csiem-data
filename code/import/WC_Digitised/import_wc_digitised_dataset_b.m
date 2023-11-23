@@ -1,4 +1,4 @@
-clear all; close all;
+function import_wc_digitised_dataset_b
 addpath(genpath('../../functions/'));
 
 load ../../actions/sitekey.mat

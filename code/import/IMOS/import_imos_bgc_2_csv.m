@@ -1,4 +1,4 @@
-clear all; close all;
+function import_imos_bgc_2_csv
 
 addpath(genpath('../../functions/'));
 
@@ -125,7 +125,7 @@ for i = 9:length(headers)
             fprintf(fid,'Contact Email,\n');
             fprintf(fid,'Variable ID,%s\n',agency.imosbgc.(theagencyval{foundvar}).ID);
             
-            fprintf(fid,'Data Classification,WQ Grab\n');
+            fprintf(fid,'Data Category,%s\n',varkey.(thevarval{thefoundvar}).Category);
             
             
             SD = mean(diff(thedate));
@@ -141,7 +141,7 @@ for i = 9:length(headers)
             fprintf(fid,'QC,String\n');
             
             fclose(fid);
-            plot_datafile(filename);
+            %plot_datafile(filename);
 
             end
             

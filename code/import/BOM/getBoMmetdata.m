@@ -10,6 +10,8 @@ addpath(genpath('Headers'));
 addpath(genpath('Functions'));
 
 
+indir = 'D:\csiem/data-warehouse/csv_holding/bom/idy/';mkdir(indir);
+
 run(header_file);
 
 dirlist = dir(sMetDir);
@@ -64,4 +66,4 @@ for iMet = 3:length(dirlist)
     metdata.(name) = mdata.(name);
 end
 
-save metdata.mat metdata -mat -v7.3
+save([indir,'metdata.mat'],'metdata','-mat','-v7.3');

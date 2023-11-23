@@ -1,4 +1,4 @@
-clear all; close all;
+function merge_files
 
 addpath(genpath('../../functions/'));
 
@@ -56,5 +56,5 @@ filelist = dir(fullfile(outpath, '**\*_DATA.csv'));  %get list of files and fold
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)
-    plot_datafile([outpath,filelist(i).name]);
+    %plot_datafile([outpath,filelist(i).name]);
 end

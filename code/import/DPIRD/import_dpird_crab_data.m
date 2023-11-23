@@ -1,7 +1,8 @@
-clear all; close all;
+function import_dpird_crab_data
 
 addpath(genpath('../../functions/'));
 
+load ../../../code/actions/varkey.mat;
 
 load ../../../code/actions/sitekey.mat;
 
@@ -61,7 +62,7 @@ for i = 1:length(sites)
         fprintf(fid,'Contact Email,\n');
         fprintf(fid,'Variable ID,%s\n','var00007');
 
-        fprintf(fid,'Data Classification,WQ Grab\n');
+        fprintf(fid,'Data Category,%s\n',varkey.var00007.Category);
 
 
         SD = mean(diff(thedates));
@@ -78,7 +79,7 @@ for i = 1:length(sites)
 
         fclose(fid);
 
-        plot_datafile(filename);
+        %plot_datafile(filename);
             
         end
     end

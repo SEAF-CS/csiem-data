@@ -2,6 +2,8 @@ function write_files(mdata_all,ddata_all,data_all,filename_all,AgencyName,Agency
 
 % Surface
 
+load ../../actions/varkey.mat;
+
 filename = [filename_all,'_surface'];
 
 sts = find(ddata_all < 5);
@@ -41,7 +43,7 @@ fprintf(fid,'Site Mean Depth,%s\n',[]);
 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
 fprintf(fid,'Contact Email,\n');
 fprintf(fid,'Variable ID,var00023\n');
-fprintf(fid,'Data Classification,WQ Grab\n');
+fprintf(fid,'Data Category,%s\n',varkey.var00023.Category);
 fprintf(fid,'Sampling Rate (min),10080.0000\n');
 fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
 fprintf(fid,'Depth,Decimal\n');
@@ -60,7 +62,7 @@ for i = 1:length(mdata)
     fprintf(fid,'%s,%4.4f,%5.5f,N\n',datestr(mdata(i),'yyyy-mm-dd HH:MM:SS'),wdepth(i),data(i));
 end
 fclose(fid);
-plot_datafile(datafile);
+%plot_datafile(datafile);
 end
 
 % Bottom
@@ -105,7 +107,7 @@ fprintf(fid,'Site Mean Depth,%s\n',[]);
 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
 fprintf(fid,'Contact Email,\n');
 fprintf(fid,'Variable ID,var00023\n');
-fprintf(fid,'Data Classification,WQ Grab\n');
+fprintf(fid,'Data Category,%s\n',varkey.var00023.Category);
 fprintf(fid,'Sampling Rate (min),10080.0000\n');
 fprintf(fid,'Date,dd-mm-yyyy HH:MM:SS\n');
 fprintf(fid,'Depth,Decimal\n');

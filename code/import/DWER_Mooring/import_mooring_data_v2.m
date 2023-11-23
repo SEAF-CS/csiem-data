@@ -1,4 +1,4 @@
-clear all; close all;
+function import_mooring_data_v2
 addpath(genpath('../../functions/'));
 
 filepath = 'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
@@ -136,7 +136,14 @@ for i = 1:length(filelist)
         varID = agency.dwermooring.(varlist{foundvar}).ID;
         thedata = thedata .* agency.dwermooring.(varlist{foundvar}).Conv;
 
+        
+        if strcmpi(varID,'var00323') == 1 & i ~= 9
+                varID = 'var00322';
+                disp('switching to bottom par');
+        end
 
+
+        
 
         [X,Y] = ll2utm   (sitekey.dwermooring.(sitelist{foundsite}).Lat,sitekey.dwermooring.(sitelist{foundsite}).Lon,-50);
 
@@ -189,7 +196,7 @@ for i = 1:length(filelist)
         fprintf(fid,'Contact Email,\n');
         fprintf(fid,'Variable ID,%s\n',agency.dwermooring.(varlist{foundvar}).ID);
 
-        fprintf(fid,'Data Classification,WQ Grab\n');
+        fprintf(fid,'Data Category,%s\n',varkey.(varID).Category);
 
 
         SD = mean(diff(mdate));
@@ -206,7 +213,7 @@ for i = 1:length(filelist)
 
         fclose(fid);
 
-        plot_datafile(filename);
+        %plot_datafile(filename);
 
 
 

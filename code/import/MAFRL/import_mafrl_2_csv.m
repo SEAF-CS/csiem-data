@@ -1,4 +1,6 @@
-clear all; close all;
+function import_mafrl_2_csv
+%clear all; close all;
+
 
 addpath(genpath('../../functions/'));
 
@@ -177,7 +179,7 @@ for i = 1:length(theyears)
                     fprintf(fid,'Contact Email,\n');
                     fprintf(fid,'Variable ID,%s\n',agency.mafrl.(theagencyval{foundagency}).ID);
                     
-                    fprintf(fid,'Data Classification,WQ Grab\n');
+                    fprintf(fid,'Data Category,%s\n',varkey.(thevarval{thefoundvar}).Category);
                     
                     
                     SD = mean(diff(thedate));

@@ -12,6 +12,7 @@ sitekey.wc = read_site_sheet('WC');
 sitekey.wwmsp5 = read_site_sheet('WWMSP5');
 sitekey.wwmsp2 = read_site_sheet('WWMSP2');
 sitekey.wwmsp3 = read_site_sheet('THEME3CTD');
+sitekey.fpamqmp = read_site_sheet('FPA-MQMP');
 
 sitekey.dpird = read_site_sheet('DPIRD');
 

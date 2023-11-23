@@ -2,7 +2,7 @@ clear all; close all;
 
 filename = '../../data-governance/variable_key.xlsx';
 
-[snum,sstr] = xlsread(filename,'MASTER KEY','A2:J10000');
+[snum,sstr] = xlsread(filename,'MASTER KEY','A2:K10000');
 
 st = length(sstr) + 1;
 
@@ -22,6 +22,7 @@ varProg = sstr(:,6);
 varSH = sstr(:,7);
 varCF = sstr(:,8);
 varCF_Unit = sstr(:,9);
+varCategory = sstr(:,11);
 for i = 1:length(varSymbol)
     if isempty(varSymbol{i})
         varSymbol(i) = varUnit(i);
@@ -47,15 +48,15 @@ for i = 1:length(varID)
     varkey.(varID{i}).CF = varCF{i};
     varkey.(varID{i}).CFUnit = varCF_Unit{i};
     varkey.(varID{i}).CFConv = varCFConv(i);
-    
+    varkey.(varID{i}).Category = varCategory{i};
     sss = find(strcmpi(tfvID,varID{i}) == 1);
     if ~isempty(sss)
         varkey.(varID{i}).tfvName = tfvName{sss};
         varkey.(varID{i}).tfvUnits = tfvUnits{sss};
         varkey.(varID{i}).tfvConv = tfvConv(sss);
     else
-        varkey.(varID{i}).tfvName = '';
-        varkey.(varID{i}).tfvUnits = '';
+        varkey.(varID{i}).tfvName = 'N/A';
+        varkey.(varID{i}).tfvUnits = 'N/A';
         varkey.(varID{i}).tfvConv = NaN;
     end
 end
@@ -76,6 +77,8 @@ agency.dwermooring = import_agency_conv('DWERMOORING');
 agency.mafrl = import_agency_conv('MAFRL');
 agency.imosbgc = import_agency_conv('IMOSBGC');
 agency.imosprofile = import_agency_conv('IMOSPROFILE');
+agency.fpamqmp = import_agency_conv('FPA-MQMP');
+
 
 save agency.mat agency -mat;
 

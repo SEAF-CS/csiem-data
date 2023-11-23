@@ -10,7 +10,7 @@ Mount = [];
 while ~feof(fid)
     fline = fgetl(fid);
     sline = split(fline,',');
-    
+    %sline
     switch sline{1}
         case 'Agency Name'
             data.Agency_Name = sline{2};
@@ -94,6 +94,8 @@ while ~feof(fid)
         case 'QC'
             data.QC_Code = sline{2};
             
+        case 'Data Category'
+            data.DataCategory = sline{2};           
         otherwise
             disp('Header not found');
             stop;

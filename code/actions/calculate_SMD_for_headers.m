@@ -1,4 +1,4 @@
-clear all; close all;
+function calculate_SMD_for_headers;
 
 addpath(genpath('../functions/'));
 

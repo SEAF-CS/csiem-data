@@ -1,12 +1,12 @@
-clear all; close all;
+function csv_2_matfile_tfv_by_agency
 
 addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfilepath = 'D:/csiem/data-warehouse/mat/agency/';
+outfilepath = 'D:/csiem/data-warehouse/mat/agency/';mkdir(outfilepath);
 filepath ='D:/csiem/data-warehouse/csv/';
-
+mergepath = 'D:/csiem/data-warehouse/mat/';
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
@@ -30,7 +30,9 @@ for ag = 1:length(unique_agency)
     for ff = 1:length(find_agency)
 
         disp(filelist(find_agency(ff)).name);
-
+        
+        
+        
         headerfile = [filelist(find_agency(ff)).folder,'\',filelist(find_agency(ff)).name];
         datafile = regexprep(headerfile,'HEADER','DATA');
 
@@ -69,7 +71,11 @@ for ag = 1:length(unique_agency)
             % Downshift the data to hourly if required.
             dt = mean(diff(tab.Date));
             if datenum(dt) < 1/24
-                tt2 = timetable2table(retime(table2timetable(tab),'hourly','nearest'));
+                if strcmpi(header.Deployment,'Profile') == 0
+                    tt2 = timetable2table(retime(table2timetable(tab),'hourly','nearest'));
+                else
+                    tt2 = tab;
+                end
                 disp('Finished Downsample');
             else
                 tt2 = tab;
@@ -95,7 +101,7 @@ for ag = 1:length(unique_agency)
             switch Deployment
 
                 case 'Integrated'
-                    csiem.(sitecode).(tfv_name).mDepth = tt2.Depth;
+                    csiem.(sitecode).(tfv_name).Depth = tt2.Depth;
                 case 'Fixed'
 
                     if sum(ismember(tt2.Properties.VariableNames,'Height'))
@@ -106,13 +112,13 @@ for ag = 1:length(unique_agency)
                         for k = 1:length(tt2.Height)
                             thedata(k,1) = str2double(tt2.Height{k});
                         end
-                        csiem.(sitecode).(tfv_name).mDepth = (str2double(header.calc_SMD) - thedata) .* -1;
+                        csiem.(sitecode).(tfv_name).Depth = (str2double(header.calc_SMD) - thedata) .* -1;
 
 
                     else
 
                         for k = 1:length(tt2.Depth)
-                            csiem.(sitecode).(tfv_name).mDepth(k,1) = str2double(tt2.Depth{k}) * -1;
+                            csiem.(sitecode).(tfv_name).Depth(k,1) = str2double(tt2.Depth{k}) * -1;
                         end
 
 
@@ -126,13 +132,13 @@ for ag = 1:length(unique_agency)
 
 
 
-                        csiem.(sitecode).(tfv_name).mDepth = (thedata) .* -1;
+                        csiem.(sitecode).(tfv_name).Depth = (thedata) .* -1;
 
 
                     else
 
                         for k = 1:length(tt2.Depth)
-                            csiem.(sitecode).(tfv_name).mDepth(k,1) = str2double(tt2.Depth{k}) * -1;
+                            csiem.(sitecode).(tfv_name).Depth(k,1) = str2double(tt2.Depth{k}) * -1;
                         end
 
 
@@ -140,7 +146,7 @@ for ag = 1:length(unique_agency)
 
                 case 'Profile'
                     for k = 1:length(tt2.Depth)
-                        csiem.(sitecode).(tfv_name).mDepth(k,1) = str2double(tt2.Depth{k}) * -1;
+                        csiem.(sitecode).(tfv_name).Depth(k,1) = str2double(tt2.Depth{k}) * -1;
                     end
                 otherwise
 
@@ -184,3 +190,19 @@ for ag = 1:length(unique_agency)
     clear csiem
 end
 
+filelist = dir(fullfile(outfilepath, '**\*.mat'));  %get list of files and folders in any subfolder
+filelist = filelist(~[filelist.isdir]);  %remove folders from list
+
+
+for i = 1:length(filelist)
+    disp(filelist(i).name);
+    matdata = load([filelist(i).folder,'/',filelist(i).name]);
+    sites = fieldnames(matdata.csiem);
+    for j = 1:length(sites)
+        csiem.(sites{j}) = matdata.csiem.(sites{j});
+    end
+    
+    clear matdata;
+end
+
+save([mergepath,'csiem.mat'],'csiem','-mat','-v7.3');

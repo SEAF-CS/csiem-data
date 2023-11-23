@@ -1,8 +1,11 @@
-clear all; close all;
+function import_netcdf_csv
 
-addpath(genpath('../../functions/'));
+%addpath(genpath('../../functions'));
 
-filepath = 'D:csiem/data-lake/wamsi/wwmsp5_wq/';
+basedir = 'D:csiem/data-lake/wamsi/wwmsp5_wq/';
+
+filelist = dir(fullfile(basedir, '**\*.nc'));  %get list of files and folders in any subfolder
+filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 adcpfilepath = 'D:\csiem\data-lake\WAMSI\wwmsp5_adcp\ADCP\';
 
@@ -13,8 +16,7 @@ mkdir(outdir);
 
 plotdir = 'images/';mkdir(plotdir);
 
-filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
-filelist = filelist(~[filelist.isdir]);  %remove folders from list
+
 
 % Conversion
 %[snum,sstr] = xlsread('Conversions_mh.xlsx','A2:D1000');
@@ -81,28 +83,28 @@ for i = 1:length(filelist)
         ss = find(strcmpi(adcp(:,1),filelist(i).name) == 1);
         
         if ~isempty(ss)
-        dataadcp = tfv_readnetcdf([adcpfilepath,adcp{ss,2}]);
-        
-        mtimeadcp = datenum(1950,01,01,00,00,00) + dataadcp.TIME;
-        
-        if isfield(dataadcp,'PRESSURE_SENSOR_DEPTH');
-            %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE_SENSOR_DEPTH,mtime);
+            dataadcp = tfv_readnetcdf([adcpfilepath,adcp{ss,2}]);
             
-            depthmean = mean(dataadcp.PRESSURE_SENSOR_DEPTH);
+            mtimeadcp = datenum(1950,01,01,00,00,00) + dataadcp.TIME;
             
-            depthmean = thedepth;
-            
-        else
-            %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE,mtime);
-            depthmean = mean(dataadcp.PRESSURE);
-            depthmean = thedepth;
-        end
-        data.DEPTH(1:length(mtime),1) = 0.3;%str2double(thedepth);
-        dont_export = 0;
+            if isfield(dataadcp,'PRESSURE_SENSOR_DEPTH');
+                %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE_SENSOR_DEPTH,mtime);
+                
+                depthmean = mean(dataadcp.PRESSURE_SENSOR_DEPTH);
+                
+                depthmean = thedepth;
+                
+            else
+                %data.DEPTH = interp1(mtimeadcp,dataadcp.PRESSURE,mtime);
+                depthmean = mean(dataadcp.PRESSURE);
+                depthmean = thedepth;
+            end
+            data.DEPTH(1:length(mtime),1) = 0.3;%str2double(thedepth);
+            dont_export = 0;
         else
             disp(['Broken ADCP: ' ,filelist(i).name]);
             
-           dont_export = 1; 
+            dont_export = 1;
         end
         
         deployment = 'Fixed';
@@ -139,9 +141,9 @@ for i = 1:length(filelist)
                 case 'CELL'
                     foundvar = 0 ;
                 case 'UCUR'
-                    foundvar = 0 ;                    
+                    foundvar = 0 ;
                 case 'VCUR'
-                    foundvar = 0 ; 
+                    foundvar = 0 ;
                 otherwise
             end
             
@@ -188,16 +190,26 @@ for i = 1:length(filelist)
                         
                         thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
                         datafile = regexprep(filelist(i).name,'.nc',thetxt);
-                        fullfile = [outdir,datafile];
-                        headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
+                        fullfile_1 = [outdir,datafile];
+                        headerfile = regexprep(fullfile_1,'DATA.csv','HEADER.csv');
+                        tic
+                        tab.Date = datestr(pdate_u,'yyyy-mm-dd HH:MM:SS');
+                        tab.Data = pdata_u;
+                        tab.(theheader) = pdepth_u;
+                        tab.QC(1:length(pdate_u),1) = 'n';
                         
-                        fid = fopen(fullfile,'wt');
-                        fprintf(fid,'Date,%s,Data,QC\n',theheader);
-                        for nn = 1:length(pdate_u)
-                            fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(pdate_u(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_u(nn),pdata_u(nn));
-                        end
-                        fclose(fid);
-                        
+                        tableout = struct2table(tab);
+                        writetable(tableout,fullfile_1);clear tab tableout;
+                        toc
+                        %                         tic
+                        %                         fid = fopen(fullfile,'wt');
+                        %                         fprintf(fid,'Date,%s,Data,QC\n',theheader);
+                        %                         for nn = 1:length(pdate_u)
+                        %                             fprintf(fid,'%s,%4.4f,%4.4f,n\n',datestr(pdate_u(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_u(nn),pdata_u(nn));
+                        %                         end
+                        %                         fclose(fid);
+                        %                         toc
+                        %                         stop
                         fid = fopen(headerfile,'wt');
                         fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
                         fprintf(fid,'Agency Code,WAMSI\n');
@@ -223,7 +235,7 @@ for i = 1:length(filelist)
                         fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
                         fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
                         
-                        fprintf(fid,'Data Classification,WQ Sensor\n');
+                        fprintf(fid,'Data Category,%s\n',varkey.(agency.theme5.(agencyvars{foundvar}).ID).Category);
                         
                         
                         SD = mean(diff(pdate));
@@ -239,7 +251,7 @@ for i = 1:length(filelist)
                         fprintf(fid,'QC,String\n');
                         
                         fclose(fid);
-                        plot_datafile(fullfile);
+                        %plot_datafile(fullfile);
                     end
                     
                 end
@@ -261,6 +273,8 @@ for i = 1:length(filelist)
     end
 end
 fclose(fiddepth);
+
+%end
 %             if ~isfield(theme5,site)
 %                 theme5.(site).(newheader{sss}).Date(:,1) = mtime;
 %                 theme5.(site).(newheader{sss}).Data(:,1) = data.(vars{j}) * conv(sss);

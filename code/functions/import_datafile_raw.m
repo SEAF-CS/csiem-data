@@ -23,7 +23,7 @@ else
     mHeight = datacell{2};
 end
 
-[data.Date,ind] = unique(mDate);
+[data.Date,ind] = sort(mDate);
 data.Data = mData(ind);
 data.QC = mQC(ind);
 if strcmpi(headers{2},'Depth')

@@ -1,7 +1,8 @@
-clear all; close all;
+function import_wc_digitised_dataset
 addpath(genpath('../../functions/'));
 
 load ../../actions/sitekey.mat
+load ../../actions/varkey.mat
 
 xlsname = 'D:\csiem\data-lake\WCWA\WC-BMT\Digitised_DO.xlsx';
 

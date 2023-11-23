@@ -1,29 +1,16 @@
-clear all; close all; fclose all;
-rdir = 'Cockburn/';
-
-
-if exist(rdir,'dir')
-    rmdir(rdir, 's');
-end
-
+function run_bom_import
+lakedir = 'D:\csiem\data-lake\BOM\idy\idy\';
 
 addpath(genpath('Functions'));
 
 header_file = 'cockburn_header.m';
 
-
-
-if ~exist(rdir,'dir')
-    mkdir(rdir);
-end
-
-unzip('V:/data-lake/bom/idy/idy.zip',rdir);
-
 % % % 
-getBoMmetdata(rdir,header_file);
+getBoMmetdata(lakedir,header_file);
 % 
+export_metdata_2_csv;
 
-if exist(rdir,'dir')
-    rmdir(rdir, 's');
-end
+% if exist(rdir,'dir')
+%     rmdir(rdir, 's');
+% end
 

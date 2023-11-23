@@ -1,4 +1,4 @@
-clear all; close all;
+function import_theme3ctd_data
 addpath(genpath('../../functions/'));
 
 
@@ -6,10 +6,10 @@ load ../../../code/actions/sitekey.mat;
 load ../../../code/actions/varkey.mat;
 load ../../../code/actions/agency.mat;
 
-outdir = 'D:\csiem\data-warehouse\csv\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
+outdir = 'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
 
 
-data = readtable('wwmsp_theme3.1_CTD_reformat_bbusch_working.csv');
+data = readtable([outdir,'wwmsp_theme3.1_CTD_reformat_bbusch_working.csv']);
 
 sites = data.Site;
 sites = regexprep(sites,'site','');
@@ -77,7 +77,7 @@ for i = 1:length(thevars)
             fprintf(fid,'Contact Email,%s\n','');
             fprintf(fid,'Variable ID,%s\n',agency.theme3ctd.(thevars{i}).ID);
             
-            fprintf(fid,'Data Classification,WQ Sensor\n');
+            fprintf(fid,'Data Category,%s\n',varkey.(agency.theme3ctd.(thevars{i}).ID).Category);
             
             
             SD = mean(diff(mdate));
@@ -92,7 +92,7 @@ for i = 1:length(thevars)
             fprintf(fid,'QC,String\n');
             
             fclose(fid);
-            plot_datafile(filename);
+            %plot_datafile(filename);
         
         
         

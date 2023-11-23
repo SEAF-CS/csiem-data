@@ -1,4 +1,4 @@
-clear all; close all;
+function import_hil_tidal_data
 
 main_dir = 'D:\csiem/data-lake/dot/tide/HLHIL01/';
 
@@ -6,7 +6,11 @@ outdir = 'D:\csiem/data-warehouse/csv/dot/tide/';
 if ~exist(outdir,'dir')
     mkdir(outdir);
 end
+load ../../actions/varkey.mat;
+load ../../actions/agency.mat;
+load ../../actions/sitekey.mat;
 
+varnamefull = [varkey.var00180.Name,' (',varkey.var00180.Unit,')'];
 dirlist = dir(main_dir);
 
 textformat = [repmat('%s ',1,2)];
@@ -126,7 +130,7 @@ fprintf(fid,'Site Description,Hillarys\n');
 fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
 fprintf(fid,'Contact Email,tides@transport.wa.gov.au\n');
 fprintf(fid,'Variable ID,var00180\n');
-fprintf(fid,'Data Classification,HYDRO Level\n');
+fprintf(fid,'Data Category,%s\n',varkey.var00180.Category);
 
 SD = mean(diff(adate));
 
@@ -137,66 +141,13 @@ fprintf(fid,'Depth,Decimal\n');
 
 %thevar = [varName{sss},' (',varUnit{sss},')'];
 
-fprintf(fid,'Variable,Tidal Height (m)\n');
+fprintf(fid,'Variable,%s\n',varnamefull);
 fprintf(fid,'QC,String\n');
 
 fclose(fid);
-plot_datafile(filename);
+%plot_datafile(filename);
 
-%
-% main_dir = 'Tide/PTBAR02_Tides/';
-%
-% dirlist = dir(main_dir);
-%
-% textformat = [repmat('%s ',1,2)];
-%
-% data.bar.height = [];
-% data.bar.date = [];
-%
-% for i = 3:length(dirlist)
-%
-%     new_dir = [main_dir,dirlist(i).name,'/'];
-%
-%     filelist = dir(new_dir);
-%
-%     for j = 3:length(filelist)
-%
-%         disp(filelist(j).name);
-%
-%         fid = fopen([new_dir,filelist(j).name],'rt');
-%
-%
-%         datacell = textscan(fid,textformat,'Headerlines',2,'Delimiter',',','EndofLine','/');
-%
-%         height = str2double(datacell{1});
-%
-%
-%         sDate = datacell{2};
-%
-%
-%         data.bar.height = [data.bar.height;height(1:length(sDate),1) ./ 100];
-%
-%
-%         %remander = str2double(sDate) - floor(str2double(sDate));
-%
-%         data.bar.date = [data.bar.date;datenum(sDate,'yyyymmdd.HHMM')];
-%
-%
-%
-%     end
-%
-% end
-%
-% fid = fopen('Barrack_Tide.csv','wt');
-% fprintf(fid,'record_datetime,Height (m)\n');
-% for i = 1:length(data.bar.date)
-%     fprintf(fid,'%s,%4.4f\n',datestr(data.bar.date(i),'dd/mm/yyyy HH:MM:SS'),data.bar.height(i));
-% end
-% fclose(fid);
-%
-% save Tidaldata.mat data -mat;
-%
-% save Compare' Tidal Data'/Tidaldata.mat data -mat;
+
 
 
 

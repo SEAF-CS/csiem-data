@@ -1,4 +1,4 @@
-clear all; close all;
+function import_netcdf_csv_ADCP
 
 addpath(genpath('../../functions/'));
 
@@ -132,7 +132,7 @@ for i = 1:length(filelist)
                             [pdate_u,int] = unique(pdate);
                             pdata_u = pdata(int);
                             pdepth_u = pdepth(int);
-                            
+                            pQC_u(1:length(pdata_u)) = {'n'};
                             hourly = [min(pdate):1/24:max(pdate)];
                             
                             pdata_int  = interp1(pdate_u,pdata_u,hourly);
@@ -144,13 +144,13 @@ for i = 1:length(filelist)
                             
                             thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
                             datafile = regexprep(filelist(i).name,'.nc',thetxt);
-                            fullfile = [outdir,datafile];
-                            headerfile = regexprep(fullfile,'DATA.csv','HEADER.csv');
+                            fullfile_1 = [outdir,datafile];
+                            headerfile = regexprep(fullfile_1,'DATA.csv','HEADER.csv');
                             
-                            fid = fopen(fullfile,'wt');
+                            fid = fopen(fullfile_1,'wt');
                         fprintf(fid,'Date,%s,Data,QC\n',theheader);
-                            for nn = 1:length(pdata_int)
-                                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(hourly(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_int(nn),pdata_int(nn),pQC_int{nn});
+                            for nn = 1:length(pdate_u)
+                                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(pdate_u(nn),'yyyy-mm-dd HH:MM:SS'),pdepth_u(nn),pdata_u(nn),pQC_u{nn});
                             end
                             fclose(fid);
                             
@@ -180,7 +180,7 @@ for i = 1:length(filelist)
                             fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
                             fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
                             
-                            fprintf(fid,'Data Classification,WQ Sensor\n');
+                        fprintf(fid,'Data Category,%s\n',varkey.(agency.theme5.(agencyvars{foundvar}).ID).Category);
                             
                             
                             SD = mean(diff(pdate));
@@ -197,7 +197,7 @@ for i = 1:length(filelist)
                             
                             fclose(fid);
                             
-                            plot_datafile(fullfile);
+                            %plot_datafile(fullfile);
                         end
                         
                     end

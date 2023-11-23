@@ -1,4 +1,4 @@
-clear all; close all;
+function export_wir_v2_stage1% clear all; close all;
 load swan.mat;
 
 addpath(genpath('../../functions'));
@@ -8,58 +8,12 @@ plotdir = 'Images/';mkdir(plotdir);
 
 sites = fieldnames(swan);
 pt = [];
-% for i = 1:length(sites)
-%     vars = fieldnames(swan.(sites{i}));
-%     for j = 1:length(vars)
-%
-%         thedepths = swan.(sites{i}).(vars{j}).Depth;
-%
-%         for k = 1:length(thedepths)
-%                 switch swan.(sites{i}).(vars{j}).Sample_Type{k}
-%
-%                     case 'Standard sample (Bottom)'
-%                         disp('bottom');
-%                         swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'20'};
-%
-%                     case 'Standard sample (Surface)'
-%                         disp('surface');
-%                         swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0'};
-%                     otherwise
-%                         %swan.(sites{i}).(vars{j}).Depth(k) = 0;
-%                 end
-%             end
-%         end
-%
-%
-% end
-
-% for i = 1:length(sites)
-%     vars = fieldnames(swan.(sites{i}));
-%     if isfield(swan.(sites{i}),'WQ_var00134') & ~isfield(swan.(sites{i}),'WQ_var00006')
-%         swan.(sites{i}).WQ_var00006 = swan.(sites{i}).WQ_var00134;
-%
-%         swan.(sites{i}).WQ_var00006.Data = cond2sal(swan.(sites{i}).WQ_var00134.Data);
-%
-%         swan.(sites{i}).WQ_var00006.Variable_name = 'Salinity';
-%         swan.(sites{i}).WQ_var00006.Units = {'psu'};
-%
-%     end
-%
-% end
-
-
-
-
-
-%unique(pt)
-
-%stop;
 
 
 
 tic
 
-[snum,sstr] = xlsread('../../actions/Projects.xlsx','A2:D10000');
+[snum,sstr] = xlsread('../../functions/Projects.xlsx','A2:D10000');
 
 for k = 1:length(snum(:,1))
     thesites{k} = num2str(snum(k,1));
@@ -80,13 +34,16 @@ for i = 1:length(varSymbol)
     end
 end
 
-outputdir = 'D:\csiem/data-warehouse/csv_holding/dwer/swanest/';
+load ../../actions/varkey.mat;
+
+
+outputdir = 'D:\csiem/data-warehouse/csv_holding/dwer/swanest/';mkdir(outputdir);
 
 sites = fieldnames(swan);
 
-fid = fopen('WIR_FLATFILE_ALL_DATA.csv','wt');
+fid = fopen([outputdir,'WIR_FLATFILE_ALL_DATA.csv'],'wt');
 
-fprintf(fid,'Site,Lat,Lon,Var ID,Varname,VarFull,Date,Depth,Data,Deployment,Deployment Position,Vertical Ref,Site Mean Depth,Data Classification,Agency,Agency Code,Project,Program Code,Tag\n');
+fprintf(fid,'Site,Lat,Lon,Var ID,Varname,VarFull,Date,Depth,Data,Deployment,Deployment Position,Vertical Ref,Site Mean Depth,Data Classification,Agency,Agency Code,Project,Program Code,Tag,Data Category\n');
 
 
 for i = 1:length(sites)
@@ -130,7 +87,7 @@ for i = 1:length(sites)
         sss = find(strcmpi(varID,ID) == 1);
         
         thevar = varName{sss};
-        
+        theID = varID{sss};
         
         %disp([sites{i},': ',thevar]);
         
@@ -143,7 +100,7 @@ for i = 1:length(sites)
         
         %fid = fopen(filename,'wt');
         
-        var_full = [thevar,'(',varUnit{sss},')'];
+        var_full = [thevar,' (',varUnit{sss},')'];
         
         %fprintf(fid,'Date,Depth,%s,QC\n','Data');
         
@@ -322,12 +279,12 @@ for i = 1:length(sites)
             
             
             
-            fprintf(fid,'%s,%6.6f,%6.6f,%s,%s,%s,%s,%s,%4.4f,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n',...
+            fprintf(fid,'%s,%6.6f,%6.6f,%s,%s,%s,%s,%s,%4.4f,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n',...
                 sites{i},swan.(sites{i}).(vars{j}).Lat,swan.(sites{i}).(vars{j}).Lon,ID,thevar,var_full,datestr(swan.(sites{i}).(vars{j}).Date(k),'dd-mm-yyyy HH:MM:SS'),...
                 swan.(sites{i}).(vars{j}).Depth_Chx{k},swan.(sites{i}).(vars{j}).Data(k),...
                 deploy,deppos,vertref,SMD,data_class,...
                 'Department of Water and Environmental Regulation',...
-                'DWER','Estuary',proj,['DWER-',upper(proj)]);
+                'DWER','Estuary',proj,['DWER-',upper(proj)],varkey.(theID).Category);
         end
     end
 end

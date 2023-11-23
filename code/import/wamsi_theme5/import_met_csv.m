@@ -1,4 +1,4 @@
-clear all; close all;
+function import_met_csv
 
 addpath(genpath('../../functions/'));
 
@@ -11,7 +11,7 @@ filename = 'D:csiem/data-lake/wamsi/wwmsp5_met/20220713_COL_CockburnCement_WSCR3
 
 outdir = 'D:csiem/data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'dir'); mkdir(outdir); end
 
-data = readtable(filename, 'ReadVariableNames', false, 'HeaderLines', 2);
+data = readtable(filename, 'ReadVariableNames', false, 'HeaderLines', 4);
 [~,headers] = xlsread(filename,'C2:ZZ2');
 
 mdate = datenum(data.Var1);
@@ -90,7 +90,7 @@ for i = 1:length(headers)
     fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
     fprintf(fid,'Variable ID,%s\n',agency.theme5met.(agencyvars{foundvar}).ID);
     
-    fprintf(fid,'Data Classification,WQ Sensor\n');
+    fprintf(fid,'Data Category,%s\n',varkey.(agency.theme5met.(agencyvars{foundvar}).ID).Category);
     
     
     SD = mean(diff(hourly));
@@ -108,7 +108,7 @@ for i = 1:length(headers)
     fclose(fid);
     
     
-    plot_datafile(filename);
+    %plot_datafile(filename);
 end
 
 

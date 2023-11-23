@@ -1,4 +1,4 @@
-clear all; close all;
+function import_theme2_light
 
 addpath(genpath('../../functions/'));
 
@@ -51,7 +51,7 @@ for i = 1:length(headers)
         if strcmpi(varID,'Ignore') == 0
             
             varname = varkey.(varID).Name;
-            varstring = [varname,'(',varkey.(varID).Unit,')'];
+            varstring = [varname,' (',varkey.(varID).Unit,')'];
             
             sitenum = [];
             thesites = fieldnames(sitekey.wwmsp2);
@@ -104,7 +104,7 @@ for i = 1:length(headers)
             fprintf(fid,'Contact Email,%s\n','');
             fprintf(fid,'Variable ID,%s\n',varID);
             
-            fprintf(fid,'Data Classification,WQ Sensor\n');
+            fprintf(fid,'Data Category,%s\n',varkey.(varID).Category);
             
             
             SD = mean(diff(wdate));
@@ -119,7 +119,7 @@ for i = 1:length(headers)
             fprintf(fid,'QC,String\n');
             
             fclose(fid);
-            plot_datafile(filename);
+            %plot_datafile(filename);
         end
     end
 end

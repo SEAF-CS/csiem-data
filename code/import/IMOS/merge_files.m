@@ -1,4 +1,4 @@
-clear all; close all;
+function merge_files
 
 addpath(genpath('../../functions/'));
 
