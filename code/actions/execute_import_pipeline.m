@@ -13,7 +13,8 @@ import_mafrl = 0;
 import_imos = 0;
 import_dpird = 0;
 import_moorings = 0;
-import_theme2 = 0;
+import_theme2 = 1;
+
 import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
@@ -21,11 +22,19 @@ import_fpa = 0;
 
 create_smd = 1;
 
-create_matfiles = 1;
-create_parquet = 1;
+create_matfiles = 0;
+create_parquet = 0;
 
 create_dataplots = 1;
 plotnew_dataplots = 1;
+
+
+
+%___________________________________________________________________________
+
+% Import Scripts.....
+
+%___________________________________________________________________________
 
 
 
@@ -127,7 +136,7 @@ if import_theme2
     cd ../import/wamsi_theme2
     
     import_theme2_light;
-    
+    import_theme2_seagrass;
     cd ../../actions/
 end
 
@@ -142,7 +151,7 @@ end
 
 if import_wc
     % WC_Digitised
-    cd ../import/WC_Digitised
+    cd ../import/WCWA
     import_wc_digitised_dataset;
     import_wc_digitised_dataset_b;
     
