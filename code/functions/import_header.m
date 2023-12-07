@@ -68,7 +68,7 @@ while ~feof(fid)
             data.Site_Mean_Depth = sline{2};
                         
         case 'Mount Description'
-            data.Mount = sline{2};
+            %data.Mount = sline{2};
             
         case 'Contact Email'
             data.Email = sline{2};

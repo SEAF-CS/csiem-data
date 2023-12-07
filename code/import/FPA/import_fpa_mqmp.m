@@ -66,6 +66,7 @@ for i = 1:length(sheetname)
                 end
                 if ~isempty(foundvar)
                 varID = agency.fpamqmp.(fpavars{foundvar}).ID;
+                varConv = agency.fpamqmp.(fpavars{foundvar}).Conv;
                 varname = varkey.(varID).Name;
                 varstring = [varname,' (',varkey.(varID).Unit,')'];
                 
@@ -78,6 +79,7 @@ for i = 1:length(sheetname)
                         cdata(kk,1) = thedata{sss(kk),k};
                     end
                 end
+                cdata = cdata * varConv;
                 cdate = mdate(sss);
                 cdepth(1:length(sss),1) = 0.5;
                 

@@ -16,19 +16,19 @@ wqnutdata = parquetread("D:\csiem\data-warehouse\parquet\category\csiem_Water Qu
 
 % Chlorophyll-a - Water Quality (Nutrient)
 % Total Suspended Solids - Water Quality (Nutrient)
-% Dissolved Organic Carbon - Water Quality (Nutrient)
+% P Organic Carbon - Water Quality (Nutrient)
 % Total Organic Carbon - Water Quality (Nutrient)
 % 
 % 
 %% Out dirs
 
-outdir = 'processed/';
-
+outdir = 'processed_1km/';
+rad = 0.008 * 1;
 mkdir(outdir);
 
 %% Daterange
-startdate = datenum(2022,05,01);
-enddate = datenum(2023,05,01);
+startdate = datenum(2021,12,01);
+enddate = datenum(2022,06,01);
 
 lightmdate = datenum(lightdata.Date,'yyyy-mm-dd HH:MM:SS');
 wqlightmdate = datenum(wqlightdata.Date,'yyyy-mm-dd HH:MM:SS');
@@ -58,7 +58,7 @@ for i = 1:length(sites)-1
     
     
     % Create the polygon
-    T = nsidedpoly(360,'Center',[lon lat],'Radius',0.016);
+    T = nsidedpoly(360,'Center',[lon lat],'Radius',rad);
     pol(1).Lon = T.Vertices(:,1);
     pol(1).Lat = T.Vertices(:,2);
     pol(1).Name = sites{i};
@@ -139,7 +139,7 @@ for i = 1:length(sites)-1
     
     %WQ Nut searches
      wqnutsearch3 = find(...
-        strcmpi(wqnutdata.Variable_Name,'Dissolved Organic Carbon(mg/L)') == 1 &...
+        strcmpi(wqnutdata.Variable_Name,'Dissolved Organic Carbon (mg/L)') == 1 &...
         inpoly_wqnut == 1 & ...
         wqnutmdate >= startdate & wqnutmdate <= enddate);
     
@@ -148,10 +148,22 @@ for i = 1:length(sites)-1
         %append(newtab,wqnutdata(wqnutsearch3,:));
         disp('Appending data');
     end 
+ 
+    
+    wqnutsearch5 = find(...
+        strcmpi(wqnutdata.Variable_Name,'Particulate Organic Carbon (mg/L)') == 1 &...
+        inpoly_wqnut == 1 & ...
+        wqnutmdate >= startdate & wqnutmdate <= enddate);
+    
+    if ~isempty(wqnutsearch5)
+        newtab(end+1:end + length(wqnutsearch5),:) = wqnutdata(wqnutsearch5,:);
+        %append(newtab,wqnutdata(wqnutsearch3,:));
+        disp('Appending data');
+    end 
     
 %     %WQ Nut searches
      wqnutsearch4 = find(...
-        strcmpi(wqnutdata.Variable_Name,'Total Suspended Solids(mg/L)') == 1 &...
+        strcmpi(wqnutdata.Variable_Name,'Total Suspended Solids (mg/L)') == 1 &...
         inpoly_wqnut == 1 & ...
         wqnutmdate >= startdate & wqnutmdate <= enddate);
     
@@ -161,9 +173,9 @@ for i = 1:length(sites)-1
         disp('Appending data');
     end 
     
-    
+    newtab.mdate = datenum(newtab.Date);
     filename = [outdir,sites{i},'.parq'];
     parquetwrite(filename,newtab);
-      
+    writetable(newtab,regexprep(filename,'.parq','.csv'));  
     clear pol newtab;
 end

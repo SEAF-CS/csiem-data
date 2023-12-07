@@ -20,14 +20,15 @@ import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 
-create_smd = 1;
+create_smd = 0;
 
-create_matfiles = 0;
-create_parquet = 0;
+create_matfiles = 1;
+create_parquet = 1;
 
-create_dataplots = 1;
-plotnew_dataplots = 1;
+create_dataplots = 0;
+plotnew_dataplots = 0;
 
+run_marvl = 1;
 
 
 %___________________________________________________________________________
@@ -182,6 +183,14 @@ end
 if create_dataplots
     plot_datawarehouse_csv_all(plotnew_dataplots);
 end
+
+if run_marvl
+    addpath(genpath('D:\csiem\marvl'));
+    create_marvl_config_information;
+    run_AEDmarvl marvl_pipeline_images;
+    rmpath(genpath('D:\csiem\marvl'));
+end
+
 B = toc;
 
 disp(['Total Runtime: ',num2str(B/(60*60)),' Hours']);

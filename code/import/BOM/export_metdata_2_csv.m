@@ -137,7 +137,7 @@ for i = 1:length(sites)
                     fprintf(fid,'Site Mean Depth,%s\n','');
                     
                     
-                    fprintf(fid,'Mount Description,%s\n','Fixed +2m Above Ground');
+                    %fprintf(fid,'Mount Description,%s\n','Fixed +2m Above Ground');
                     fprintf(fid,'Bad or Unavailable Data Value,-9999\n');
                     fprintf(fid,'Contact Email,climatedata@bom.gov.au\n');
                     fprintf(fid,'Variable ID,%s\n',agency.bom.(thevars{foundvar}).ID);
