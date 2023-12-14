@@ -54,11 +54,11 @@ fprintf(fid,'\n');
 % fprintf(fid,'</sub>\n');
 % 
 
-fprintf(fid,'| Variable ID | Name | Units | Symbol | Programmatic Name | \n');
-fprintf(fid,'| :--- | :----: | :----: | :----: | :--- |\n');
+fprintf(fid,'| Variable ID | Name | Units | Category | \n');
+fprintf(fid,'| :--- | :----: | :----: | :----: |\n');
 
 for i = 1:length(vars)
-    fprintf(fid,'| *%s* | %s | %s | %s | %s |\n',vars{i},varkey.(vars{i}).Name,varkey.(vars{i}).Unit,varkey.(vars{i}).Symbol,varkey.(vars{i}).Programmatic);
+    fprintf(fid,'| *%s* | %s | %s | %s |\n',vars{i},varkey.(vars{i}).Name,varkey.(vars{i}).Unit,varkey.(vars{i}).Category);
 end
 fprintf(fid,'\n');
 fprintf(fid,'\n');

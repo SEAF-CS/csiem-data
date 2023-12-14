@@ -20,15 +20,15 @@ import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 
-create_smd = 0;
+create_smd = 1;
 
-create_matfiles = 1;
-create_parquet = 1;
+create_matfiles = 0;
+create_parquet = 0;
 
-create_dataplots = 0;
-plotnew_dataplots = 0;
+create_dataplots = 1;
+plotnew_dataplots = 1;
 
-run_marvl = 1;
+run_marvl = 0;
 
 
 %___________________________________________________________________________
@@ -103,6 +103,8 @@ if import_imos
     import_imos_profile_2_2010_csv;
     
     merge_files;
+
+    import_imos_temp_sal;
     
     % Needs updating
     % import_imos_profile_2_csv_BURST;
@@ -155,6 +157,8 @@ if import_wc
     cd ../import/WCWA
     import_wc_digitised_dataset;
     import_wc_digitised_dataset_b;
+
+    import_PhyWQ_1334_09;
     
     cd ../../actions/
 end

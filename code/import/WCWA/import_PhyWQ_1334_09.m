@@ -1,4 +1,4 @@
-clear all; close all;
+function import_PhyWQ_1334_09
 
 addpath(genpath('../../functions/'));
 

@@ -2,7 +2,8 @@ clear all; close all;
 
 addpath(genpath('../functions'));
 
-outdir = '../../data-mapping/Warehouse/';mkdir(outdir);
+
+load varkey.mat;
 
 filepath ='D:/csiem/data-warehouse/csv/';
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
@@ -43,15 +44,37 @@ thedata = struct2table(tab);
 type = unique(thedata.DataCategory);
 sites = unique(thedata.Station_ID);
 proj = unique(thedata.Tag);
+[vars,ind]  = unique(thedata.Variable_Name);
+vars_ID = thedata.Variable_ID(ind);
+% psite = thedata.Station_ID(ind);
+% agency = thedata.Agency_Name(ind);
+
+
 
 allvars = thedata.Properties.VariableNames;
 
+somevars = {...
+    'Agency_Name';...
+    'Program_Name';...
+    'Station_ID';...
+    'Site_Description';...
+    'Tag';...
+    'mAHD';...
+    'Lat';...
+    'Lon',...
+    };
+
+
+outdir = '../../data-mapping/Warehouse/cat/';mkdir(outdir);
 
 for i = 1:length(type)
 
-    for ii = 1:length(allvars)
-        newtab.(allvars{ii}) = [];
+    for ii = 1:length(somevars)
+        newtab.(somevars{ii}) = [];
     end
+    newtab.Label = [];
+
+
 
      sss = find(strcmpi(thedata.DataCategory,type{i}) == 1);
     for j = 1:length(sites)
@@ -59,16 +82,17 @@ for i = 1:length(type)
 
 
         if ~isempty(ttt)
-            for k = 1:length(allvars)
+            for k = 1:length(somevars)
 
-                newtab.(allvars{k}) = [newtab.(allvars{k});thedata.(allvars{k})(sss(ttt(1)))];
+                newtab.(somevars{k}) = [newtab.(somevars{k});thedata.(somevars{k})(sss(ttt(1)))];
             end
+            newtab.Label = [newtab.Label;thedata.Tag(sss(ttt(1)))];
         end
 
     end
 
     outtab = struct2table(newtab);    
-    
+
     writetable(outtab,[outdir,type{i},'.csv']);
 end
 
@@ -77,26 +101,57 @@ outdir = '../../data-mapping/Warehouse/tag/';mkdir(outdir);
 
 for i = 1:length(proj)
 
-    for ii = 1:length(allvars)
-        newtab.(allvars{ii}) = [];
+    for ii = 1:length(somevars)
+        newtab.(somevars{ii}) = [];
     end
+    newtab.Label = [];
      sss = find(strcmpi(thedata.Tag,proj{i}) == 1);
      for j = 1:length(sites)
         ttt = find(strcmpi(thedata.Station_ID(sss),sites{j}) == 1);
 
 
         if ~isempty(ttt)
-            for k = 1:length(allvars)
+            for k = 1:length(somevars)
 
-                newtab.(allvars{k}) = [newtab.(allvars{k});thedata.(allvars{k})(sss(ttt(1)))];
+                newtab.(somevars{k}) = [newtab.(somevars{k});thedata.(somevars{k})(sss(ttt(1)))];
             end
+            newtab.Label = [newtab.Label;thedata.Station_ID(sss(ttt(1)))];
+        end
+
+    end
+      outtab = struct2table(newtab);    
+
+    writetable(outtab,[outdir,proj{i},'.csv']);
+end
+
+
+outdir = '../../data-mapping/Warehouse/vars/';mkdir(outdir);
+
+for i = 1:length(vars)
+
+    for ii = 1:length(somevars)
+        newtab.(somevars{ii}) = [];
+    end
+    newtab.Label = [];
+     sss = find(strcmpi(thedata.Variable_Name,vars{i}) == 1);
+     for j = 1:length(sites)
+        ttt = find(strcmpi(thedata.Station_ID(sss),sites{j}) == 1);
+        if ~isempty(ttt)
+            for k = 1:length(somevars)
+                newtab.(somevars{k}) = [newtab.(somevars{k});thedata.(somevars{k})(sss(ttt(1)))];
+            end
+            
+            newtab.Label = [newtab.Label;{[thedata.Agency_Code{sss(ttt(1))},': ',thedata.Station_ID{sss(ttt(1))}]}];
         end
 
     end
       outtab = struct2table(newtab);    
     
-    writetable(outtab,[outdir,proj{i},'.csv']);
+    varfix = varkey.(vars_ID{i}).Name;
+    varfix = regexprep(varfix,'µ','u');
+    writetable(outtab,[outdir,varfix,'.csv']);clear outtab;
 end
+
 
 %newtab = struct2table(newtab);
 

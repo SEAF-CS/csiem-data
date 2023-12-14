@@ -1,2 +1,2 @@
-Agency_Name,Agency_Code,Program_Name,Program_Code,Tag,Data_File_Name,Data_File_Location,Status,Lat,Lon,Time_Zone,Vertical_Datum,Station_ID,Site_Description,Deployment,Deployment_Position,Vertical_Reference,Site_Mean_Depth,Bad_Data_Code,Email,Variable_ID,DataCategory,Sampling_Rate,Date_Format,Depth_Format,Variable_Name,QC_Code,X,Y,calc_SMD,mAHD
-Integrated Marine Observing System,IMOS,BGC,BGC,IMOS-BGC,imos_nrsrot_bgc_Allo_DATA.csv,data-warehouse/csv/imos/bgc,Inactive,-32,115.4167,GMT +8,mAHD,NRSROT_BGC,Rottnest Island,Profile,m from Surface,Water Surface,,NaN,,var00223,Ecology (Planktonic),17318.7097,yyyy-mm-dd HH:MM:SS,Decimal,Allo (mg/m3),String,350440.443561669,6458469.0837769,45.8595,-45.8595
+Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
+Integrated Marine Observing System,BGC,NRSROT_BGC,Rottnest Island,IMOS-BGC,-45.8595,-32,115.4167,NRSROT_BGC
