@@ -1,6 +1,20 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
+Department of Water and Environmental Regulation,Estuary,6131321,6131321,DWER-PHESTREACH,0.0000,-32.683243,115.677035,DWER: 6131321
+Department of Water and Environmental Regulation,Estuary,6131322,6131322,DWER-PHESTREACH,1.0000,-32.730063,115.694901,DWER: 6131322
+Department of Water and Environmental Regulation,Estuary,6131323,6131323,DWER-PHESTREACH,1.0000,-32.633273,115.660907,DWER: 6131323
+Department of Water and Environmental Regulation,Estuary,6140029,6140029,DWER-PHESTREACH,0.0000,-32.603628,115.671387,DWER: 6140029
+Department of Water and Environmental Regulation,Estuary,6140030,6140030,DWER-PHESTREACH,0.0000,-32.575745,115.754871,DWER: 6140030
+Department of Water and Environmental Regulation,Estuary,6140031,6140031,DWER-PHESTREACH,0.0000,-32.591805,115.713254,DWER: 6140031
+Department of Water and Environmental Regulation,Estuary,6140953,6140953,DWER-PHESTREACH,2.0000,-32.592114,115.821421,DWER: 6140953
 Department of Water and Environmental Regulation,Estuary,6141432,6141432,DWER-CSMWQ,0.0000,-32.2745,115.7025,DWER: 6141432
+Department of Water and Environmental Regulation,Estuary,6142623,6142623,DWER-PHESTREACH,5.0000,-32.585137,115.88204,DWER: 6142623
+Department of Water and Environmental Regulation,Estuary,6142624,6142624,DWER-PHESTREACH,1.0000,-32.581407,115.787282,DWER: 6142624
+Department of Water and Environmental Regulation,Estuary,6142625,6142625,DWER-PHESTREACH,2.0000,-32.585905,115.827008,DWER: 6142625
+Department of Water and Environmental Regulation,Estuary,6142627,6142627,DWER-PHESTREACH,1.0000,-32.543329,115.76797,DWER: 6142627
+Department of Water and Environmental Regulation,Estuary,6142628,6142628,DWER-PHESTREACH,2.0000,-32.510069,115.786308,DWER: 6142628
+Department of Water and Environmental Regulation,Estuary,6142629,6142629,DWER-PHESTREACH,2.0000,-32.471222,115.808025,DWER: 6142629
 Department of Water and Environmental Regulation,Estuary,6142830,6142830,DWER-CSMWQ,-5.9675,-32.140024,115.762558,DWER: 6142830
+Department of Water and Environmental Regulation,Estuary,6142855,6142855,DWER-PHESTREACH,2.0000,-32.585856,115.834139,DWER: 6142855
 Department of Water and Environmental Regulation,Estuary,6142970,6142970,DWER-CSMWQ,-21.3088,-32.154551,115.693841,DWER: 6142970
 Department of Water and Environmental Regulation,Estuary,6142971,6142971,DWER-CSMWQ,-19.3144,-32.152366,115.720158,DWER: 6142971
 Department of Water and Environmental Regulation,Estuary,6142972,6142972,DWER-CSMWQ,-10.8501,-32.14648,115.756724,DWER: 6142972
@@ -18,6 +32,9 @@ Department of Water and Environmental Regulation,Estuary,6142986,6142986,DWER-CS
 Department of Water and Environmental Regulation,Estuary,6142987,6142987,DWER-CSMWQ,-18.2605,-32.254698,115.740167,DWER: 6142987
 Department of Water and Environmental Regulation,Estuary,6142988,6142988,DWER-CSMWQ,-7.7071,-32.215297,115.696612,DWER: 6142988
 Department of Water and Environmental Regulation,Estuary,6142989,6142989,DWER-CSMWQ,-6.1499,-32.198595,115.684831,DWER: 6142989
+Department of Water and Environmental Regulation,Estuary,6143035,6143035,DWER-PHESTREACH,3.0000,-32.399,115.831,DWER: 6143035
+Department of Water and Environmental Regulation,Estuary,6143036,6143036,DWER-PHESTREACH,3.0000,-32.3995,115.831,DWER: 6143036
+Department of Water and Environmental Regulation,Estuary,6144122,6144122,DWER-PHESTREACH,3.0000,-32.401996,115.830969,DWER: 6144122
 Department of Water and Environmental Regulation,Estuary,6144401,6144401,DWER-CSMWQ,-19.1526,-32.250809,115.728321,DWER: 6144401
 Department of Water and Environmental Regulation,Estuary,6144466,6144466,DWER-CSMWQ,-10.4978,-32.197784,115.765882,DWER: 6144466
 Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147030,North Cockburn Sound 4,DWER-CSMOORING,-22.2603,-32.15660018,115.7027292,DWER: 6147030

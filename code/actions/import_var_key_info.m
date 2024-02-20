@@ -76,6 +76,8 @@ agency.dwer = import_agency_conv('DWER');
 agency.dwermooring = import_agency_conv('DWERMOORING');
 agency.mafrl = import_agency_conv('MAFRL');
 agency.imosbgc = import_agency_conv('IMOSBGC');
+agency.imossrs = import_agency_conv('IMOSSRS');
+
 agency.imosprofile = import_agency_conv('IMOSPROFILE');
 agency.fpamqmp = import_agency_conv('FPA-MQMP');
 

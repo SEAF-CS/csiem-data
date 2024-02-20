@@ -1,5 +1,5 @@
 function export_wir_v2_stage1% clear all; close all;
-load swan.mat;
+load D:\csiem\data-warehouse\csv_holding\dwer\swan.mat;
 
 addpath(genpath('../../functions'));
 

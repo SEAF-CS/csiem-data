@@ -1,5 +1,18 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
+Department of Water and Environmental Regulation,Estuary,6131321,6131321,DWER-PHESTREACH,0.0000,-32.683243,115.677035,DWER: 6131321
+Department of Water and Environmental Regulation,Estuary,6131322,6131322,DWER-PHESTREACH,1.0000,-32.730063,115.694901,DWER: 6131322
+Department of Water and Environmental Regulation,Estuary,6131323,6131323,DWER-PHESTREACH,1.0000,-32.633273,115.660907,DWER: 6131323
+Department of Water and Environmental Regulation,Estuary,6140029,6140029,DWER-PHESTREACH,0.0000,-32.603628,115.671387,DWER: 6140029
+Department of Water and Environmental Regulation,Estuary,6140030,6140030,DWER-PHESTREACH,0.0000,-32.575745,115.754871,DWER: 6140030
+Department of Water and Environmental Regulation,Estuary,6140031,6140031,DWER-PHESTREACH,0.0000,-32.591805,115.713254,DWER: 6140031
+Department of Water and Environmental Regulation,Estuary,6140953,6140953,DWER-PHESTREACH,2.0000,-32.592114,115.821421,DWER: 6140953
 Department of Water and Environmental Regulation,Estuary,6141432,6141432,DWER-CSMWQ,0.0000,-32.2745,115.7025,DWER: 6141432
+Department of Water and Environmental Regulation,Estuary,6142623,6142623,DWER-PHESTREACH,5.0000,-32.585137,115.88204,DWER: 6142623
+Department of Water and Environmental Regulation,Estuary,6142624,6142624,DWER-PHESTREACH,1.0000,-32.581407,115.787282,DWER: 6142624
+Department of Water and Environmental Regulation,Estuary,6142625,6142625,DWER-PHESTREACH,2.0000,-32.585905,115.827008,DWER: 6142625
+Department of Water and Environmental Regulation,Estuary,6142627,6142627,DWER-PHESTREACH,1.0000,-32.543329,115.76797,DWER: 6142627
+Department of Water and Environmental Regulation,Estuary,6142628,6142628,DWER-PHESTREACH,2.0000,-32.510069,115.786308,DWER: 6142628
+Department of Water and Environmental Regulation,Estuary,6142629,6142629,DWER-PHESTREACH,2.0000,-32.471222,115.808025,DWER: 6142629
 Department of Water and Environmental Regulation,Estuary,6142828,6142828,DWER-CSMWQ,-4.0843,-32.151321,115.763847,DWER: 6142828
 Department of Water and Environmental Regulation,Estuary,6142829,6142829,DWER-CSMWQ,-9.9070,-32.144304,115.761111,DWER: 6142829
 Department of Water and Environmental Regulation,Estuary,6142830,6142830,DWER-CSMWQ,-5.9675,-32.140024,115.762558,DWER: 6142830
@@ -12,6 +25,7 @@ Department of Water and Environmental Regulation,Estuary,6142836,6142836,DWER-CS
 Department of Water and Environmental Regulation,Estuary,6142837,6142837,DWER-CSMWQ,-11.0729,-32.163896,115.762013,DWER: 6142837
 Department of Water and Environmental Regulation,Estuary,6142842,6142842,DWER-CSMWQ,-10.7931,-32.153402,115.75522,DWER: 6142842
 Department of Water and Environmental Regulation,Estuary,6142843,6142843,DWER-CSMWQ,-10.2783,-32.155803,115.752674,DWER: 6142843
+Department of Water and Environmental Regulation,Estuary,6142855,6142855,DWER-PHESTREACH,2.0000,-32.585856,115.834139,DWER: 6142855
 Department of Water and Environmental Regulation,Estuary,6142970,6142970,DWER-CSMWQ,-21.3088,-32.154551,115.693841,DWER: 6142970
 Department of Water and Environmental Regulation,Estuary,6142971,6142971,DWER-CSMWQ,-19.3144,-32.152366,115.720158,DWER: 6142971
 Department of Water and Environmental Regulation,Estuary,6142972,6142972,DWER-CSMWQ,-10.8501,-32.14648,115.756724,DWER: 6142972
@@ -33,6 +47,8 @@ Department of Water and Environmental Regulation,Estuary,6142987,6142987,DWER-CS
 Department of Water and Environmental Regulation,Estuary,6142988,6142988,DWER-CSMWQ,-7.7071,-32.215297,115.696612,DWER: 6142988
 Department of Water and Environmental Regulation,Estuary,6142989,6142989,DWER-CSMWQ,-6.1499,-32.198595,115.684831,DWER: 6142989
 Department of Water and Environmental Regulation,Estuary,6142990,6142990,DWER-CSMWQ,-8.9561,-32.139401,115.652974,DWER: 6142990
+Department of Water and Environmental Regulation,Estuary,6143035,6143035,DWER-PHESTREACH,3.0000,-32.399,115.831,DWER: 6143035
+Department of Water and Environmental Regulation,Estuary,6143036,6143036,DWER-PHESTREACH,3.0000,-32.3995,115.831,DWER: 6143036
 Department of Water and Environmental Regulation,Estuary,6144401,6144401,DWER-CSMWQ,-19.1526,-32.250809,115.728321,DWER: 6144401
 Department of Water and Environmental Regulation,Estuary,6144466,6144466,DWER-CSMWQ,-10.4978,-32.197784,115.765882,DWER: 6144466
 Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147030,North Cockburn Sound 4,DWER-CSMOORING,-22.2603,-32.15660018,115.7027292,DWER: 6147030
@@ -124,8 +140,9 @@ Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,NC,North Control removed 1/12/2002,CSMC-WQ,-8.9561,-32.139401203,115.65297448,CSMC: NC
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,NH3,Northern Harbour Jervoise Bay,CSMC-WQ,-5.9675,-32.140023962,115.762557981,CSMC: NH3
 Integrated Marine Observing System,BGC,NRSROT_BGC,Rottnest Island,IMOS-BGC,-45.8595,-32,115.4167,IMOS: NRSROT_BGC
-Integrated Marine Observing System,amnmprofile,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-CTD,-52.7718,-32,115.4,IMOS: NRSROT_PROFILE
+Integrated Marine Observing System,amnmadcp,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-ADCP,-52.7718,-32,115.4,IMOS: NRSROT_PROFILE
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,SC,South Control removed 1/12/2008,CSMC-WQ,-7.9017,-32.254164605,115.684284924,CSMC: SC
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,SF,Southern Flats shallow,CSMC-WQ,-3.2126,-32.248231528,115.712530827,CSMC: SF
+Integrated Marine Observing System,amnmadcp,WACA20_PROFILE,WA Canyon 200m,IMOS-ANMN-ADCP,-210.0000,-31.9833,115.2276,IMOS: WACA20_PROFILE
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WS4,Warnbro Sound central basin,CSMC-WQ,-17.2342,-32.336946025,115.722166715,CSMC: WS4
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WSSB,Warnbro Sound Safety Bay shallow,CSMC-WQ,-2.9904,-32.308837615,115.708785228,CSMC: WSSB

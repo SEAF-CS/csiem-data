@@ -1,6 +1,18 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
+Department of Water and Environmental Regulation,Estuary,6131321,6131321,DWER-PHESTREACH,0.0000,-32.683243,115.677035,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6131322,6131322,DWER-PHESTREACH,1.0000,-32.730063,115.694901,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6131323,6131323,DWER-PHESTREACH,1.0000,-32.633273,115.660907,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6140029,6140029,DWER-PHESTREACH,0.0000,-32.603628,115.671387,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6140030,6140030,DWER-PHESTREACH,0.0000,-32.575745,115.754871,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6140031,6140031,DWER-PHESTREACH,0.0000,-32.591805,115.713254,DWER-PHESTREACH
 Department of Water and Environmental Regulation,Estuary,6141432,6141432,DWER-CSMWQ,0.0000,-32.2745,115.7025,DWER-CSMWQ
+Department of Water and Environmental Regulation,Estuary,6142624,6142624,DWER-PHESTREACH,1.0000,-32.581407,115.787282,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6142625,6142625,DWER-PHESTREACH,2.0000,-32.585905,115.827008,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6142627,6142627,DWER-PHESTREACH,1.0000,-32.543329,115.76797,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6142628,6142628,DWER-PHESTREACH,2.0000,-32.510069,115.786308,DWER-PHESTREACH
+Department of Water and Environmental Regulation,Estuary,6142629,6142629,DWER-PHESTREACH,2.0000,-32.471222,115.808025,DWER-PHESTREACH
 Department of Water and Environmental Regulation,Estuary,6142830,6142830,DWER-CSMWQ,-5.9675,-32.140024,115.762558,DWER-CSMWQ
+Department of Water and Environmental Regulation,Estuary,6142855,6142855,DWER-PHESTREACH,2.0000,-32.585856,115.834139,DWER-PHESTREACH
 Department of Water and Environmental Regulation,Estuary,6142971,6142971,DWER-CSMWQ,-19.3144,-32.152366,115.720158,DWER-CSMWQ
 Department of Water and Environmental Regulation,Estuary,6142972,6142972,DWER-CSMWQ,-10.8501,-32.14648,115.756724,DWER-CSMWQ
 Department of Water and Environmental Regulation,Estuary,6142973,6142973,DWER-CSMWQ,-11.1732,-32.170703,115.762483,DWER-CSMWQ
@@ -91,9 +103,10 @@ Western Australian Marine Science Institution,WAMSI Westport Marine Science Prog
 Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf_shade,KwinanaShelf_shade,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WWMSP2.2-Light
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,MB,Mangles Bay shallow near shore,CSMC-WQ,-1.4192,-32.275049132,115.705452395,CSMC-WQ
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,NH3,Northern Harbour Jervoise Bay,CSMC-WQ,-5.9675,-32.140023962,115.762557981,CSMC-WQ
-Integrated Marine Observing System,amnmprofile,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-CTD,-52.7718,-32,115.4,IMOS-ANMN-CTD
+Integrated Marine Observing System,amnmadcp,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-ADCP,-52.7718,-32,115.4,IMOS-ANMN-ADCP
 Department of Transport,Coastal Data,PTBAR02,Barrack Street 02 Tide Station,DOT-TIDE,1.0000,-31.959681,115.857261,DOT-TIDE
 Department of Transport,Coastal Data,RKMGL01,Mangles Bay,DOT-TIDE,-1.1698,-32.274431,115.703344,DOT-TIDE
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,SF,Southern Flats shallow,CSMC-WQ,-3.2126,-32.248231528,115.712530827,CSMC-WQ
+Integrated Marine Observing System,amnmadcp,WACA20_PROFILE,WA Canyon 200m,IMOS-ANMN-ADCP,-210.0000,-31.9833,115.2276,IMOS-ANMN-ADCP
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WS4,Warnbro Sound central basin,CSMC-WQ,-17.2342,-32.336946025,115.722166715,CSMC-WQ
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WSSB,Warnbro Sound Safety Bay shallow,CSMC-WQ,-2.9904,-32.308837615,115.708785228,CSMC-WQ

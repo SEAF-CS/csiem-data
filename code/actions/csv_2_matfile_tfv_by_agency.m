@@ -20,7 +20,7 @@ unique_agency = unique(agency);
 
 inc = 1;
 
-for ag = 1:length(unique_agency)
+for ag = 7%1:length(unique_agency)
 
     find_agency = find(strcmpi(agency,unique_agency(ag)) == 1);
 

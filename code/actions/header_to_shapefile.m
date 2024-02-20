@@ -1,4 +1,4 @@
-clear all; close all;
+function header_to_shapefile
 
 addpath(genpath('../functions'));
 

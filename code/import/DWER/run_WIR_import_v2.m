@@ -15,7 +15,7 @@ holding = 'D:\csiem\data-warehouse\csv_holding\dwer\matfiles\';
 
 dirlist = dir('D:\csiem/data-lake/dwer/swanest/');
 
-for i = 3:length(dirlist)%3
+for i = 71:length(dirlist)%3
     
     filelist = dir(['D:\csiem\data-lake/dwer/swanest/',dirlist(i).name,'/*.xlsx']);
     
@@ -70,7 +70,7 @@ end
 
 
 %
-save swan.mat swan -mat -v7.3;
+save D:\csiem\data-warehouse\csv_holding\dwer\swan.mat swan -mat -v7.3;
 
 % import_drainage_data;
 % save('../modeltools/matfiles/swan.mat','swan','-mat');

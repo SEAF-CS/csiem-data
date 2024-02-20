@@ -11,9 +11,11 @@ import_dot = 0;
 import_bom = 0;
 import_mafrl = 0;
 import_imos = 0;
+import_imos_srs = 0;
+
 import_dpird = 0;
 import_moorings = 0;
-import_theme2 = 1;
+import_theme2 = 0;
 
 import_theme3 = 0;
 import_theme5 = 0;
@@ -25,10 +27,13 @@ create_smd = 1;
 create_matfiles = 0;
 create_parquet = 0;
 
-create_dataplots = 1;
-plotnew_dataplots = 1;
+create_dataplots = 0;
+plotnew_dataplots = 0;
 
-run_marvl = 0;
+create_shapefiles = 1;
+
+
+run_marvl = 1;
 
 
 %___________________________________________________________________________
@@ -115,6 +120,13 @@ if import_imos
     cd ../../actions
 end
 
+if import_imos_srs
+    cd ../import/IMOS_SRS/
+    import_IMOS_SRS_L3S_netcdf_data;
+    import_IMOS_SRS_MODIS_netcdf_data;
+    import_IMOS_SRS_MODIS_OC3_netcdf_data;
+    cd ../../actions/
+end
 
 if import_dpird
     % DPIRD
@@ -193,6 +205,10 @@ if run_marvl
     create_marvl_config_information;
     run_AEDmarvl marvl_pipeline_images;
     rmpath(genpath('D:\csiem\marvl'));
+end
+
+if create_shapefiles
+    header_to_shapefile;
 end
 
 B = toc;
