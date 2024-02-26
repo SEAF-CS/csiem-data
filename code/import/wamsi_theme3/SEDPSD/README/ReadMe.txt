@@ -1,0 +1,1 @@
+The variable names as can be seen in the folder labeled Variable Naming have been chosen to mimic WIR conventions
