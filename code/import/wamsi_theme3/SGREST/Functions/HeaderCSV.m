@@ -15,7 +15,7 @@ function HeaderCSV(InputFlatFile,VarKey)
             %  mafrl_CB_Ammonium_Int_Data.csv
             %  mafrl_CB_Ammonium_Int_Header.csv
 
-            fileName = ['SeperateCSV\',char(UniqueSites(SiteNum)) ,'_',char(UniqueVars(VarNum))];
+            fileName = ['/Projects2/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3.1_SGREST/',char(UniqueSites(SiteNum)) ,'_',char(UniqueVars(VarNum))];
                 fileName = filenameGoodifier(fileName);
 
             
@@ -43,10 +43,10 @@ function HeaderCSV(InputFlatFile,VarKey)
         SiteName = table2array(Table(DataNum,"Var4"));
         VarName = table2array(Table(DataNum,"Var6"));
 
-        fileName = ['SeperateCSV\',char(SiteName) ,'_',char(VarName),'.csv'];
+        fileName = ['/Projects2/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3.1_SGREST/',char(SiteName) ,'_',char(VarName)];
                 fileName = filenameGoodifier(fileName);
 
-        fid = fopen(fileName,'a');
+        fid = fopen([fileName,'_DATA.csv'],'a');
         
         Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
         Depth = 0;
