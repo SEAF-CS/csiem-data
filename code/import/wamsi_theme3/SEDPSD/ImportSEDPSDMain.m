@@ -4,6 +4,7 @@ directory = "/Projects2/csiem-data-hub/data-swamp/WWMSP3.1 - Sediment Quality Cu
 
 searchReq = '*PSD*.xlsx';
 Sediment = Extractor(directory,searchReq);
+Sediment = SedimentLatFixer(Sediment);
 
 
 VarkeyAddress = "/Projects2/csiem-data-hub/git/data-governance/variable_key.xlsx";
