@@ -3,6 +3,7 @@ addpath('Functions')
 directory = "/Projects2/csiem-data-hub/data-swamp/WWMSP3.1 - Seagrass CutDown/WAMS23-6 WCP3.1  PSD/";
 searchReq = '*.xlsx' ;
 Seagrass = Extractor(directory,searchReq);
+Seagrass = SeagrassLatFixer(Seagrass);
 
 VarkeyAddress = "/Projects2/csiem-data-hub/git/data-governance/variable_key.xlsx";
             opts = spreadsheetImportOptions("NumVariables", 2);
