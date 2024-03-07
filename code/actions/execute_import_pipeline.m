@@ -157,11 +157,11 @@ end
 
 if import_theme3
     % wamsi_theme3
-    cd ../import/wamsi_theme3
+    cd ../import/wamsi_theme3/CTD
     reformat_ctd;
     import_theme3ctd_data;
     
-    cd ../../actions/
+    cd ../../../actions/
 end
 
 if import_wc
