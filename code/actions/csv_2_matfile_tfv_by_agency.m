@@ -4,9 +4,13 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfilepath = 'D:/csiem/data-warehouse/mat/agency/';mkdir(outfilepath);
-filepath ='D:/csiem/data-warehouse/csv/';
-mergepath = 'D:/csiem/data-warehouse/mat/';
+outfilepath = '../../../data-warehouse/mat/agency/';mkdir(outfilepath);
+%             'D:/csiem/data-warehouse/mat/agency/';mkdir(outfilepath);
+filepath = '../../../data-warehouse/csv';
+%          'D:/csiem/data-warehouse/csv/';
+mergepath = '../../../data-warehouse/mat/';
+%           'D:/csiem/data-warehouse/mat/';
+
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 

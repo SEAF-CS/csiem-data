@@ -1,7 +1,8 @@
 function import_mooring_data_v2
 addpath(genpath('../../functions/'));
 
-filepath = 'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
+filepath = '../../../../data-lake/DWER/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/';
+%             'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
 
 filelist = dir(fullfile(filepath, '**\*.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
@@ -14,7 +15,8 @@ load ../../actions/varkey.mat;
 sitelist = fieldnames(sitekey.dwermooring);
 varlist = fieldnames(agency.dwermooring);
 
-outpath = 'D:\csiem\data-warehouse\csv\dwer\csmooring\';mkdir(outpath);
+outpath = '../../../../data-warehouse/csv/dwer/csmooring/'; mkdir(outpath);
+%'D:\csiem\data-warehouse\csv\dwer\csmooring\';mkdir(outpath);
 
 for i = 1:length(filelist)
 

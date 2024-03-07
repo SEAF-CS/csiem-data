@@ -2,14 +2,16 @@ function reformat_ctd
 
 addpath(genpath('../../functions/'));
 
-basedir = 'D:\csiem\data-lake\WAMSI\wwmsp3.1_ctd\CTD\';
+basedir = '../../../../../data-lake/WAMSI/wwmsp3.1_ctd/CTD/';
+%'D:\csiem\data-lake\WAMSI\wwmsp3.1_ctd\CTD\';
 
 filelist = dir(fullfile(basedir, '**\*.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 [conv,trans] = xlsread('translation.xlsx','A2:E100');
 
-outdir = 'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
+outdir = '../../../../../data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/';mkdir(outdir);
+%'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
 
 fid = fopen([outdir,'wwmsp_theme3.1_CTD_reformat_bbusch_working.csv'],'wt');
 

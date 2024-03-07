@@ -5,7 +5,8 @@ addpath(genpath('../functions'));
 
 load varkey.mat;
 
-filepath ='D:/csiem/data-warehouse/csv/';
+filepath = '../../../data-warehouse/csv/';
+%          'D:/csiem/data-warehouse/csv/';
 filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 

@@ -8,9 +8,11 @@ load ../../../code/actions/varkey.mat;
 load ../../../code/actions/agency.mat;
 
 
-filename = 'D:\csiem\data-lake\WAMSI\wwmsp2.2_light\Light Data\Light data Mastersheet_July2023-2.xlsx';
+filename = '../../../../data-lake/WAMSI/wwmsp2.2_light/Light Data/Light data Mastersheet_July2023-2.xlsx';
+             %'D:\csiem\data-lake\WAMSI\wwmsp2.2_light\Light Data\Light data Mastersheet_July2023-2.xlsx';
 
-outdir = 'D:\csiem\data-warehouse\csv\wamsi\wwmsp2.2_light\';mkdir(outdir);
+outdir = '../../../../data-warehouse/csv/wamsi/wwmsp2.2_light/';mkdir(outdir);
+%'D:\csiem\data-warehouse\csv\wamsi\wwmsp2.2_light\';
 
 
 data = readtable(filename,'sheet','all data');

@@ -1,7 +1,8 @@
 function export_metdata_2_csv
 addpath(genpath('../../functions/'));
 
-load D:\csiem/data-warehouse/csv_holding/bom/idy/metdata.mat;
+load '../../../../data-warehouse/csv_holding/bom/idy/metdata.mat'
+%D:\csiem/data-warehouse/csv_holding/bom/idy/metdata.mat;
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
@@ -33,7 +34,8 @@ thevars = fieldnames(agency.bom);
 % [snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
 % 
 
-outdir = 'D:/csiem/data-warehouse/csv/bom/idy/';
+outdir = '../../../../data-warehouse/csv/bom/idy/';
+%'D:/csiem/data-warehouse/csv/bom/idy/';
 
 writepath = 'data-warehouse/csv/bom/idy';
 

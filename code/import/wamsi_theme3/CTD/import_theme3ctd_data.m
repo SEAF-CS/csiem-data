@@ -6,7 +6,8 @@ load ../../../code/actions/sitekey.mat;
 load ../../../code/actions/varkey.mat;
 load ../../../code/actions/agency.mat;
 
-outdir = 'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
+outdir = '../../../../../data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/';mkdir(outdir);
+              %'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
 
 
 data = readtable([outdir,'wwmsp_theme3.1_CTD_reformat_bbusch_working.csv']);

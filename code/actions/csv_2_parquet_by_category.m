@@ -4,8 +4,11 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-outfilepath = 'D:/csiem/data-warehouse/parquet/category/';
-filepath ='D:/csiem/data-warehouse/csv/';
+
+outfilepath = '../../../data-warehouse/parquet/category/';
+             %'D:/csiem/data-warehouse/parquet/category/';
+filepath = '../../../data-warehouse/csv/';
+%          'D:/csiem/data-warehouse/csv/';
 
 mkdir(outfilepath);
 

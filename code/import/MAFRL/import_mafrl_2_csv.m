@@ -4,7 +4,8 @@ function import_mafrl_2_csv
 
 addpath(genpath('../../functions/'));
 
-thefile = 'D:/csiem/data-lake/csmc/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
+thefile = '../../../../data-lake/CSMC/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
+% /'D:/csiem/data-lake/csmc/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
 
 theyears = [1983 1985 1986 1987 1990:1:1993 1997:1:2020];
 %theyears = [2013];
@@ -21,7 +22,8 @@ thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
 
 
-outpath = 'D:/csiem/data-warehouse/csv_holding/csmc/csmcwq/';
+outpath = '../../../../data-lake/csv_holding/csmc/csmcwq/';
+%'D:/csiem/data-warehouse/csv_holding/csmc/csmcwq/';
 %outpath = 'csmcwq-mafrl/';
 fiderr = fopen('errorfile.csv','wt');
 fprintf(fiderr,'Year,Site,Var,Foundsite,Foundvar\n');

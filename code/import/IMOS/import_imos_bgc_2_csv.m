@@ -2,13 +2,15 @@ function import_imos_bgc_2_csv
 
 addpath(genpath('../../functions/'));
 
-thefile = 'D:/csiem/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+thefile = '../../../../data-lake/IMOS/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+%'D:/csiem/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = 'D:/csiem/data-warehouse/csv/imos/bgc/';
+outpath = '../../../../data-warehouse/csv/imos/bgc/';
+%'D:/csiem/data-warehouse/csv/imos/bgc/';
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
