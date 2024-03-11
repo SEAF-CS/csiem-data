@@ -20,22 +20,28 @@ end
 thesiteval = fieldnames(sitekey.imosbgc);
 thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.imosbgc);
+Test = readtable(thefile);
+% Test.Properties.VariableNames'
+%[~,headers] = xlsread(thefile,'A1:CE1');
+headers = Test.Properties.VariableNames;
 
-[~,headers] = xlsread(thefile,'A1:CE1');
+%[snum,sstr] = xlsread(thefile,'A2:CE1000');
 
-[snum,sstr] = xlsread(thefile,'A2:CE1000');
+%stations = sstr(:,3);
+stations = Test{:,3};
 
-stations = sstr(:,3);
-mdates = datenum(sstr(:,5),'dd/mm/yyyy');
+%mdates = datenum(sstr(:,5),'dd/mm/yyyy');
+mdates = datenum(Test{:,5});
 
-
-Depths = snum(:,6);
+%Depths = snum(:,6);
+Depths = Test{:,12}; %9 or 12
 Depths(isnan(Depths)) = 0;
 
 
 ustations = unique(stations);
 
-for i = 9:length(headers)
+%for i = 9:length(headers)
+for i = 9:width(Test)
     for j = 1:length(ustations)
         foundstation = 0 ;
         for k = 1:length(thesiteval)
@@ -74,7 +80,8 @@ for i = 9:length(headers)
             
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
-            thedata_raw = snum(sss,i-6) * agency.imosbgc.(theagencyval{foundvar}).Conv;
+            thedata_raw = Test{sss,i-6} * agency.imosbgc.(theagencyval{foundvar}).Conv;
+            %thedata_raw = snum(sss,i-6) * agency.imosbgc.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
             

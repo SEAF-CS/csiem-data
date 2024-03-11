@@ -4,7 +4,8 @@ addpath(genpath('../../functions/'));
 filepath = '../../../../data-lake/DWER/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/';
 %             'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
 
-filelist = dir(fullfile(filepath, '**\*.csv'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(filepath, '**/*.csv'));  %get list of files and folders in any subfolder
+%                                    / instead of \
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 
@@ -38,34 +39,40 @@ for i = 1:length(filelist)
 
     filename = [filelist(i).folder,'/',filelist(i).name];
 
-    [~,headers] = xlsread(filename,'A3:Z3');
-
-    tab = readtable(filename);
+    %[~,headers] = xlsread(filename,'A3:Z3');
+    %tab = readtable(filename)
+    tab = readtable(filename,'NumHeaderLines',2);
 
     tabvars = fieldnames(tab);
 
+    headers = tab.Properties.VariableNames;
+
     
     kk = strfind(filelist(i).name,'Par');
-    
     if isempty(kk)
         if strcmpi(filelist(i).name,'6147036_Water Quality.csv') == 0
-            mdate = datenum(tab.Var1(5:end),'HH:MM:SS dd/mm/yyyy');
+            mdate = datenum(tab.Date(1:end),'HH:MM:SS dd/mm/yyyy'); 
+            %no longer var1, have actual names now it also now starts at 1 because i told it how big header was
         else
-            mdate = datenum(tab.Var1(5:end));%,'dd/mm/yyyy HH:MM');
+            mdate = datenum(tab.Date(1:end));%,'dd/mm/yyyy HH:MM');
         end
     else
-        mdate = datenum(tab.Var1(5:end));%,'dd/mm/yyyy HH:MM');
+        mdate = datenum(tab.Date(1:end));%,'dd/mm/yyyy HH:MM');
     end
-    sss = find(strcmpi(headers,'Sample Depth (m)') ==1 );
+    %sss = find(strcmpi(headers,'Sample Depth (m)') ==1 );
+    %%%% this will never hit anymore because readtable doesnt like spaces in variable names
+    %hence
+    sss = find(strcmpi(headers,'SampleDepth_m_') ==1 );
 
 
     depth = [];
 
     if ~isempty(sss)
 
-        theheader = ['Var',num2str(sss)];
+        %theheader = ['Var',num2str(sss)];
+        theheader = 'SampleDepth_m_'
 
-        depth = tab.(theheader)(5:end) * 1;
+        depth = tab.(theheader)(1:end) * 1; 
         depthdata.(['s',num2str(thesite)]).Depth = depth;
         depthdata.(['s',num2str(thesite)]).Mdate = mdate;
         
@@ -85,6 +92,7 @@ for i = 1:length(filelist)
         
     else
         sss = length(headers) + 2;
+        throwerror = header(-1); %% Double check what this bit does
 
         if i == 8
             dval = 0.5;
@@ -114,6 +122,7 @@ for i = 1:length(filelist)
         
     end
 
+    throwerror = headers(-1); %doublecheck
     for j = 2:2:sss-2
         thevar = headers{j};
         thedata = tab.(['Var',num2str(j)])(5:end);

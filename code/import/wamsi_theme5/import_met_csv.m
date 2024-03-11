@@ -14,7 +14,8 @@ outdir = '../../../../data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'di
 %'            D:csiem/data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'dir'); mkdir(outdir); end
 
 data = readtable(filename, 'ReadVariableNames', false, 'HeaderLines', 4);
-[~,headers] = xlsread(filename,'C2:ZZ2');
+%[~,headers] = xlsread(filename,'C2:ZZ2');
+headers = readmatrix(filename,Range="C2:ZZ2",OutputType="string");
 
 mdate = datenum(data.Var1);
 

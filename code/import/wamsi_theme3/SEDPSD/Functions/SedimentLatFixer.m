@@ -1,5 +1,5 @@
 function Sediment = SedimentLatFixer(Sediment)
-    rawInputTable = readtable("/Projects2/csiem-data-hub/data-swamp/WWMSP3.1 - Sediment Quality CutDown/Baseline_sediment_site_location LATLON.xlsx");
+    rawInputTable = readtable("../../../../../data-swamp/WWMSP3.1 - Sediment Quality CutDown/Baseline_sediment_site_location LATLON.xlsx");
     
     %% AJ 1
     Sediment{9,4:5} = rawInputTable{5,5:6};

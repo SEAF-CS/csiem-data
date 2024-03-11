@@ -162,6 +162,17 @@ if import_theme3
     import_theme3ctd_data;
     
     cd ../../../actions/
+
+    %Sediment
+    cd ../import/wamsi_theme3/SEDPSD
+    run ImportSEDPSDMain
+    cd ../../../actions
+
+    cd ../import/wamsi_theme3/SGREST
+    run ImportSGRESTMain
+    cd ../../../actions
+
+    
 end
 
 if import_wc

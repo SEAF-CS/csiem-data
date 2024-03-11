@@ -12,12 +12,17 @@ filepath = '../../../data-warehouse/csv/';
 
 mkdir(outfilepath);
 
-filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(filepath, '**/*HEADER.csv'));  %get list of files and folders in any subfolder
+%filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
+
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 agency = [];
 for i = 1:length(filelist)
-    data(i).header = import_header([filelist(i).folder,'\',filelist(i).name]);
+    [filelist(i).folder,'/',filelist(i).name]
+    data(i).header = import_header([filelist(i).folder,'/',filelist(i).name]);
+%    data(i).header = import_header([filelist(i).folder,'\',filelist(i).name]);
+
     agency = [agency;{data(i).header.DataCategory}];
 end
 

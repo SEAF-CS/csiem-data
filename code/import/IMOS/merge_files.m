@@ -8,8 +8,8 @@ inpath = '../../../../data-warehouse/csv_holding/imos/amnmprofile';
 outpath = '../../../../data-warehouse/csv/imos/amnmprofile'; mkdir(outpath);
 %'D:/csiem/data-warehouse/csv/imos/amnmprofile/'; mkdir(outpath);
 
-
-filelist = dir(fullfile(inpath, '**\*_DATA.csv'));  %get list of files and folders in any subfolder
+temp = fullfile(inpath, '**/*_DATA.csv')
+filelist = dir(fullfile(inpath, '**/*_DATA.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)
@@ -53,7 +53,6 @@ for i = 1:length(filelist)
     end
     
 end
-
 filelist = dir(fullfile(outpath, '**\*_DATA.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 

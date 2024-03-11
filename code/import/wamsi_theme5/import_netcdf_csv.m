@@ -4,8 +4,8 @@ function import_netcdf_csv
 
 basedir = '../../../../data-lake/WAMSI/wwmsp5_wq/';
              %'D:csiem/data-lake/wamsi/wwmsp5_wq/';
-
-filelist = dir(fullfile(basedir, '**\*.nc'));  %get list of files and folders in any subfolder
+%filelist = dir(fullfile(basedir, '**\*.nc'));
+filelist = dir(fullfile(basedir, '**/*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 adcpfilepath = '../../../../data-lake/WAMSI/wwmsp5_adcp/ADCP/';

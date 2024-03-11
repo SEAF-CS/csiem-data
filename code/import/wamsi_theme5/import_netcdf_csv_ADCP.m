@@ -12,7 +12,8 @@ mkdir(outdir);
 
 plotdir = 'Images/';mkdir(plotdir);
 
-filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
+%filelist = dir(fullfile(filepath, '**\*.nc'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(filepath, '**/*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 % Conversion
