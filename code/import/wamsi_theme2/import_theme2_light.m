@@ -68,8 +68,14 @@ for i = 1:length(headers)
             wdate = mdate(sss,1);
             wdepth = mdepth(sss,1);
             
+
+            fvarname = regexprep(varname,'µ','u');
+            fvarname = regexprep(fvarname,'/','\');    
+
+            fvarname
             
-            filename = [outdir,sitekey.wwmsp2.(thesites{sitenum}).AED,'_',regexprep(varname,' ','_'),'_DATA.csv'];
+            
+            filename = [outdir,sitekey.wwmsp2.(thesites{sitenum}).AED,'_',regexprep(fvarname,' ','_'),'_DATA.csv'];
             
             
             fid = fopen(filename,'wt');

@@ -19,22 +19,25 @@ fprintf(fid,'Date,X,Y,Depth (m),Height (mAHD),Site,SampleID,Variable,Units,Readi
 
 for i = 1:length(filelist)
     
-    
     filename = [filelist(i).folder,'/',filelist(i).name];
     %filename = [filelist(i).folder,'\',filelist(i).name];
     
     disp(filename);
     
-    siteName = readmatrix(filename,"Range","B4:B4","OutputType","string")
-    LatLon = readmatrix(filename,"Range","B5:B6","OutputType","string")
+    siteName = readmatrix(filename,"Range","B4:B4","OutputType","string");
+    LatLon = readmatrix(filename,"Range","B5:B6","OutputType","string");
     %[snum,sstr,scell] = xlsread(filename,'B4:B6');
     
     sdates = readmatrix(filename,Range="B1:D1",OutputType="string");
     %[~,~,sdates] = xlsread(filename,'B1:D1');
     
-    ID = siteName;%scell{1};
-    X = LatLon(1);%scell{2};
-    Y = LatLon(2);%scell{3};
+    ID = char(siteName); %scell{1};
+    X = char(LatLon(1)); %scell{2};
+    Y = char(LatLon(2)); %scell{3};
+
+    %ID = (siteName); %scell{1};
+    %X = (LatLon(1)); %scell{2};
+    %Y = (LatLon(2)); %scell{3};
     
     if isnumeric(ID)
         ID = num2str(ID);

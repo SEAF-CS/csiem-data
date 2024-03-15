@@ -15,14 +15,14 @@ import_imos_srs = 0;
 
 import_dpird = 0;
 import_moorings = 0;
-import_theme2 = 0;
+import_theme2 = 1;
 
 import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 
-create_smd = 1;
+create_smd = 0;
 
 create_matfiles = 0;
 create_parquet = 0;
@@ -30,10 +30,10 @@ create_parquet = 0;
 create_dataplots = 0;
 plotnew_dataplots = 0;
 
-create_shapefiles = 1;
+create_shapefiles = 0;
 
 
-run_marvl = 1;
+run_marvl = 0;
 
 
 %___________________________________________________________________________

@@ -1,6 +1,6 @@
 function import_netcdf_csv
 
-%addpath(genpath('../../functions'));
+addpath(genpath('../../functions'));
 
 basedir = '../../../../data-lake/WAMSI/wwmsp5_wq/';
              %'D:csiem/data-lake/wamsi/wwmsp5_wq/';

@@ -4,7 +4,7 @@ function import_freo_tidal_data
 main_dir = '../../../../data-lake/DOT/tide/FFFBH01/'
 %'/Projects2/csiem-data-hub/data-lake/DOT/tide/FFFBH01/';
 %'D:\csiem/data-lake/dot/tide/FFFBH01/';
-outdir = '../../../..//data-warehouse/csv/dot/tide/';
+outdir = '../../../../data-warehouse/csv/dot/tide/';
 %'/Projects2/csiem-data-hub/data-warehouse/csv/dot/tide/';
 %'D:\csiem/data-warehouse/csv/dot/tide/';
 

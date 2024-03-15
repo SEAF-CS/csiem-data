@@ -2,9 +2,9 @@ function import_theme3ctd_data
 addpath(genpath('../../functions/'));
 
 
-load ../../../code/actions/sitekey.mat;
-load ../../../code/actions/varkey.mat;
-load ../../../code/actions/agency.mat;
+load ../../../../code/actions/sitekey.mat;
+load ../../../../code/actions/varkey.mat;
+load ../../../../code/actions/agency.mat;
 
 outdir = '../../../../../data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/';mkdir(outdir);
               %'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
