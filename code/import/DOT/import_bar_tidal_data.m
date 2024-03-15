@@ -3,7 +3,7 @@ function import_bar_tidal_data
 main_dir = '../../../../data-lake/DOT/tide/PTBAR02/';
 %'D:\csiem\data-lake\DOT\tide/PTBAR02/';
 
-outdir = '../../../../csiem-data-hub/data-warehouse/csv/dot/tide/';
+outdir = '../../../../data-warehouse/csv/dot/tide/';
 %'D:\csiem/data-warehouse/csv/dot/tide/';
 
 if ~exist(outdir,'dir')
