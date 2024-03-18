@@ -25,7 +25,7 @@ Test = readtable(thefile);
 %[~,headers] = xlsread(thefile,'A1:CE1');
 headers = Test.Properties.VariableNames;
 
-%[snum,sstr] = xlsread(thefile,'A2:CE1000');
+[snum,sstr] = xlsread(thefile,'A2:CE1000');
 
 %stations = sstr(:,3);
 stations = Test{:,3};
@@ -36,12 +36,10 @@ mdates = datenum(Test{:,5});
 %Depths = snum(:,6);
 Depths = Test{:,12}; %9 or 12
 Depths(isnan(Depths)) = 0;
-
-
 ustations = unique(stations);
 
-%for i = 9:length(headers)
 for i = 9:width(Test)
+%for i = 9:length(headers)
     for j = 1:length(ustations)
         foundstation = 0 ;
         for k = 1:length(thesiteval)
@@ -64,9 +62,6 @@ for i = 9:width(Test)
 %         end
         
         if foundvar > 0
-            
-            
-            
             
             thefoundvar = 0;
             for nn = 1:length(thevarval)
