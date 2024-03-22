@@ -48,8 +48,9 @@ function HeaderCSV(InputFlatFile,VarKey)
 
         fid = fopen([fileName,'_DATA.csv'],'a');
         
-        Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
-        Depth = 0;
+        %Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
+        Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd HH:MM:SS');
+	    Depth = 0;
         Data = table2array(Table(DataNum,'Var8')); %HardCoded to 8
         QC = 'N';
         if ~isnan(Data)

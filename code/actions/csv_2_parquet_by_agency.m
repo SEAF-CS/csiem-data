@@ -18,7 +18,7 @@ filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 agency = [];
 for i = 1:length(filelist)
-    [filelist(i).folder,'/',filelist(i).name]
+    display([filelist(i).folder,'/',filelist(i).name])
     data(i).header = import_header([filelist(i).folder,'/',filelist(i).name]);
 %    data(i).header = import_header([filelist(i).folder,'\',filelist(i).name]);
 

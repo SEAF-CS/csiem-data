@@ -46,7 +46,7 @@ for ag = 1:length(unique_agency)
         
         
         
-        headerfile = [filelist(find_agency(ff)).folder,'\',filelist(find_agency(ff)).name];
+        headerfile = [filelist(find_agency(ff)).folder,'/',filelist(find_agency(ff)).name];
         datafile = regexprep(headerfile,'HEADER','DATA');
         
         % Import the header stuff

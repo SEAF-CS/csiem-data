@@ -17,8 +17,10 @@ filelist = dir(fullfile(filepath, '**/*HEADER.csv'));  %get list of files and fo
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 agency = [];
+            
+
 for i = 1:length(filelist)
-    [filelist(i).folder,'/',filelist(i).name]
+    display([filelist(i).folder,'/',filelist(i).name])
     data(i).header = import_header([filelist(i).folder,'/',filelist(i).name]);
     %data(i).header = import_header([filelist(i).folder,'\',filelist(i).name]);
 
@@ -74,6 +76,7 @@ for ag = 7%1:length(unique_agency)
 
             % tab = readtable(datafile,opts);
 
+            display(datafile)
             tt = import_datafile_raw(datafile);
             disp('Finished Import');
             tab = struct2table(tt);

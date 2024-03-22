@@ -52,7 +52,8 @@ function HeaderCSV(InputFlatFile,VarKey)
 
     
         
-        Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
+        %Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
+        Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd HH:MM:SS');
         Depth = 0;
         Data = table2array(Table(DataNum,'Var8')); %HardCoded to 8
         QC = 'N';

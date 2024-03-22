@@ -25,7 +25,7 @@ Test = readtable(thefile);
 %[~,headers] = xlsread(thefile,'A1:CE1');
 headers = Test.Properties.VariableNames;
 
-[snum,sstr] = xlsread(thefile,'A2:CE1000');
+%[snum,sstr] = xlsread(thefile,'A2:CE1000');
 
 %stations = sstr(:,3);
 stations = Test{:,3};
@@ -75,7 +75,7 @@ for i = 9:width(Test)
             
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
-            thedata_raw = Test{sss,i-6} * agency.imosbgc.(theagencyval{foundvar}).Conv;
+            thedata_raw = Test.(headers{i})(sss) * agency.imosbgc.(theagencyval{foundvar}).Conv;
             %thedata_raw = snum(sss,i-6) * agency.imosbgc.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
@@ -93,7 +93,7 @@ for i = 9:width(Test)
             
             filevar = regexprep(varkey.(thevarval{thefoundvar}).Name,' ','_');
             filevar = regexprep(filevar,'+','_');
-            filename = [outpath,sitekey.imosbgc.(thesiteval{foundstation}).AED,'_',filevar,'_DATA.csv'];
+            filename = [outpath,sitekey.imosbgc.(thesiteval{foundstation}).AED,'_',filevar,'_DATA.csv']
             fid = fopen(filename,'wt');
             fprintf(fid,'Date,Depth,Data,QC\n');
             for nn = 1:length(thedata)
