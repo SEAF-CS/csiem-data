@@ -3,7 +3,7 @@ function merge_files
 addpath(genpath('../../functions/'));
 
 
-inpath = '../../../../data-warehouse/csv_holding/imos/amnmprofile';
+inpath = '../../../../data-warehouse/csv_holding/imos/amnmprofile/';
 %'D:/csiem/data-warehouse/csv_holding/imos/amnmprofile/';
 outpath = '../../../../data-warehouse/csv/imos/amnmprofile'; mkdir(outpath);
 %'D:/csiem/data-warehouse/csv/imos/amnmprofile/'; mkdir(outpath);
@@ -53,7 +53,7 @@ for i = 1:length(filelist)
     end
     
 end
-filelist = dir(fullfile(outpath, '**\*_DATA.csv'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(outpath, '**/*_DATA.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)
