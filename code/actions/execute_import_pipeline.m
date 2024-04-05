@@ -15,14 +15,14 @@ import_imos_srs = 0;
 
 import_dpird = 0;
 import_moorings = 0;
-import_theme2 = 1;
+import_theme2 = 0;
 
 import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 
-create_smd = 0;
+create_smd = 1;
 
 create_matfiles = 0;
 create_parquet = 0;
@@ -33,7 +33,7 @@ plotnew_dataplots = 0;
 create_shapefiles = 0;
 
 
-run_marvl = 0;
+run_marvl = 1;
 
 
 %___________________________________________________________________________
@@ -55,7 +55,7 @@ if import_dwer
     % DWER Export
     cd ../import/DWER;
     
-    run_WIR_import_v2;
+    %run_WIR_import_v2;
     export_wir_v2_stage1;
     import_and_reformat_flatfile;
     
@@ -212,10 +212,10 @@ if create_dataplots
 end
 
 if run_marvl
-    addpath(genpath('D:\csiem\marvl'));
+    addpath(genpath('/GIS_DATA/csiem-data-hub/marvl'));
     create_marvl_config_information;
     run_AEDmarvl marvl_pipeline_images;
-    rmpath(genpath('D:\csiem\marvl'));
+    rmpath(genpath('/GIS_DATA/csiem-data-hub/marvl'));
 end
 
 if create_shapefiles

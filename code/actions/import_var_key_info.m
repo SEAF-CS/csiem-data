@@ -82,6 +82,11 @@ agency.imossrs = import_agency_conv('IMOSSRS');
 agency.imosprofile = import_agency_conv('IMOSPROFILE');
 agency.fpamqmp = import_agency_conv('FPA-MQMP');
 
+agency.theme3sedpsd = import_agency_conv('WWMSP3SEDPSD');
+agency.theme3sgrest = import_agency_conv('WWMSP3SGREST');
+
+agency.theme5waves = import_agency_conv('WWMSP5Waves');
+
 
 save agency.mat agency -mat;
 
