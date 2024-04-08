@@ -86,6 +86,7 @@ agency.theme3sedpsd = import_agency_conv('WWMSP3SEDPSD');
 agency.theme3sgrest = import_agency_conv('WWMSP3SGREST');
 
 agency.theme5waves = import_agency_conv('WWMSP5Waves');
+agency.bmtswan = import_agency_conv('BMT-SWAN');
 
 
 save agency.mat agency -mat;
