@@ -21,6 +21,7 @@ sitekey.dot = read_site_sheet('DOT');
 
 sitekey.wwmsp5waves = read_site_sheet('WWMSP5.2WAVES');
 sitekey.bmtswan = read_site_sheet('BMT-SWAN');
+sitekey.wwmsp1wrf = read_site_sheet('WWMSP1.1-WFR');
 
 
 

@@ -7,6 +7,9 @@ function HeaderCSV(InputFlatFile,VarKey)
     [UniqueVars,VarIndex,~] = unique(table2array(Table(:,"Var6")));
     [UniqueSites,SiteIndex,~] = unique(table2array(Table(:,"Var4")));
 
+    OutDir = '../../../../../data-warehouse/csv/wamsi/wwmsp3.1_SGREST/';
+    mkdir(OutDir);
+
     %% Create Header and CSV
     for VarNum = 1:length(UniqueVars)
         VarKeyInd = VarKey{:,2} == UniqueVars(VarNum);
@@ -15,7 +18,7 @@ function HeaderCSV(InputFlatFile,VarKey)
             %  mafrl_CB_Ammonium_Int_Data.csv
             %  mafrl_CB_Ammonium_Int_Header.csv
 
-            fileName = ['../../../../../data-warehouse/csv/wamsi/wwmsp3.1_SGREST/',char(UniqueSites(SiteNum)) ,'_',char(UniqueVars(VarNum))];
+            fileName = [OutDir,char(UniqueSites(SiteNum)) ,'_',char(UniqueVars(VarNum))];
                 fileName = filenameGoodifier(fileName);
 
             
@@ -43,7 +46,7 @@ function HeaderCSV(InputFlatFile,VarKey)
         SiteName = table2array(Table(DataNum,"Var4"));
         VarName = table2array(Table(DataNum,"Var6"));
 
-        fileName = ['../../../../../data-warehouse/csv/wamsi/wwmsp3.1_SGREST/',char(SiteName) ,'_',char(VarName)];
+        fileName = [OutDir,char(SiteName) ,'_',char(VarName)];
                 fileName = filenameGoodifier(fileName);
 
         fid = fopen([fileName,'_DATA.csv'],'a');
