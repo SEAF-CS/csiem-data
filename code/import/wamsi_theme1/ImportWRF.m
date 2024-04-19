@@ -33,6 +33,11 @@ function ImportWRF()
         DateVec = DataFilesTable{:,1};
         for varIndex = 2:length(Vars)
             
+            if Var2BeSkippedFunction(Vars(varIndex)) == true
+                disp([Vars{varIndex}, 'is being skipped']);
+                continue
+            end
+
             % displays current varibale name and how big it is (uses date)
             disp(['     Processing Variable ' Vars{varIndex} ' ' num2str(length(DateVec)) 'x1']);
 
@@ -48,7 +53,7 @@ function ImportWRF()
 
             fid = fopen(fnameData,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
-            DataVec = DataFilesTable{:,varIndex};
+            DataVec = DataFilesTable{:,varIndex}*AgencyStruct.Conv;
             for nn = 1:length(DataVec)
                 DateString = datestr(DateVec(nn),"yyyy-mm-dd HH:MM:SS");
                 Depth = 0;
@@ -80,6 +85,22 @@ function ImportWRF()
             write_header(fnameHeader,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
 
         end
+    end
+
+end
+
+function Skip = Var2BeSkippedFunction(HeaderName)
+    SkipableVars = {'HFX',
+    'LH',
+    'SST',
+    'RAINV'
+    };
+    Skip = false;
+    for i =1:length(SkipableVars)
+        if strcmp(HeaderName,SkipableVars{i})
+            Skip = true;
+        end
+
     end
 
 end
