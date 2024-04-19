@@ -1,9 +1,9 @@
 function ImportWRF()
-    % load ../../actions/varkey.mat;
-    % load ../../actions/agency.mat;
+    load ../../actions/varkey.mat;
+    load ../../actions/agency.mat;
      load ../../actions/sitekey.mat;
 
-    %VarListStruct = agency.wamsiwrf;
+    VarListStruct = agency.wwmsp1wrf;
     SiteListStruct = sitekey.wwmsp1wrf;
 
     outdir = '../../../../data-warehouse/csv/wamsi/wwmsp1.1_wrf/';
@@ -32,18 +32,18 @@ function ImportWRF()
         % First elemetn is Date;
         DateVec = DataFilesTable{:,1};
         for varIndex = 2:length(Vars)
+            
             % displays current varibale name and how big it is (uses date)
             disp(['     Processing Variable ' Vars{varIndex} ' ' num2str(length(DateVec)) 'x1']);
 
             %workout what variable we are dealing with
-            disp('      Havent got variable key done yet')
-            %AgencyStruct = SearchVarlist(VarListStruct,Vars,varIndex);
-            %VarStruct = varkey.(AgencyStruct.ID);
-            %[fnameData,fnameHeader] = filenamecreator(outdir,SiteStruct,VarStruct);
+            AgencyStruct = SearchVarlist(VarListStruct,Vars,varIndex);
+            VarStruct = varkey.(AgencyStruct.ID);
+            [fnameData,fnameHeader] = filenamecreator(outdir,SiteStruct,VarStruct);
 
-            tempname = [outdir,Vars{varIndex},SiteStruct.AED];
-            fnameData = [tempname,'_Data.csv'];
-            fnameHeader = [tempname,'_Header.csv'];
+            % tempname = [outdir,Vars{varIndex},SiteStruct.AED];
+            % fnameData = [tempname,'_Data.csv'];
+            % fnameHeader = [tempname,'_Header.csv'];
             
 
             fid = fopen(fnameData,'W');
@@ -64,14 +64,14 @@ function ImportWRF()
             Desc = SiteStruct.Description;
 
 
-            disp('      Skipping header stuff DONT FORGET')
-            % varID = AgencyStruct.ID;
-            % Cat = VarStruct.Category;
-            % varstring = VarStruct.Name;
+            disp('          Skipping header stuff DONT FORGET')
+            varID = AgencyStruct.ID;
+            Cat = VarStruct.Category;
+            varstring = VarStruct.Name;
 
-            varID = 0;%AgencyStruct.ID;
-            Cat = '';%VarStruct.Category;
-            varstring = '';%VarStruct.Name;
+            varID = AgencyStruct.ID;
+            Cat = VarStruct.Category;
+            varstring = VarStruct.Name;
 
             wdate = '';
             sitedepth = '';
