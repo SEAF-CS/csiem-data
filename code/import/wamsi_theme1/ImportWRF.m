@@ -46,14 +46,87 @@ function ImportWRF()
             VarStruct = varkey.(AgencyStruct.ID);
             [fnameData,fnameHeader] = filenamecreator(outdir,SiteStruct,VarStruct);
 
-            % tempname = [outdir,Vars{varIndex},SiteStruct.AED];
-            % fnameData = [tempname,'_Data.csv'];
-            % fnameHeader = [tempname,'_Header.csv'];
+            if strcmp(AgencyStruct.ID,'var00152')
+                
+                DataVec = DataFilesTable{:,varIndex}*AgencyStruct.Conv;
+                for MonthNumber = 1:12
+                    IndexesOfThisMonth = month(DateVec)==MonthNumber;
+                    if MonthNumber == 1 
+                        %removing the january from 2023 in the 2022 data
+                        IndexesOfThisMonth = IndexesOfThisMonth(1:end-1);
+                    end
+                
+                    %Shifting to include the midnight of the next month
+                    IndexesOfThisMonth = [false;IndexesOfThisMonth(1:end-1)];
+                
+                    MonthDateVec = DateVec(IndexesOfThisMonth);
+                    MonthDataVec = DataVec(IndexesOfThisMonth); 
+                
+                    dMonthDataVec = derivitiveAlways30mins(MonthDateVec,MonthDataVec);
+                
+                    [fnameDataAcc,fnameHeaderAcc] = PrecipName(outdir,SiteStruct,VarStruct,MonthNumber);
+                    RateId = 'var00383';
+                    RateVarStruct = varkey.(RateId);
+                    if ~strcmp(RateVarStruct.Name,'Precipitation Rate')
+                        fprintf('Something in the varkey has changed and my hardcoded variable id is broken\n\n');
+                        stop
+                    end
+
+                    [fnameDataRate,fnameHeaderRate] = PrecipName(outdir,SiteStruct,RateVarStruct,MonthNumber);
+                    
+                    fid = fopen(fnameDataAcc,'W');
+                    fprintf(fid,'Date,Depth,Data,QC\n');
+
+                    fid2 = fopen(fnameDataRate,'W');
+                    fprintf(fid,'Date,Depth,Data,QC\n');
+                    % MonthDateVec,MonthDataVec,dMonthDataVec
+
+                    for nn = 1:length(MonthDateVec)
+                        DateString = datestr(MonthDateVec(nn),"yyyy-mm-dd HH:MM:SS");
+                        Depth = 0;
+                        QC = 'N';
+
+                        %Acculamtive
+                        fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString,Depth,MonthDataVec(nn),QC);
+
+                        %Rate
+                        fprintf(fid2,'%s,%4.4f,%4.4f,%s\n',DateString,Depth,dMonthDataVec(nn),QC);
+                    end
+                    fclose(fid);
+                    fclose(fid2);
+
+                    lat = SiteStruct.Lat;
+                    lon = SiteStruct.Lon;
+                    ID = SiteStruct.ID;
+                    Desc = SiteStruct.Description;
+                    wdate = '';
+                    sitedepth = '';
+        
+                    %Acumulative
+                    varID = AgencyStruct.ID;
+                    Cat = VarStruct.Category;
+                    varstring = VarStruct.Name;
+                    write_header(fnameHeaderAcc,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
+
+                    %Rate
+                    varID = RateId;
+                    Cat = RateVarStruct.Category;
+                    varstring = RateVarStruct.Name;
+                    write_header(fnameHeaderRate,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
+
+                end
+                continue
+            end
+
             
 
             fid = fopen(fnameData,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
             DataVec = DataFilesTable{:,varIndex}*AgencyStruct.Conv;
+            
+
+
+
             for nn = 1:length(DataVec)
                 DateString = datestr(DateVec(nn),"yyyy-mm-dd HH:MM:SS");
                 Depth = 0;
@@ -68,11 +141,6 @@ function ImportWRF()
             ID = SiteStruct.ID;
             Desc = SiteStruct.Description;
 
-
-            disp('          Skipping header stuff DONT FORGET')
-            varID = AgencyStruct.ID;
-            Cat = VarStruct.Category;
-            varstring = VarStruct.Name;
 
             varID = AgencyStruct.ID;
             Cat = VarStruct.Category;
@@ -168,4 +236,20 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
     data = [base,'_DATA.csv'];
     header = [base,'_Header.csv'];
 
+end
+
+function dY = derivitiveAlways30mins(tVec,Y)
+    dY = diff(Y)/(30*60);
+    dY= [Y(1);dY];
+end
+
+function [data,header] = PrecipName(outpath,SiteStruct,VarStruct,Month)
+    MonthList = {'Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'};
+
+    filevar = regexprep(VarStruct.Name,' ','_');
+    filesite = SiteStruct.AED;
+
+    base = [outpath,filesite,'_',filevar,'_',MonthList{Month}];
+    data = [base,'_DATA.csv'];
+    header = [base,'_Header.csv'];
 end

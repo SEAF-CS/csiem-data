@@ -4,22 +4,23 @@ This data set is imported via the matlab script ImportWRF.m. It is a numerically
 ### Raw Data
 This data is imported straight from the data lake in the form of csv's.
 ### Variables
--PSFC
--SWDOWN
--GLW
--RAINNC
--T2
--Q2
--HFX
--LH
--SST
--REL_HUM
--U10
--V10
--WINDSPD10
--WINDDIR10
--CLDFRA_MAX
--RAINV
+- PSFC
+- SWDOWN
+- GLW
+- RAINNC
+- RAINNCRATE
+- T2
+- Q2
+- HFX
+- LH
+- SST
+- REL_HUM
+- U10
+- V10
+- WINDSPD10
+- WINDDIR10
+- CLDFRA_MAX
+- RAINV
 
 ### Conversions
 ![Variable Conversion Table](./WWMSP%20WRF%20Conversions.png)
