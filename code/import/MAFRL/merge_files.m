@@ -2,12 +2,12 @@ function merge_files
 
 addpath(genpath('../../functions/'));
 
+run('../../actions/csiem_data_paths.m')
+inpath = [datapath,'data-warehouse/csv_holding/csmc/csmcwq/'];
+outpath = [datapath,'data-warehouse/csv/csmc/csmcwq/']; mkdir(outpath);
 
-inpath = 'D:/csiem/data-warehouse/csv_holding/csmc/csmcwq/';
-outpath = 'D:/csiem/data-warehouse/csv/csmc/csmcwq/'; mkdir(outpath);
 
-
-filelist = dir(fullfile(inpath, '**\*_DATA.csv'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(inpath, '**/*_DATA.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)
@@ -52,7 +52,7 @@ for i = 1:length(filelist)
     
 end
 
-filelist = dir(fullfile(outpath, '**\*_DATA.csv'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(outpath, '**/*_DATA.csv'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)

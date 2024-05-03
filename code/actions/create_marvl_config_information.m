@@ -2,9 +2,11 @@ function create_marvl_config_information
 
 load varkey.mat;
 
+csiem_data_paths
+
 allvars = fieldnames(varkey);
 
-matdir = '/GIS_DATA/csiem-data-hub/data-warehouse/mat/agency/';
+matdir = [datapath,'data-warehouse/mat/agency/'];
 
 filelist = dir(fullfile(matdir, '**/*.mat'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list

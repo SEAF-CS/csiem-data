@@ -4,10 +4,10 @@ addpath(genpath('../functions/'));
 
 load varkey.mat;
 
-
-outfilepath = '../../../data-warehouse/parquet/category/';
+run('csiem_data_paths.m')
+outfilepath = [datapath,'data-warehouse/parquet/category/'];
              %'D:/csiem/data-warehouse/parquet/category/';
-filepath = '../../../data-warehouse/csv/';
+filepath = [datapath,'data-warehouse/csv/'];
 %          'D:/csiem/data-warehouse/csv/';
 
 mkdir(outfilepath);

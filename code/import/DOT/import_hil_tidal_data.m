@@ -1,9 +1,11 @@
 function import_hil_tidal_data
+    run(['../../actions/csiem_data_paths.m'])
 %4 ../ gets back to Csiem-data-hub
-main_dir = '../../../../data-lake/DOT/tide/HLHIL01/';
+ main_dir = [datapath,'data-lake/DOT/tide/HLHIL01/'];
 %'D:\csiem/data-lake/dot/tide/HLHIL01/';
 
-outdir = '../../../../data-warehouse/csv/dot/tide/'
+
+outdir = [datapath,'data-warehouse/csv/dot/tide/'];
 %'D:\csiem/data-warehouse/csv/dot/tide/';
 if ~exist(outdir,'dir')
     mkdir(outdir);

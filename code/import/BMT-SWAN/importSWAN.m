@@ -1,5 +1,7 @@
 function importSWAN()
-    load ../../../../data-lake/BMT/SWAN/wave_export.mat
+    run ../../actions/csiem_data_paths
+    load([datapath,'data-lake/BMT/SWAN/wave_export.mat'])
+
 
     load ../../actions/varkey.mat;
     load ../../actions/agency.mat;

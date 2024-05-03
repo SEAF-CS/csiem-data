@@ -9,10 +9,10 @@ shp = shaperead('sat_boundary.shp');
 
 % ______________________________________________________
 % TEMP
+run('../../actions/csiem_data_paths.m')
+ncname = [datapath,'data-lake/IMOS/srs/L3S/L3S-single-1day-night/IMOS_aggregation_20231212T044624Z.nc'];
 
-ncname = "D:\csiem\data-lake\IMOS\srs\L3S\L3S-single-1day-night\IMOS_aggregation_20231212T044624Z.nc";
-
-outdir = 'D:\csiem\data-warehouse\csv\imos\srs_l3s\';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/imos/srs_l3s/'];mkdir(outdir);
 
 data = tfv_readnetcdf(ncname);
 
@@ -51,7 +51,7 @@ for i = 1:length(data.lat)
                 end
                 fclose(fid);
 
-                headerfile = regexprep(datafile,'_DATA','_HEADER');
+                headerfile = regexprep(datafile,'_DATA.csv','_HEADER.csv')
 
                 fid = fopen(headerfile,'wt');
                 fprintf(fid,'Agency Name,Integrated Marine Observing System\n');

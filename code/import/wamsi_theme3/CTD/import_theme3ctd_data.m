@@ -6,8 +6,10 @@ load ../../../../code/actions/sitekey.mat;
 load ../../../../code/actions/varkey.mat;
 load ../../../../code/actions/agency.mat;
 
-outdir = '../../../../../data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/';mkdir(outdir);
-outdir_main = '../../../../../data-warehouse/csv/wamsi/wwmsp3.1_ctd/';mkdir(outdir_main);
+run('../../../actions/csiem_data_paths.m')
+
+outdir = [datapath,'data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/'];mkdir(outdir);
+outdir_main = [datapath,'data-warehouse/csv/wamsi/wwmsp3.1_ctd/'];mkdir(outdir_main);
 
 %'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
 
@@ -52,7 +54,7 @@ for i = 1:length(thevars)
                 fprintf(fid,'%s,%4.4f,%4.4f,N\n',datestr(mdate(kk),'yyyy-mm-dd HH:MM:SS'),mdepth(kk),mdata(kk));
             end
             fclose(fid);
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv')
             
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');

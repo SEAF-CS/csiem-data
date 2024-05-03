@@ -2,10 +2,10 @@ function merge_files
 
 addpath(genpath('../../functions/'));
 
-
-inpath = '../../../../data-warehouse/csv_holding/imos/amnmprofile/';
+run('../../actions/csiem_data_paths.m')
+inpath = [datapath,'data-warehouse/csv_holding/imos/amnmprofile/'];
 %'D:/csiem/data-warehouse/csv_holding/imos/amnmprofile/';
-outpath = '../../../../data-warehouse/csv/imos/amnmprofile'; mkdir(outpath);
+outpath = [datapath,'data-warehouse/csv/imos/amnmprofile']; mkdir(outpath);
 %'D:/csiem/data-warehouse/csv/imos/amnmprofile/'; mkdir(outpath);
 
 temp = fullfile(inpath, '**/*_DATA.csv')

@@ -6,10 +6,12 @@ addpath(genpath('../../functions/'));
 load ../../../code/actions/sitekey.mat;
 load ../../../code/actions/varkey.mat;
 
-outdir = '/Projects2/csiem-data-hub/data-warehouse/csv/wcwa/wcwa-psdp-bmt349/';mkdir(outdir);
+run('../../actions/csiem_data_paths.m')
+
+outdir = [datapath,'data-warehouse/csv/wcwa/wcwa-psdp-bmt349/'];mkdir(outdir);
 %                         'D:\csiem\data-warehouse\csv\wcwa\wcwa-psdp-bmt349\';mkdir(outdir);
 
-datafile = '../../../../data-lake/WCWA/Working/Working/2018/BMT 349 Cockburn Sound Metocean Summary Report/Water Quality/1334_09_PhysicalWQ.xlsx';
+datafile = [datapath,'data-lake/WCWA/Working/Working/2018/BMT 349 Cockburn Sound Metocean Summary Report/Water Quality/1334_09_PhysicalWQ.xlsx'];
 %'             D:\csiem\data-lake\WCWA\Working\Working\2018\BMT 349 Cockburn Sound Metocean Summary Report\Water Quality\1334_09_PhysicalWQ.xlsx';
 
 

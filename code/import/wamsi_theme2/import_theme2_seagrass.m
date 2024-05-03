@@ -9,11 +9,11 @@ load ../../../code/actions/agency.mat;
 
 sgsites = fieldnames(sitekey.wwmsp2_seagrass);
 
-
-filename = '../../../../data-lake/WAMSI/wwmsp2.2_seagrass/Driver of Seagrass Condition_Regional for Hipsey_4lake.csv';
+run('../../actions/csiem_data_paths.m')
+filename = [datapath,'data-lake/WAMSI/wwmsp2.2_seagrass/Driver of Seagrass Condition_Regional for Hipsey_4lake.csv'];
              %'D:\csiem\data-lake\WAMSI\wwmsp2.2_seagrass\Driver of Seagrass Condition_Regional for Hipsey_4lake.csv';
 
-outdir = '../../../../data-warehouse/csv/wamsi/wwmsp2.2_seagrass/';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp2.2_seagrass/'];mkdir(outdir);
            %'D:\csiem\data-warehouse\csv\wamsi\wwmsp2.2_seagrass\';mkdir(outdir);
 
 
@@ -88,7 +88,7 @@ for i = 1:length(usites)
     
     
     firstfile = [outdir,AEDSite,'_Posidonia_Sinuosa_Count','_DATA.csv'];
-    headerfile = regexprep(firstfile,'_DATA','_HEADER');
+    headerfile = regexprep(firstfile,'_DATA.csv','_HEADER.csv');
     outdata = counts;
     varID = 'var00324';
     Cat = varkey.(varID).Category;
@@ -106,7 +106,7 @@ for i = 1:length(usites)
     %____________________________________________________________________________
     
     firstfile = [outdir,AEDSite,'_Posidonia_Sinuosa_Density','_DATA.csv'];
-    headerfile = regexprep(firstfile,'_DATA','_HEADER');
+    headerfile = regexprep(firstfile,'_DATA.csv','_HEADER.csv');
     outdata = density;
     varID = 'var00325';
     Cat = varkey.(varID).Category;
@@ -123,7 +123,7 @@ for i = 1:length(usites)
     %____________________________________________________________________________
     
     firstfile = [outdir,AEDSite,'_Posidonia_Sinuosa_Density','_DATA.csv'];
-    headerfile = regexprep(firstfile,'_DATA','_HEADER');
+    headerfile = regexprep(firstfile,'_DATA.csv','_HEADER.csv');
     outdata = DW;
     varID = 'var00352';
     Cat = varkey.(varID).Category;
@@ -142,7 +142,7 @@ for i = 1:length(usites)
     %____________________________________________________________________________
     
     firstfile = [outdir,AEDSite,'_Posidonia_Sinuosa_Above_Ground_Biomass','_DATA.csv'];
-    headerfile = regexprep(firstfile,'_DATA','_HEADER');
+    headerfile = regexprep(firstfile,'_DATA.csv','_HEADER.csv');
     outdata = MAC_A;
     varID = 'var00326';
     Cat = varkey.(varID).Category;
@@ -159,7 +159,7 @@ for i = 1:length(usites)
     %____________________________________________________________________________
     
     firstfile = [outdir,AEDSite,'_Posidonia_Sinuosa_Below_Ground_Biomass','_DATA.csv'];
-    headerfile = regexprep(firstfile,'_DATA','_HEADER');
+    headerfile = regexprep(firstfile,'_DATA.csv','_HEADER.csv');
     outdata = MAC_B;
     varID = 'var00327';
     Cat = varkey.(varID).Category;
@@ -176,7 +176,7 @@ for i = 1:length(usites)
         %____________________________________________________________________________
     
     firstfile = [outdir,AEDSite,'_Posidonia_Sinuosa_Total_Biomass','_DATA.csv'];
-    headerfile = regexprep(firstfile,'_DATA','_HEADER');
+    headerfile = regexprep(firstfile,'_DATA.csv','_HEADER.csv');
     outdata = MAC_total;
     varID = 'var00351';
     Cat = varkey.(varID).Category;

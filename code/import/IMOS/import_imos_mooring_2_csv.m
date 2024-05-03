@@ -2,13 +2,14 @@ clear all; close all;
 
 addpath(genpath('../../functions/'));
 
-thefile = '../../../../data-lake/imos/amnmmooring/IMOS_ANMN-NRS_BOSTZ_20081120_NRSROT_FV02_hourly-timeseries_END-20201207_C-20210427.nc';
+run('../../actions/csiem_data_paths.m')
+thefile = [datapath,'data-lake/imos/amnmmooring/IMOS_ANMN-NRS_BOSTZ_20081120_NRSROT_FV02_hourly-timeseries_END-20201207_C-20210427.nc'];
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = '../../../../data-warehouse/csv/imos/amnmmooring/';
+outpath = [datapath,'data-warehouse/csv/imos/amnmmooring/'];
 
 stime = ncread(thefile,'TIME');
 

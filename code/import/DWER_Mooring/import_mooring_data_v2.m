@@ -1,7 +1,8 @@
 function import_mooring_data_v2
     addpath(genpath('../../functions/'));
+    run('../../actions/csiem_data_paths.m')
 
-    filepath = '../../../../data-lake/DWER/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/';
+    filepath = [datapath,'data-lake/DWER/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/'];
     %             'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
 
     filelist = dir(fullfile(filepath, '**/*.csv'));  %get list of files and folders in any subfolder
@@ -16,7 +17,7 @@ function import_mooring_data_v2
     sitelist = fieldnames(sitekey.dwermooring);
     varlist = fieldnames(agency.dwermooring);
 
-    outpath = '../../../../data-warehouse/csv/dwer/csmooring/'; mkdir(outpath);
+    outpath = [datapath,'data-warehouse/csv/dwer/csmooring/']; mkdir(outpath);
     %'D:\csiem\data-warehouse\csv\dwer\csmooring\';mkdir(outpath);
 
     for i = 1:length(filelist)
@@ -221,7 +222,7 @@ function import_mooring_data_v2
             end
             fclose(fid);
 
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
             headerfile
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');
