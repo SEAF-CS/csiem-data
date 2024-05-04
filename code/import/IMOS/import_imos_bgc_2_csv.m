@@ -2,14 +2,15 @@ function import_imos_bgc_2_csv
 
 addpath(genpath('../../functions/'));
 
-thefile = '../../../../data-lake/IMOS/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+run('../../actions/csiem_data_paths.m')
+thefile = [datapath,'data-lake/IMOS/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv'];
 %'D:/csiem/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = '../../../../data-warehouse/csv/imos/bgc/';
+outpath = [datapath,'data-warehouse/csv/imos/bgc/'];
 %'D:/csiem/data-warehouse/csv/imos/bgc/';
 
 if ~exist(outpath,'dir')
@@ -101,7 +102,7 @@ for i = 9:width(Test)
             end
             fclose(fid);
             
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
             
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');

@@ -1,8 +1,8 @@
 clear all; close all;
+csiem_data_paths
+basedir = [datapath,'mat/agency/']
 
-basedir = 'D:\csiem\data-warehouse\mat\agency\'
-
-filelist = dir(fullfile(basedir, '**\*.mat'));  %get list of files and folders in any subfolder
+filelist = dir(fullfile(basedir, '**/*.mat'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)

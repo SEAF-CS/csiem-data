@@ -1,9 +1,9 @@
 function import_mgb_tidal_data
-
-main_dir = '../../../../data-lake/DOT/tide/RKMGL01/';
+    run(['../../actions/csiem_data_paths.m'])
+main_dir = [datapath,'data-lake/DOT/tide/RKMGL01/'];
 %'D:\csiem/data-lake/dot/tide/RKMGL01/';
 
-outdir = '../../../../data-warehouse/csv/dot/tide/';
+outdir = [datapath,'data-warehouse/csv/dot/tide/'];
 %'D:\csiem/data-warehouse/csv/dot/tide/';
 if ~exist(outdir,'dir')
     mkdir(outdir);

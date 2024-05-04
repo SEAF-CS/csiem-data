@@ -1,5 +1,6 @@
 clear all; close all;
 addpath(genpath('../functions'));
+csiem_data_paths 
 tic
 
 import_var_key_info;
@@ -21,16 +22,18 @@ import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
+import_bmtswan = 0;
+import_wamsitheme1 = 0;
 
 create_smd = 1;
 
-create_matfiles = 0;
-create_parquet = 0;
+create_matfiles = 1;
+create_parquet = 1;
 
-create_dataplots = 0;
-plotnew_dataplots = 0;
+create_dataplots = 1;
+plotnew_dataplots = 1;
 
-create_shapefiles = 0;
+create_shapefiles = 1;
 
 
 run_marvl = 1;
@@ -83,6 +86,9 @@ if import_bom
     %BOM Export
     cd ../import/BOM;
     run_bom_import;
+
+    import_Barra_TFV
+
     cd ../../actions
 end
 %MAFRL
@@ -99,7 +105,7 @@ end
 
 %IMOS
 if import_imos
-    cd ../import/imos
+    cd ../import/IMOS
     
     import_imos_bgc_2_csv;
     %
@@ -130,7 +136,7 @@ end
 
 if import_dpird
     % DPIRD
-    cd ../import/dpird
+    cd ../import/DPIRD
     
     import_dpird_crab_data;
     
@@ -192,8 +198,26 @@ if import_theme5
     import_netcdf_csv;
     import_netcdf_csv_ADCP;
     import_met_csv;
+
+    cd Waves/
+    importWAVES
+    cd ../
+
     cd ../../actions/
 end
+
+if import_bmtswan
+    cd ../import/BMT-SWAN
+    importSWAN
+    cd ../../actions/
+end
+
+if import_wamsitheme1
+    cd ../import/wamsi_theme1/
+    ImportWRF
+    cd ../../actions/
+end
+
 
 if create_smd
     calculate_SMD_for_headers
@@ -212,10 +236,10 @@ if create_dataplots
 end
 
 if run_marvl
-    addpath(genpath('/GIS_DATA/csiem-data-hub/marvl'));
+    addpath(genpath(marvldatapath));
     create_marvl_config_information;
     run_AEDmarvl marvl_pipeline_images;
-    rmpath(genpath('/GIS_DATA/csiem-data-hub/marvl'));
+    rmpath(genpath(marvldatapath));
 end
 
 if create_shapefiles

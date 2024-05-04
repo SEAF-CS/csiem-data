@@ -1,14 +1,15 @@
 function import_imos_temp_sal
 %clear all; close all;
 
-thefile = '../../../../data-lake/IMOS/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_Facility_-_Temperature_and_salinity_time-series.csv';
+run('../../actions/csiem_data_paths.m')
+thefile = [datapath,'data-lake/IMOS/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_Facility_-_Temperature_and_salinity_time-series.csv'];
 %            'D:/csiem/data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_Facility_-_Temperature_and_salinity_time-series.csv';
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = '../../../../data-warehouse/csv/imos/amnmadcp/';
+outpath = [datapath,'data-warehouse/csv/imos/amnmadcp/'];
 %'D:/csiem/data-warehouse/csv/imos/amnmadcp/';
 
 if ~exist(outpath,'dir')
@@ -97,7 +98,7 @@ for i = 1:length(procvars)
             end
             fclose(fid);
             
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv')
             
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');

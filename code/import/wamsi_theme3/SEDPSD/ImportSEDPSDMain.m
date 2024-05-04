@@ -1,6 +1,7 @@
 function ImportSEDPSDMain()
     addpath('Functions')
-    directory = '../../../../../data-swamp/WWMSP3.1 - Sediment Quality CutDown/Lab_Data';
+    run('../../../actions/csiem_data_paths.m')
+    directory = [datapath,'data-swamp/WWMSP3.1 - Sediment Quality CutDown/Lab_Data'];
 
     searchReq = '*PSD*.xlsx';
     Sediment = Extractor(directory,searchReq);
@@ -21,7 +22,7 @@ function ImportSEDPSDMain()
             %             opts.DataRange = "A346:B358"; % works as of 03/04/2024
             % VarKey = readtable(VarkeyAddress,opts);
 
-    FFName = "../../../../../data-lake/WAMSI/wwmsp3.1_SEDPSD/FlatFile.csv";
+    FFName = [datapath,'data-lake/WAMSI/wwmsp3.1_SEDPSD/FlatFile.csv'];
     FFHeadings = ["Date","X","Y","Site","SampleID","Variable","Units","ReadingValue","VariableName","VariableType","Origin","Filename"];
     writematrix(FFHeadings,FFName)
     FillFlatFile(FFName,Sediment,"Sediment");

@@ -1,17 +1,17 @@
 function import_netcdf_csv
 
 addpath(genpath('../../functions'));
-
-basedir = '../../../../data-lake/WAMSI/wwmsp5_wq/';
+run('../../actions/csiem_data_paths.m')
+basedir = [datapath,'data-lake/WAMSI/wwmsp5_wq/'];
              %'D:csiem/data-lake/wamsi/wwmsp5_wq/';
 %filelist = dir(fullfile(basedir, '**\*.nc'));
 filelist = dir(fullfile(basedir, '**/*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
-adcpfilepath = '../../../../data-lake/WAMSI/wwmsp5_adcp/ADCP/';
+adcpfilepath = [datapath,'data-lake/WAMSI/wwmsp5_adcp/ADCP/'];
                  %'D:\csiem\data-lake\WAMSI\wwmsp5_adcp\ADCP\';
 
-outdir = '../../../../data-warehouse/csv/wamsi/wwmsp5_wq/';
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5_wq/'];
 %            'D:csiem/data-warehouse/csv/wamsi/wwmsp5_wq/';
 
 mkdir(outdir);

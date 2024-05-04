@@ -7,11 +7,13 @@ load ../../../code/actions/sitekey.mat;
 load ../../../code/actions/varkey.mat;
 load ../../../code/actions/agency.mat;
 
+run('../../actions/csiem_data_paths.m')
 
-filename = '../../../../data-lake/WAMSI/wwmsp2.2_light/Light Data/Light data Mastersheet_July2023-2.xlsx';
-             %'D:\csiem\data-lake\WAMSI\wwmsp2.2_light\Light Data\Light data Mastersheet_July2023-2.xlsx';
 
-outdir = '../../../../data-warehouse/csv/wamsi/wwmsp2.2_light/';mkdir(outdir);
+filename = [datapath,'data-lake/WAMSI/wwmsp2.2_light/Light Data/Light data Mastersheet_July2023-2.xlsx'];
+           %'D:\csiem\data-lake\WAMSI\wwmsp2.2_light\Light Data\Light data Mastersheet_July2023-2.xlsx';
+
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp2.2_light/'];mkdir(outdir);
 %'D:\csiem\data-warehouse\csv\wamsi\wwmsp2.2_light\';
 
 
@@ -84,7 +86,7 @@ for i = 1:length(headers)
                 fprintf(fid,'%s,%4.4f,%4.4f,N\n',datestr(wdate(kk),'yyyy-mm-dd HH:MM:SS'),wdepth(kk),wdata(kk));
             end
             fclose(fid);
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
             
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');

@@ -3,10 +3,11 @@ addpath(genpath('../../functions/'));
 
 load ../../actions/sitekey.mat
 
-xlsname = '../../../../data-lake/WCWA/WC-BMT/Digitised_DO.xlsx';
+run('../../actions/csiem_data_paths.m')
+xlsname = [datapath,'data-lake/WCWA/WC-BMT/Digitised_DO.xlsx'];
 %'            D:\csiem\data-lake\WCWA\WC-BMT\Digitised_DO.xlsx';
 
-outdir = '../../../../data-warehouse/csv/wcwa/psdp-1.2/';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/wcwa/psdp-1.2/'];mkdir(outdir);
 %'           D:\csiem\data-warehouse\csv\wcwa\psdp-1.2\';mkdir(outdir);
 
 

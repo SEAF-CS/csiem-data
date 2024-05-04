@@ -33,9 +33,9 @@ thevars = fieldnames(agency.bom);
 % 
 % [snum,sstr] = xlsread('V:/data-lake/site_key.xlsx','BOM','A2:H10000');
 % 
-
+run('../../actions/csiem_data_paths.m')
 writepath = 'data-warehouse/csv/bom/idy';
-outdir = ['../../../../', writepath,'/'];
+outdir = [datapath, writepath,'/'];
 %'D:/csiem/data-warehouse/csv/bom/idy/';
 
 

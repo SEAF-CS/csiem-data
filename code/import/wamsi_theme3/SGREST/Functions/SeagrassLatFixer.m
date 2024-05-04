@@ -1,5 +1,6 @@
 function Seagrass = SeagrassLatFixer(Seagrass)
-    rawInputTable = readtable("/Projects2/csiem-data-hub/data-swamp/WWMSP3.1 - Seagrass CutDown/SeagrassSediment_Sample_Locations LATLON.xlsx");
+    run('../../../actions/csiem_data_paths.m')
+    rawInputTable = readtable([datapath,'data-swamp/WWMSP3.1 - Seagrass CutDown/SeagrassSediment_Sample_Locations LATLON.xlsx']);
     
     %% CS_R14A
     Seagrass{1,4:5} = rawInputTable{6,2:3};

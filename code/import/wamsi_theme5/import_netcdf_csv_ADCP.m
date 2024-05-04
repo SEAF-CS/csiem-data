@@ -1,11 +1,11 @@
 function import_netcdf_csv_ADCP
 
 addpath(genpath('../../functions/'));
-
-filepath = '../../../../data-lake/WAMSI/wwmsp5_adcp/';
+run('../../actions/csiem_data_paths.m')
+filepath = [datapath,'data-lake/WAMSI/wwmsp5_adcp/'];
               %'D:csiem/data-lake/wamsi/wwmsp5_adcp/';
 
-outdir = '../../../../data-warehouse/csv/wamsi/wwmsp5_awac/';
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5_awac/'];
             %'D:csiem/data-warehouse/csv/wamsi/wwmsp5_awac/';
 
 mkdir(outdir);

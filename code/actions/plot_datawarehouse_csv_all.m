@@ -1,9 +1,10 @@
 function plot_datawarehouse_csv_all(plotnew_dataplots)%   clear all; close all;
 
-filepath = '../../../data-warehouse/csv/';
+    run('csiem_data_paths.m')
+filepath = [datapath,'data-warehouse/csv/'];
 %          'D:\csiem\data-warehouse\csv\';
 
-outdir = '../../../data-warehouse/data-images/';
+outdir = [datapath,'data-warehouse/data-images/'];
 %        'D:\csiem\data-warehouse\data-images\';
 
 filelist = dir(fullfile(filepath, '**/*DATA.csv'));  %get list of files and folders in any subfolder

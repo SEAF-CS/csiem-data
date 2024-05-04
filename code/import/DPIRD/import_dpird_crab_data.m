@@ -6,7 +6,9 @@ load ../../../code/actions/varkey.mat;
 
 load ../../../code/actions/sitekey.mat;
 
-filePath = '../../../../data-lake/DPIRD/crab/Temperature/CS temp loggers_2007_to_2015 (1).xlsx';
+run('../../actions/csiem_data_paths.m')
+filePath = [datapath,'data-lake/DPIRD/crab/Temperature/CS temp loggers_2007_to_2015 (1).xlsx'];
+
 %'D:\csiem\data-lake\DPIRD\crab\Temperature\CS temp loggers_2007_to_2015 (1).xlsx'
 data = readtable(filePath);
 
@@ -14,7 +16,7 @@ mdate = datenum(data.date_local) + data.time_local;
 
 sites = unique(data.site_code);
 
-outdir = '../../../../data-warehouse/csv/dpird/crp/';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/dpird/crp/'];mkdir(outdir);
 %'D:\csiem\data-warehouse\csv\dpird\crp\';
 catsites = fieldnames(sitekey.dpird);
 
@@ -37,7 +39,7 @@ for i = 1:length(sites)
                 fprintf(fid,'%s,1,%4.4f,N\n',datestr(thedates(k),'yyyy-mm-dd HH:MM:SS'),thedata(k));
             end
             fclose(fid);
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv')
             
             fid = fopen(headerfile,'wt');
         fprintf(fid,'Agency Name,Department of Primary Industry and Regional Development\n');

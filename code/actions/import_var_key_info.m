@@ -1,5 +1,5 @@
 clear all; close all;
-
+csiem_data_paths
 filename = '../../data-governance/variable_key.xlsx';
 
 

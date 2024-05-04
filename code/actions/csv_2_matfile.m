@@ -1,24 +1,15 @@
 function csv_2_matfile
 
 addpath(genpath('../functions/'));
+csiem_data_paths
 
 load varkey.mat;
 
 runlocal = 1;
 tempfile = 'seaf.mat';
 
-if ~runlocal
-    
-    outfile = 'V:/data-warehouse/mat/seaf.mat';
-    
-    filepath = 'V:/data-warehouse/csv/';
-    
-else
-    
-    outfile = 'D:/csiem/data-warehouse/mat/seaf.mat';
-    filepath = 'D:/csiem/data-warehouse/csv/';
-    
-end
+outfile = [datapath,'data-warehouse/mat/seaf.mat'];
+filepath = [datapath,'data-warehouse/csv/'];
 
 exclude_list = {...
     'bom',...

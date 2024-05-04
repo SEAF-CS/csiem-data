@@ -4,7 +4,8 @@ load ../../actions/varkey.mat;
 load ../../actions/sitekey.mat;
 load ../../actions/agency.mat;
 
-xlsfilename = '../../../../data-lake/FPA/MQMP/MQMP2002-2021_WQ_20210728.xlsx';
+run('../../actions/csiem_data_paths.m')
+xlsfilename = [datapath,'data-lake/FPA/MQMP/MQMP2002-2021_WQ_20210728.xlsx'];
 %'                D:\csiem\data-lake\FPA\MQMP\MQMP2002-2021_WQ_20210728.xlsx';
 
 sheetname = {'InnerHarbourWQ';...
@@ -14,7 +15,7 @@ sheetname = {'InnerHarbourWQ';...
     };
 
 
-outdir = '../../../../data-warehouse/csv/fpa/mqmp/';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/fpa/mqmp/'];mkdir(outdir);
 %           'D:\csiem\data-warehouse\csv\fpa\mqmp\';mkdir(outdir);
 
 
@@ -114,7 +115,8 @@ for i = 1:length(sheetname)
                         fprintf(fid,'%s,%4.4f,%4.4f,N\n',datestr(writedate(kk),'yyyy-mm-dd HH:MM:SS'),writedepth(kk),writedata(kk));
                     end
                     fclose(fid);
-                    headerfile = regexprep(filename,'_DATA','_HEADER');
+                    headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv')
+                    filename
                     
                     fid = fopen(headerfile,'wt');
                     fprintf(fid,'Agency Name,Fremantle Port Authorityn\n');

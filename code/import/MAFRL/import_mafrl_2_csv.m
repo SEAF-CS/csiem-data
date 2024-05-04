@@ -3,8 +3,8 @@ function import_mafrl_2_csv
 
 
 addpath(genpath('../../functions/'));
-
-thefile = '../../../../data-lake/CSMC/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
+run('../../actions/csiem_data_paths.m')
+thefile = [datapath,'data-lake/CSMC/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx'];
 % /'D:/csiem/data-lake/csmc/mafrl/MAFRL - WQ data - 1982 to 2020_BBEdit.xlsx';
 
 theyears = [1983 1985 1986 1987 1990:1:1993 1997:1:2020];
@@ -22,7 +22,7 @@ thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
 
 
-outpath = '../../../../data-warehouse/csv_holding/csmc/csmcwq/LachTest/';
+outpath = [datapath,'data-warehouse/csv_holding/csmc/csmcwq/LachTest/'];
 %'D:/csiem/data-warehouse/csv_holding/csmc/csmcwq/';
 %outpath = 'csmcwq-mafrl/';
 fiderr = fopen('errorfile.csv','wt');
@@ -143,7 +143,7 @@ for i = 1:length(theyears)
                     filevar = regexprep(varkey.(thevarval{thefoundvar}).Name,' ','_');
                     
                     filename = [outpath,sitekey.mafrl.(thesiteval{foundsite}).AED,'_',filevar,'_',agency.mafrl.(theagencyval{foundagency}).Depth,'_',num2str(theyears(i)),'_DATA.csv'];
-                    filename
+                    filename;
                     fid = fopen(filename,'wt');
                     fprintf(fid,'Date,%s,Data,QC\n',type);
                     for nn = 1:length(thedata)
@@ -157,8 +157,8 @@ for i = 1:length(theyears)
                     end
                     fclose(fid);
                     
-                    headerfile = regexprep(filename,'_DATA','_HEADER');
-                    headerfile
+                    headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
+                    headerfile;
                     fid = fopen(headerfile,'wt');
                     fprintf(fid,'Agency Name,Cockburn Sound Management Council\n');
                     fprintf(fid,'Agency Code,CSMC\n');

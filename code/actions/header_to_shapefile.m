@@ -4,8 +4,8 @@ addpath(genpath('../functions'));
 
 
 load varkey.mat;
-
-filepath = '../../../data-warehouse/csv/';
+run('csiem_data_paths.m')
+filepath = [datapath,'data-warehouse/csv/'];
 %          'D:/csiem/data-warehouse/csv/';
 filelist = dir(fullfile(filepath, '**/*HEADER.csv'));  %get list of files and folders in any subfolder
 %filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder

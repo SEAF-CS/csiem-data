@@ -6,11 +6,11 @@ load ../../actions/agency.mat;
 load ../../actions/varkey.mat;
 load ../../actions/sitekey.mat;
 
-
-filename = '../../../../data-lake/WAMSI/wwmsp5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)_BBEdit.csv';
+run('../../actions/csiem_data_paths.m')
+filename = [datapath,'data-lake/WAMSI/wwmsp5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)_BBEdit.csv'];
               %'D:csiem/data-lake/wamsi/wwmsp5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)_BBEdit.csv';
 
-outdir = '../../../../data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'dir'); mkdir(outdir); end
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5_met/'];if ~exist(outdir,'dir'); mkdir(outdir); end
 %'            D:csiem/data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'dir'); mkdir(outdir); end
 
 data = readtable(filename, 'ReadVariableNames', false, 'HeaderLines', 4);

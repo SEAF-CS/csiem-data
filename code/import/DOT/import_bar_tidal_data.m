@@ -1,9 +1,11 @@
 function import_bar_tidal_data
 
-main_dir = '../../../../data-lake/DOT/tide/PTBAR02/';
+run(['../../actions/csiem_data_paths.m'])
+
+main_dir = [datapath,'data-lake/DOT/tide/PTBAR02/'];
 %'D:\csiem\data-lake\DOT\tide/PTBAR02/';
 
-outdir = '../../../../data-warehouse/csv/dot/tide/';
+outdir = [datapath,'data-warehouse/csv/dot/tide/'];
 %'D:\csiem/data-warehouse/csv/dot/tide/';
 
 if ~exist(outdir,'dir')

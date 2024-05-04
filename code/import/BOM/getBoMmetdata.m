@@ -9,8 +9,8 @@ function metdata = getBoMmetdata(sMetDir,header_file)
     addpath(genpath('Headers'));
     addpath(genpath('Functions'));
 
-
-    indir = '../../../../data-warehouse/csv_holding/bom/idy/';mkdir(indir);
+    run('../../actions/csiem_data_paths.m')
+    indir = [datapath,'data-warehouse/csv_holding/bom/idy/'];;mkdir(indir);
 
     run(header_file);
 
