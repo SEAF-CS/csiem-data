@@ -2,13 +2,14 @@ function csv_2_matfile_tfv_by_agency
 
 addpath(genpath('../functions/'));
 
+run('csiem_data_paths.m')
 load varkey.mat;
 
-outfilepath = '../../../data-warehouse/mat/agency/';mkdir(outfilepath);
+outfilepath = [datapath,'data-warehouse/mat/agency/'];mkdir(outfilepath);
 %             'D:/csiem/data-warehouse/mat/agency/';mkdir(outfilepath);
-filepath = '../../../data-warehouse/csv';
+filepath = [datapath,'data-warehouse/csv'];
 %          'D:/csiem/data-warehouse/csv/';
-mergepath = '../../../data-warehouse/mat/';
+mergepath = [datapath,'data-warehouse/mat/'];
 %           'D:/csiem/data-warehouse/mat/';
 
 filelist = dir(fullfile(filepath, '**/*HEADER.csv'));  %get list of files and folders in any subfolder

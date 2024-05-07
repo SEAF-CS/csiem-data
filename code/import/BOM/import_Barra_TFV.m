@@ -7,14 +7,16 @@ function import_Barra_TFV
 
     VarListStruct = agency.bombarraftv;
     SiteListStruct = sitekey.bombarraftv;
+    run('../../actions/csiem_data_paths.m')
 
-    outdir = '../../../../data-warehouse/csv/bom/barra_tfv/';
+    
+    outdir = [datapath,'data-warehouse/csv/bom/barra_tfv/'];
     mkdir(outdir);
 
 
 
     %% Get list of data files
-    dataDir = '../../../../data-lake/BOM/barra_tfv/';
+    dataDir = [datapath,'data-lake/BOM/barra_tfv/'];
     fileCell = {dir(dataDir).name}';
     fileCell = fileCell(3:end) %skips ./ and ../
 

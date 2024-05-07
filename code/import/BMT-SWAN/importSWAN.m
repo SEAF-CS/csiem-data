@@ -27,7 +27,7 @@ function importSWAN()
         % fclose(fid);
         % stop
 
-    outdir = '../../../../data-warehouse/csv/bmtswan/';
+    outdir = [datapath,'data-warehouse/csv/bmtswan/'];
     mkdir(outdir);
 
     VarListStruct = agency.bmtswan;
