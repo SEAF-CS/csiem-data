@@ -6,13 +6,14 @@ function ImportWRF()
     VarListStruct = agency.wwmsp1wrf;
     SiteListStruct = sitekey.wwmsp1wrf;
 
-    outdir = '../../../../data-warehouse/csv/wamsi/wwmsp1.1_wrf/';
+    run('../../actions/csiem_data_paths.m')
+    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp1.1_wrf/'];
     mkdir(outdir);
 
 
     
     %% Get list of data files
-    dataDir = '../../../../data-lake/WAMSI/WWMSP1.1 - WRF/';
+    dataDir = [datapath,'data-lake/WAMSI/WWMSP1.1 - WRF/'];
     fileCell = {dir(dataDir).name}';
     fileCell = fileCell(3:end) %skips ./ and ../
 
