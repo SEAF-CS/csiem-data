@@ -90,7 +90,8 @@ master.ncfile(1).tag = 'TFV';
 
 % field data
 master.add_fielddata = 1;
-master.fielddata_folder = '/GIS_DATA/csiem-data-hub/data-warehouse/mat/agency/';
+run('csiem_data_paths.m')
+master.fielddata_folder = [datapath,'data-warehouse/mat/agency/'];
 
 % Build this dynamically...
 %master.fielddata_files = {'csiem_IMOS_public','csiem_DWER_public','csiem_DPIRD_public','csiem_CSMC_public','csiem_WCWA_public','csiem_WAMSI_public','csiem_DOT_public','csiem_FPA_public'};
@@ -138,7 +139,7 @@ timeseries.isFieldRange = 0;
 timeseries.fieldprctile = [10 90];
 timeseries.isHTML = 1;
 
-timeseries.polygon_file = '/GIS_DATA/csiem-data-hub/marvl/gis/MLAU_Zones_v3_ll.shp';
+timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];
 timeseries.plotAllsites = 1;
 if timeseries.plotAllsites == 0
     timeseries.plotsite = [6 10 29];
@@ -162,9 +163,9 @@ timeseries.skills = [1,... % r: regression coefficient (0-1)
     1,... % NRMS: RMSE normalized to mean observation
     1,... % MEF: model efficienty, Nash-Sutcliffe Efficiency
     ];
-timeseries.outputdirectory = '/GIS_DATA/csiem-data-hub/marvl-images/raw/';
-timeseries.htmloutput = '/GIS_DATA/csiem-data-hub/data-warehouse/marvl-images/html/';
-timeseries.ErrFilename = '/GIS_DATA/csiem-data-hub/data-warehouse/marvl-images/errormatrix.mat';
+timeseries.outputdirectory = [datapath,'marvl-images/raw/'];
+timeseries.htmloutput = [datapath,'data-warehouse/marvl-images/html/'];
+timeseries.ErrFilename = [datapath,'data-warehouse/marvl-images/errormatrix.mat'];
 
 timeseries.ncfile(1).symbol = {'-';'-'};
 timeseries.ncfile(1).colour = {[166,86,40]./255;[8,88,158]./255};% Surface and Bottom
@@ -214,7 +215,8 @@ MARVLs.timeseries = timeseries; clear timeseries;
 transect.start_plot_ID = 2;
 transect.end_plot_ID = 2;
 
-transect.polygon_file = 'D:\csiem\marvl/gis/New_Curtain_line_LL_Dist.shp';
+transect.polygon_file = [marvldatapath,'/gis/New_Curtain_line_LL_Dist.shp'];
+%'D:\csiem\marvl/gis/New_Curtain_line_LL_Dist.shp';
 % Add field data to figure
 transect.plotvalidation = 1; % 1 or 0
 transect.pred_lims = [0.05,0.25,0.5,0.75,0.95];
@@ -232,8 +234,8 @@ transect.add_obs_num = 1;
 %config.boxon = 1;
 
 % ___
-transect.outputdirectory = '../outputs/transect_test/RAW/';
-transect.htmloutput = '../outputs/transect_test/HTML/';
+transect.outputdirectory = [marvldatapath,'/outputs/transect_test/RAW/'];
+transect.htmloutput = [marvldatapath,'../outputs/transect_test/HTML/'];
 
 % plotting configuration
 transect.dimc = [0.9 0.9 0.9]; % dimmest (lightest) color
@@ -314,7 +316,7 @@ transectSA.varname = {...
     };
 transectSA.add_human = 1;
 
-transectSA.polygon_file = '../gis/New_Curtain_line_LL_Dist.shp';
+transectSA.polygon_file = [marvldatapath,'/gis/New_Curtain_line_LL_Dist.shp'];
 % Add field data to figure
 transectSA.plotvalidation = 1; % 1 or 0
 transectSA.pred_lims = [0.05,0.25,0.5,0.75,0.95];
@@ -332,8 +334,8 @@ transectSA.add_obs_num = 1;
 %config.boxon = 1;
 
 % ___
-transectSA.outputdirectory = '../outputs/transectSA/RAW/';
-transectSA.htmloutput = '../outputs/transectSA/HTML/';
+transectSA.outputdirectory = [marvldatapath,'/outputs/transectSA/RAW/'];
+transectSA.htmloutput = [marvldatapath,'outputs/transectSA/HTML/'];
 
 % plotting configuration
 transectSA.dimc = [0.9 0.9 0.9]; % dimmest (lightest) color
@@ -404,8 +406,8 @@ profile.isYlim   = 1;
 profile.isGridon = 1;
 profile.dimensions = [20 10]; % Width & Height in cm
 
-profile.outputdirectory = './Outputs/profile/RAW/';
-profile.htmloutput = './Outputs/profile/HTML/';
+profile.outputdirectory = [marvldatapath,'Outputs/profile/RAW/'];
+profile.htmloutput = [marvldatapath,'Outputs/profile/HTML/'];
 
 MARVLs.profile = profile; clear profile;
 
@@ -422,7 +424,7 @@ sheet.plotdepth = {'surface'};  %  {'surface','bottom'} Cell-array with either o
 sheet.meshstype = 'patch'; % choose 'patch' or 'meshgrid'
 sheet.add_quiver = 1;  % 1/0: add/no current vector, work only for 'meshgrid' option
 sheet.add_coastline = 1;  % 1/0: add/no coast line
-sheet.coastline_file = './GIS/Boundary.shp';  % 1/0: add/no coast line
+sheet.coastline_file = [marvldatapath,'/GIS/Boundary.shp'];  % 1/0: add/no coast line
 
 sheet.plottype = 'movie'; % choose 'movie' or 'figure';
 sheet.xlim=[115.6666  115.7786]; %[115.6089  115.7786];  %
@@ -447,7 +449,7 @@ else
     error(msg);
 end
 
-sheet.outputdirectory = './Outputs/sheet_patch_zoomin_TEMP/';
+sheet.outputdirectory = [marvldatapath,'/Outputs/sheet_patch_zoomin_TEMP/'];
 
 sheet.clip_depth = 0.05; % remove the shallow NaN cells 1000; %
 
@@ -468,7 +470,7 @@ curtain.start_plot_ID = 2;
 curtain.end_plot_ID = 2;
 curtain.cAxis(2).value =[23 26];    %[35.5 36.5];
 %curtain.geofile = '.\data\csiem_100_A_20130101_20130601_WQ_009_diag_geo.nc';
-curtain.polyline = '.\GIS\New_Curtain_line_LL_Dist.shp';
+curtain.polyline = [marvldatapath,'\GIS\New_Curtain_line_LL_Dist.shp'];
 curtain.isSpherical = 1;
 curtain.meshstype = 'meshgrid'; % choose 'patch' or 'meshgrid'
 curtain.add_quiver = 1;  % 1/0: add/no current vector, work only for 'meshgrid' option
@@ -494,7 +496,7 @@ else
     error(msg);
 end
 
-curtain.outputdirectory = './Outputs/curtain_meshgrid_newtest_TEMP_dist/';
+curtain.outputdirectory = [marvldatapath,'Outputs/curtain_meshgrid_newtest_TEMP_dist/'];
 
 curtain.clip_depth = 0.05; % remove the shallow NaN cells
 curtain.max_depth = -24;   % maximum depth along the curtain
@@ -522,7 +524,7 @@ MARVLs.curtain = curtain; clear curtain;
 transectExc.start_plot_ID = 14;
 transectExc.end_plot_ID = 14;
 
-transectExc.polygon_file = '.\GIS\New_Curtain_line_LL_Dist.shp';
+transectExc.polygon_file = [marvldatapath,'\GIS\New_Curtain_line_LL_Dist.shp'];
 % Add field data to figure
 transectExc.plotvalidation = 0; % 1 or 0
 transectExc.pred_lims = [0.05,0.25,0.5,0.75,0.95];
@@ -543,8 +545,8 @@ transectExc.thresh(14).value = [1.2 1.6];
 transectExc.thresh(14).legend = {'%time > 1.2 mg/L',...
     '%time > 1.6 mg/L'};
 % ___
-transectExc.outputdirectory = './Outputs/transect_exceedance/RAW/';
-transectExc.htmloutput = './Outputs/transect_exceedance/HTML/';
+transectExc.outputdirectory = [marvldatapath,'/Outputs/transect_exceedance/RAW/'];
+transectExc.htmloutput = [marvldatapath,'/Outputs/transect_exceedance/HTML/'];
 
 % plotting configuration
 transectExc.dimc = [0.9 0.9 0.9]; % dimmest (lightest) color
@@ -619,7 +621,7 @@ boxchartConf.cAxis(6).value = [0 0.02];
 
 boxchartConf.legendLoc = 'southeast'; % Width & Height in cm
 boxchartConf.dimensions = [28 7.5]; % Width & Height in cm
-boxchartConf.outputdirectory = '../outputs/boxchart2/RAW/';
+boxchartConf.outputdirectory = [marvldatapath,'/outputs/boxchart2/RAW/'];
 
 MARVLs.boxchartConf = boxchartConf; clear boxchartConf;
 
