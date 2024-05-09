@@ -1,6 +1,6 @@
 function metdata = getBoMmetdata(sMetDir,header_file)
 % Function to import the swan met data and save to a structured type
-% swanmet.mat
+% metdata
 % sMetDir is the file path in which the BoM data files are stored. Remember
 % to add "\" at the end of the path!!!
 % Add or remove headers under cHeader based on your data. Import of Date in

@@ -3,6 +3,7 @@ function import_Barra_TFV
     load ../../actions/agency.mat;
     load ../../actions/sitekey.mat;
 
+    dateoverlapcheckerplot = false;
     addpath('Functions');
 
     VarListStruct = agency.bombarraftv;
@@ -80,7 +81,20 @@ function import_Barra_TFV
                 AppendedDataVec = [AppendedDataVec;DataVec];
             end
             DataVecCombined = AppendedDataVec(I);
+            if dateoverlapcheckerplot
+                Marker = {'-x','-+'};
+                Years = length(DataVecsCell);
+                power = 1;%0.5
+                linewidths = 2*power.^((1:Years)-1);
 
+                for i = 1:Years
+                    MarkerInd = rem(i,2)+1;
+                    plot(DateVecsCell{i},DataVecsCell{i},Marker{MarkerInd},"LineWidth",linewidths(i),"MarkerSize",12)
+                    hold on
+                end
+                hold off
+                pause()
+            end
 
             fid = fopen(fnameData,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
