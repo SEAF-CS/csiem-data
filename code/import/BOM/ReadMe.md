@@ -1,7 +1,7 @@
 # Bureau Of Meteorology Import
 
-## SWAN Meteroroly Data
-    This data [Placeholder text]
+## SWAN Meteorology Data
+    This data has been downloaded from BOM website to the data lake and extracted to a text file and is then imported into our format using run_bom_import.m
 
 ### Variables
  - Precipitation

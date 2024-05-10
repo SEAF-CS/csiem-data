@@ -1,8 +1,6 @@
 function export_metdata_2_csv(metdata)
 addpath(genpath('../../functions/'));
 
-%load '../../../../data-warehouse/csv_holding/bom/idy/metdata.mat'
-%D:\csiem/data-warehouse/csv_holding/bom/idy/metdata.mat;
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;

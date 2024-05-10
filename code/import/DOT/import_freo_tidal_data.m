@@ -93,9 +93,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename =     '../../../../data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
-%'/Projects2/csiem-data-hub/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
-%'D:\csiem/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
+filename =     [datapath,'data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv'];
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');
