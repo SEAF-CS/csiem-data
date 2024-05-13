@@ -18,4 +18,4 @@ this was converted to lat and long using [https://www.zonums.com/online/coords/c
 ![WIR naming conversions compared to variable names](./Variable%20Naming/Variablenames.png)
 
 ## Conversions
-[Conversion table](./SEDPSD%20Conversions.png)
+![Conversion table](./SEDPSD%20Conversions.png)

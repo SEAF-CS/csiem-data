@@ -1,8 +1,8 @@
 # WAMSI Theme 5.2 Waves
-## raw data
+## Raw data
 Raw data is in the form of csvs seperated into WWM and WWM_REG folders
 
-## issues 
+## Issues 
 The CSV structure for all files is:
 -Date,X,Y,HS,DM,TPP
 
