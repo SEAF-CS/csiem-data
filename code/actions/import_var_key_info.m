@@ -89,6 +89,7 @@ agency.theme5waves = import_agency_conv('WWMSP5Waves');
 agency.bmtswan = import_agency_conv('BMT-SWAN');
 agency.wwmsp1wrf = import_agency_conv('WWMSP1.1-WRF');
 agency.bombarraftv = import_agency_conv('BOM-BARRA');
+agency.WCWA = import_agency_conv('WCWA');
 
 
 save agency.mat agency -mat;
