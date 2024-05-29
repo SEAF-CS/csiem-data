@@ -158,7 +158,7 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
 
     base = [outpath,filesite,'_',filevar];
     data = [base,'_DATA.csv'];
-    header = [base,'_Header.csv'];
+    header = [base,'_HEADER.csv'];
 
 end
 

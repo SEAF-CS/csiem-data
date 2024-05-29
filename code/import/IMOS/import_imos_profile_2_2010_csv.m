@@ -36,9 +36,7 @@ sdate = thedata.TIME;
 sdate = regexprep(sdate,'T',' ');
 sdate = regexprep(sdate,'Z','');
 
-
 mdates = datenum(sdate,'yyyy-mm-dd HH:MM:SS');
-
 
 Depths = thedata.DEPTH;
 Depths(isnan(Depths)) = 0;
@@ -48,20 +46,23 @@ ustations = unique(stations);
 
 for i = 1:length(theagencyval)
     
+    disp(['Agnency number ',num2str(i)])
     thevar = agency.imosprofile.(theagencyval{i}).Old;
     
     
     if ismember(thevar, thedata.Properties.VariableNames)
-    
+        disp('is member')
 
         for j = 1:length(ustations)
+            disp(['  Station ',num2str(j)])
             foundstation = 0 ;
             for k = 1:length(thesiteval)
                 if strcmpi(sitekey.imosamnm.(thesiteval{k}).ID,ustations{j}) == 1
                     foundstation = k;
+                    disp('      Found station')
                 end
             end
-
+                
 
                 varID = agency.imosprofile.(theagencyval{i}).ID;
                 varname = varkey.(varID).Name;
@@ -76,25 +77,26 @@ for i = 1:length(theagencyval)
                 if ~isempty(thedataout)
 
                 thedepth = Depths(sss(ttt));
-                thedate = mdates(sss(ttt));
+                thedateString = sdate(sss(ttt));
                 QC = 'N';
 
 
 
-
+                disp('          Printing to file')
                 filevar = regexprep(varkey.(varID).Name,' ','_');
                 filevar = regexprep(filevar,'+','_');
                 filename = [outpath,sitekey.imosamnm.(thesiteval{foundstation}).AED,'_',filevar,'_2010_DATA.csv'];
-                fid = fopen(filename,'wt');
+                fid = fopen(filename,'W');
                 fprintf(fid,'Date,Depth,Data,QC\n');
                 for nn = 1:length(thedataout)
-                    fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth(nn),thedataout(nn),QC);
+                    fprintf(fid,'%s,%4.4f,%4.4f,%s\n',thedateString{nn},thedepth(nn),thedataout(nn),QC);
                 end
                 fclose(fid);
 
-                headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv')
+                headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
+                disp(['HeaderName ', headerfile])
 
-                fid = fopen(headerfile,'wt');
+                fid = fopen(headerfile,'W');
                 fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
                 fprintf(fid,'Agency Code,IMOS\n');
                 fprintf(fid,'Program,amnmprofile\n');
@@ -122,9 +124,8 @@ for i = 1:length(theagencyval)
 
                 fprintf(fid,'Data Category,%s\n', varkey.(varID).Category);
 
-
-                SD = mean(diff(thedate));
-
+                nonNullmdates = mdates(sss(ttt));
+                SD = mean(diff(nonNullmdates));
                 fprintf(fid,'Sampling Rate (min),%4.4f\n',SD * (60*24));
 
                 fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
@@ -143,7 +144,6 @@ for i = 1:length(theagencyval)
             end
         
     end
-    
 end
 
 

@@ -41,13 +41,14 @@ Depths = thetable.DEPTH;
 Depths(isnan(Depths)) = 0;
 
 for i = 1:length(procvars)
-
+    disp(['Header ' procvars{i}])
     for j = 1:length(ustations)
 
         foundstation = 0 ;
         for k = 1:length(thesiteval)
             if strcmpi(sitekey.imosamnm.(thesiteval{k}).ID,ustations{j}) == 1
                 foundstation = k;
+                disp(['  Found Site ',sitekey.imosamnm.(thesiteval{k}).ID])
             end
         end
         
@@ -56,23 +57,14 @@ for i = 1:length(procvars)
         for k = 1:length(theagencyval)
             if strcmpi(agency.imosprofile.(theagencyval{k}).Old,procvars{i}) == 1
                 foundvar = k;
+                ID = agency.imosprofile.(theagencyval{k}).ID;
+                VarStruct = varkey.(ID);
+                disp(['         Found Var ',varkey.(ID).Name])
             end
         end
 
         if foundvar > 0
-            
-            
-            
-            
-            thefoundvar = 0;
-            for nn = 1:length(thevarval)
-                if strcmpi(thevarval{nn},agency.imosprofile.(theagencyval{foundvar}).ID) == 1
-                    thefoundvar = nn;
-                end
-            end
-
-
-            
+                        
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
             thedata_raw = thetable.(procvars{i})(sss) * agency.imosprofile.(theagencyval{foundvar}).Conv;
@@ -80,27 +72,27 @@ for i = 1:length(procvars)
             thedata = thedata_raw(ttt);
             
             if ~isempty(thedata)
-            
+                disp('      Writing file')
             thedepth = Depths(sss(ttt));
             thedate = mdates(sss(ttt));
+            thedateString = sdate(sss(ttt));
             QC = 'N';
             
             
             
-            
-            filevar = regexprep(varkey.(thevarval{thefoundvar}).Name,' ','_');
+            filevar = regexprep(varkey.(ID).Name,' ','_');
             filevar = regexprep(filevar,'+','_');
             filename = [outpath,sitekey.imosamnm.(thesiteval{foundstation}).AED,'_',filevar,'_2020_DATA.csv'];
-            fid = fopen(filename,'wt');
+            fid = fopen(filename,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
             for nn = 1:length(thedata)
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth(nn),thedata(nn),QC);
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',thedateString{nn},thedepth(nn),thedata(nn),QC);
             end
             fclose(fid);
             
-            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv')
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
             
-            fid = fopen(headerfile,'wt');
+            fid = fopen(headerfile,'W');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
             fprintf(fid,'Agency Code,IMOS\n');
             fprintf(fid,'Program,amnmadcp\n');
@@ -126,7 +118,7 @@ for i = 1:length(procvars)
             fprintf(fid,'Contact Email,\n');
             fprintf(fid,'Variable ID,%s\n',agency.imosprofile.(theagencyval{foundvar}).ID);
             
-            fprintf(fid,'Data Category,%s\n',varkey.(thevarval{thefoundvar}).Category);
+            fprintf(fid,'Data Category,%s\n',varkey.(ID).Category);
             
             
             SD = mean(diff(thedate));
@@ -136,7 +128,7 @@ for i = 1:length(procvars)
             fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
             fprintf(fid,'Depth,Decimal\n');
             
-            thevar = [varkey.(thevarval{thefoundvar}).Name,' (',varkey.(thevarval{thefoundvar}).Unit,')'];
+            thevar = [varkey.(ID).Name,' (',varkey.(ID).Unit,')'];
             
             fprintf(fid,'Variable,%s\n',thevar);
             fprintf(fid,'QC,String\n');

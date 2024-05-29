@@ -22,7 +22,7 @@ import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
-import_bmtswan = 0;
+import_bmtswan = 1;
 import_wamsitheme1 = 0;
 
 create_smd = 1;
@@ -36,7 +36,7 @@ plotnew_dataplots = 1;
 create_shapefiles = 1;
 
 
-run_marvl = 1;
+run_marvl = 0;
 
 
 %___________________________________________________________________________
