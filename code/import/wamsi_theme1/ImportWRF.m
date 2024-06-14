@@ -79,7 +79,7 @@ function ImportWRF()
                     fprintf(fid,'Date,Depth,Data,QC\n');
 
                     fid2 = fopen(fnameDataRate,'W');
-                    fprintf(fid,'Date,Depth,Data,QC\n');
+                    fprintf(fid2,'Date,Depth,Data,QC\n');%Change by BB
                     % MonthDateVec,MonthDataVec,dMonthDataVec
 
                     for nn = 1:length(MonthDateVec)
@@ -235,7 +235,7 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
 
     base = [outpath,filesite,'_',filevar];
     data = [base,'_DATA.csv'];
-    header = [base,'_Header.csv'];
+    header = [base,'_HEADER.csv'];
 
 end
 
@@ -252,5 +252,5 @@ function [data,header] = PrecipName(outpath,SiteStruct,VarStruct,Month)
 
     base = [outpath,filesite,'_',filevar,'_',MonthList{Month}];
     data = [base,'_DATA.csv'];
-    header = [base,'_Header.csv'];
+    header = [base,'_HEADER.csv'];
 end

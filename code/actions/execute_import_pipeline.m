@@ -18,22 +18,23 @@ import_dpird = 0;
 import_moorings = 0;
 import_theme2 = 0;
 
-import_theme3 = 0;
+import_theme3 = 1;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
-import_bmtswan = 1;
+import_bmtswan = 0;
 import_wamsitheme1 = 0;
+import_UKMO = 0;
 
-create_smd = 1;
+create_smd = 0;
 
-create_matfiles = 1;
-create_parquet = 1;
+create_matfiles = 0;
+create_parquet = 0;
 
-create_dataplots = 1;
-plotnew_dataplots = 1;
+create_dataplots = 0;
+plotnew_dataplots = 0;
 
-create_shapefiles = 1;
+create_shapefiles = 0;
 
 
 run_marvl = 0;
@@ -86,8 +87,7 @@ if import_bom
     %BOM Export
     cd ../import/BOM;
     run_bom_import;
-
-    import_Barra_TFV
+    import_Barra_TFV;
 
     cd ../../actions
 end
@@ -178,6 +178,10 @@ if import_theme3
     run ImportSGRESTMain
     cd ../../../actions
 
+    cd ../import/wamsi_theme3/SEDDEPO
+    run IMPORTSEDDEPO
+    cd ../../../actions
+
     
 end
 
@@ -211,6 +215,18 @@ if import_bmtswan
     importSWAN
     cd ../../actions/
 end
+
+if import_UKMO
+    cd ../import/UKMO
+    system('python3 ImportUKMO.py') 
+    cd ../../actions/
+end
+
+%if  import_met_models
+%    cd ../import/BARRA
+%    import_export_barra;
+%    cd ../../actions/
+%end
 
 if import_wamsitheme1
     cd ../import/wamsi_theme1/

@@ -37,7 +37,8 @@ function importWAVES()
 
         SiteStruct = SearchSitelistbyLatLong(SiteListStruct,FileContentsTable{1,3},FileContentsTable{1,2});
         DateVec = FileContentsTable{:,1};
-
+        %replace / with - "yyyy-mm-dd HH:MM:SS"
+        DateString = regexprep(string(DateVec),'/','-');
         for varIndex = 4:6
             disp(['     Processing Variable ' fileHeaders{varIndex} ' ' num2str(height(FileContentsTable)) 'x1']);
             %workout what variable we are dealing with
@@ -46,14 +47,13 @@ function importWAVES()
             [fnameData,fnameHeader] = filenamecreator(outdir,SiteStruct,VarStruct);
             
 
-
+            DataVec = FileContentsTable{:,varIndex};
             fid = fopen(fnameData,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
             for nn = 1:length(FileContentsTable{:,varIndex})
-                DateString = datestr(DateVec(nn),"yyyy-mm-dd HH:MM:SS");
                 Depth = 0;
                 QC = 'N';
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString,Depth,FileContentsTable{nn,varIndex},QC);
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString(nn),Depth,DataVec(nn),QC);
             end
             fclose(fid);
 
@@ -142,6 +142,6 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
 
     base = [outpath,filesite,'_',filevar];
     data = [base,'_DATA.csv'];
-    header = [base,'_Header.csv'];
+    header = [base,'_HEADER.csv'];
 
 end

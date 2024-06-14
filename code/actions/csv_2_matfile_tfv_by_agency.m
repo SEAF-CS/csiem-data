@@ -162,6 +162,10 @@ for ag = 7%1:length(unique_agency)
                     for k = 1:length(tt2.Depth)
                         csiem.(sitecode).(tfv_name).Depth(k,1) = str2double(tt2.Depth{k}) * -1;
                     end
+                case 'Satelite'
+                    for k = 1:length(tt.Depth)
+                        csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
+                    end
                 otherwise
 
             end

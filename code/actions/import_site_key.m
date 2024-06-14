@@ -22,7 +22,9 @@ sitekey.dot = read_site_sheet('DOT');
 sitekey.wwmsp5waves = read_site_sheet('WWMSP5.2WAVES');
 sitekey.bmtswan = read_site_sheet('BMT-SWAN');
 sitekey.wwmsp1wrf = read_site_sheet('WWMSP1.1-WFR');
-sitekey.bombarraftv = read_site_sheet('BOM-BARRA')
+sitekey.bombarraftv = read_site_sheet('BOM-BARRA');
+sitekey.WWMSP31SedimentDeposition = read_site_sheet('WWMSP3.1-SedimentDeposition');
+
 
 
 

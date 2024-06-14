@@ -63,11 +63,13 @@ function importSWAN()
             fprintf(fid,'Date,Depth,Data,QC\n');
             DataVec = waves.(Sites{i}).(Vars{varIndex}).data;
             DateVec = waves.(Sites{i}).(Vars{varIndex}).date;
+            DateString = datestr(DateVec,"yyyy-mm-dd HH:MM:SS");
+            
             for nn = 1:length(DataVec)
-                DateString = datestr(DateVec(nn),"yyyy-mm-dd HH:MM:SS");
+                % DateString = datestr(DateVec(nn),"yyyy-mm-dd HH:MM:SS");
                 Depth = 0;
                 QC = 'N';
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString,Depth,DataVec(nn),QC);
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString(nn),Depth,DataVec(nn),QC);
             end
             fclose(fid);
 

@@ -42,7 +42,7 @@ for ag = 1:length(unique_agency)
     
     for ff = 1:length(find_agency)
         
-        disp(filelist(find_agency(ff)).name);
+        disp([filelist(find_agency(ff)).folder,'/',filelist(find_agency(ff)).name]);
         
         
         
@@ -129,7 +129,13 @@ for ag = 1:length(unique_agency)
             for k = 1:length(tt.Depth)
                 csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
             end
+
+        case 'Satelite'
+            for k = 1:length(tt.Depth)
+                csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
+            end
         otherwise
+            display('Not recognised Deployment')
             
     end
     

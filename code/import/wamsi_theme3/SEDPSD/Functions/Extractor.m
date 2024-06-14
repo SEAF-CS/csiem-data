@@ -1,4 +1,7 @@
 function AllTable = Extractor(directory,searchReq)
+    % This is correct path because it gets ran from ImportSEDPSD
+    run('../../../actions/csiem_data_paths.m')
+    
     filelist = dir(fullfile(directory,searchReq));
     NumOfFiles = length(filelist);
     

@@ -127,6 +127,10 @@ for ag = 1:length(unique_agency)
             for k = 1:length(tt.Depth)
                 csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
             end
+        case 'Satelite'
+            for k = 1:length(tt.Depth)
+                csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
+            end
         otherwise
             
     end
