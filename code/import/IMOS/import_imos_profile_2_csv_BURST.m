@@ -105,7 +105,7 @@ for i = 12:length(headers)
             end
             fclose(fid);
             
-            headerfile = regexprep(filename,'_DATA','_HEADER');
+            headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
             
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');

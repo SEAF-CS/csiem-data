@@ -119,7 +119,7 @@ for i = 1:length(sheetname)
                     filename
                     
                     fid = fopen(headerfile,'wt');
-                    fprintf(fid,'Agency Name,Fremantle Port Authorityn\n');
+                    fprintf(fid,'Agency Name,Fremantle Port Authority\n');
                     
                     fprintf(fid,'Agency Code,FPA\n');
                     fprintf(fid,'Program,Marine Quality Monitoring Program\n');

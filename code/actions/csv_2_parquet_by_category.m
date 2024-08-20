@@ -175,7 +175,7 @@ for ag = 1:length(unique_agency)
     clear csiem;
 end
 
-outfile = [outfilepath,'csiem_',unique_agency{ag},'_public.parq'];
+outfile = [outfilepath,'csiem_',unique_agency{ag},'_public.parquet'];
 newtable = struct2table(tab);
 
 parquetwrite(outfile,newtable); clear newtable;

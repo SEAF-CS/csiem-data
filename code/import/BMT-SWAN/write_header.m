@@ -10,7 +10,7 @@ fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Code,BMT\n');
             fprintf(fid,'Program,SWAN\n');
             fprintf(fid,'Project,BMT-SWAN\n');
-            fprintf(fid,'Tag,\n');
+            fprintf(fid,'Tag,BMT-SWAN\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);

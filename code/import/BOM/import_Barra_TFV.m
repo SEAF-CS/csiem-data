@@ -102,10 +102,10 @@ function import_Barra_TFV
             DataVecCombined = DataVecCombined*AgencyStruct.Conv;
             
             for nn = 1:length(DataVec)
-                % DateString = datestr(DateVecCombined(nn),"yyyy-mm-dd HH:MM:SS");
+                DateString = datestr(DateVecCombined(nn),"yyyy-mm-dd HH:MM:SS");
                 Depth = 0;
                 QC = 'N';
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString(nn),Depth,DataVecCombined(nn),QC);
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString,Depth,DataVecCombined(nn),QC);
             end
             fclose(fid);
 

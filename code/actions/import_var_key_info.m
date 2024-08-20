@@ -91,7 +91,17 @@ agency.wwmsp1wrf = import_agency_conv('WWMSP1.1-WRF');
 agency.bombarraftv = import_agency_conv('BOM-BARRA');
 agency.WCWA = import_agency_conv('WCWA');
 agency.UKMO = import_agency_conv('UKMO');
-agency.WWMSP31SedimentDeposition = import_agency_conv('WWMSP3.1-Sediment-Deposition')
+agency.WWMSP31SedimentDeposition = import_agency_conv('WWMSP3.1-Sediment-Deposition');
+agency.AIMS = import_agency_conv('AIMS');
+agency.theme51waves = import_agency_conv('WWMSP5.1Waves');
+agency.DWER_Phytoplankton = import_agency_conv('DWER Phytoplankton');
+agency.DWER_PhytoplanktonGroups = import_agency_conv('DWERPhytoPlanktonGroups');
+agency.IMOS_Phytoplankton = import_agency_conv('IMOS Phytonplakton');
+agency.IMOS_PhytoplanktonGroup = import_agency_conv('IMOSPhytoGroups');
+agency.WCWA1_PhytoplanktonSpecies = import_agency_conv("WCWA PhytoplanktonSpecies");
+agency.WCWA1_PhytoplanktonGroup = import_agency_conv("WCWA PhytoplanktonGroup");
+agency.WCWA2_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species2");
+agency.WCWA2_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Group2");
 
 
 save agency.mat agency -mat;

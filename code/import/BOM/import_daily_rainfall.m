@@ -64,7 +64,7 @@ for i = 1:length(filelist)
     
     
     
-    headerfile = regexprep(filename,'_DATA','_HEADER');
+    headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
     
     fid = fopen(headerfile,'wt');
     fprintf(fid,'Agency Name,Bureau of Meteorology\n');

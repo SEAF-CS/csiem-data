@@ -5,12 +5,12 @@ temp = split(filename,'\');
 filename_short = temp{end};
 
 fid = fopen(headerfile,'wt');
-            fprintf(fid,'Agency Name,BOM\n');
+            fprintf(fid,'Agency Name,Bureau of Meteorology\n');
             
             fprintf(fid,'Agency Code,BOM\n');
             fprintf(fid,'Program,BARRA\n');
-            fprintf(fid,'Project,BOM-BARRAFTV\n');
-            fprintf(fid,'Tag,\n');
+            fprintf(fid,'Project,BOM-BARRA-TFV\n');
+            fprintf(fid,'Tag,BOM-BARRA-TFV\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);

@@ -82,7 +82,7 @@ for VarIndex = 1:nvars
             filecode = [siteName,'_',depths{DepthIndex},'_',filenamevar];
             Date = BigDATEArray{VarIndex,SiteIndex,DepthIndex};
             Data = BIGDATAArray{VarIndex,SiteIndex,DepthIndex};
-            Func(filecode,Date,Data,Depth,outdir,SiteStruct,VarID,varkey);
+            FunctionisedCsvWriter(filecode,Date,Data,Depth,outdir,SiteStruct,VarID,varkey);
         end
     end
 end

@@ -5,12 +5,12 @@ temp = split(filename,'\');
 filename_short = temp{end};
 
 fid = fopen(headerfile,'wt');
-            fprintf(fid,'Agency Name,BMT\n');
+            fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
-            fprintf(fid,'Agency Code,BMT\n');
-            fprintf(fid,'Program,SWAN\n');
-            fprintf(fid,'Project,BMT-SWAN\n');
-            fprintf(fid,'Tag,\n');
+            fprintf(fid,'Agency Code,WAMSI\n');
+            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
+            fprintf(fid,'Project,WWMSP-THEME1.1\n');
+            fprintf(fid,'Tag,WWMSP-THEME1.1-WRF\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);
@@ -22,6 +22,9 @@ fid = fopen(headerfile,'wt');
             fprintf(fid,'Long,%6.9f\n',lon);
             fprintf(fid,'Time Zone,GMT +8\n');
             fprintf(fid,'Vertical Datum,mAHD\n');
+            if isnumeric(ID)
+                ID = num2str(ID);
+            end
             fprintf(fid,'National Station ID,%s\n',ID);
 
             %%

@@ -18,13 +18,20 @@ import_dpird = 0;
 import_moorings = 0;
 import_theme2 = 0;
 
-import_theme3 = 1;
+import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 import_bmtswan = 0;
 import_wamsitheme1 = 0;
 import_UKMO = 0;
+import_AIMS = 0;
+import_DWERPHYTO = 0;
+import_IMOSPlanktonvar = 0;
+import_WCWA1Phyto = 0;
+import_WCWA2Phyto = 0;
+
+import_wamsiwaves51 = 0;
 
 create_smd = 0;
 
@@ -203,12 +210,25 @@ if import_theme5
     import_netcdf_csv_ADCP;
     import_met_csv;
 
-    cd Waves/
+    cd Waves5.1/
+    Waves51
+    cd ../
+
+    cd Waves5.2/
     importWAVES
     cd ../
 
     cd ../../actions/
 end
+
+if import_wamsiwaves51
+    cd ../import/wamsi_theme5/Waves5.1
+    Waves51
+    cd ../
+
+    cd ../../actions/
+end
+
 
 if import_bmtswan
     cd ../import/BMT-SWAN
@@ -233,6 +253,48 @@ if import_wamsitheme1
     ImportWRF
     cd ../../actions/
 end
+
+if import_AIMS
+    cd ../import/AIMS
+    AIMS
+    cd ../../actions
+end
+
+if import_DWERPHYTO
+    cd ../import/DWER/DWER_PhytoPlakton/
+    import_PhytoPlanktonSpecies
+
+    CSV_HoldingPlanktonGroup
+    import_PhytoPlanktonGroup
+    cd ../../../actions/
+end
+
+if import_IMOSPlanktonvar
+    cd ../import/IMOS/IMOSPHYTO/
+    import_IMOSPlankton
+
+    Holding_IMOSPlanktonGroup 
+    import_IMOSPlanktonGroup
+
+    cd ../../../actions/
+end
+
+if import_WCWA1Phyto
+    cd ../import/WCWA/Phytoplankton/WCWA1
+    import_phytoplankton1_Species
+    import_phytoplankton1_Group
+    cd ../../../../actions/
+end
+
+if import_WCWA2Phyto
+    cd ../import/WCWA/Phytoplankton/WCWA2
+    import_phytoplankton2_Species
+    import_phytoplankton2_Group
+    cd ../../../../actions/
+end
+
+
+
 
 
 if create_smd

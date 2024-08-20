@@ -27,10 +27,12 @@ for i = 1:length(filelist)
 end
 
 unique_agency = unique(agency);
+disp(unique_agency);
+
 
 inc = 1;
 
-for ag = 1:length(unique_agency)
+for ag = 2:length(unique_agency)
     
     find_agency = find(strcmpi(agency,unique_agency(ag)) == 1);
     
@@ -62,13 +64,17 @@ for ag = 1:length(unique_agency)
         
         dt = mean(diff(tt2.Date));
         
+        disp(num2str(dt));
+
         tab11 = struct2table(tt2);
         tab11.Date = datetime(tab11.Date,'ConvertFrom','datenum');
         % Downshift the data to hourly if required.
-        if dt < 1/(60*24)
+        if dt < 1/(24)
             if strcmpi(header.Deployment,'Profile') == 0
                 disp('Starting Downsample');
-                tt = timetable2table(retime(table2timetable(tab11),'minutely','nearest'));
+                dt = minutes(5);
+                tt = timetable2table(retime(table2timetable(tab11),'hourly','nearest'));
+                %tt = timetable2table(retime(table2timetable(tab11),'regular','TimeStep',dt));
             else
                 tt = tab11;
             end
@@ -179,8 +185,11 @@ for ag = 1:length(unique_agency)
     clear csiem;
 end
 
-outfile = [outfilepath,'csiem_',unique_agency{ag},'_public.parq'];
+disp('finished ingestion');
+
+outfile = [outfilepath,'csiem_',unique_agency{ag},'_public.parquet'];
 newtable = struct2table(tab);
+disp('tables created');
 
 parquetwrite(outfile,newtable); clear newtable;
 end

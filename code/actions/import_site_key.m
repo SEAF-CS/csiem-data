@@ -24,6 +24,10 @@ sitekey.bmtswan = read_site_sheet('BMT-SWAN');
 sitekey.wwmsp1wrf = read_site_sheet('WWMSP1.1-WFR');
 sitekey.bombarraftv = read_site_sheet('BOM-BARRA');
 sitekey.WWMSP31SedimentDeposition = read_site_sheet('WWMSP3.1-SedimentDeposition');
+sitekey.AIMS = read_site_sheet('AIMS');
+sitekey.DWERPhyto = read_site_sheet('DWERPHYTO');
+sitekey.IMOS_Phytoplankton =read_site_sheet("LachyIMOSPHYTO");
+sitekey.WCWA2Phyto = read_site_sheet("WCWA2Phyto");
 
 
 

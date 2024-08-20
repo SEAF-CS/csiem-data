@@ -103,7 +103,7 @@ for i = 1:length(ggg)
 end
 fclose(fid);
 
-headerfile = regexprep(filename,'_DATA','_HEADER');
+headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
 
 fid = fopen(headerfile,'wt');
 fprintf(fid,'Agency Name,Department of Transport\n');

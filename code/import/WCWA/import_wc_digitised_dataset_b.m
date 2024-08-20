@@ -29,7 +29,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -56,7 +56,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -83,7 +83,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -110,7 +110,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -137,7 +137,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -164,7 +164,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -191,7 +191,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -218,7 +218,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -245,7 +245,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -272,7 +272,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -299,7 +299,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -327,7 +327,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -354,7 +354,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -381,7 +381,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -408,7 +408,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -435,7 +435,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -462,7 +462,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -489,7 +489,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -516,7 +516,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -543,7 +543,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';
@@ -570,7 +570,7 @@ data = [snum(:,1);snum(:,2)];
 
 Lat = sitekey.wc.(thesite).Lat;
 Lon = sitekey.wc.(thesite).Lon;
-AgencyName = 'Water Corporation';
+AgencyName = 'Water Corporation WA';
 AgencyCode = 'WCWA';
 Program =  'PSDP-1.2';
 ProgramCode = 'PSDP-1.2';

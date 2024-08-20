@@ -1,0 +1,43 @@
+Acantharia
+Actinopoda
+Choanoflagellatea
+Ciliate (Inc. tintinnid)
+Ciliate (naked 25-50 µm)
+Ciliate (naked < 25µm)
+Ciliate 100-150 µm naked
+Ciliate 50-60 µm
+Codonella cf. galea
+Codonella spp.
+Codonellopsis cf. ostenfeldi
+Codonellopsis morchella
+Codonellopsis orthoceras
+Codonellopsis pusilla
+Codonellopsis spp.
+Foraminifera
+Gephyrocapsa  oceanica
+Globigerinidae
+Neogloboquadrina pachyderma
+Pinus pollen
+Protorhabdonella simplex
+Protorhabdonella spp.
+Radiolarian
+Rotalia spp.
+Strombidiidae
+Strombidium spp.
+Tintinnidium spp.
+Tintinnina
+Tintinnopsis radix
+Tintinnopsis spp.
+Tintinnopsis tocantinensis
+Unid heterotroph 10-20 µm
+Unid heterotroph 20-30 µm
+Vorticella spp.
+cf. Strombidium spp.
+hairy flap
+unid square cells
+CTDSST_degC
+CTDChlaSurf_mgm3
+CTDSalinity_psu
+Ciliate
+Foraminifera
+Radiozoa
