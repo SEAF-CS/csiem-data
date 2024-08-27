@@ -66,15 +66,15 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                         f.write('Agency Code,UKMO\n')
                         f.write('Program,Global Ocean OSTIA Sea Surface Temperature and Sea Ice Analysis\n')
                         f.write('Project,Operational Sea surface Temperature and Ice Analysis (OSTIA)\n')
-                        f.write('Tag,\n')
+                        f.write('Tag,UKMO-OSTIA\n')
                         
                         f.write(f'Data File Name,{FileNamesTuple[0]}\n')
-                        f.write('Location,\n')
+                        f.write('Location,N/A\n')
                         
                         f.write('Station Status,\n')
                         f.write(f'Lat,{Table.iloc[0,1]:6.9}\n')
                         f.write(f'Long,{Table.iloc[0,2]:6.9}\n')
-                        f.write('Time Zone,GMT +0\n')
+                        f.write('Time Zone,GMT +8\n')
                         f.write('Vertical Datum,mAHD\n')
                         f.write('National Station ID,N/A\n')
                         

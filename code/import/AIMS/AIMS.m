@@ -73,13 +73,12 @@ function AIMS()
             FID = fopen(fDATA,'a');
             fprintf(FID,'%s,%4.4f,%4.4f,%s\n',time,depth,val,'N');
             fclose(FID);
-            break;
 
 
 
 
         end
-        break;
+        
     end
 end
 
@@ -89,13 +88,13 @@ function headerfill(fid,filename,indir,SubSiteStruct,Varstruct,depth,varid)
     fprintf(fid,'Agency Name,AIMS\n');
     
     fprintf(fid,'Agency Code,AIMS\n');
-    fprintf(fid,'Program,Temp\n');
-    fprintf(fid,'Project,TempLogger\n');
-    fprintf(fid,'Tag,\n');
+    fprintf(fid,'Program,AIMS Temperature Logger\n');
+    fprintf(fid,'Project,AIMS Temperature Logger\n');
+    fprintf(fid,'Tag,AIMS-Temp-Logger\n');
 
     %%
     fprintf(fid,'Data File Name,%s\n',filename);
-    fprintf(fid,'Location,%s\n',indir);
+    fprintf(fid,'Location,%s\n','N/A');
     %%
     
     fprintf(fid,'Station Status,\n');
@@ -110,7 +109,7 @@ function headerfill(fid,filename,indir,SubSiteStruct,Varstruct,depth,varid)
     %%
     fprintf(fid,'Site Description,%s\n',SubSiteStruct.Description);
     fprintf(fid,'Deployment,%s\n','Floating');         
-    fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed');
+    fprintf(fid,'Deployment Position,%s\n','8m below the surface');% '0.0m above Seabed');
     fprintf(fid,'Vertical Reference,%s\n','m below surface');
     fprintf(fid,'Site Mean Depth,%4.4f\n',depth);
     %%

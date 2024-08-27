@@ -74,11 +74,11 @@ function import_PhytoPlanktonSpecies()
                     fprintf(fid,'Agency Code,DWER\n');
                     fprintf(fid,'Program,DWER Phytoplankton\n');
                     fprintf(fid,'Project,DWER_Phytoplankton\n');
-                    fprintf(fid,'Tag,DWER_Phytoplankton\n');
+                    fprintf(fid,'Tag,DWER_Phytoplankton_Species\n');
 
                     %%
-                    fprintf(fid,'Data File Name,%s\n',filename);
-                    fprintf(fid,'Location,%s\n',main_dir');
+                    fprintf(fid,'Data File Name,%s\n',fDATA);
+                    fprintf(fid,'Location,N/A\n');
                     %%
                     
                     fprintf(fid,'Station Status,\n');
@@ -90,7 +90,7 @@ function import_PhytoPlanktonSpecies()
 
                     %%
                     fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                    fprintf(fid,'Deployment,%s\n','');
+                    fprintf(fid,'Deployment,%s\n','Integrated');
                     fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed' 0m below surface);
                     fprintf(fid,'Vertical Reference,%s\n','');%  'm above Seabed'm below surface);
                     fprintf(fid,'Site Mean Depth,%4.4f\n',mean(Depth));

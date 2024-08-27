@@ -72,11 +72,11 @@ function CSV_HoldingPlanktonGroup()
                     fprintf(fid,'Agency Code,DWER\n');
                     fprintf(fid,'Program,DWER PhytoplanktonGroups\n');
                     fprintf(fid,'Project,DWER_PhytoplanktonGroups\n');
-                    fprintf(fid,'Tag,DWER_PhytoplanktonGroups\n');
+                    fprintf(fid,'Tag,DWER_Phytoplankton_Groups\n');
 
                     %%
-                    fprintf(fid,'Data File Name,%s\n',filename);
-                    fprintf(fid,'Location,%s\n',main_dir');
+                    fprintf(fid,'Data File Name,%s\n',fDATA);
+                    fprintf(fid,'Location,%s\n','N/A');
                     %%
                     
                     fprintf(fid,'Station Status,\n');
@@ -88,7 +88,7 @@ function CSV_HoldingPlanktonGroup()
 
                     %%
                     fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                    fprintf(fid,'Deployment,%s\n','');
+                    fprintf(fid,'Deployment,%s\n','Integrated');
                     fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed' 0m below surface);
                     fprintf(fid,'Vertical Reference,%s\n','');%  'm above Seabed'm below surface);
                     fprintf(fid,'Site Mean Depth,%4.4f\n',mean(Depth));

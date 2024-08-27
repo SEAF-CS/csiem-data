@@ -37,7 +37,7 @@ function import_phytoplankton1_Group()
             DateTimeObj = datetime(Timestr,'InputFormat','dd-MMM-yy');
             DateTimeObj.Format='yyyy-MM-dd HH:mm:ss';
             DateStr = string(DateTimeObj);
-            Depth = -1;
+            Depth = 0;
             % interval = mean(diff(Timestr));
             % %stores the average time between samples 
             % mininterval = minutes(interval);
@@ -63,17 +63,19 @@ function import_phytoplankton1_Group()
                     fprintf(fid,"Date,Depth,Data,QC\n");
                 fclose(fid);
 
+                temp = split(fDATA,filesep);
+                filename_short = temp{end};
                 fid = fopen(fHEADER,'w');
                     fprintf(fid,'Agency Name,Water Corporation Western Australia\n');
                     
                     fprintf(fid,'Agency Code,WCWA\n');
                     fprintf(fid,'Program,WCWA Phytoplankton\n');
-                    fprintf(fid,'Project,WCWA\n');
-                    fprintf(fid,'Tag,WCWA_Phytoplankton\n');
+                    fprintf(fid,'Project,WCWA Phytoplankton\n');
+                    fprintf(fid,'Tag,WCWA_Phytoplankton_Group\n');
 
                     %%
-                    fprintf(fid,'Data File Name,%s\n',filename);
-                    fprintf(fid,'Location,%s\n',main_dir');
+                    fprintf(fid,'Data File Name,%s\n',filename_short);
+                    fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
                     %%
                     
                     fprintf(fid,'Station Status,\n');
@@ -85,10 +87,10 @@ function import_phytoplankton1_Group()
 
                     %%
                     fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                    fprintf(fid,'Deployment,%s\n','');
+                    fprintf(fid,'Deployment,%s\n','Integrated');
                     fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed' 0m below surface);
                     fprintf(fid,'Vertical Reference,%s\n','');%  'm above Seabed'm below surface);
-                    fprintf(fid,'Site Mean Depth,%4.4f\n',-1);
+                    fprintf(fid,'Site Mean Depth,%4.4f\n',0);
                     %%
 
                     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

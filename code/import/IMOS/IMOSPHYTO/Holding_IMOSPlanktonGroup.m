@@ -76,11 +76,11 @@ function Holding_IMOSPlanktonGroup()
                         fprintf(fid,'Agency Code,IMOS\n');
                         fprintf(fid,'Program,IMOS Phytoplankton\n');
                         fprintf(fid,'Project,IMOS\n');
-                        fprintf(fid,'Tag,IMOS_Phytoplankton\n');
+                        fprintf(fid,'Tag,IMOS_Phytoplankton_Group\n');
 
                         %%
-                        fprintf(fid,'Data File Name,%s\n',filename);
-                        fprintf(fid,'Location,%s\n',main_dir');
+                        fprintf(fid,'Data File Name,%s\n',fDATA);
+                        fprintf(fid,'Location,%s\n','N/A');
                         %%
                         
                         fprintf(fid,'Station Status,\n');
@@ -92,9 +92,9 @@ function Holding_IMOSPlanktonGroup()
 
                         %%
                         fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                        fprintf(fid,'Deployment,%s\n','');
-                        fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed' 0m below surface);
-                        fprintf(fid,'Vertical Reference,%s\n','');%  'm above Seabed'm below surface);
+                        fprintf(fid,'Deployment,%s\n','Floating');
+                        fprintf(fid,'Deployment Position,%s\n','0m below surface');
+                        fprintf(fid,'Vertical Reference,%s\n','m below surface');
                         fprintf(fid,'Site Mean Depth,%4.4f\n',mean(Depth));
                         %%
 

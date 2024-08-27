@@ -19,7 +19,7 @@ data = import_datafile(filename);
 %     data.Depth_T = depth1;
 %     data.Depth_B = depth2;
 
-headerfile = regexprep(filename,'DATA','HEADER');
+headerfile = regexprep(filename,'DATA.csv','HEADER.csv');
 
 headerdata = import_header(headerfile);
 

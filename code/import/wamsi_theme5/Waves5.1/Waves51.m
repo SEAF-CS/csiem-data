@@ -54,7 +54,7 @@ function Waves51()
 
                     %%
                     fprintf(fid,'Data File Name,%s\n',filename);
-                    fprintf(fid,'Location,%s\n',main_dir');
+                    fprintf(fid,'Location,%s\n','N/A');%main_dir');
                     %%
                     
                     fprintf(fid,'Station Status,\n');
@@ -66,9 +66,9 @@ function Waves51()
 
                     %%
                     fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                    fprintf(fid,'Deployment,%s\n','floating');
-                    fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed' 0m below surface);
-                    fprintf(fid,'Vertical Reference,%s\n','m below surface');%  'm above Seabed'm below surface);
+                    fprintf(fid,'Deployment,%s\n','Floating');
+                    fprintf(fid,'Deployment Position,%s\n','0m below surface');
+                    fprintf(fid,'Vertical Reference,%s\n','m below surface');
                     fprintf(fid,'Site Mean Depth,%4.4f\n',mean(Depth));
                     %%
 

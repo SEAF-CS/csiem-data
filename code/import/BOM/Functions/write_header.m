@@ -1,7 +1,7 @@
 function write_header(headerfile,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
 filename = regexprep(headerfile,'_HEADER','_DATA');
 
-temp = split(filename,'\');
+temp = split(filename,filesep);
 filename_short = temp{end};
 
 fid = fopen(headerfile,'wt');
@@ -14,7 +14,7 @@ fid = fopen(headerfile,'wt');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);
-            fprintf(fid,'Location,%s\n','N/A');
+            fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
             %%
             
             fprintf(fid,'Station Status,\n');
