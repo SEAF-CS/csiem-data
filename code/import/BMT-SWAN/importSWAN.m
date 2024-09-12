@@ -61,7 +61,7 @@ function importSWAN()
 
             fid = fopen(fnameData,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
-            DataVec = waves.(Sites{i}).(Vars{varIndex}).data;
+            DataVec = waves.(Sites{i}).(Vars{varIndex}).data * AgencyStruct.Conv;
             DateVec = waves.(Sites{i}).(Vars{varIndex}).date;
 %            DateString = datestr(DateVec,"yyyy-mm-dd HH:MM:SS");
 

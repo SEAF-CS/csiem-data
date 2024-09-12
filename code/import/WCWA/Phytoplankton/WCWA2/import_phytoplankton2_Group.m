@@ -62,7 +62,23 @@ function import_phytoplankton2_Group()
         NumofSites = length(dataindexVec);%%(228-4)/2; % 228 cells, first data point is 5 , and there 2 cells for every site.
         for SiteNum = 1:NumofSites
             SiteName = Sites{SiteNum};
+            % This sitename looks like WC1S with an S or B on the end, meaning surface or bottom,
+            % the values are taken 0.5m from respective boundary.
             SiteStruct = SearchSitelistbyStr(SiteListStruct,SiteName);
+            if SiteName(end) == "S"
+                Deployment = 'Floating';
+                heightOrdepth = 'Depth';
+                VerticalRef = 'm below surface';
+
+            elseif SiteName(end) == "B"
+                Deployment = 'Fixed';
+                heightOrdepth = 'Height';
+                VerticalRef = 'm above seafloor';
+
+            else
+                error("Not Correct on site")
+            end
+            
             dataindex = dataindexVec(SiteNum);
             Date = Dates(SiteNum);
             DateTimeObj = datetime(Date,'InputFormat','dd-MMM-yy');
@@ -79,7 +95,7 @@ function import_phytoplankton2_Group()
                 varId = varIds{rowNum};
                 VarStruct = varkey.(varId);
                 Conv = VarListStruct.(varnameInsideAgencyStruct{AgencyIndexs(rowNum)}).Conv; 
-                Depth = 0;
+                Depth = 0.5;
                 DataVal = T{rowNum,dataindex}*Conv; % "Count"
                 if isnan(DataVal)
                     continue    
@@ -93,7 +109,7 @@ function import_phytoplankton2_Group()
                 if ~exist(fDATA,'file')
                     %only gets in here when file doesnt exist already
                     fid = fopen(fDATA,'W');
-                        fprintf(fid,"Date,Depth,Data,QC\n");
+                    fprintf(fid,"Date,%s,Data,QC\n",heightOrdepth);
                     fclose(fid);
 
                     temp = split(fDATA,filesep);
@@ -120,14 +136,14 @@ function import_phytoplankton2_Group()
     
                         %%
                         fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                        fprintf(fid,'Deployment,%s\n','Integrated');
-                        fprintf(fid,'Deployment Position,%s\n','');% '0.0m above Seabed' 0m below surface);
-                        fprintf(fid,'Vertical Reference,%s\n','');%  'm above Seabed'm below surface);
+                        fprintf(fid,'Deployment,%s\n',Deployment);
+                        fprintf(fid,'Deployment Position,%s\n',['0.0',VerticalRef]); % '0.0m above Seabed' 0m below surface);
+                        fprintf(fid,'Vertical Reference,%s\n',VerticalRef);
                         fprintf(fid,'Site Mean Depth,%4.4f\n',0);
                         %%
     
                         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-                        fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 13/08/2024');
+                        fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 13/09/2024');
     
                         %%
                         fprintf(fid,'Variable ID,%s\n',varId);

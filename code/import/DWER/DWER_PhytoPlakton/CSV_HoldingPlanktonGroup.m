@@ -47,7 +47,7 @@ function CSV_HoldingPlanktonGroup()
             GroupName = T{row,"GroupName"}; % ie col 15
             AgencyStruct = SearchVarlist(VarListStruct,GroupName);
             VarStruct = varkey.(AgencyStruct.ID);
-            CellsPermL = T{row,"Species_density_cells_per_ml"}; % ie col 17
+            CellsPermL = T{row,"Species_density_cells_per_ml"}* AgencyStruct.Conv; % ie col 17
             dateCollected = T{row,"DateCollected"}; % ie col 3
             timeCollected = sprintf("%02d:%02d:00",hours(row),mins(row));
             timestr = sprintf("%s %s",dateCollected,timeCollected);

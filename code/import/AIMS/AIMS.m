@@ -67,7 +67,7 @@ function AIMS()
 
             time = T{i,17}{1};
             time(20) = ':';
-            val = T{i,18};
+            val = T{i,18}* VarListStruct.var1.Conv;
 
             [fDATA,fHEADER] = filenamecreator(outdir,Sitestruct,Var);
             FID = fopen(fDATA,'a');

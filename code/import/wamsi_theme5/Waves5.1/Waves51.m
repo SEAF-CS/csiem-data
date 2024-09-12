@@ -31,10 +31,12 @@ function Waves51()
             if VarNum ~= 9:14 % currently these are the vars in the varkey
                 continue
             end
-            Data = Temp{:,VarNum};
+            
             FileVarHeader = Temp.Properties.VariableNames{VarNum};
             AgencyStruct = SearchVarlist(VarListStruct,FileVarHeader);
             VarStruct = varkey.(AgencyStruct.ID);
+
+            Data = Temp{:,VarNum}* AgencyStruct.Conv;
 
             % open and write to data file
             [fDATA,fHEADER] = filenamecreator(outdir,SiteStruct,VarStruct);

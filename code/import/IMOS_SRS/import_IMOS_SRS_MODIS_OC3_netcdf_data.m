@@ -41,7 +41,9 @@ for i = 1:length(data.latitude)
                 pdepth = mdepth(sss);
 
 
-                station = ['IMOS_SRS_MODIS_',shp(1).Name,'_',num2str(j),'_',num2str(i)];
+                % station = ['IMOS_SRS_MODIS_',shp(1).Name,'_',num2str(j),'_',num2str(i)];
+                station = [shp(1).Name,'_',num2str(j),'_',num2str(i)];
+
 
                 datafile = [outdir,'IMOS_SRS_MODIS_',shp(1).Name,'_',num2str(j),'_',num2str(i),'_DATA.csv'];
                 fid = fopen(datafile,'wt');

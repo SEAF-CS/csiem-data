@@ -47,7 +47,7 @@ function importWAVES()
             [fnameData,fnameHeader] = filenamecreator(outdir,SiteStruct,VarStruct);
             
 
-            DataVec = FileContentsTable{:,varIndex};
+            DataVec = FileContentsTable{:,varIndex}*AgencyStruct.Conv;
             fid = fopen(fnameData,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
             for nn = 1:length(FileContentsTable{:,varIndex})
