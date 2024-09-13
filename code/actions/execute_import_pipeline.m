@@ -135,9 +135,9 @@ end
 
 if import_imos_srs
     cd ../import/IMOS_SRS/
-    import_IMOS_SRS_L3S_netcdf_data;
-    import_IMOS_SRS_MODIS_netcdf_data;
-    import_IMOS_SRS_MODIS_OC3_netcdf_data;
+    %import_IMOS_SRS_L3S_netcdf_data;
+    %import_IMOS_SRS_MODIS_netcdf_data;
+    %import_IMOS_SRS_MODIS_OC3_netcdf_data;
     cd ../../actions/
 end
 

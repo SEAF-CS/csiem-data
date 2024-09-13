@@ -102,6 +102,23 @@ agency.WCWA1_PhytoplanktonSpecies = import_agency_conv("WCWA PhytoplanktonSpecie
 agency.WCWA1_PhytoplanktonGroup = import_agency_conv("WCWA PhytoplanktonGroup");
 agency.WCWA2_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species2");
 agency.WCWA2_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Group2");
+agency.WCWA3_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species3");
+agency.WCWA3_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups3");
+agency.WCWA4_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species4");
+agency.WCWA4_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups4");
+agency.WCWA5_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species5");
+agency.WCWA5_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups5");
+agency.WCWA6_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species6");
+agency.WCWA6_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups6");
+agency.WCWA7_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species7");
+agency.WCWA7_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups7");
+
+
+
+
+
+agency.SWANESTGroups = import_agency_conv("SWANEST Groups");
+agency.SWANESTSpecies = import_agency_conv("SWANEST Species");
 
 
 save agency.mat agency -mat;

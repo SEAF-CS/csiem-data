@@ -1,4 +1,4 @@
 #!/bin/bash
 matlab_exec=matlab
 echo "execute_import_pipeline();
-exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop > 'Lachylog.txt' &
+exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop > 'IMOSCHECKER.txt' &

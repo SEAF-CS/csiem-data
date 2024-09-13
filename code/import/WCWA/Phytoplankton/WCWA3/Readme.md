@@ -1,0 +1,3 @@
+Group has only nan values and therefore does not create any files...
+
+This code does all of the AllNorth sites..
