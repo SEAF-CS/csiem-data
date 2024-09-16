@@ -1,9 +1,9 @@
-function import_phytoplankton5_Species()
+function import_phytoplankton_Group(WCNum,SheetString,DataLastRowNum)
 
     run('../../../../actions/csiem_data_paths.m')
 
     main_dir = [datapath,'data-lake/WCWA/Phyto/WCWA3/'];
-    outdir = [datapath,'data-warehouse2/csv/wcwa/PhytoPlankton5/Species/'];
+    outdir = [datapath,'data-warehouse2/csv_holding/wcwa/PhytoPlankton',num2str(WCNum),'/Groups/'];
 
 
 
@@ -17,26 +17,27 @@ function import_phytoplankton5_Species()
     load ../../../../actions/agency.mat;
     load ../../../../actions/sitekey.mat;
 
-    VarListStruct = agency.WCWA5_PhytoplanktonSpecies;
+    VarListStruct = agency.(['WCWA',num2str(WCNum),'_PhytoplanktonGroup']);
     SiteListStruct = sitekey.WCWA3Phyto;
     varnameInsideAgencyStruct = fieldnames(VarListStruct);
 
-    unimprtedFID = fopen("UnimportedSpecies.txt","w");
+    unimprtedFID = fopen(['UnimportedGroups',num2str(WCNum),'.txt'],"w");
 
 
     filecell = RecursiveListDataFilesInDir(main_dir);
     for fileNum = 1:length(filecell)
         filename = filecell{fileNum};
 
-        T = ReadinDataFile(filename);
+        DataTable = importfile(filename,SheetString, [26,DataLastRowNum]);
+        SiteandDate = importMetaData(filename,SheetString);
 
 
         %% for speed finding all variable id's at the start
-        varIds = cell(height(T),1);
-        AgencyIndexs = nan(height(T),1);
-        for rowNum = 1:height(T)
+        varIds = cell(height(DataTable),1);
+        AgencyIndexs = nan(height(DataTable),1);
+        for rowNum = 1:height(DataTable)
             % match to varkey
-            varname =  T{rowNum,1}; % col 1
+            varname =  DataTable{rowNum,1}; % col 1
             [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
             if AgencyIndex == 0 
                 fprintf(unimprtedFID,"%s\n",varname{1});
@@ -51,17 +52,20 @@ function import_phytoplankton5_Species()
         end
 
 
-        dataindexVec = [4,7];
+        dataindexVec = [4,7,10,13]; %hard coded to match DataTable variable
 
         NumofSites = length(dataindexVec);
         for SiteNum = 1:NumofSites
-            SiteName = ['N' num2str(SiteNum)];
+            dataindex = dataindexVec(SiteNum);
+            SiteName = SiteandDate{1,dataindex-3}; %%% metadata table starts at the data hence is shifted back 3, and stores site in top row and then date
             SiteStruct = SearchSitelistbyStr(SiteListStruct,SiteName);
 
-            dataindex = dataindexVec(SiteNum);
-            DateStr = '1999-1-20 00:00:00'; %'Jan 20 1999'
             
-            for rowNum = 1:height(T)
+            t = SiteandDate{2,dataindex-3};
+            DateStr = datetime(t,'InputFormat','MMMM dd yyyy');
+            DateStr.Format = 'yyyy-MM-dd HH:mm:SS';
+            
+            for rowNum = 1:height(DataTable)
                 % match to varkey
                 if AgencyIndexs(rowNum) == 0
                     continue
@@ -72,7 +76,7 @@ function import_phytoplankton5_Species()
                 VarStruct = varkey.(varId);
                 Conv = VarListStruct.(varnameInsideAgencyStruct{AgencyIndexs(rowNum)}).Conv; 
                 Depth = 0;
-                DataVal = T{rowNum,dataindex}*Conv; % "Count"
+                DataVal = DataTable{rowNum,dataindex}*Conv; % "Count"
                 if isnan(DataVal)
                     continue    
                 end
@@ -94,10 +98,10 @@ function import_phytoplankton5_Species()
                     fid = fopen(fHEADER,'w');
                         fprintf(fid,'Agency Name,Water Corporation Western Australia\n');
                         
-                        fprintf(fid,'Agency Code,WCWA5\n');
-                        fprintf(fid,'Program,WCWA5 Phytoplankton\n');
-                        fprintf(fid,'Project,WCWA5 Phytoplankton\n');
-                        fprintf(fid,'Tag,WCWA5_Phytoplankton_Species\n');
+                        fprintf(fid,'Agency Code,WCWA%d\n',WCNum);
+                        fprintf(fid,'Program,WCWA%d Phytoplankton\n',WCNum);
+                        fprintf(fid,'Project,WCWA%d Phytoplankton\n',WCNum);
+                        fprintf(fid,'Tag,WCWA%d_Phytoplankton_Group\n',WCNum);
     
                         %%
                         fprintf(fid,'Data File Name,%s\n',filename_short);
@@ -223,56 +227,86 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
 
 end
 
-function    AllNorth = ReadinDataFile(filename)
-       
-        %IMPORTFILE Import data from a spreadsheet
-        %  ALLNORTH = IMPORTFILE(FILE) reads data from the first worksheet in
-        %  the Microsoft Excel spreadsheet file named FILE.  Returns the data as
-        %  a table.
-        %
-        %  ALLNORTH = IMPORTFILE(FILE, SHEET) reads from the specified worksheet.
-        %
-        %  ALLNORTH = IMPORTFILE(FILE, SHEET, DATALINES) reads from the
-        %  specified worksheet for the specified row interval(s). Specify
-        %  DATALINES as a positive scalar integer or a N-by-2 array of positive
-        %  scalar integers for dis-contiguous row intervals.
-        %
-        %  Example:
-        %  AllNorth = importfile("C:\Users\loxte\Downloads\Wamsi 13_08_2024\Phyto\WaterCorp\All North.xls", "231098", [26, 43]);
-        %
-        %  See also READTABLE.
-        %
-        % Auto-generated by MATLAB on 13-Sep-2024 11:37:37
-        
-        %% Input handling
-        dataLines = [26, 43];
-        workbookFile = filename;
-        sheetName = '200199';
+function AllNorthS6 = importfile(workbookFile, sheetName, dataLines)
+    %IMPORTFILE Import data from a spreadsheet
+    %  ALLNORTHS6 = IMPORTFILE(FILE) reads data from the first worksheet in
+    %  the Microsoft Excel spreadsheet file named FILE.  Returns the data as
+    %  a table.
+    %
+    %  ALLNORTHS6 = IMPORTFILE(FILE, SHEET) reads from the specified
+    %  worksheet.
+    %
+    %  ALLNORTHS6 = IMPORTFILE(FILE, SHEET, DATALINES) reads from the
+    %  specified worksheet for the specified row interval(s). Specify
+    %  DATALINES as a positive scalar integer or a N-by-2 array of positive
+    %  scalar integers for dis-contiguous row intervals.
+    %
+    %  Example:
+    %  AllNorthS6 = importfile("C:\Users\loxte\Downloads\Wamsi 13_08_2024\Phyto\WaterCorp\All North.xls", "240699", [26, 56]);
+    %
+    %  See also READTABLE.
+    %
+    % Auto-generated by MATLAB on 13-Sep-2024 16:48:49
     
-        
-        %% Set up the Import Options and import the data
-        opts = spreadsheetImportOptions("NumVariables", 8);
-        
+    %% Input handling
+    
+    % If no sheet is specified, read first sheet
+    if nargin == 1 || isempty(sheetName)
+        sheetName = 1;
+    end
+    
+    % If row start and end points are not specified, define defaults
+    if nargin <= 2
+        dataLines = [26, 56];
+    end
+    
+    %% Set up the Import Options and import the data
+    opts = spreadsheetImportOptions("NumVariables", 14);
+    
+    % Specify sheet and range
+    opts.Sheet = sheetName;
+    opts.DataRange = "B" + dataLines(1, 1) + ":O" + dataLines(1, 2);
+    
+    % Specify column names and types
+    opts.VariableNames = ["VarName2", "Sample", "VarName4", "North", "VarName6", "VarName7", "North1", "VarName9", "VarName10", "North2", "VarName12", "VarName13", "North3", "VarName15"];
+    opts.VariableTypes = ["char", "char", "char", "double", "double", "char", "double", "double", "char", "double", "double", "char", "double", "double"];
+    
+    % Specify variable properties
+    opts = setvaropts(opts, ["VarName2", "Sample", "VarName4", "VarName7", "VarName10", "VarName13"], "WhitespaceRule", "preserve");
+    opts = setvaropts(opts, ["VarName2", "Sample", "VarName4", "VarName7", "VarName10", "VarName13"], "EmptyFieldRule", "auto");
+    
+    % Import the data
+    AllNorthS6 = readtable(workbookFile, opts, "UseExcel", false);
+    
+    for idx = 2:size(dataLines, 1)
+        opts.DataRange = "B" + dataLines(idx, 1) + ":O" + dataLines(idx, 2);
+        tb = readtable(workbookFile, opts, "UseExcel", false);
+        AllNorthS6 = [AllNorthS6; tb]; %#ok<AGROW>
+    end
+    
+    end
+
+function AllNorthS6 = importMetaData(filename,sheetName)
+        opts = spreadsheetImportOptions("NumVariables", 10);
+
         % Specify sheet and range
         opts.Sheet = sheetName;
-        opts.DataRange = "B" + dataLines(1, 1) + ":I" + dataLines(1, 2);
-        
+        opts.DataRange = "E12:N13";
+
         % Specify column names and types
-        opts.VariableNames = ["VarName2", "Sample", "VarName4", "N1", "VarName6", "VarName7", "N2", "VarName9"];
-        opts.VariableTypes = ["char", "char", "char", "double", "double", "char", "double", "double"];
-        
+        opts.VariableNames = ["North", "VarName6", "VarName7", "North_1", "VarName9", "VarName10", "North_2", "VarName12", "VarName13", "North_3"];
+        opts.VariableTypes = ["char", "char", "char", "char", "char", "char", "char", "char", "char", "char"];
+
         % Specify variable properties
-        opts = setvaropts(opts, ["VarName2", "Sample", "VarName4", "VarName7"], "WhitespaceRule", "preserve");
-        opts = setvaropts(opts, ["VarName2", "Sample", "VarName4", "VarName7"], "EmptyFieldRule", "auto");
-        
+        opts = setvaropts(opts, ["North", "VarName6", "VarName7", "North_1", "VarName9", "VarName10", "North_2", "VarName12", "VarName13", "North_3"], "WhitespaceRule", "preserve");
+        opts = setvaropts(opts, ["North", "VarName6", "VarName7", "North_1", "VarName9", "VarName10", "North_2", "VarName12", "VarName13", "North_3"], "EmptyFieldRule", "auto");
+
         % Import the data
-        AllNorth = readtable(workbookFile, opts, "UseExcel", false);
-        
-        for idx = 2:size(dataLines, 1)
-            opts.DataRange = "B" + dataLines(idx, 1) + ":I" + dataLines(idx, 2);
-            tb = readtable(workbookFile, opts, "UseExcel", false);
-            AllNorth = [AllNorth; tb]; %#ok<AGROW>
-        end
-        
-    
+        AllNorthS6 = readtable(filename, opts, "UseExcel", false);
+
+        %% Convert to output type
+        AllNorthS6 = table2cell(AllNorthS6);
+        numIdx = cellfun(@(x) ~isnan(str2double(x)), AllNorthS6);
+        AllNorthS6(numIdx) = cellfun(@(x) {str2double(x)}, AllNorthS6(numIdx));
+
 end

@@ -112,6 +112,11 @@ agency.WCWA6_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species6");
 agency.WCWA6_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups6");
 agency.WCWA7_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species7");
 agency.WCWA7_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups7");
+agency.WCWA8_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups8");
+agency.WCWA8_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species8");
+agency.WCWA9_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups9");
+agency.WCWA9_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species9");
+
 
 
 
