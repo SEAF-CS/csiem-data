@@ -3,7 +3,7 @@ function import_phytoplankton_Species(WCNum,SheetString,DataLastRowNum)
     run('../../../../actions/csiem_data_paths.m')
 
     main_dir = [datapath,'data-lake/WCWA/Phyto/WCWA3/'];
-    outdir = [datapath,'data-warehouse2/csv/wcwa/PhytoPlankton',num2str(WCNum),'/Species/'];
+    outdir = [datapath,'data-warehouse/csv/wcwa/PhytoPlankton',num2str(WCNum),'/Species/'];
 
 
 

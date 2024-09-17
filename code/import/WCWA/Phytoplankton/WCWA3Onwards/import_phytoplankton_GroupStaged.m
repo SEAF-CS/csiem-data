@@ -2,8 +2,8 @@ function import_phytoplankton_GroupStaged(WCNum)
 
     run('../../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-warehouse2/csv_holding/wcwa/PhytoPlankton',num2str(WCNum),'/Groups/'];
-    outdir = [datapath,'data-warehouse2/csv/wcwa/PhytoPlankton',num2str(WCNum),'/Groups/'];
+    main_dir = [datapath,'data-warehouse/csv_holding/wcwa/PhytoPlankton',num2str(WCNum),'/Groups/'];
+    outdir = [datapath,'data-warehouse/csv/wcwa/PhytoPlankton',num2str(WCNum),'/Groups/'];
 
 
 
