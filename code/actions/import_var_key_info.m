@@ -120,6 +120,8 @@ agency.SWANESTGroups = import_agency_conv("SWANEST Groups");
 agency.SWANESTSpecies = import_agency_conv("SWANEST Species");
 agency.ALICE1Species = import_agency_conv("ALICE 1 Species");
 agency.ALICE1Group = import_agency_conv("ALICE 1 Groups");
+agency.ALICE2Species = import_agency_conv("ALICE 2 Species");
+agency.ALICE2Group = import_agency_conv("ALICE 2 Groups");
 
 
 save agency.mat agency -mat;
