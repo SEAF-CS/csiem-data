@@ -1,9 +1,9 @@
-function ALICESpecies()
-
+%function ALICESpecies()
+%function ALICESpecies()
     run('../../actions/csiem_data_paths.m')
 
-    main_file = [datapath,'data-lake/ALICE/Carbon Calculations species_master_Dec08_Nov09.xlsx'];
-    outdir = [datapath,'data-warehouse/csv/alice2/Species/'];
+    main_file = [datapath,'data-lake/ALICE/Phyto Species List_Calculation Sheet_Swan_master.xls'];
+    outdir = [datapath,'data-warehouse/csv/alice1/Species/'];
 
 
 
@@ -17,122 +17,155 @@ function ALICESpecies()
     load ../../actions/agency.mat;
     load ../../actions/sitekey.mat;
 
-    VarListStruct = agency.ALICE2Species;
-    SiteListStruct = sitekey.SWANEST;
+    VarListStruct = agency.ALICE1Species;
+    SiteListStruct = sitekey.SWANEST
     %   Shares all the same sites as swanest
 
 
     unimprtedFID = fopen(['UnimportedSpecies.txt'],"w");
 
-    opts = detectImportOptions(main_file,'Sheet','biovol and C');
+    SheetNames = sheetnames(main_file);
+    NumofSheets = length(SheetNames)-2; %the last 2 are summaries not raw data
+    
+    %Hardcoded linenums
+    StartSvec = 8*ones(NumofSheets,1);
+    StartSvec(1)=7;
+    StopSvec = StartSvec+109-7;
 
-    DataTable = readtable(main_file,opts);
-    DataTable(1:5,:)
-    stop
+    StartBvec = 117*ones(NumofSheets,1);
+    StartBvec(1) = 115;
+    StopBvec = StartBvec + 217-117;
 
+    opts = spreadsheetOptions();
 
+    for sheetNum = 1:NumofSheets
+        [Surface,Bottom,Date] = SheetFunction(main_file,opts,SheetNames(sheetNum),...
+        StartSvec(sheetNum),...
+        StopSvec(sheetNum),...
+        StartBvec(sheetNum),...
+        StopBvec(sheetNum));
+        SitesNames = Surface.Properties.VariableNames';
 
-    Sites = DataTable{:,1};
-    [UniqueSites, ISites,IUniqueSites] = unique(Sites);
-    for sitenum = 1:length(UniqueSites)
-        %workout what site
-        SiteName = UniqueSites{sitenum}; %Col 2 is Site name
-        SiteStruct = SearchSitelistbyStr(SiteListStruct,SiteName);
-        CurentSites = IUniqueSites == sitenum;
+        for col = 11:16 %hardcoded to match file 
+            % this iterates over sites
+            verboseName = SitesNames{col};
+            Site = verboseName(1:end-2);
+            SiteStruct = SiteListStruct.(Site);
 
-        DateCol = DataTable{CurentSites,2}; %col 2
-        DateCol.Format = 'yyyy-MM-dd HH:mm:ss';
-        MeasureingDepth = DataTable{CurentSites,7}; 
-
-        for varIndex = [14,10,15,17,18] %this is the array of indexes of the variables I want in the variable "DataTables"
-            varname =  DataTable.Properties.VariableDescriptions{varIndex};
-            [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
-            if AgencyIndex == 0 
-                fprintf(unimprtedFID,"%s\n",varname);
-                continue
-            end
-
-            varId = AgencyStruct.ID;
-            VarStruct = varkey.(varId);
-            Conv = AgencyStruct.Conv; 
-            DataVal = DataTable{CurentSites,varIndex}*Conv; % DataTable.("SpeciesDensityCells_ml")(row)
-            if isnan(DataVal)
-                continue    
-            end
-
-            [fDATA,fHEADER] = filenamecreator(outdir,SiteStruct,VarStruct);
-
-                heightOrdepth = 'Depth';
-                Deployment = 'Floating';
-                %only gets in here when file doesnt exist already
-                fid = fopen(fDATA,'W');
-                fprintf(fid,"Date,%s,Data,QC\n",heightOrdepth);
-                for n = 1:sum(CurentSites)%need \s to loop over all elements in Current SItes
-                    fprintf(fid,"%s,%f,%f,N\n",DateCol(n),MeasureingDepth(n),DataVal(n));
+            for SpeciesNum = 1:height(Surface)
+                varname =  Surface{SpeciesNum,2}{1}; % col 2 or 'Species'
+                [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
+                if AgencyIndex == 0 
+                    fprintf(unimprtedFID,"%s\n",varname);
+                    continue
                 end
-                fclose(fid);
 
-    
-                temp = split(fDATA,filesep);
-                filename_short = temp{end};
-                fid = fopen(fHEADER,'w');
-                    fprintf(fid,'Agency Name,ALICE\n');
-                    
-                    fprintf(fid,'Agency Code,ALICE\n');
-                    fprintf(fid,'Program,ALICE\n');
-                    fprintf(fid,'Project,ALICE\n');
-                    fprintf(fid,'Tag,ALICE_Plankton_Species\n');
-    
-                    %%
-                    fprintf(fid,'Data File Name,%s\n',filename_short);
-                    fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
-                    %%
-                    
-                    fprintf(fid,'Station Status,\n');
-                    fprintf(fid,'Lat,%6.9f\n',SiteStruct.Lat);
-                    fprintf(fid,'Long,%6.9f\n',SiteStruct.Lon);
-                    fprintf(fid,'Time Zone,GMT +8\n');
-                    fprintf(fid,'Vertical Datum,mAHD\n');
-                    fprintf(fid,'National Station ID,%s\n',SiteStruct.AED);
-    
-                    %%
-                    fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                    fprintf(fid,'Deployment,%s\n',Deployment);
-                    fprintf(fid,'Deployment Position,%s\n','0.0m below surface'); % '0.0m above Seabed' 0m below surface);
-                    fprintf(fid,'Vertical Reference,%s\n','Water Surface');
-                    fprintf(fid,'Site Mean Depth,%4.4f\n',0);
-                    %%
-    
-                    fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-                    fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 17/09/2024');
-    
-                    %%
-                    fprintf(fid,'Variable ID,%s\n',varId);
-                    %%
-                    
-                    fprintf(fid,'Data Category,%s\n',VarStruct.Category);
-    
-                    fprintf(fid,'Sampling Rate (min),%4.4f\n',-1);                    
-                    fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
-                    fprintf(fid,'Depth,Decimal\n');
-                    
-                    
-                    fprintf(fid,'Variable,%s\n',VarStruct.Name);
-                    fprintf(fid,'QC,String\n');
-                fclose(fid);
-    
+                varId = AgencyStruct.ID;
+                VarStruct = varkey.(varId);
+                Conv = AgencyStruct.Conv; 
+                DataVal = Surface{SpeciesNum,col}*Conv; % DataTable.("SpeciesDensityCells_ml")(row)
+                if isnan(DataVal)
+                    continue    
+                end
+                [fDATA,fHEADER] = filenamecreator(outdir,SiteStruct,VarStruct);
+                if sheetNum == 1
+                    % this is when files need to be created
+                    %only gets in here when file doesnt exist already
+                    heightOrdepth = 'Depth';
+                    Deployment = 'Floating';
+                
+                    fid = fopen(fDATA,'W');
+                    fprintf(fid,"Date,%s,Data,QC\n",heightOrdepth);
+                    fclose(fid);
 
-    
+                    temp = split(fDATA,filesep);
+                    filename_short = temp{end};
+                    fid = fopen(fHEADER,'w');
+                        fprintf(fid,'Agency Name,ALICE\n');
+                        
+                        fprintf(fid,'Agency Code,ALICE\n');
+                        fprintf(fid,'Program,ALICE\n');
+                        fprintf(fid,'Project,ALICE\n');
+                        fprintf(fid,'Tag,ALICE_Plankton_Species\n');
+        
+                        %%
+                        fprintf(fid,'Data File Name,%s\n',filename_short);
+                        fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
+                        %%
+                        
+                        fprintf(fid,'Station Status,\n');
+                        fprintf(fid,'Lat,%6.9f\n',SiteStruct.Lat);
+                        fprintf(fid,'Long,%6.9f\n',SiteStruct.Lon);
+                        fprintf(fid,'Time Zone,GMT +8\n');
+                        fprintf(fid,'Vertical Datum,mAHD\n');
+                        fprintf(fid,'National Station ID,%s\n',SiteStruct.AED);
+        
+                        %%
+                        fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
+                        fprintf(fid,'Deployment,%s\n',Deployment);
+                        fprintf(fid,'Deployment Position,%s\n','0.0m below surface'); % '0.0m above Seabed' 0m below surface);
+                        fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+                        fprintf(fid,'Site Mean Depth,%4.4f\n',0);
+                        %%
+        
+                        fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
+                        fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 25/09/2024');
+        
+                        %%
+                        fprintf(fid,'Variable ID,%s\n',varId);
+                        %%
+                        
+                        fprintf(fid,'Data Category,%s\n',VarStruct.Category);
+        
+                        fprintf(fid,'Sampling Rate (min),%4.4f\n',-1);                    
+                        fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
+                        fprintf(fid,'Depth,Decimal\n');
+                        
+                        
+                        fprintf(fid,'Variable,%s\n',VarStruct.Name);
+                        fprintf(fid,'QC,String\n');
+                    fclose(fid);
+                end
+
+                fid = fopen(fDATA,'a');                    
+                Depth = 0;
+                fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
+                fclose(fid);
+                
+            end
 
 
         end
 
-
-
     end
+  
 
     fclose(unimprtedFID);
+%end
+
+function opts = spreadsheetOptions()
+    T = readcell('Headers.txt');
+    T = {T{1:8},' ',' ',T{10:end}};
+    opts = spreadsheetImportOptions('NumVariables',22,...
+                                'VariableNames',T,...
+                                'VariableTypes',{'char','char','int32','int32','int32','int32','int32','int32','int32','int32','double','double','double','double','double','double','double','double','double','double','double','double'}...
+                                ); 
+
 end
+
+function [Surface,Bottom,Date] = SheetFunction(main_file,opts,sheetname,start1,stop1,start2,stop2)
+    opts.Sheet = sheetname;
+    opts.DataRange = sprintf("A%d:V%d",start1,stop1);
+    Surface = readtable(main_file,opts);
+
+    opts.DataRange = sprintf("A%d:V%d",start2,stop2);
+    Bottom = readtable(main_file,opts);
+
+    Date = readcell(main_file,'DataRange','B2:B2');
+    Date = Date{1};
+    Date.Format = 'yyyy-MM-dd HH:mm:ss';
+end
+
 
 
 function SiteStruct = SearchSitelistbyStr(SiteListStruct,fileSiteStr)

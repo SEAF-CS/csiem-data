@@ -1,9 +1,9 @@
-function ALICEGroups()
+function ALICE2NewGroups()
 
     run('../../actions/csiem_data_paths.m')
 
     main_file = [datapath,'data-lake/ALICE/20110728_Swan River Master Data_ all data P1 to P3-1.xlsx'];
-    outdir = [datapath,'data-warehouse/csv/alice1/Groups/'];
+    outdir = [datapath,'data-warehouse/csv/alice2/Groups/'];
 
 
 
@@ -17,14 +17,14 @@ function ALICEGroups()
     load ../../actions/agency.mat;
     load ../../actions/sitekey.mat;
 
-    VarListStruct = agency.ALICE1Group;
+    VarListStruct = agency.ALICE2Group;
     SiteListStruct = sitekey.SWANEST;
     %   Shares all the same sites as swanest
 
 
     unimprtedFID = fopen(['UnimportedGroups.txt'],"w");
 
-    opts = detectImportOptions(main_file,'Sheet','P3_Bio-Nov');
+    opts = detectImportOptions(main_file,'Sheet','P1n2_Bio-DEc');
     opts.VariableTypes{1, 2} = 'datetime'; %date
     opts.VariableTypes{1, 8} = 'double';  %bottom depth
 
@@ -44,7 +44,7 @@ function ALICEGroups()
         DateCol.Format = 'yyyy-MM-dd HH:mm:ss';
         MeasureingDepth = DataTable{CurentSites,7}; 
 
-        for varIndex = [9:18] %this is the array of indexes of the variables I want in the variable "DataTables"
+        for varIndex = [9:22] %this is the array of indexes of the variables I want in the variable "DataTables"
             varname =  DataTable.Properties.VariableDescriptions{varIndex};
             [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
             if AgencyIndex == 0 

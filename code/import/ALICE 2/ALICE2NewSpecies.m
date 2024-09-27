@@ -1,9 +1,9 @@
-function ALICESpecies()
+function ALICE2NewSpecies()
 
     run('../../actions/csiem_data_paths.m')
 
     main_file = [datapath,'data-lake/ALICE/20110728_Swan River Master Data_ all data P1 to P3-1.xlsx'];
-    outdir = [datapath,'data-warehouse/csv/alice1/Species/'];
+    outdir = [datapath,'data-warehouse/csv/alice2/Species/'];
 
 
 
@@ -17,7 +17,7 @@ function ALICESpecies()
     load ../../actions/agency.mat;
     load ../../actions/sitekey.mat;
 
-    VarListStruct = agency.ALICE1Species;
+    VarListStruct = agency.ALICE2Species;
     SiteListStruct = sitekey.SWANEST;
     %   Shares all the same sites as swanest
 
