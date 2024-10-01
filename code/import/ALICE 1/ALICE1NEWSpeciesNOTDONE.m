@@ -18,7 +18,7 @@
     load ../../actions/sitekey.mat;
 
     VarListStruct = agency.ALICE1Species;
-    SiteListStruct = sitekey.SWANEST
+    SiteListStruct = sitekey.SWANEST;
     %   Shares all the same sites as swanest
 
 
@@ -34,7 +34,7 @@
 
     StartBvec = 117*ones(NumofSheets,1);
     StartBvec(1) = 115;
-    StopBvec = StartBvec + 217-117;
+    StopBvec = StartBvec + 217-115;
 
     opts = spreadsheetOptions();
 
@@ -44,104 +44,185 @@
         StopSvec(sheetNum),...
         StartBvec(sheetNum),...
         StopBvec(sheetNum));
+
         SitesNames = Surface.Properties.VariableNames';
+
+        if height(Surface) ~= height(Bottom)
+            fprintf('This Sheet has diff bot vs surf %d\n',sheetNum);
+        end
 
         for col = 11:16 %hardcoded to match file 
             % this iterates over sites
+
             verboseName = SitesNames{col};
             Site = verboseName(1:end-2);
             SiteStruct = SiteListStruct.(Site);
 
-            for SpeciesNum = 1:height(Surface)
-                varname =  Surface{SpeciesNum,2}{1}; % col 2 or 'Species'
-                [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
-                if AgencyIndex == 0 
-                    fprintf(unimprtedFID,"%s\n",varname);
-                    continue
-                end
+            %Site depth is slow so only do it once per site ans save result
+            if sheetNum ==1 
+                %search for sites depth
+                BotDepth = BottomDepthFunc(SiteStruct);
 
-                varId = AgencyStruct.ID;
-                VarStruct = varkey.(varId);
-                Conv = AgencyStruct.Conv; 
-                DataVal = Surface{SpeciesNum,col}*Conv; % DataTable.("SpeciesDensityCells_ml")(row)
-                if isnan(DataVal)
-                    continue    
-                end
-                [fDATA,fHEADER] = filenamecreator(outdir,SiteStruct,VarStruct);
-                if sheetNum == 1
-                    % this is when files need to be created
-                    %only gets in here when file doesnt exist already
-                    heightOrdepth = 'Depth';
-                    Deployment = 'Floating';
-                
-                    fid = fopen(fDATA,'W');
-                    fprintf(fid,"Date,%s,Data,QC\n",heightOrdepth);
-                    fclose(fid);
-
-                    temp = split(fDATA,filesep);
-                    filename_short = temp{end};
-                    fid = fopen(fHEADER,'w');
-                        fprintf(fid,'Agency Name,ALICE\n');
-                        
-                        fprintf(fid,'Agency Code,ALICE\n');
-                        fprintf(fid,'Program,ALICE\n');
-                        fprintf(fid,'Project,ALICE\n');
-                        fprintf(fid,'Tag,ALICE_Plankton_Species\n');
-        
-                        %%
-                        fprintf(fid,'Data File Name,%s\n',filename_short);
-                        fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
-                        %%
-                        
-                        fprintf(fid,'Station Status,\n');
-                        fprintf(fid,'Lat,%6.9f\n',SiteStruct.Lat);
-                        fprintf(fid,'Long,%6.9f\n',SiteStruct.Lon);
-                        fprintf(fid,'Time Zone,GMT +8\n');
-                        fprintf(fid,'Vertical Datum,mAHD\n');
-                        fprintf(fid,'National Station ID,%s\n',SiteStruct.AED);
-        
-                        %%
-                        fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
-                        fprintf(fid,'Deployment,%s\n',Deployment);
-                        fprintf(fid,'Deployment Position,%s\n','0.0m below surface'); % '0.0m above Seabed' 0m below surface);
-                        fprintf(fid,'Vertical Reference,%s\n','Water Surface');
-                        fprintf(fid,'Site Mean Depth,%4.4f\n',0);
-                        %%
-        
-                        fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-                        fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 25/09/2024');
-        
-                        %%
-                        fprintf(fid,'Variable ID,%s\n',varId);
-                        %%
-                        
-                        fprintf(fid,'Data Category,%s\n',VarStruct.Category);
-        
-                        fprintf(fid,'Sampling Rate (min),%4.4f\n',-1);                    
-                        fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
-                        fprintf(fid,'Depth,Decimal\n');
-                        
-                        
-                        fprintf(fid,'Variable,%s\n',VarStruct.Name);
-                        fprintf(fid,'QC,String\n');
-                    fclose(fid);
-                end
-
-                fid = fopen(fDATA,'a');                    
-                Depth = 0;
-                fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
-                fclose(fid);
-                
+                %Note to self-> for additional performance gains rewriting BottomDepthFunc to receive the 3 bathymetry
+                % files would mean i dont need to load them 6 time
+                % which could have potential benefits, depending on whicj is the slow part of this function (Its not been profiled)
+                BotDepthList(col) = BotDepth; 
+            else 
+                %grab sites depth from list
+                BotDepth = BotDepthList(col);
             end
+
+        
+
+            for SpeciesNum = 1:height(Surface)
+                % check surface and bottom for NAN
+                SURFBOOL = ~isnan(Surface{SpeciesNum,col});
+                BOTTBOOL = ~isnan(Bottom{SpeciesNum,col});
+
+                %Or gate for creating header and datafile
+                if SURFBOOL | BOTTBOOL
+                    %find varStruct
+                    varname =  Surface{SpeciesNum,2}{1};
+
+                    [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
+                    if AgencyIndex == 0 
+                        fprintf(unimprtedFID,"%s\n",varname);
+                        continue
+                    end
+                    %create header and dataheader
+                    fDATA = CreateHeaderFileAndFileHeader(outdir,AgencyStruct,SiteStruct,varkey);
+                    %only thing that needs more info is data, return fDATA.
+                end
+
+                %both values need to multiplied by Conv
+                Conv = AgencyStruct.Conv;
+
+                if SURFBOOL
+                    Depth = 0.5;
+                    DataVal = Surface{SpeciesNum,col}*Conv;
+                    
+
+                    fid = fopen(fDATA,'a');                    
+                    fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
+                    fclose(fid);
+                end
+
+                %if bottom append bottom
+                if BOTTBOOL
+                    DataVal = Bottom{SpeciesNum,col}*Conv;
+
+                    %BotDepth is calculated at the top of the Site for loop, because this is the same for all variables from the same site.
+                    %we know phyto concentration is measured 0.5m off the seafloor.
+                    if ~isnan(BotDepth)
+                        %Known seafloor depth
+                        Depth = BotDepth-0.5;
+                        fid = fopen(fDATA,'a');                    
+                        fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
+                        fclose(fid);
+                    else
+                        %Unkown seafloor depth
+                        fid = fopen(fDATA,'a');                    
+                        fprintf(fid,"%s,%s,%f,N\n",Date,"0.5m above seafloor",DataVal);
+                        fclose(fid);
+                  
+                    end
+                    
+                end
+
+                        
+            end
+            % error('finished first lap of all species')
 
 
         end
-
+        fprintf(unimprtedFID,"@@@");
     end
   
 
     fclose(unimprtedFID);
 %end
+
+function BotDepth = BottomDepthFunc(SiteStruct)
+    Lat = SiteStruct.Lat;
+    Lon = SiteStruct.Lon;
+    if Lat == -1 & Lon == -1
+        BotDepth = NaN;
+    else
+        BotDepth = CalcDepthViaSMD_Code(SiteStruct.Lat,SiteStruct.Lon);
+    end
+end
+
+
+function fDATA = CreateHeaderFileAndFileHeader(outdir,AgencyStruct,SiteStruct,varkey)
+
+    varId = AgencyStruct.ID;
+    VarStruct = varkey.(varId);
+
+    [fDATA,fHEADER] = filenamecreator(outdir,SiteStruct,VarStruct);
+
+    if ~exist(fHEADER,'file')
+        % this is when files dont exist and need to be created
+        heightOrdepth = 'Depth';
+        Deployment = 'Floating';
+    
+        fid = fopen(fDATA,'W');
+        fprintf(fid,"Date,%s,Data,QC\n",heightOrdepth);
+        fclose(fid);
+
+        temp = split(fDATA,filesep);
+        filename_short = temp{end};
+        fid = fopen(fHEADER,'w');
+            fprintf(fid,'Agency Name,ALICE\n');
+            
+            fprintf(fid,'Agency Code,ALICE\n');
+            fprintf(fid,'Program,ALICE\n');
+            fprintf(fid,'Project,ALICE\n');
+            fprintf(fid,'Tag,ALICE_Plankton_Species\n');
+
+            %%
+            fprintf(fid,'Data File Name,%s\n',filename_short);
+            fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
+            %%
+            
+            fprintf(fid,'Station Status,\n');
+            fprintf(fid,'Lat,%6.9f\n',SiteStruct.Lat);
+            fprintf(fid,'Long,%6.9f\n',SiteStruct.Lon);
+            fprintf(fid,'Time Zone,GMT +8\n');
+            fprintf(fid,'Vertical Datum,mAHD\n');
+            fprintf(fid,'National Station ID,%s\n',SiteStruct.AED);
+
+            %%
+            fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
+            fprintf(fid,'Deployment,%s\n',Deployment);
+            fprintf(fid,'Deployment Position,%s\n','0.0m below surface'); % '0.0m above Seabed' 0m below surface);
+            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Site Mean Depth,%4.4f\n',0);
+            %%
+
+            fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
+            fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 25/09/2024');
+
+            %%
+            fprintf(fid,'Variable ID,%s\n',varId);
+            %%
+            
+            fprintf(fid,'Data Category,%s\n',VarStruct.Category);
+
+            fprintf(fid,'Sampling Rate (min),%4.4f\n',-1);                    
+            fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
+            fprintf(fid,'Depth,Decimal\n');
+            
+            
+            fprintf(fid,'Variable,%s\n',VarStruct.Name);
+            fprintf(fid,'QC,String\n');
+        fclose(fid);
+    end
+
+end
+
+function PrintToFile()
+end
+
 
 function opts = spreadsheetOptions()
     T = readcell('Headers.txt');
@@ -198,7 +279,7 @@ function [VarStruct,StructVarIndex] = SearchVarlist(VarListStruct,FileVarHeader)
     for StructVarIndex = 1:NumOfVariables
         StructVarHeader = VarListStruct.(VarlistFeilds{StructVarIndex}).Old;
         % Check if FileVarHeader == StructVarHeader
-        if strcmp(FileVarHeader,StructVarHeader)
+        if strcmp(FileVarHeader,strip(StructVarHeader))
             VarStruct = VarListStruct.(VarlistFeilds{StructVarIndex});
             neverFound = false;
             break
