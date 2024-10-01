@@ -3,27 +3,13 @@
     run('../../actions/csiem_data_paths.m')
 
     main_file = [datapath,'data-lake/ALICE/Phyto Species List_Calculation Sheet_Swan_master.xls'];
-    outdir = [datapath,'data-warehouse/csv/alice1/Species/'];
+    outdir = ['ReformatedAlice1Species.txt'];
 
+    % load ../../actions/sitekey.mat;
 
-
-    if ~exist(outdir,'dir')
-        mkdir(outdir);
-    else
-        delete([outdir,'*.csv'])
-    end
-
-    load ../../actions/varkey.mat;
-    load ../../actions/agency.mat;
-    load ../../actions/sitekey.mat;
-
-    VarListStruct = agency.ALICE1Species;
-    SiteListStruct = sitekey.SWANEST;
+    % SiteListStruct = sitekey.SWANEST;
     %   Shares all the same sites as swanest
-
-
-    unimprtedFID = fopen(['UnimportedSpecies.txt'],"w");
-
+    
     SheetNames = sheetnames(main_file);
     NumofSheets = length(SheetNames)-2; %the last 2 are summaries not raw data
     
@@ -38,6 +24,10 @@
 
     opts = spreadsheetOptions();
 
+    delim = sprintf('\t');
+    fid = fopen(outdir,'w');
+    fprintf(fid,"Date,Site,DepthBool,SpeciesName,GroupName,Concentration\n");
+
     for sheetNum = 1:NumofSheets
         [Surface,Bottom,Date] = SheetFunction(main_file,opts,SheetNames(sheetNum),...
         StartSvec(sheetNum),...
@@ -47,99 +37,73 @@
 
         SitesNames = Surface.Properties.VariableNames';
 
-        if height(Surface) ~= height(Bottom)
-            fprintf('This Sheet has diff bot vs surf %d\n',sheetNum);
-        end
-
         for col = 11:16 %hardcoded to match file 
             % this iterates over sites
 
             verboseName = SitesNames{col};
             Site = verboseName(1:end-2);
-            SiteStruct = SiteListStruct.(Site);
+            % SiteStruct = SiteListStruct.(Site);
 
-            %Site depth is slow so only do it once per site ans save result
-            if sheetNum ==1 
-                %search for sites depth
-                BotDepth = BottomDepthFunc(SiteStruct);
+            % %Site depth is slow so only do it once per site ans save result
+            % if sheetNum ==1 
+            %     %search for sites depth
+            %     BotDepth = BottomDepthFunc(SiteStruct);
 
-                %Note to self-> for additional performance gains rewriting BottomDepthFunc to receive the 3 bathymetry
-                % files would mean i dont need to load them 6 time
-                % which could have potential benefits, depending on whicj is the slow part of this function (Its not been profiled)
-                BotDepthList(col) = BotDepth; 
-            else 
-                %grab sites depth from list
-                BotDepth = BotDepthList(col);
-            end
-
-        
+            %     %Note to self-> for additional performance gains rewriting BottomDepthFunc to receive the 3 bathymetry
+            %     % files would mean i dont need to load them 6 time
+            %     % which could have potential benefits, depending on whicj is the slow part of this function (Its not been profiled)
+            %     BotDepthList(col) = BotDepth; 
+            % else 
+            %     %grab sites depth from list
+            %     BotDepth = BotDepthList(col);
+            % end
 
             for SpeciesNum = 1:height(Surface)
                 % check surface and bottom for NAN
                 SURFBOOL = ~isnan(Surface{SpeciesNum,col});
                 BOTTBOOL = ~isnan(Bottom{SpeciesNum,col});
 
-                %Or gate for creating header and datafile
-                if SURFBOOL | BOTTBOOL
-                    %find varStruct
-                    varname =  Surface{SpeciesNum,2}{1};
-
-                    [AgencyStruct,AgencyIndex] = SearchVarlist(VarListStruct,varname);
-                    if AgencyIndex == 0 
-                        fprintf(unimprtedFID,"%s\n",varname);
-                        continue
-                    end
-                    %create header and dataheader
-                    fDATA = CreateHeaderFileAndFileHeader(outdir,AgencyStruct,SiteStruct,varkey);
-                    %only thing that needs more info is data, return fDATA.
-                end
-
-                %both values need to multiplied by Conv
-                Conv = AgencyStruct.Conv;
 
                 if SURFBOOL
-                    Depth = 0.5;
-                    DataVal = Surface{SpeciesNum,col}*Conv;
-                    
-
-                    fid = fopen(fDATA,'a');                    
-                    fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
-                    fclose(fid);
-                end
-
-                %if bottom append bottom
-                if BOTTBOOL
-                    DataVal = Bottom{SpeciesNum,col}*Conv;
-
-                    %BotDepth is calculated at the top of the Site for loop, because this is the same for all variables from the same site.
-                    %we know phyto concentration is measured 0.5m off the seafloor.
-                    if ~isnan(BotDepth)
-                        %Known seafloor depth
-                        Depth = BotDepth-0.5;
-                        fid = fopen(fDATA,'a');                    
-                        fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
-                        fclose(fid);
-                    else
-                        %Unkown seafloor depth
-                        fid = fopen(fDATA,'a');                    
-                        fprintf(fid,"%s,%s,%f,N\n",Date,"0.5m above seafloor",DataVal);
-                        fclose(fid);
-                  
+                    varname =  Surface{SpeciesNum,2}{1};
+                    %WorkoutGroup
+                    groupname = Surface{SpeciesNum,1}{1};
+                    if isempty(groupname)
+                        groupname = prevgroupnameSurf;
                     end
-                    
+                    prevgroupnameSurf = groupname;
+
+                    Depth = 'S';
+                    DataVal = Surface{SpeciesNum,col};
+
+                    %add Surf row
+                    fprintf(fid,"%s%c%s%c%c%c%s%c%s%c%f\n",Date,delim,Site,delim,Depth,delim,varname,delim,groupname,delim,DataVal);
                 end
 
+                if BOTTBOOL
+                    Depth = 'B'; 
+                    DataVal = Bottom{SpeciesNum,col};
+                    varname =  Bottom{SpeciesNum,2}{1};
+                    %WorkoutGroup
+                    groupname = Bottom{SpeciesNum,1}{1};
+                    if isempty(groupname)
+                        groupname = prevgroupnameBot;
+                    end
+                    prevgroupnameBot = groupname;
+
+                    %add Bot row
+                    fprintf(fid,"%s%c%s%c%c%c%s%c%s%c%f\n",Date,delim,Site,delim,Depth,delim,varname,delim,groupname,delim,DataVal);
+                    
+                end
                         
             end
             % error('finished first lap of all species')
 
 
         end
-        fprintf(unimprtedFID,"@@@");
     end
+    fclose(fid);
   
-
-    fclose(unimprtedFID);
 %end
 
 function BotDepth = BottomDepthFunc(SiteStruct)

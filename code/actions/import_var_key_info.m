@@ -116,6 +116,10 @@ agency.WCWA8_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups8");
 agency.WCWA8_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species8");
 agency.WCWA9_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups9");
 agency.WCWA9_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species9");
+
+agency.WCWA10_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups10");
+agency.WCWA10_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species10");
+
 agency.SWANESTGroups = import_agency_conv("SWANEST Groups");
 agency.SWANESTSpecies = import_agency_conv("SWANEST Species");
 agency.ALICE1Species = import_agency_conv("ALICE 1 Species");
