@@ -49,7 +49,7 @@ for i = 1:length(filelist)
     tt2 = import_datafile_raw(datafile);
 
     fprintf(fid,'%d,%s,%s\n',length(tt2.Date),datestr(min(tt2.Date),'yyyy-mm-dd'),datestr(max(tt2.Date),'yyyy-mm-dd'));
-
+    %fprintf(fid,' , , \n');
 
 
 end

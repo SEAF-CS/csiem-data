@@ -76,8 +76,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella
+@@@Cyclotella
 Gyrodinium(med)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -161,8 +160,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella
+@@@Cyclotella
 Gyrodinium(med)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -246,8 +244,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella
 Navicula sp. (small oval)
 Gyrodinium(large)
@@ -343,8 +340,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella
 Gyrodinium(large)
 Protoperidium (big star shaped)
@@ -434,8 +430,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella
 Protoperidium (big star shaped)
 Scrippsiella
@@ -519,8 +514,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella
 Protoperidium (big star shaped)
 Scrippsiella
@@ -604,8 +598,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella
 Protoperidium (big star shaped)
 Scrippsiella
@@ -689,8 +682,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella mengehiniana ? ,10 um
 Protoperidium (big star shaped)
 Scrippsiella
@@ -774,8 +766,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella meneghiniana ? ,10 um
 Protoperidium (big star shaped)
 Scrippsiella
@@ -853,8 +844,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
@@ -938,8 +928,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Akistrodesmus
+@@@Akistrodesmus
 Cyclotella meneghiniana ? ,10 um
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1017,8 +1006,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Protoperidium (big star shaped)
 Scrippsiella
 others (Hetero/Gymno - shrunk)
@@ -1090,8 +1078,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Protoperidium (big star shaped)
 Scrippsiella
 others (Hetero/Gymno - shrunk)
@@ -1163,8 +1150,7 @@ Anabaena
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1242,8 +1228,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1321,8 +1306,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1400,8 +1384,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1479,8 +1462,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1558,8 +1540,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Protoperidium (big star shaped)
 Scrippsiella
 others (Hetero/Gymno - shrunk)
@@ -1631,8 +1612,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gyrodinium(large)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1710,8 +1690,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gymnodinium (M)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1789,8 +1768,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gymnodinium (M)
 Protoperidium (big star shaped)
 Scrippsiella
@@ -1868,8 +1846,7 @@ Anabaena  circinalis
 Phormidium
 Pseudoanabaena
 Nodularia
-@@@
-Cyclotella meneghiniana ? ,10 um
+@@@Cyclotella meneghiniana ? ,10 um
 Gymnodinium (M)
 Protoperidium (big star shaped)
 Scrippsiella
