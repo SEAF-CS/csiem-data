@@ -97,7 +97,7 @@ function import_phytoplankton_Species(WCNum,SheetString,DataLastRowNum)
                     temp = split(fDATA,filesep);
                     filename_short = temp{end};
                     fid = fopen(fHEADER,'w');
-                        fprintf(fid,'Agency Name,Water Corporation Western Australia\n');
+                        fprintf(fid,'Agency Name,Water Corporation WA\n');
                         
                         fprintf(fid,'Agency Code,WCWA%d\n',WCNum);
                         fprintf(fid,'Program,WCWA%d Phytoplankton\n',WCNum);

@@ -48,8 +48,12 @@ function SWANESTSpecies()
     % end
     RAWtimes = DataTable.("Time"); %col 11, matlab reads in as decimal out of 24 hours
     DateCol = DataTable.("DateCollected"); %col 1, matlab reads this in as a datetime.
-    % matlab behaviour treats date times as a number of days since arbitrary point, so adding RAWtimes to DateCol gives desired output.
 
+    %Some of the data points didnt have times, making them midnight.
+    NoTimeValuesInds = isnan(RAWtimes);
+    RAWtimes(NoTimeValuesInds) = 0;
+
+    % matlab behaviour treats date times as a number of days since arbitrary point, so adding RAWtimes to DateCol gives desired output.
     DateStr = DateCol+RAWtimes;
     DateStr.Format = 'yyyy-MM-dd HH:mm:ss';
     RawDepth = DataTable{:,12}; 

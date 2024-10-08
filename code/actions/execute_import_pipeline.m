@@ -28,8 +28,9 @@ import_UKMO = 0;
 import_AIMS = 0;
 import_DWERPHYTO = 0;
 import_IMOSPlanktonvar = 0;
-import_WCWA1Phyto = 0;
-import_WCWA2Phyto = 0;
+import_WCWA1Phyto = 1;
+import_WCWA2Phyto = 1;
+import_WCWA3_9Phyto = 1;
 
 import_wamsiwaves51 = 0;
 
@@ -293,6 +294,11 @@ if import_WCWA2Phyto
     cd ../../../../actions/
 end
 
+if import_WCWA3_9Phyto
+    cd ../import/WCWA/Phytoplankton/WCWA3-9
+    RunALL
+    cd ../../../../actions/
+end
 
 
 
