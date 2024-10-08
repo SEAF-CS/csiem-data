@@ -36,15 +36,15 @@ import_wamsiwaves51 = 0;
 create_smd = 1;
 
 create_matfiles = 1;
-create_parquet = 0;
+create_parquet = 1;
 
-create_dataplots = 0;
-plotnew_dataplots = 0;
+create_dataplots = 1;
+plotnew_dataplots = 1;
 
-create_shapefiles = 0;
+create_shapefiles = 1;
 
 
-run_marvl = 0;
+run_marvl = 1;
 
 
 %___________________________________________________________________________

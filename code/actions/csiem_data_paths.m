@@ -1,5 +1,5 @@
-datapath = '/GIS_DATA/csiem-data-hub/';
-marvldatapath = '/GIS_DATA/csiem-data-hub/marvl';
+datapath = 'G:\csiem-data-hub\';
+marvldatapath = 'G:\csiem-data-hub\marvl';
 
 % I have written python code that searches for datapath and takes the first hit,
 % This is do not also grab marvldatapath too
