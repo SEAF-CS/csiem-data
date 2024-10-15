@@ -25,27 +25,28 @@ import_fpa = 0;
 import_bmtswan = 0;
 import_wamsitheme1 = 0;
 import_UKMO = 0;
+import_NASA = 0;
 import_AIMS = 0;
 import_DWERPHYTO = 0;
 import_IMOSPlanktonvar = 0;
-import_WCWA1Phyto = 1;
-import_WCWA2Phyto = 1;
-import_WCWA3_9Phyto = 1;
+import_WCWA1Phyto = 0;
+import_WCWA2Phyto = 0;
+import_WCWA3_9Phyto = 0;
 
 import_wamsiwaves51 = 0;
 
 create_smd = 1;
 
 create_matfiles = 1;
-create_parquet = 0;
+create_parquet = 1;
 
-create_dataplots = 0;
-plotnew_dataplots = 0;
+create_dataplots = 1;
+plotnew_dataplots = 1;
 
-create_shapefiles = 0;
+create_shapefiles = 1;
 
 
-run_marvl = 0;
+run_marvl = 1;
 
 
 %___________________________________________________________________________
@@ -242,6 +243,17 @@ if import_UKMO
     system('python3 ImportUKMO.py') 
     cd ../../actions/
 end
+
+if import_NASA
+    cd ../import/NASA
+
+        cd ASMR_E
+        ImportNASASST
+        cd ..
+        
+    cd ../../actions/
+end
+
 
 %if  import_met_models
 %    cd ../import/BARRA

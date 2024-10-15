@@ -30,6 +30,7 @@ sitekey.IMOS_Phytoplankton =read_site_sheet("LachyIMOSPHYTO");
 sitekey.WCWA2Phyto = read_site_sheet("WCWA2Phyto");
 sitekey.WCWA3Phyto = read_site_sheet("WCWA3Phyto");
 sitekey.SWANEST = read_site_sheet("SWANEST");
+sitekey.VirtualSensors = read_site_sheet("VirtualSensors");
 
 
 
