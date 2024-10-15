@@ -11,14 +11,17 @@ tft = split(filename,'/');
 data = import_datafile(filename);
 
 %data
-
-[~,headers] = xlsread(filename,'A1:D1');
+fid = fopen(filename,'r');
+firstline = fscanf(fid,"%s,%s,%s,%s\n")
+headers = split(firstline,',');
+fclose(fid);
+%[~,headers] = xlsread(filename,'A1:D1');
 
 %     data.Depth = depth;
 %     data.Depth_T = depth1;
 %     data.Depth_B = depth2;
 
-headerfile = regexprep(filename,'DATA','HEADER');
+headerfile = regexprep(filename,'DATA.csv','HEADER.csv');
 
 headerdata = import_header(headerfile);
 

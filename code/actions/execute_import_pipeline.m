@@ -35,10 +35,10 @@ import_WCWA3_9Phyto = 0;
 
 import_wamsiwaves51 = 0;
 
-create_smd = 1;
+create_smd = 0;
 
-create_matfiles = 1;
-create_parquet = 1;
+create_matfiles = 0;
+create_parquet = 0;
 
 create_dataplots = 1;
 plotnew_dataplots = 1;
