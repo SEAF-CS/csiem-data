@@ -12,7 +12,7 @@ data = import_datafile(filename);
 
 %data
 fid = fopen(filename,'r');
-firstline = fscanf(fid,"%s,%s,%s,%s\n")
+firstline = fscanf(fid,"%s,%s,%s,%s\n");
 headers = split(firstline,',');
 fclose(fid);
 %[~,headers] = xlsread(filename,'A1:D1');
