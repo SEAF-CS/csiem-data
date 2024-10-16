@@ -22,7 +22,7 @@ thevarval = fieldnames(varkey);
 theagencyval = fieldnames(agency.mafrl);
 
 
-outpath = [datapath,'data-warehouse/csv_holding/csmc/csmcwq/LachTest/'];
+outpath = [datapath,'data-warehouse/csv_holding/csmc/csmcwq/'];
 %'D:/csiem/data-warehouse/csv_holding/csmc/csmcwq/';
 %outpath = 'csmcwq-mafrl/';
 fiderr = fopen('errorfile.csv','wt');
