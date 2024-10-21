@@ -1,4 +1,4 @@
-function AIMS()
+% function AIMS()
     run ../../actions/csiem_data_paths
 
     load ../../actions/varkey.mat;
@@ -17,6 +17,8 @@ function AIMS()
     indir = [datapath,'data-lake/AIMS/temp-logger-data/SPLIT/'];
     
     outdir = [datapath,'data-warehouse/csv/aims/'];
+    outdir = ['./GETRIDOF/'];
+
     if ~exist(outdir)
         %%% I want to create each file and header then append each data entry, which means a clean slate each time
         mkdir(outdir);
@@ -29,6 +31,12 @@ function AIMS()
     Var = varkey.(VarListStruct.var1.ID);
     feilds = fields(SiteListStruct);
         for i = 1:length(feilds)
+            if sum(SiteListStruct.(feilds{i}).ID == [14116,13215,12057,12055,13355])>0
+                % we have subsite that we want
+            else
+                continue
+                %we dont have a site we want                
+            end
             [fDATA,fHEADER] =  filenamecreator(outdir,SiteListStruct.(feilds{i}),Var);
             FID =  fopen(fDATA,'w');
            fprintf(FID,"Date,Depth,Data,QC\n");
@@ -54,14 +62,24 @@ function AIMS()
         % toc
         
         for i = 1:height(T)
-            % This can be safely commented out ebcause I checked using the C code which is faster
 
+            %% This can be safely commented out ebcause I checked using the C code which is faster
             % if strcmp(T{i,9}{1},VarListStruct.var1.Old) ~= 1
             %     disp(T{i,9},' I thought there was only one variable:(\n');
             %     stop;
             % end
             
-            Sitestruct = SearchSitelistbyID(SiteListStruct,T{i,5},SiteStruct);
+            %% Only get the sites Matt wants
+            subsiteId = T{i,5}; % by subsite Im refering to what AIMS calls it, our nomencalture its a site
+            if sum(subsiteId == [14116,13215,12057,12055,13355])>0
+                % we have subsite that we want
+            else
+                continue
+                %we dont have a site we want 
+                              
+            end
+
+            Sitestruct = SearchSitelistbyID(SiteListStruct,subsiteId,SiteStruct);
 
             depth = T{i,8};
 
@@ -80,7 +98,7 @@ function AIMS()
         end
         
     end
-end
+% end
 
 
 
