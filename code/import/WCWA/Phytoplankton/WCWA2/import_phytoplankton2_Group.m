@@ -143,7 +143,7 @@ function import_phytoplankton2_Group()
                         %%
     
                         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-                        fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 13/09/2024');
+                        fprintf(fid,'Contact Email,%s\n','Lachy Gill <00114282@uwa.edu.au> 13/09/2024');
     
                         %%
                         fprintf(fid,'Variable ID,%s\n',varId);

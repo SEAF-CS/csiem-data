@@ -85,7 +85,7 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                         f.write('Site Mean Depth,\n')
                         
                         f.write('Bad or Unavailable Data Value,NaN\n')
-                        f.write('Contact Email, Lachy Gill, uwa email:00114282@uwa.edu.au 05/04/2024\n')
+                        f.write('Contact Email, Lachy Gill <00114282@uwa.edu.au> 05/04/2024\n')
                         
                         f.write(f'Variable ID,{VarID[0]}\n')
                         

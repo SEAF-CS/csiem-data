@@ -22,7 +22,7 @@ yeararray = (1980:01:2024);
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 fid = fopen(outfile,'wt');
-fprintf(fid,"Agency_Name,Tag,Agency_Code,Program_Name,Program_Code,File_Name,File_Location,Status,Lat,Lon,Time_Zone,Vertical_Datum,Station_ID,Site_Description,Bad_Code,Deployment,Deployment_Position,Vertical_Reference,Site_Mean_Depth,Email,Variable_ID,Sampling_Rate,Date_Format,Depth_Format,Variable_Name,QC_Code,Category\n");
+fprintf(fid,"Agency_Name,Tag,Agency_Code,Program_Name,Program_Code,File_Name,File_Location,Status,Lat,Lon,Time_Zone,Vertical_Datum,Station_ID,Site_Description,Bad_Code,Deployment,Deployment_Position,Vertical_Reference,Site_Mean_Depth,Email,Variable_ID,Sampling_Rate,Date_Format,Depth_Format,Variable_Name,QC_Code,Category,Headerfilepath\n");
 
 
 
@@ -61,7 +61,8 @@ for i = 1:length(filelist)
     fprintf(fid,"%s,",header.Depth_Format);
     fprintf(fid,"%s,",header.Variable_Name);
     fprintf(fid,"%s,",header.QC_Code);
-    fprintf(fid,"%s",header.DataCategory);
+    fprintf(fid,"%s,",header.DataCategory);
+    fprintf(fid,"%s",headerfile);
 
     fprintf(fid,"\n");
 

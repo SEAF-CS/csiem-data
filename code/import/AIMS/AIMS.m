@@ -17,7 +17,6 @@
     indir = [datapath,'data-lake/AIMS/temp-logger-data/SPLIT/'];
     
     outdir = [datapath,'data-warehouse/csv/aims/'];
-    outdir = ['./GETRIDOF/'];
 
     if ~exist(outdir)
         %%% I want to create each file and header then append each data entry, which means a clean slate each time
@@ -133,7 +132,7 @@ function headerfill(fid,filename,indir,SubSiteStruct,Varstruct,depth,varid)
     %%
 
     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-    fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 15/07/2024');
+    fprintf(fid,'Contact Email,%s\n','Lachy Gill <00114282@uwa.edu.au> 15/07/2024');
 
     %%
     fprintf(fid,'Variable ID,%s\n',varid);

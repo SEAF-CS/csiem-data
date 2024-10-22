@@ -7,7 +7,7 @@ load varkey.mat;
 
 outfilepath = [datapath,'data-warehouse/mat/agency/'];mkdir(outfilepath);
 %             'D:/csiem/data-warehouse/mat/agency/';mkdir(outfilepath);
-filepath = [datapath,'data-warehouse/csv'];
+filepath = [datapath,'data-warehouse/csv/'];
 %          'D:/csiem/data-warehouse/csv/';
 mergepath = [datapath,'data-warehouse/mat/'];
 %           'D:/csiem/data-warehouse/mat/';
