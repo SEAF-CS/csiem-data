@@ -93,7 +93,7 @@ agency.WCWA = import_agency_conv('WCWA');
 agency.UKMO = import_agency_conv('UKMO');
 agency.NASA = import_agency_conv('NASA');
 agency.WWMSP31SedimentDeposition = import_agency_conv('WWMSP3.1-Sediment-Deposition');
-agency.AIMS = import_agency_conv('AIMS');
+agency.AIMSTEMP = import_agency_conv('AIMSTEMP');
 agency.theme51waves = import_agency_conv('WWMSP5.1Waves');
 agency.DWER_Phytoplankton = import_agency_conv('DWER Phytoplankton');
 agency.DWER_PhytoplanktonGroups = import_agency_conv('DWERPhytoPlanktonGroups');
@@ -123,10 +123,10 @@ agency.WCWA10_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species10");
 
 agency.SWANESTGroups = import_agency_conv("SWANEST Groups");
 agency.SWANESTSpecies = import_agency_conv("SWANEST Species");
-agency.ALICE1Species = import_agency_conv("ALICE 1 Species");
-agency.ALICE1Group = import_agency_conv("ALICE 1 Groups");
-agency.ALICE2Species = import_agency_conv("ALICE 2 Species");
-agency.ALICE2Group = import_agency_conv("ALICE 2 Groups");
+agency.UWA_AED_PHY_1_Species = import_agency_conv("UWA_AED_PHY_1_Species");
+agency.UWA_AED_PHY_1_Group = import_agency_conv("UWA_AED_PHY_1_Group");
+agency.UWA_AED_PHY_2_Species = import_agency_conv("UWA_AED_PHY_2_Species");
+agency.UWA_AED_PHY_2_Group = import_agency_conv("UWA_AED_PHY_2_Group");
 
 
 save agency.mat agency -mat;

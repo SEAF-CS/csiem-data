@@ -2,8 +2,8 @@ function CSV_HoldingPlanktonGroup()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/DWER/Phyto/'];
-    outdir = [datapath,'data-warehouse/csv_holding/dwer_PhytoplanktonGroups/'];
+    main_dir = [datapath,'data-lake/DWER/CSMC/csmc_phy/'];
+    outdir = [datapath,'data-warehouse/csv_holding/dwer/csphy/group/'];
 
     if ~exist(outdir,'dir')
         mkdir(outdir);
@@ -70,9 +70,9 @@ function CSV_HoldingPlanktonGroup()
                     fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');
                     
                     fprintf(fid,'Agency Code,DWER\n');
-                    fprintf(fid,'Program,DWER PhytoplanktonGroups\n');
-                    fprintf(fid,'Project,DWER_PhytoplanktonGroups\n');
-                    fprintf(fid,'Tag,DWER_Phytoplankton_Groups\n');
+                    fprintf(fid,'Program,CSMC\n');
+                    fprintf(fid,'Project,csmc_phy\n');
+                    fprintf(fid,'Tag,DWER-CS-PHY\n');
 
                     %%
                     fprintf(fid,'Data File Name,%s\n',fDATA);

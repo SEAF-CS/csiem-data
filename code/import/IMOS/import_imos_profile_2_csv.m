@@ -3,16 +3,13 @@ function import_imos_profile_2_csv;
 addpath(genpath('../../functions/'));
 
 run('../../actions/csiem_data_paths.m')
-thefile = [datapath,'data-lake/IMOS/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv'];
-%'IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv'
-%'D:/csiem/data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv';
+thefile = [datapath,'data-lake/IMOS/AMNM/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv'];
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = [datapath,'data-warehouse/csv_holding/imos/amnmprofile/'];
-%'              D:/csiem/data-warehouse/csv_holding/imos/amnmprofile/';
+outpath = [datapath,'data-warehouse/csv_holding/imos/amnm/amnmprofile/'];
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
@@ -105,11 +102,11 @@ for i = 19:length(headers)
             fid = fopen(headerfile,'W');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
             fprintf(fid,'Agency Code,IMOS\n');
-            fprintf(fid,'Program,amnmprofile\n');
+            fprintf(fid,'Program,AMNM\n');
             fprintf(fid,'Project,amnmprofile\n');
-            fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
+            fprintf(fid,'Tag,IMOS-ANMN-PROFILE\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('amnmprofile')]);
+            fprintf(fid,'Location,%s\n',outpath);
             
             
             fprintf(fid,'Station Status,Inactive\n');

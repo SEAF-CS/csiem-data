@@ -2,8 +2,8 @@ function import_PhytoPlanktonSpecies()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/DWER/Phyto/'];
-    outdir = [datapath,'data-warehouse/csv/dwer/dwer_Phytoplankton/'];
+    main_dir = [datapath,'data-lake/DWER/CSMC/csmc_phy/'];
+    outdir = [datapath,'data-warehouse/csv/dwer/csphy/species/'];
 
 
 
@@ -72,9 +72,9 @@ function import_PhytoPlanktonSpecies()
                     fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');
                     
                     fprintf(fid,'Agency Code,DWER\n');
-                    fprintf(fid,'Program,DWER Phytoplankton\n');
-                    fprintf(fid,'Project,DWER_Phytoplankton\n');
-                    fprintf(fid,'Tag,DWER_Phytoplankton_Species\n');
+                    fprintf(fid,'Program,CSMC\n');
+                    fprintf(fid,'Project,csmc_phy\n');
+                    fprintf(fid,'Tag,DWER-CS-PHY\n');
 
                     %%
                     fprintf(fid,'Data File Name,%s\n',fDATA);

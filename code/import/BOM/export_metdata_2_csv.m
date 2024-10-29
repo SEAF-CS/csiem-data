@@ -124,8 +124,8 @@ for i = 1:length(sites)
                     fid = fopen(headerfile,'wt');
                     fprintf(fid,'Agency Name,Bureau of Meteorology\n');
                     fprintf(fid,'Agency Code,BOM\n');
-                    fprintf(fid,'Program,Weather\n');
-                    fprintf(fid,'Project,IDY\n');
+                    fprintf(fid,'Program,IDY\n');
+                    fprintf(fid,'Project,idy\n');
                     fprintf(fid,'Tag,BOM-IDY\n');
                     fprintf(fid,'Data File Name,%s\n',writefile);
                     fprintf(fid,'Location,%s\n',writepath);

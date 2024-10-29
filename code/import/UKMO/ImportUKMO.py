@@ -64,8 +64,8 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                         f.write('Agency Name,United Kingdom Met Office\n')
                     
                         f.write('Agency Code,UKMO\n')
-                        f.write('Program,Global Ocean OSTIA Sea Surface Temperature and Sea Ice Analysis\n')
-                        f.write('Project,Operational Sea surface Temperature and Ice Analysis (OSTIA)\n')
+                        f.write('Program,OSTIA\n')
+                        f.write('Project,Temperature\n')
                         f.write('Tag,UKMO-OSTIA\n')
                         
                         f.write(f'Data File Name,{FileNamesTuple[0]}\n')
@@ -150,8 +150,8 @@ if __name__ == '__main__':
     # ----------------------------------
 
     RootPath = LakeTransport.GetCsiemDataPath()
-    DataOutPath = RootPath+'data-warehouse/csv/ukmo/'
-    DataLocation = RootPath+'data-lake/UKMO/'
+    DataOutPath = RootPath+'data-warehouse/csv/ukmo/ostia/'
+    DataLocation = RootPath+'data-lake/UKMO/OSTIA/'
     MatFilePath = RootPath+'csiem-data/code/actions/'
     AgencySheetName = 'UKMO'
 
@@ -159,4 +159,7 @@ if __name__ == '__main__':
     Destinations = RootPath+'data-lake/UKMO/'
     Bucket = 'wamsi-westport-project-1-1'
     LakeTransport.TransferFolder(Bucket,PathInBucket,Destinations)
+    import os
+    os.rename(RootPath+'data-lake/UKMO/OSTIA/Temperature/',RootPath+'data-lake/UKMO/OSTIA/temperature/')
+    
     Main(DataOutPath,DataLocation,MatFilePath,AgencySheetName)

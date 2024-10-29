@@ -1,6 +1,6 @@
 function importSWAN()
     run ../../actions/csiem_data_paths
-    load([datapath,'data-lake/BMT/SWAN/wave_export.mat'])
+    load([datapath,'data-lake/BMT/WP/SWAN/wave_export.mat'])
 
 
     load ../../actions/varkey.mat;
@@ -27,7 +27,7 @@ function importSWAN()
         % fclose(fid);
         % stop
 
-    outdir = [datapath,'data-warehouse/csv/bmtswan/'];
+    outdir = [datapath,'data-warehouse/csv/bmt/wp/swan/'];
     mkdir(outdir);
 
     VarListStruct = agency.bmtswan;

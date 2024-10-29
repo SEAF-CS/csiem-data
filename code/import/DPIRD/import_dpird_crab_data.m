@@ -7,9 +7,9 @@ load ../../../code/actions/varkey.mat;
 load ../../../code/actions/sitekey.mat;
 
 run('../../actions/csiem_data_paths.m')
-filePath = [datapath,'data-lake/DPIRD/crab/Temperature/CS temp loggers_2007_to_2015 (1).xlsx'];
 
-%'D:\csiem\data-lake\DPIRD\crab\Temperature\CS temp loggers_2007_to_2015 (1).xlsx'
+filePath = [datapath,'data-lake/DPIRD/CRP/temperature/CS temp loggers_2007_to_2015 (1).xlsx'];
+
 data = readtable(filePath);
 
 mdate = datenum(data.date_local) + data.time_local;
@@ -17,7 +17,7 @@ mdate = datenum(data.date_local) + data.time_local;
 sites = unique(data.site_code);
 
 outdir = [datapath,'data-warehouse/csv/dpird/crp/'];mkdir(outdir);
-%'D:\csiem\data-warehouse\csv\dpird\crp\';
+
 catsites = fieldnames(sitekey.dpird);
 
 for i = 1:length(sites)
@@ -45,10 +45,10 @@ for i = 1:length(sites)
         fprintf(fid,'Agency Name,Department of Primary Industry and Regional Development\n');
         fprintf(fid,'Agency Code,DPIRD\n');
         fprintf(fid,'Program,Crab Research Program\n');
-        fprintf(fid,'Project,CRP\n');
+        fprintf(fid,'Project,temperature\n');
         fprintf(fid,'Tag,DPIRD-CRP\n');
         fprintf(fid,'Data File Name,%s\n',regexprep(filename,outdir,''));
-        fprintf(fid,'Location,%s\n',['data-warehouse/csv/dpird/crp']);
+        fprintf(fid,'Location,%s\n',outdir);
 
 
         fprintf(fid,'Station Status,Inactive\n');

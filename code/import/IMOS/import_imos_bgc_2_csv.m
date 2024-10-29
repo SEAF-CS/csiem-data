@@ -3,15 +3,13 @@ function import_imos_bgc_2_csv
 addpath(genpath('../../functions/'));
 
 run('../../actions/csiem_data_paths.m')
-thefile = [datapath,'data-lake/IMOS/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv'];
-%'D:/csiem/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+thefile = [datapath,'data-lake/IMOS/REF/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv'];
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = [datapath,'data-warehouse/csv/imos/bgc/'];
-%'D:/csiem/data-warehouse/csv/imos/bgc/';
+outpath = [datapath,'data-warehouse/csv/imos/ref/bgc/'];
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
@@ -107,11 +105,11 @@ for i = 9:width(Test)
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
             fprintf(fid,'Agency Code,IMOS\n');
-            fprintf(fid,'Program,BGC\n');
-            fprintf(fid,'Project,BGC\n');
-            fprintf(fid,'Tag,IMOS-BGC\n');
+            fprintf(fid,'Program,REF\n');
+            fprintf(fid,'Project,bgc\n');
+            fprintf(fid,'Tag,IMOS-REF-BGC\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('bgc')]);
+            fprintf(fid,'Location,%s\n',outpath);
             
             
             fprintf(fid,'Station Status,Inactive\n');

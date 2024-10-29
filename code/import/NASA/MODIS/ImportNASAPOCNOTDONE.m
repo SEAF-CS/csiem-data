@@ -2,12 +2,12 @@ function ImportNASAPOC()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/NASA/MODIS/'];
+    main_dir = [datapath,'data-lake/NASA/MODIS/POC/'];
     Points_dir = fullfile(main_dir,'Points/');
     Polygon_dir = fullfile(main_dir,'Polygon/');
 
 
-    outdir = [datapath,'data-warehouse/csv/NASA/POC/'];
+    outdir = [datapath,'data-warehouse/csv/nasa/modis/poc/'];
 
 
 
@@ -84,9 +84,9 @@ function HeaderWrite(fHEADER,fDATA,SiteStruct,VarStruct,AgencyStruct)
     fprintf(fid,'Agency Name,The National Aeronautics and Space Administration\n');
 
     fprintf(fid,'Agency Code,NASA\n');
-    fprintf(fid,'Program,AMSR_E\n');
-    fprintf(fid,'Project,AMSR_E\n');
-    fprintf(fid,'Tag,NASA-ASMR_E\n');
+    fprintf(fid,'Program,MODIS\n');
+    fprintf(fid,'Project,POC\n');
+    fprintf(fid,'Tag,NASA-MODIS-POC\n');
 
     %%
     fprintf(fid,'Data File Name,%s\n',filename_short);

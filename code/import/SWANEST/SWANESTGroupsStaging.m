@@ -2,8 +2,8 @@ function SWANESTGroupsStaging()
 
     run('../../actions/csiem_data_paths.m')
 
-    main_file = [datapath,'data-lake/SWANEST/ALL PROGRAMS - PHYTO AWARE_2012-2020.xlsx'];
-    outdir = [datapath,'data-warehouse/csv_holding/swanest/Groups/'];
+    main_file = [datapath,'data-lake/DWER/SCE/phytoplankton/ALL PROGRAMS - PHYTO AWARE_2012-2020.xlsx'];
+    outdir = [datapath,'data-warehouse/csv_holding/dwer/swanest/phy/group/'];
 
 
     if ~exist(outdir,'dir')
@@ -93,12 +93,12 @@ function SWANESTGroupsStaging()
             temp = split(fDATA,filesep);
             filename_short = temp{end};
             fid = fopen(fHEADER,'w');
-                fprintf(fid,'Agency Name,SG-E-SWANEST\n');
+                fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');
                 
-                fprintf(fid,'Agency Code,SG-E-SWANEST\n');
-                fprintf(fid,'Program,SG-E-SWANEST\n');
-                fprintf(fid,'Project,SG-E-SWANEST\n');
-                fprintf(fid,'Tag,SG-E-SWANEST_Plankton_Groups\n');
+                fprintf(fid,'Agency Code,DWER\n');
+                fprintf(fid,'Program,SCE\n');
+                fprintf(fid,'Project,phytoplankton\n');
+                fprintf(fid,'Tag,DWER-SWANEST-PHY\n');
 
                 %%
                 fprintf(fid,'Data File Name,%s\n',filename_short);

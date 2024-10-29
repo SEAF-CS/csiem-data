@@ -1,6 +1,6 @@
 function run_bom_import
     run('../../actions/csiem_data_paths.m')
-lakedir = [datapath,'data-lake/BOM/idy/idy/'];
+lakedir = [datapath,'data-lake/BOM/IDY/idy/'];
 
 addpath(genpath('Functions'));
 

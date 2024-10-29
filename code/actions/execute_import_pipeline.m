@@ -22,16 +22,17 @@ import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
-import_bmtswan = 0;
+import_bmtswan = 1;
 import_wamsitheme1 = 0;
 import_UKMO = 0;
 import_NASA = 0;
-import_AIMS = 0;
+import_AIMS = 1;
 import_DWERPHYTO = 0;
 import_IMOSPlanktonvar = 0;
 import_WCWA1Phyto = 0;
 import_WCWA2Phyto = 0;
 import_WCWA3_9Phyto = 0;
+import_UWA_AED_Phyto = 1;
 
 import_wamsiwaves51 = 0;
 
@@ -268,9 +269,9 @@ if import_wamsitheme1
 end
 
 if import_AIMS
-    cd ../import/AIMS
-    AIMS
-    cd ../../actions
+    cd ../import/AIMS/TEMP/
+    AIMSTEMP
+    cd ../../../actions
 end
 
 if import_DWERPHYTO
@@ -309,6 +310,20 @@ end
 if import_WCWA3_9Phyto
     cd ../import/WCWA/Phytoplankton/WCWA3-9
     RunALL
+    cd ../../../../actions/
+end
+
+if import_UWA_AED_Phyto
+    cd ../import/UWA/AED/swan-phytoplankton/
+        cd subset1/
+        PhytoGroup
+        PhytoSpeciesNOTDONE 
+        cd ../
+
+        cd subset2/
+        PhytoGroup
+        PhytoSpecies 
+        cd ../
     cd ../../../../actions/
 end
 

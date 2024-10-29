@@ -21,6 +21,13 @@ def Main():
     for i in range(len(FilePaths)):
         TransferFolder(Bucket,FilePaths[i],Destinations[i])
 
+    import os
+    os.mkdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/')
+    os.rename(RootPath+'data-lake/NASA/GHRSST/Points/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Points/')
+    os.rename(RootPath+'data-lake/NASA/GHRSST/Polygon_nearshore/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_nearshore/')
+    os.rename(RootPath+'data-lake/NASA/GHRSST/Polygon_offshore/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_offshore/')
+
+    os.rename(RootPath+'data-lake/UKMO/OSTIA/Temperature/',RootPath+'data-lake/UKMO/OSTIA/temperature/')
     import sys
     sys.path.append('../UKMO/')
     import ImportUKMO as UKMO  

@@ -2,7 +2,7 @@ function import_IMOSPlankton()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/IMOS/Phyto/Species/'];
+    main_dir = [datapath,'data-lake/IMOS/REF/phyto/species/'];
     outdir = [datapath,'data-warehouse/csv/imos/PhytoPlankton/'];
 
 
@@ -80,9 +80,9 @@ function import_IMOSPlankton()
                     fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
                     
                     fprintf(fid,'Agency Code,IMOS\n');
-                    fprintf(fid,'Program,IMOS Phytoplankton\n');
-                    fprintf(fid,'Project,IMOS\n');
-                    fprintf(fid,'Tag,IMOS_Phytoplankton_Species\n');
+                    fprintf(fid,'Program,REF\n');
+                    fprintf(fid,'Project,phyto\n');
+                    fprintf(fid,'Tag,IMOS-REF-PHY\n');
 
                     %%
                     fprintf(fid,'Data File Name,%s\n',fDATA);

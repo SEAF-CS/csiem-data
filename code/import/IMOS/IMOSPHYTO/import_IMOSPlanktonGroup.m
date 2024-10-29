@@ -2,8 +2,8 @@ function import_IMOSPlanktonGroup()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-warehouse/csv_holding/imos/PhytoPlanktonGroup/'];
-    outdir = [datapath,'data-warehouse/csv/imos/PhytoPlanktonGroup/'];
+    main_dir = [datapath,'data-warehouse/csv_holding/imos/ref/phy/group/'];
+    outdir = [datapath,'data-warehouse/csv/imos/ref/phy/group/'];
 
 
 

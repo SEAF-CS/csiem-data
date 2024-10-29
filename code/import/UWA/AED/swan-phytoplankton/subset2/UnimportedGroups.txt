@@ -1,0 +1,60 @@
+Synechococcus
+Synechococcus (%abundance)
+HL-Synechococcus (%abundance)
+LL-Synechococcus (%abundance)
+Bacterial Carbon (fg/cell)
+VLP-1 (cells/mL)
+VLP-2 (cells/mL)
+VLP1:VLP2
+VLP-1 (% Relative Abundance)
+VLP-2 (% Relative Abundance)
+Synechococcus
+Synechococcus (%abundance)
+HL-Synechococcus (%abundance)
+LL-Synechococcus (%abundance)
+Bacterial Carbon (fg/cell)
+VLP-1 (cells/mL)
+VLP-2 (cells/mL)
+VLP1:VLP2
+VLP-1 (% Relative Abundance)
+VLP-2 (% Relative Abundance)
+Synechococcus
+Synechococcus (%abundance)
+HL-Synechococcus (%abundance)
+LL-Synechococcus (%abundance)
+Bacterial Carbon (fg/cell)
+VLP-1 (cells/mL)
+VLP-2 (cells/mL)
+VLP1:VLP2
+VLP-1 (% Relative Abundance)
+VLP-2 (% Relative Abundance)
+Synechococcus
+Synechococcus (%abundance)
+HL-Synechococcus (%abundance)
+LL-Synechococcus (%abundance)
+Bacterial Carbon (fg/cell)
+VLP-1 (cells/mL)
+VLP-2 (cells/mL)
+VLP1:VLP2
+VLP-1 (% Relative Abundance)
+VLP-2 (% Relative Abundance)
+Synechococcus
+Synechococcus (%abundance)
+HL-Synechococcus (%abundance)
+LL-Synechococcus (%abundance)
+Bacterial Carbon (fg/cell)
+VLP-1 (cells/mL)
+VLP-2 (cells/mL)
+VLP1:VLP2
+VLP-1 (% Relative Abundance)
+VLP-2 (% Relative Abundance)
+Synechococcus
+Synechococcus (%abundance)
+HL-Synechococcus (%abundance)
+LL-Synechococcus (%abundance)
+Bacterial Carbon (fg/cell)
+VLP-1 (cells/mL)
+VLP-2 (cells/mL)
+VLP1:VLP2
+VLP-1 (% Relative Abundance)
+VLP-2 (% Relative Abundance)

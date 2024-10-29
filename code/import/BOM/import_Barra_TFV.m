@@ -11,13 +11,13 @@ function import_Barra_TFV
     run('../../actions/csiem_data_paths.m')
 
     
-    outdir = [datapath,'data-warehouse/csv/bom/barra_tfv/'];
+    outdir = [datapath,'data-warehouse/csv/bom/barra-tfv/'];
     mkdir(outdir);
 
 
 
     %% Get list of data files
-    dataDir = [datapath,'data-lake/BOM/barra_tfv/'];
+    dataDir = [datapath,'data-lake/BOM/BARRA/barra_tfv/'];
     fileCell = {dir(dataDir).name}';
     fileCell = fileCell(3:end) %skips ./ and ../
 

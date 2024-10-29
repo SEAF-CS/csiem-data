@@ -2,12 +2,12 @@ function ImportNASASST()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/NASA/GHRSST/'];
+    main_dir = [datapath,'data-lake/NASA/GHRSST/ghrsst/'];
     Points_dir = fullfile(main_dir,'Points/');
     OffShorePolygon_dir = fullfile(main_dir,'Polygon_offshore/');
     NearShorePolygon_dir = fullfile(main_dir,'Polygon_nearshore/');
 
-    outdir = [datapath,'data-warehouse/csv/NASA/ASMR_E/'];
+    outdir = [datapath,'data-warehouse/csv/nasa/ghrsst/'];
 
 
 
@@ -89,9 +89,9 @@ function HeaderWrite(fHEADER,fDATA,SiteStruct,VarStruct,AgencyStruct)
     fprintf(fid,'Agency Name,The National Aeronautics and Space Administration\n');
 
     fprintf(fid,'Agency Code,NASA\n');
-    fprintf(fid,'Program,AMSR_E\n');
-    fprintf(fid,'Project,AMSR_E\n');
-    fprintf(fid,'Tag,NASA-ASMR_E\n');
+    fprintf(fid,'Program,GHRSST\n');
+    fprintf(fid,'Project,ghrsst\n');
+    fprintf(fid,'Tag,NASA-GHRSST\n');
 
     %%
     fprintf(fid,'Data File Name,%s\n',filename_short);

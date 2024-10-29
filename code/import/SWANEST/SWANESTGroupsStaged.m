@@ -2,8 +2,8 @@ function SWANESTGroupsStaged()
 
     run('../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-warehouse/csv_holding/swanest/Groups/'];
-    outdir = [datapath,'data-warehouse/csv/swanest/Groups/'];
+    main_dir = [datapath,'data-warehouse/csv_holding/dwer/swanest/phy/group/'];
+    outdir = [datapath,'data-warehouse/csv/dwer/swanest/phy/group/'];
 
 
 

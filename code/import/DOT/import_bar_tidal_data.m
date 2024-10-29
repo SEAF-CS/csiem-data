@@ -96,7 +96,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename = [datapath,'data-warehouse/csv/dot/tide/PTBAR02_Tidal_Height_DATA.csv'];
+filename = [datapath,outdir,'PTBAR02_Tidal_Height_DATA.csv'];
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Height,Data,QC\n');
@@ -113,8 +113,8 @@ headerfile = regexprep(filename,'_DATA','_HEADER');
 fid = fopen(headerfile,'wt');
 fprintf(fid,'Agency Name,Department of Transport\n');
 fprintf(fid,'Agency Code,DOT\n');
-fprintf(fid,'Program,Coastal Data\n');
-fprintf(fid,'Project,Tide\n');
+fprintf(fid,'Program,TIDE\n');
+fprintf(fid,'Project,tide\n');
 fprintf(fid,'Tag,DOT-TIDE\n');
 fprintf(fid,'Data File Name,PTBAR02_Tidal_Height.csv\n');
 fprintf(fid,'Location,data-warehouse/csv/dot/tide\n');

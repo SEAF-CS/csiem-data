@@ -2,8 +2,8 @@ function import_PhytoPlanktonGroup()
 
     run('../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-warehouse/csv_holding/dwer_PhytoplanktonGroups/'];
-    outdir = [datapath,'data-warehouse/csv/dwer/dwer_PhytoplanktonGroups/'];
+    main_dir = [datapath,'data-warehouse/csv_holding/dwer/csphy/group/'];
+    outdir = [datapath,'data-warehouse/csv/dwer/csphy/group/'];
 
     if ~exist(outdir,'dir')
         mkdir(outdir);

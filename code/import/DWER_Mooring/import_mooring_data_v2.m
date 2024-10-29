@@ -2,8 +2,7 @@ function import_mooring_data_v2
     addpath(genpath('../../functions/'));
     run('../../actions/csiem_data_paths.m')
 
-    filepath = [datapath,'data-lake/DWER/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/'];
-    %             'D:\csiem\data-lake\DWER\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data\';
+    filepath = [datapath,'data-lake/DWER/CSMOORING/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/'];
 
     filelist = dir(fullfile(filepath, '**/*.csv'));  %get list of files and folders in any subfolder
     %                                    / instead of \
@@ -227,11 +226,11 @@ function import_mooring_data_v2
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');
             fprintf(fid,'Agency Code,DWER\n');
-            fprintf(fid,'Program,Cockburn Sound Marine Water Quality Monitoring\n');
-            fprintf(fid,'Project,CSMOORING\n');
-            fprintf(fid,'Tag,DWER-CSMOORING\n');
+            fprintf(fid,'Program,CSMOORING\n');
+            fprintf(fid,'Project,csmooring\n');
+            fprintf(fid,'Tag,DWER-CS-MOORING\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/dwer/csmooring_v2']);
+            fprintf(fid,'Location,%s\n',outpath);
 
 
             fprintf(fid,'Station Status,Inactive\n');

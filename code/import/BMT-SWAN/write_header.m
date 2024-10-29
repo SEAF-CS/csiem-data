@@ -8,9 +8,9 @@ fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,BMT\n');
             
             fprintf(fid,'Agency Code,BMT\n');
-            fprintf(fid,'Program,SWAN\n');
-            fprintf(fid,'Project,BMT-SWAN\n');
-            fprintf(fid,'Tag,BMT-SWAN\n');
+            fprintf(fid,'Program,WP\n');
+            fprintf(fid,'Project,SWAN\n');
+            fprintf(fid,'Tag,BMT-WP-SWAN\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);

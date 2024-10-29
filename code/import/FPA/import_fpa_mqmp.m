@@ -5,8 +5,7 @@ load ../../actions/sitekey.mat;
 load ../../actions/agency.mat;
 
 run('../../actions/csiem_data_paths.m')
-xlsfilename = [datapath,'data-lake/FPA/MQMP/MQMP2002-2021_WQ_20210728.xlsx'];
-%'                D:\csiem\data-lake\FPA\MQMP\MQMP2002-2021_WQ_20210728.xlsx';
+xlsfilename = [datapath,'data-lake/FPA/MQMP/mqmp/MQMP2002-2021_WQ_20210728.xlsx'];
 
 sheetname = {'InnerHarbourWQ';...
     'RousHeadHarbour';...
@@ -123,7 +122,7 @@ for i = 1:length(sheetname)
                     
                     fprintf(fid,'Agency Code,FPA\n');
                     fprintf(fid,'Program,Marine Quality Monitoring Program\n');
-                    fprintf(fid,'Project,MQMP\n');
+                    fprintf(fid,'Project,mqmp\n');
                     fprintf(fid,'Tag,FPA-MQMP\n');
                     fprintf(fid,'Data File Name,%s\n',filename);
                     fprintf(fid,'Location,%s\n',['data-warehouse/csv/fpa/mqmp']);
