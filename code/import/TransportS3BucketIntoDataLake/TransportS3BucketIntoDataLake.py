@@ -60,9 +60,11 @@ def TransferFolder(HostBucketName,HostFolderPath,DesitinationFolderPath):
     the contents will be downloaded and put into destination folder.
     /GIS_DATA/csiem-data-hub/data-lake/UKMO/
     """
-
+    import sys
+    sys.path.append('./')
     import boto3
     import os
+    from CredsFile import Creds 
 
     (Id,Key) = Creds()
     # Create a boto3 session
@@ -103,14 +105,6 @@ def remove_prefix(text, prefix):
     if text.startswith(prefix):
         return text[len(prefix):]
     return text
-
-def Creds():
-    # Access ID	06e1298e5a7f4c599c8910026eaea254
-    # Secret Key	d8f1284f12ca4497a2d9aae19304c0c5
-
-    Id = '06e1298e5a7f4c599c8910026eaea254'
-    Key = 'd8f1284f12ca4497a2d9aae19304c0c5'
-    return (Id,Key)
 
 
 if __name__ == "__main__":

@@ -50,7 +50,7 @@ function PointOrPolyProcess(SiteNameFormatStr,Directory,Datacol,outdir,SiteListS
         SiteStruct = SearchSitelistbyStr(SiteListStruct,SiteName);
         
         Tab = readtable(filename);
-        Tab(1:5,:)
+        %Tab(1:5,:)
 
         DataVals = Tab{:,Datacol}*AgencyStruct.Conv;
         DateVals = Tab{:,1};
