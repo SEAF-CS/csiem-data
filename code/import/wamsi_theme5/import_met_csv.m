@@ -7,11 +7,10 @@ load ../../actions/varkey.mat;
 load ../../actions/sitekey.mat;
 
 run('../../actions/csiem_data_paths.m')
-filename = [datapath,'data-lake/WAMSI/wwmsp5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)_BBEdit.csv'];
-              %'D:csiem/data-lake/wamsi/wwmsp5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)_BBEdit.csv';
+filename = [datapath,'data-lake/WAMSI/WWMSP5/WWMSP5_met/20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)_BBEdit.csv'];
 
-outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5_met/'];if ~exist(outdir,'dir'); mkdir(outdir); end
-%'            D:csiem/data-warehouse/csv/wamsi/wwmsp5_met/';if ~exist(outdir,'dir'); mkdir(outdir); end
+
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5/met/'];if ~exist(outdir,'dir'); mkdir(outdir); end
 
 data = readtable(filename, 'ReadVariableNames', false, 'HeaderLines', 4);
 %[~,headers] = xlsread(filename,'C2:ZZ2');
@@ -70,11 +69,11 @@ for i = 1:length(headers)
     fid = fopen(headername,'wt');
     fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
     fprintf(fid,'Agency Code,WAMSI\n');
-    fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-    fprintf(fid,'Project,WWMSP5.1\n');
-    fprintf(fid,'Tag,WWMSP5.1-MET\n');
+    fprintf(fid,'Program,WWMSP5\n');
+    fprintf(fid,'Project,WWMSP5_met/\n');
+    fprintf(fid,'Tag,WAMSI-WWMSP5-MET\n');
     fprintf(fid,'Data File Name,%s\n','20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22).csv');
-    fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp5_met']);
+    fprintf(fid,'Location,%s\n',outdir);
     
     
     fprintf(fid,'Station Status,Static\n');

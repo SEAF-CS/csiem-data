@@ -7,12 +7,12 @@ function IMPORTSEDDEPO()
     SiteListStruct = sitekey.WWMSP31SedimentDeposition;
 
     run('../../../actions/csiem_data_paths.m')
-    outdir = [datapath,'data-warehouse/csv/wamsi/WWMSP3.1 - Sediment Deposition Logger/'];
+    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp3/seddep/'];
     mkdir(outdir);
 
 
     
-    dataDir = [datapath,'data-lake/WAMSI/WWMSP3.1 - Sediment Deposition Logger/Sediment Deposition Logger Data/'];
+    dataDir = [datapath,'data-lake/WAMSI/WWMSP3/WWMSP3.1_SedimentDeposition/Sediment Deposition Logger Data/'];
     % The data is structured into folders of sites: so I want to iterate through each site folder,
     %  but theres a readme, so dont want to iterate over that.
     FolderStructure = dir(dataDir);

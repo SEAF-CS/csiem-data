@@ -2,8 +2,8 @@ function import_phytoplankton1_Group()
 
     run('../../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/WCWA/Phyto/WCWA1/'];
-    outdir = [datapath,'data-warehouse/csv/wcwa/PhytoPlankton1/Group/'];
+    main_dir = [datapath,'data-lake/WCWA/PLOOM/Phyto/1/'];
+    outdir = [datapath,'data-warehouse/csv/wcwa/ploom/phy/group/1/'];
 
 
 
@@ -69,9 +69,9 @@ function import_phytoplankton1_Group()
                     fprintf(fid,'Agency Name,Water Corporation WA\n');
                     
                     fprintf(fid,'Agency Code,WCWA\n');
-                    fprintf(fid,'Program,WCWA Phytoplankton\n');
-                    fprintf(fid,'Project,WCWA Phytoplankton\n');
-                    fprintf(fid,'Tag,WCWA_Phytoplankton_Group\n');
+                    fprintf(fid,'Program,PLOOM\n');
+                    fprintf(fid,'Project,Phyto\n');
+                    fprintf(fid,'Tag,WCWA-PLOOM-PHY\n');
 
                     %%
                     fprintf(fid,'Data File Name,%s\n',filename_short);

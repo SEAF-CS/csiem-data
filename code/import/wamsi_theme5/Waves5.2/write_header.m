@@ -8,9 +8,9 @@ fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
             fprintf(fid,'Agency Code,WAMSI\n');
-            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-            fprintf(fid,'Project,WAMSI-WWMSP5.2-Waves\n');
-            fprintf(fid,'Tag,WAMSI-WWMSP5.2-Waves\n');
+            fprintf(fid,'Program,WWMSP5\n');
+            fprintf(fid,'Project,WWMSP5_WWM/\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP5-WWM\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);

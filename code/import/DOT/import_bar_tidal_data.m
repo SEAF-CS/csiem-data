@@ -96,7 +96,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename = [datapath,outdir,'PTBAR02_Tidal_Height_DATA.csv'];
+filename = [outdir,'PTBAR02_Tidal_Height_DATA.csv']
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Height,Data,QC\n');
@@ -108,7 +108,7 @@ for i = 1:length(ggg)
 end
 fclose(fid);
 
-headerfile = regexprep(filename,'_DATA','_HEADER');
+headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
 
 fid = fopen(headerfile,'wt');
 fprintf(fid,'Agency Name,Department of Transport\n');

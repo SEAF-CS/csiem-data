@@ -91,7 +91,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename = [datapath,outdir,'RKMGL01_Tidal_Height_DATA.csv'];
+filename = [outdir,'RKMGL01_Tidal_Height_DATA.csv'];
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');

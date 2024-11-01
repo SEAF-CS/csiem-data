@@ -8,10 +8,8 @@ load ../../../../code/actions/agency.mat;
 
 run('../../../actions/csiem_data_paths.m')
 
-outdir = [datapath,'data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/'];mkdir(outdir);
-outdir_main = [datapath,'data-warehouse/csv/wamsi/wwmsp3.1_ctd/'];mkdir(outdir_main);
-
-%'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv_holding/wamsi/wwmsp3/ctd/'];mkdir(outdir);
+outdir_main = [datapath,'data-warehouse/csv/wamsi/wwmsp3/ctd/'];mkdir(outdir_main);
 
 
 data = readtable([outdir,'wwmsp_theme3.1_CTD_reformat_bbusch_working.csv']);
@@ -60,11 +58,11 @@ for i = 1:length(thevars)
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
             fprintf(fid,'Agency Code,WAMSI\n');
-            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-            fprintf(fid,'Project,WWMSP3.1\n');
-            fprintf(fid,'Tag,WWMSP-3.1-CTD\n');
+            fprintf(fid,'Program,WWMSP3\n');
+            fprintf(fid,'Project,WWMSP3.1_CTD/\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP3-CTD\n');
             fprintf(fid,'Data File Name,%s\n',filename);
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp3.1_ctd']);
+            fprintf(fid,'Location,%s\n',outdir_main);
             
             
             fprintf(fid,'Station Status,Static\n');

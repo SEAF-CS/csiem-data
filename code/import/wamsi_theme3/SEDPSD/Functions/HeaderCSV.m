@@ -8,7 +8,7 @@ function HeaderCSV(InputFlatFile,VarKey)
     [UniqueSites,SiteIndex,~] = unique(table2array(Table(:,"Var4")));
     
     run('../../../actions/csiem_data_paths.m')
-    OutDir = [datapath,'data-warehouse/csv/wamsi/wwmsp3.1_SEDPSD/'];
+    OutDir = [datapath,'data-warehouse/csv/wamsi/wwmsp3/sedpsd/'];
     mkdir(OutDir);
 
     %% Create Header and CSV

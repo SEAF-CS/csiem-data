@@ -2,8 +2,8 @@ function import_phytoplankton_Species(WCNum,SheetString,DataLastRowNum)
 
     run('../../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/WCWA/Phyto/WCWA3/'];
-    outdir = [datapath,'data-warehouse/csv/wcwa/PhytoPlankton',num2str(WCNum),'/Species/'];
+    main_dir = [datapath,'data-lake/WCWA/PLOOM/Phyto/3/'];
+    outdir = [datapath,'data-warehouse/csv/wcwa/ploom/phy/species/',num2str(WCNum),'/'];
 
 
 
@@ -99,10 +99,10 @@ function import_phytoplankton_Species(WCNum,SheetString,DataLastRowNum)
                     fid = fopen(fHEADER,'w');
                         fprintf(fid,'Agency Name,Water Corporation WA\n');
                         
-                        fprintf(fid,'Agency Code,WCWA%d\n',WCNum);
-                        fprintf(fid,'Program,WCWA%d Phytoplankton\n',WCNum);
-                        fprintf(fid,'Project,WCWA%d Phytoplankton\n',WCNum);
-                        fprintf(fid,'Tag,WCWA%d_Phytoplankton_Species\n',WCNum);
+                        fprintf(fid,'Agency Code,WCWA\n');
+                        fprintf(fid,'Program,PLOOM'\n);
+                        fprintf(fid,'Project,Phyto\n');
+                        fprintf(fid,'Tag,WCWA-PLOOM-PHY\n');
     
                         %%
                         fprintf(fid,'Data File Name,%s\n',filename_short);

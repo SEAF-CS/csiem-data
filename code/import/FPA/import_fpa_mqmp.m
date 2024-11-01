@@ -5,7 +5,8 @@ load ../../actions/sitekey.mat;
 load ../../actions/agency.mat;
 
 run('../../actions/csiem_data_paths.m')
-xlsfilename = [datapath,'data-lake/FPA/MQMP/mqmp/MQMP2002-2021_WQ_20210728.xlsx'];
+xlsfilename = [datapath,'data-lake/FPA/MQMP/MQMP2002-2021_WQ_20210728.xlsx'];
+
 
 sheetname = {'InnerHarbourWQ';...
     'RousHeadHarbour';...

@@ -1,7 +1,7 @@
 function Waves51()
     run('../../../actions/csiem_data_paths.m')
-    main_dir = [datapath,'data-lake/WAMSI/wwmsp5.1_waves/'];
-    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5.1_waves/'];
+    main_dir = [datapath,'data-lake/WAMSI/WWMSP5/WWMSP5_waves/'];
+    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5/wave/'];
     if ~exist(outdir,'dir')
         mkdir(outdir);
     end
@@ -50,9 +50,9 @@ function Waves51()
                     fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
                     
                     fprintf(fid,'Agency Code,WAMSI\n');
-                    fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-                    fprintf(fid,'Project,WAMSI-WWMSP5.1-Waves\n');
-                    fprintf(fid,'Tag,WAMSI-WWMSP5.1-Waves\n');
+                    fprintf(fid,'Program,WWMSP5\n');
+                    fprintf(fid,'Project,WWMSP5_waves\n');
+                    fprintf(fid,'Tag,WAMSI-WWMSP5-WAVE\n');
 
                     %%
                     fprintf(fid,'Data File Name,%s\n',filename);

@@ -10,11 +10,9 @@ load ../../../code/actions/agency.mat;
 run('../../actions/csiem_data_paths.m')
 
 
-filename = [datapath,'data-lake/WAMSI/wwmsp2.2_light/Light Data/Light data Mastersheet_July2023-2.xlsx'];
-           %'D:\csiem\data-lake\WAMSI\wwmsp2.2_light\Light Data\Light data Mastersheet_July2023-2.xlsx';
+filename = [datapath,'data-lake/WAMSI/WWMSP2/WWMSP2.2_Light/Light Data/Light data Mastersheet_July2023-2.xlsx'];
 
-outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp2.2_light/'];mkdir(outdir);
-%'D:\csiem\data-warehouse\csv\wamsi\wwmsp2.2_light\';
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp2/light/'];mkdir(outdir);
 
 
 data = readtable(filename,'sheet','all data');
@@ -92,11 +90,11 @@ for i = 1:length(headers)
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
             fprintf(fid,'Agency Code,WAMSI\n');
-            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-            fprintf(fid,'Project,WWMSP2.2\n');
-            fprintf(fid,'Tag,WWMSP2.2-Light\n');
+            fprintf(fid,'Program,WWMSP2\n');
+            fprintf(fid,'Project,WWMSP2.2_Light/\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP2-MS9\n');
             fprintf(fid,'Data File Name,%s\n',filename);
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp2.2_light']);
+            fprintf(fid,'Location,%s\n',outdir);
             
             
             fprintf(fid,'Station Status,Static\n');

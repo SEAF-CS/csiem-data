@@ -1,6 +1,6 @@
 #!bin/bash
-INPUT=${1:-"/GIS_DATA/csiem-data-hub/data-warehouse/csv/wcwa/"}
-OUTPUT=${2:-"/GIS_DATA/csiem-data-hub/data-warehouse/csv/wcwa/PhytoPlanktonAll/"}
+INPUT=${1:-"/GIS_DATA/csiem-data-hub/data-warehouse/csv/wcwa/ploom/phy/"}
+OUTPUT=${2:-"/GIS_DATA/csiem-data-hub/data-warehouse/csv/wcwa/ploom/phy/All/"}
 
 rm $OUTPUT*.csv
 

@@ -1,0 +1,54 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 7 (23.2.0.2515942) 64-bit (glnxa64)
+                              January 30, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> {Operation terminated by user during matlab.graphics.internal.initialize
+} 
+{Operation terminated by user during matlab.graphics.internal.initialize
+} 
+
+>> IMOSBGC
+{Operation terminated by user during matlab.io.spreadsheet.internal.createWorkbook>constructWorkbook
+
+
+In matlab.io.spreadsheet.internal.createWorkbook (line 93)
+        book = constructWorkbook(format, filename, tryInterop, sheet, sheetNamesOnly, range);
+
+In matlab.io.internal.functions.UsesWorksheet/openBook (line 35)
+                obj.WorkbookObj = createWorkbook(fmt, filename, UseExcel, sheet, false, range);
+
+In matlab.io.internal.functions.DetectImportOptionsSpreadsheet/openBookAndSheet (line 70)
+                func.WorkSheet.openBook(func.Filename, func.Sheet, fmt, ...
+
+In matlab.io.internal.functions.DetectImportOptionsSpreadsheet/execute (line 38)
+            openBookAndSheet(func, supplied, fmt, true);
+
+In matlab.io.internal.functions.DetectImportOptions/execute (line 75)
+                    opts = func.execute@matlab.io.internal.functions.DetectImportOptionsSpreadsheet(supplied);
+
+In matlab.io.internal.functions.ReadTable/execute (line 35)
+            func.Options = func.execute@matlab.io.internal.functions.DetectImportOptions(supplied);
+
+In matlab.io.internal.functions.ExecutableFunction/validateAndExecute (line 68)
+            [varargout{1:nargout}] = func.execute(supplied,additionalArgs{:});
+
+In readtable (line 514)
+        t = func.validateAndExecute(filename,varargin{:});
+
+In import_site_key>read_site_sheet (line 46)
+dataout = readtable(filename,'Sheet',sheet,'NumHeaderLines',1,ReadVariableNames=false);
+
+In import_site_key (line 4)
+sitekey.imosbgc = read_site_sheet('IMOSBGC');
+
+In execute_import_pipeline (line 7)
+import_site_key;
+} 
+
+>> 

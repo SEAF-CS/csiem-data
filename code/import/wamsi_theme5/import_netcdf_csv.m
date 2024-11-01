@@ -2,17 +2,14 @@ function import_netcdf_csv
 
 addpath(genpath('../../functions'));
 run('../../actions/csiem_data_paths.m')
-basedir = [datapath,'data-lake/WAMSI/wwmsp5_wq/'];
-             %'D:csiem/data-lake/wamsi/wwmsp5_wq/';
+basedir = [datapath,'data-lake/WAMSI/WWMSP5/WWMSP5_wq/'];
+
 %filelist = dir(fullfile(basedir, '**\*.nc'));
 filelist = dir(fullfile(basedir, '**/*.nc'));  %get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
-adcpfilepath = [datapath,'data-lake/WAMSI/wwmsp5_adcp/ADCP/'];
-                 %'D:\csiem\data-lake\WAMSI\wwmsp5_adcp\ADCP\';
-
-outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5_wq/'];
-%            'D:csiem/data-warehouse/csv/wamsi/wwmsp5_wq/';
+adcpfilepath = [datapath,'data-lake/WAMSI/WWMSP5/WWMSP5_adcp/'];
+outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5/wq/'];
 
 mkdir(outdir);
 
@@ -215,11 +212,11 @@ for i = 1:length(filelist)
                         fid = fopen(headerfile,'wt');
                         fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
                         fprintf(fid,'Agency Code,WAMSI\n');
-                        fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-                        fprintf(fid,'Project,WWMSP5.1\n');
-                        fprintf(fid,'Tag,WWMSP5.1-WQ\n');
+                        fprintf(fid,'Program,WWMSP5\n');
+                        fprintf(fid,'Project,WWMSP5_wq\n');
+                        fprintf(fid,'Tag,WAMSI-WWMSP5-WQ\n');
                         fprintf(fid,'Data File Name,%s\n',datafile);
-                        fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp5']);
+                        fprintf(fid,'Location,%s\n',outdir);
                         
                         
                         fprintf(fid,'Station Status,Static\n');

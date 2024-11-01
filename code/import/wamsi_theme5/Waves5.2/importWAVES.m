@@ -1,7 +1,7 @@
 function importWAVES()
     run('../../../actions/csiem_data_paths.m')
-    main_dir = [datapath,'data-lake/WAMSI/wwmsp5.2_waves/'];
-    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5.2_waves/'];
+    main_dir = [datapath,'data-lake/WAMSI/WWMSP5/WWMSP5_WWM/'];
+    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp5/wwm/'];
     if ~exist(outdir,'dir')
         mkdir(outdir);
     end

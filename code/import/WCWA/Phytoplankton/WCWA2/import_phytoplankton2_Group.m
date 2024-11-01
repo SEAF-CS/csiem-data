@@ -117,7 +117,7 @@ function import_phytoplankton2_Group()
                     fid = fopen(fHEADER,'w');
                         fprintf(fid,'Agency Name,Water Corporation WA\n');
                         
-                        fprintf(fid,'Agency Code,WCWA2\n');
+                        fprintf(fid,'Agency Code,WCWA\n');
                         fprintf(fid,'Program,WCWA2 Phytoplankton\n');
                         fprintf(fid,'Project,WCWA2 Phytoplankton\n');
                         fprintf(fid,'Tag,WCWA2_Phytoplankton_Group\n');

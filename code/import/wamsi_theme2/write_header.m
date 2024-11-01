@@ -1,18 +1,18 @@
 function write_header(headerfile,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
 filename = regexprep(headerfile,'_HEADER','_DATA');
 
-temp = split(filename,'\');
+temp = split(filename,'/');
 filename_short = temp{end};
 
 fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
             fprintf(fid,'Agency Code,WAMSI\n');
-            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-            fprintf(fid,'Project,WWMSP2.2\n');
-            fprintf(fid,'Tag,WWMSP2.2-Seagrass\n');
+            fprintf(fid,'Program,WWMSP2\n');
+            fprintf(fid,'Project,WWMSP2.2_Seagrass/\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP2-SG\n');
             fprintf(fid,'Data File Name,%s\n',filename_short);
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp2.2_seagrass']);
+            fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
             
             
             fprintf(fid,'Station Status,Static\n');
