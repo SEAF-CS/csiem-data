@@ -2,8 +2,8 @@ function import_phytoplankton2_Group()
 
     run('../../../../actions/csiem_data_paths.m')
 
-    main_dir = [datapath,'data-lake/WCWA/Phyto/WCWA2/'];
-    outdir = [datapath,'data-warehouse/csv/wcwa/PhytoPlankton2/Group/'];
+    main_dir = [datapath,'data-lake/WCWA/PLOOM/Phyto/2/'];
+    outdir = [datapath,'data-warehouse/csv/wcwa/ploom/phy/group/2/'];
 
 
 
@@ -27,6 +27,10 @@ function import_phytoplankton2_Group()
     filecell = RecursiveListDataFilesInDir(main_dir);
     for fileNum = 1:length(filecell)
         filename = filecell{fileNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
 
         T = ReadinDataFile(filename);
         [Sites,Dates] = ReadInMetadatafile(filename);

@@ -15,6 +15,10 @@ function Waves51()
     filecell = RecursiveListDataFilesInDir(main_dir);
     for SiteNum = 1:length(filecell)
         filename = filecell{SiteNum}
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         SiteString = siteExtractor(filename);
         SiteStruct = SearchSitelistbyStr(SiteListStruct,SiteString);
 

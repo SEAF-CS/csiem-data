@@ -27,6 +27,10 @@ function import_phytoplankton2_Species()
     filecell = RecursiveListDataFilesInDir(main_dir);
     for fileNum = 1:length(filecell)
         filename = filecell{fileNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
 
         T = ReadinDataFile(filename);
         [Sites,Dates] = ReadInMetadatafile(filename);

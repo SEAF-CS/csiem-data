@@ -25,6 +25,10 @@ function import_phytoplankton1_Group()
     filecell = RecursiveListDataFilesInDir(main_dir);
     for SiteNum = 1:length(filecell)
         filename = filecell{SiteNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         opts = detectImportOptions(filename,Sheet='Sheet2');
         T = readtable(filename,opts);
         colHeadings = T.Properties.VariableDescriptions;

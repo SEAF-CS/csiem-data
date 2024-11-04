@@ -28,6 +28,10 @@ function import_phytoplankton_Species(WCNum,SheetString,DataLastRowNum)
     filecell = RecursiveListDataFilesInDir(main_dir);
     for fileNum = 1:length(filecell)
         filename = filecell{fileNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
 
         DataTable = importfile(filename,SheetString, [26,DataLastRowNum]);
         SiteandDate = importMetaData(filename,SheetString);

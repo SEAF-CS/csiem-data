@@ -24,6 +24,10 @@ function import_IMOSPlanktonGroup()
     filecell = RecursiveListDataFilesInDir(main_dir);
     for SiteNum = 1:length(filecell)
         filename = filecell{SiteNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         opts = detectImportOptions(filename);
         T = readtable(filename,opts);
         [Dates,~,IDates] = unique(T.Date);

@@ -44,6 +44,10 @@ function PointOrPolyProcess(SiteNameFormatStr,Directory,Datacol,outdir,SiteListS
     Filenames = RecursiveListDataFilesInDir(Directory);
     for filenameNum = 1:length(Filenames) 
         filename = Filenames{filenameNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         PointNum = PointNumExtractor(filename);
         SiteName = sprintf(SiteNameFormatStr,PointNum);
 

@@ -18,6 +18,10 @@ function import_phytoplankton_GroupStaged(WCNum)
     filecell = RecursiveListDataFilesInDir(main_dir);
     for filenum = 1:length(filecell)
         filename = filecell{filenum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         opts = detectImportOptions(filename);
         T = readtable(filename,opts);
         [Dates,~,IDates] = unique(T.Date);

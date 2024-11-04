@@ -3,38 +3,38 @@ addpath(genpath('../functions'));
 csiem_data_paths 
 tic
 
-import_var_key_info;
-import_site_key;
+% import_var_key_info;
+% import_site_key;
 
 
 import_dwer = 0;
 import_dot = 0;
-import_bom = 1;
-import_mafrl = 1;
-import_imos = 1;
-import_imos_srs = 1;
+import_bom = 0;
+import_mafrl = 0;
+import_imos = 0;
+import_imos_srs = 0;
 
-import_dpird = 1;
-import_moorings = 1;
+import_dpird = 0;
+import_moorings = 0;
 import_theme2 = 0;
 
-import_theme3 = 1;
-import_theme5 = 1;
+import_theme3 = 0;
+import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 import_bmtswan = 0;
-import_wamsitheme1 = 1;
+import_wamsitheme1 = 0;
 import_UKMO = 0;
-import_NASA = 1;
+import_NASA = 0;
 import_AIMS = 0;
-import_DWERPHYTO = 1;
-import_IMOSPlanktonvar = 1;
+import_DWERPHYTO = 0;
+import_IMOSPlanktonvar = 0;
 import_WCWA1Phyto = 1;
 import_WCWA2Phyto = 1;
 import_WCWA3_9Phyto = 1;
 import_UWA_AED_Phyto = 1;
 
-import_wamsiwaves51 = 1;
+import_wamsiwaves51 = 0;
 
 create_smd = 1;
 

@@ -7,6 +7,10 @@
     AllDataTable = table();
     for SiteNum = 1:length(filecell)
         filename = filecell{SiteNum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         SiteString = siteExtractor(filename);
 
         RawData = readtable(filename);

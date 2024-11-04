@@ -14,6 +14,10 @@ function import_PhytoPlanktonGroup()
     filecell = RecursiveListDataFilesInDir(main_dir);
     for filenum = 1:length(filecell)
         filename = filecell{filenum};
+        if contains(filename, '._')
+            % Skip this file if it starts with dot underline.
+            continue;
+        end
         T = readtable(filename);
         [Dates,~,IDates] = unique(T.Date);
         
