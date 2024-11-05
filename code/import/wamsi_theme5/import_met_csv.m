@@ -70,7 +70,7 @@ for i = 1:length(headers)
     fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
     fprintf(fid,'Agency Code,WAMSI\n');
     fprintf(fid,'Program,WWMSP5\n');
-    fprintf(fid,'Project,WWMSP5_met/\n');
+    fprintf(fid,'Project,WWMSP5_met\n');
     fprintf(fid,'Tag,WAMSI-WWMSP5-MET\n');
     fprintf(fid,'Data File Name,%s\n','20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22).csv');
     fprintf(fid,'Location,%s\n',outdir);

@@ -3,7 +3,7 @@ function SWANESTSpecies()
     run('../../actions/csiem_data_paths.m')
 
     main_file = [datapath,'data-lake/DWER/SCE/phytoplankton/ALL PROGRAMS - PHYTO AWARE_2012-2020.xlsx'];
-    outdir = [datapath,'data-warehouse/csv/dwer/phy/species/'];
+    outdir = [datapath,'data-warehouse/csv/dwer/swanest/phy/species/'];
 
 
     if ~exist(outdir,'dir')

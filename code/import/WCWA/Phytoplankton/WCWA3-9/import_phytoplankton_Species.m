@@ -104,7 +104,7 @@ function import_phytoplankton_Species(WCNum,SheetString,DataLastRowNum)
                         fprintf(fid,'Agency Name,Water Corporation WA\n');
                         
                         fprintf(fid,'Agency Code,WCWA\n');
-                        fprintf(fid,'Program,PLOOM'\n);
+                        fprintf(fid,'Program,PLOOM\n');
                         fprintf(fid,'Project,Phyto\n');
                         fprintf(fid,'Tag,WCWA-PLOOM-PHY\n');
     

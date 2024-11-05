@@ -35,9 +35,3 @@ Vorticella spp.
 cf. Strombidium spp.
 hairy flap
 unid square cells
-CTDSST_degC
-CTDChlaSurf_mgm3
-CTDSalinity_psu
-Ciliate
-Foraminifera
-Radiozoa

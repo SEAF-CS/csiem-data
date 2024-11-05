@@ -91,7 +91,7 @@ for i = 1:length(headers)
             
             fprintf(fid,'Agency Code,WAMSI\n');
             fprintf(fid,'Program,WWMSP2\n');
-            fprintf(fid,'Project,WWMSP2.2_Light/\n');
+            fprintf(fid,'Project,WWMSP2.2_Light\n');
             fprintf(fid,'Tag,WAMSI-WWMSP2-MS9\n');
             fprintf(fid,'Data File Name,%s\n',filename);
             fprintf(fid,'Location,%s\n',outdir);

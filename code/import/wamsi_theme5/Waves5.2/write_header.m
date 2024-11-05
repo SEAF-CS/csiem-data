@@ -9,7 +9,7 @@ fid = fopen(headerfile,'wt');
             
             fprintf(fid,'Agency Code,WAMSI\n');
             fprintf(fid,'Program,WWMSP5\n');
-            fprintf(fid,'Project,WWMSP5_WWM/\n');
+            fprintf(fid,'Project,WWMSP5_WWM\n');
             fprintf(fid,'Tag,WAMSI-WWMSP5-WWM\n');
 
             %%

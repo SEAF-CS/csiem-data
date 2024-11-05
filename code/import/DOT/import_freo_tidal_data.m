@@ -2,7 +2,7 @@ function import_freo_tidal_data
     % /Projects2/csiem-data-hub/git/code/import/DOT
 
     run(['../../actions/csiem_data_paths.m'])
-main_dir = [datapath,'data-lake/DOT/tide/FFFBH01/'];
+main_dir = [datapath,'data-lake/DOT/TIDE/tide/FFFBH01/'];
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];
 

@@ -3,7 +3,7 @@ function import_IMOSPlankton()
     run('../../../actions/csiem_data_paths.m')
 
     main_dir = [datapath,'data-lake/IMOS/REF/phyto/species/'];
-    outdir = [datapath,'data-warehouse/csv/imos/PhytoPlankton/'];
+    outdir = [datapath,'data-warehouse/csv/imos/ref/phy/species/'];
 
 
 

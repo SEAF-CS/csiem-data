@@ -9,8 +9,8 @@ fid = fopen(headerfile,'wt');
             
             fprintf(fid,'Agency Code,WAMSI\n');
             fprintf(fid,'Program,WWMSP1\n');
-            fprintf(fid,'Project,WWMSP1.1_WRF/\n');
-            fprintf(fid,'WAMSI-WWMSP1-WRF\n');
+            fprintf(fid,'Project,WWMSP1.1_WRF\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP1-WRF\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);

@@ -149,7 +149,7 @@ for i = 1:length(theyears)
                             fprintf(fid,'%s,%s,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth{nn},thedata(nn),QC{nn});
                         else
                             %fprintf(fid,'%s,%s,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth{nn},thedata(nn),QC{nn});
-                            fprintf(fid,'%s,%s,%4.4f,%s\n','yyyy-mm-dd HH:MM:SS',thedepth{nn},thedata(nn),QC{nn});
+                            %fprintf(fid,'%s,%s,%4.4f,%s\n','yyyy-mm-dd HH:MM:SS',thedepth{nn},thedata(nn),QC{nn});
                         end
 
                     end

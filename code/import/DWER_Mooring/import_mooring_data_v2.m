@@ -17,7 +17,6 @@ function import_mooring_data_v2
     varlist = fieldnames(agency.dwermooring);
 
     outpath = [datapath,'data-warehouse/csv/dwer/csmooring/']; mkdir(outpath);
-    %'D:\csiem\data-warehouse\csv\dwer\csmooring\';mkdir(outpath);
 
     for i = 1:length(filelist)
 
@@ -204,7 +203,7 @@ function import_mooring_data_v2
             filename = [outpath,sitekey.dwermooring.(sitelist{foundsite}).AED,'_',filevar,'_DATA.csv'];
             
             if i == 8
-                filename = regexprep(filename,'_DATA','_Bottom_DATA');
+                filename = regexprep(filename,'_DATA.csv','_Bottom_DATA.csv');
             end
             
             filename

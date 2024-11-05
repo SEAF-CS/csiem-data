@@ -1,6 +1,6 @@
 function import_mgb_tidal_data
     run(['../../actions/csiem_data_paths.m'])
-main_dir = [datapath,'data-lake/DOT/tide/RKMGL01/'];
+main_dir = [datapath,'data-lake/DOT/TIDE/tide/RKMGL01/'];
 %'D:\csiem/data-lake/dot/tide/RKMGL01/';
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];

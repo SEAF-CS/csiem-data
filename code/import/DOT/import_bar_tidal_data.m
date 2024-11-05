@@ -1,8 +1,7 @@
 function import_bar_tidal_data
 
 run(['../../actions/csiem_data_paths.m'])
-
-main_dir = [datapath,'data-lake/DOT/tide/PTBAR02/'];
+main_dir = [datapath,'data-lake/DOT/TIDE/tide/PTBAR02/'];
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];
 

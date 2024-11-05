@@ -59,7 +59,7 @@ for i = 1:length(thevars)
             
             fprintf(fid,'Agency Code,WAMSI\n');
             fprintf(fid,'Program,WWMSP3\n');
-            fprintf(fid,'Project,WWMSP3.1_CTD/\n');
+            fprintf(fid,'Project,WWMSP3.1_CTD\n');
             fprintf(fid,'Tag,WAMSI-WWMSP3-CTD\n');
             fprintf(fid,'Data File Name,%s\n',filename);
             fprintf(fid,'Location,%s\n',outdir_main);

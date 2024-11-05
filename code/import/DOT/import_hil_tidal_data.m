@@ -1,7 +1,7 @@
 function import_hil_tidal_data
     run(['../../actions/csiem_data_paths.m'])
 %4 ../ gets back to Csiem-data-hub
- main_dir = [datapath,'data-lake/DOT/tide/HLHIL01/'];
+ main_dir = [datapath,'data-lake/DOT/TIDE/tide/HLHIL01/'];
 
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];
