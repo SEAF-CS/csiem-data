@@ -122,11 +122,11 @@ for i = 1:length(sheetname)
                     fprintf(fid,'Agency Name,Fremantle Port Authority\n');
                     
                     fprintf(fid,'Agency Code,FPA\n');
-                    fprintf(fid,'Program,Marine Quality Monitoring Program\n');
+                    fprintf(fid,'Program,MQMP\n');
                     fprintf(fid,'Project,mqmp\n');
                     fprintf(fid,'Tag,FPA-MQMP\n');
                     fprintf(fid,'Data File Name,%s\n',filename);
-                    fprintf(fid,'Location,%s\n',['data-warehouse/csv/fpa/mqmp']);
+                    fprintf(fid,'Location,%s\n',outdir);
                     
                     
                     fprintf(fid,'Station Status,Static\n');

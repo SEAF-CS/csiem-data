@@ -76,7 +76,7 @@ function ALICEGroups()
                 temp = split(fDATA,filesep);
                 filename_short = temp{end};
                 fid = fopen(fHEADER,'w');
-                    fprintf(fid,'Agency Name,Univeristy Of Western Australia\n');
+                    fprintf(fid,'Agency Name,University Of Western Australia\n');
                     
                     fprintf(fid,'Agency Code,UWA\n');
                     fprintf(fid,'Program,AED\n');

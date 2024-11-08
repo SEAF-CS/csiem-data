@@ -193,8 +193,9 @@ for i = 1:length(filelist)
                         headerfile = regexprep(fullfile_1,'DATA.csv','HEADER.csv');
                         tic
                         tab.Date = datestr(pdate_u,'yyyy-mm-dd HH:MM:SS');
-                        tab.Data = pdata_u;
                         tab.(theheader) = pdepth_u;
+                        tab.Data = pdata_u;
+                        
                         tab.QC(1:length(pdate_u),1) = 'n';
                         
                         tableout = struct2table(tab);

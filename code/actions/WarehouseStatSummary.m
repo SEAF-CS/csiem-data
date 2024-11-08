@@ -1,5 +1,7 @@
 %Summarise Dataware summary
-File = '/GIS_DATA/csiem-data-hub/data-warehouse/stats/warehouse_stats.csv'
+calculate_warehouse_stats()
+run csiem_data_paths
+File = [datapath,'data-warehouse/stats/warehouse_stats.csv'];
 Tab = readtable(File);
 Tab(1:5,:)
 Names = Tab.Properties.VariableNames;

@@ -16,14 +16,14 @@ import_imos_srs = 0;
 
 import_dpird = 0;
 import_moorings = 0;
-import_theme2 = 1;
+import_theme2 = 0;
 
-import_theme3 = 1;
-import_theme5 = 1;
+import_theme3 = 0;
+import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 import_bmtswan = 0;
-import_wamsitheme1 = 1;
+import_wamsitheme1 = 0;
 import_UKMO = 0;
 import_NASA = 0;
 import_AIMS = 0;

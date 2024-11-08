@@ -44,7 +44,7 @@ for i = 1:length(sites)
             fid = fopen(headerfile,'wt');
         fprintf(fid,'Agency Name,Department of Primary Industry and Regional Development\n');
         fprintf(fid,'Agency Code,DPIRD\n');
-        fprintf(fid,'Program,Crab Research Program\n');
+        fprintf(fid,'Program,CRP\n');
         fprintf(fid,'Project,temperature\n');
         fprintf(fid,'Tag,DPIRD-CRP\n');
         fprintf(fid,'Data File Name,%s\n',regexprep(filename,outdir,''));
