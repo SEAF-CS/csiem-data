@@ -56,6 +56,7 @@ for ag = 1:length(unique_agency)
         header.mAHD = smd.mAHD;
         sitecode = [header.Agency_Code,'_',header.Program_Code,'_',header.Station_ID];
         sitecode = regexprep(sitecode,'\.','');
+        sitecode = regexprep(sitecode,' ','_');
         sitecode = [sitecode,'_',header.Deployment,'_',num2str(inc)];
         sitecode = regexprep(sitecode,'-','_');
         %sitecode = [agency,'_',num2str(randi(10000,1))];

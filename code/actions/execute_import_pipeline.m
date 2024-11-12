@@ -5,6 +5,7 @@ tic
 
 % import_var_key_info;
 % import_site_key;
+csiem_file_cleaner
 
 
 import_dwer = 0;
@@ -349,7 +350,7 @@ if create_matfiles
 end
 if create_parquet
     csv_2_parquet_by_agency;
-    csv_2_parquet_by_category;
+    %csv_2_parquet_by_category;
 end
 
 if create_dataplots

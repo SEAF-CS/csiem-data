@@ -128,6 +128,13 @@ agency.UWA_AED_PHY_1_Group = import_agency_conv("UWA_AED_PHY_1_Group");
 agency.UWA_AED_PHY_2_Species = import_agency_conv("UWA_AED_PHY_2_Species");
 agency.UWA_AED_PHY_2_Group = import_agency_conv("UWA_AED_PHY_2_Group");
 
+agency.MOI = import_agency_conv('MOI');
+agency.ESA = import_agency_conv('ESA');
+agency.IMOS = import_agency_conv('IMOS');
+agency.WWMSP5 = import_agency_conv('WWMSP5');
+agency.DEP = import_agency_conv('DEP');
+agency.UWA = import_agency_conv('UWA');
+agency.CSIRO = import_agency_conv('CSIRO')
 
 save agency.mat agency -mat;
 

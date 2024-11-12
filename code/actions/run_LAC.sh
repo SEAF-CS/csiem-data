@@ -1,7 +1,7 @@
 #!/bin/bash
 matlab_exec=matlab
 echo "execute_import_pipeline();
-exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> '6_11_24_AFterImport_3.txt' 
+exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> '6_11_24_AFterImport_6.txt' 
 
 # #!/bin/bash
 # matlab_exec=matlab
