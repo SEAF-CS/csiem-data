@@ -32,7 +32,8 @@ unique_agency = unique(agency);
 
 inc = 1;
 
-for ag = 1:length(unique_agency)
+%for ag = 1:length(unique_agency)
+for ag = length(unique_agency)
 
     find_agency = find(strcmpi(agency,unique_agency(ag)) == 1);
 
@@ -54,7 +55,8 @@ for ag = 1:length(unique_agency)
         smd = import_header_smd(regexprep(headerfile,'HEADER','SMD'));
         header.calc_SMD = smd.calc_SMD;
         header.mAHD = smd.mAHD;
-        sitecode = [header.Agency_Code,'_',header.Program_Code,'_',header.Station_ID];
+        %sitecode = [header.Agency_Code,'_',header.Program_Code,'_',header.Station_ID];
+        sitecode = [header.Tag,'_',header.Station_ID];
         sitecode = regexprep(sitecode,'\.','');
         sitecode = regexprep(sitecode,' ','_');
         sitecode = [sitecode,'_',header.Deployment,'_',num2str(inc)];

@@ -170,7 +170,7 @@ def import_uwa_wawaves(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                     "Location": dir_header_raw,
                     "Station Status": STATION_STATUS,
                     "Lat": LAT,
-                    "Lon": LON,
+                    "Long": LON,
                     "Time Zone": TIME_ZONE,
                     "Vertical Datum": VERT_DATUM,
                     "National Station ID": NATIONAL_STATION_ID,

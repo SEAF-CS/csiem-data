@@ -29,10 +29,12 @@ function ImportSEDPSDMain()
     %load ../../../actions/sitekey.mat;
 
     variableStruct = agency.theme3sedpsd;
+
     VarKey = agencyMat2LachyVarkKey(variableStruct);
+    % error('deez')
 
 
-    HeaderCSV(FFName,VarKey);
+    HeaderCSV(FFName,VarKey,varkey);
 end
 
 

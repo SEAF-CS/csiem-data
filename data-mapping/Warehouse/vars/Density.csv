@@ -1,4 +1,5 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
+Western Australian Marine Science Institution,WWMSP3,AJ,AJ,WAMSI-WWMSP3-CTD,-8.1093,-32.123967,115.757909,WAMSI: AJ
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CB,Challenger Beach bank,CSMC-WQ,-10.2600,-32.182802691,115.739089661,CSMC: CB
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS10,Changed position from 2004/05 now CS1ON,CSMC-WQ,-17.6492,-32.256500246,115.740863764,CSMC: CS10
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS10N,Bulk Grain Terminal (CBH)(replaced CS10),CSMC-WQ,-12.0181,-32.255330528,115.742971151,CSMC: CS10N
@@ -12,12 +13,29 @@ Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS8,Cockburn Sound central basin,CSMC-WQ,-20.3222,-32.197565326,115.719832875,CSMC: CS8
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS9,Kwinana Bulk Terminal (KBB2),CSMC-WQ,-12.4997,-32.209850521,115.759565504,CSMC: CS9
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS9A,Kwinana Bulk Jetty (KBJ),CSMC-WQ,-16.8257,-32.23893373,115.751411901,CSMC: CS9A
+Western Australian Marine Science Institution,WWMSP3,CSR14,CSR14,WAMSI-WWMSP3-CTD,-6.7462,-32.190876,115.74633,WAMSI: CSR14
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,G1,Changed position from 2004/05 now G1 above,CSMC-WQ,-12.0351,-32.229518181,115.697969306,CSMC: G1
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,G2,Garden Island central HMAS Stirling,CSMC-WQ,-6.1499,-32.198595247,115.684830758,CSMC: G2
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,G3,Garden Island north HMAS Stirling,CSMC-WQ,-9.9554,-32.157758192,115.682119854,CSMC: G3
+Western Australian Marine Science Institution,WWMSP3,INLET,INLET,WAMSI-WWMSP3-CTD,-7.5945,-32.200864,115.770445,WAMSI: INLET
+Western Australian Marine Science Institution,WWMSP3,JB16A,JB16A,WAMSI-WWMSP3-CTD,-8.1948,-32.173529,115.768373,WAMSI: JB16A
+Western Australian Marine Science Institution,WWMSP3,LP,LP,WAMSI-WWMSP3-CTD,-16.8652,-32.226664,115.746666,WAMSI: LP
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,MB,Mangles Bay shallow near shore,CSMC-WQ,-1.4192,-32.275049132,115.705452395,CSMC: MB
+Western Australian Marine Science Institution,WWMSP3,MR,MR,WAMSI-WWMSP3-CTD,-8.3627,-32.066497,115.72983,WAMSI: MR
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,NH3,Northern Harbour Jervoise Bay,CSMC-WQ,-5.9675,-32.140023962,115.762557981,CSMC: NH3
-Integrated Marine Observing System,amnmprofile,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-CTD,-52.7718,-32,115.4,IMOS: NRSROT_PROFILE
+Integrated Marine Observing System,AMNM,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-PROFILE,-52.7718,-32,115.4,IMOS: NRSROT_PROFILE
+Western Australian Marine Science Institution,WWMSP3,OA1,OA1,WAMSI-WWMSP3-CTD,-7.8870,-32.093949,115.676266,WAMSI: OA1
+Western Australian Marine Science Institution,WWMSP3,OA1-DEP,OA1-DEP,WAMSI-WWMSP3-CTD,-8.4827,-32.124373,115.726209,WAMSI: OA1-DEP
+Western Australian Marine Science Institution,WWMSP3,OA2S,OA2S,WAMSI-WWMSP3-CTD,-10.2870,-32.114655,115.706333,WAMSI: OA2S
+Western Australian Marine Science Institution,WWMSP3,OA3,OA3,WAMSI-WWMSP3-CTD,-11.2342,-32.139635,115.665661,WAMSI: OA3
+Western Australian Marine Science Institution,WWMSP3,OA4,OA4,WAMSI-WWMSP3-CTD,-6.9310,-32.086728,115.708242,WAMSI: OA4
+Western Australian Marine Science Institution,WWMSP3,OA9S,OA9S,WAMSI-WWMSP3-CTD,-8.8147,-32.104168,115.731672,WAMSI: OA9S
+Western Australian Marine Science Institution,WWMSP3,PB,PB,WAMSI-WWMSP3-CTD,-8.0841,-32.029683,115.741563,WAMSI: PB
+Western Australian Marine Science Institution,WWMSP3,S4S10,S4S10,WAMSI-WWMSP3-CTD,-7.0864,-32.184894,115.757136,WAMSI: S4S10
+Western Australian Marine Science Institution,WWMSP3,SC,SC,WAMSI-WWMSP3-CTD,-7.9017,-32.254165,115.684285,WAMSI: SC
+Western Australian Marine Science Institution,WWMSP3,SC2,SC2,WAMSI-WWMSP3-CTD,-8.0367,-32.298863,115.686273,WAMSI: SC2
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,SF,Southern Flats shallow,CSMC-WQ,-3.2126,-32.248231528,115.712530827,CSMC: SF
+Western Australian Marine Science Institution,WWMSP3,SF11,SF11,WAMSI-WWMSP3-CTD,-18.4572,-32.242053,115.721449,WAMSI: SF11
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WS4,Warnbro Sound central basin,CSMC-WQ,-17.2342,-32.336946025,115.722166715,CSMC: WS4
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WSSB,Warnbro Sound Safety Bay shallow,CSMC-WQ,-2.9904,-32.308837615,115.708785228,CSMC: WSSB
+Western Australian Marine Science Institution,WWMSP3,s1310,s1310,WAMSI-WWMSP3-CTD,-7.1059,-32.128416,115.750778,WAMSI: s1310

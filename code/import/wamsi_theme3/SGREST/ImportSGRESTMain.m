@@ -30,7 +30,7 @@ function ImportSGRESTMain()
     VarKey = agencyMat2LachyVarkKey(variableStruct);
 
 
-    HeaderCSV(FFName,VarKey);
+    HeaderCSV(FFName,VarKey,varkey);
 end
 
 

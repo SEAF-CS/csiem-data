@@ -1,8 +1,8 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS1,CS1,WWMSP5.1-AWAC,-21.3219,-32.1463,115.6976,WAMSI: CS1
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS2,CS2,WWMSP5.1-AWAC,-21.6163,-32.184,115.6971,WAMSI: CS2
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS3,CS3,WWMSP5.1-AWAC,-19.9949,-32.2522,115.729,WAMSI: CS3
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS4,CS4,WWMSP5.1-AWAC,-11.4230,-32.2044,115.75,WAMSI: CS4
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS5,CS5,WWMSP5.1-AWAC,-9.8907,-32.1541,115.7421,WAMSI: CS5
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS6,CS6,WWMSP5.1-AWAC,-10.2203,-32.096,115.7392,WAMSI: CS6
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS7,CS7,WWMSP5.1-AWAC,-5.9504,-32.24847,115.6853,WAMSI: CS7
+Western Australian Marine Science Institution,WWMSP5,CS1,CS1,WAMSI-WWMSP5-AWAC,-21.3219,-32.1463,115.6976,WAMSI: CS1
+Western Australian Marine Science Institution,WWMSP5,CS2,CS2,WAMSI-WWMSP5-AWAC,-21.6163,-32.184,115.6971,WAMSI: CS2
+Western Australian Marine Science Institution,WWMSP5,CS3,CS3,WAMSI-WWMSP5-AWAC,-19.9949,-32.2522,115.729,WAMSI: CS3
+Western Australian Marine Science Institution,WWMSP5,CS4,CS4,WAMSI-WWMSP5-AWAC,-11.4230,-32.2044,115.75,WAMSI: CS4
+Western Australian Marine Science Institution,WWMSP5,CS5,CS5,WAMSI-WWMSP5-AWAC,-9.8907,-32.1541,115.7421,WAMSI: CS5
+Western Australian Marine Science Institution,WWMSP5,CS6,CS6,WAMSI-WWMSP5-AWAC,-10.2203,-32.096,115.7392,WAMSI: CS6
+Western Australian Marine Science Institution,WWMSP5,CS7,CS7,WAMSI-WWMSP5-AWAC,-5.9504,-32.24847,115.6853,WAMSI: CS7

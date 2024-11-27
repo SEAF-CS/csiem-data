@@ -1,4 +1,5 @@
-function HeaderCSV(InputFlatFile,VarKey)
+function HeaderCSV(InputFlatFile,VarKey,varkey)
+    %% this has been hacked up, VarKey was a temp fix that i created, but i needed more details which are stored in the varkey matfile, so i needed both. 
     Table = readtable(InputFlatFile);
     ColLetter = char(width(Table)+ 64); %1->A 2->B
     Range = ['A1:', ColLetter ,'1']; 
@@ -6,7 +7,7 @@ function HeaderCSV(InputFlatFile,VarKey)
 
     [UniqueVars,VarIndex,~] = unique(table2array(Table(:,"Var6")));
     [UniqueSites,SiteIndex,~] = unique(table2array(Table(:,"Var4")));
-
+    
     run('../../../actions/csiem_data_paths.m')
     OutDir = [datapath,'data-warehouse/csv/wamsi/wwmsp3/sgrest/'];
     mkdir(OutDir);
@@ -19,7 +20,7 @@ function HeaderCSV(InputFlatFile,VarKey)
             %  mafrl_CB_Ammonium_Int_Data.csv
             %  mafrl_CB_Ammonium_Int_Header.csv
 
-            fileName = [OutDir,char(UniqueSites(SiteNum)) ,'_',char(UniqueVars(VarNum))];
+            fileName = [OutDir,char(UniqueSites(SiteNum)),'_',char(UniqueVars(VarNum))];
                 fileName = filenameGoodifier(fileName);
 
             
@@ -32,7 +33,7 @@ function HeaderCSV(InputFlatFile,VarKey)
                 ID = '';%"National Station ID";
                 Desc = '';%"Site description";
                 varID = VarKey{VarKeyInd,1};
-                Cat = '';%'Data catergory';
+                Cat = varkey.(varID).Category;%'Data catergory';
                 varstring = VarKey{VarKeyInd,2};
                 wdate = '';
                 sitedepth = '';
@@ -54,7 +55,7 @@ function HeaderCSV(InputFlatFile,VarKey)
         
         %Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
         Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd HH:MM:SS');
-	    Depth = 0;
+        Depth = 0;
         Data = table2array(Table(DataNum,'Var8')); %HardCoded to 8
         QC = 'N';
         if ~isnan(Data)

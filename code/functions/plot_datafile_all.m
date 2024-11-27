@@ -2,7 +2,7 @@ function plot_datafile(filename,plotname)
 
 warning off
 
-filename = regexprep(filename,'\','/');
+filename = regexprep(filename,'\','/')
 %plotname = regexprep(filename,'DATA.csv','IMAGE.png');
 
 
@@ -59,7 +59,7 @@ yyaxis left
 if min(data.Date) == max(data.Date)
     plot(data.Date,data.Data,'.');
     xarr = [(min(data.Date) -10): 20/4:(max(data.Date)+10)];
-    datestr(xarr)
+    datestr(xarr);
 else
    plot(data.Date,data.Data);
    xarr = [min(data.Date): (max(data.Date) - min(data.Date))/4:max(data.Date)];

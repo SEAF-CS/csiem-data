@@ -1,3 +1,8 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf,KwinanaShelf,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WWMSP2.2-Light
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf_shade,KwinanaShelf_shade,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WWMSP2.2-Light
+Western Australian Marine Science Institution,WWMSP3,CSR14,CSR14,WAMSI-WWMSP3-SEDDEP,-6.7462,-32.190876,115.74633,WAMSI-WWMSP3-SEDDEP
+Western Australian Marine Science Institution,WWMSP3,CSSF-DL,CSSF-DL,WAMSI-WWMSP3-SEDDEP,-3.1501,-32.24814834,115.7114493,WAMSI-WWMSP3-SEDDEP
+Western Australian Marine Science Institution,WWMSP3,JB16A,JB16A,WAMSI-WWMSP3-SEDDEP,-8.1948,-32.173529,115.768373,WAMSI-WWMSP3-SEDDEP
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf,KwinanaShelf,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI-WWMSP2-MS9
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf_shade,KwinanaShelf_shade,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI-WWMSP2-MS9
+Western Australian Marine Science Institution,WWMSP3,OA1,OA1,WAMSI-WWMSP3-SEDDEP,-7.8870,-32.093949,115.676266,WAMSI-WWMSP3-SEDDEP
+Western Australian Marine Science Institution,WWMSP3,S4S10,S4S10,WAMSI-WWMSP3-SEDDEP,-7.0864,-32.184894,115.757136,WAMSI-WWMSP3-SEDDEP

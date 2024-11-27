@@ -23,12 +23,12 @@ import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
-import_bmtswan = 0;
+import_bmt_wp_swan = 0;
 import_wamsitheme1 = 0;
 import_UKMO = 0;
 import_NASA = 0;
-import_AIMS = 0;
-import_DWERPHYTO = 0;
+import_aims = 0;
+import_CSPHY = 0;
 import_IMOSPlanktonvar = 0;
 import_WCWA1Phyto = 0;
 import_WCWA2Phyto = 0;
@@ -40,16 +40,16 @@ import_wamsiwaves51 = 0;
 
 create_smd = 1;
 
-create_matfiles = 1;
-create_parquet = 1;
+create_matfiles = 0;
+create_parquet = 0;
 
-create_dataplots = 1;
+create_dataplots = 0;
 plotnew_dataplots = 0;
 
 create_shapefiles = 1;
 
 
-run_marvl = 1;
+run_marvl = 0;
 
 
 %___________________________________________________________________________
@@ -98,8 +98,8 @@ end
 if import_bom
     %BOM Export
     cd ../import/BOM;
-    run_bom_import;
-    import_Barra_TFV;
+    run_BOM_IDY;
+    import_BOM_BARRA_TFV;
 
     cd ../../actions
 end
@@ -235,10 +235,10 @@ if import_wamsiwaves51
 end
 
 
-if import_bmtswan
-    cd ../import/BMT-SWAN
-    importSWAN
-    cd ../../actions/
+if import_bmt_wp_swan
+    cd ../import/BMT/WP/
+    import_BMT_WP_SWAN
+    cd ../../../actions/
 end
 
 if import_UKMO
@@ -270,18 +270,18 @@ if import_wamsitheme1
     cd ../../actions/
 end
 
-if import_AIMS
+if import_aims
     cd ../import/AIMS/TEMP/
-    AIMSTEMP
+    import_AIMS_TEMP
     cd ../../../actions
 end
 
-if import_DWERPHYTO
-    cd ../import/DWER/DWER_PhytoPlakton/
-    import_PhytoPlanktonSpecies
+if import_CSPHY
+    cd ../import/DWER/CSPHY/
+    import_CSPHY_SPECIES
 
-    CSV_HoldingPlanktonGroup
-    import_PhytoPlanktonGroup
+    import_CSPHY_GROUP_STAGING
+    import_CSPHY_GROUP
     cd ../../../actions/
 end
 

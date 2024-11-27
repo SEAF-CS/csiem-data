@@ -65,36 +65,58 @@ end
 save varkey.mat varkey -mat;
 
 
-agency.theme5 = import_agency_conv('THEME5');
-agency.theme2light = import_agency_conv('THEME2LIGHT');
+agency.wwmsp1 = import_agency_conv('WWMSP1');
+    % agency.wwmsp1wrf = import_agency_conv('WWMSP1.1-WRF');
 
-agency.theme5met = import_agency_conv('THEME5MET');
-agency.theme3ctd = import_agency_conv('THEME3CTD');
+agency.wwmsp2 = import_agency_conv('WWMSP2');
+    % agency.theme2light = import_agency_conv('THEME2LIGHT');
+    % THEME2.2
 
+agency.wwmsp3 = import_agency_conv('WWMSP3');
+    % agency.theme3ctd = import_agency_conv('THEME3CTD');
+    % agency.theme3sedpsd = import_agency_conv('WWMSP3SEDPSD'); %these two have same vars
+    % agency.theme3sgrest = import_agency_conv('WWMSP3SGREST'); %these two have same vars
+    % agency.WWMSP31SedimentDeposition = import_agency_conv('WWMSP3.1-Sediment-Deposition');
+
+agency.wwmsp5 = import_agency_conv('WWMSP5');
+    %This now contains:
+    % agency.theme5 = import_agency_conv('THEME5');
+    % agency.theme5met = import_agency_conv('THEME5MET');
+    % agency.theme5waves = import_agency_conv('WWMSP5Waves');
+    % agency.theme51waves = import_agency_conv('WWMSP5.1Waves');
+    % WWMSP5 ROMS
+
+agency.WCWA = import_agency_conv('WCWA');
+    % composed of two
+    
 agency.dot = import_agency_conv('DOT');
 agency.bom = import_agency_conv('BOM');
+    %contains
+    % agency.bombarraftv = import_agency_conv('BOM-BARRA');
+    % idy
+
 agency.dwer = import_agency_conv('DWER');
-agency.dwermooring = import_agency_conv('DWERMOORING');
-agency.mafrl = import_agency_conv('MAFRL');
-agency.imosbgc = import_agency_conv('IMOSBGC');
-agency.imossrs = import_agency_conv('IMOSSRS');
+    % This has 2 sheets in one
+    % agency.dwermooring = import_agency_conv('DWERMOORING');
 
-agency.imosprofile = import_agency_conv('IMOSPROFILE');
-agency.fpamqmp = import_agency_conv('FPA-MQMP');
+agency.imos = import_agency_conv('IMOS');
+    % The following have been compressed into one:
+    % agency.imosbgc = import_agency_conv('IMOSBGC');
+    % agency.imossrs = import_agency_conv('IMOSSRS');
+    % agency.imosprofile = import_agency_conv('IMOSPROFILE');
 
-agency.theme3sedpsd = import_agency_conv('WWMSP3SEDPSD');
-agency.theme3sgrest = import_agency_conv('WWMSP3SGREST');
+agency.fpa = import_agency_conv('FPA');
+    % agency.fpamqmp = import_agency_conv('FPA-MQMP');
+    % There was also fpa_bmt in the var key 
 
-agency.theme5waves = import_agency_conv('WWMSP5Waves');
 agency.bmtswan = import_agency_conv('BMT-SWAN');
-agency.wwmsp1wrf = import_agency_conv('WWMSP1.1-WRF');
-agency.bombarraftv = import_agency_conv('BOM-BARRA');
-agency.WCWA = import_agency_conv('WCWA');
+
 agency.UKMO = import_agency_conv('UKMO');
 agency.NASA = import_agency_conv('NASA');
-agency.WWMSP31SedimentDeposition = import_agency_conv('WWMSP3.1-Sediment-Deposition');
-agency.AIMSTEMP = import_agency_conv('AIMSTEMP');
-agency.theme51waves = import_agency_conv('WWMSP5.1Waves');
+
+agency.aims = import_agency_conv('AIMS');
+agency.mafrl = import_agency_conv('MAFRL');
+
 agency.DWER_Phytoplankton = import_agency_conv('DWER Phytoplankton');
 agency.DWER_PhytoplanktonGroups = import_agency_conv('DWERPhytoPlanktonGroups');
 agency.IMOS_Phytoplankton = import_agency_conv('IMOS Phytonplakton');
@@ -130,8 +152,7 @@ agency.UWA_AED_PHY_2_Group = import_agency_conv("UWA_AED_PHY_2_Group");
 
 agency.MOI = import_agency_conv('MOI');
 agency.ESA = import_agency_conv('ESA');
-agency.IMOS = import_agency_conv('IMOS');
-agency.WWMSP5 = import_agency_conv('WWMSP5');
+
 agency.DEP = import_agency_conv('DEP');
 agency.UWA = import_agency_conv('UWA');
 agency.CSIRO = import_agency_conv('CSIRO')

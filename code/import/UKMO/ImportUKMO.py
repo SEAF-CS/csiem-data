@@ -50,6 +50,8 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                 VarID = VarIDList[HeaderIndex]
                 VarIndex = FindinList(VarID,FullVarIdList)
                 VarName = varkey[0][0][VarIndex][0][0][0][0]
+                VarDataCat = varkey[0][0][VarIndex][0][0][9][0]
+            
 
                 # Converting Kelvin into Celcius
                 Table.iloc[:,3] = Table.iloc[:,3]-273.15
@@ -90,7 +92,7 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                         f.write(f'Variable ID,{VarID[0]}\n')
                         
                     
-                        f.write('Data Category,\n')
+                        f.write(f'Data Category,{VarDataCat}\n')
                     
                         f.write('Sampling Rate (min),\n') #%4.4f\n',SD * (60*24))
                         f.write('Date,yyyy-mm-dd HH:MM:SS\n')
@@ -160,6 +162,9 @@ if __name__ == '__main__':
     Bucket = 'wamsi-westport-project-1-1'
     LakeTransport.TransferFolder(Bucket,PathInBucket,Destinations)
     import os
+    if os.path.exists(RootPath+'data-lake/UKMO/OSTIA/temperature/'):
+        import shutil
+        shutil.rmtree(RootPath+'data-lake/UKMO/OSTIA/temperature/')
     os.rename(RootPath+'data-lake/UKMO/OSTIA/Temperature/',RootPath+'data-lake/UKMO/OSTIA/temperature/')
     
     Main(DataOutPath,DataLocation,MatFilePath,AgencySheetName)
