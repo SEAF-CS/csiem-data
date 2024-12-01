@@ -3,7 +3,7 @@ function IMPORTSEDDEPO()
     load ../../../actions/agency.mat;
      load ../../../actions/sitekey.mat;
 
-    VarListStruct = agency.WWMSP31SedimentDeposition;
+    VarListStruct = agency.wwmsp3;
     SiteListStruct = sitekey.WWMSP31SedimentDeposition;
 
     run('../../../actions/csiem_data_paths.m')

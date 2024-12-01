@@ -3,7 +3,7 @@ function ImportWRF()
     load ../../actions/agency.mat;
      load ../../actions/sitekey.mat;
 
-    VarListStruct = agency.wwmsp1wrf;
+    VarListStruct = agency.wwmsp1;
     SiteListStruct = sitekey.wwmsp1wrf;
 
     run('../../actions/csiem_data_paths.m')

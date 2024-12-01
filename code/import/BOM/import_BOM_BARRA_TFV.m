@@ -6,7 +6,7 @@ function import_BOM_BARRA_TFV
     dateoverlapcheckerplot = false;
     addpath('Functions');
 
-    VarListStruct = agency.bombarraftv;
+    VarListStruct = agency.bom;
     SiteListStruct = sitekey.bombarraftv;
     run('../../actions/csiem_data_paths.m')
 

@@ -14,7 +14,7 @@ function import_mooring_data_v2
     load ../../actions/varkey.mat;
 
     sitelist = fieldnames(sitekey.dwermooring);
-    varlist = fieldnames(agency.dwermooring);
+    varlist = fieldnames(agency.dwer);
 
     outpath = [datapath,'data-warehouse/csv/dwer/csmooring/']; mkdir(outpath);
 
@@ -152,7 +152,7 @@ function import_mooring_data_v2
 
             foundvar = 0;
             for k = 1:length(varlist)
-                if strcmpi(agency.dwermooring.(varlist{k}).Old,thevar)== 1
+                if strcmpi(agency.dwer.(varlist{k}).Old,thevar)== 1
                     foundvar = k;
                 end
             end
@@ -161,15 +161,15 @@ function import_mooring_data_v2
                 thevar
                 thevarUnicode = double(thevar)
                 for k = 1:length(varlist)
-                    agency.dwermooring.(varlist{k}).Old
-                    double(agency.dwermooring.(varlist{k}).Old)
+                    agency.dwer.(varlist{k}).Old
+                    double(agency.dwer.(varlist{k}).Old)
                 end
 
 
                 stop; 
             end
 
-            varID = agency.dwermooring.(varlist{foundvar}).ID;
+            varID = agency.dwer.(varlist{foundvar}).ID;
 
             if and(foundvar == 20,foundsite == 3 | foundsite == 4| foundsite == 7 |foundsite == 8) ==  1
                 disp('Skipping empty Column')
@@ -185,7 +185,7 @@ function import_mooring_data_v2
 
             foundsite
             foundvar
-            thedata = thedata .* agency.dwermooring.(varlist{foundvar}).Conv;
+            thedata = thedata .* agency.dwer.(varlist{foundvar}).Conv;
 
             
             if strcmpi(varID,'var00323') == 1 & i ~= 9
@@ -245,7 +245,7 @@ function import_mooring_data_v2
             fprintf(fid,'Site Mean Depth,%s\n',[]);
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
-            fprintf(fid,'Variable ID,%s\n',agency.dwermooring.(varlist{foundvar}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.dwer.(varlist{foundvar}).ID);
 
             fprintf(fid,'Data Category,%s\n',varkey.(varID).Category);
 

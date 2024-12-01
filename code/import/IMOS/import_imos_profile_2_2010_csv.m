@@ -18,7 +18,7 @@ end
 
 thesiteval = fieldnames(sitekey.imosamnm);
 thevarval = fieldnames(varkey);
-theagencyval = fieldnames(agency.imosprofile);
+theagencyval = fieldnames(agency.IMOS);
 
 % [~,headers] = xlsread(thefile,'A1:AO1');
 
@@ -44,7 +44,7 @@ ustations = unique(stations);
 for i = 1:length(theagencyval)
     
     disp(['Agnency number ',num2str(i)])
-    thevar = agency.imosprofile.(theagencyval{i}).Old;
+    thevar = agency.IMOS.(theagencyval{i}).Old;
     
     
     if ismember(thevar, thedata.Properties.VariableNames)
@@ -61,13 +61,13 @@ for i = 1:length(theagencyval)
             end
                 
 
-                varID = agency.imosprofile.(theagencyval{i}).ID;
+                varID = agency.IMOS.(theagencyval{i}).ID;
                 varname = varkey.(varID).Name;
                 fullvar = [varname,' (',varkey.(varID).Unit,')'];
 
                 sss = find(strcmpi(stations,ustations{j}) == 1);
 
-                thedata_raw = thedata.(thevar)(sss,1) * agency.imosprofile.(theagencyval{i}).Conv;
+                thedata_raw = thedata.(thevar)(sss,1) * agency.IMOS.(theagencyval{i}).Conv;
                 ttt = find(~isnan(thedata_raw) == 1);
                 thedataout = thedata_raw(ttt);
 
@@ -117,7 +117,7 @@ for i = 1:length(theagencyval)
 
                 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                 fprintf(fid,'Contact Email,\n');
-                fprintf(fid,'Variable ID,%s\n',agency.imosprofile.(theagencyval{i}).ID);
+                fprintf(fid,'Variable ID,%s\n',agency.IMOS.(theagencyval{i}).ID);
 
                 fprintf(fid,'Data Category,%s\n', varkey.(varID).Category);
 

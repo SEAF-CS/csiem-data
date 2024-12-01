@@ -18,7 +18,7 @@ filelist = filelist(~[filelist.isdir]);  %remove folders from list
 %[snum,sstr] = xlsread('Conversions_mh.xlsx','A2:D1000');
 load ../../actions/agency.mat;
 
-agencyvars = fieldnames(agency.theme5);
+agencyvars = fieldnames(agency.wwmsp5);
 
 % oldheader = sstr(:,1);
 % newheader = sstr(:,3);
@@ -85,7 +85,7 @@ for i = 1:length(filelist)
             pQC = {};
             foundvar = 0;
             for k = 1:length(agencyvars)
-                if strcmpi(agency.theme5.(agencyvars{k}).Old,vars{j}) == 1
+                if strcmpi(agency.wwmsp5.(agencyvars{k}).Old,vars{j}) == 1
                     foundvar = k;
                 end
             end
@@ -98,7 +98,7 @@ for i = 1:length(filelist)
                     
                     
                     
-                    pdata = data.(vars{j}) * agency.theme5.(agencyvars{foundvar}).Conv;
+                    pdata = data.(vars{j}) * agency.wwmsp5.(agencyvars{foundvar}).Conv;
                     if isfield(data,'DEPTH')
                         pdepth = data.DEPTH;
                     end
@@ -140,8 +140,8 @@ for i = 1:length(filelist)
                             pdepth_int = interp1(pdate_u,pdepth_u,hourly);
                             pQC_int(1:length(hourly)) = {'n'};
                             
-                            varname = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Name;
-                            varunits = varkey.(agency.theme5.(agencyvars{foundvar}).ID).Unit;
+                            varname = varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Name;
+                            varunits = varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Unit;
                             
                             thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
                             datafile = regexprep(filelist(i).name,'.nc',thetxt);
@@ -179,9 +179,9 @@ for i = 1:length(filelist)
 
                             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
                             fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
-                            fprintf(fid,'Variable ID,%s\n',agency.theme5.(agencyvars{foundvar}).ID);
+                            fprintf(fid,'Variable ID,%s\n',agency.wwmsp5.(agencyvars{foundvar}).ID);
                             
-                        fprintf(fid,'Data Category,%s\n',varkey.(agency.theme5.(agencyvars{foundvar}).ID).Category);
+                        fprintf(fid,'Data Category,%s\n',varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Category);
                             
                             
                             SD = mean(diff(pdate));

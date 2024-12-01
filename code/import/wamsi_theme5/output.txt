@@ -1,0 +1,399 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+[?1h=
+                                                                          < M A T L A B (R) >
+                                                                Copyright 1984-2023 The MathWorks, Inc.
+                                                           R2023b Update 7 (23.2.0.2515942) 64-bit (glnxa64)
+                                                                            January 30, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+i>> mport_netcdf_csv
+[Warning: Directory already exists.] 
+[> In import_netcdf_csv (line 14)] 
+[Warning: Directory already exists.] 
+[> In import_netcdf_csv (line 16)] 
+20210623_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 1.081069 seconds.
+Elapsed time is 0.676147 seconds.
+20210623_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.635132 seconds.
+Elapsed time is 0.598939 seconds.
+20211221_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.405832 seconds.
+Elapsed time is 0.331736 seconds.
+20211221_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.296424 seconds.
+Elapsed time is 0.290083 seconds.
+20220217_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.182926 seconds.
+Elapsed time is 0.170091 seconds.
+20220311_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.328905 seconds.
+Elapsed time is 0.319746 seconds.
+20220427_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.349962 seconds.
+Elapsed time is 0.353458 seconds.
+20220716_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.615722 seconds.
+Elapsed time is 0.630796 seconds.
+20220731_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.531378 seconds.
+Elapsed time is 0.496748 seconds.
+20211221_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.304873 seconds.
+Elapsed time is 0.294110 seconds.
+Elapsed time is 0.292761 seconds.
+Elapsed time is 0.298776 seconds.
+Elapsed time is 0.321734 seconds.
+20211221_CS5_miniPAR_348071_EPSG7844.nc
+11
+Elapsed time is 0.344308 seconds.
+Elapsed time is 0.319804 seconds.
+Elapsed time is 0.387200 seconds.
+Elapsed time is 0.310049 seconds.
+Elapsed time is 0.300346 seconds.
+20211221_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.300934 seconds.
+Elapsed time is 0.295518 seconds.
+Elapsed time is 0.293802 seconds.
+Elapsed time is 0.299567 seconds.
+Elapsed time is 0.288225 seconds.
+20220212_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.132925 seconds.
+Elapsed time is 0.128615 seconds.
+Elapsed time is 0.127087 seconds.
+Elapsed time is 0.128516 seconds.
+Elapsed time is 0.128252 seconds.
+20220219_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.192167 seconds.
+Elapsed time is 0.187614 seconds.
+Elapsed time is 0.207209 seconds.
+Elapsed time is 0.186891 seconds.
+Elapsed time is 0.188909 seconds.
+20220408_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.165985 seconds.
+Elapsed time is 0.191687 seconds.
+Elapsed time is 0.176441 seconds.
+Elapsed time is 0.175657 seconds.
+Elapsed time is 0.175424 seconds.
+20220503_CS5_miniPAR_348071_EPSG7844.nc
+11
+Elapsed time is 0.473552 seconds.
+Elapsed time is 0.487553 seconds.
+Elapsed time is 0.497358 seconds.
+Elapsed time is 0.464692 seconds.
+Elapsed time is 0.459165 seconds.
+20220514_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.572854 seconds.
+Elapsed time is 0.539301 seconds.
+Elapsed time is 0.562033 seconds.
+Elapsed time is 0.553099 seconds.
+Elapsed time is 0.530552 seconds.
+20220801_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.594273 seconds.
+Elapsed time is 0.570018 seconds.
+Elapsed time is 0.591906 seconds.
+Elapsed time is 0.525600 seconds.
+Elapsed time is 0.537217 seconds.
+20220802_CS5_miniPAR_348071_EPSG7844.nc
+11
+Elapsed time is 0.519840 seconds.
+Elapsed time is 0.475166 seconds.
+Elapsed time is 0.464174 seconds.
+Elapsed time is 0.464226 seconds.
+Elapsed time is 0.438301 seconds.
+20220819_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.620326 seconds.
+Elapsed time is 0.580509 seconds.
+Elapsed time is 0.585590 seconds.
+Elapsed time is 0.582859 seconds.
+Elapsed time is 0.596431 seconds.
+20210426_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 5.544323 seconds.
+Elapsed time is 5.599049 seconds.
+20210503_CS1_TGR_016724_EPSG7844.nc
+20
+Elapsed time is 9.922380 seconds.
+Elapsed time is 10.098989 seconds.
+20210604_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 140.744260 seconds.
+Elapsed time is 138.453814 seconds.
+Elapsed time is 140.499565 seconds.
+Elapsed time is 139.596296 seconds.
+Elapsed time is 137.757756 seconds.
+Elapsed time is 137.576160 seconds.
+Elapsed time is 139.053905 seconds.
+Elapsed time is 139.239280 seconds.
+20210623_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 37.172302 seconds.
+Elapsed time is 36.149128 seconds.
+20210623_CS1_TGR_21526_EPSG7844.nc
+20
+Elapsed time is 37.477688 seconds.
+Elapsed time is 37.051416 seconds.
+20211207_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 115.728670 seconds.
+Elapsed time is 115.627274 seconds.
+20211212_CS6_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 142.060340 seconds.
+Elapsed time is 138.590066 seconds.
+20211221_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 18.096447 seconds.
+Elapsed time is 17.903069 seconds.
+20211221_CS1_TGR_016723_EPSG7844.nc
+20
+Elapsed time is 4.584100 seconds.
+Elapsed time is 4.560104 seconds.
+20211221_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 18.468745 seconds.
+Elapsed time is 18.424782 seconds.
+20211221_CS1_TWR_021526_EPSG7844.nc
+20
+Elapsed time is 18.055260 seconds.
+Elapsed time is 17.849548 seconds.
+20211221_CS7_RBRsolo_077826_EPSG7844.nc
+6
+Elapsed time is 100.704982 seconds.
+Elapsed time is 98.860571 seconds.
+20220212_CS4_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 85.375856 seconds.
+Elapsed time is 86.882559 seconds.
+20220215_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 100.922064 seconds.
+Elapsed time is 100.702873 seconds.
+20220309_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 21.383639 seconds.
+Elapsed time is 21.428559 seconds.
+Elapsed time is 21.595882 seconds.
+Elapsed time is 21.414619 seconds.
+Elapsed time is 21.331934 seconds.
+Elapsed time is 21.335828 seconds.
+Elapsed time is 22.403547 seconds.
+Elapsed time is 21.235350 seconds.
+20220309_CS7_RBRsolo_77826_EPSG7844.nc
+6
+Elapsed time is 228.537848 seconds.
+Elapsed time is 227.206006 seconds.
+20220311_CS1_TGR_16719_EPSG7844.nc
+20
+Elapsed time is 22.323164 seconds.
+Elapsed time is 22.048057 seconds.
+20220311_CS1_TGR_16723_EPSG7844.nc
+20
+Elapsed time is 22.636276 seconds.
+Elapsed time is 22.621857 seconds.
+20220311_CS1_TGR_16725_EPSG7844.nc
+20
+Elapsed time is 22.535127 seconds.
+Elapsed time is 22.494511 seconds.
+20220311_CS1_TWR_21526_EPSG7844.nc
+20
+Elapsed time is 22.265017 seconds.
+Elapsed time is 21.856972 seconds.
+20220311_CS5_RBRsolo_77280_EPSG7844.nc
+11
+Elapsed time is 234.633180 seconds.
+Elapsed time is 235.957400 seconds.
+20220421_CS3_RBRduet_209842_EPSG7844.nc
+20
+Elapsed time is 190.525111 seconds.
+Elapsed time is 190.526359 seconds.
+Elapsed time is 191.975629 seconds.
+20220423_CS7_RBRsolo_77826_EPSG7844.nc
+6
+Elapsed time is 205.759319 seconds.
+Elapsed time is 207.886532 seconds.
+20220426_CS3_RBRduet_208791_EPSG7844.nc
+20
+Elapsed time is 221.371600 seconds.
+Elapsed time is 222.105292 seconds.
+Elapsed time is 219.237274 seconds.
+20220429_CS3_RBRduet_208792_EPSG7844.nc
+20
+Elapsed time is 236.017011 seconds.
+Elapsed time is 239.801957 seconds.
+Elapsed time is 237.321140 seconds.
+20220502_CS3_RBRduet_209843_EPSG7844.nc
+20
+Elapsed time is 256.022428 seconds.
+Elapsed time is 255.815523 seconds.
+Elapsed time is 255.309215 seconds.
+20220503_CS4_CTD_209850_EPSG7844.nc
+11
+Elapsed time is 265.278040 seconds.
+Elapsed time is 263.219144 seconds.
+Elapsed time is 272.073369 seconds.
+Elapsed time is 266.511224 seconds.
+Elapsed time is 268.339739 seconds.
+Elapsed time is 268.053020 seconds.
+Elapsed time is 272.344984 seconds.
+Elapsed time is 269.391328 seconds.
+20220503_CS4_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 264.610895 seconds.
+Elapsed time is 262.711367 seconds.
+20220503_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 261.743000 seconds.
+Elapsed time is 262.182616 seconds.
+20220509_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 29.115568 seconds.
+Elapsed time is 29.292844 seconds.
+Elapsed time is 29.330464 seconds.
+Elapsed time is 29.142885 seconds.
+Elapsed time is 29.256747 seconds.
+Elapsed time is 29.480098 seconds.
+Elapsed time is 29.876537 seconds.
+Elapsed time is 29.231508 seconds.
+20220520_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 34.251142 seconds.
+Elapsed time is 34.679338 seconds.
+Elapsed time is 33.910864 seconds.
+20220520_CS1_TGR_016723_EPSG7844.nc
+20
+Elapsed time is 34.866859 seconds.
+Elapsed time is 34.768372 seconds.
+Elapsed time is 34.670168 seconds.
+20220520_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 35.154397 seconds.
+Elapsed time is 34.754079 seconds.
+Elapsed time is 34.939614 seconds.
+20220718_CS3_RBRduet_208791_EPSG7844.nc
+20
+Elapsed time is 211.615769 seconds.
+Elapsed time is 212.843850 seconds.
+Elapsed time is 209.774814 seconds.
+20220718_CS3_RBRduet_208792_EPSG7844.nc
+20
+Elapsed time is 206.146692 seconds.
+Elapsed time is 208.800174 seconds.
+Elapsed time is 205.951774 seconds.
+20220722_CS3_RBRduet_209842_EPSG7844.nc
+20
+Elapsed time is 231.734941 seconds.
+Elapsed time is 230.400598 seconds.
+Elapsed time is 231.978882 seconds.
+20220722_CS3_RBRduet_209843_EPSG7844.nc
+20
+Elapsed time is 231.179232 seconds.
+Elapsed time is 230.237202 seconds.
+Elapsed time is 229.416129 seconds.
+20220730_CS4_CTD_209850_EPSG7844.nc
+11
+Elapsed time is 273.972466 seconds.
+Elapsed time is 274.424098 seconds.
+Elapsed time is 276.672967 seconds.
+Elapsed time is 271.807425 seconds.
+Elapsed time is 275.146655 seconds.
+Elapsed time is 272.874234 seconds.
+Elapsed time is 273.918253 seconds.
+Elapsed time is 273.293753 seconds.
+20220806_CS3_RBRduet_206854_EPSG7844.nc
+20
+Elapsed time is 311.707378 seconds.
+Elapsed time is 314.779772 seconds.
+Elapsed time is 314.415053 seconds.
+20220807_CS5_RBRsolo_77280_EPSG7844.nc
+11
+Elapsed time is 319.532156 seconds.
+20220808_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 329.694341 seconds.
+Elapsed time is 328.035367 seconds.
+20220809_CS4_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 346.551564 seconds.
+Elapsed time is 342.697973 seconds.
+20220810_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 32.799466 seconds.
+Elapsed time is 32.610869 seconds.
+Elapsed time is 32.696893 seconds.
+20220819_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 37.948840 seconds.
+Elapsed time is 36.876667 seconds.
+Elapsed time is 36.941943 seconds.
+Elapsed time is 36.580843 seconds.
+Elapsed time is 36.477440 seconds.
+Elapsed time is 36.482026 seconds.
+Elapsed time is 38.003960 seconds.
+Elapsed time is 36.893804 seconds.
+20220819_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 35.572170 seconds.
+Elapsed time is 35.625671 seconds.
+Elapsed time is 35.068407 seconds.
+20220819_CS1_TGR_016723_EPSG7844.nc
+20
+Elapsed time is 37.649241 seconds.
+Elapsed time is 36.040271 seconds.
+Elapsed time is 36.295643 seconds.
+20220819_CS1_TGR_021526_EPSG7844.nc
+20
+Elapsed time is 36.562189 seconds.
+Elapsed time is 36.230542 seconds.
+Elapsed time is 36.268821 seconds.
+20210419_CS3_SBE_3882_EPSG7844.nc
+20
+Elapsed time is 0.325542 seconds.
+Elapsed time is 0.314758 seconds.
+20210502_CS3_SBE_4381_EPSG7844.nc
+20
+Elapsed time is 1.513197 seconds.
+Elapsed time is 1.509484 seconds.
+20210511_CS3_SBE_3353_EPSG7844.nc
+20
+Elapsed time is 2.483783 seconds.
+20210526_CS3_SBE_4362_EPSG7844.nc
+20
+Elapsed time is 3.712505 seconds.
+Elapsed time is 3.696173 seconds.
+20211219_CS3_SBE_4381_EPSG7844.nc
+20
+Elapsed time is 2.987563 seconds.
+Elapsed time is 3.004946 seconds.
+20211221_CS3_SBE_3882_EPSG7844.nc
+20
+Elapsed time is 3.158357 seconds.
+Elapsed time is 3.118551 seconds.
+20211221_CS3_SBE_4362_EPSG7844.nc
+20
+Elapsed time is 2.772711 seconds.
+Elapsed time is 2.775582 seconds.
+>> 
+>> exit
+[Warning: Closing open netCDF file handles.] 
+[?1l>

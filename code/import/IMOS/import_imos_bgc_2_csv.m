@@ -18,7 +18,7 @@ end
 
 thesiteval = fieldnames(sitekey.imosbgc);
 thevarval = fieldnames(varkey);
-theagencyval = fieldnames(agency.imosbgc);
+theagencyval = fieldnames(agency.IMOS);
 Test = readtable(thefile);
 % Test.Properties.VariableNames'
 %[~,headers] = xlsread(thefile,'A1:CE1');
@@ -50,7 +50,7 @@ for i = 9:width(Test)
         foundvar = 0;
         
         for k = 1:length(theagencyval)
-            if strcmpi(agency.imosbgc.(theagencyval{k}).Old,headers{i}) == 1
+            if strcmpi(agency.IMOS.(theagencyval{k}).Old,headers{i}) == 1
                 foundvar = k;
             end
         end
@@ -64,7 +64,7 @@ for i = 9:width(Test)
             
             thefoundvar = 0;
             for nn = 1:length(thevarval)
-                if strcmpi(thevarval{nn},agency.imosbgc.(theagencyval{foundvar}).ID) == 1
+                if strcmpi(thevarval{nn},agency.IMOS.(theagencyval{foundvar}).ID) == 1
                     thefoundvar = nn;
                 end
             end
@@ -74,8 +74,8 @@ for i = 9:width(Test)
             
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
-            thedata_raw = Test.(headers{i})(sss) * agency.imosbgc.(theagencyval{foundvar}).Conv;
-            %thedata_raw = snum(sss,i-6) * agency.imosbgc.(theagencyval{foundvar}).Conv;
+            thedata_raw = Test.(headers{i})(sss) * agency.IMOS.(theagencyval{foundvar}).Conv;
+            %thedata_raw = snum(sss,i-6) * agency.IMOS.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
             
@@ -126,7 +126,7 @@ for i = 9:width(Test)
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
-            fprintf(fid,'Variable ID,%s\n',agency.imosbgc.(theagencyval{foundvar}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.IMOS.(theagencyval{foundvar}).ID);
             
             fprintf(fid,'Data Category,%s\n',varkey.(thevarval{thefoundvar}).Category);
             

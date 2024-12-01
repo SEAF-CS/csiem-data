@@ -27,7 +27,7 @@ load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
 sitelist = fieldnames(sitekey.dwermooring);
-varlist = fieldnames(agency.dwermooring);
+varlist = fieldnames(agency.dwer);
 
 % oldheader = sstr(:,1);
 % newheader = sstr(:,3);

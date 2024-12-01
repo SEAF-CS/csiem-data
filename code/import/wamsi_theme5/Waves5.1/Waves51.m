@@ -8,7 +8,7 @@ function Waves51()
     load ../../../actions/varkey.mat;
     load ../../../actions/agency.mat;
     load ../../../actions/sitekey.mat;
-    VarListStruct = agency.theme51waves;
+    VarListStruct = agency.wwmsp5;
     SiteListStruct = sitekey.wwmsp5;
 
     headers = headercreator();
@@ -32,7 +32,7 @@ function Waves51()
 
 
         for VarNum = 1:width(Temp)
-            if VarNum ~= 9:14 % currently these are the vars in the varkey
+            if VarNum ~= [9:11 13:14] % currently these are the vars in the varkey
                 continue
             end
             
@@ -154,6 +154,7 @@ function VarStruct = SearchVarlist(VarListStruct,FileVarHeader)
     end
     if neverFound == true
         disp(FileVarHeader)
+        disp('list')
         for StructVarIndex = 1:NumOfVariables
             disp(VarListStruct.(VarlistFeilds{StructVarIndex}).Old)
         end

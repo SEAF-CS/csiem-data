@@ -20,7 +20,7 @@ sites = regexprep(sites,'OA1_DEP','OA1-DEP');
 sites = regexprep(sites,'OA1_Dep','OA1-DEP');
 sites = regexprep(sites,'1310','s1310');
 
-thevars = fieldnames(agency.theme3ctd);
+thevars = fieldnames(agency.wwmsp3);
 thesites = fieldnames(sitekey.wwmsp3);
 
 tag = 'WWMSP-3.1-CTD';
@@ -28,19 +28,19 @@ tag = 'WWMSP-3.1-CTD';
 for i = 1:length(thevars)
     for j = 1:length(thesites)
         
-        theind = find(strcmpi(data.Variable,agency.theme3ctd.(thevars{i}).Old) == 1 & ...
+        theind = find(strcmpi(data.Variable,agency.wwmsp3.(thevars{i}).Old) == 1 & ...
             strcmpi(sites,sitekey.wwmsp3.(thesites{j}).ID) == 1);
         
         mdate = datenum(data.Date(theind),'dd-mm-yyyy HH:MM:SS');
-        mdata = data.ReadingValue(theind) * agency.theme3ctd.(thevars{i}).Conv;
+        mdata = data.ReadingValue(theind) * agency.wwmsp3.(thevars{i}).Conv;
         mdepth = data.Depth_m_(theind);
         
         [mdate,sortind] = unique(mdate);
         mdata = mdata(sortind);
         mdepth = mdepth(sortind);
         
-        varname = varkey.(agency.theme3ctd.(thevars{i}).ID).Name;
-        fullvar = [varname,' (',varkey.(agency.theme3ctd.(thevars{i}).ID).Unit,')'];
+        varname = varkey.(agency.wwmsp3.(thevars{i}).ID).Name;
+        fullvar = [varname,' (',varkey.(agency.wwmsp3.(thevars{i}).ID).Unit,')'];
         
         filename = [outdir_main,thesites{j},'_',regexprep(varname,' ','_'),'_DATA.csv'];
         
@@ -78,9 +78,9 @@ for i = 1:length(thevars)
             fprintf(fid,'Site Mean Depth,%s\n','');
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,%s\n','');
-            fprintf(fid,'Variable ID,%s\n',agency.theme3ctd.(thevars{i}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.wwmsp3.(thevars{i}).ID);
             
-            fprintf(fid,'Data Category,%s\n',varkey.(agency.theme3ctd.(thevars{i}).ID).Category);
+            fprintf(fid,'Data Category,%s\n',varkey.(agency.wwmsp3.(thevars{i}).ID).Category);
             
             
             SD = mean(diff(mdate));

@@ -39,16 +39,23 @@ for i = 1:length(headers)
         
         
         varnum = [];
-        thevars = fieldnames(agency.theme2light);
+        thevars = fieldnames(agency.wwmsp2);
         for m = 1:length(thevars)
-            if strcmpi(agency.theme2light.(thevars{m}).Old,headers{i}) == 1
+            if strcmpi(agency.wwmsp2.(thevars{m}).Old,headers{i}) == 1
                 varnum = m;
             end
         end
         
-        
-        
-        varID = agency.theme2light.(thevars{varnum}).ID;
+        if isempty(varnum)
+            headers{i}
+            continue
+        end
+
+        agency.wwmsp2
+        thevars
+        thevars{varnum}
+        varnum
+        varID = agency.wwmsp2.(thevars{varnum}).ID;
         
         if strcmpi(varID,'Ignore') == 0
             

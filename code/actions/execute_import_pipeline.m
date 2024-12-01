@@ -22,7 +22,7 @@ import_theme2 = 0;
 import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
-import_fpa = 0;
+import_fpa = 1;
 import_bmt_wp_swan = 0;
 import_wamsitheme1 = 0;
 import_UKMO = 0;
@@ -38,7 +38,7 @@ import_DWER_swanest_phy = 0;
 
 import_wamsiwaves51 = 0;
 
-create_smd = 1;
+create_smd = 0;
 
 create_matfiles = 0;
 create_parquet = 0;
@@ -46,7 +46,7 @@ create_parquet = 0;
 create_dataplots = 0;
 plotnew_dataplots = 0;
 
-create_shapefiles = 1;
+create_shapefiles = 0;
 
 
 run_marvl = 0;
@@ -140,9 +140,9 @@ end
 
 if import_imos_srs
     cd ../import/IMOS_SRS/
-    %import_IMOS_SRS_L3S_netcdf_data;
-    %import_IMOS_SRS_MODIS_netcdf_data;
-    %import_IMOS_SRS_MODIS_OC3_netcdf_data;
+    import_IMOS_SRS_L3S_netcdf_data;
+    import_IMOS_SRS_MODIS_netcdf_data;
+    import_IMOS_SRS_MODIS_OC3_netcdf_data;
     cd ../../actions/
 end
 

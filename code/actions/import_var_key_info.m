@@ -88,6 +88,8 @@ agency.wwmsp5 = import_agency_conv('WWMSP5');
 
 agency.WCWA = import_agency_conv('WCWA');
     % composed of two
+    %WC_BMT
+    %WCWA which was used in WCWA/import_PhyWQ_1334_09
     
 agency.dot = import_agency_conv('DOT');
 agency.bom = import_agency_conv('BOM');
@@ -98,11 +100,13 @@ agency.bom = import_agency_conv('BOM');
 agency.dwer = import_agency_conv('DWER');
     % This has 2 sheets in one
     % agency.dwermooring = import_agency_conv('DWERMOORING');
+    % agency.dwer = import_agency_conv('DWER');
 
-agency.imos = import_agency_conv('IMOS');
+agency.IMOS = import_agency_conv('IMOS');
     % The following have been compressed into one:
     % agency.imosbgc = import_agency_conv('IMOSBGC');
     % agency.imossrs = import_agency_conv('IMOSSRS');
+        % there are 3 import codes for imossrs and they produced massive files
     % agency.imosprofile = import_agency_conv('IMOSPROFILE');
 
 agency.fpa = import_agency_conv('FPA');

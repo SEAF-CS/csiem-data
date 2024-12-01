@@ -1,0 +1,3531 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 7 (23.2.0.2515942) 64-bit (glnxa64)
+                              January 30, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> [Warning: Directory already exists.] 
+[> In getBoMmetdata (line 13)
+In run_BOM_IDY (line 10)
+In execute_import_pipeline (line 101)] 
+Processing File 1
+HM01X_Data_009021_9999999910143263.txt
+PERTH_AIRPORT
+Processing File 2
+HM01X_Data_009053_9999999910143263.txt
+PEARCE_RAAF
+Processing File 3
+HM01X_Data_009091_9999999910143263.txt
+INNER_DOLPHIN_PYLON
+Processing File 4
+HM01X_Data_009172_9999999910143263.txt
+JANDAKOT_AERO
+Processing File 5
+HM01X_Data_009178_9999999910143263.txt
+GINGIN_AERO
+Processing File 6
+HM01X_Data_009193_9999999910143263.txt
+ROTTNEST_ISLAND
+Processing File 7
+HM01X_Data_009214_9999999910143263.txt
+OCEAN_REEF
+Processing File 8
+HM01X_Data_009215_9999999910143263.txt
+SWANBOURNE
+Processing File 9
+HM01X_Data_009225_9999999910143263.txt
+PERTH_METRO
+Processing File 10
+HM01X_Data_009240_9999999910143263.txt
+BICKLEY
+Processing File 11
+HM01X_Data_009254_9999999910143263.txt
+ARMAMENT_JETTY
+Processing File 12
+HM01X_Data_009255_9999999910143263.txt
+COLPOYS_POINT
+Processing File 13
+HM01X_Data_009256_9999999910143263.txt
+GARDEN_ISLAND_HSF
+Processing File 14
+HM01X_Data_009265_9999999910143263.txt
+HILLARYS_BOAT_HARBOUR_NTC_AWS
+Processing File 15
+HM01X_Data_009281_9999999910143263.txt
+MILLENDON_SWAN_VALLEY
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Wind_Speed_(max)_HEADER.csv
+valid data
+Cloud amount (of first group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Amount_of_First_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Cloud amount(of second group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Amount_of_Second_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Cloud amount (of third group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Amount_of_Third_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Cloud amount (of fourth group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Amount_of_Fourth_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of fourth group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Cloud_Height_of_Fourth_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Ceilometer_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Ceilometer_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Ceilometer_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Horizontal_Visibility_HEADER.csv
+valid data
+AWS visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_AWS_Visibility_HEADER.csv
+valid data
+Present weather in code 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Present_Weather_in_Code_HEADER.csv
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9021_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Wind_Speed_(max)_HEADER.csv
+valid data
+Cloud amount (of first group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Amount_of_First_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Cloud amount(of second group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Amount_of_Second_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Cloud amount (of third group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Amount_of_Third_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Cloud amount (of fourth group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Amount_of_Fourth_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of fourth group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Cloud_Height_of_Fourth_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Ceilometer_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Ceilometer_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Ceilometer_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Horizontal_Visibility_HEADER.csv
+valid data
+AWS visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_AWS_Visibility_HEADER.csv
+valid data
+Present weather in code 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Present_Weather_in_Code_HEADER.csv
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9053_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9091_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9091_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9091_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9091_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Wind_Speed_(max)_HEADER.csv
+valid data
+Cloud amount (of first group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Cloud_Amount_of_First_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Cloud amount(of second group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Cloud_Amount_of_Second_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Cloud amount (of third group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Cloud_Amount_of_Third_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Ceilometer_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Ceilometer_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Ceilometer cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Ceilometer_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Horizontal_Visibility_HEADER.csv
+valid data
+AWS visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_AWS_Visibility_HEADER.csv
+valid data
+Present weather in code 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Present_Weather_in_Code_HEADER.csv
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9172_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Horizontal_Visibility_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9178_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Wind_Speed_(max)_HEADER.csv
+valid data
+Cloud amount (of first group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Cloud_Amount_of_First_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Cloud amount(of second group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Cloud_Amount_of_Second_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Cloud amount (of third group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Cloud_Amount_of_Third_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Horizontal_Visibility_HEADER.csv
+valid data
+Empty valid data
+valid data
+Present weather in code 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Present_Weather_in_Code_HEADER.csv
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9193_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9214_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9214_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9214_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9214_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Wind_Speed_(max)_HEADER.csv
+valid data
+Cloud amount (of first group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Cloud_Amount_of_First_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Cloud amount(of second group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Cloud_Amount_of_Second_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Cloud amount (of third group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Cloud_Amount_of_Third_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Horizontal_Visibility_HEADER.csv
+valid data
+Empty valid data
+valid data
+Present weather in code 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Present_Weather_in_Code_HEADER.csv
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9215_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Wind_Speed_(max)_HEADER.csv
+valid data
+Cloud amount (of first group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Cloud_Amount_of_First_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of first group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Cloud_Height_of_First_Group_HEADER.csv
+valid data
+Cloud amount(of second group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Cloud_Amount_of_Second_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of second group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Cloud_Height_of_Second_Group_HEADER.csv
+valid data
+Cloud amount (of third group) in eighths 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Cloud_Amount_of_Third_Group_in_Eighths_HEADER.csv
+valid data
+Cloud height (of third group) in feet 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Cloud_Height_of_Third_Group_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Horizontal visibility in km 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Horizontal_Visibility_HEADER.csv
+valid data
+Empty valid data
+valid data
+Present weather in code 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Present_Weather_in_Code_HEADER.csv
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9225_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9240_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9254_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9254_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9254_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9254_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9255_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9255_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9255_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9255_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9256_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Empty valid data
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Air_Temperature_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9265_Station_Level_Pressure_HEADER.csv
+Precipitation since 9am local time in mm
+Quality of precipitation since 9am local time
+Air Temperature in degrees C
+Quality of air temperature
+Wet bulb temperature in degrees C
+Quality of Wet bulb temperature
+Dew point temperature in degrees C
+Quality of dew point temperature
+Relative humidity in percentage %
+Quality of relative humidity
+Wind speed in km/h
+Wind speed quality
+Wind direction in degrees true
+Wind direction quality
+Speed of maximum windgust in last 10 minutes in  km/h
+Quality of speed of maximum windgust in last 10 minutes
+Cloud amount (of first group) in eighths
+Quality of first group of cloud amount
+Cloud height (of first group) in feet
+Quality of first group of cloud height
+Cloud amount(of second group) in eighths
+Quality of second group of cloud amount
+Cloud height (of second group) in feet
+Quality of second group of cloud height
+Cloud amount (of third group) in eighths
+Quality of third group of cloud amount
+Cloud height (of third group) in feet
+Quality of third group of cloud height
+Cloud amount (of fourth group) in eighths
+Quality of fourth group of cloud amount
+Cloud height (of fourth group) in feet
+Quality of fourth group of cloud height
+Ceilometer cloud amount (of first group)
+Quality of first group of ceilometer cloud amount
+Ceilometer cloud height (of first group) in feet
+Quality of first group of ceilometer cloud height
+Ceilometer cloud amount (of second group)
+Quality of second group of ceilometer cloud amount
+Ceilometer cloud height (of second group) in feet
+Quality of second group of ceilometer cloud height
+Ceilometer cloud amount (of third group)
+Quality of third group of ceilometer cloud amount
+Ceilometer cloud height (of third group) in feet
+Quality of third group of ceilometer cloud height
+Ceilometer sky clear flag
+Horizontal visibility in km
+Quality of horizontal visibility
+AWS visibility in km
+Quality of AWS(Automatic Weather Station) visibility
+Present weather in code
+Quality of present weather
+Mean sea level pressure in hPa
+Quality of mean sea level pressure
+Station level pressure in hPa
+Quality of station level pressure
+AWS Flag
+#
+
+
+
+
+Precipitation since 9am local time in mm
+Air Temperature in degrees C
+Wet bulb temperature in degrees C
+Dew point temperature in degrees C
+Relative humidity in percentage %
+Wind speed in km/h
+Wind direction in degrees true
+Speed of maximum windgust in last 10 minutes in  km/h
+Cloud amount (of first group) in eighths
+Cloud height (of first group) in feet
+Cloud amount(of second group) in eighths
+Cloud height (of second group) in feet
+Cloud amount (of third group) in eighths
+Cloud height (of third group) in feet
+Cloud amount (of fourth group) in eighths
+Cloud height (of fourth group) in feet
+Ceilometer cloud amount (of first group)
+Ceilometer cloud height (of first group) in feet
+Ceilometer cloud amount (of second group)
+Ceilometer cloud height (of second group) in feet
+Ceilometer cloud amount (of third group)
+Ceilometer cloud height (of third group) in feet
+Ceilometer sky clear flag
+Horizontal visibility in km
+AWS visibility in km
+Present weather in code
+Mean sea level pressure in hPa
+Station level pressure in hPa
+Sea Level
+Water Temperature
+Air Temperature
+Barometric Pressure
+Wind Direction
+Wind Speed
+uwnd10m
+vwnd10m
+mslp
+lwsfcdown
+swsfcdown
+temp_scrn
+precip_rate
+relhum
+
+
+valid data
+Precipitation since 9am local time in mm 0.001
+valid data
+Air Temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Air_Temperature_HEADER.csv
+valid data
+Wet bulb temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Wet_Bulb_Air_Temperature_HEADER.csv
+valid data
+Dew point temperature in degrees C 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Dew_Point_Temperature_HEADER.csv
+valid data
+Relative humidity in percentage % 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Relative_Humidity_HEADER.csv
+valid data
+Wind speed in km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Wind_Speed_HEADER.csv
+valid data
+Wind direction in degrees true 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Wind_Direction_HEADER.csv
+valid data
+Speed of maximum windgust in last 10 minutes in  km/h 0.27778
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Wind_Speed_(max)_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Ceilometer sky clear flag 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Ceilometer_Sky_Clear_Flag_HEADER.csv
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Empty valid data
+valid data
+Mean sea level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Mean_sea_level_pressure_in_hPa_HEADER.csv
+valid data
+Station level pressure in hPa 1
+/GIS_DATA/csiem-data-hub/data-warehouse/csv/bom/idy/9281_Station_Level_Pressure_HEADER.csv
+failedVals =
+  435x1 cell array
+    {'site 1; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 1; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 1; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 1; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 1; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 1; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 1; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 1; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 1; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 1; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 1; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 1; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 1; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 1; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 1; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 1; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 1; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 1; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 1; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 1; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 1; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 1; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 1; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 1; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 1; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 1; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 1; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 1; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 1; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 2; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 2; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 2; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 2; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 2; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 2; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 2; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 2; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 2; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 2; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 2; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 2; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 2; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 2; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 2; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 2; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 2; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 2; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 2; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 2; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 2; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 2; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 2; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 2; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 2; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 2; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 2; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 2; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 2; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 3; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 3; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 3; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 3; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 3; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 3; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 3; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 3; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 3; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 3; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 3; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 3; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 3; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 3; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 3; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 3; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 3; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 3; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 3; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 3; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 3; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 3; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 3; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 3; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 3; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 3; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 3; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 3; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 3; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 4; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 4; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 4; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 4; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 4; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 4; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 4; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 4; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 4; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 4; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 4; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 4; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 4; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 4; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 4; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 4; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 4; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 4; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 4; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 4; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 4; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 4; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 4; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 4; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 4; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 4; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 4; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 4; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 4; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 5; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 5; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 5; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 5; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 5; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 5; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 5; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 5; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 5; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 5; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 5; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 5; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 5; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 5; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 5; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 5; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 5; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 5; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 5; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 5; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 5; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 5; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 5; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 5; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 5; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 5; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 5; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 5; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 5; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 6; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 6; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 6; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 6; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 6; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 6; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 6; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 6; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 6; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 6; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 6; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 6; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 6; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 6; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 6; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 6; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 6; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 6; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 6; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 6; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 6; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 6; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 6; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 6; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 6; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 6; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 6; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 6; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 6; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 7; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 7; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 7; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 7; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 7; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 7; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 7; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 7; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 7; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 7; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 7; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 7; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 7; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 7; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 7; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 7; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 7; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 7; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 7; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 7; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 7; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 7; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 7; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 7; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 7; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 7; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 7; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 7; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 7; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 8; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 8; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 8; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 8; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 8; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 8; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 8; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 8; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 8; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 8; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 8; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 8; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 8; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 8; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 8; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 8; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 8; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 8; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 8; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 8; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 8; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 8; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 8; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 8; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 8; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 8; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 8; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 8; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 8; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 9; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                   }
+    {'site 9; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                      }
+    {'site 9; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                             }
+    {'site 9; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                           }
+    {'site 9; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                 }
+    {'site 9; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                    }
+    {'site 9; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                            }
+    {'site 9; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes' }
+    {'site 9; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                                }
+    {'site 9; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                                }
+    {'site 9; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                              }
+    {'site 9; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                              }
+    {'site 9; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                                }
+    {'site 9; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                                }
+    {'site 9; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                              }
+    {'site 9; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                              }
+    {'site 9; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'           }
+    {'site 9; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'           }
+    {'site 9; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'         }
+    {'site 9; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'         }
+    {'site 9; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'           }
+    {'site 9; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'           }
+    {'site 9; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                         }
+    {'site 9; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'   }
+    {'site 9; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                     }
+    {'site 9; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                       }
+    {'site 9; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                        }
+    {'site 9; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                       }
+    {'site 9; variable index 57 failed; header: #; struct field name: x_'                                                                                                   }
+    {'site 10; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                  }
+    {'site 10; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                     }
+    {'site 10; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                            }
+    {'site 10; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                          }
+    {'site 10; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                }
+    {'site 10; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                   }
+    {'site 10; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                           }
+    {'site 10; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes'}
+    {'site 10; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                               }
+    {'site 10; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                               }
+    {'site 10; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                             }
+    {'site 10; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                             }
+    {'site 10; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                               }
+    {'site 10; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                               }
+    {'site 10; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                             }
+    {'site 10; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                             }
+    {'site 10; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'          }
+    {'site 10; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'          }
+    {'site 10; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'        }
+    {'site 10; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'        }
+    {'site 10; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'          }
+    {'site 10; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'          }
+    {'site 10; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                        }
+    {'site 10; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'  }
+    {'site 10; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                    }
+    {'site 10; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                      }
+    {'site 10; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                       }
+    {'site 10; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                      }
+    {'site 10; variable index 57 failed; header: #; struct field name: x_'                                                                                                  }
+    {'site 11; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                  }
+    {'site 11; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                     }
+    {'site 11; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                            }
+    {'site 11; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                          }
+    {'site 11; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                }
+    {'site 11; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                   }
+    {'site 11; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                           }
+    {'site 11; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes'}
+    {'site 11; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                               }
+    {'site 11; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                               }
+    {'site 11; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                             }
+    {'site 11; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                             }
+    {'site 11; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                               }
+    {'site 11; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                               }
+    {'site 11; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                             }
+    {'site 11; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                             }
+    {'site 11; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'          }
+    {'site 11; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'          }
+    {'site 11; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'        }
+    {'site 11; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'        }
+    {'site 11; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'          }
+    {'site 11; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'          }
+    {'site 11; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                        }
+    {'site 11; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'  }
+    {'site 11; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                    }
+    {'site 11; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                      }
+    {'site 11; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                       }
+    {'site 11; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                      }
+    {'site 11; variable index 57 failed; header: #; struct field name: x_'                                                                                                  }
+    {'site 12; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                  }
+    {'site 12; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                     }
+    {'site 12; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                            }
+    {'site 12; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                          }
+    {'site 12; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                }
+    {'site 12; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                   }
+    {'site 12; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                           }
+    {'site 12; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes'}
+    {'site 12; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                               }
+    {'site 12; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                               }
+    {'site 12; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                             }
+    {'site 12; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                             }
+    {'site 12; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                               }
+    {'site 12; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                               }
+    {'site 12; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                             }
+    {'site 12; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                             }
+    {'site 12; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'          }
+    {'site 12; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'          }
+    {'site 12; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'        }
+    {'site 12; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'        }
+    {'site 12; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'          }
+    {'site 12; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'          }
+    {'site 12; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                        }
+    {'site 12; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'  }
+    {'site 12; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                    }
+    {'site 12; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                      }
+    {'site 12; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                       }
+    {'site 12; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                      }
+    {'site 12; variable index 57 failed; header: #; struct field name: x_'                                                                                                  }
+    {'site 13; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                  }
+    {'site 13; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                     }
+    {'site 13; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                            }
+    {'site 13; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                          }
+    {'site 13; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                }
+    {'site 13; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                   }
+    {'site 13; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                           }
+    {'site 13; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes'}
+    {'site 13; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                               }
+    {'site 13; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                               }
+    {'site 13; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                             }
+    {'site 13; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                             }
+    {'site 13; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                               }
+    {'site 13; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                               }
+    {'site 13; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                             }
+    {'site 13; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                             }
+    {'site 13; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'          }
+    {'site 13; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'          }
+    {'site 13; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'        }
+    {'site 13; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'        }
+    {'site 13; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'          }
+    {'site 13; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'          }
+    {'site 13; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                        }
+    {'site 13; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'  }
+    {'site 13; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                    }
+    {'site 13; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                      }
+    {'site 13; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                       }
+    {'site 13; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                      }
+    {'site 13; variable index 57 failed; header: #; struct field name: x_'                                                                                                  }
+    {'site 14; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                  }
+    {'site 14; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                     }
+    {'site 14; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                            }
+    {'site 14; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                          }
+    {'site 14; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                }
+    {'site 14; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                   }
+    {'site 14; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                           }
+    {'site 14; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes'}
+    {'site 14; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                               }
+    {'site 14; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                               }
+    {'site 14; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                             }
+    {'site 14; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                             }
+    {'site 14; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                               }
+    {'site 14; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                               }
+    {'site 14; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                             }
+    {'site 14; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                             }
+    {'site 14; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'          }
+    {'site 14; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'          }
+    {'site 14; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'        }
+    {'site 14; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'        }
+    {'site 14; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'          }
+    {'site 14; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'          }
+    {'site 14; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                        }
+    {'site 14; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'  }
+    {'site 14; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                    }
+    {'site 14; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                      }
+    {'site 14; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                       }
+    {'site 14; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                      }
+    {'site 14; variable index 57 failed; header: #; struct field name: x_'                                                                                                  }
+    {'site 15; variable index 2 failed; header: Quality of precipitation since 9am local time; struct field name: QualityOfPrecipitationSince9amLocalTime'                  }
+    {'site 15; variable index 4 failed; header: Quality of air temperature; struct field name: QualityOfAirTemperature'                                                     }
+    {'site 15; variable index 6 failed; header: Quality of Wet bulb temperature; struct field name: QualityOfWetBulbTemperature'                                            }
+    {'site 15; variable index 8 failed; header: Quality of dew point temperature; struct field name: QualityOfDewPointTemperature'                                          }
+    {'site 15; variable index 10 failed; header: Quality of relative humidity; struct field name: QualityOfRelativeHumidity'                                                }
+    {'site 15; variable index 12 failed; header: Wind speed quality; struct field name: WindSpeedQuality'                                                                   }
+    {'site 15; variable index 14 failed; header: Wind direction quality; struct field name: WindDirectionQuality'                                                           }
+    {'site 15; variable index 16 failed; header: Quality of speed of maximum windgust in last 10 minutes; struct field name: QualityOfSpeedOfMaximumWindgustInLast10Minutes'}
+    {'site 15; variable index 18 failed; header: Quality of first group of cloud amount; struct field name: QualityOfFirstGroupOfCloudAmount'                               }
+    {'site 15; variable index 20 failed; header: Quality of first group of cloud height; struct field name: QualityOfFirstGroupOfCloudHeight'                               }
+    {'site 15; variable index 22 failed; header: Quality of second group of cloud amount; struct field name: QualityOfSecondGroupOfCloudAmount'                             }
+    {'site 15; variable index 24 failed; header: Quality of second group of cloud height; struct field name: QualityOfSecondGroupOfCloudHeight'                             }
+    {'site 15; variable index 26 failed; header: Quality of third group of cloud amount; struct field name: QualityOfThirdGroupOfCloudAmount'                               }
+    {'site 15; variable index 28 failed; header: Quality of third group of cloud height; struct field name: QualityOfThirdGroupOfCloudHeight'                               }
+    {'site 15; variable index 30 failed; header: Quality of fourth group of cloud amount; struct field name: QualityOfFourthGroupOfCloudAmount'                             }
+    {'site 15; variable index 32 failed; header: Quality of fourth group of cloud height; struct field name: QualityOfFourthGroupOfCloudHeight'                             }
+    {'site 15; variable index 34 failed; header: Quality of first group of ceilometer cloud amount; struct field name: QualityOfFirstGroupOfCeilometerCloudAmount'          }
+    {'site 15; variable index 36 failed; header: Quality of first group of ceilometer cloud height; struct field name: QualityOfFirstGroupOfCeilometerCloudHeight'          }
+    {'site 15; variable index 38 failed; header: Quality of second group of ceilometer cloud amount; struct field name: QualityOfSecondGroupOfCeilometerCloudAmount'        }
+    {'site 15; variable index 40 failed; header: Quality of second group of ceilometer cloud height; struct field name: QualityOfSecondGroupOfCeilometerCloudHeight'        }
+    {'site 15; variable index 42 failed; header: Quality of third group of ceilometer cloud amount; struct field name: QualityOfThirdGroupOfCeilometerCloudAmount'          }
+    {'site 15; variable index 44 failed; header: Quality of third group of ceilometer cloud height; struct field name: QualityOfThirdGroupOfCeilometerCloudHeight'          }
+    {'site 15; variable index 47 failed; header: Quality of horizontal visibility; struct field name: QualityOfHorizontalVisibility'                                        }
+    {'site 15; variable index 49 failed; header: Quality of AWS(Automatic Weather Station) visibility; struct field name: QualityOfAWS_AutomaticWeatherStation_Visibility'  }
+    {'site 15; variable index 51 failed; header: Quality of present weather; struct field name: QualityOfPresentWeather'                                                    }
+    {'site 15; variable index 53 failed; header: Quality of mean sea level pressure; struct field name: QualityOfMeanSeaLevelPressure'                                      }
+    {'site 15; variable index 55 failed; header: Quality of station level pressure; struct field name: QualityOfStationLevelPressure'                                       }
+    {'site 15; variable index 56 failed; header: AWS Flag; struct field name: AWSFlag'                                                                                      }
+    {'site 15; variable index 57 failed; header: #; struct field name: x_'                                                                                                  }
+[Warning: Directory already exists.] 
+[> In import_BOM_BARRA_TFV (line 15)
+In execute_import_pipeline (line 102)] 
+fileCell =
+  100x1 cell array
+    {'BARRA_2011_bom9021.csv'    }
+    {'BARRA_2011_bom9053.csv'    }
+    {'BARRA_2011_bom9091.csv'    }
+    {'BARRA_2011_bom9172.csv'    }
+    {'BARRA_2011_bom9178.csv'    }
+    {'BARRA_2011_bom9193.csv'    }
+    {'BARRA_2011_bom9214.csv'    }
+    {'BARRA_2011_bom9215.csv'    }
+    {'BARRA_2011_bom9225.csv'    }
+    {'BARRA_2011_bom9240.csv'    }
+    {'BARRA_2011_bom9254.csv'    }
+    {'BARRA_2011_bom9255.csv'    }
+    {'BARRA_2011_bom9256.csv'    }
+    {'BARRA_2011_bom9265.csv'    }
+    {'BARRA_2011_bom9281.csv'    }
+    {'BARRA_2011_bom9572.csv'    }
+    {'BARRA_2011_bom9887.csv'    }
+    {'BARRA_2011_bom9977.csv'    }
+    {'BARRA_2011_dpird_BG001.csv'}
+    {'BARRA_2011_dpird_FL.csv'   }
+    {'BARRA_2011_dpird_SP.csv'   }
+    {'BARRA_2011_dpird_WN.csv'   }
+    {'BARRA_2011_dpird_WT001.csv'}
+    {'BARRA_2011_uwa_matilda.csv'}
+    {'BARRA_2011_wwmsp5_CCL.csv' }
+    {'BARRA_2013_bom9021.csv'    }
+    {'BARRA_2013_bom9053.csv'    }
+    {'BARRA_2013_bom9091.csv'    }
+    {'BARRA_2013_bom9172.csv'    }
+    {'BARRA_2013_bom9178.csv'    }
+    {'BARRA_2013_bom9193.csv'    }
+    {'BARRA_2013_bom9214.csv'    }
+    {'BARRA_2013_bom9215.csv'    }
+    {'BARRA_2013_bom9225.csv'    }
+    {'BARRA_2013_bom9240.csv'    }
+    {'BARRA_2013_bom9254.csv'    }
+    {'BARRA_2013_bom9255.csv'    }
+    {'BARRA_2013_bom9256.csv'    }
+    {'BARRA_2013_bom9265.csv'    }
+    {'BARRA_2013_bom9281.csv'    }
+    {'BARRA_2013_bom9572.csv'    }
+    {'BARRA_2013_bom9887.csv'    }
+    {'BARRA_2013_bom9977.csv'    }
+    {'BARRA_2013_dpird_BG001.csv'}
+    {'BARRA_2013_dpird_FL.csv'   }
+    {'BARRA_2013_dpird_SP.csv'   }
+    {'BARRA_2013_dpird_WN.csv'   }
+    {'BARRA_2013_dpird_WT001.csv'}
+    {'BARRA_2013_uwa_matilda.csv'}
+    {'BARRA_2013_wwmsp5_CCL.csv' }
+    {'BARRA_2014_bom9021.csv'    }
+    {'BARRA_2014_bom9053.csv'    }
+    {'BARRA_2014_bom9091.csv'    }
+    {'BARRA_2014_bom9172.csv'    }
+    {'BARRA_2014_bom9178.csv'    }
+    {'BARRA_2014_bom9193.csv'    }
+    {'BARRA_2014_bom9214.csv'    }
+    {'BARRA_2014_bom9215.csv'    }
+    {'BARRA_2014_bom9225.csv'    }
+    {'BARRA_2014_bom9240.csv'    }
+    {'BARRA_2014_bom9254.csv'    }
+    {'BARRA_2014_bom9255.csv'    }
+    {'BARRA_2014_bom9256.csv'    }
+    {'BARRA_2014_bom9265.csv'    }
+    {'BARRA_2014_bom9281.csv'    }
+    {'BARRA_2014_bom9572.csv'    }
+    {'BARRA_2014_bom9887.csv'    }
+    {'BARRA_2014_bom9977.csv'    }
+    {'BARRA_2014_dpird_BG001.csv'}
+    {'BARRA_2014_dpird_FL.csv'   }
+    {'BARRA_2014_dpird_SP.csv'   }
+    {'BARRA_2014_dpird_WN.csv'   }
+    {'BARRA_2014_dpird_WT001.csv'}
+    {'BARRA_2014_uwa_matilda.csv'}
+    {'BARRA_2014_wwmsp5_CCL.csv' }
+    {'BARRA_2015_bom9021.csv'    }
+    {'BARRA_2015_bom9053.csv'    }
+    {'BARRA_2015_bom9091.csv'    }
+    {'BARRA_2015_bom9172.csv'    }
+    {'BARRA_2015_bom9178.csv'    }
+    {'BARRA_2015_bom9193.csv'    }
+    {'BARRA_2015_bom9214.csv'    }
+    {'BARRA_2015_bom9215.csv'    }
+    {'BARRA_2015_bom9225.csv'    }
+    {'BARRA_2015_bom9240.csv'    }
+    {'BARRA_2015_bom9254.csv'    }
+    {'BARRA_2015_bom9255.csv'    }
+    {'BARRA_2015_bom9256.csv'    }
+    {'BARRA_2015_bom9265.csv'    }
+    {'BARRA_2015_bom9281.csv'    }
+    {'BARRA_2015_bom9572.csv'    }
+    {'BARRA_2015_bom9887.csv'    }
+    {'BARRA_2015_bom9977.csv'    }
+    {'BARRA_2015_dpird_BG001.csv'}
+    {'BARRA_2015_dpird_FL.csv'   }
+    {'BARRA_2015_dpird_SP.csv'   }
+    {'BARRA_2015_dpird_WN.csv'   }
+    {'BARRA_2015_dpird_WT001.csv'}
+    {'BARRA_2015_uwa_matilda.csv'}
+    {'BARRA_2015_wwmsp5_CCL.csv' }
+Site 1 bom9021
+ Year 1: BARRA_2011_bom9021.csv
+ Year 2: BARRA_2013_bom9021.csv
+ Year 3: BARRA_2014_bom9021.csv
+ Year 4: BARRA_2015_bom9021.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 2 bom9053
+ Year 1: BARRA_2011_bom9053.csv
+ Year 2: BARRA_2013_bom9053.csv
+ Year 3: BARRA_2014_bom9053.csv
+ Year 4: BARRA_2015_bom9053.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 3 bom9091
+ Year 1: BARRA_2011_bom9091.csv
+ Year 2: BARRA_2013_bom9091.csv
+ Year 3: BARRA_2014_bom9091.csv
+ Year 4: BARRA_2015_bom9091.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 4 bom9172
+ Year 1: BARRA_2011_bom9172.csv
+ Year 2: BARRA_2013_bom9172.csv
+ Year 3: BARRA_2014_bom9172.csv
+ Year 4: BARRA_2015_bom9172.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 5 bom9178
+ Year 1: BARRA_2011_bom9178.csv
+ Year 2: BARRA_2013_bom9178.csv
+ Year 3: BARRA_2014_bom9178.csv
+ Year 4: BARRA_2015_bom9178.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 6 bom9193
+ Year 1: BARRA_2011_bom9193.csv
+ Year 2: BARRA_2013_bom9193.csv
+ Year 3: BARRA_2014_bom9193.csv
+ Year 4: BARRA_2015_bom9193.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 7 bom9214
+ Year 1: BARRA_2011_bom9214.csv
+ Year 2: BARRA_2013_bom9214.csv
+ Year 3: BARRA_2014_bom9214.csv
+ Year 4: BARRA_2015_bom9214.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 8 bom9215
+ Year 1: BARRA_2011_bom9215.csv
+ Year 2: BARRA_2013_bom9215.csv
+ Year 3: BARRA_2014_bom9215.csv
+ Year 4: BARRA_2015_bom9215.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 9 bom9225
+ Year 1: BARRA_2011_bom9225.csv
+ Year 2: BARRA_2013_bom9225.csv
+ Year 3: BARRA_2014_bom9225.csv
+ Year 4: BARRA_2015_bom9225.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 10 bom9240
+ Year 1: BARRA_2011_bom9240.csv
+ Year 2: BARRA_2013_bom9240.csv
+ Year 3: BARRA_2014_bom9240.csv
+ Year 4: BARRA_2015_bom9240.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 11 bom9254
+ Year 1: BARRA_2011_bom9254.csv
+ Year 2: BARRA_2013_bom9254.csv
+ Year 3: BARRA_2014_bom9254.csv
+ Year 4: BARRA_2015_bom9254.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 12 bom9255
+ Year 1: BARRA_2011_bom9255.csv
+ Year 2: BARRA_2013_bom9255.csv
+ Year 3: BARRA_2014_bom9255.csv
+ Year 4: BARRA_2015_bom9255.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 13 bom9256
+ Year 1: BARRA_2011_bom9256.csv
+ Year 2: BARRA_2013_bom9256.csv
+ Year 3: BARRA_2014_bom9256.csv
+ Year 4: BARRA_2015_bom9256.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 14 bom9265
+ Year 1: BARRA_2011_bom9265.csv
+ Year 2: BARRA_2013_bom9265.csv
+ Year 3: BARRA_2014_bom9265.csv
+ Year 4: BARRA_2015_bom9265.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 15 bom9281
+ Year 1: BARRA_2011_bom9281.csv
+ Year 2: BARRA_2013_bom9281.csv
+ Year 3: BARRA_2014_bom9281.csv
+ Year 4: BARRA_2015_bom9281.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 16 bom9572
+ Year 1: BARRA_2011_bom9572.csv
+ Year 2: BARRA_2013_bom9572.csv
+ Year 3: BARRA_2014_bom9572.csv
+ Year 4: BARRA_2015_bom9572.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 17 bom9887
+ Year 1: BARRA_2011_bom9887.csv
+ Year 2: BARRA_2013_bom9887.csv
+ Year 3: BARRA_2014_bom9887.csv
+ Year 4: BARRA_2015_bom9887.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 18 bom9977
+ Year 1: BARRA_2011_bom9977.csv
+ Year 2: BARRA_2013_bom9977.csv
+ Year 3: BARRA_2014_bom9977.csv
+ Year 4: BARRA_2015_bom9977.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 19 dpird_BG001
+ Year 1: BARRA_2011_dpird_BG001.csv
+ Year 2: BARRA_2013_dpird_BG001.csv
+ Year 3: BARRA_2014_dpird_BG001.csv
+ Year 4: BARRA_2015_dpird_BG001.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 20 dpird_FL
+ Year 1: BARRA_2011_dpird_FL.csv
+ Year 2: BARRA_2013_dpird_FL.csv
+ Year 3: BARRA_2014_dpird_FL.csv
+ Year 4: BARRA_2015_dpird_FL.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 21 dpird_SP
+ Year 1: BARRA_2011_dpird_SP.csv
+ Year 2: BARRA_2013_dpird_SP.csv
+ Year 3: BARRA_2014_dpird_SP.csv
+ Year 4: BARRA_2015_dpird_SP.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 22 dpird_WN
+ Year 1: BARRA_2011_dpird_WN.csv
+ Year 2: BARRA_2013_dpird_WN.csv
+ Year 3: BARRA_2014_dpird_WN.csv
+ Year 4: BARRA_2015_dpird_WN.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 23 dpird_WT001
+ Year 1: BARRA_2011_dpird_WT001.csv
+ Year 2: BARRA_2013_dpird_WT001.csv
+ Year 3: BARRA_2014_dpird_WT001.csv
+ Year 4: BARRA_2015_dpird_WT001.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 24 uwa_matilda
+ Year 1: BARRA_2011_uwa_matilda.csv
+ Year 2: BARRA_2013_uwa_matilda.csv
+ Year 3: BARRA_2014_uwa_matilda.csv
+ Year 4: BARRA_2015_uwa_matilda.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Site 25 wwmsp5_CCL
+ Year 1: BARRA_2011_wwmsp5_CCL.csv
+ Year 2: BARRA_2013_wwmsp5_CCL.csv
+ Year 3: BARRA_2014_wwmsp5_CCL.csv
+ Year 4: BARRA_2015_wwmsp5_CCL.csv
+     Processing Variable uwnd10m 43896x1
+     Processing Variable vwnd10m 43896x1
+     Processing Variable mslp 43896x1
+     Processing Variable lwsfcdown 43896x1
+     Processing Variable swsfcdown 43896x1
+     Processing Variable temp_scrn 43896x1
+     Processing Variable precip_rate 43896x1
+     Processing Variable relhum 43896x1
+Total Runtime: 2.6198 Hours
+>> 

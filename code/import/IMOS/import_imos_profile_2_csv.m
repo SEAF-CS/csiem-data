@@ -18,7 +18,7 @@ end
 
 thesiteval = fieldnames(sitekey.imosamnm);
 thevarval = fieldnames(varkey);
-theagencyval = fieldnames(agency.imosprofile);
+theagencyval = fieldnames(agency.IMOS);
 
 Table = readtable(thefile);
 headers = Table.Properties.VariableNames;
@@ -59,9 +59,9 @@ for i = 19:length(headers)
         foundvar = 0;
         
         for k = 1:length(theagencyval)
-            if strcmpi(agency.imosprofile.(theagencyval{k}).Old,headers{i}) == 1
+            if strcmpi(agency.IMOS.(theagencyval{k}).Old,headers{i}) == 1
                 foundvar = k;
-                ID = agency.imosprofile.(theagencyval{k}).ID;
+                ID = agency.IMOS.(theagencyval{k}).ID;
                 VarStruct = varkey.(ID);
                 disp(['     Found Var ',varkey.(ID).Name])
             end
@@ -72,8 +72,8 @@ for i = 19:length(headers)
             
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
-            %thedata_raw = snum(sss,i-1) * agency.imosprofile.(theagencyval{foundvar}).Conv;
-            thedata_raw = Table{sss,i-1} * agency.imosprofile.(theagencyval{foundvar}).Conv;
+            %thedata_raw = snum(sss,i-1) * agency.IMOS.(theagencyval{foundvar}).Conv;
+            thedata_raw = Table{sss,i-1} * agency.IMOS.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
             
@@ -123,7 +123,7 @@ for i = 19:length(headers)
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
-            fprintf(fid,'Variable ID,%s\n',agency.imosprofile.(theagencyval{foundvar}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.IMOS.(theagencyval{foundvar}).ID);
             
             fprintf(fid,'Data Category,%s\n',varkey.(ID).Category);
             

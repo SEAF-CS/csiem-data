@@ -8,7 +8,7 @@ function importWAVES()
     load ../../../actions/varkey.mat;
     load ../../../actions/agency.mat;
     load ../../../actions/sitekey.mat;
-    VarListStruct = agency.theme5waves;
+    VarListStruct = agency.wwmsp5;
     SiteListStruct = sitekey.wwmsp5waves;
 
                 % currentDir = pwd;

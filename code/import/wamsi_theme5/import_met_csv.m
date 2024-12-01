@@ -18,7 +18,7 @@ headers = readmatrix(filename,Range="C2:ZZ2",OutputType="string");
 
 mdate = datenum(data.Var1);
 
-agencyvars = fieldnames(agency.theme5met);
+agencyvars = fieldnames(agency.wwmsp5);
 
 sitedetails = sitekey.wwmsp5.wwmsp5_CCL;
 
@@ -27,16 +27,16 @@ sitedetails = sitekey.wwmsp5.wwmsp5_CCL;
 for i = 1:length(headers)
     
     for k = 1:length(agencyvars)
-        if strcmpi(agency.theme5met.(agencyvars{k}).Old,headers{i}) == 1
+        if strcmpi(agency.wwmsp5.(agencyvars{k}).Old,headers{i}) == 1
             foundvar = k;
         end
     end
     
-    varname = varkey.(agency.theme5met.(agencyvars{foundvar}).ID).Name;
-    varcode = agency.theme5met.(agencyvars{foundvar}).ID;
-    varunits = varkey.(agency.theme5met.(agencyvars{foundvar}).ID).Unit;
+    varname = varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Name;
+    varcode = agency.wwmsp5.(agencyvars{foundvar}).ID;
+    varunits = varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Unit;
     
-    thedata = data.(['Var',num2str(i+2)]) * agency.theme5met.(agencyvars{foundvar}).Conv;
+    thedata = data.(['Var',num2str(i+2)]) * agency.wwmsp5.(agencyvars{foundvar}).Conv;
     
     [u_mdate,int] = unique(mdate);
     u_thedata = thedata(int);
@@ -55,7 +55,7 @@ for i = 1:length(headers)
     
     
     
-    filename = [outdir,sitedetails.AED,'_',varkey.(agency.theme5met.(agencyvars{foundvar}).ID).Name,'_DATA.csv'];
+    filename = [outdir,sitedetails.AED,'_',varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Name,'_DATA.csv'];
     filename = regexprep(filename,' ','_');
     headername = regexprep(filename,'_DATA.csv','_HEADER.csv');
     
@@ -90,9 +90,9 @@ for i = 1:length(headers)
     
     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
     fprintf(fid,'Contact Email,%s\n','Charitha Pattiaratchi <chari.pattiaratchi@uwa.edu.au>');
-    fprintf(fid,'Variable ID,%s\n',agency.theme5met.(agencyvars{foundvar}).ID);
+    fprintf(fid,'Variable ID,%s\n',agency.wwmsp5.(agencyvars{foundvar}).ID);
     
-    fprintf(fid,'Data Category,%s\n',varkey.(agency.theme5met.(agencyvars{foundvar}).ID).Category);
+    fprintf(fid,'Data Category,%s\n',varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Category);
     
     
     SD = mean(diff(hourly));

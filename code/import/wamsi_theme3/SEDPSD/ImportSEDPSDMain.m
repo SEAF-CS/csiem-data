@@ -28,7 +28,7 @@ function ImportSEDPSDMain()
     load ../../../actions/agency.mat;
     %load ../../../actions/sitekey.mat;
 
-    variableStruct = agency.theme3sedpsd;
+    variableStruct = agency.wwmsp3;
 
     VarKey = agencyMat2LachyVarkKey(variableStruct);
     % error('deez')

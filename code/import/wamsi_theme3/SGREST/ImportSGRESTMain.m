@@ -26,7 +26,7 @@ function ImportSGRESTMain()
     load ../../../actions/agency.mat;
     %load ../../../actions/sitekey.mat;
 
-    variableStruct = agency.theme3sgrest;
+    variableStruct = agency.wwmsp3;
     VarKey = agencyMat2LachyVarkKey(variableStruct);
 
 

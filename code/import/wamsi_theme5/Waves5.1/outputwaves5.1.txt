@@ -1,0 +1,492 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+[?1h=
+                                                                          < M A T L A B (R) >
+                                                                Copyright 1984-2023 The MathWorks, Inc.
+                                                           R2023b Update 7 (23.2.0.2515942) 64-bit (glnxa64)
+                                                                            January 30, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+W>> aves51{Unrecognized field name "theme51waves".
+
+Error in Waves51 (line 11)
+    VarListStruct = agency.theme51waves;
+} 
+
+>> Waves51
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/April2021/CS1_WAVES_April2021.TXT'
+
+Depth
+Air Temp Dry (C)
+AMPLITUDE1
+AMPLITUDE2
+AMPLITUDE3
+CELL
+Cond Comp (s/cm)
+CONDUCTIVITY
+DENSITY_ANOMALY
+DEPTH
+LOWER_UCUR
+LOWER_VCUR
+MIDDLE_UCUR
+MIDDLE_VCUR
+Oxy Diss Sat Situ (%)
+Oxy Diss situ (mg/l)
+PAR (mol/m/s)
+PAR(mol/m2/s)
+pH in-situ (pH)
+Salinity (ppt)
+Sample Depth (m)
+SPECIFIC_CONDUCTIVITY
+TILT
+Tilt (deg)
+Turbidity-Neph (NTU)
+UPPER_UCUR
+UPPER_VCUR
+Water Temp situ(C)
+WCUR
+WL - 410 (W/cm2/nm)
+WL - 440 (W/cm2/nm)
+WL - 490 (W/cm2/nm)
+WL - 510 (W/cm2/nm)
+WL - 550 (W/cm2/nm)
+WL - 590 (W/cm2/nm)
+WL - 635 (W/cm2/nm)
+WL - 660 (W/cm2/nm)
+WL - 700 (W/cm2/nm)
+BV_BP_Avg
+BV_BP_Max
+BV_BP_Min
+BV_BP_Std
+PAR_Den_Avg
+PAR_Den_Max
+PAR_Den_Min
+PAR_Den_Std
+PAR_Tot_Tot
+SlrMJ_Tot
+SlrRad_W_Avg
+SlrRad_W_Max
+SlrRad_W_Min
+SlrRad_W_Std
+WindDir_mean
+WindDir_std
+WS_ms_Max
+WS_ms_mean
+WS_ms_Min
+Dp
+H1/10
+Hs
+Tmean
+Tp
+ACCELERATIONX
+ACCELERATIONY
+ACCELERATIONZ
+DOX1
+HEADING
+NOMINAL_DEPTH
+PAR
+PITCH
+PRESSURE
+PRESSURE_SENSOR_DEPTH
+ROLL
+SALINITY
+SPEED_OF_SOUND
+TEMPERATURE
+UCUR
+VCUR
+DM
+TPP
+temp
+salt
+{Unrecognized function or variable 'stop'.
+
+Error in Waves51>SearchVarlist (line 160)
+        stop
+
+Error in Waves51 (line 40)
+            AgencyStruct = SearchVarlist(VarListStruct,FileVarHeader);
+} 
+>> Waves51
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/April2021/CS1_WAVES_April2021.TXT'
+
+Depth
+list
+Air Temp Dry (C)
+AMPLITUDE1
+AMPLITUDE2
+AMPLITUDE3
+CELL
+Cond Comp (s/cm)
+CONDUCTIVITY
+DENSITY_ANOMALY
+DEPTH
+LOWER_UCUR
+LOWER_VCUR
+MIDDLE_UCUR
+MIDDLE_VCUR
+Oxy Diss Sat Situ (%)
+Oxy Diss situ (mg/l)
+PAR (mol/m/s)
+PAR(mol/m2/s)
+pH in-situ (pH)
+Salinity (ppt)
+Sample Depth (m)
+SPECIFIC_CONDUCTIVITY
+TILT
+Tilt (deg)
+Turbidity-Neph (NTU)
+UPPER_UCUR
+UPPER_VCUR
+Water Temp situ(C)
+WCUR
+WL - 410 (W/cm2/nm)
+WL - 440 (W/cm2/nm)
+WL - 490 (W/cm2/nm)
+WL - 510 (W/cm2/nm)
+WL - 550 (W/cm2/nm)
+WL - 590 (W/cm2/nm)
+WL - 635 (W/cm2/nm)
+WL - 660 (W/cm2/nm)
+WL - 700 (W/cm2/nm)
+BV_BP_Avg
+BV_BP_Max
+BV_BP_Min
+BV_BP_Std
+PAR_Den_Avg
+PAR_Den_Max
+PAR_Den_Min
+PAR_Den_Std
+PAR_Tot_Tot
+SlrMJ_Tot
+SlrRad_W_Avg
+SlrRad_W_Max
+SlrRad_W_Min
+SlrRad_W_Std
+WindDir_mean
+WindDir_std
+WS_ms_Max
+WS_ms_mean
+WS_ms_Min
+Dp
+H1/10
+Hs
+Tmean
+Tp
+ACCELERATIONX
+ACCELERATIONY
+ACCELERATIONZ
+DOX1
+HEADING
+NOMINAL_DEPTH
+PAR
+PITCH
+PRESSURE
+PRESSURE_SENSOR_DEPTH
+ROLL
+SALINITY
+SPEED_OF_SOUND
+TEMPERATURE
+UCUR
+VCUR
+DM
+TPP
+temp
+salt
+{Unrecognized function or variable 'stop'.
+
+Error in Waves51>SearchVarlist (line 161)
+        stop
+
+Error in Waves51 (line 40)
+            AgencyStruct = SearchVarlist(VarListStruct,FileVarHeader);
+} 
+>> Waves51
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/April2021/CS1_WAVES_April2021.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/January2022/CS1_WAVES_Jan2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/January2022/CS4_WAVES_Jan2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/January2022/CS6_WAVES_Jan2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/June2022/CS1_WAVES_Jun2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/June2022/CS4_WAVES_Jun2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/June2022/CS6_WAVES_Jun2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/March2022/CS1_WAVES_Mar2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/March2022/CS4_WAVES_Mar2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/March2022/CS6_WAVES_Mar2022.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/November2021/CS4_WAVES_Nov2021.TXT'
+
+
+filename =
+
+    '/GIS_DATA/csiem-data-hub/data-lake/WAMSI/WWMSP5/WWMSP5_waves/November2021/CS6_WAVES_Nov2021.TXT'
+
+>> cd ../Waves5.2
+>> importWAVES
+File 1 WWM_CS_DAW24.csv
+     Processing Variable HS 113880x1
+HS
+Air Temp Dry (C)
+AMPLITUDE1
+AMPLITUDE2
+AMPLITUDE3
+CELL
+Cond Comp (s/cm)
+CONDUCTIVITY
+DENSITY_ANOMALY
+DEPTH
+LOWER_UCUR
+LOWER_VCUR
+MIDDLE_UCUR
+MIDDLE_VCUR
+Oxy Diss Sat Situ (%)
+Oxy Diss situ (mg/l)
+PAR (mol/m/s)
+PAR(mol/m2/s)
+pH in-situ (pH)
+Salinity (ppt)
+Sample Depth (m)
+SPECIFIC_CONDUCTIVITY
+TILT
+Tilt (deg)
+Turbidity-Neph (NTU)
+UPPER_UCUR
+UPPER_VCUR
+Water Temp situ(C)
+WCUR
+WL - 410 (W/cm2/nm)
+WL - 440 (W/cm2/nm)
+WL - 490 (W/cm2/nm)
+WL - 510 (W/cm2/nm)
+WL - 550 (W/cm2/nm)
+WL - 590 (W/cm2/nm)
+WL - 635 (W/cm2/nm)
+WL - 660 (W/cm2/nm)
+WL - 700 (W/cm2/nm)
+BV_BP_Avg
+BV_BP_Max
+BV_BP_Min
+BV_BP_Std
+PAR_Den_Avg
+PAR_Den_Max
+PAR_Den_Min
+PAR_Den_Std
+PAR_Tot_Tot
+SlrMJ_Tot
+SlrRad_W_Avg
+SlrRad_W_Max
+SlrRad_W_Min
+SlrRad_W_Std
+WindDir_mean
+WindDir_std
+WS_ms_Max
+WS_ms_mean
+WS_ms_Min
+Dp
+H1/10
+Hs
+Tmean
+Depth
+Tp
+ACCELERATIONX
+ACCELERATIONY
+ACCELERATIONZ
+DOX1
+HEADING
+NOMINAL_DEPTH
+PAR
+PITCH
+PRESSURE
+PRESSURE_SENSOR_DEPTH
+ROLL
+SALINITY
+SPEED_OF_SOUND
+TEMPERATURE
+UCUR
+VCUR
+DM
+TPP
+temp
+salt
+{Unrecognized function or variable 'stop'.
+
+Error in importWAVES>SearchVarlist (line 100)
+        stop
+
+Error in importWAVES (line 45)
+            AgencyStruct = SearchVarlist(VarListStruct,fileHeaders,varIndex);
+} 
+>> importWAVES
+File 1 WWM_CS_DAW24.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 2 WWM_CS_DCH38.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 3 WWM_CS_Hillarys.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 4 WWM_CS_JPPLS01.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+[?1l>     Processing Variable TPP 113880x1
+File 5 WWM_CS_JPPLS02.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 6 WWM_CS_KWA01.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 7 WWM_CS_OAM53.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 8 WWM_CS_ORF01.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 9 WWM_CS_PTB01.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 10 WWM_CS_RDW47.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 11 WWM_CS_ROT33.csv
+     Processing Variable HS 113880x1
+     Processing Variable DM 113880x1
+     Processing Variable TPP 113880x1
+File 12 WWM_REG_ALK01.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 13 WWM_REG_ALK02.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 14 WWM_REG_DAW24.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 15 WWM_REG_DCH38.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 16 WWM_REG_Hillarys.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 17 WWM_REG_JPPLS01.csv
+     Processing Variable HS 113630x1
+     Processing Variable DM 113630x1
+     Processing Variable TPP 113630x1
+File 18 WWM_REG_JPPLS02.csv
+     Processing Variable HS 113630x1
+     Processing Variable DM 113630x1
+     Processing Variable TPP 113630x1
+File 19 WWM_REG_KWA01.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 20 WWM_REG_MAN01.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 21 WWM_REG_MAN02.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 22 WWM_REG_MAN54.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 23 WWM_REG_OAM53.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 24 WWM_REG_ORF01.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 25 WWM_REG_PTB01.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 26 WWM_REG_RDW47.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 27 WWM_REG_ROT33.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 28 WWM_REG_TRK01.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 29 WWM_REG_TRK02.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 30 WWM_REG_TRK03.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+File 31 WWM_REG_TRK04.csv
+     Processing Variable HS 113942x1
+     Processing Variable DM 113942x1
+     Processing Variable TPP 113942x1
+>> 

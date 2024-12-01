@@ -1,0 +1,3216 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+[?1h=
+                                                                          < M A T L A B (R) >
+                                                                Copyright 1984-2023 The MathWorks, Inc.
+                                                           R2023b Update 7 (23.2.0.2515942) 64-bit (glnxa64)
+                                                                            January 30, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> import_theme3ctd_data
+[Warning: Directory already exists.] 
+[> In import_theme3ctd_data (line 11)] 
+[Warning: Directory already exists.] 
+[> In import_theme3ctd_data (line 12)] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column headers are
+saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Clay_<4um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Silt_v_fine_silt_>4_-_<8um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W''worth)_-_Silt_fine_silt_>8_-_<16um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W''worth)_-_Silt_medium_>16_-_<31um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W''worth)_-_Silt_coarse_>31_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W''worth)_-_Silt__>4_-_<63um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Sand_v_fine_>63_-_<=125um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Sand_fine_>125_-_<=250um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Sand_med_>250_-_<=500um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Sand_coarse_>500um-<=1mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Sand_v_coarse_>1_-_<=2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W''worth)_-_Sand_>63_-_<2000um_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Part._sz_(W'worth)_-_Gravel_>2mm_(%)_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Fluorescence_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Light_Attenuation_Coefficient_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Specific_Conductivity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Density_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_O2_Saturation_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Dissolved_Oxygen_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Salinity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Secchi_Depth_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Total_Suspended_Solids_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Temperature_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_Turbidity_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/site1310_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteAJ_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteCSR14_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteINLET_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteJB16A_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteLP_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteMR_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA1_DEP_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA2S_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA3_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA4_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteOA9S_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/sitePB_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteS4S10_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSC2_pH_HEADER.csv'
+
+
+headerfile =
+
+    '/GIS_DATA/csiem-data-hub/data-warehouse/csv/wamsi/wwmsp3/ctd/siteSF11_pH_HEADER.csv'
+
+[Warning: Usage of DATENUM with empty date character vectors or empty strings is not supported.
+Results may change in future versions.] 
+[> In datenum (line 96)
+In import_theme3ctd_data (line 34)] 
+{Unrecognized field name "var00".
+
+Error in import_theme3ctd_data (line 42)
+        varname = varkey.(agency.wwmsp3.(thevars{i}).ID).Name;
+} 
+>> exi   exit
+[?1l>

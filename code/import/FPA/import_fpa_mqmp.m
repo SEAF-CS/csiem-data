@@ -22,7 +22,7 @@ outdir = [datapath,'data-warehouse/csv/fpa/mqmp/'];mkdir(outdir);
 rownumber = [452,93,277,265];
 
 fpasites = fieldnames(sitekey.fpamqmp);
-fpavars = fieldnames(agency.fpamqmp);
+fpavars = fieldnames(agency.fpa);
 
 for i = 1:length(sheetname)
     
@@ -63,13 +63,13 @@ for i = 1:length(sheetname)
             %if strcmpi(headers{k},'JUNK') == 0
                 foundvar = [];
                 for kk = 1:length(fpavars)
-                    if strcmpi(agency.fpamqmp.(fpavars{kk}).Old,headers{k}) == 1
+                    if strcmpi(agency.fpa.(fpavars{kk}).Old,headers{k}) == 1
                         foundvar = kk;
                     end
                 end
                 if ~isempty(foundvar)
-                varID = agency.fpamqmp.(fpavars{foundvar}).ID;
-                varConv = agency.fpamqmp.(fpavars{foundvar}).Conv;
+                varID = agency.fpa.(fpavars{foundvar}).ID;
+                varConv = agency.fpa.(fpavars{foundvar}).Conv;
                 varname = varkey.(varID).Name;
                 varstring = [varname,' (',varkey.(varID).Unit,')'];
                 
