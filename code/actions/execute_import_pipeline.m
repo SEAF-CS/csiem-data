@@ -3,12 +3,13 @@ addpath(genpath('../functions'));
 csiem_data_paths 
 tic
 
-% import_var_key_info;
-% import_site_key;
+import_var_key_info;
+import_site_key;
 csiem_file_cleaner
 
 
 import_dwer = 0;
+import_dwer_swanest_phy = 0;
 import_dot = 0;
 import_bom = 0;
 import_mafrl = 0;
@@ -20,9 +21,9 @@ import_moorings = 0;
 import_theme2 = 0;
 
 import_theme3 = 0;
-import_theme5 = 0;
+import_theme5 = 1;
 import_wc = 0;
-import_fpa = 1;
+import_fpa = 0;
 import_bmt_wp_swan = 0;
 import_wamsitheme1 = 0;
 import_UKMO = 0;
@@ -34,19 +35,49 @@ import_WCWA1Phyto = 0;
 import_WCWA2Phyto = 0;
 import_WCWA3_9Phyto = 0;
 import_UWA_AED_Phyto = 0;
-import_DWER_swanest_phy = 0;
 
-import_wamsiwaves51 = 0;
+import_wamsiwaves = 0;
 
-create_smd = 0;
+% import_dwer = 0;
+% import_dot = 1;
+% import_bom = 1;
+% import_mafrl = 1;
+% import_imos = 1;
+% import_imos_srs = 1;
 
-create_matfiles = 0;
-create_parquet = 0;
+% import_dpird = 1;
+% import_moorings = 1;
+% import_theme2 = 1;
 
-create_dataplots = 0;
-plotnew_dataplots = 0;
+% import_theme3 = 1;
+% import_theme5 = 0;
+% import_wc = 1;
+% import_fpa = 1;
+% import_bmt_wp_swan = 1;
+% import_wamsitheme1 = 1;
+% import_UKMO = 1;
+% import_NASA = 1;
+% import_aims = 1;
+% import_CSPHY = 1;
+% import_IMOSPlanktonvar = 1;
+% import_WCWA1Phyto = 1;
+% import_WCWA2Phyto = 1;
+% import_WCWA3_9Phyto = 1;
+% import_UWA_AED_Phyto = 1;
+% import_DWER_swanest_phy = 1;
 
-create_shapefiles = 0;
+% import_wamsiwaves51 = 1;
+
+
+create_smd = 1;
+
+create_matfiles = 1;
+create_parquet = 1;
+
+create_dataplots = 1;
+plotnew_dataplots = 1;
+
+create_shapefiles = 1;
 
 
 run_marvl = 0;
@@ -78,6 +109,15 @@ if import_dwer
     % export_wir;clear all; close all;
     cd ../../actions
 end
+
+if import_dwer_swanest_phy
+    cd ../import/DWER/SWANESTPHY/
+        DWER_SWANEST_PHY_Groups_Staging
+        DWER_SWANEST_PHY_Groups_Staged
+        DWER_SWANEST_PHY_Species
+    cd ../../../actions/
+end
+
 % DOT Export
 
 if import_dot
@@ -127,7 +167,7 @@ if import_imos
     
     merge_files;
 
-    import_imos_temp_sal;
+    import_imos_amnm_adcp;
     
     % Needs updating
     % import_imos_profile_2_csv_BURST;
@@ -150,7 +190,7 @@ if import_dpird
     % DPIRD
     cd ../import/DPIRD
     
-    import_dpird_crab_data;
+    import_dpird_crp_data;
     
     cd ../../actions/
 end
@@ -159,7 +199,7 @@ if import_moorings
     % DWER Mooring
     cd ../import/DWER_Mooring
     
-    import_mooring_data_v2;
+    import_csmooring;
     
     cd ../../actions/
 end
@@ -207,28 +247,29 @@ if import_wc
     
     cd ../../actions/
 end
+
 %WAMSI
 if import_theme5
     cd ../import/wamsi_theme5
     
-    import_netcdf_csv;
-    import_netcdf_csv_ADCP;
-    import_met_csv;
+    import_wwmsp5_wq;
+    import_wwmsp5_awac;
+    import_wwmsp5_met;
 
-    cd Waves5.1/
-    Waves51
+    cd Waves/
+    import_Waves
     cd ../
 
-    cd Waves5.2/
-    importWAVES
+    cd WWM/
+    importWWM
     cd ../
 
     cd ../../actions/
 end
 
-if import_wamsiwaves51
-    cd ../import/wamsi_theme5/Waves5.1
-    Waves51
+if import_wamsiwaves
+    cd ../import/wamsi_theme5/Waves
+    import_Waves
     cd ../
 
     cd ../../actions/
@@ -243,14 +284,14 @@ end
 
 if import_UKMO
     cd ../import/UKMO
-    system('python3 ImportUKMO.py') 
+    system('python3 ImportUKMO_OSTIA.py') 
     cd ../../actions/
 end
 
 if import_NASA
     cd ../import/NASA
 
-        cd ASMR_E
+        cd GHRSST
         ImportNASASST
         cd ..
         
@@ -327,14 +368,6 @@ if import_UWA_AED_Phyto
         PhytoSpecies 
         cd ../
     cd ../../../../actions/
-end
-
-if import_DWER_swanest_phy
-    cd ../import/SWANEST/
-        SWANESTSpecies
-        SWANESTGroupsStaging
-        SWANESTGroupsStaged
-    cd ../../actions/
 end
 
 
