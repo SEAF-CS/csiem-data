@@ -77,13 +77,13 @@
             
             if ~isempty(Index)
                 dep = 'Profile';
-                pos = 'm from Surface';
-                ref = 'Water Surface';
+                pos = '0.0m below Surface';
+                ref = 'm below Surface';
                 SMD = [];
             else
                 dep = 'Floating';
-                pos = 'm from Surface';
-                ref = 'Water Surface';
+                pos = '0.0m below Surface';
+                ref = 'm below Surface';
                 SMD = [];
             end
             
@@ -95,8 +95,8 @@
                 depth(1:length(mdate),1) = dval; % Hack for bottom sensor.
                 
                 dep = 'Fixed';
-                pos = '0.5m from Seabed';
-                ref = 'm from Seabed';
+                pos = '0.5m above Seabed';
+                ref = 'm above Seabed';
                 SMD = [];
                 
             else
@@ -120,8 +120,8 @@
                 
                 if i == 9
                         dep = 'Fixed';
-                        pos = '0.5m from Surface';
-                        ref = 'm from Surface';
+                        pos = '0.5m below Surface';
+                        ref = 'm below Surface';
                         SMD = [];
                         
                         dval = 0.5;

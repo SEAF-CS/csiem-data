@@ -72,12 +72,12 @@ function import_phytoplankton2_Group()
             if SiteName(end) == "S"
                 Deployment = 'Floating';
                 heightOrdepth = 'Depth';
-                VerticalRef = 'm below surface';
+                VerticalRef = 'm below Surface';
 
             elseif SiteName(end) == "B"
                 Deployment = 'Fixed';
                 heightOrdepth = 'Height';
-                VerticalRef = 'm above seafloor';
+                VerticalRef = 'm above Seabed';
 
             else
                 error("Not Correct on site")

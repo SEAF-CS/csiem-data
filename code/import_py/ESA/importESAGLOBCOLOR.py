@@ -102,8 +102,6 @@ def import_esa_globcolor(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_d
                 # Replace empty cells with NaN
                 df_filtered.replace("", np.nan, inplace=True)
 
-                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
-
                 # Find matching variable in MATLAB data and get conversion factor
                 conv_factor = 1  # default value
                 for field in esa_data.dtype.names:
@@ -126,6 +124,9 @@ def import_esa_globcolor(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_d
                     'Data': 'mean'
                 }).reset_index()
 
+                # Reorder data
+                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
+
                 name_conv = get_variable_names(Id,matlab_data_variable_names)['Name'][0, 0][0]
                 # Append to the all_var_info DataFrame
                 var_info = pd.DataFrame({
@@ -139,10 +140,14 @@ def import_esa_globcolor(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_d
                 elif "Polygon" in dir:
                     output_filename = f'{site}_{name_conv.replace(" ","_")}_DATA.csv'
                 print(output_filename)
-                print(df_filtered)
+                # print(df_filtered)
                 # Write the filtered DataFrame to a CSV file in the specified directory only if it's not empty
                 output_dir = dir.replace("data-lake","data-warehouse/csv")
-                output_dir = "/".join(output_dir.split("/")[:-1]).lower()
+                output_dir = "/".join(output_dir.split("/")[:-1]) #.lower()
+
+                SPLIT = output_dir.split("data-warehouse/csv")
+                output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+                
                 os.makedirs(output_dir, exist_ok=True)
                 if not df_filtered.empty:
                     df_filtered.to_csv(os.path.join(output_dir, output_filename), index=False)
@@ -208,7 +213,7 @@ def import_esa_globcolor(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_d
                         "QC": QC
                     }
                     
-                    output_filename = file.replace("DATA","HEADER")
+                    output_filename = file.replace("DATA.csv","HEADER.csv")
 
                     print(output_filename)
                     file_path = os.path.join(dir_header, output_filename)

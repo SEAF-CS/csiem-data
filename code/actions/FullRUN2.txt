@@ -1,0 +1,632 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 7 (23.2.0.2515942) 64-bit (glnxa64)
+                              January 30, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> 
+agency = 
+
+  struct with fields:
+
+                         wwmsp1: [1x1 struct]
+                         wwmsp2: [1x1 struct]
+                         wwmsp3: [1x1 struct]
+                         wwmsp5: [1x1 struct]
+                           WCWA: [1x1 struct]
+                            dot: [1x1 struct]
+                            bom: [1x1 struct]
+                           dwer: [1x1 struct]
+                           IMOS: [1x1 struct]
+                            fpa: [1x1 struct]
+                        bmtswan: [1x1 struct]
+                           UKMO: [1x1 struct]
+                           NASA: [1x1 struct]
+                           aims: [1x1 struct]
+                          mafrl: [1x1 struct]
+             DWER_Phytoplankton: [1x1 struct]
+       DWER_PhytoplanktonGroups: [1x1 struct]
+             IMOS_Phytoplankton: [1x1 struct]
+        IMOS_PhytoplanktonGroup: [1x1 struct]
+     WCWA1_PhytoplanktonSpecies: [1x1 struct]
+       WCWA1_PhytoplanktonGroup: [1x1 struct]
+     WCWA2_PhytoplanktonSpecies: [1x1 struct]
+       WCWA2_PhytoplanktonGroup: [1x1 struct]
+     WCWA3_PhytoplanktonSpecies: [1x1 struct]
+       WCWA3_PhytoplanktonGroup: [1x1 struct]
+     WCWA4_PhytoplanktonSpecies: [1x1 struct]
+       WCWA4_PhytoplanktonGroup: [1x1 struct]
+     WCWA5_PhytoplanktonSpecies: [1x1 struct]
+       WCWA5_PhytoplanktonGroup: [1x1 struct]
+     WCWA6_PhytoplanktonSpecies: [1x1 struct]
+       WCWA6_PhytoplanktonGroup: [1x1 struct]
+     WCWA7_PhytoplanktonSpecies: [1x1 struct]
+       WCWA7_PhytoplanktonGroup: [1x1 struct]
+       WCWA8_PhytoplanktonGroup: [1x1 struct]
+     WCWA8_PhytoplanktonSpecies: [1x1 struct]
+       WCWA9_PhytoplanktonGroup: [1x1 struct]
+     WCWA9_PhytoplanktonSpecies: [1x1 struct]
+      WCWA10_PhytoplanktonGroup: [1x1 struct]
+    WCWA10_PhytoplanktonSpecies: [1x1 struct]
+                  SWANESTGroups: [1x1 struct]
+                 SWANESTSpecies: [1x1 struct]
+          UWA_AED_PHY_1_Species: [1x1 struct]
+            UWA_AED_PHY_1_Group: [1x1 struct]
+          UWA_AED_PHY_2_Species: [1x1 struct]
+            UWA_AED_PHY_2_Group: [1x1 struct]
+                            MOI: [1x1 struct]
+                            ESA: [1x1 struct]
+                            DEP: [1x1 struct]
+                            UWA: [1x1 struct]
+                          CSIRO: [1x1 struct]
+
+IMOSBGC
+IMOSAMNM
+MAFRL
+BOM
+DWER
+DWERMOORING
+WC
+WWMSP5
+WWMSP2
+THEME3CTD
+FPA-MQMP
+WWMSP2SG
+DPIRD
+DOT
+WWMSP5.2WAVES
+BMT-SWAN
+WWMSP1.1-WFR
+BOM-BARRA
+WWMSP3.1-SedimentDeposition
+AIMS
+DWERPHYTO
+LachyIMOSPHYTO
+WCWA2Phyto
+WCWA3Phyto
+SWANEST
+VirtualSensors
+IMOSSOOP
+WWMSP5ROMS
+
+sitekey = 
+
+  struct with fields:
+
+                      imosbgc: [1x1 struct]
+                     imosamnm: [1x1 struct]
+                        mafrl: [1x1 struct]
+                          bom: [1x1 struct]
+                         dwer: [1x1 struct]
+                  dwermooring: [1x1 struct]
+                           wc: [1x1 struct]
+                       wwmsp5: [1x1 struct]
+                       wwmsp2: [1x1 struct]
+                       wwmsp3: [1x1 struct]
+                      fpamqmp: [1x1 struct]
+              wwmsp2_seagrass: [1x1 struct]
+                        dpird: [1x1 struct]
+                          dot: [1x1 struct]
+                  wwmsp5waves: [1x1 struct]
+                      bmtswan: [1x1 struct]
+                    wwmsp1wrf: [1x1 struct]
+                  bombarraftv: [1x1 struct]
+    WWMSP31SedimentDeposition: [1x1 struct]
+                         AIMS: [1x1 struct]
+                    DWERPhyto: [1x1 struct]
+           IMOS_Phytoplankton: [1x1 struct]
+                   WCWA2Phyto: [1x1 struct]
+                   WCWA3Phyto: [1x1 struct]
+                      SWANEST: [1x1 struct]
+               VirtualSensors: [1x1 struct]
+                     IMOSSOOP: [1x1 struct]
+                   WWMSP5ROMS: [1x1 struct]
+
+CSIRO
+
+sitekey = 
+
+  struct with fields:
+
+                      imosbgc: [1x1 struct]
+                     imosamnm: [1x1 struct]
+                        mafrl: [1x1 struct]
+                          bom: [1x1 struct]
+                         dwer: [1x1 struct]
+                  dwermooring: [1x1 struct]
+                           wc: [1x1 struct]
+                       wwmsp5: [1x1 struct]
+                       wwmsp2: [1x1 struct]
+                       wwmsp3: [1x1 struct]
+                      fpamqmp: [1x1 struct]
+              wwmsp2_seagrass: [1x1 struct]
+                        dpird: [1x1 struct]
+                          dot: [1x1 struct]
+                  wwmsp5waves: [1x1 struct]
+                      bmtswan: [1x1 struct]
+                    wwmsp1wrf: [1x1 struct]
+                  bombarraftv: [1x1 struct]
+    WWMSP31SedimentDeposition: [1x1 struct]
+                         AIMS: [1x1 struct]
+                    DWERPhyto: [1x1 struct]
+           IMOS_Phytoplankton: [1x1 struct]
+                   WCWA2Phyto: [1x1 struct]
+                   WCWA3Phyto: [1x1 struct]
+                      SWANEST: [1x1 struct]
+               VirtualSensors: [1x1 struct]
+                     IMOSSOOP: [1x1 struct]
+                   WWMSP5ROMS: [1x1 struct]
+                        CSIRO: [1x1 struct]
+
+DEP
+
+sitekey = 
+
+  struct with fields:
+
+                      imosbgc: [1x1 struct]
+                     imosamnm: [1x1 struct]
+                        mafrl: [1x1 struct]
+                          bom: [1x1 struct]
+                         dwer: [1x1 struct]
+                  dwermooring: [1x1 struct]
+                           wc: [1x1 struct]
+                       wwmsp5: [1x1 struct]
+                       wwmsp2: [1x1 struct]
+                       wwmsp3: [1x1 struct]
+                      fpamqmp: [1x1 struct]
+              wwmsp2_seagrass: [1x1 struct]
+                        dpird: [1x1 struct]
+                          dot: [1x1 struct]
+                  wwmsp5waves: [1x1 struct]
+                      bmtswan: [1x1 struct]
+                    wwmsp1wrf: [1x1 struct]
+                  bombarraftv: [1x1 struct]
+    WWMSP31SedimentDeposition: [1x1 struct]
+                         AIMS: [1x1 struct]
+                    DWERPhyto: [1x1 struct]
+           IMOS_Phytoplankton: [1x1 struct]
+                   WCWA2Phyto: [1x1 struct]
+                   WCWA3Phyto: [1x1 struct]
+                      SWANEST: [1x1 struct]
+               VirtualSensors: [1x1 struct]
+                     IMOSSOOP: [1x1 struct]
+                   WWMSP5ROMS: [1x1 struct]
+                        CSIRO: [1x1 struct]
+                          DEP: [1x1 struct]
+
+UWA
+
+sitekey = 
+
+  struct with fields:
+
+                      imosbgc: [1x1 struct]
+                     imosamnm: [1x1 struct]
+                        mafrl: [1x1 struct]
+                          bom: [1x1 struct]
+                         dwer: [1x1 struct]
+                  dwermooring: [1x1 struct]
+                           wc: [1x1 struct]
+                       wwmsp5: [1x1 struct]
+                       wwmsp2: [1x1 struct]
+                       wwmsp3: [1x1 struct]
+                      fpamqmp: [1x1 struct]
+              wwmsp2_seagrass: [1x1 struct]
+                        dpird: [1x1 struct]
+                          dot: [1x1 struct]
+                  wwmsp5waves: [1x1 struct]
+                      bmtswan: [1x1 struct]
+                    wwmsp1wrf: [1x1 struct]
+                  bombarraftv: [1x1 struct]
+    WWMSP31SedimentDeposition: [1x1 struct]
+                         AIMS: [1x1 struct]
+                    DWERPhyto: [1x1 struct]
+           IMOS_Phytoplankton: [1x1 struct]
+                   WCWA2Phyto: [1x1 struct]
+                   WCWA3Phyto: [1x1 struct]
+                      SWANEST: [1x1 struct]
+               VirtualSensors: [1x1 struct]
+                     IMOSSOOP: [1x1 struct]
+                   WWMSP5ROMS: [1x1 struct]
+                        CSIRO: [1x1 struct]
+                          DEP: [1x1 struct]
+                          UWA: [1x1 struct]
+
+[Warning: Directory already exists.] 
+[> In import_netcdf_csv (line 14)
+In execute_import_pipeline (line 245)] 
+[Warning: Directory already exists.] 
+[> In import_netcdf_csv (line 16)
+In execute_import_pipeline (line 245)] 
+20210623_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.799417 seconds.
+Elapsed time is 0.664098 seconds.
+20210623_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.653781 seconds.
+Elapsed time is 0.613428 seconds.
+20211221_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.374684 seconds.
+Elapsed time is 0.306067 seconds.
+20211221_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.310942 seconds.
+Elapsed time is 0.299742 seconds.
+20220217_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.184489 seconds.
+Elapsed time is 0.177222 seconds.
+20220311_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.346998 seconds.
+Elapsed time is 0.338938 seconds.
+20220427_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.369175 seconds.
+Elapsed time is 0.362987 seconds.
+20220716_CS3_miniDOT_571849_EPSG7844.nc
+20
+Elapsed time is 0.621026 seconds.
+Elapsed time is 0.616946 seconds.
+20220731_CS1_miniDOT_564352_EPSG7844.nc
+20
+Elapsed time is 0.540880 seconds.
+Elapsed time is 0.515708 seconds.
+20211221_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.311747 seconds.
+Elapsed time is 0.307680 seconds.
+Elapsed time is 0.304009 seconds.
+Elapsed time is 0.298161 seconds.
+Elapsed time is 0.305909 seconds.
+20211221_CS5_miniPAR_348071_EPSG7844.nc
+11
+Elapsed time is 0.309835 seconds.
+Elapsed time is 0.303651 seconds.
+Elapsed time is 0.305908 seconds.
+Elapsed time is 0.304603 seconds.
+Elapsed time is 0.306580 seconds.
+20211221_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.314606 seconds.
+Elapsed time is 0.303515 seconds.
+Elapsed time is 0.305482 seconds.
+Elapsed time is 0.302198 seconds.
+Elapsed time is 0.304781 seconds.
+20220212_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.138993 seconds.
+Elapsed time is 0.136349 seconds.
+Elapsed time is 0.134765 seconds.
+Elapsed time is 0.133252 seconds.
+Elapsed time is 0.133664 seconds.
+20220219_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.203169 seconds.
+Elapsed time is 0.197134 seconds.
+Elapsed time is 0.198192 seconds.
+Elapsed time is 0.195663 seconds.
+Elapsed time is 0.197236 seconds.
+20220408_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.176185 seconds.
+Elapsed time is 0.170108 seconds.
+Elapsed time is 0.174250 seconds.
+Elapsed time is 0.169439 seconds.
+Elapsed time is 0.169915 seconds.
+20220503_CS5_miniPAR_348071_EPSG7844.nc
+11
+Elapsed time is 0.422639 seconds.
+Elapsed time is 0.416391 seconds.
+Elapsed time is 0.417468 seconds.
+Elapsed time is 0.411849 seconds.
+Elapsed time is 0.413334 seconds.
+20220514_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.543437 seconds.
+Elapsed time is 0.522448 seconds.
+Elapsed time is 0.515787 seconds.
+Elapsed time is 0.509533 seconds.
+Elapsed time is 0.510892 seconds.
+20220801_CS4_miniPAR_531189_EPSG7844.nc
+11
+Elapsed time is 0.559011 seconds.
+Elapsed time is 0.551842 seconds.
+Elapsed time is 0.551994 seconds.
+Elapsed time is 0.546281 seconds.
+Elapsed time is 0.550718 seconds.
+20220802_CS5_miniPAR_348071_EPSG7844.nc
+11
+Elapsed time is 0.470342 seconds.
+Elapsed time is 0.459595 seconds.
+Elapsed time is 0.458063 seconds.
+Elapsed time is 0.462874 seconds.
+Elapsed time is 0.458752 seconds.
+20220819_CS6_miniPAR_597128_EPSG7844.nc
+11
+Elapsed time is 0.614355 seconds.
+Elapsed time is 0.604961 seconds.
+Elapsed time is 0.606749 seconds.
+Elapsed time is 0.603981 seconds.
+Elapsed time is 0.613978 seconds.
+20210426_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 5.158343 seconds.
+Elapsed time is 5.103799 seconds.
+20210503_CS1_TGR_016724_EPSG7844.nc
+20
+Elapsed time is 9.798204 seconds.
+Elapsed time is 9.708543 seconds.
+20210604_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 147.031792 seconds.
+Elapsed time is 140.400808 seconds.
+Elapsed time is 141.802569 seconds.
+Elapsed time is 141.481976 seconds.
+Elapsed time is 141.341141 seconds.
+Elapsed time is 141.248449 seconds.
+Elapsed time is 144.496924 seconds.
+Elapsed time is 140.874359 seconds.
+20210623_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 37.486808 seconds.
+Elapsed time is 36.711894 seconds.
+20210623_CS1_TGR_21526_EPSG7844.nc
+20
+Elapsed time is 37.527687 seconds.
+Elapsed time is 37.722106 seconds.
+20211207_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 119.184428 seconds.
+Elapsed time is 117.554302 seconds.
+20211212_CS6_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 143.299897 seconds.
+Elapsed time is 140.903606 seconds.
+20211221_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 18.337647 seconds.
+Elapsed time is 18.113426 seconds.
+20211221_CS1_TGR_016723_EPSG7844.nc
+20
+Elapsed time is 4.602630 seconds.
+Elapsed time is 4.601103 seconds.
+20211221_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 18.527671 seconds.
+Elapsed time is 18.689953 seconds.
+20211221_CS1_TWR_021526_EPSG7844.nc
+20
+Elapsed time is 18.288537 seconds.
+Elapsed time is 18.056782 seconds.
+20211221_CS7_RBRsolo_077826_EPSG7844.nc
+6
+Elapsed time is 102.506333 seconds.
+Elapsed time is 100.713914 seconds.
+20220212_CS4_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 86.313216 seconds.
+Elapsed time is 87.513839 seconds.
+20220215_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 103.049080 seconds.
+Elapsed time is 102.486657 seconds.
+20220309_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 21.892801 seconds.
+Elapsed time is 21.587307 seconds.
+Elapsed time is 21.868889 seconds.
+Elapsed time is 21.802381 seconds.
+Elapsed time is 21.855242 seconds.
+Elapsed time is 21.707314 seconds.
+Elapsed time is 22.204105 seconds.
+Elapsed time is 21.716847 seconds.
+20220309_CS7_RBRsolo_77826_EPSG7844.nc
+6
+Elapsed time is 233.351753 seconds.
+Elapsed time is 230.867271 seconds.
+20220311_CS1_TGR_16719_EPSG7844.nc
+20
+Elapsed time is 22.969789 seconds.
+Elapsed time is 22.467246 seconds.
+20220311_CS1_TGR_16723_EPSG7844.nc
+20
+Elapsed time is 23.113431 seconds.
+Elapsed time is 23.179616 seconds.
+20220311_CS1_TGR_16725_EPSG7844.nc
+20
+Elapsed time is 23.206953 seconds.
+Elapsed time is 23.176867 seconds.
+20220311_CS1_TWR_21526_EPSG7844.nc
+20
+Elapsed time is 22.650362 seconds.
+Elapsed time is 22.339147 seconds.
+20220311_CS5_RBRsolo_77280_EPSG7844.nc
+11
+Elapsed time is 239.138596 seconds.
+Elapsed time is 239.233496 seconds.
+20220421_CS3_RBRduet_209842_EPSG7844.nc
+20
+Elapsed time is 195.917000 seconds.
+Elapsed time is 196.722000 seconds.
+Elapsed time is 196.641493 seconds.
+20220423_CS7_RBRsolo_77826_EPSG7844.nc
+6
+Elapsed time is 211.226301 seconds.
+Elapsed time is 211.163263 seconds.
+20220426_CS3_RBRduet_208791_EPSG7844.nc
+20
+Elapsed time is 222.380650 seconds.
+Elapsed time is 226.569402 seconds.
+Elapsed time is 224.611853 seconds.
+20220429_CS3_RBRduet_208792_EPSG7844.nc
+20
+Elapsed time is 242.061988 seconds.
+Elapsed time is 244.169188 seconds.
+Elapsed time is 242.316292 seconds.
+20220502_CS3_RBRduet_209843_EPSG7844.nc
+20
+Elapsed time is 260.657809 seconds.
+Elapsed time is 262.054813 seconds.
+Elapsed time is 261.823947 seconds.
+20220503_CS4_CTD_209850_EPSG7844.nc
+11
+Elapsed time is 269.332021 seconds.
+Elapsed time is 268.667905 seconds.
+Elapsed time is 271.305957 seconds.
+Elapsed time is 271.610779 seconds.
+Elapsed time is 272.887295 seconds.
+Elapsed time is 273.024793 seconds.
+Elapsed time is 271.352554 seconds.
+Elapsed time is 270.722201 seconds.
+20220503_CS4_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 264.702289 seconds.
+Elapsed time is 265.972929 seconds.
+20220503_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 266.780641 seconds.
+Elapsed time is 267.679567 seconds.
+20220509_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 29.590337 seconds.
+Elapsed time is 29.689809 seconds.
+Elapsed time is 29.740543 seconds.
+Elapsed time is 29.726001 seconds.
+Elapsed time is 29.700208 seconds.
+Elapsed time is 29.740897 seconds.
+Elapsed time is 30.803142 seconds.
+Elapsed time is 29.661168 seconds.
+20220520_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 34.501478 seconds.
+Elapsed time is 34.996905 seconds.
+Elapsed time is 34.679143 seconds.
+20220520_CS1_TGR_016723_EPSG7844.nc
+20
+Elapsed time is 35.416404 seconds.
+Elapsed time is 35.435072 seconds.
+Elapsed time is 35.375094 seconds.
+20220520_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 35.336677 seconds.
+Elapsed time is 35.360637 seconds.
+Elapsed time is 35.488928 seconds.
+20220718_CS3_RBRduet_208791_EPSG7844.nc
+20
+Elapsed time is 213.467074 seconds.
+Elapsed time is 215.591181 seconds.
+Elapsed time is 214.953202 seconds.
+20220718_CS3_RBRduet_208792_EPSG7844.nc
+20
+Elapsed time is 210.369512 seconds.
+Elapsed time is 213.749935 seconds.
+Elapsed time is 211.348335 seconds.
+20220722_CS3_RBRduet_209842_EPSG7844.nc
+20
+Elapsed time is 239.333561 seconds.
+Elapsed time is 238.691526 seconds.
+Elapsed time is 239.932097 seconds.
+20220722_CS3_RBRduet_209843_EPSG7844.nc
+20
+Elapsed time is 237.975199 seconds.
+Elapsed time is 236.528384 seconds.
+Elapsed time is 238.201339 seconds.
+20220730_CS4_CTD_209850_EPSG7844.nc
+11
+Elapsed time is 283.528610 seconds.
+Elapsed time is 281.126607 seconds.
+Elapsed time is 287.699309 seconds.
+Elapsed time is 281.848935 seconds.
+Elapsed time is 286.591870 seconds.
+Elapsed time is 286.075855 seconds.
+Elapsed time is 286.352600 seconds.
+Elapsed time is 285.683441 seconds.
+20220806_CS3_RBRduet_206854_EPSG7844.nc
+20
+Elapsed time is 328.335090 seconds.
+Elapsed time is 329.725516 seconds.
+Elapsed time is 324.433417 seconds.
+20220807_CS5_RBRsolo_77280_EPSG7844.nc
+11
+Elapsed time is 336.208474 seconds.
+20220808_CS6_RBRsolo_202075_EPSG7844.nc
+11
+Elapsed time is 343.262402 seconds.
+Elapsed time is 340.529035 seconds.
+20220809_CS4_RBRsolo_202078_EPSG7844.nc
+11
+Elapsed time is 346.701427 seconds.
+Elapsed time is 343.401321 seconds.
+20220810_CS1_TGR_016725_EPSG7844.nc
+20
+Elapsed time is 34.133838 seconds.
+Elapsed time is 34.094896 seconds.
+Elapsed time is 34.127696 seconds.
+20220819_CS1_CTD_206159_EPSG7844.nc
+20
+Elapsed time is 38.559866 seconds.
+Elapsed time is 38.613564 seconds.
+Elapsed time is 38.706931 seconds.
+Elapsed time is 38.451981 seconds.
+Elapsed time is 38.431223 seconds.
+Elapsed time is 38.811336 seconds.
+Elapsed time is 39.708132 seconds.
+Elapsed time is 38.180916 seconds.
+20220819_CS1_TGR_016719_EPSG7844.nc
+20
+Elapsed time is 37.458924 seconds.
+Elapsed time is 38.925148 seconds.
+Elapsed time is 40.869577 seconds.
+20220819_CS1_TGR_016723_EPSG7844.nc
+20
+Elapsed time is 40.077846 seconds.
+Elapsed time is 39.193256 seconds.
+Elapsed time is 38.919832 seconds.
+20220819_CS1_TGR_021526_EPSG7844.nc
+20
+Elapsed time is 38.909295 seconds.
+Elapsed time is 38.593553 seconds.
+Elapsed time is 38.388769 seconds.
+20210419_CS3_SBE_3882_EPSG7844.nc
+20
+Elapsed time is 0.339424 seconds.
+Elapsed time is 0.333310 seconds.
+20210502_CS3_SBE_4381_EPSG7844.nc
+20
+Elapsed time is 1.590687 seconds.
+Elapsed time is 1.538055 seconds.
+20210511_CS3_SBE_3353_EPSG7844.nc
+20
+Elapsed time is 2.459836 seconds.
+20210526_CS3_SBE_4362_EPSG7844.nc
+20
+Elapsed time is 3.911030 seconds.
+Elapsed time is 3.882134 seconds.
+20211219_CS3_SBE_4381_EPSG7844.nc
+20
+Elapsed time is 3.019894 seconds.
+Elapsed time is 3.005030 seconds.
+20211221_CS3_SBE_3882_EPSG7844.nc
+20
+Elapsed time is 3.257459 seconds.
+Elapsed time is 3.240985 seconds.
+20211221_CS3_SBE_4362_EPSG7844.nc
+20
+Elapsed time is 2.828422 seconds.
+Elapsed time is 2.776925 seconds.
+{Previously accessible file
+"/GIS_DATA/csiem-data-hub/csiem-data/code/import/wamsi_theme5/import_netcdf_csv_ADCP.m"
+is now inaccessible.
+
+Error in execute_import_pipeline (line 246)
+    import_PhyWQ_1334_09;
+} 
+>> [Warning: Closing open netCDF file handles.] 

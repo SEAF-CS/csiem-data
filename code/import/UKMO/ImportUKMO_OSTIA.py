@@ -82,7 +82,7 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                         
                         f.write('Site Description,\n')
                         f.write('Deployment,Satelite\n')        
-                        f.write('Deployment Position,0m below surface\n')
+                        f.write('Deployment Position,0.0m below Surface\n')
                         f.write('Vertical Reference,m below surface\n')
                         f.write('Site Mean Depth,\n')
                         

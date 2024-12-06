@@ -120,8 +120,8 @@ for i = 9:width(Test)
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosbgc.(thesiteval{foundstation}).ID,'_BGC']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosbgc.(thesiteval{foundstation}).Description);
             fprintf(fid,'Deployment,%s\n','Profile');
-            fprintf(fid,'Deployment Position,%s\n','m from Surface');
-            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');
+            fprintf(fid,'Vertical Reference,%s\n','m below Surface');
             fprintf(fid,'Site Mean Depth,%s\n','');
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

@@ -110,8 +110,8 @@ for i = 1:length(filelist)
                     end
                     
                     deployment = 'Fixed';
-                    dPos = 'm below Surface';
-                    Ref = 'Water Surface';
+                    dPos = '0.0m below Surface';
+                    Ref = 'm below Surface';
                     SMD = thedepth;
                     theheader = 'Depth';
                     

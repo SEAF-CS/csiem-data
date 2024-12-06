@@ -112,7 +112,7 @@ for i = 1:length(headers)
             fprintf(fid,'National Station ID,%s\n',sitekey.wwmsp2.(thesites{sitenum}).ID);
             fprintf(fid,'Site Description,%s\n',sitekey.wwmsp2.(thesites{sitenum}).Description);
             fprintf(fid,'Deployment,%s\n','Fixed');
-            fprintf(fid,'Deployment Position,%s\n','0m above Seabed');
+            fprintf(fid,'Deployment Position,%s\n','0.0m above Seabed');
             fprintf(fid,'Vertical Reference,%s\n','m above Seabed');
             fprintf(fid,'Site Mean Depth,%s\n','4.5');
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

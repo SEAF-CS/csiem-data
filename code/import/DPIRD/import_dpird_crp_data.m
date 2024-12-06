@@ -59,8 +59,8 @@ for i = 1:length(sites)
         fprintf(fid,'National Station ID,%s\n',sitekey.dpird.(catsites{j}).ID);
         fprintf(fid,'Site Description,%s\n',sitekey.dpird.(catsites{j}).Description);
         fprintf(fid,'Deployment,%s\n','Fixed');
-        fprintf(fid,'Deployment Position,%s\n','1m from Surface');
-        fprintf(fid,'Vertical Reference,%s\n','m from Surface');
+        fprintf(fid,'Deployment Position,%s\n','1.0m below Surface');
+        fprintf(fid,'Vertical Reference,%s\n','m below Surface');
         fprintf(fid,'Site Mean Depth,%s\n',[]);
         fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
         fprintf(fid,'Contact Email,\n');

@@ -90,8 +90,8 @@ for i = 1:length(thevars)
             fprintf(fid,'National Station ID,%s\n',sitekey.wwmsp3.(thesites{j}).ID);
             fprintf(fid,'Site Description,%s\n',sitekey.wwmsp3.(thesites{j}).Description);
             fprintf(fid,'Deployment,%s\n','Profile');
-            fprintf(fid,'Deployment Position,%s\n','m from Surface');
-            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Deployment Position,%s\n','0.0m from Surface');
+            fprintf(fid,'Vertical Reference,%s\n','m from Surface');
             fprintf(fid,'Site Mean Depth,%s\n','');
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,%s\n','');

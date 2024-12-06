@@ -48,8 +48,8 @@ for i = 1:length(headers)
     theheight_hourly(1:length(thedata_hourly),1) = 2;
     
     deployment = 'Fixed';
-    dPos = '2m above Ground';
-    Ref = 'm above Ground';
+    dPos = '2.0m above Seabed';
+    Ref = 'm above Seabed';
     SMD = [];
     theheader = 'Height';
     

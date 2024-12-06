@@ -39,8 +39,8 @@ if ~isempty(sts)
     fprintf(fid,'National Station ID,%s\n',SiteID);
     fprintf(fid,'Site Description,%s\n',SiteDesc);
     fprintf(fid,'Deployment,%s\n','Floating');
-    fprintf(fid,'Deployment Position,%s\n','0.3m from Surface');
-    fprintf(fid,'Vertical Reference,%s\n','m from Surface');
+    fprintf(fid,'Deployment Position,%s\n','0.3m below Surface');
+    fprintf(fid,'Vertical Reference,%s\n','m below Surface');
     fprintf(fid,'Site Mean Depth,%s\n',[]);
     fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
     fprintf(fid,'Contact Email,\n');

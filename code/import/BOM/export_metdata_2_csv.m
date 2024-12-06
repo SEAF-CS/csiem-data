@@ -138,12 +138,12 @@ for i = 1:length(sites)
                     fprintf(fid,'Lat,%8.8f\n',sitekey.bom.(thesites{foundsite}).Lat);
                     fprintf(fid,'Long,%8.8f\n',sitekey.bom.(thesites{foundsite}).Lon);
                     fprintf(fid,'Time Zone,GMT +8\n');
-                    fprintf(fid,'Vertical Datum, \n');
+                    fprintf(fid,'Vertical Datum,mAHD\n');
                     fprintf(fid,'National Station ID,%s\n',num2str(sitekey.bom.(thesites{foundsite}).ID));
                     fprintf(fid,'Site Description,%s\n',sitekey.bom.(thesites{foundsite}).Description);
                     fprintf(fid,'Deployment,%s\n','Fixed');
-                    fprintf(fid,'Deployment Position,%s\n','2m from Ground');
-                    fprintf(fid,'Vertical Reference,%s\n','m from Ground');
+                    fprintf(fid,'Deployment Position,%s\n','2.0m above Seabed');
+                    fprintf(fid,'Vertical Reference,%s\n','m above Seabed');
                     fprintf(fid,'Site Mean Depth,%s\n','');
                     
                     

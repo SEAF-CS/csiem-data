@@ -117,8 +117,8 @@ for i = 19:length(headers)
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosamnm.(thesiteval{foundstation}).ID,'_PROFILE']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosamnm.(thesiteval{foundstation}).Description);
             fprintf(fid,'Deployment,%s\n','Profile');
-            fprintf(fid,'Deployment Position,%s\n','m from Surface');
-            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');
+            fprintf(fid,'Vertical Reference,%s\n','m below Surface');
             fprintf(fid,'Site Mean Depth,%s\n','');
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

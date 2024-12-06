@@ -91,7 +91,7 @@ function import_phytoplankton_Group(WCNum,SheetString,DataLastRowNum)
                 if ~exist(fDATA,'file')
                     heightOrdepth = 'Depth';
                     Deployment = 'Integrated';
-                    VerticalRef = '';
+                    VerticalRef = 'Water Column';
                     %only gets in here when file doesnt exist already
                     fid = fopen(fDATA,'W');
                     fprintf(fid,"Date,%s,Data,QC\n",heightOrdepth);
@@ -122,8 +122,8 @@ function import_phytoplankton_Group(WCNum,SheetString,DataLastRowNum)
                         %%
                         fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
                         fprintf(fid,'Deployment,%s\n',Deployment);
-                        fprintf(fid,'Deployment Position,%s\n',['0.0',VerticalRef]); % '0.0m above Seabed' 0m below surface);
-                        fprintf(fid,'Vertical Reference,%s\n',VerticalRef);
+                        fprintf(fid,'Deployment Position,%s\n',[VerticalRef]); % '0.0m above Seabed' 0m below surface);
+                        fprintf(fid,'Vertical Reference,%s\n','Water Surface');
                         fprintf(fid,'Site Mean Depth,%4.4f\n',0);
                         %%
     

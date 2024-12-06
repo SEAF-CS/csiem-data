@@ -126,8 +126,8 @@ function headerfill(fid,filename,indir,SubSiteStruct,Varstruct,depth,varid)
     %%
     fprintf(fid,'Site Description,%s\n',SubSiteStruct.Description);
     fprintf(fid,'Deployment,%s\n','Floating');         
-    fprintf(fid,'Deployment Position,%s\n','8m below the surface');% '0.0m above Seabed');
-    fprintf(fid,'Vertical Reference,%s\n','m below surface');
+    fprintf(fid,'Deployment Position,%s\n','8.0m below Surface');% '0.0m above Seabed');
+    fprintf(fid,'Vertical Reference,%s\n','m below Surface');
     fprintf(fid,'Site Mean Depth,%4.4f\n',depth);
     %%
 
