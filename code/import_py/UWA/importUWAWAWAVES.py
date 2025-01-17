@@ -139,7 +139,10 @@ def import_uwa_wawaves(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                     all_var_info = pd.concat([all_var_info, var_info], ignore_index=True)
 
                     output_dir = dir.replace("data-lake","data-warehouse/csv")
-                    output_dir = output_dir.lower()
+                    
+                    SPLIT = output_dir.split("data-warehouse/csv")
+                    output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+
                     os.makedirs(output_dir, exist_ok=True)
                     output_filename = f'py_{"".join(file.split("-")[0:2])}_{name_conv.replace(" ","_")}_DATA.csv'.replace("/","")
                     print(output_dir)

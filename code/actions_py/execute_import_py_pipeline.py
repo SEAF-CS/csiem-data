@@ -1,25 +1,25 @@
 # Please set the following variables to True to run the import pipeline for the desired datasets
 
-import_nasa_ghrsst = False
-import_nasa_modis = False
+import_nasa_ghrsst = True
+import_nasa_modis = True
 
-import_moi_nemo = False
-import_moi_pisces = False
-import_moi_seapodym = False
+import_moi_nemo = True
+import_moi_pisces = True
+import_moi_seapodym = True
 
 import_esa_globcolor = True
-import_esa_sentinel = False
+import_esa_sentinel = True
 
-import_imos_soop = False
+import_imos_soop = True
 
-import_wamsi_wwmsp5_roms = False
+import_wamsi_wwmsp5_roms = True
 
-import_csiro_srfme = False
+import_csiro_srfme = True
 
-import_dep_smcws = False
+import_dep_smcws = True
 
-import_uwa_wawaves = False
-import_uwa_cwr = False
+import_uwa_wawaves = True
+import_uwa_cwr = True
 
 #________________________________________________________________________________________#
 # IMPORTING SCRIPTS

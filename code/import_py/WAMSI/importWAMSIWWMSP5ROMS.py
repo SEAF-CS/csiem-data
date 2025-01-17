@@ -43,7 +43,7 @@ def import_wamsi_wwmsp5_roms(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversi
         datapath_raw + "/data-warehouse/csv/wamsi/wwmsp5/roms/wa_roms_2km_2000-2022"
     ]
 
-    dataset = "WWMSP5"
+    dataset = "wwmsp5"
     wamsi_data = get_conversion_data(dataset,matlab_data_conversion_data)
     site_dataset = "WWMSP5ROMS"
     site_coordinates_data = get_site_coordinates(site_dataset,matlab_data_site_coordinates)
@@ -107,7 +107,10 @@ def import_wamsi_wwmsp5_roms(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversi
                         output_dir = output_dir.replace("perth_roms_0.5km_2023","perth")
                     elif "wa" in output_dir:
                         output_dir = output_dir.replace("wa_roms_2km_2000-2022","wa")
-                    output_dir = output_dir.lower()
+
+                    SPLIT = output_dir.split("data-warehouse/csv")
+                    output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+
                     os.makedirs(output_dir, exist_ok=True)
 
                     if not df_filtered.empty:

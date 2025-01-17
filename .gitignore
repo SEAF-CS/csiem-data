@@ -40,3 +40,4 @@ data-warehouse-bak
 code/import/TransportS3BucketIntoDataLake/CredsFile.py
 ._*
 data-mapping/*
+*.pyc

@@ -131,7 +131,8 @@ def import_uwa_cwr(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,ma
         # Now process and save the concatenated data
         for (file_name, location, sitecode, variable,name_conv), df_filtered in all_data.items():
             output_dir = dir.replace("data-lake","data-warehouse/csv")
-            output_dir = output_dir.lower()
+            SPLIT = output_dir.split("data-warehouse/csv")
+            output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
             os.makedirs(output_dir, exist_ok=True)
 
             output_filename = f'py_{file_name.replace("_","")}_{sitecode}_{name_conv.replace(" ","_")}_DATA.csv'.replace("/","")

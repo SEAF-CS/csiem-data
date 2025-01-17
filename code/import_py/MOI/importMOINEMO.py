@@ -87,8 +87,6 @@ def import_moi_nemo(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,m
                 # Replace empty cells with NaN
                 df_filtered.replace("", np.nan, inplace=True)
 
-                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
-
                 # Find matching variable in MATLAB data and get conversion factor
                 conv_factor = 1  # default value
                 for field in moi_data.dtype.names:
@@ -111,6 +109,9 @@ def import_moi_nemo(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,m
                     'Data': 'mean'
                 }).reset_index()
 
+                # Reorder
+                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
+
                 name_conv = get_variable_names(Id,matlab_data_variable_names)['Name'][0, 0][0]
                 # Append to the all_var_info DataFrame
                 var_info = pd.DataFrame({
@@ -127,7 +128,11 @@ def import_moi_nemo(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,m
                 print(df_filtered)
                 # Write the filtered DataFrame to a CSV file in the specified directory only if it's not empty
                 output_dir = dir.replace("data-lake","data-warehouse/csv")
-                output_dir = "/".join(output_dir.split("/")[:-1]).lower()
+                output_dir = "/".join(output_dir.split("/")[:-1]) #.lower()
+
+                SPLIT = output_dir.split("data-warehouse/csv")
+                output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+                
                 os.makedirs(output_dir, exist_ok=True)
                 if not df_filtered.empty:
                     df_filtered.to_csv(os.path.join(output_dir, output_filename), index=False)

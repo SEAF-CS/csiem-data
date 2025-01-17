@@ -115,7 +115,11 @@ def import_imos_soop(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,
 
                     # Write the filtered DataFrame to a CSV file in the specified directory only if it's not empty
                     output_dir = dir.replace("data-lake","data-warehouse/csv")
-                    output_dir = "/".join(output_dir.split("/")[:-1]).lower()
+                    output_dir = "/".join(output_dir.split("/")[:-1]) #.lower()
+
+                    SPLIT = output_dir.split("data-warehouse/csv")
+                    output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+                    
                     os.makedirs(output_dir, exist_ok=True)
                     
                     if not df_filtered.empty:

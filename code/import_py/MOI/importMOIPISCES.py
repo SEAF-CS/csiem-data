@@ -28,18 +28,18 @@ def import_moi_pisces(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data
     datapath,datapath_raw = get_datapath_from_matlab(ACTIONS_DIR,base_path)
     print(f"Current datapath: {datapath}")
     dir_lst = [
-        datapath + "/data-lake/MOI/PISCES/Model_bio/Points",
-        datapath + "/data-lake/MOI/PISCES/Model_bio/Polygon",
-        datapath + "/data-lake/MOI/PISCES/Model_car/Points",
-        datapath + "/data-lake/MOI/PISCES/Model_car/Polygon",
-        datapath + "/data-lake/MOI/PISCES/Model_co2/Points",
-        datapath + "/data-lake/MOI/PISCES/Model_co2/Polygon",
-        datapath + "/data-lake/MOI/PISCES/Model_Nut/Points",
-        datapath + "/data-lake/MOI/PISCES/Model_Nut/Polygon",
-        datapath + "/data-lake/MOI/PISCES/Model_optics/Points",
-        datapath + "/data-lake/MOI/PISCES/Model_optics/Polygon",
-        datapath + "/data-lake/MOI/PISCES/Model_pft/Points",
-        datapath + "/data-lake/MOI/PISCES/Model_pft/Polygon",
+        datapath + "/data-lake/MOI/PISCES/model_bio/Points",
+        datapath + "/data-lake/MOI/PISCES/model_bio/Polygon",
+        datapath + "/data-lake/MOI/PISCES/model_car/Points",
+        datapath + "/data-lake/MOI/PISCES/model_car/Polygon",
+        datapath + "/data-lake/MOI/PISCES/model_co2/Points",
+        datapath + "/data-lake/MOI/PISCES/model_co2/Polygon",
+        datapath + "/data-lake/MOI/PISCES/model_nut/Points",
+        datapath + "/data-lake/MOI/PISCES/model_nut/Polygon",
+        datapath + "/data-lake/MOI/PISCES/model_optics/Points",
+        datapath + "/data-lake/MOI/PISCES/model_optics/Polygon",
+        datapath + "/data-lake/MOI/PISCES/model_pft/Points",
+        datapath + "/data-lake/MOI/PISCES/model_pft/Polygon",
     ]
     dir_header = [ 
         datapath + "/data-warehouse/csv/moi/pisces/model_bio",
@@ -105,8 +105,6 @@ def import_moi_pisces(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data
                 # Replace empty cells with NaN
                 df_filtered.replace("", np.nan, inplace=True)
 
-                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
-
                 # Find matching variable in MATLAB data and get conversion factor
                 conv_factor = 1  # default value
                 for field in moi_data.dtype.names:
@@ -129,6 +127,9 @@ def import_moi_pisces(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data
                     'Data': 'mean'
                 }).reset_index()
 
+                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
+
+
                 name_conv = get_variable_names(Id,matlab_data_variable_names)['Name'][0, 0][0]
                 # Append to the all_var_info DataFrame
                 var_info = pd.DataFrame({
@@ -145,7 +146,11 @@ def import_moi_pisces(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data
                 print(df_filtered)
                 # Write the filtered DataFrame to a CSV file in the specified directory only if it's not empty
                 output_dir = dir.replace("data-lake","data-warehouse/csv")
-                output_dir = "/".join(output_dir.split("/")[:-1]).lower()
+                output_dir = "/".join(output_dir.split("/")[:-1]) #.lower()
+
+                SPLIT = output_dir.split("data-warehouse/csv")
+                output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+                
                 os.makedirs(output_dir, exist_ok=True)
                 if not df_filtered.empty:
                     df_filtered.to_csv(os.path.join(output_dir, output_filename), index=False)

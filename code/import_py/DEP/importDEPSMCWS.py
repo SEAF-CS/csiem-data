@@ -183,7 +183,11 @@ def import_dep_smcws(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,
             
             output_filename = f'py_{output_key}_DATA.csv'
             print(output_filename)
-            output_dir = dir.replace("data-lake","data-warehouse/csv").lower()
+            output_dir = dir.replace("data-lake","data-warehouse/csv") #.lower()
+
+            SPLIT = output_dir.split("data-warehouse/csv")
+            output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+            
             print(output_dir)
             os.makedirs(output_dir, exist_ok=True)
             output_path = os.path.join(output_dir, output_filename)

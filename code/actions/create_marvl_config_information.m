@@ -25,7 +25,8 @@ fprintf(fid,'master.varname = {...\n');
 
 vars = [];
 for i = 1:length(filelist)
-    load([filelist(i).folder,'/',filelist(i).name]);
+    filename = [filelist(i).folder,'/',filelist(i).name]
+    load(filename);
     sites = fieldnames(csiem);
     for j = 1:length(sites)
         thevars = fieldnames(csiem.(sites{j}));
@@ -92,3 +93,5 @@ fprintf(fid,'timeseries.end_plot_ID = %d;\n',length(uvars));
 %     'WQ_DIAG_OGM_DOP_SWI','DOPSWI';...
 %     'WQ_DIAG_PHS_FRP_DSF','FRPDSF';...
 %     };
+
+% fclose(fid);

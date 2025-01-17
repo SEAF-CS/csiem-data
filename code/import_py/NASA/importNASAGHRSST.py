@@ -82,7 +82,7 @@ def import_nasa_ghrsst(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                 # Replace empty cells with NaN
                 df_filtered.replace("", np.nan, inplace=True)
 
-                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
+                
 
                 # Find matching variable in MATLAB data and get conversion factor
                 conv_factor = 1  # default value
@@ -105,6 +105,7 @@ def import_nasa_ghrsst(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                 df_filtered = df_filtered.groupby(['Date', 'Depth', 'QC']).agg({
                     'Data': 'mean'
                 }).reset_index()
+                df_filtered = df_filtered.loc[:, ["Date", "Depth", "Data", "QC"]]
 
                 name_conv = get_variable_names(Id,matlab_data_variable_names)['Name'][0, 0][0]
                 # Append to the all_var_info DataFrame
@@ -124,7 +125,11 @@ def import_nasa_ghrsst(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                 print(df_filtered)
                 # Write the filtered DataFrame to a CSV file in the specified directory only if it's not empty
                 output_dir = dir.replace("data-lake","data-warehouse/csv")
-                output_dir = "/".join(output_dir.split("/")[:-2]).lower()
+                output_dir = "/".join(output_dir.split("/")[:-2])#.lower()
+
+                SPLIT = output_dir.split("data-warehouse/csv")
+                output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+
                 os.makedirs(output_dir, exist_ok=True)
                 if not df_filtered.empty:
                     df_filtered.to_csv(os.path.join(output_dir, output_filename), index=False)
