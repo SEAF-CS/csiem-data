@@ -1,7 +1,6 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS1,CS1,WWMSP5.1-WQ,-21.3219,-32.1463,115.6976,WAMSI: CS1
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS3,CS3,WWMSP5.1-WQ,-19.9949,-32.2522,115.729,WAMSI: CS3
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS4,CS4,WWMSP5.1-WQ,-11.4230,-32.2044,115.75,WAMSI: CS4
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS5,CS5,WWMSP5.1-WQ,-9.8907,-32.1541,115.7421,WAMSI: CS5
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS6,CS6,WWMSP5.1-WQ,-10.2203,-32.096,115.7392,WAMSI: CS6
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS7,CS7,WWMSP5.1-WQ,-5.9504,-32.24847,115.6853,WAMSI: CS7
+Commonwealth Scientific and Industrial Research Organisation,Strategic Research Fund for the Marine Environment (SRFME),Mooring_A,Mooring A,CSIRO-SRFME-MOORING,-17.0000,-31.5367,115.5583,CSIRO: Mooring_A
+Commonwealth Scientific and Industrial Research Organisation,Strategic Research Fund for the Marine Environment (SRFME),Mooring_C,Mooring C,CSIRO-SRFME-MOORING,-110.0000,-31.6817,115.2217,CSIRO: Mooring_C
+Western Australian Marine Science Institution,WWMSP5,wwmsp5_CS1,CS1,WAMSI-WWMSP5-WAVE,-21.3219,-32.1463,115.6976,WAMSI: wwmsp5_CS1
+Western Australian Marine Science Institution,WWMSP5,wwmsp5_CS4,CS4,WAMSI-WWMSP5-WAVE,-11.4230,-32.2044,115.75,WAMSI: wwmsp5_CS4
+Western Australian Marine Science Institution,WWMSP5,wwmsp5_CS6,CS6,WAMSI-WWMSP5-WAVE,-10.2203,-32.096,115.7392,WAMSI: wwmsp5_CS6

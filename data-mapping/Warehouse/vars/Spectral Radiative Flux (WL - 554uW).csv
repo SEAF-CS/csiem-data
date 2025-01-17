@@ -1,3 +1,3 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf,KwinanaShelf,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf_shade,KwinanaShelf_shade,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf_shade
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf,KwinanaShelf,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf_shade,KwinanaShelf_shade,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf_shade

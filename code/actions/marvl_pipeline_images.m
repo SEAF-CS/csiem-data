@@ -235,7 +235,7 @@ transect.add_obs_num = 1;
 
 % ___
 transect.outputdirectory = [marvldatapath,'/outputs/transect_test/RAW/'];
-transect.htmloutput = [marvldatapath,'../outputs/transect_test/HTML/'];
+transect.htmloutput = [marvldatapath,'/outputs/transect_test/HTML/'];
 
 % plotting configuration
 transect.dimc = [0.9 0.9 0.9]; % dimmest (lightest) color

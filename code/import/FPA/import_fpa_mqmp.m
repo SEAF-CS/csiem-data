@@ -6,7 +6,7 @@ load ../../actions/agency.mat;
 
 run('../../actions/csiem_data_paths.m')
 xlsfilename = [datapath,'data-lake/FPA/MQMP/MQMP2002-2021_WQ_20210728.xlsx'];
-%'                D:\csiem\data-lake\FPA\MQMP\MQMP2002-2021_WQ_20210728.xlsx';
+
 
 sheetname = {'InnerHarbourWQ';...
     'RousHeadHarbour';...
@@ -22,7 +22,7 @@ outdir = [datapath,'data-warehouse/csv/fpa/mqmp/'];mkdir(outdir);
 rownumber = [452,93,277,265];
 
 fpasites = fieldnames(sitekey.fpamqmp);
-fpavars = fieldnames(agency.fpamqmp);
+fpavars = fieldnames(agency.fpa);
 
 for i = 1:length(sheetname)
     
@@ -63,13 +63,13 @@ for i = 1:length(sheetname)
             %if strcmpi(headers{k},'JUNK') == 0
                 foundvar = [];
                 for kk = 1:length(fpavars)
-                    if strcmpi(agency.fpamqmp.(fpavars{kk}).Old,headers{k}) == 1
+                    if strcmpi(agency.fpa.(fpavars{kk}).Old,headers{k}) == 1
                         foundvar = kk;
                     end
                 end
                 if ~isempty(foundvar)
-                varID = agency.fpamqmp.(fpavars{foundvar}).ID;
-                varConv = agency.fpamqmp.(fpavars{foundvar}).Conv;
+                varID = agency.fpa.(fpavars{foundvar}).ID;
+                varConv = agency.fpa.(fpavars{foundvar}).Conv;
                 varname = varkey.(varID).Name;
                 varstring = [varname,' (',varkey.(varID).Unit,')'];
                 
@@ -119,14 +119,14 @@ for i = 1:length(sheetname)
                     filename
                     
                     fid = fopen(headerfile,'wt');
-                    fprintf(fid,'Agency Name,Fremantle Port Authorityn\n');
+                    fprintf(fid,'Agency Name,Fremantle Port Authority\n');
                     
                     fprintf(fid,'Agency Code,FPA\n');
-                    fprintf(fid,'Program,Marine Quality Monitoring Program\n');
-                    fprintf(fid,'Project,MQMP\n');
+                    fprintf(fid,'Program,MQMP\n');
+                    fprintf(fid,'Project,mqmp\n');
                     fprintf(fid,'Tag,FPA-MQMP\n');
                     fprintf(fid,'Data File Name,%s\n',filename);
-                    fprintf(fid,'Location,%s\n',['data-warehouse/csv/fpa/mqmp']);
+                    fprintf(fid,'Location,%s\n',outdir);
                     
                     
                     fprintf(fid,'Station Status,Static\n');

@@ -1,10 +1,11 @@
 # WAMSi Theme 5 Data Import
 
-The raw data has been split into 3 catagories:
+The raw data has been split into 4 catagories:
 
 - WQ
 - ADCP
 - Met
+- Waves
 
 ## WQ
 
@@ -49,3 +50,6 @@ The exact deployment height of the sensors is unknown and not listed in the Them
 ### Conversions
 
 ![image](https://github.com/AquaticEcoDynamics/csiem-data/assets/19967037/10218a8e-9bd9-41e9-91c6-e8efeaa6f3f9)
+
+## Waves
+[Hyperlink to Waves Readme](./Waves/readme.md)

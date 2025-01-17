@@ -24,6 +24,25 @@ sitekey.bmtswan = read_site_sheet('BMT-SWAN');
 sitekey.wwmsp1wrf = read_site_sheet('WWMSP1.1-WFR');
 sitekey.bombarraftv = read_site_sheet('BOM-BARRA')
 
+sitekey.wwmsp5waves = read_site_sheet('WWMSP5.2WAVES');
+sitekey.bmtswan = read_site_sheet('BMT-SWAN');
+sitekey.wwmsp1wrf = read_site_sheet('WWMSP1.1-WFR');
+sitekey.bombarraftv = read_site_sheet('BOM-BARRA');
+sitekey.WWMSP31SedimentDeposition = read_site_sheet('WWMSP3.1-SedimentDeposition');
+sitekey.AIMS = read_site_sheet('AIMS');
+sitekey.DWERPhyto = read_site_sheet('DWERPHYTO');
+sitekey.IMOS_Phytoplankton =read_site_sheet("LachyIMOSPHYTO");
+sitekey.WCWA2Phyto = read_site_sheet("WCWA2Phyto");
+sitekey.WCWA3Phyto = read_site_sheet("WCWA3Phyto");
+sitekey.SWANEST = read_site_sheet("SWANEST");
+sitekey.VirtualSensors = read_site_sheet("VirtualSensors");
+
+sitekey.IMOSSOOP = read_site_sheet("IMOSSOOP");
+sitekey.WWMSP5ROMS = read_site_sheet("WWMSP5ROMS")
+sitekey.CSIRO = read_site_sheet("CSIRO")
+sitekey.DEP = read_site_sheet("DEP")
+sitekey.UWA = read_site_sheet("UWA")
+
 
 
 save sitekey.mat sitekey -mat;

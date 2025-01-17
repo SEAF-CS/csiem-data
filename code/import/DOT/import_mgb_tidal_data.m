@@ -1,6 +1,6 @@
 function import_mgb_tidal_data
     run(['../../actions/csiem_data_paths.m'])
-main_dir = [datapath,'data-lake/DOT/tide/RKMGL01/'];
+main_dir = [datapath,'data-lake/DOT/TIDE/tide/RKMGL01/'];
 %'D:\csiem/data-lake/dot/tide/RKMGL01/';
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];
@@ -91,8 +91,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename = '../../../../data-warehouse/csv/dot/tide/RKMGL01_Tidal_Height_DATA.csv';
-%'D:\csiem/data-warehouse/csv/dot/tide/RKMGL01_Tidal_Height_DATA.csv';
+filename = [outdir,'RKMGL01_Tidal_Height_DATA.csv'];
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');
@@ -104,13 +103,13 @@ for i = 1:length(ggg)
 end
 fclose(fid);
 
-headerfile = regexprep(filename,'_DATA','_HEADER');
+headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
 
 fid = fopen(headerfile,'wt');
 fprintf(fid,'Agency Name,Department of Transport\n');
 fprintf(fid,'Agency Code,DOT\n');
-fprintf(fid,'Program,Coastal Data\n');
-fprintf(fid,'Project,Tide\n');
+fprintf(fid,'Program,TIDE\n');
+fprintf(fid,'Project,tide\n');
 fprintf(fid,'Tag,DOT-TIDE\n');
 fprintf(fid,'Data File Name,RKMGL01_Tidal_Height.csv\n');
 fprintf(fid,'Location,data-warehouse/csv/dot/tide\n');

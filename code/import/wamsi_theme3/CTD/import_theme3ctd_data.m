@@ -8,13 +8,12 @@ load ../../../../code/actions/agency.mat;
 
 run('../../../actions/csiem_data_paths.m')
 
-outdir = [datapath,'data-warehouse/csv_holding/wamsi/wwmsp3.1_ctd/'];mkdir(outdir);
-outdir_main = [datapath,'data-warehouse/csv/wamsi/wwmsp3.1_ctd/'];mkdir(outdir_main);
-
-%'D:\csiem\data-warehouse\csv_holding\wamsi\wwmsp3.1_ctd\';mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv_holding/wamsi/wwmsp3/ctd/'];mkdir(outdir);
+outdir_main = [datapath,'data-warehouse/csv/wamsi/wwmsp3/ctd/'];mkdir(outdir_main);
 
 
 data = readtable([outdir,'wwmsp_theme3.1_CTD_reformat_bbusch_working.csv']);
+
 
 sites = data.Site;
 sites = regexprep(sites,'site','');
@@ -22,27 +21,43 @@ sites = regexprep(sites,'OA1_DEP','OA1-DEP');
 sites = regexprep(sites,'OA1_Dep','OA1-DEP');
 sites = regexprep(sites,'1310','s1310');
 
-thevars = fieldnames(agency.theme3ctd);
+VarfeildNames = fieldnames(agency.wwmsp3);
+thevars = unique(data{:,8});
+Element2Delete = strcmp(thevars, 'Cond uncomp | (mS/cm)');
+thevars = thevars(~Element2Delete)
+% in the process of moving to a unified agency sorted varkey, not import sorted varkey
+% this code base broke because it iterated over the variables in its import sheet in varkey.
+% in the varkey we only used the "Cond uncomp | (uS/cm)" 
+% so i need to remove "Cond uncomp | (mS/cm)" from "thevars" variable to match how it would have looped before the var key changes.
+
 thesites = fieldnames(sitekey.wwmsp3);
 
-tag = 'WWMSP-3.1-CTD';
+
+tag = 'WAMSI-WWMSP3-CTD';
 
 for i = 1:length(thevars)
+    FoundAgencyInd = [];
+    for agencyind = 1:length(VarfeildNames)
+        if strcmp(thevars{i},agency.wwmsp3.(VarfeildNames{agencyind}).Old) == 1 
+            FoundAgencyInd = agencyind;
+        end
+    end
+
     for j = 1:length(thesites)
         
-        theind = find(strcmpi(data.Variable,agency.theme3ctd.(thevars{i}).Old) == 1 & ...
+        theind = find(strcmpi(data.Variable,thevars{i}) == 1 & ...
             strcmpi(sites,sitekey.wwmsp3.(thesites{j}).ID) == 1);
         
         mdate = datenum(data.Date(theind),'dd-mm-yyyy HH:MM:SS');
-        mdata = data.ReadingValue(theind) * agency.theme3ctd.(thevars{i}).Conv;
+        mdata = data.ReadingValue(theind) * agency.wwmsp3.(VarfeildNames{FoundAgencyInd}).Conv;
         mdepth = data.Depth_m_(theind);
         
         [mdate,sortind] = unique(mdate);
         mdata = mdata(sortind);
         mdepth = mdepth(sortind);
         
-        varname = varkey.(agency.theme3ctd.(thevars{i}).ID).Name;
-        fullvar = [varname,' (',varkey.(agency.theme3ctd.(thevars{i}).ID).Unit,')'];
+        varname = varkey.(agency.wwmsp3.(VarfeildNames{FoundAgencyInd}).ID).Name;
+        fullvar = [varname,' (',varkey.(agency.wwmsp3.(VarfeildNames{FoundAgencyInd}).ID).Unit,')'];
         
         filename = [outdir_main,thesites{j},'_',regexprep(varname,' ','_'),'_DATA.csv'];
         
@@ -60,11 +75,11 @@ for i = 1:length(thevars)
             fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
             fprintf(fid,'Agency Code,WAMSI\n');
-            fprintf(fid,'Program,WAMSI Westport Marine Science Program\n');
-            fprintf(fid,'Project,WWMSP3.1\n');
-            fprintf(fid,'Tag,WWMSP-3.1-CTD\n');
+            fprintf(fid,'Program,WWMSP3\n');
+            fprintf(fid,'Project,WWMSP3.1_CTD\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP3-CTD\n');
             fprintf(fid,'Data File Name,%s\n',filename);
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/wamsi/wwmsp3.1_ctd']);
+            fprintf(fid,'Location,%s\n',outdir_main);
             
             
             fprintf(fid,'Station Status,Static\n');
@@ -75,14 +90,14 @@ for i = 1:length(thevars)
             fprintf(fid,'National Station ID,%s\n',sitekey.wwmsp3.(thesites{j}).ID);
             fprintf(fid,'Site Description,%s\n',sitekey.wwmsp3.(thesites{j}).Description);
             fprintf(fid,'Deployment,%s\n','Profile');
-            fprintf(fid,'Deployment Position,%s\n','m from Surface');
-            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Deployment Position,%s\n','0.0m from Surface');
+            fprintf(fid,'Vertical Reference,%s\n','m from Surface');
             fprintf(fid,'Site Mean Depth,%s\n','');
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,%s\n','');
-            fprintf(fid,'Variable ID,%s\n',agency.theme3ctd.(thevars{i}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.wwmsp3.(VarfeildNames{FoundAgencyInd}).ID);
             
-            fprintf(fid,'Data Category,%s\n',varkey.(agency.theme3ctd.(thevars{i}).ID).Category);
+            fprintf(fid,'Data Category,%s\n',varkey.(agency.wwmsp3.(VarfeildNames{FoundAgencyInd}).ID).Category);
             
             
             SD = mean(diff(mdate));

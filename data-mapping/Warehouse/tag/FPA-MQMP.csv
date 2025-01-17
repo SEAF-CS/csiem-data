@@ -1,29 +1,29 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Fremantle Port Authorityn,Marine Quality Monitoring Program,BR1,BR1,FPA-MQMP,-11.6952,-32.0195599,115.7834743,BR1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,DW1,DW1,FPA-MQMP,-16.1375,-32.0008087,115.6944252,DW1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,DW2,DW2,FPA-MQMP,-17.5568,-31.9798619,115.6917342,DW2
-Fremantle Port Authorityn,Marine Quality Monitoring Program,DW3,DW3,FPA-MQMP,-17.9460,-31.9659546,115.67513,DW3
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP1,FP1,FPA-MQMP,-9.1064,-32.0574824,115.7253161,FP1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP10,FP10,FPA-MQMP,-15.7272,-32.0458921,115.7462075,FP10
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP3,FP3,FPA-MQMP,-5.4590,-32.0546386,115.7367555,FP3
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP4.1,FP4.1,FPA-MQMP,-9.6100,-32.049421,115.7452335,FP4.1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP4.2,FP4.2,FPA-MQMP,-8.9874,-32.0496742,115.7447605,FP4.2
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP5,FP5,FPA-MQMP,2.0000,-32.0408598,115.7481017,FP5
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP6,FP6,FPA-MQMP,0.0000,-32.0499246,115.740292,FP6
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP7,FP7,FPA-MQMP,-9.1361,-32.0420042,115.7524677,FP7
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP8,FP8,FPA-MQMP,0.0000,-32.0463269,115.7426755,FP8
-Fremantle Port Authorityn,Marine Quality Monitoring Program,FP9,FP9,FPA-MQMP,1.0000,-32.0436055,115.7453998,FP9
-Fremantle Port Authorityn,Marine Quality Monitoring Program,GR1,GR1,FPA-MQMP,-17.1757,-32.0235807,115.7198707,GR1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,KBJ1,KBJ1,FPA-MQMP,-10.6722,-32.2390133,115.7560601,KBJ1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,KBJ2,KBJ2,FPA-MQMP,-13.2048,-32.2410672,115.7549072,KBJ2
-Fremantle Port Authorityn,Marine Quality Monitoring Program,KBJ3,KBJ3,FPA-MQMP,-13.2403,-32.243459,115.7544785,KBJ3
-Fremantle Port Authorityn,Marine Quality Monitoring Program,KBT1,KBT1,FPA-MQMP,-11.1744,-32.2085958,115.7646391,KBT1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,KBT2,KBT2,FPA-MQMP,-11.3169,-32.21066,115.7604122,KBT2
-Fremantle Port Authorityn,Marine Quality Monitoring Program,KBT3,KBT3,FPA-MQMP,-10.9188,-32.2109817,115.7622825,KBT3
-Fremantle Port Authorityn,Marine Quality Monitoring Program,PB1,PB1,FPA-MQMP,-13.8496,-32.1236013,115.7021541,PB1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,PB2,PB2,FPA-MQMP,-11.3189,-32.1313039,115.7039492,PB2
-Fremantle Port Authorityn,Marine Quality Monitoring Program,RH1,RH1,FPA-MQMP,-7.3886,-32.0513613,115.7308832,RH1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,RH2,RH2,FPA-MQMP,-5.7470,-32.0488936,115.7330189,RH2
-Fremantle Port Authorityn,Marine Quality Monitoring Program,RH3,RH3,FPA-MQMP,-7.6424,-32.0396559,115.7361151,RH3
-Fremantle Port Authorityn,Marine Quality Monitoring Program,SB1,SB1,FPA-MQMP,-15.3345,-32.0829759,115.6929513,SB1
-Fremantle Port Authorityn,Marine Quality Monitoring Program,SB2,SB2,FPA-MQMP,-13.4347,-32.0952884,115.6956044,SB2
+Fremantle Port Authority,MQMP,BR1,BR1,FPA-MQMP,-11.6952,-32.0195599,115.7834743,BR1
+Fremantle Port Authority,MQMP,DW1,DW1,FPA-MQMP,-16.1375,-32.0008087,115.6944252,DW1
+Fremantle Port Authority,MQMP,DW2,DW2,FPA-MQMP,-17.5568,-31.9798619,115.6917342,DW2
+Fremantle Port Authority,MQMP,DW3,DW3,FPA-MQMP,-17.9460,-31.9659546,115.67513,DW3
+Fremantle Port Authority,MQMP,FP1,FP1,FPA-MQMP,-9.1064,-32.0574824,115.7253161,FP1
+Fremantle Port Authority,MQMP,FP10,FP10,FPA-MQMP,-15.7272,-32.0458921,115.7462075,FP10
+Fremantle Port Authority,MQMP,FP3,FP3,FPA-MQMP,-5.4590,-32.0546386,115.7367555,FP3
+Fremantle Port Authority,MQMP,FP4.1,FP4.1,FPA-MQMP,-9.6100,-32.049421,115.7452335,FP4.1
+Fremantle Port Authority,MQMP,FP4.2,FP4.2,FPA-MQMP,-8.9874,-32.0496742,115.7447605,FP4.2
+Fremantle Port Authority,MQMP,FP5,FP5,FPA-MQMP,2.0000,-32.0408598,115.7481017,FP5
+Fremantle Port Authority,MQMP,FP6,FP6,FPA-MQMP,0.0000,-32.0499246,115.740292,FP6
+Fremantle Port Authority,MQMP,FP7,FP7,FPA-MQMP,-9.1361,-32.0420042,115.7524677,FP7
+Fremantle Port Authority,MQMP,FP8,FP8,FPA-MQMP,0.0000,-32.0463269,115.7426755,FP8
+Fremantle Port Authority,MQMP,FP9,FP9,FPA-MQMP,1.0000,-32.0436055,115.7453998,FP9
+Fremantle Port Authority,MQMP,GR1,GR1,FPA-MQMP,-17.1757,-32.0235807,115.7198707,GR1
+Fremantle Port Authority,MQMP,KBJ1,KBJ1,FPA-MQMP,-10.6722,-32.2390133,115.7560601,KBJ1
+Fremantle Port Authority,MQMP,KBJ2,KBJ2,FPA-MQMP,-13.2048,-32.2410672,115.7549072,KBJ2
+Fremantle Port Authority,MQMP,KBJ3,KBJ3,FPA-MQMP,-13.2403,-32.243459,115.7544785,KBJ3
+Fremantle Port Authority,MQMP,KBT1,KBT1,FPA-MQMP,-11.1744,-32.2085958,115.7646391,KBT1
+Fremantle Port Authority,MQMP,KBT2,KBT2,FPA-MQMP,-11.3169,-32.21066,115.7604122,KBT2
+Fremantle Port Authority,MQMP,KBT3,KBT3,FPA-MQMP,-10.9188,-32.2109817,115.7622825,KBT3
+Fremantle Port Authority,MQMP,PB1,PB1,FPA-MQMP,-13.8496,-32.1236013,115.7021541,PB1
+Fremantle Port Authority,MQMP,PB2,PB2,FPA-MQMP,-11.3189,-32.1313039,115.7039492,PB2
+Fremantle Port Authority,MQMP,RH1,RH1,FPA-MQMP,-7.3886,-32.0513613,115.7308832,RH1
+Fremantle Port Authority,MQMP,RH2,RH2,FPA-MQMP,-5.7470,-32.0488936,115.7330189,RH2
+Fremantle Port Authority,MQMP,RH3,RH3,FPA-MQMP,-7.6424,-32.0396559,115.7361151,RH3
+Fremantle Port Authority,MQMP,SB1,SB1,FPA-MQMP,-15.3345,-32.0829759,115.6929513,SB1
+Fremantle Port Authority,MQMP,SB2,SB2,FPA-MQMP,-13.4347,-32.0952884,115.6956044,SB2

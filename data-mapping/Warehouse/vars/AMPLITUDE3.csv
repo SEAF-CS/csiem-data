@@ -1,3 +1,3 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS5,CS5,WWMSP5.1-AWAC,-9.8907,-32.1541,115.7421,WAMSI: CS5
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS7,CS7,WWMSP5.1-AWAC,-5.9504,-32.24847,115.6853,WAMSI: CS7
+Western Australian Marine Science Institution,WWMSP5,CS5,CS5,WAMSI-WWMSP5-AWAC,-9.8907,-32.1541,115.7421,WAMSI: CS5
+Western Australian Marine Science Institution,WWMSP5,CS7,CS7,WAMSI-WWMSP5-AWAC,-5.9504,-32.24847,115.6853,WAMSI: CS7

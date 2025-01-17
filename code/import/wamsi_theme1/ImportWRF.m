@@ -3,17 +3,17 @@ function ImportWRF()
     load ../../actions/agency.mat;
      load ../../actions/sitekey.mat;
 
-    VarListStruct = agency.wwmsp1wrf;
+    VarListStruct = agency.wwmsp1;
     SiteListStruct = sitekey.wwmsp1wrf;
 
     run('../../actions/csiem_data_paths.m')
-    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp1.1_wrf/'];
+    outdir = [datapath,'data-warehouse/csv/wamsi/wwmsp1/wrf/'];
     mkdir(outdir);
 
 
     
     %% Get list of data files
-    dataDir = [datapath,'data-lake/WAMSI/WWMSP1.1 - WRF/'];
+    dataDir = [datapath,'data-lake/WAMSI/WWMSP1/WWMSP1.1_WRF/'];
     fileCell = {dir(dataDir).name}';
     fileCell = fileCell(3:end) %skips ./ and ../
 
@@ -79,7 +79,7 @@ function ImportWRF()
                     fprintf(fid,'Date,Depth,Data,QC\n');
 
                     fid2 = fopen(fnameDataRate,'W');
-                    fprintf(fid,'Date,Depth,Data,QC\n');
+                    fprintf(fid2,'Date,Depth,Data,QC\n');%Change by BB
                     % MonthDateVec,MonthDataVec,dMonthDataVec
 
                     for nn = 1:length(MonthDateVec)
@@ -235,7 +235,7 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
 
     base = [outpath,filesite,'_',filevar];
     data = [base,'_DATA.csv'];
-    header = [base,'_Header.csv'];
+    header = [base,'_HEADER.csv'];
 
 end
 
@@ -252,5 +252,5 @@ function [data,header] = PrecipName(outpath,SiteStruct,VarStruct,Month)
 
     base = [outpath,filesite,'_',filevar,'_',MonthList{Month}];
     data = [base,'_DATA.csv'];
-    header = [base,'_Header.csv'];
+    header = [base,'_HEADER.csv'];
 end

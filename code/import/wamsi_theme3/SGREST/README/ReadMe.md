@@ -19,5 +19,5 @@ this was converted to lat and long using [https://www.zonums.com/online/coords/c
 
 
 ## Conversions
-[Conversion table](./SEDPSD%20Conversions.png)
+![Conversion table](./SEDPSD%20Conversions.png)
 (same variables as SEDPSD so resusing the conversion table)

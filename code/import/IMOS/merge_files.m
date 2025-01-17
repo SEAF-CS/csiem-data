@@ -3,10 +3,8 @@ function merge_files
 addpath(genpath('../../functions/'));
 
 run('../../actions/csiem_data_paths.m')
-inpath = [datapath,'data-warehouse/csv_holding/imos/amnmprofile/'];
-%'D:/csiem/data-warehouse/csv_holding/imos/amnmprofile/';
-outpath = [datapath,'data-warehouse/csv/imos/amnmprofile']; mkdir(outpath);
-%'D:/csiem/data-warehouse/csv/imos/amnmprofile/'; mkdir(outpath);
+inpath = [datapath,'data-warehouse/csv_holding/imos/amnm/amnmprofile/'];
+outpath = [datapath,'data-warehouse/csv/imos/amnm/amnmprofile/']; mkdir(outpath);
 
 temp = fullfile(inpath, '**/*_DATA.csv')
 filelist = dir(fullfile(inpath, '**/*_DATA.csv'));  %get list of files and folders in any subfolder

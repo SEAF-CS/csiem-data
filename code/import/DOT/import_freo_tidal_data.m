@@ -2,7 +2,7 @@ function import_freo_tidal_data
     % /Projects2/csiem-data-hub/git/code/import/DOT
 
     run(['../../actions/csiem_data_paths.m'])
-main_dir = [datapath,'data-lake/DOT/tide/FFFBH01/'];
+main_dir = [datapath,'data-lake/DOT/TIDE/tide/FFFBH01/'];
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];
 
@@ -93,9 +93,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename =     '../../../../data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
-%'/Projects2/csiem-data-hub/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
-%'D:\csiem/data-warehouse/csv/dot/tide/FFFBH01_Tidal_Height_DATA.csv';
+filename =     [outdir,'FFFBH01_Tidal_Height_DATA.csv'];
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');
@@ -107,13 +105,13 @@ for i = 1:length(ggg)
 end
 fclose(fid);
 
-headerfile = regexprep(filename,'_DATA','_HEADER');
+headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
 
 fid = fopen(headerfile,'wt');
 fprintf(fid,'Agency Name,Department of Transport\n');
 fprintf(fid,'Agency Code,DOT\n');
-fprintf(fid,'Program,Coastal Data\n');
-fprintf(fid,'Project,Tide\n');
+fprintf(fid,'Program,TIDE\n');
+fprintf(fid,'Project,tide\n');
 fprintf(fid,'Tag,DOT-TIDE\n');
 
 fprintf(fid,'Data File Name,FFFBH01_Tidal_Height.csv\n');

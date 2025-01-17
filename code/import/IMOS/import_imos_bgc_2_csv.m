@@ -3,15 +3,13 @@ function import_imos_bgc_2_csv
 addpath(genpath('../../functions/'));
 
 run('../../actions/csiem_data_paths.m')
-thefile = [datapath,'data-lake/IMOS/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv'];
-%'D:/csiem/data-lake/imos/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv';
+thefile = [datapath,'data-lake/IMOS/REF/bgc/IMOS_-_Combined_Biogeochemical_parameters_(reference_stations)-All_biogeochemical_parameters.csv'];
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath = [datapath,'data-warehouse/csv/imos/bgc/'];
-%'D:/csiem/data-warehouse/csv/imos/bgc/';
+outpath = [datapath,'data-warehouse/csv/imos/ref/bgc/'];
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
@@ -20,7 +18,7 @@ end
 
 thesiteval = fieldnames(sitekey.imosbgc);
 thevarval = fieldnames(varkey);
-theagencyval = fieldnames(agency.imosbgc);
+theagencyval = fieldnames(agency.IMOS);
 Test = readtable(thefile);
 % Test.Properties.VariableNames'
 %[~,headers] = xlsread(thefile,'A1:CE1');
@@ -52,7 +50,7 @@ for i = 9:width(Test)
         foundvar = 0;
         
         for k = 1:length(theagencyval)
-            if strcmpi(agency.imosbgc.(theagencyval{k}).Old,headers{i}) == 1
+            if strcmpi(agency.IMOS.(theagencyval{k}).Old,headers{i}) == 1
                 foundvar = k;
             end
         end
@@ -66,7 +64,7 @@ for i = 9:width(Test)
             
             thefoundvar = 0;
             for nn = 1:length(thevarval)
-                if strcmpi(thevarval{nn},agency.imosbgc.(theagencyval{foundvar}).ID) == 1
+                if strcmpi(thevarval{nn},agency.IMOS.(theagencyval{foundvar}).ID) == 1
                     thefoundvar = nn;
                 end
             end
@@ -76,8 +74,8 @@ for i = 9:width(Test)
             
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
-            thedata_raw = Test.(headers{i})(sss) * agency.imosbgc.(theagencyval{foundvar}).Conv;
-            %thedata_raw = snum(sss,i-6) * agency.imosbgc.(theagencyval{foundvar}).Conv;
+            thedata_raw = Test.(headers{i})(sss) * agency.IMOS.(theagencyval{foundvar}).Conv;
+            %thedata_raw = snum(sss,i-6) * agency.IMOS.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
             
@@ -107,11 +105,11 @@ for i = 9:width(Test)
             fid = fopen(headerfile,'wt');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
             fprintf(fid,'Agency Code,IMOS\n');
-            fprintf(fid,'Program,BGC\n');
-            fprintf(fid,'Project,BGC\n');
-            fprintf(fid,'Tag,IMOS-BGC\n');
+            fprintf(fid,'Program,REF\n');
+            fprintf(fid,'Project,bgc\n');
+            fprintf(fid,'Tag,IMOS-REF-BGC\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('bgc')]);
+            fprintf(fid,'Location,%s\n',outpath);
             
             
             fprintf(fid,'Station Status,Inactive\n');
@@ -122,13 +120,13 @@ for i = 9:width(Test)
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosbgc.(thesiteval{foundstation}).ID,'_BGC']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosbgc.(thesiteval{foundstation}).Description);
             fprintf(fid,'Deployment,%s\n','Profile');
-            fprintf(fid,'Deployment Position,%s\n','m from Surface');
-            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');
+            fprintf(fid,'Vertical Reference,%s\n','m below Surface');
             fprintf(fid,'Site Mean Depth,%s\n','');
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
-            fprintf(fid,'Variable ID,%s\n',agency.imosbgc.(theagencyval{foundvar}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.IMOS.(theagencyval{foundvar}).ID);
             
             fprintf(fid,'Data Category,%s\n',varkey.(thevarval{thefoundvar}).Category);
             

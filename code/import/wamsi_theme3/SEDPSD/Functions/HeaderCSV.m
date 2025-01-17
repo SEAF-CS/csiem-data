@@ -1,4 +1,5 @@
-function HeaderCSV(InputFlatFile,VarKey)
+function HeaderCSV(InputFlatFile,VarKey,varkey)
+    %% this has been hacked up, VarKey was a temp fix that i created, but i needed more details which are stored in the varkey matfile, so i needed both. 
     Table = readtable(InputFlatFile);
     ColLetter = char(width(Table)+ 64); %1->A 2->B
     Range = ['A1:', ColLetter ,'1']; 
@@ -8,7 +9,7 @@ function HeaderCSV(InputFlatFile,VarKey)
     [UniqueSites,SiteIndex,~] = unique(table2array(Table(:,"Var4")));
     
     run('../../../actions/csiem_data_paths.m')
-    OutDir = [datapath,'data-warehouse/csv/wamsi/wwmsp3.1_SEDPSD/'];
+    OutDir = [datapath,'data-warehouse/csv/wamsi/wwmsp3/sedpsd/'];
     mkdir(OutDir);
 
     %% Create Header and CSV
@@ -32,7 +33,7 @@ function HeaderCSV(InputFlatFile,VarKey)
                 ID = '';%"National Station ID";
                 Desc = '';%"Site description";
                 varID = VarKey{VarKeyInd,1};
-                Cat = '';%'Data catergory';
+                Cat = varkey.(varID).Category;%'Data catergory';
                 varstring = VarKey{VarKeyInd,2};
                 wdate = '';
                 sitedepth = '';
@@ -50,11 +51,7 @@ function HeaderCSV(InputFlatFile,VarKey)
         fileName = [OutDir,char(SiteName) ,'_',char(VarName)];
                 fileName = filenameGoodifier(fileName);
 
-
-            
         fid = fopen([fileName,'_DATA.csv'],'a');
-
-    
         
         %Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd');
         Date = datestr(table2array(Table(DataNum,'Var1')),'yyyy-mm-dd HH:MM:SS');

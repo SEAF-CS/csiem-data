@@ -127,6 +127,10 @@ for ag = 1:length(unique_agency)
             for k = 1:length(tt.Depth)
                 csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
             end
+        case 'Satelite'
+            for k = 1:length(tt.Depth)
+                csiem.Depth(k,1) = str2double(tt.Depth{k}) * -1;
+            end
         otherwise
             
     end
@@ -171,7 +175,7 @@ for ag = 1:length(unique_agency)
     clear csiem;
 end
 
-outfile = [outfilepath,'csiem_',unique_agency{ag},'_public.parq'];
+outfile = [outfilepath,'csiem_',unique_agency{ag},'_public.parquet'];
 newtable = struct2table(tab);
 
 parquetwrite(outfile,newtable); clear newtable;

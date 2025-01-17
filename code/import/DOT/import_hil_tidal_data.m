@@ -1,12 +1,10 @@
 function import_hil_tidal_data
     run(['../../actions/csiem_data_paths.m'])
 %4 ../ gets back to Csiem-data-hub
- main_dir = [datapath,'data-lake/DOT/tide/HLHIL01/'];
-%'D:\csiem/data-lake/dot/tide/HLHIL01/';
+ main_dir = [datapath,'data-lake/DOT/TIDE/tide/HLHIL01/'];
 
 
 outdir = [datapath,'data-warehouse/csv/dot/tide/'];
-%'D:\csiem/data-warehouse/csv/dot/tide/';
 if ~exist(outdir,'dir')
     mkdir(outdir);
 end
@@ -93,8 +91,7 @@ theheader = 'Depth';
 
 depth = [];
 QC = 'n';
-filename = '../../../../data-warehouse/csv/dot/tide/HLHIL01_Tidal_Height_DATA.csv';
-%'D:\csiem/data-warehouse/csv/dot/tide/HLHIL01_Tidal_Height_DATA.csv';
+filename = [outdir,'HLHIL01_Tidal_Height_DATA.csv'];
 
 fid = fopen(filename,'wt');
 fprintf(fid,'Date,Depth,Data,QC\n');
@@ -106,13 +103,13 @@ for i = 1:length(ggg)
 end
 fclose(fid);
 
-headerfile = regexprep(filename,'_DATA','_HEADER');
+headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
 
 fid = fopen(headerfile,'wt');
 fprintf(fid,'Agency Name,Department of Transport\n');
 fprintf(fid,'Agency Code,DOT\n');
-fprintf(fid,'Program,Coastal Data\n');
-fprintf(fid,'Project,Tide\n');
+fprintf(fid,'Program,TIDE\n');
+fprintf(fid,'Project,tide\n');
 fprintf(fid,'Tag,DOT-TIDE\n');
 fprintf(fid,'Data File Name,HLHIL01_Tidal_Height.csv\n');
 fprintf(fid,'Location,data-warehouse/csv/dot/tide\n');

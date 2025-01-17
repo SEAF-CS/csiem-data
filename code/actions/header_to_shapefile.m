@@ -42,6 +42,7 @@ for i = 1:length(filelist)
     end
 end
 
+disp('FIrst for loop done')
 thedata = struct2table(tab);
 
 type = unique(thedata.DataCategory);
@@ -95,10 +96,10 @@ for i = 1:length(type)
     end
 
     outtab = struct2table(newtab);    
-
+    [outdir,type{i},'.csv']
     writetable(outtab,[outdir,type{i},'.csv']);
 end
-
+disp('Second for loop done')
 
 outdir = '../../data-mapping/Warehouse/tag/';mkdir(outdir);
 
@@ -127,7 +128,7 @@ for i = 1:length(proj)
     writetable(outtab,[outdir,proj{i},'.csv']);
 end
 
-
+disp('Third for loop done')
 outdir = '../../data-mapping/Warehouse/vars/';mkdir(outdir);
 
 for i = 1:length(vars)
@@ -152,6 +153,7 @@ for i = 1:length(vars)
     
     varfix = varkey.(vars_ID{i}).Name;
     varfix = regexprep(varfix,'µ','u');
+    varfix = regexprep(varfix,'1/10','0.1');
     writetable(outtab,[outdir,varfix,'.csv']);clear outtab;
 end
 

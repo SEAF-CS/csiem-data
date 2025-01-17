@@ -1,11 +1,3 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147030,North Cockburn Sound 4,DWER-CSMOORING,-22.2603,-32.15660018,115.7027292,DWER: 6147030
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147031,South Cockburn Sound 13,DWER-CSMOORING,-19.1526,-32.25080006,115.7283213,DWER: 6147031
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147032,Eastern Margin Seagrass,DWER-CSMOORING,-4.7447,-32.19228159,115.7452496,DWER: 6147032
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147033,Mangles Bay,DWER-CSMOORING,-1.0477,-32.27286493,115.7026804,DWER: 6147033
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147034,South 2 - Cockburn Sound 11,DWER-CSMOORING,-18.1561,-32.26240154,115.714178,DWER: 6147034
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147035,Cockburn Sound - Desalination Plant,DWER-CSMOORING,-16.6408,-32.2001199,115.7406544,DWER: 6147035
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147036,North East - Garden Island Seagrass,DWER-CSMOORING,-5.2807,-32.15743127,115.6793039,DWER: 6147036
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147037,West Port,DWER-CSMOORING,-8.2209,-32.18669751,115.7598478,DWER: 6147037
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf,KwinanaShelf,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf_shade,KwinanaShelf_shade,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf_shade
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf,KwinanaShelf,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf_shade,KwinanaShelf_shade,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI: KwinanaShelf_shade

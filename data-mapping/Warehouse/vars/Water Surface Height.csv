@@ -1,5 +1,5 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Department of Transport,Coastal Data,FFFBH01,Fremantle Fishing Boat Harbour Tide Station,DOT-TIDE,0.0000,-32.065543,115.748067,DOT: FFFBH01
-Department of Transport,Coastal Data,HLHIL01,Hillarys,DOT-TIDE,-2.1545,-31.825522,115.738589,DOT: HLHIL01
-Department of Transport,Coastal Data,PTBAR02,Barrack Street 02 Tide Station,DOT-TIDE,1.0000,-31.959681,115.857261,DOT: PTBAR02
-Department of Transport,Coastal Data,RKMGL01,Mangles Bay,DOT-TIDE,-1.1698,-32.274431,115.703344,DOT: RKMGL01
+Department of Transport,TIDE,FFFBH01,Fremantle Fishing Boat Harbour Tide Station,DOT-TIDE,0.0000,-32.065543,115.748067,DOT: FFFBH01
+Department of Transport,TIDE,HLHIL01,Hillarys,DOT-TIDE,-2.1545,-31.825522,115.738589,DOT: HLHIL01
+Department of Transport,TIDE,PTBAR02,Barrack Street 02 Tide Station,DOT-TIDE,1.0000,-31.959681,115.857261,DOT: PTBAR02
+Department of Transport,TIDE,RKMGL01,Mangles Bay,DOT-TIDE,-1.1698,-32.274431,115.703344,DOT: RKMGL01

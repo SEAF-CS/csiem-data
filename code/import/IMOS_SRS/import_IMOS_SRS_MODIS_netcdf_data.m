@@ -10,9 +10,9 @@ shp = shaperead('sat_boundary.shp');
 % ______________________________________________________
 % TEMP
 run('../../actions/csiem_data_paths.m')
-ncname = [datapath,'data-lake/IMOS/srs/MODIS/Pico-fraction/IMOS_aggregation_20230611T052104Z/IMOS_aggregation_20230611T052104Z.nc'];
+ncname = [datapath,'data-lake/IMOS/SRS/MODIS/Pico-fraction/IMOS_aggregation_20230611T052104Z/IMOS_aggregation_20230611T052104Z.nc'];
 
-outdir = [datapath,'data-warehouse/csv/imos/srs_modis/'];mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/imos/srs/modis/'];mkdir(outdir);
 
 data = tfv_readnetcdf(ncname);
 
@@ -56,12 +56,12 @@ for i = 1:length(data.latitude)
                 fid = fopen(headerfile,'wt');
                 fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
                 fprintf(fid,'Agency Code,IMOS\n');
-                fprintf(fid,'Program,SRS_MODIS\n');
-                fprintf(fid,'Project,%s\n','SRS_MODIS');
-                thetag = ['IMSO-',upper('SRS-MODIS')];
+                fprintf(fid,'Program,SRS\n');
+                fprintf(fid,'Project,%s\n','MODIS');
+                thetag = ['IMOS-SRS-MODIS'];
                 fprintf(fid,'Tag,%s\n',thetag);
                 fprintf(fid,'Data File Name,%s\n',regexprep(datafile,outdir,''));
-                fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('SRS_MODIS')]);
+                fprintf(fid,'Location,%s\n',outdir);
 
                 if max(mdate) >= datenum(2020,01,01)
                     fprintf(fid,'Station Status,Active\n',outdir);
@@ -76,8 +76,8 @@ for i = 1:length(data.latitude)
                 fprintf(fid,'Site Description,%s\n',station);
 
                 fprintf(fid,'Deployment,%s\n','Floating');
-                fprintf(fid,'Deployment Position,%s\n','0m from Surface');
-                fprintf(fid,'Vertical Reference,%s\n','m from Surface');
+                fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');
+                fprintf(fid,'Vertical Reference,%s\n','m below Surface');
                 fprintf(fid,'Site Mean Depth,%s\n',[]);
 
                 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

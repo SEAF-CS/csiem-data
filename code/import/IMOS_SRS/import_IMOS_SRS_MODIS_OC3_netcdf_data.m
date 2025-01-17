@@ -10,9 +10,9 @@ shp = shaperead('sat_boundary.shp');
 % ______________________________________________________
 % TEMP
 run('../../actions/csiem_data_paths.m')
-ncname = [datapath,'data-lake/IMOS/srs/MODIS/Chla/IMOS_aggregation_20231218T010807Z.nc'];
+ncname = [datapath,'data-lake/IMOS/SRS/MODIS/Chla/IMOS_aggregation_20231218T010807Z.nc'];
 
-outdir = [datapath,'data-warehouse/csv/imos/srs_oc3/'];mkdir(outdir);
+outdir = [datapath,'data-warehouse/csv/imos/srs/modis/oc3/'];mkdir(outdir);
 
 data = tfv_readnetcdf(ncname);
 
@@ -41,7 +41,9 @@ for i = 1:length(data.latitude)
                 pdepth = mdepth(sss);
 
 
-                station = ['IMOS_SRS_MODIS_',shp(1).Name,'_',num2str(j),'_',num2str(i)];
+                % station = ['IMOS_SRS_MODIS_',shp(1).Name,'_',num2str(j),'_',num2str(i)];
+                station = [shp(1).Name,'_',num2str(j),'_',num2str(i)];
+
 
                 datafile = [outdir,'IMOS_SRS_MODIS_',shp(1).Name,'_',num2str(j),'_',num2str(i),'_DATA.csv'];
                 fid = fopen(datafile,'wt');
@@ -56,12 +58,12 @@ for i = 1:length(data.latitude)
                 fid = fopen(headerfile,'wt');
                 fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
                 fprintf(fid,'Agency Code,IMOS\n');
-                fprintf(fid,'Program,SRS_MODIS\n');
-                fprintf(fid,'Project,%s\n','SRS_MODIS_OC3');
-                thetag = ['IMSO-',upper('SRS-MODIS-OC3')];
+                fprintf(fid,'Program,SRS\n');
+                fprintf(fid,'Project,%s\n','MODIS_OC3');
+                thetag = ['IMOS-SRS-MODIS-OC3'];
                 fprintf(fid,'Tag,%s\n',thetag);
                 fprintf(fid,'Data File Name,%s\n',regexprep(datafile,outdir,''));
-                fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('SRS_MODIS_OC3')]);
+                fprintf(fid,'Location,%s\n',outdir);
 
                 if max(mdate) >= datenum(2020,01,01)
                     fprintf(fid,'Station Status,Active\n',outdir);
@@ -76,8 +78,8 @@ for i = 1:length(data.latitude)
                 fprintf(fid,'Site Description,%s\n',station);
 
                 fprintf(fid,'Deployment,%s\n','Floating');
-                fprintf(fid,'Deployment Position,%s\n','0m from Surface');
-                fprintf(fid,'Vertical Reference,%s\n','m from Surface');
+                fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');
+                fprintf(fid,'Vertical Reference,%s\n','m below Surface');
                 fprintf(fid,'Site Mean Depth,%s\n',[]);
 
                 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

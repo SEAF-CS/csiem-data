@@ -96,7 +96,7 @@ for i = 1:length(sites)
         
         
         
-%         headerfile = regexprep(filename,'_DATA','_HEADER');
+%         headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
 %         
 %         fid = fopen(headerfile,'wt');
 %         fprintf(fid,'Agency Name,Department of Water and Environmental Regulation\n');

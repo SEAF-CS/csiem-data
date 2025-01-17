@@ -1,112 +1,526 @@
 Agency_Name,Program_Name,Station_ID,Site_Description,Tag,mAHD,Lat,Lon,Label
-Department of Water and Environmental Regulation,Estuary,6131321,6131321,DWER-PHESTREACH,0.0000,-32.683243,115.677035,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6131322,6131322,DWER-PHESTREACH,1.0000,-32.730063,115.694901,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6131323,6131323,DWER-PHESTREACH,1.0000,-32.633273,115.660907,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6140029,6140029,DWER-PHESTREACH,0.0000,-32.603628,115.671387,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6140030,6140030,DWER-PHESTREACH,0.0000,-32.575745,115.754871,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6140031,6140031,DWER-PHESTREACH,0.0000,-32.591805,115.713254,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6141432,6141432,DWER-CSMWQ,0.0000,-32.2745,115.7025,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142624,6142624,DWER-PHESTREACH,1.0000,-32.581407,115.787282,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6142625,6142625,DWER-PHESTREACH,2.0000,-32.585905,115.827008,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6142627,6142627,DWER-PHESTREACH,1.0000,-32.543329,115.76797,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6142628,6142628,DWER-PHESTREACH,2.0000,-32.510069,115.786308,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6142629,6142629,DWER-PHESTREACH,2.0000,-32.471222,115.808025,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6142830,6142830,DWER-CSMWQ,-5.9675,-32.140024,115.762558,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142855,6142855,DWER-PHESTREACH,2.0000,-32.585856,115.834139,DWER-PHESTREACH
-Department of Water and Environmental Regulation,Estuary,6142971,6142971,DWER-CSMWQ,-19.3144,-32.152366,115.720158,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142972,6142972,DWER-CSMWQ,-10.8501,-32.14648,115.756724,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142973,6142973,DWER-CSMWQ,-11.1732,-32.170703,115.762483,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142974,6142974,DWER-CSMWQ,-20.3222,-32.197565,115.719833,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142975,6142975,DWER-CSMWQ,-12.4997,-32.209851,115.759566,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142976,6142976,DWER-CSMWQ,-16.8257,-32.238934,115.751412,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142977,6142977,DWER-CSMWQ,-17.6492,-32.2565,115.740864,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142980,6142980,DWER-CSMWQ,-12.0351,-32.229518,115.697969,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142983,6142983,DWER-CSMWQ,-3.2126,-32.248232,115.712531,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142984,6142984,DWER-CSMWQ,-10.2600,-32.182803,115.73909,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142985,6142985,DWER-CSMWQ,-2.9904,-32.308838,115.708785,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142986,6142986,DWER-CSMWQ,-17.2342,-32.336946,115.722167,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142988,6142988,DWER-CSMWQ,-7.7071,-32.215297,115.696612,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6142989,6142989,DWER-CSMWQ,-6.1499,-32.198595,115.684831,DWER-CSMWQ
-Department of Water and Environmental Regulation,Estuary,6144466,6144466,DWER-CSMWQ,-10.4978,-32.197784,115.765882,DWER-CSMWQ
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147030,North Cockburn Sound 4,DWER-CSMOORING,-22.2603,-32.15660018,115.7027292,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147031,South Cockburn Sound 13,DWER-CSMOORING,-19.1526,-32.25080006,115.7283213,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147032,Eastern Margin Seagrass,DWER-CSMOORING,-4.7447,-32.19228159,115.7452496,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147033,Mangles Bay,DWER-CSMOORING,-1.0477,-32.27286493,115.7026804,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147034,South 2 - Cockburn Sound 11,DWER-CSMOORING,-18.1561,-32.26240154,115.714178,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147035,Cockburn Sound - Desalination Plant,DWER-CSMOORING,-16.6408,-32.2001199,115.7406544,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147036,North East - Garden Island Seagrass,DWER-CSMOORING,-5.2807,-32.15743127,115.6793039,DWER-CSMOORING
-Department of Water and Environmental Regulation,Cockburn Sound Marine Water Quality Monitoring,6147037,West Port,DWER-CSMOORING,-8.2209,-32.18669751,115.7598478,DWER-CSMOORING
-Department of Water and Environmental Regulation,Estuary,6160118,6160118,DWER-SWANEST,3.0000,-31.878075,115.992278,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160119,6160119,DWER-SWANEST,4.0000,-31.868417,115.998983,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160121,6160121,DWER-SWANEST,3.0000,-31.891316,115.975159,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160258,6160258,DWER-SWANEST,-15.0628,-32.017126,115.784129,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160259,6160259,DWER-SWANEST,-11.3607,-32.007069,115.80895,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160262,6160262,DWER-SWANEST,0.0000,-31.963657,115.84878,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160263,6160263,DWER-SWANEST,0.0000,-31.954845,115.885341,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160764,6160764,DWER-SWANEST,4.0000,-31.939807,115.908173,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6160930,6160930,DWER-SWANEST,3.0000,-31.887654,115.979641,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161086,6161086,DWER-SWANEST,4.0000,-31.864404,116.009083,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161821,6161821,DWER-SWANEST,4.0000,-31.912582,115.961026,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161836,6161836,DWER-CANEST,7.0000,-32.0297,115.9421,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6161837,6161837,DWER-CANEST,5.0000,-32.027504,115.901182,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6161838,6161838,DWER-CANEST,3.0000,-32.030813,115.872233,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6161854,6161854,DWER-SWANEST,4.0000,-31.887859,115.989546,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161869,6161869,DWER-SWANEST,-6.2923,-31.994892,115.835349,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161870,6161870,DWER-SWANEST,1.0000,-31.951372,115.9134,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161878,6161878,DWER-SWANEST,1.0000,-31.921404,115.940132,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6161879,6161879,DWER-SWANEST,2.0000,-31.89844,115.95925,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6162045,6162045,DWER-SWANEST,2.0000,-31.904373,115.963213,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6162300,6162300,DWER-SWANEST,2.0000,-31.900481,115.961691,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6162994,6162994,DWER-CANEST,7.0000,-32.021468,115.921002,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6162995,6162995,DWER-CANEST,6.0000,-32.022513,115.915643,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163105,6163105,DWER-CANEST,6.0000,-32.0226,115.9267,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163119,6163119,DWER-CANEST,8.0000,-32.0339,115.949901,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163124,6163124,DWER-CANEST,7.0000,-32.022888,115.933131,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163126,6163126,DWER-CANEST,7.0000,-32.029756,115.944245,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163132,6163132,DWER-CANEST,8.0000,-32.026049,115.937828,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163179,6163179,DWER-CANEST,0.0000,-32.01678,115.853516,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163346,6163346,DWER-CANEST,6.0000,-32.022423,115.915559,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6163485,6163485,DWER-SWANEST,2.0000,-31.922684,115.950949,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6163500,6163500,DWER-SWANEST,5.0000,-31.8563,115.9956,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6163833,6163833,DWER-SWANEST,4.0000,-31.8614,116.0027,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6163857,6163857,DWER-SWANEST,3.0000,-31.883876,115.991249,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6163932,6163932,DWER-SWANEST,3.0000,-31.8811,115.9913,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6164323,6164323,DWER-SWANEST,1.0000,-31.920072,115.941618,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6164609,6164609,DWER-CANEST,5.0000,-32.027517,115.913222,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6165318,6165318,DWER-CANEST,1.0000,-32.017219,115.853225,DWER-CANEST
-Department of Water and Environmental Regulation,Estuary,6167114,6167114,DWER-SWANEST,3.0000,-31.894387,115.971332,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6167160,6167160,DWER-SWANEST,-5.6441,-31.998889,115.84425,DWER-SWANEST
-Department of Water and Environmental Regulation,Estuary,6167188,6167188,DWER-CANEST,4.0000,-32.022782,115.901366,DWER-CANEST
+The University of Western Australia,Centre for Water Research (CWR),0A70,COCKBURN,UWA-CWR-SMCWS,-8.4994,-32.1113,115.7437,UWA-CWR-SMCWS
+Department of Water and Environmental Regulation,CSMOORING,6147030,North Cockburn Sound 4,DWER-CS-MOORING,-22.2603,-32.15660018,115.7027292,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147031,South Cockburn Sound 13,DWER-CS-MOORING,-19.1526,-32.25080006,115.7283213,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147032,Eastern Margin Seagrass,DWER-CS-MOORING,-4.7447,-32.19228159,115.7452496,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147033,Mangles Bay,DWER-CS-MOORING,-1.0477,-32.27286493,115.7026804,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147034,South 2 - Cockburn Sound 11,DWER-CS-MOORING,-18.1561,-32.26240154,115.714178,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147035,Cockburn Sound - Desalination Plant,DWER-CS-MOORING,-16.6408,-32.2001199,115.7406544,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147036,North East - Garden Island Seagrass,DWER-CS-MOORING,-5.2807,-32.15743127,115.6793039,DWER-CS-MOORING
+Department of Water and Environmental Regulation,CSMOORING,6147037,West Port,DWER-CS-MOORING,-8.2209,-32.18669751,115.7598478,DWER-CS-MOORING
+Western Australian Marine Science Institution,WWMSP3,AJ,AJ,WAMSI-WWMSP3-CTD,-8.1093,-32.123967,115.757909,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP5,ALK01,Alkimos 1,WAMSI-WWMSP5-WWM,0.0000,-31.628055,115.664166,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,ALK02,Alkimos 2,WAMSI-WWMSP5-WWM,0.0000,-31.62,115.658611,WAMSI-WWMSP5-WWM
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CB,Challenger Beach bank,CSMC-WQ,-10.2600,-32.182802691,115.739089661,CSMC-WQ
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS1,CS1,WWMSP5.1-AWAC,-21.3219,-32.1463,115.6976,WWMSP5.1-AWAC
+The University of Western Australia,Centre for Water Research (CWR),CMCS3,COCKBURN,UWA-CWR-SMCWS,-21.0070,-32.1948,115.699,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CMP0,COCKBURN,UWA-CWR-SMCWS,-19.0093,-32.1763,115.73,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CMP1,COCKBURN,UWA-CWR-SMCWS,-9.4914,-32.1783,115.7503,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CMP2,COCKBURN,UWA-CWR-SMCWS,-9.7505,-32.1764,115.7578,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP5,CS1,CS1,WAMSI-WWMSP5-AWAC,-21.3219,-32.1463,115.6976,WAMSI-WWMSP5-AWAC
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS10,Changed position from 2004/05 now CS1ON,CSMC-WQ,-17.6492,-32.256500246,115.740863764,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS100,COCKBURN,UWA-CWR-SMCWS,-17.6583,-32.2346,115.7087,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS100W,COCKBURN,UWA-CWR-SMCWS,-18.6307,-32.2351,115.7362,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS105,COCKBURN,UWA-CWR-SMCWS,-19.7136,-32.2346,115.7245,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS108,COCKBURN,UWA-CWR-SMCWS,-4.9472,-32.2449,115.7047,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS10N,Bulk Grain Terminal (CBH)(replaced CS10),CSMC-WQ,-12.0181,-32.255330528,115.742971151,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS10S,COCKBURN,UWA-CWR-SMCWS,-5.6793,-32.1526,115.6658,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS11,Mangles Bay deep water basin,CSMC-WQ,-18.1561,-32.262401413,115.71417802,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS110,COCKBURN,UWA-CWR-SMCWS,-17.2859,-32.2346,115.747,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS110W,COCKBURN,UWA-CWR-SMCWS,-18.4901,-32.2343,115.737,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS112,COCKBURN,UWA-CWR-SMCWS,-8.4613,-32.2409,115.7115,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS112A,COCKBURN,UWA-CWR-SMCWS,-17.7914,-32.2389,115.7173,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS115,COCKBURN,UWA-CWR-SMCWS,-16.3273,-32.2396,115.7537,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS118,COCKBURN,UWA-CWR-SMCWS,-7.0101,-32.2613,115.74,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS119,COCKBURN,UWA-CWR-SMCWS,-18.2851,-32.2575,115.7364,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS12,Calista Channel WC Desalination Plant,CSMC-WQ,-10.4978,-32.197797559,115.76587156,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS120,COCKBURN,UWA-CWR-SMCWS,-19.4414,-32.2546,115.7303,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS123,COCKBURN,UWA-CWR-SMCWS,-5.6533,-32.2604,115.7417,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS125,COCKBURN,UWA-CWR-SMCWS,-18.9577,-32.2671,115.7262,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS13,Cockburn Sound southern deep water,CSMC-WQ,-19.1526,-32.250808956,115.728321217,CSMC-WQ
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS2,CS2,WWMSP5.1-AWAC,-21.6163,-32.184,115.6971,WWMSP5.1-AWAC
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS3,CS3,WWMSP5.1-AWAC,-19.9949,-32.2522,115.729,WWMSP5.1-AWAC
+The University of Western Australia,Centre for Water Research (CWR),CS130,COCKBURN,UWA-CWR-SMCWS,-15.9855,-32.2654,115.7087,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS135,COCKBURN,UWA-CWR-SMCWS,-3.8722,-32.2481,115.7008,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS140,COCKBURN,UWA-CWR-SMCWS,-4.5530,-32.2489,115.6985,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS145,COCKBURN,UWA-CWR-SMCWS,-8.8409,-32.2554,115.6845,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS15,COCKBURN,UWA-CWR-SMCWS,-19.1241,-32.1504,115.6853,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS150,COCKBURN,UWA-CWR-SMCWS,-14.6170,-32.2554,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS150S,COCKBURN,UWA-CWR-SMCWS,-20.0084,-32.2707,115.6573,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS151,COCKBURN,UWA-CWR-SMCWS,-15.5952,-32.2654,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS155,COCKBURN,UWA-CWR-SMCWS,-5.2000,-32.2464,115.7207,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS155S,COCKBURN,UWA-CWR-SMCWS,-5.8211,-32.2446,115.7186,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS16,COCKBURN,UWA-CWR-SMCWS,-15.6564,-32.1599,115.6827,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS160,COCKBURN,UWA-CWR-SMCWS,4.8929,-32.1909,115.6782,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS161,COCKBURN,UWA-CWR-SMCWS,-3.6362,-32.1913,115.6815,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS161TES,COCKBURN,UWA-CWR-SMCWS,-3.6362,-32.1913,115.6815,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS165,COCKBURN,UWA-CWR-SMCWS,-15.6055,-32.1908,115.6857,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS17,COCKBURN,UWA-CWR-SMCWS,-17.4696,-32.1634,115.6825,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS170,COCKBURN,UWA-CWR-SMCWS,-17.3506,-32.1906,115.6863,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS170A,COCKBURN,UWA-CWR-SMCWS,0.0000,-32.1833,115.6746,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS175,COCKBURN,UWA-CWR-SMCWS,-18.4962,-32.1878,115.732,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS175E,COCKBURN,UWA-CWR-SMCWS,-7.3421,-32.1876,115.7412,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS18,COCKBURN,UWA-CWR-SMCWS,-21.2867,-32.1508,115.6942,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS180,COCKBURN,UWA-CWR-SMCWS,-12.7402,-32.1856,115.7682,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS180A,COCKBURN,UWA-CWR-SMCWS,-11.9588,-32.1844,115.7704,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS180B,COCKBURN,UWA-CWR-SMCWS,-10.0644,-32.1871,115.7645,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS185,COCKBURN,UWA-CWR-SMCWS,-11.6509,-32.1863,115.7725,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS185A,COCKBURN,UWA-CWR-SMCWS,-12.6495,-32.1859,115.7702,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS185I,COCKBURN,UWA-CWR-SMCWS,-12.4866,-32.1875,115.7727,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS186,COCKBURN,UWA-CWR-SMCWS,-10.6935,-32.1764,115.7678,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP5,CS2,CS2,WAMSI-WWMSP5-AWAC,-21.6163,-32.184,115.6971,WAMSI-WWMSP5-AWAC
+The University of Western Australia,Centre for Water Research (CWR),CS20,COCKBURN,UWA-CWR-SMCWS,-20.3803,-32.1501,115.7055,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS203,COCKBURN,UWA-CWR-SMCWS,-17.0003,-32.2618,115.7118,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS205,COCKBURN,UWA-CWR-SMCWS,-18.2990,-32.2606,115.7175,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS207,COCKBURN,UWA-CWR-SMCWS,-9.5621,-32.2559,115.7228,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS209,COCKBURN,UWA-CWR-SMCWS,-3.5766,-32.2429,115.7162,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS20A,COCKBURN,UWA-CWR-SMCWS,-17.7402,-32.1371,115.7032,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS20B,COCKBURN,UWA-CWR-SMCWS,-19.9945,-32.1463,115.7045,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS20BN,COCKBURN,UWA-CWR-SMCWS,-19.6194,-32.1389,115.7042,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS20C,COCKBURN,UWA-CWR-SMCWS,-20.7236,-32.1593,115.7089,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS211,COCKBURN,UWA-CWR-SMCWS,-7.6264,-32.2408,115.7103,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS213,COCKBURN,UWA-CWR-SMCWS,-10.3293,-32.2391,115.7026,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS215,COCKBURN,UWA-CWR-SMCWS,-11.6657,-32.2401,115.6945,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS219,COCKBURN,UWA-CWR-SMCWS,1.2140,-32.2523,115.7048,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS22,COCKBURN,UWA-CWR-SMCWS,-19.6930,-32.1443,115.7187,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS221,COCKBURN,UWA-CWR-SMCWS,4.3432,-32.2583,115.7026,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS223,COCKBURN,UWA-CWR-SMCWS,-2.5910,-32.2684,115.699,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS226,COCKBURN,UWA-CWR-SMCWS,-15.1537,-32.2346,115.6987,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS227,COCKBURN,UWA-CWR-SMCWS,-16.7377,-32.2346,115.7028,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS229,COCKBURN,UWA-CWR-SMCWS,-18.6910,-32.2444,115.7272,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS22A,COCKBURN,UWA-CWR-SMCWS,-20.2299,-32.1503,115.7155,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS22N,COCKBURN,UWA-CWR-SMCWS,-19.5848,-32.1409,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS22NW,COCKBURN,UWA-CWR-SMCWS,-20.3325,-32.1418,115.7108,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS231,COCKBURN,UWA-CWR-SMCWS,-19.3962,-32.2593,115.7278,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS233,COCKBURN,UWA-CWR-SMCWS,-18.1613,-32.2704,115.7198,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS233A,COCKBURN,UWA-CWR-SMCWS,-0.2800,-32.2759,115.7198,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS235,COCKBURN,UWA-CWR-SMCWS,-17.4767,-32.2668,115.7162,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS23S,COCKBURN,UWA-CWR-SMCWS,-19.3939,-32.1433,115.725,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS25,COCKBURN,UWA-CWR-SMCWS,-18.6197,-32.1513,115.7245,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS25A,COCKBURN,UWA-CWR-SMCWS,-19.5439,-32.1506,115.7199,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS26,COCKBURN,UWA-CWR-SMCWS,-12.9556,-32.1501,115.7335,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS27,COCKBURN,UWA-CWR-SMCWS,-16.3166,-32.1513,115.7328,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS27A,COCKBURN,UWA-CWR-SMCWS,-10.9061,-32.1499,115.74,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS27N,COCKBURN,UWA-CWR-SMCWS,-12.2958,-32.1433,115.7333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS28,COCKBURN,UWA-CWR-SMCWS,-10.8794,-32.1513,115.7395,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS28N,COCKBURN,UWA-CWR-SMCWS,-11.2153,-32.1433,115.7452,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP5,CS3,CS3,WAMSI-WWMSP5-AWAC,-19.9949,-32.2522,115.729,WAMSI-WWMSP5-AWAC
+The University of Western Australia,Centre for Water Research (CWR),CS30,COCKBURN,UWA-CWR-SMCWS,-8.4957,-32.1513,115.7512,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS35,COCKBURN,UWA-CWR-SMCWS,-10.5920,-32.1679,115.7387,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS4,Cockburn Sound northern end deep,CSMC-WQ,-21.3088,-32.154551146,115.693840605,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS40,COCKBURN,UWA-CWR-SMCWS,-19.2131,-32.1679,115.7287,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS45,COCKBURN,UWA-CWR-SMCWS,-20.9182,-32.1679,115.7095,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS45NE,COCKBURN,UWA-CWR-SMCWS,-20.5023,-32.1593,115.7117,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS46,COCKBURN,UWA-CWR-SMCWS,-20.7773,-32.1738,115.7109,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS46dp5,COCKBURN,UWA-CWR-SMCWS,-20.7333,-32.1783,115.713,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS47,COCKBURN,UWA-CWR-SMCWS,-20.2314,-32.1818,115.7132,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS47A,COCKBURN,UWA-CWR-SMCWS,-21.5993,-32.1676,115.6935,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS5,Cockburn Sound northern end deep,CSMC-WQ,-19.3144,-32.152366474,115.720157614,CSMC-WQ
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,CS6,CS6,WWMSP5.1-AWAC,-10.2203,-32.096,115.7392,WWMSP5.1-AWAC
+The University of Western Australia,Centre for Water Research (CWR),CS50,COCKBURN,UWA-CWR-SMCWS,-20.3675,-32.1899,115.694,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS52,COCKBURN,UWA-CWR-SMCWS,-22.6392,-32.1888,115.7058,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS53,COCKBURN,UWA-CWR-SMCWS,-22.3883,-32.1889,115.7063,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS55,COCKBURN,UWA-CWR-SMCWS,-20.4372,-32.1876,115.714,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP5,CS6,CS6,WAMSI-WWMSP5-AWAC,-10.2203,-32.096,115.7392,WAMSI-WWMSP5-AWAC
+The University of Western Australia,Centre for Water Research (CWR),CS60,COCKBURN,UWA-CWR-SMCWS,-9.2127,-32.1871,115.747,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS65,COCKBURN,UWA-CWR-SMCWS,-8.9457,-32.1863,115.7612,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS6A,Outside Northern Harbour,CSMC-WQ,-10.8501,-32.146479719,115.756724048,CSMC-WQ
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS7,Jervoise Channel south of Southern Harbour,CSMC-WQ,-11.1732,-32.170702535,115.762482702,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS70,COCKBURN,UWA-CWR-SMCWS,-10.4242,-32.1988,115.7695,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS75,COCKBURN,UWA-CWR-SMCWS,-10.5191,-32.2096,115.7553,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS7N,COCKBURN,UWA-CWR-SMCWS,-8.7994,-32.1399,115.6817,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS8,Cockburn Sound central basin,CSMC-WQ,-20.3222,-32.197565326,115.719832875,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS80,COCKBURN,UWA-CWR-SMCWS,-15.7420,-32.2054,115.743,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS85,COCKBURN,UWA-CWR-SMCWS,-21.6583,-32.2113,115.7192,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS85A,COCKBURN,UWA-CWR-SMCWS,-19.9879,-32.227,115.7185,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS88,COCKBURN,UWA-CWR-SMCWS,-20.3077,-32.2232,115.7227,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS9,Kwinana Bulk Terminal (KBB2),CSMC-WQ,-12.4997,-32.209850521,115.759565504,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),CS90,COCKBURN,UWA-CWR-SMCWS,-3.4336,-32.2229,115.6986,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS95,COCKBURN,UWA-CWR-SMCWS,-10.9856,-32.2338,115.6903,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS98,COCKBURN,UWA-CWR-SMCWS,-12.5957,-32.2273,115.7043,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),CS99,COCKBURN,UWA-CWR-SMCWS,-11.7877,-32.2293,115.7025,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,CS9A,Kwinana Bulk Jetty (KBJ),CSMC-WQ,-16.8257,-32.23893373,115.751411901,CSMC-WQ
-Department of Transport,Coastal Data,FFFBH01,Fremantle Fishing Boat Harbour Tide Station,DOT-TIDE,0.0000,-32.065543,115.748067,DOT-TIDE
+Western Australian Marine Science Institution,WWMSP3,CSR14,CSR14,WAMSI-WWMSP3-CTD,-6.7462,-32.190876,115.74633,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP5,DAW24,Dawesville 03 Wave Station,WAMSI-WWMSP5-WWM,-19.7315,-32.100543,115.626678,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,DCH38,Cottesloe,WAMSI-WWMSP5-WWM,-15.3795,-31.977765,115.686678,WAMSI-WWMSP5-WWM
+The University of Western Australia,Centre for Water Research (CWR),DEV01,COCKBURN,UWA-CWR-SMCWS,-19.1305,-32.1429,115.6887,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEV02,COCKBURN,UWA-CWR-SMCWS,-17.3926,-32.1389,115.6925,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEV03,COCKBURN,UWA-CWR-SMCWS,-16.3585,-32.1434,115.6908,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEV04,COCKBURN,UWA-CWR-SMCWS,-19.8554,-32.1518,115.6867,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEV05,COCKBURN,UWA-CWR-SMCWS,-19.9008,-32.1589,115.6883,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEVO2,COCKBURN,UWA-CWR-SMCWS,-17.3926,-32.1389,115.6925,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEVO3,COCKBURN,UWA-CWR-SMCWS,-16.3585,-32.1434,115.6908,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEVO4,COCKBURN,UWA-CWR-SMCWS,-19.8554,-32.1518,115.6867,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),DEVO5,COCKBURN,UWA-CWR-SMCWS,-19.9008,-32.1589,115.6883,UWA-CWR-SMCWS
+Department of Transport,TIDE,FFFBH01,Fremantle Fishing Boat Harbour Tide Station,DOT-TIDE,0.0000,-32.065543,115.748067,DOT-TIDE
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,G1,Changed position from 2004/05 now G1 above,CSMC-WQ,-12.0351,-32.229518181,115.697969306,CSMC-WQ
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,G2,Garden Island central HMAS Stirling,CSMC-WQ,-6.1499,-32.198595247,115.684830758,CSMC-WQ
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,G3,Garden Island north HMAS Stirling,CSMC-WQ,-9.9554,-32.157758192,115.682119854,CSMC-WQ
-Department of Transport,Coastal Data,HLHIL01,Hillarys,DOT-TIDE,-2.1545,-31.825522,115.738589,DOT-TIDE
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf,KwinanaShelf,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WWMSP2.2-Light
-Western Australian Marine Science Institution,WAMSI Westport Marine Science Program,KwinanaShelf_shade,KwinanaShelf_shade,WWMSP2.2-Light,-4.9707,-32.19771,115.74725,WWMSP2.2-Light
+The University of Western Australia,Centre for Water Research (CWR),GI1,GARDENIS,UWA-CWR-SMCWS,-21.2748,-32.1334,115.6233,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI10,GARDENIS,UWA-CWR-SMCWS,-42.3517,-32.1501,115.4533,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI11,GARDENIS,UWA-CWR-SMCWS,-40.2308,-32.1693,115.4858,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI12,GARDENIS,UWA-CWR-SMCWS,-35.1885,-32.1884,115.5183,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI13,GARDENIS,UWA-CWR-SMCWS,-30.3522,-32.2084,115.5517,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI14,GARDENIS,UWA-CWR-SMCWS,-29.8245,-32.2284,115.5833,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI15,GARDENIS,UWA-CWR-SMCWS,-12.3397,-32.2501,115.6158,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI16,GARDENIS,UWA-CWR-SMCWS,-10.8231,-32.2501,115.6253,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI17,GARDENIS,UWA-CWR-SMCWS,-21.1132,-32.2501,115.6333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI18,GARDENIS,UWA-CWR-SMCWS,-23.3088,-32.2501,115.6533,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI19,GARDENIS,UWA-CWR-SMCWS,-13.9179,-32.2501,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI2,GARDENIS,UWA-CWR-SMCWS,-11.0566,-32.1334,115.6067,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI20,GARDENIS,UWA-CWR-SMCWS,-10.8024,-32.2501,115.6742,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI21,GARDENIS,UWA-CWR-SMCWS,-22.2119,-32.2318,115.64,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI22,GARDENIS,UWA-CWR-SMCWS,-21.0892,-32.2076,115.6367,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI23,GARDENIS,UWA-CWR-SMCWS,-20.7151,-32.1826,115.6317,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI24,GARDENIS,UWA-CWR-SMCWS,-20.3783,-32.1568,115.6275,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI3,GARDENIS,UWA-CWR-SMCWS,-14.7767,-32.1334,115.595,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI30,MANDURAH,UWA-CWR-SMCWS,-26.7195,-32.2501,115.6,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI35,MANDURAH,UWA-CWR-SMCWS,-32.5823,-32.2501,115.5583,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI4,GARDENIS,UWA-CWR-SMCWS,-24.4384,-32.1334,115.5858,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI40,MANDURAH,UWA-CWR-SMCWS,-34.1638,-32.2501,115.5333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI45,MANDURAH,UWA-CWR-SMCWS,-36.6564,-32.2501,115.5083,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI5,GARDENIS,UWA-CWR-SMCWS,-32.1675,-32.1334,115.5767,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI50,MANDURAH,UWA-CWR-SMCWS,-37.9217,-32.2501,115.4833,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI55,MANDURAH,UWA-CWR-SMCWS,-40.7918,-32.2501,115.4583,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI6,GARDENIS,UWA-CWR-SMCWS,-28.7905,-32.1334,115.5375,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI7,GARDENIS,UWA-CWR-SMCWS,-35.1804,-32.1334,115.4983,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI8,GARDENIS,UWA-CWR-SMCWS,-41.8359,-32.1334,115.46,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),GI9,GARDENIS,UWA-CWR-SMCWS,-45.3883,-32.1334,115.42,UWA-CWR-SMCWS
+Department of Transport,TIDE,HLHIL01,Hillarys,DOT-TIDE,-2.1545,-31.825522,115.738589,DOT-TIDE
+Western Australian Marine Science Institution,WWMSP5,Hillarys,Hillarys buoy,WAMSI-WWMSP5-WWM,-23.4713,-31.846599,115.642707,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP3,INLET,INLET,WAMSI-WWMSP3-CTD,-7.5945,-32.200864,115.770445,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP3,JB16A,JB16A,WAMSI-WWMSP3-CTD,-8.1948,-32.173529,115.768373,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP5,KWA01,Kwinana,WAMSI-WWMSP5-WWM,-5.2282,-32.249389,115.752383,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf,KwinanaShelf,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI-WWMSP2-MS9
+Western Australian Marine Science Institution,WWMSP2,KwinanaShelf_shade,KwinanaShelf_shade,WAMSI-WWMSP2-MS9,-4.9707,-32.19771,115.74725,WAMSI-WWMSP2-MS9
+Western Australian Marine Science Institution,WWMSP3,LP,LP,WAMSI-WWMSP3-CTD,-16.8652,-32.226664,115.746666,WAMSI-WWMSP3-CTD
+The University of Western Australia,Centre for Water Research (CWR),MA1,MANDURAH,UWA-CWR-SMCWS,-20.8708,-32.1526,115.6917,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA10,MANDURAH,UWA-CWR-SMCWS,-39.5612,-32.2326,115.465,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA11,MANDURAH,UWA-CWR-SMCWS,-42.8489,-32.2493,115.4333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA12,MANDURAH,UWA-CWR-SMCWS,-39.9071,-32.2493,115.4667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA13,MANDURAH,UWA-CWR-SMCWS,-37.0294,-32.2493,115.5,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA14,MANDURAH,UWA-CWR-SMCWS,-34.1638,-32.2493,115.5333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA15,MANDURAH,UWA-CWR-SMCWS,-32.0203,-32.2493,115.5683,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA16,MANDURAH,UWA-CWR-SMCWS,-24.6234,-32.2493,115.6025,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA17,MANDURAH,UWA-CWR-SMCWS,-19.8264,-32.2501,115.6308,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA18,MANDURAH,UWA-CWR-SMCWS,-23.7453,-32.2518,115.6467,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA19,MANDURAH,UWA-CWR-SMCWS,-14.5223,-32.2534,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA2,MANDURAH,UWA-CWR-SMCWS,-9.8603,-32.1359,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA20,MANDURAH,UWA-CWR-SMCWS,-7.9676,-32.2551,115.6842,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA21,MANDURAH,UWA-CWR-SMCWS,-17.9388,-32.2384,115.7175,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA22,MANDURAH,UWA-CWR-SMCWS,-23.5210,-32.2934,115.6517,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA23,MANDURAH,UWA-CWR-SMCWS,-25.7053,-32.3334,115.6175,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA24,MANDURAH,UWA-CWR-SMCWS,-15.9178,-32.3334,115.64,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA25,MANDURAH,UWA-CWR-SMCWS,-19.9852,-32.3334,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA26,MANDURAH,UWA-CWR-SMCWS,-16.0916,-32.3334,115.675,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA27,MANDURAH,UWA-CWR-SMCWS,-11.0765,-32.3334,115.6967,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA28,MANDURAH,UWA-CWR-SMCWS,-17.9853,-32.3334,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA29,MANDURAH,UWA-CWR-SMCWS,-18.5510,-32.3334,115.7375,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA3,MANDURAH,UWA-CWR-SMCWS,-12.3227,-32.1384,115.6458,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA30,MANDURAH,UWA-CWR-SMCWS,-6.7291,-32.3209,115.7067,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA31,MANDURAH,UWA-CWR-SMCWS,-6.3221,-32.3501,115.71,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA4,MANDURAH,UWA-CWR-SMCWS,-19.7160,-32.1493,115.6258,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA5,MANDURAH,UWA-CWR-SMCWS,-14.9994,-32.1551,115.6133,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA6,MANDURAH,UWA-CWR-SMCWS,-21.5269,-32.1651,115.595,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA7,MANDURAH,UWA-CWR-SMCWS,-30.0740,-32.1793,115.5683,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA8,MANDURAH,UWA-CWR-SMCWS,-32.6187,-32.1968,115.5342,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MA9,MANDURAH,UWA-CWR-SMCWS,-37.5136,-32.2143,115.5,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP5,MAN01,Mandurah 1,WAMSI-WWMSP5-WWM,-10.1421,-32.468133,115.720733,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,MAN02,Mandurah 2,WAMSI-WWMSP5-WWM,-11.3326,-32.4913,115.708767,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,MAN54,Mandurah,WAMSI-WWMSP5-WWM,-23.8286,-32.452787,115.572227,WAMSI-WWMSP5-WWM
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,MB,Mangles Bay shallow near shore,CSMC-WQ,-1.4192,-32.275049132,115.705452395,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),MC5,MANDURAH,UWA-CWR-SMCWS,7.0000,-32.5268,115.7092,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MF10,COCKBURN,UWA-CWR-SMCWS,-20.5628,-32.1466,115.6955,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MF15,COCKBURN,UWA-CWR-SMCWS,-21.2525,-32.1556,115.6898,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MF20,COCKBURN,UWA-CWR-SMCWS,-5.5484,-32.0919,115.687,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MF25,COCKBURN,UWA-CWR-SMCWS,-3.2718,-32.1638,115.6757,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MF5,COCKBURN,UWA-CWR-SMCWS,-13.9196,-32.1579,115.6832,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),ML01,COCKBURN,UWA-CWR-SMCWS,-7.5778,-32.1346,115.6895,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),ML01NW,COCKBURN,UWA-CWR-SMCWS,-6.6389,-32.1306,115.6933,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),ML01W,COCKBURN,UWA-CWR-SMCWS,-7.9160,-32.1329,115.6852,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN1,MANDURAH,UWA-CWR-SMCWS,-13.1330,-32.4868,115.6892,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN10,MANDURAH,UWA-CWR-SMCWS,-15.4442,-32.4751,115.6825,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN100,MANDURAH,UWA-CWR-SMCWS,-21.0822,-32.3134,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN105,MANDURAH,UWA-CWR-SMCWS,-23.1288,-32.2918,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN11,MANDURAH,UWA-CWR-SMCWS,-14.3101,-32.4668,115.6658,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN110,MANDURAH,UWA-CWR-SMCWS,-22.0053,-32.2668,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN12,MANDURAH,UWA-CWR-SMCWS,-14.8680,-32.4584,115.6867,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN13,MANDURAH,UWA-CWR-SMCWS,-14.1185,-32.4501,115.7058,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN14,MANDURAH,UWA-CWR-SMCWS,-12.5943,-32.4426,115.725,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN15,MANDURAH,UWA-CWR-SMCWS,-12.9517,-32.4334,115.745,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN15N,MANDURAH,UWA-CWR-SMCWS,-8.1110,-32.4168,115.7417,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN16,MANDURAH,UWA-CWR-SMCWS,-13.1936,-32.4243,115.7283,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN17,MANDURAH,UWA-CWR-SMCWS,-12.1596,-32.4184,115.715,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN18,MANDURAH,UWA-CWR-SMCWS,-11.7228,-32.4109,115.7,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN19,MANDURAH,UWA-CWR-SMCWS,-14.0550,-32.4218,115.6842,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN2,MANDURAH,UWA-CWR-SMCWS,-12.0787,-32.5001,115.695,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN20,MANDURAH,UWA-CWR-SMCWS,-11.9916,-32.4334,115.6683,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN20N,MANDURAH,UWA-CWR-SMCWS,-13.9870,-32.4168,115.675,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN21,MANDURAH,UWA-CWR-SMCWS,-10.8747,-32.4334,115.6583,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN22,MANDURAH,UWA-CWR-SMCWS,-18.6942,-32.4101,115.6533,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN23,MANDURAH,UWA-CWR-SMCWS,-22.2216,-32.3834,115.6475,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN24,MANDURAH,UWA-CWR-SMCWS,-21.4543,-32.3568,115.6425,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN25,MANDURAH,UWA-CWR-SMCWS,-13.1834,-32.3334,115.6375,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN26,MANDURAH,UWA-CWR-SMCWS,-25.6795,-32.3334,115.6167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN27,MANDURAH,UWA-CWR-SMCWS,-24.6234,-32.2493,115.6025,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN28,MANDURAH,UWA-CWR-SMCWS,-19.8160,-32.2493,115.6308,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN29,MANDURAH,UWA-CWR-SMCWS,-22.9165,-32.2493,115.6467,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN3,MANDURAH,UWA-CWR-SMCWS,-3.7286,-32.5126,115.7008,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN30,MANDURAH,UWA-CWR-SMCWS,-13.8660,-32.2493,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN31,MANDURAH,UWA-CWR-SMCWS,-16.0916,-32.3334,115.675,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN32,MANDURAH,UWA-CWR-SMCWS,-11.0765,-32.3334,115.6967,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN33,MANDURAH,UWA-CWR-SMCWS,-17.9853,-32.3334,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN34,MANDURAH,UWA-CWR-SMCWS,-18.5510,-32.3334,115.7375,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN35,MANDURAH,UWA-CWR-SMCWS,-6.7291,-32.3209,115.7067,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN36,MANDURAH,UWA-CWR-SMCWS,-6.3221,-32.3501,115.71,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN37,MANDURAH,UWA-CWR-SMCWS,-7.3096,-32.3701,115.6971,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN38,MANDURAH,UWA-CWR-SMCWS,-12.8766,-32.3334,115.6333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN39,MANDURAH,UWA-CWR-SMCWS,-22.0712,-32.4334,115.6,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN4,MANDURAH,UWA-CWR-SMCWS,-5.6219,-32.5126,115.7083,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN40,MANDURAH,UWA-CWR-SMCWS,-19.2086,-32.4334,115.6333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN45,MANDURAH,UWA-CWR-SMCWS,-19.9852,-32.3334,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN49,MANDURAH,UWA-CWR-SMCWS,-11.9240,-32.2534,115.675,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN49W,MANDURAH,UWA-CWR-SMCWS,-9.7968,-32.2504,115.675,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN5,MANDURAH,UWA-CWR-SMCWS,-3.6813,-32.5126,115.7183,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN50,MANDURAH,UWA-CWR-SMCWS,-14.5223,-32.2534,115.6667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN55,MANDURAH,UWA-CWR-SMCWS,-22.0053,-32.2668,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN6,MANDURAH,UWA-CWR-SMCWS,-3.6664,-32.5126,115.7275,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN60,MANDURAH,UWA-CWR-SMCWS,-21.0707,-32.3001,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN65,MANDURAH,UWA-CWR-SMCWS,-22.5102,-32.3568,115.6583,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN7,MANDURAH,UWA-CWR-SMCWS,-5.1226,-32.5001,115.7333,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN70,MANDURAH,UWA-CWR-SMCWS,-19.2626,-32.4001,115.6583,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN72,MANDURAH,UWA-CWR-SMCWS,-13.1888,-32.4334,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN75,MANDURAH,UWA-CWR-SMCWS,-14.5790,-32.4168,115.695,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN7B,MANDURAH,UWA-CWR-SMCWS,-6.7576,-32.4964,115.7244,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN8,MANDURAH,UWA-CWR-SMCWS,-11.8330,-32.4918,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN80,MANDURAH,UWA-CWR-SMCWS,-11.0334,-32.4168,115.72,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN85,MANDURAH,UWA-CWR-SMCWS,-30.1192,-32.2918,115.5583,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN88,MANDURAH,UWA-CWR-SMCWS,-24.8411,-32.2918,115.5917,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN9,MANDURAH,UWA-CWR-SMCWS,-12.9635,-32.4834,115.7,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN90,MANDURAH,UWA-CWR-SMCWS,-23.9257,-32.3334,115.5917,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),MN95,MANDURAH,UWA-CWR-SMCWS,-13.3778,-32.3334,115.63,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP3,MR,MR,WAMSI-WWMSP3-CTD,-8.3627,-32.066497,115.72983,WAMSI-WWMSP3-CTD
+Commonwealth Scientific and Industrial Research Organisation,Strategic Research Fund for the Marine Environment (SRFME),Mooring_A,Mooring A,CSIRO-SRFME-MOORING,-17.0000,-31.5367,115.5583,CSIRO-SRFME-MOORING
+Commonwealth Scientific and Industrial Research Organisation,Strategic Research Fund for the Marine Environment (SRFME),Mooring_B,Mooring B,CSIRO-SRFME-MOORING,-45.0000,-31.6183,115.365,CSIRO-SRFME-MOORING
+Commonwealth Scientific and Industrial Research Organisation,Strategic Research Fund for the Marine Environment (SRFME),Mooring_C,Mooring C,CSIRO-SRFME-MOORING,-110.0000,-31.6817,115.2217,CSIRO-SRFME-MOORING
+The University of Western Australia,Centre for Water Research (CWR),ND01,COCKBURN,UWA-CWR-SMCWS,-14.5699,-32.1288,115.7095,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),ND01A,COCKBURN,UWA-CWR-SMCWS,-10.5872,-32.1309,115.7059,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,NH3,Northern Harbour Jervoise Bay,CSMC-WQ,-5.9675,-32.140023962,115.762557981,CSMC-WQ
-Integrated Marine Observing System,amnmadcp,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-ADCP,-52.7718,-32,115.4,IMOS-ANMN-ADCP
-Department of Transport,Coastal Data,PTBAR02,Barrack Street 02 Tide Station,DOT-TIDE,1.0000,-31.959681,115.857261,DOT-TIDE
-Department of Transport,Coastal Data,RKMGL01,Mangles Bay,DOT-TIDE,-1.1698,-32.274431,115.703344,DOT-TIDE
+Integrated Marine Observing System,AMNM,NRSROT_PROFILE,Rottnest Island,IMOS-ANMN-ADCP,-52.7718,-32,115.4,IMOS-ANMN-ADCP
+Western Australian Marine Science Institution,WWMSP3,OA1,OA1,WAMSI-WWMSP3-CTD,-7.8870,-32.093949,115.676266,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP3,OA1-DEP,OA1-DEP,WAMSI-WWMSP3-CTD,-8.4827,-32.124373,115.726209,WAMSI-WWMSP3-CTD
+The University of Western Australia,Centre for Water Research (CWR),OA10,COCKBURN,UWA-CWR-SMCWS,-8.6931,-32.0558,115.7308,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA100,COCKBURN,UWA-CWR-SMCWS,-12.3556,-32.1149,115.7172,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA15,COCKBURN,UWA-CWR-SMCWS,-16.6149,-32.0593,115.7155,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA20,COCKBURN,UWA-CWR-SMCWS,-17.1196,-32.0663,115.7153,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA25,COCKBURN,UWA-CWR-SMCWS,-5.8548,-32.0929,115.7153,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA25E,COCKBURN,UWA-CWR-SMCWS,-3.2688,-32.0903,115.7327,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA25N,COCKBURN,UWA-CWR-SMCWS,-6.1421,-32.0809,115.7208,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA25S,COCKBURN,UWA-CWR-SMCWS,-5.9071,-32.0946,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA27,COCKBURN,UWA-CWR-SMCWS,-11.6100,-32.1011,115.7137,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP3,OA2S,OA2S,WAMSI-WWMSP3-CTD,-10.2870,-32.114655,115.706333,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP3,OA3,OA3,WAMSI-WWMSP3-CTD,-11.2342,-32.139635,115.665661,WAMSI-WWMSP3-CTD
+The University of Western Australia,Centre for Water Research (CWR),OA30,COCKBURN,UWA-CWR-SMCWS,-4.2041,-32.0848,115.6908,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA30A,COCKBURN,UWA-CWR-SMCWS,-13.4347,-32.0956,115.6957,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA30N,COCKBURN,UWA-CWR-SMCWS,-4.3630,-32.084,115.6891,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA30S,COCKBURN,UWA-CWR-SMCWS,-13.4869,-32.1033,115.695,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA30W,COCKBURN,UWA-CWR-SMCWS,-6.2127,-32.0794,115.6742,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA31,COCKBURN,UWA-CWR-SMCWS,-5.3707,-32.0789,115.6892,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA32,COCKBURN,UWA-CWR-SMCWS,-9.6725,-32.0724,115.688,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA33,COCKBURN,UWA-CWR-SMCWS,-13.6125,-32.0633,115.6862,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA33W,COCKBURN,UWA-CWR-SMCWS,-13.1961,-32.0619,115.6833,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA35,COCKBURN,UWA-CWR-SMCWS,-7.5342,-32.0779,115.657,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP3,OA4,OA4,WAMSI-WWMSP3-CTD,-6.9310,-32.086728,115.708242,WAMSI-WWMSP3-CTD
+The University of Western Australia,Centre for Water Research (CWR),OA40,COCKBURN,UWA-CWR-SMCWS,-9.9206,-32.0796,115.6348,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA45,COCKBURN,UWA-CWR-SMCWS,-19.7917,-32.0779,115.617,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA5,COCKBURN,UWA-CWR-SMCWS,-6.2328,-32.0709,115.7312,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA50,COCKBURN,UWA-CWR-SMCWS,-18.6242,-32.0991,115.617,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA55,COCKBURN,UWA-CWR-SMCWS,-9.2172,-32.0991,115.642,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA60,COCKBURN,UWA-CWR-SMCWS,-9.1086,-32.1046,115.6653,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA62,COCKBURN,UWA-CWR-SMCWS,-9.3500,-32.1089,115.6835,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA62S,COCKBURN,UWA-CWR-SMCWS,-4.7100,-32.1213,115.6813,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA63,COCKBURN,UWA-CWR-SMCWS,-7.8990,-32.1146,115.693,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA64,COCKBURN,UWA-CWR-SMCWS,-14.4684,-32.111,115.6946,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA64CM,COCKBURN,UWA-CWR-SMCWS,-14.6944,-32.1106,115.6956,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA65,COCKBURN,UWA-CWR-SMCWS,-14.6380,-32.1113,115.7053,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA68,COCKBURN,UWA-CWR-SMCWS,-15.3145,-32.1113,115.7207,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA68E,COCKBURN,UWA-CWR-SMCWS,-9.2837,-32.1118,115.7325,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA69,COCKBURN,UWA-CWR-SMCWS,-10.0371,-32.1136,115.732,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA70,COCKBURN,UWA-CWR-SMCWS,-8.4994,-32.1113,115.7437,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA70SW,COCKBURN,UWA-CWR-SMCWS,-8.9959,-32.1211,115.7332,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA71,COCKBURN,UWA-CWR-SMCWS,-8.6996,-32.1115,115.7585,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA72,COCKBURN,UWA-CWR-SMCWS,-15.5060,-32.1194,115.7006,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA72A,COCKBURN,UWA-CWR-SMCWS,-5.5746,-32.1255,115.7,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA72N,COCKBURN,UWA-CWR-SMCWS,-11.1819,-32.1129,115.6972,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA72W,COCKBURN,UWA-CWR-SMCWS,-11.8031,-32.1192,115.6992,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA75,COCKBURN,UWA-CWR-SMCWS,-5.5359,-32.1296,115.7203,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA80,COCKBURN,UWA-CWR-SMCWS,-6.6679,-32.1313,115.7013,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA802,COCKBURN,UWA-CWR-SMCWS,-21.9289,-32.1468,115.6997,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA804,COCKBURN,UWA-CWR-SMCWS,-19.9310,-32.1389,115.6969,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA807,COCKBURN,UWA-CWR-SMCWS,-20.7360,-32.1479,115.6914,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA809,COCKBURN,UWA-CWR-SMCWS,-19.8358,-32.155,115.6876,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA810,COCKBURN,UWA-CWR-SMCWS,-16.7312,-32.1586,115.6851,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA812,COCKBURN,UWA-CWR-SMCWS,-16.5891,-32.1649,115.6818,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA814,COCKBURN,UWA-CWR-SMCWS,1.0140,-32.1734,115.6768,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81A,COCKBURN,UWA-CWR-SMCWS,-19.3782,-32.1388,115.6978,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81B,COCKBURN,UWA-CWR-SMCWS,-19.0033,-32.1388,115.7017,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81C,COCKBURN,UWA-CWR-SMCWS,-19.1226,-32.1384,115.7032,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81D,COCKBURN,UWA-CWR-SMCWS,-18.8894,-32.1376,115.705,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81E,COCKBURN,UWA-CWR-SMCWS,-17.6570,-32.1372,115.7063,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81F,COCKBURN,UWA-CWR-SMCWS,-14.8840,-32.1356,115.6992,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81G,COCKBURN,UWA-CWR-SMCWS,-9.9843,-32.1349,115.7027,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA81H,COCKBURN,UWA-CWR-SMCWS,-13.3860,-32.1356,115.7052,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA85,COCKBURN,UWA-CWR-SMCWS,-9.3393,-32.1354,115.677,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA85A,COCKBURN,UWA-CWR-SMCWS,-9.1605,-32.1413,115.682,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA85B,COCKBURN,UWA-CWR-SMCWS,-18.5934,-32.1453,115.6863,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA85N,COCKBURN,UWA-CWR-SMCWS,-4.9565,-32.1208,115.6793,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA85NN,COCKBURN,UWA-CWR-SMCWS,19.0000,-32.1199,115.773,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA88,COCKBURN,UWA-CWR-SMCWS,-9.7208,-32.1354,115.6692,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA90,COCKBURN,UWA-CWR-SMCWS,-10.7076,-32.1379,115.6603,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95,COCKBURN,UWA-CWR-SMCWS,-19.7450,-32.1379,115.6353,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95W,COCKBURN,UWA-CWR-SMCWS,-21.0050,-32.1373,115.6287,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95W0,COCKBURN,UWA-CWR-SMCWS,-8.4957,-32.1514,115.7513,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95W2,COCKBURN,UWA-CWR-SMCWS,-17.9248,-32.1399,115.6375,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95W4,COCKBURN,UWA-CWR-SMCWS,-9.0850,-32.1399,115.6471,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95W6,COCKBURN,UWA-CWR-SMCWS,-8.2232,-32.1441,115.6574,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95W8,COCKBURN,UWA-CWR-SMCWS,-8.6909,-32.147,115.666,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WA,COCKBURN,UWA-CWR-SMCWS,-8.2688,-32.1495,115.6766,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WC,COCKBURN,UWA-CWR-SMCWS,-7.6233,-32.1497,115.6797,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WE,COCKBURN,UWA-CWR-SMCWS,-21.1419,-32.1514,115.6933,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WG,COCKBURN,UWA-CWR-SMCWS,-22.1304,-32.1507,115.7029,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WI,COCKBURN,UWA-CWR-SMCWS,-20.5545,-32.1517,115.71,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WK,COCKBURN,UWA-CWR-SMCWS,-18.6197,-32.1512,115.7249,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA95WM,COCKBURN,UWA-CWR-SMCWS,-10.8472,-32.1512,115.7398,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),OA98,COCKBURN,UWA-CWR-SMCWS,-9.8406,-32.1398,115.6458,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP3,OA9S,OA9S,WAMSI-WWMSP3-CTD,-8.8147,-32.104168,115.731672,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP5,OAM53,Cockburn Wave Station,WAMSI-WWMSP5-WWM,-15.3622,-32.107765,115.691678,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,ORF01,Ocean Reef,WAMSI-WWMSP5-WWM,-2.1640,-31.757539,115.721419,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP3,PB,PB,WAMSI-WWMSP3-CTD,-8.0841,-32.029683,115.741563,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP5,PTB01,Port Beach,WAMSI-WWMSP5-WWM,-4.5875,-32.038311,115.741111,WAMSI-WWMSP5-WWM
+Department of Transport,TIDE,PTBAR02,Barrack Street 02 Tide Station,DOT-TIDE,1.0000,-31.959681,115.857261,DOT-TIDE
+Western Australian Marine Science Institution,WWMSP5,RDW47,Rottnest Island 02 Wave Station,WAMSI-WWMSP5-WWM,-47.1939,-32.094154,115.407789,WAMSI-WWMSP5-WWM
+Department of Transport,TIDE,RKMGL01,Mangles Bay,DOT-TIDE,-1.1698,-32.274431,115.703344,DOT-TIDE
+Western Australian Marine Science Institution,WWMSP5,ROT33,Rottnest Island 01 Wave Station,WAMSI-WWMSP5-WWM,-48.8575,-32.111376,115.401955,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,S01d,S01d,WAMSI-WWMSP5-WWM,-11.0203,-32.200942,115.76271,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,S02d,S02d,WAMSI-WWMSP5-WWM,-18.6651,-32.180925,115.730832,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP3,S4S10,S4S10,WAMSI-WWMSP3-CTD,-7.0864,-32.184894,115.757136,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP3,SC,SC,WAMSI-WWMSP3-CTD,-7.9017,-32.254165,115.684285,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP3,SC2,SC2,WAMSI-WWMSP3-CTD,-8.0367,-32.298863,115.686273,WAMSI-WWMSP3-CTD
+The University of Western Australia,Centre for Water Research (CWR),SDC1,COCKBURN,UWA-CWR-SMCWS,-23.1288,-32.2918,115.65,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,SF,Southern Flats shallow,CSMC-WQ,-3.2126,-32.248231528,115.712530827,CSMC-WQ
-Integrated Marine Observing System,amnmadcp,WACA20_PROFILE,WA Canyon 200m,IMOS-ANMN-ADCP,-210.0000,-31.9833,115.2276,IMOS-ANMN-ADCP
+Western Australian Marine Science Institution,WWMSP3,SF11,SF11,WAMSI-WWMSP3-CTD,-18.4572,-32.242053,115.721449,WAMSI-WWMSP3-CTD
+The University of Western Australia,Centre for Water Research (CWR),SG,COCKBURN,UWA-CWR-SMCWS,-14.0413,-32.0791,115.7023,UWA-CWR-SMCWS
+BMT,WP,SWAN_AWAC1,SWAN_AWAC1,BMT-WP-SWAN,-13.5153,-32.079398,115.70416,BMT-WP-SWAN
+BMT,WP,SWAN_AWAC2,SWAN_AWAC2,BMT-WP-SWAN,-7.3761,-32.095191,115.679512,BMT-WP-SWAN
+BMT,WP,SWAN_Cath1,SWAN_Cath1,BMT-WP-SWAN,-6.2840,-32.078775,115.728092,BMT-WP-SWAN
+BMT,WP,SWAN_Cath2,SWAN_Cath2,BMT-WP-SWAN,-8.4982,-32.090541,115.745646,BMT-WP-SWAN
+BMT,WP,SWAN_DC,SWAN_DC,BMT-WP-SWAN,-15.3795,-31.977779,115.686667,BMT-WP-SWAN
+BMT,WP,SWAN_Parmelia,SWAN_Parmelia,BMT-WP-SWAN,-7.8019,-32.130005,115.701664,BMT-WP-SWAN
+BMT,WP,SWAN_Rottnest,SWAN_Rottnest,BMT-WP-SWAN,-47.1939,-32.094167,115.407778,BMT-WP-SWAN
+BMT,WP,SWAN_S01,SWAN_S01,BMT-WP-SWAN,-11.0203,-32.200942,115.76271,BMT-WP-SWAN
+BMT,WP,SWAN_S02,SWAN_S02,BMT-WP-SWAN,-18.6651,-32.180925,115.730832,BMT-WP-SWAN
+BMT,WP,SWAN_Stirling,SWAN_Stirling,BMT-WP-SWAN,-13.3580,-32.203214,115.744336,BMT-WP-SWAN
+Western Australian Marine Science Institution,WWMSP5,TRK01,Two Rocks 1,WAMSI-WWMSP5-WWM,-10.0000,-31.494444,115.568055,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,TRK02,Two Rocks 2,WAMSI-WWMSP5-WWM,-5.0000,-31.496516,115.580633,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,TRK03,Two Rocks 3,WAMSI-WWMSP5-WWM,-5.0000,-31.496033,115.581367,WAMSI-WWMSP5-WWM
+Western Australian Marine Science Institution,WWMSP5,TRK04,Two Rocks 4,WAMSI-WWMSP5-WWM,0.0000,-31.487972,115.576139,WAMSI-WWMSP5-WWM
+The University of Western Australia,Centre for Water Research (CWR),V1,NORTHPERTH,UWA-CWR-SMCWS,-8.7138,-31.8594,115.7302,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V10,NORTHPERTH,UWA-CWR-SMCWS,-405.0000,-31.8597,115.0324,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V11,NORTHPERTH,UWA-CWR-SMCWS,-503.0000,-31.8591,114.9521,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V12,NORTHPERTH,UWA-CWR-SMCWS,-774.0000,-31.8605,114.8732,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V1A,NORTHPERTH,UWA-CWR-SMCWS,-21.7566,-31.8589,115.6857,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V2,NORTHPERTH,UWA-CWR-SMCWS,-22.8776,-31.8593,115.667,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V3,NORTHPERTH,UWA-CWR-SMCWS,-30.0577,-31.8594,115.5882,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V4,NORTHPERTH,UWA-CWR-SMCWS,-37.0734,-31.8591,115.5081,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V5,NORTHPERTH,UWA-CWR-SMCWS,-40.9442,-31.8595,115.4294,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V6,NORTHPERTH,UWA-CWR-SMCWS,-55.0000,-31.8593,115.3502,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V7,NORTHPERTH,UWA-CWR-SMCWS,-108.0000,-31.8586,115.2711,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V8,NORTHPERTH,UWA-CWR-SMCWS,-160.0000,-31.8592,115.1914,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),V9,NORTHPERTH,UWA-CWR-SMCWS,-219.0000,-31.8583,115.1112,UWA-CWR-SMCWS
+Integrated Marine Observing System,AMNM,WACA20_PROFILE,WA Canyon 200m,IMOS-ANMN-ADCP,-210.0000,-31.9833,115.2276,IMOS-ANMN-ADCP
+The University of Western Australia,Centre for Water Research (CWR),WP10,COCKBURN,UWA-CWR-SMCWS,-5.6247,-32.1251,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WP15,COCKBURN,UWA-CWR-SMCWS,-14.1444,-32.1289,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WP20,COCKBURN,UWA-CWR-SMCWS,-5.3190,-32.1343,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WP25,COCKBURN,UWA-CWR-SMCWS,-12.5578,-32.1371,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WP5,COCKBURN,UWA-CWR-SMCWS,-4.1753,-32.1201,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS10,SOUTHPERTH,UWA-CWR-SMCWS,-7.1148,-32.2993,115.6867,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS100,SOUTHPERTH,UWA-CWR-SMCWS,-8.3179,-32.3418,115.6958,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS105,SOUTHPERTH,UWA-CWR-SMCWS,-10.8343,-32.3393,115.7017,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS110,SOUTHPERTH,UWA-CWR-SMCWS,-16.1463,-32.3368,115.7067,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS115,SOUTHPERTH,UWA-CWR-SMCWS,-16.9361,-32.3418,115.7183,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS120,SOUTHPERTH,UWA-CWR-SMCWS,-16.7940,-32.3418,115.725,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS125,SOUTHPERTH,UWA-CWR-SMCWS,-17.1536,-32.3418,115.7317,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS130,SOUTHPERTH,UWA-CWR-SMCWS,-17.8362,-32.3418,115.7383,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS15,SOUTHPERTH,UWA-CWR-SMCWS,-10.3839,-32.3101,115.6783,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS170,SOUTHPERTH,UWA-CWR-SMCWS,-4.8523,-32.3184,115.7067,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS175,SOUTHPERTH,UWA-CWR-SMCWS,-12.5198,-32.3201,115.7092,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS180,SOUTHPERTH,UWA-CWR-SMCWS,-18.5148,-32.3234,115.7117,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS185,SOUTHPERTH,UWA-CWR-SMCWS,-18.1804,-32.3318,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS190,SOUTHPERTH,UWA-CWR-SMCWS,-15.9755,-32.3501,115.7192,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS195,SOUTHPERTH,UWA-CWR-SMCWS,-6.6543,-32.3551,115.7183,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS20,SOUTHPERTH,UWA-CWR-SMCWS,-12.4127,-32.3184,115.6783,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS200,SOUTHPERTH,UWA-CWR-SMCWS,-3.9974,-32.3618,115.7167,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS210,SOUTHPERTH,UWA-CWR-SMCWS,-6.6855,-32.3701,115.7,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS215,SOUTHPERTH,UWA-CWR-SMCWS,-3.7320,-32.3584,115.7033,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS220,SOUTHPERTH,UWA-CWR-SMCWS,-4.8920,-32.3518,115.7083,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS225,SOUTHPERTH,UWA-CWR-SMCWS,-5.8589,-32.3451,115.7075,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS230,SOUTHPERTH,UWA-CWR-SMCWS,-18.7913,-32.3334,115.705,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS235,SOUTHPERTH,UWA-CWR-SMCWS,-9.7517,-32.3251,115.7008,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS240,SOUTHPERTH,UWA-CWR-SMCWS,-3.9372,-32.3151,115.6983,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS245,SOUTHPERTH,UWA-CWR-SMCWS,-2.7465,-32.3084,115.7083,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS25,SOUTHPERTH,UWA-CWR-SMCWS,-13.5985,-32.3251,115.6783,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS30,SOUTHPERTH,UWA-CWR-SMCWS,-14.2021,-32.3301,115.6775,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS35,SOUTHPERTH,UWA-CWR-SMCWS,-14.4536,-32.3368,115.6775,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WS4,Warnbro Sound central basin,CSMC-WQ,-17.2342,-32.336946025,115.722166715,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),WS40,SOUTHPERTH,UWA-CWR-SMCWS,-15.0352,-32.3418,115.6775,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS5,SOUTHPERTH,UWA-CWR-SMCWS,-4.1374,-32.2993,115.6967,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS65,SOUTHPERTH,UWA-CWR-SMCWS,-5.8827,-32.3768,115.69,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS70,SOUTHPERTH,UWA-CWR-SMCWS,-5.2146,-32.3801,115.7,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS75,SOUTHPERTH,UWA-CWR-SMCWS,-4.1816,-32.3818,115.715,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS80,SOUTHPERTH,UWA-CWR-SMCWS,-21.7319,-32.3418,115.65,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS85,SOUTHPERTH,UWA-CWR-SMCWS,-20.2968,-32.3418,115.66,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS90,SOUTHPERTH,UWA-CWR-SMCWS,-19.0655,-32.3418,115.67,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),WS95,SOUTHPERTH,UWA-CWR-SMCWS,-6.0744,-32.3418,115.69,UWA-CWR-SMCWS
 Cockburn Sound Management Council,Cockburn Sound Marine Water Quality Monitoring,WSSB,Warnbro Sound Safety Bay shallow,CSMC-WQ,-2.9904,-32.308837615,115.708785228,CSMC-WQ
+The University of Western Australia,Centre for Water Research (CWR),Y1,NORTHPERTH,UWA-CWR-SMCWS,-13.6972,-32.0563,115.7217,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y10,NORTHPERTH,UWA-CWR-SMCWS,-7.2358,-31.8779,115.7433,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y11,NORTHPERTH,UWA-CWR-SMCWS,-11.9333,-31.8773,115.7317,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y12,NORTHPERTH,UWA-CWR-SMCWS,-14.8187,-31.8768,115.7192,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y13,NORTHPERTH,UWA-CWR-SMCWS,-19.0069,-31.8768,115.6983,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y14,NORTHPERTH,UWA-CWR-SMCWS,-25.1215,-31.8773,115.6792,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y15,NORTHPERTH,UWA-CWR-SMCWS,-26.5141,-31.8768,115.6467,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y16,NORTHPERTH,UWA-CWR-SMCWS,-30.0211,-31.8763,115.6142,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y17,NORTHPERTH,UWA-CWR-SMCWS,-31.0000,-31.8759,115.5847,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y18,NORTHPERTH,UWA-CWR-SMCWS,-31.0000,-31.8993,115.6033,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y19,NORTHPERTH,UWA-CWR-SMCWS,-30.4085,-31.9204,115.6203,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y2,NORTHPERTH,UWA-CWR-SMCWS,-15.7526,-32.0284,115.7222,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y20,NORTHPERTH,UWA-CWR-SMCWS,-29.2010,-31.9443,115.6392,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y21,NORTHPERTH,UWA-CWR-SMCWS,-24.2266,-31.9546,115.6463,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y22,NORTHPERTH,UWA-CWR-SMCWS,-18.0639,-31.9704,115.675,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y23,NORTHPERTH,UWA-CWR-SMCWS,-14.7172,-31.9851,115.7013,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y24,NORTHPERTH,UWA-CWR-SMCWS,-11.8103,-32.0006,115.7233,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y25,NORTHPERTH,UWA-CWR-SMCWS,-13.0399,-32.0098,115.74,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y26,COCKBURN,UWA-CWR-SMCWS,-18.0235,-32.0131,115.7092,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y27,COCKBURN,UWA-CWR-SMCWS,-19.6485,-32.0164,115.6775,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y28,COCKBURN,UWA-CWR-SMCWS,-10.0643,-32.0209,115.6458,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y29,COCKBURN,UWA-CWR-SMCWS,-10.3017,-32.0268,115.6158,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y3,COCKBURN,UWA-CWR-SMCWS,-13.0399,-32.0098,115.74,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y30,COCKBURN,UWA-CWR-SMCWS,-19.6812,-32.0351,115.5833,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y31,COCKBURN,UWA-CWR-SMCWS,-28.1271,-32.0484,115.5542,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y32,COCKBURN,UWA-CWR-SMCWS,-21.3095,-32.0593,115.528,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y33,NORTHPERTH,UWA-CWR-SMCWS,-39.8476,-32.0718,115.5017,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y34,NORTHPERTH,UWA-CWR-SMCWS,-42.8116,-32.0851,115.4742,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y35,NORTHPERTH,UWA-CWR-SMCWS,-43.9117,-32.0984,115.445,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y36,NORTHPERTH,UWA-CWR-SMCWS,-40.3103,-32.1051,115.475,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y37,NORTHPERTH,UWA-CWR-SMCWS,-34.2117,-32.1118,115.5063,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y38,NORTHPERTH,UWA-CWR-SMCWS,-28.8625,-32.1176,115.5375,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y39,NORTHPERTH,UWA-CWR-SMCWS,-34.0676,-32.1243,115.5683,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y4,NORTHPERTH,UWA-CWR-SMCWS,-11.8103,-32.0006,115.7233,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y40,NORTHPERTH,UWA-CWR-SMCWS,-19.0017,-32.1293,115.5917,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y41,NORTHPERTH,UWA-CWR-SMCWS,-21.7589,-32.1351,115.6183,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y42,NORTHPERTH,UWA-CWR-SMCWS,-10.0945,-32.1409,115.6458,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y5,NORTHPERTH,UWA-CWR-SMCWS,-12.9248,-31.9739,115.7255,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y6,NORTHPERTH,UWA-CWR-SMCWS,-12.9376,-31.9473,115.7267,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y7,NORTHPERTH,UWA-CWR-SMCWS,-9.8843,-31.9396,115.7475,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y8,NORTHPERTH,UWA-CWR-SMCWS,-15.4900,-31.9204,115.7278,UWA-CWR-SMCWS
+The University of Western Australia,Centre for Water Research (CWR),Y9,NORTHPERTH,UWA-CWR-SMCWS,-16.9135,-31.8934,115.7292,UWA-CWR-SMCWS
+Western Australian Marine Science Institution,WWMSP3,s1310,s1310,WAMSI-WWMSP3-CTD,-7.1059,-32.128416,115.750778,WAMSI-WWMSP3-CTD
+Western Australian Marine Science Institution,WWMSP5,wwmsp5_CS1,CS1,WAMSI-WWMSP5-WAVE,-21.3219,-32.1463,115.6976,WAMSI-WWMSP5-WAVE
+Western Australian Marine Science Institution,WWMSP5,wwmsp5_CS4,CS4,WAMSI-WWMSP5-WAVE,-11.4230,-32.2044,115.75,WAMSI-WWMSP5-WAVE
+Western Australian Marine Science Institution,WWMSP5,wwmsp5_CS6,CS6,WAMSI-WWMSP5-WAVE,-10.2203,-32.096,115.7392,WAMSI-WWMSP5-WAVE

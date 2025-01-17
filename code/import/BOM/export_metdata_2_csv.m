@@ -1,8 +1,6 @@
 function export_metdata_2_csv(metdata)
 addpath(genpath('../../functions/'));
 
-%load '../../../../data-warehouse/csv_holding/bom/idy/metdata.mat'
-%D:\csiem/data-warehouse/csv_holding/bom/idy/metdata.mat;
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
@@ -121,13 +119,13 @@ for i = 1:length(sites)
                     end
                     fclose(fid);
                     
-                    headerfile = regexprep(filename,'_DATA','_HEADER');
-                    
+                    headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
+                    disp(headerfile);
                     fid = fopen(headerfile,'wt');
                     fprintf(fid,'Agency Name,Bureau of Meteorology\n');
                     fprintf(fid,'Agency Code,BOM\n');
-                    fprintf(fid,'Program,Weather\n');
-                    fprintf(fid,'Project,IDY\n');
+                    fprintf(fid,'Program,IDY\n');
+                    fprintf(fid,'Project,idy\n');
                     fprintf(fid,'Tag,BOM-IDY\n');
                     fprintf(fid,'Data File Name,%s\n',writefile);
                     fprintf(fid,'Location,%s\n',writepath);
@@ -140,12 +138,12 @@ for i = 1:length(sites)
                     fprintf(fid,'Lat,%8.8f\n',sitekey.bom.(thesites{foundsite}).Lat);
                     fprintf(fid,'Long,%8.8f\n',sitekey.bom.(thesites{foundsite}).Lon);
                     fprintf(fid,'Time Zone,GMT +8\n');
-                    fprintf(fid,'Vertical Datum, \n');
+                    fprintf(fid,'Vertical Datum,mAHD\n');
                     fprintf(fid,'National Station ID,%s\n',num2str(sitekey.bom.(thesites{foundsite}).ID));
                     fprintf(fid,'Site Description,%s\n',sitekey.bom.(thesites{foundsite}).Description);
                     fprintf(fid,'Deployment,%s\n','Fixed');
-                    fprintf(fid,'Deployment Position,%s\n','2m from Ground');
-                    fprintf(fid,'Vertical Reference,%s\n','m from Ground');
+                    fprintf(fid,'Deployment Position,%s\n','2.0m above Seabed');
+                    fprintf(fid,'Vertical Reference,%s\n','m above Seabed');
                     fprintf(fid,'Site Mean Depth,%s\n','');
                     
                     

@@ -3,16 +3,13 @@ function import_imos_profile_2_csv;
 addpath(genpath('../../functions/'));
 
 run('../../actions/csiem_data_paths.m')
-thefile = [datapath,'data-lake/IMOS/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv'];
-%'IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv'
-%'D:/csiem/data-lake/imos/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv';
+thefile = [datapath,'data-lake/IMOS/AMNM/amnmprofile/IMOS_-_Australian_National_Mooring_Network_(ANMN)_-_CTD_Profiles_2019_2022.csv'];
 
 load ../../actions/varkey.mat;
 load ../../actions/agency.mat;
 load ../../actions/sitekey.mat;
 
-outpath =  [datapath,'data-warehouse/csv_holding/imos/amnmprofile/'];
-%'              D:/csiem/data-warehouse/csv_holding/imos/amnmprofile/';
+outpath = [datapath,'data-warehouse/csv_holding/imos/amnm/amnmprofile/'];
 
 if ~exist(outpath,'dir')
     mkdir(outpath);
@@ -21,7 +18,7 @@ end
 
 thesiteval = fieldnames(sitekey.imosamnm);
 thevarval = fieldnames(varkey);
-theagencyval = fieldnames(agency.imosprofile);
+theagencyval = fieldnames(agency.IMOS);
 
 Table = readtable(thefile);
 headers = Table.Properties.VariableNames;
@@ -49,78 +46,67 @@ Depths(isnan(Depths)) = 0;
 ustations = unique(stations);
 
 for i = 19:length(headers)
+    disp(['Header ' headers{i}])
     for j = 1:length(ustations)
         foundstation = 0 ;
         for k = 1:length(thesiteval)
             if strcmpi(sitekey.imosamnm.(thesiteval{k}).ID,ustations{j}) == 1
                 foundstation = k;
+                disp(['  Found Site ',sitekey.imosamnm.(thesiteval{k}).ID])
             end
         end
         
         foundvar = 0;
         
         for k = 1:length(theagencyval)
-            if strcmpi(agency.imosprofile.(theagencyval{k}).Old,headers{i}) == 1
+            if strcmpi(agency.IMOS.(theagencyval{k}).Old,headers{i}) == 1
                 foundvar = k;
+                ID = agency.IMOS.(theagencyval{k}).ID;
+                VarStruct = varkey.(ID);
+                disp(['     Found Var ',varkey.(ID).Name])
             end
         end
-        
-%         if strcmpi(headers{i},'Allo_mgm3') == 1
-%             disp(headers{i})
-%             stop
-%         end
+    
         
         if foundvar > 0
             
-            
-            
-            
-            thefoundvar = 0;
-            for nn = 1:length(thevarval)
-                if strcmpi(thevarval{nn},agency.imosprofile.(theagencyval{foundvar}).ID) == 1
-                    thefoundvar = nn;
-                end
-            end
-            
-            
-            
-            
             sss = find(strcmpi(stations,ustations{j}) == 1);
             
-            %thedata_raw = snum(sss,i-1) * agency.imosprofile.(theagencyval{foundvar}).Conv;
-            thedata_raw = Table{sss,i-1} * agency.imosprofile.(theagencyval{foundvar}).Conv;
+            %thedata_raw = snum(sss,i-1) * agency.IMOS.(theagencyval{foundvar}).Conv;
+            thedata_raw = Table{sss,i-1} * agency.IMOS.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
             
             if ~isempty(thedata)
-            
+            disp('      Writing file')
             thedepth = Depths(sss(ttt));
             thedate = mdates(sss(ttt));
+            thedateString = sdate(sss(ttt));
             QC = 'N';
             
             
             
             
-            filevar = regexprep(varkey.(thevarval{thefoundvar}).Name,' ','_');
+            filevar = regexprep(varkey.(ID).Name,' ','_');
             filevar = regexprep(filevar,'+','_');
             filename = [outpath,sitekey.imosamnm.(thesiteval{foundstation}).AED,'_',filevar,'_2020_DATA.csv'];
-            fid = fopen(filename,'wt');
+            fid = fopen(filename,'W');
             fprintf(fid,'Date,Depth,Data,QC\n');
             for nn = 1:length(thedata)
-                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',datestr(thedate(nn),'yyyy-mm-dd HH:MM:SS'),thedepth(nn),thedata(nn),QC);
+                fprintf(fid,'%s,%4.4f,%4.4f,%s\n',thedateString{nn},thedepth(nn),thedata(nn),QC);
             end
             fclose(fid);
             
             headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
             
-            fid = fopen(headerfile,'wt');
+            fid = fopen(headerfile,'W');
             fprintf(fid,'Agency Name,Integrated Marine Observing System\n');
             fprintf(fid,'Agency Code,IMOS\n');
-            fprintf(fid,'Program,amnmprofile\n');
+            fprintf(fid,'Program,AMNM\n');
             fprintf(fid,'Project,amnmprofile\n');
-            fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
+            fprintf(fid,'Tag,IMOS-ANMN-PROFILE\n');
             fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
-            fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('amnmprofile')]);
+            fprintf(fid,'Location,%s\n',outpath);
             
             
             fprintf(fid,'Station Status,Inactive\n');
@@ -131,15 +117,15 @@ for i = 19:length(headers)
             fprintf(fid,'National Station ID,%s\n',[sitekey.imosamnm.(thesiteval{foundstation}).ID,'_PROFILE']);
             fprintf(fid,'Site Description,%s\n',sitekey.imosamnm.(thesiteval{foundstation}).Description);
             fprintf(fid,'Deployment,%s\n','Profile');
-            fprintf(fid,'Deployment Position,%s\n','m from Surface');
-            fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+            fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');
+            fprintf(fid,'Vertical Reference,%s\n','m below Surface');
             fprintf(fid,'Site Mean Depth,%s\n','');
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
             fprintf(fid,'Contact Email,\n');
-            fprintf(fid,'Variable ID,%s\n',agency.imosprofile.(theagencyval{foundvar}).ID);
+            fprintf(fid,'Variable ID,%s\n',agency.IMOS.(theagencyval{foundvar}).ID);
             
-            fprintf(fid,'Data Category,%s\n',varkey.(thevarval{thefoundvar}).Category);
+            fprintf(fid,'Data Category,%s\n',varkey.(ID).Category);
             
             
             SD = mean(diff(thedate));
@@ -149,7 +135,7 @@ for i = 19:length(headers)
             fprintf(fid,'Date,yyyy-mm-dd HH:MM:SS\n');
             fprintf(fid,'Depth,Decimal\n');
             
-            thevar = [varkey.(thevarval{thefoundvar}).Name,' (',varkey.(thevarval{thefoundvar}).Unit,')'];
+            thevar = [varkey.(ID).Name,' (',varkey.(ID).Unit,')'];
             
             fprintf(fid,'Variable,%s\n',thevar);
             fprintf(fid,'QC,String\n');

@@ -42,7 +42,7 @@ fprintf(fid,'Vertical Datum,mAHD\n');
 fprintf(fid,'National Station ID,%s\n',ID);
 fprintf(fid,'Site Description,%s\n',Desc);
 fprintf(fid,'Deployment,%s\n','Fixed');
-fprintf(fid,'Deployment Position,%s\n',[num2str(wdepth(1)),'m above Seabed']);
+fprintf(fid,'Deployment Position,%s\n',[sprintf('%.1f',wdepth(1)),'m above Seabed']);
 fprintf(fid,'Vertical Reference,%s\n','m above Seabed');
 fprintf(fid,'Site Mean Depth,%4.4f\n',thesite.Depth);
 fprintf(fid,'Bad or Unavailable Data Value,NaN\n');

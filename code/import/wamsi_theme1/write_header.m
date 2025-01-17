@@ -1,20 +1,20 @@
 function write_header(headerfile,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
 filename = regexprep(headerfile,'_HEADER','_DATA');
 
-temp = split(filename,'\');
+temp = split(filename,filesep);
 filename_short = temp{end};
 
 fid = fopen(headerfile,'wt');
-            fprintf(fid,'Agency Name,BMT\n');
+            fprintf(fid,'Agency Name,Western Australian Marine Science Institution\n');
             
-            fprintf(fid,'Agency Code,BMT\n');
-            fprintf(fid,'Program,SWAN\n');
-            fprintf(fid,'Project,BMT-SWAN\n');
-            fprintf(fid,'Tag,\n');
+            fprintf(fid,'Agency Code,WAMSI\n');
+            fprintf(fid,'Program,WWMSP1\n');
+            fprintf(fid,'Project,WWMSP1.1_WRF\n');
+            fprintf(fid,'Tag,WAMSI-WWMSP1-WRF\n');
 
             %%
             fprintf(fid,'Data File Name,%s\n',filename_short);
-            fprintf(fid,'Location,%s\n','N/A');
+            fprintf(fid,'Location,%s\n',fullfile(temp{1:end-1}));
             %%
             
             fprintf(fid,'Station Status,\n');
@@ -22,18 +22,21 @@ fid = fopen(headerfile,'wt');
             fprintf(fid,'Long,%6.9f\n',lon);
             fprintf(fid,'Time Zone,GMT +8\n');
             fprintf(fid,'Vertical Datum,mAHD\n');
+            if isnumeric(ID)
+                ID = num2str(ID);
+            end
             fprintf(fid,'National Station ID,%s\n',ID);
 
             %%
             fprintf(fid,'Site Description,%s\n',Desc);
             fprintf(fid,'Deployment,%s\n','Floating');         
-            fprintf(fid,'Deployment Position,%s\n','0m below surface');% '0.0m above Seabed');
+            fprintf(fid,'Deployment Position,%s\n','0.0m below Surface');% '0.0m above Seabed');
             fprintf(fid,'Vertical Reference,%s\n','m below surface');
             fprintf(fid,'Site Mean Depth,%4.4f\n',sitedepth);
             %%
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-            fprintf(fid,'Contact Email,%s\n','Lachy Gill, uwa email:00114282@uwa.edu.au 05/04/2024');
+            fprintf(fid,'Contact Email,%s\n','Lachy Gill <00114282@uwa.edu.au> 05/04/2024');
 
             %%
             fprintf(fid,'Variable ID,%s\n',varID);

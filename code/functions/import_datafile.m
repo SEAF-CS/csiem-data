@@ -1,31 +1,20 @@
 function data = import_datafile(filename)
 
 %[~,headers] = xlsread(filename,'A1:D1');
+opts = detectImportOptions(filename);
+opts.VariableTypes{2} = 'char';
+Table = readtable(filename,opts);
+DatenumVar = datenum(Table{:,1});
+data.Date = DatenumVar;
+data.Data = Table{:,3};
+data.QC = Table{:,4};
 
-
-fid = fopen(filename,'rt');
-fline = fgetl(fid);
-headers = split(fline,',');
-
-frewind(fid);
-
-
-x  = 4;
-textformat = [repmat('%s ',1,x)];
-% read single line: number of x-values
-
-datacell = textscan(fid,textformat,'Headerlines',1,'Delimiter',',');
-fclose(fid);
-
-data.Date = datenum(datacell{1},'yyyy-mm-dd HH:MM:SS');
-data.Data = str2double(datacell{3});
-data.QC = datacell{4};
-if strcmpi(headers{2},'Depth')
-    data.Depth = datacell{2};
+if strcmpi(Table.Properties.VariableNames{2},'Depth')
+    data.Depth = Table{:,2};
 else
-    data.Height = datacell{2};
+    data.Height = Table{:,2};
 end
-tdepth = datacell{2};
+tdepth = Table{:,2};
 
 for i = 1:length(tdepth)
     xval = tdepth{i};

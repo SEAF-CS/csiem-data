@@ -3,11 +3,13 @@ addpath(genpath('../functions'));
 csiem_data_paths 
 tic
 
-import_var_key_info;
-import_site_key;
+% import_var_key_info;
+% import_site_key;
+csiem_file_cleaner
 
 
 import_dwer = 0;
+import_dwer_swanest_phy = 0;
 import_dot = 0;
 import_bom = 0;
 import_mafrl = 0;
@@ -22,10 +24,22 @@ import_theme3 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
-import_bmtswan = 0;
+import_bmt_wp_swan = 0;
 import_wamsitheme1 = 0;
+import_UKMO = 0;
+import_NASA = 0;
+import_aims = 0;
+import_CSPHY = 0;
+import_IMOSPlanktonvar = 0;
+import_WCWA1Phyto = 0;
+import_WCWA2Phyto = 0;
+import_WCWA3_9Phyto = 0;
+import_UWA_AED_Phyto = 0;
 
-create_smd = 1;
+import_wamsiwaves = 0;
+
+
+create_smd = 0;
 
 create_matfiles = 1;
 create_parquet = 1;
@@ -33,7 +47,7 @@ create_parquet = 1;
 create_dataplots = 1;
 plotnew_dataplots = 1;
 
-create_shapefiles = 1;
+create_shapefiles = 0;
 
 
 run_marvl = 1;
@@ -65,6 +79,15 @@ if import_dwer
     % export_wir;clear all; close all;
     cd ../../actions
 end
+
+if import_dwer_swanest_phy
+    cd ../import/DWER/SWANESTPHY/
+        DWER_SWANEST_PHY_Groups_Staging
+        DWER_SWANEST_PHY_Groups_Staged
+        DWER_SWANEST_PHY_Species
+    cd ../../../actions/
+end
+
 % DOT Export
 
 if import_dot
@@ -85,9 +108,8 @@ end
 if import_bom
     %BOM Export
     cd ../import/BOM;
-    run_bom_import;
-
-    import_Barra_TFV
+    run_BOM_IDY;
+    import_BOM_BARRA_TFV;
 
     cd ../../actions
 end
@@ -115,7 +137,7 @@ if import_imos
     
     merge_files;
 
-    import_imos_temp_sal;
+    import_imos_amnm_adcp;
     
     % Needs updating
     % import_imos_profile_2_csv_BURST;
@@ -138,7 +160,7 @@ if import_dpird
     % DPIRD
     cd ../import/DPIRD
     
-    import_dpird_crab_data;
+    import_dpird_crp_data;
     
     cd ../../actions/
 end
@@ -147,7 +169,7 @@ if import_moorings
     % DWER Mooring
     cd ../import/DWER_Mooring
     
-    import_mooring_data_v2;
+    import_csmooring;
     
     cd ../../actions/
 end
@@ -178,6 +200,10 @@ if import_theme3
     run ImportSGRESTMain
     cd ../../../actions
 
+    cd ../import/wamsi_theme3/SEDDEPO
+    run IMPORTSEDDEPO
+    cd ../../../actions
+
     
 end
 
@@ -191,32 +217,131 @@ if import_wc
     
     cd ../../actions/
 end
+
 %WAMSI
 if import_theme5
     cd ../import/wamsi_theme5
     
-    import_netcdf_csv;
-    import_netcdf_csv_ADCP;
-    import_met_csv;
+    import_wwmsp5_wq;
+    import_wwmsp5_awac;
+    import_wwmsp5_met;
 
     cd Waves/
-    importWAVES
+    import_Waves
+    cd ../
+
+    cd WWM/
+    importWWM
     cd ../
 
     cd ../../actions/
 end
 
-if import_bmtswan
-    cd ../import/BMT-SWAN
-    importSWAN
+if import_wamsiwaves
+    cd ../import/wamsi_theme5/Waves
+    import_Waves
+    cd ../
+
     cd ../../actions/
 end
+
+
+if import_bmt_wp_swan
+    cd ../import/BMT/WP/
+    import_BMT_WP_SWAN
+    cd ../../../actions/
+end
+
+if import_UKMO
+    cd ../import/UKMO
+    system('python3 ImportUKMO_OSTIA.py') 
+    cd ../../actions/
+end
+
+if import_NASA
+    cd ../import/NASA
+
+        cd GHRSST
+        ImportNASASST
+        cd ..
+        
+    cd ../../actions/
+end
+
+
+%if  import_met_models
+%    cd ../import/BARRA
+%    import_export_barra;
+%    cd ../../actions/
+%end
 
 if import_wamsitheme1
     cd ../import/wamsi_theme1/
     ImportWRF
     cd ../../actions/
 end
+
+if import_aims
+    cd ../import/AIMS/TEMP/
+    import_AIMS_TEMP
+    cd ../../../actions
+end
+
+if import_CSPHY
+    cd ../import/DWER/CSPHY/
+    import_CSPHY_SPECIES
+
+    import_CSPHY_GROUP_STAGING
+    import_CSPHY_GROUP
+    cd ../../../actions/
+end
+
+if import_IMOSPlanktonvar
+    cd ../import/IMOS/IMOSPHYTO/
+    import_IMOSPlankton
+
+    Holding_IMOSPlanktonGroup 
+    import_IMOSPlanktonGroup
+
+    cd ../../../actions/
+end
+
+if import_WCWA1Phyto
+    cd ../import/WCWA/Phytoplankton/WCWA1
+    import_phytoplankton1_Species
+    import_phytoplankton1_Group
+    cd ../../../../actions/
+end
+
+if import_WCWA2Phyto
+    cd ../import/WCWA/Phytoplankton/WCWA2
+    import_phytoplankton2_Species
+    import_phytoplankton2_Group
+    cd ../../../../actions/
+end
+
+if import_WCWA3_9Phyto
+    cd ../import/WCWA/Phytoplankton/WCWA3-9
+    RunALL
+    cd ../../../../actions/
+end
+
+if import_UWA_AED_Phyto
+    cd ../import/UWA/AED/swan-phytoplankton/
+        cd subset1/
+        PhytoGroup
+        %PhytoSpeciesNOTDONE 
+        cd ../
+
+        cd subset2/
+        PhytoGroup
+        PhytoSpecies 
+        cd ../
+    cd ../../../../actions/
+end
+
+
+
 
 
 if create_smd
@@ -228,7 +353,7 @@ if create_matfiles
 end
 if create_parquet
     csv_2_parquet_by_agency;
-    csv_2_parquet_by_category;
+    %csv_2_parquet_by_category;
 end
 
 if create_dataplots
