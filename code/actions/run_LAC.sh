@@ -1,7 +1,7 @@
 #!/bin/bash
 matlab_exec=matlab
 echo "execute_import_pipeline();
-exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> 'FullRUN8(ALLMARVL).txt' 
+exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> 'FullRUN10(LiterallyEverythingAfterFreeze).txt' 
 
 # #!/bin/bash
 # matlab_exec=matlab

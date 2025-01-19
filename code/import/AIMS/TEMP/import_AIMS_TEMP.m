@@ -102,7 +102,7 @@
 
 
 function headerfill(fid,filename,indir,SubSiteStruct,Varstruct,depth,varid)
-    fprintf(fid,'Agency Name,AIMS\n');
+    fprintf(fid,'Agency Name,Australian Institute Of Marine Science\n');
     
     fprintf(fid,'Agency Code,AIMS\n');
     fprintf(fid,'Program,TEMP\n');

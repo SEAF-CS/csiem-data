@@ -22,7 +22,7 @@ yeararray = (1980:01:2024);
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 fid = fopen(outfile,'wt');
-fprintf(fid,"Agency_Name,Tag,Agency_Code,Program_Name,Program_Code,File_Name,File_Location,Status,Lat,Lon,Time_Zone,Vertical_Datum,Station_ID,Site_Description,Bad_Code,Deployment,Deployment_Position,Vertical_Reference,Site_Mean_Depth,Email,Variable_ID,Sampling_Rate,Date_Format,Depth_Format,Variable_Name,QC_Code,Category,Headerfilepath\n");
+fprintf(fid,"Agency_Name,Agency_Code,Program_Name,Project,Tag,File_Name,Location,Station Status,Lat,Lon,Time_Zone,Vertical_Datum,National Station ID,Site_Description,Deployment,Deployment_Position,Vertical_Reference,Site_Mean_Depth,Bad_Code,Email,Variable_ID,Data Category,Sampling_Rate,Date_Format,Depth_Format,Variable_Name,QC_Code,Headerfilepath\n");
 
 
 
@@ -36,32 +36,33 @@ for i = 1:length(filelist)
 
 
     fprintf(fid,"%s,",header.Agency_Name);
-    fprintf(fid,"%s,",header.Tag);
     fprintf(fid,"%s,",header.Agency_Code);
     fprintf(fid,"%s,",header.Program_Name);
-    fprintf(fid,"%s,",header.Program_Code);
+    fprintf(fid,"%s,",header.Program_Code); %Called Project in headerfiles
+    fprintf(fid,"%s,",header.Tag);
     fprintf(fid,"%s,",header.Data_File_Name);
-    fprintf(fid,"%s,",header.Data_File_Location);
-    fprintf(fid,"%s,",header.Status);
+    fprintf(fid,"%s,",header.Data_File_Location); %Called Location
+    fprintf(fid,"%s,",header.Status); %Station Status
     fprintf(fid,"%f,",header.Lat);
     fprintf(fid,"%f,",header.Lon);
     fprintf(fid,"%s,",header.Time_Zone);
     fprintf(fid,"%s,",header.Vertical_Datum);
-    fprintf(fid,"%s,",header.Station_ID);
+    fprintf(fid,"%s,",header.Station_ID); %National Station ID
     fprintf(fid,"%s,",header.Site_Description);
-    fprintf(fid,"%s,",header.Bad_Data_Code);
     fprintf(fid,"%s,",header.Deployment);
     fprintf(fid,"%s,",header.Deployment_Position);
     fprintf(fid,"%s,",header.Vertical_Reference);
     fprintf(fid,"%s,",header.Site_Mean_Depth);
+    fprintf(fid,"%s,",header.Bad_Data_Code);
     fprintf(fid,"%s,",header.Email);
     fprintf(fid,"%s,",header.Variable_ID);
+    fprintf(fid,"%s,",header.DataCategory);
     fprintf(fid,"%s,",header.Sampling_Rate);
     fprintf(fid,"%s,",header.Date_Format);
     fprintf(fid,"%s,",header.Depth_Format);
     fprintf(fid,"%s,",header.Variable_Name);
     fprintf(fid,"%s,",header.QC_Code);
-    fprintf(fid,"%s,",header.DataCategory);
+    
     fprintf(fid,"%s",headerfile);
 
     fprintf(fid,"\n");

@@ -33,10 +33,10 @@ sitekey.SWANEST = read_site_sheet("SWANEST");
 sitekey.VirtualSensors = read_site_sheet("VirtualSensors");
 
 sitekey.IMOSSOOP = read_site_sheet("IMOSSOOP");
-sitekey.WWMSP5ROMS = read_site_sheet("WWMSP5ROMS")
-sitekey.CSIRO = read_site_sheet("CSIRO")
-sitekey.DEP = read_site_sheet("DEP")
-sitekey.UWA = read_site_sheet("UWA")
+sitekey.WWMSP5ROMS = read_site_sheet("WWMSP5ROMS");
+sitekey.CSIRO = read_site_sheet("CSIRO");
+sitekey.DEP = read_site_sheet("DEP");
+sitekey.UWA = read_site_sheet("UWA");
 
 
 save sitekey.mat sitekey -mat;

@@ -159,7 +159,7 @@ agency.ESA = import_agency_conv('ESA');
 
 agency.DEP = import_agency_conv('DEP');
 agency.UWA = import_agency_conv('UWA');
-agency.CSIRO = import_agency_conv('CSIRO')
+agency.CSIRO = import_agency_conv('CSIRO');
 
 save agency.mat agency -mat;
 
