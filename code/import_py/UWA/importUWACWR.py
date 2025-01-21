@@ -15,7 +15,7 @@ def import_uwa_cwr(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,ma
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Profile"
-    DEPLOYMENT_POSITION = "m from surface"
+    DEPLOYMENT_POSITION = "m below Surface"
     VERT_REF = "Water Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'

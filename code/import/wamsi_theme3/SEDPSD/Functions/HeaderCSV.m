@@ -30,7 +30,7 @@ function HeaderCSV(InputFlatFile,VarKey,varkey)
             fclose(fid);
                 lat = Table{SiteIndex(SiteNum),'Var2'};
                 lon = Table{SiteIndex(SiteNum),'Var3'};
-                ID = '';%"National Station ID";
+                ID =  Table{SiteIndex(SiteNum),'Var4'};%"National Station ID";
                 Desc = '';%"Site description";
                 varID = VarKey{VarKeyInd,1};
                 Cat = varkey.(varID).Category;%'Data catergory';

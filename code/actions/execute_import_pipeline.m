@@ -62,6 +62,7 @@ run_marvl = 1;
 
 
 if import_fpa
+    disp('PipeLine Importing: FPA')
     cd ../import/FPA;
     import_fpa_mqmp;
     cd ../../actions;
@@ -69,6 +70,7 @@ end
 
 
 if import_dwer
+    disp('PipeLine Importing: DWER')
     % DWER Export
     cd ../import/DWER;
     
@@ -81,6 +83,7 @@ if import_dwer
 end
 
 if import_dwer_swanest_phy
+    disp('PipeLine Importing: DWER swanest phy')
     cd ../import/DWER/SWANESTPHY/
         DWER_SWANEST_PHY_Groups_Staging
         DWER_SWANEST_PHY_Groups_Staged
@@ -91,6 +94,7 @@ end
 % DOT Export
 
 if import_dot
+    disp('PipeLine Importing: DOT')
     cd ../import/DOT;
     
     
@@ -106,6 +110,7 @@ if import_dot
 end
 
 if import_bom
+    disp('PipeLine Importing: BOM')
     %BOM Export
     cd ../import/BOM;
     run_BOM_IDY;
@@ -115,6 +120,7 @@ if import_bom
 end
 %MAFRL
 if import_mafrl
+    disp('PipeLine Importing: MAFRL')
     cd ../import/MAFRL/
     
     import_mafrl_2_csv;
@@ -127,6 +133,7 @@ end
 
 %IMOS
 if import_imos
+    disp('PipeLine Importing: IMOS')
     cd ../import/IMOS
     
     import_imos_bgc_2_csv;
@@ -149,6 +156,7 @@ if import_imos
 end
 
 if import_imos_srs
+    disp('PipeLine Importing: IMOS SRS')
     cd ../import/IMOS_SRS/
     import_IMOS_SRS_L3S_netcdf_data;
     import_IMOS_SRS_MODIS_netcdf_data;
@@ -158,6 +166,7 @@ end
 
 if import_dpird
     % DPIRD
+    disp('PipeLine Importing: DPIRD')
     cd ../import/DPIRD
     
     import_dpird_crp_data;
@@ -167,6 +176,7 @@ end
 
 if import_moorings
     % DWER Mooring
+    disp('PipeLine Importing: DWER Moorings')
     cd ../import/DWER_Mooring
     
     import_csmooring;
@@ -176,6 +186,8 @@ end
 
 if import_theme2
     % wamsi_theme2
+
+    disp('PipeLine Importing: WWMSP2')
     cd ../import/wamsi_theme2
     
     import_theme2_light;
@@ -185,6 +197,7 @@ end
 
 if import_theme3
     % wamsi_theme3
+    disp('PipeLine Importing: WWMSP3')
     cd ../import/wamsi_theme3/CTD
     reformat_ctd;
     import_theme3ctd_data;
@@ -209,6 +222,7 @@ end
 
 if import_wc
     % WC_Digitised
+    disp('PipeLine Importing: WCWA')
     cd ../import/WCWA
     import_wc_digitised_dataset;
     import_wc_digitised_dataset_b;
@@ -220,6 +234,7 @@ end
 
 %WAMSI
 if import_theme5
+    disp('PipeLine Importing: WWMSP5')
     cd ../import/wamsi_theme5
     
     import_wwmsp5_wq;
@@ -238,6 +253,7 @@ if import_theme5
 end
 
 if import_wamsiwaves
+    disp('PipeLine Importing: WWMSP5 Waves')
     cd ../import/wamsi_theme5/Waves
     import_Waves
     cd ../
@@ -247,18 +263,21 @@ end
 
 
 if import_bmt_wp_swan
+    disp('PipeLine Importing: BMT WP SWAN')
     cd ../import/BMT/WP/
     import_BMT_WP_SWAN
     cd ../../../actions/
 end
 
 if import_UKMO
+    disp('PipeLine Importing: UKMO')
     cd ../import/UKMO
     system('python3 ImportUKMO_OSTIA.py') 
     cd ../../actions/
 end
 
 if import_NASA
+    disp('PipeLine Importing: NASA')
     cd ../import/NASA
 
         cd GHRSST
@@ -276,18 +295,21 @@ end
 %end
 
 if import_wamsitheme1
+    disp('PipeLine Importing: WWMSP1')
     cd ../import/wamsi_theme1/
     ImportWRF
     cd ../../actions/
 end
 
 if import_aims
+    disp('PipeLine Importing: AIMS')
     cd ../import/AIMS/TEMP/
     import_AIMS_TEMP
     cd ../../../actions
 end
 
 if import_CSPHY
+    disp('PipeLine Importing: DWER CSPHY')
     cd ../import/DWER/CSPHY/
     import_CSPHY_SPECIES
 
@@ -297,6 +319,7 @@ if import_CSPHY
 end
 
 if import_IMOSPlanktonvar
+    disp('PipeLine Importing: IMOSPHYTO')
     cd ../import/IMOS/IMOSPHYTO/
     import_IMOSPlankton
 
@@ -307,13 +330,15 @@ if import_IMOSPlanktonvar
 end
 
 if import_WCWA1Phyto
+    disp('PipeLine Importing: WCWA PHYTO1')
     cd ../import/WCWA/Phytoplankton/WCWA1
     import_phytoplankton1_Species
     import_phytoplankton1_Group
     cd ../../../../actions/
 end
 
-if import_WCWA2Phyto
+if import_WCWA2Phyto 
+    disp('PipeLine Importing: WCWA PHYTO2')
     cd ../import/WCWA/Phytoplankton/WCWA2
     import_phytoplankton2_Species
     import_phytoplankton2_Group
@@ -321,12 +346,14 @@ if import_WCWA2Phyto
 end
 
 if import_WCWA3_9Phyto
+    disp('PipeLine Importing: WCWA PHYTO3-9')
     cd ../import/WCWA/Phytoplankton/WCWA3-9
     RunALL
     cd ../../../../actions/
 end
 
 if import_UWA_AED_Phyto
+    disp('PipeLine Importing: UWA AED PHYTO')
     cd ../import/UWA/AED/swan-phytoplankton/
         cd subset1/
         PhytoGroup

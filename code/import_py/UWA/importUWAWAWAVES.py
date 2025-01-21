@@ -20,7 +20,7 @@ def import_uwa_wawaves(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
     VERT_DATUM = "mAHD"
     SITE_DESCRIPTION = "Hillarys buoy"
     DEPLOYMENT = "Floating"
-    DEPLOYMENT_POSITION = "m from surface"
+    DEPLOYMENT_POSITION = "m below Surface"
     VERT_REF = "Water Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'

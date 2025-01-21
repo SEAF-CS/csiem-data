@@ -15,7 +15,7 @@ def import_dep_smcws(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Profile"
-    DEPLOYMENT_POSITION = "m from bottom"
+    DEPLOYMENT_POSITION = "m above Seabed"
     VERT_REF = "Water Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'

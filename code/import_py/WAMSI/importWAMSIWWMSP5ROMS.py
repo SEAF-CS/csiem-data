@@ -9,13 +9,13 @@ def import_wamsi_wwmsp5_roms(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversi
     # specify constants
     AGENCY_NAME = "Western Australian Marine Science Institution"
     AGENCY_CODE = "WAMSI"
-    PROGRAM = "Westport Marine Science Program (WWMSP5)"
+    PROGRAM = "WWMSP5"  #"Westport Marine Science Program (WWMSP5)"
     PROJECT = "Regional Ocean Modelling Systems (ROMS)" 
     STATION_STATUS = "Active"
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Profile"
-    DEPLOYMENT_POSITION = "m from surface"
+    DEPLOYMENT_POSITION = "m below Surface"
     VERT_REF = "Water Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'

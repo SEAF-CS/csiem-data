@@ -78,12 +78,14 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
                         f.write(f'Long,{Table.iloc[0,2]:6.9}\n')
                         f.write('Time Zone,GMT +8\n')
                         f.write('Vertical Datum,mAHD\n')
-                        f.write('National Station ID,N/A\n')
+                        SiteNum = SiteNumberExtractor(filename)
+                        SiteStr = 'Site_'+SiteNum
+                        f.write(f'National Station ID,{SiteStr}\n')
                         
                         f.write('Site Description,\n')
                         f.write('Deployment,Satelite\n')        
                         f.write('Deployment Position,0.0m below Surface\n')
-                        f.write('Vertical Reference,m below surface\n')
+                        f.write('Vertical Reference,m below Surface\n')
                         f.write('Site Mean Depth,\n')
                         
                         f.write('Bad or Unavailable Data Value,NaN\n')
