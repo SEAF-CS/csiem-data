@@ -1,7 +1,7 @@
 #!/bin/bash
 matlab_exec=matlab
 echo "execute_import_pipeline();
-exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> 'FullRUN10(LiterallyEverythingAfterFreeze).txt' 
+exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> 'MonitoredPipelineRun/MonitoredFullRUN.txt' 
 
 # #!/bin/bash
 # matlab_exec=matlab

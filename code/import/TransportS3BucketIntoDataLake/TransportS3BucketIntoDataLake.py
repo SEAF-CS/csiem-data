@@ -18,19 +18,24 @@ def Main():
                     RootPath+'data-lake/MOI/',\
                     RootPath+'data-lake/ESA/',\
                     ]    
-    for i in range(len(FilePaths)):
-        TransferFolder(Bucket,FilePaths[i],Destinations[i])
+    # for i in range(len(FilePaths)):
+    #     TransferFolder(Bucket,FilePaths[i],Destinations[i])
 
     import os
-    os.mkdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/')
-    os.rename(RootPath+'data-lake/NASA/GHRSST/Points/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Points/')
-    os.rename(RootPath+'data-lake/NASA/GHRSST/Polygon_nearshore/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_nearshore/')
-    os.rename(RootPath+'data-lake/NASA/GHRSST/Polygon_offshore/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_offshore/')
+    if not os.path.isdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/'):
+        os.mkdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/')
+    if not os.path.isdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/Points/'):    
+        os.rename(RootPath+'data-lake/NASA/GHRSST/Points/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Points/')
+    if not os.path.isdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_nearshore/'):
+        os.rename(RootPath+'data-lake/NASA/GHRSST/Polygon_nearshore/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_nearshore/')
+    if not os.path.isdir(RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_offshore/'):
+        os.rename(RootPath+'data-lake/NASA/GHRSST/Polygon_offshore/',RootPath+'data-lake/NASA/GHRSST/ghrsst/Polygon_offshore/')
 
-    os.rename(RootPath+'data-lake/UKMO/OSTIA/Temperature/',RootPath+'data-lake/UKMO/OSTIA/temperature/')
+    if not os.path.isdir(RootPath+'data-lake/UKMO/OSTIA/temperature/'):
+        os.rename(RootPath+'data-lake/UKMO/OSTIA/Temperature/',RootPath+'data-lake/UKMO/OSTIA/temperature/')
     import sys
     sys.path.append('../UKMO/')
-    import ImportUKMO as UKMO  
+    import ImportUKMO_OSTIA as UKMO  
     DataOutPath = RootPath+'data-warehouse/csv/ukmo/'
     DataLocation = RootPath+'data-lake/UKMO/'
     MatFilePath = RootPath+'csiem-data/code/actions/'
