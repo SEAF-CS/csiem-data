@@ -15,7 +15,7 @@ def import_csiro_srfme(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Fixed"
-    VERT_REF = "Water Surface"
+    VERT_REF = "m above Seabed"
     BAD_VALUE = 'NaN'
     EMAIL = "Yvette <00114814@uwa.edu.au>"
     SAMPLING_RATE = "60 min"
@@ -222,14 +222,18 @@ def import_csiro_srfme(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                 
                 if "_A_" in file:
                     mooring = 'A'
+                    mooringDepth = 20
                 elif "_B_" in file:
                     mooring = 'B'
+                    mooringDepth = 40
                 elif "_C_" in file:
                     mooring = 'C'
+                    mooringDepth =100
 
                 for variable in variables:
                     if "Currents_" in file:
-                        DEPTH = variable.split(' ')[-1].split('_')[1].replace('m', '').replace('.','dp')
+                        DEPTHNUMBER = variable.split(' ')[-1].split('_')[1].replace('m', '')
+                        DEPTH = DEPTHNUMBER.replace('.','dp')
                         if 'dp0' in DEPTH:
                             DEPTH = DEPTH.replace('dp0','')
 
@@ -257,6 +261,20 @@ def import_csiro_srfme(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                         # If Pressure (m) is 0, use sensor_depth instead
                         df_filtered.loc[df_filtered['Pressure (m)'].isnull(), 'Depth'] = sensor_depth
                         df_filtered = df_filtered.drop(['Pressure (m)'], axis=1)
+
+                        # Depth column in A and C's Current is not refelctive of the depth in the title
+                        # This block fixes that
+                        # This code is not working...
+                        #if "Currents_" in file & ("A" in file | "C" in file):
+                        #   df_filtered['Depth'] = df_filtered['Depth'] - mooringDepth + float(DEPTH)
+                        # CHange made by BB to get past a crash.
+                        if "Currents_" in file:
+                            if ("A" in file or "C" in file) and not DEPTHNUMBER == 'avg':
+                                df_filtered['Depth'] = df_filtered['Depth'] - mooringDepth + float(DEPTHNUMBER)
+                            # elif "C" in file:
+                                # df_filtered['Depth'] = df_filtered['Depth'] - mooringDepth + float(DEPTHNUMBER)
+                        
+
 
                     df_filtered["QC"] = 'N'
 
@@ -306,9 +324,11 @@ def import_csiro_srfme(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
 
                     output_dir = dir.replace("data-lake","data-warehouse/csv")
                     output_dir = "/".join(output_dir.split("/")[:-1]) #.lower()
+                    print(output_dir)
 
                     SPLIT = output_dir.split("data-warehouse/csv")
-                    output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()])
+                    print(SPLIT)
+                    output_dir = "data-warehouse/csv".join([SPLIT[0],SPLIT[1].lower()]) #BB Crash. Not sure what's going on here and mhy the need for a split
                     
                     os.makedirs(output_dir, exist_ok=True)
 
@@ -416,18 +436,35 @@ def import_csiro_srfme(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
                 print(f"Datafile: {file}")
                 NATIONAL_STATION_ID = f'Mooring_{file.split("_")[1]}'
                 SITE_DESCRIPTION = NATIONAL_STATION_ID.replace("_"," ")
-
-                if "Current_Velocity" in file or "UCUR" in file or "VCUR" in file:
-                    DEPLOYMENT_POSITION = f'{file.split("_")[3]} from surface (at {file.split("_")[5].replace("dp",".")})'
-                else:
-                    DEPLOYMENT_POSITION = f'{file.split("_")[3]} from bottom'
+                # if "Current_Velocity" in file or "UCUR" in file or "VCUR" in file:
+                #     instrumentdepth = file.split("_")[5].replace("dp",".")
+                #     instrumentheight = integerSiteDepth-instrumentdepth
+                #     DEPLOYMENT_POSITION = f'{file.split("_")[5].replace("dp",".")}m below Surface'
+                # else:
+                #     instrumentdepth = file.split("_")[3]
+                #     DEPLOYMENT_POSITION = f'{file.split("_")[3]}.0m below Surface'
                 
                 if NATIONAL_STATION_ID == "Mooring_A":
-                    SITE_MEAN_DEPTH = "20m"
+                    integerSiteDepth = 20
                 elif NATIONAL_STATION_ID == "Mooring_B":
-                    SITE_MEAN_DEPTH = "40m"
+                    integerSiteDepth = 40
                 elif NATIONAL_STATION_ID == "Mooring_C":
-                    SITE_MEAN_DEPTH = "100m"
+                    integerSiteDepth = 100
+                SITE_MEAN_DEPTH = f'{integerSiteDepth}m'
+
+                if "Current_Velocity" in file or "UCUR" in file or "VCUR" in file:
+                    if not "avg" in file:
+                        instrumentdepth = float(file.split("_")[5].replace("dp",".").replace("m",""))
+                        instrumentheight = integerSiteDepth-instrumentdepth
+                        DEPLOYMENT_POSITION = f'{instrumentdepth}m below Surface'
+                    else:
+                        #the values for this param are avergaged over depth
+                        DEPLOYMENT_POSITION = 'Depth Averaged'
+                else:
+                    instrumentdepth = file.split("_")[3]
+                    DEPLOYMENT_POSITION = f'{instrumentdepth} below Surface'
+                
+
     
                 point_coordinates = {
                     "A_": (-31.5367, 115.5583),

@@ -76,7 +76,7 @@ function ALICEGroups()
                 temp = split(fDATA,filesep);
                 filename_short = temp{end};
                 fid = fopen(fHEADER,'w');
-                    fprintf(fid,'Agency Name,University Of Western Australia\n');
+                    fprintf(fid,'Agency Name,University of Western Australia\n');
                     
                     fprintf(fid,'Agency Code,UWA\n');
                     fprintf(fid,'Program,AED\n');
@@ -99,7 +99,7 @@ function ALICEGroups()
                     fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
                     fprintf(fid,'Deployment,%s\n',Deployment);
                     fprintf(fid,'Deployment Position,%s\n','0.0m below Surface'); % '0.0m above Seabed' 0.0m below Surface);
-                    fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+                    fprintf(fid,'Vertical Reference,%s\n','m below Surface');
                     fprintf(fid,'Site Mean Depth,%4.4f\n',0);
                     %%
     

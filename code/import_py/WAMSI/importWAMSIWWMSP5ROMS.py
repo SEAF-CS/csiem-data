@@ -15,8 +15,8 @@ def import_wamsi_wwmsp5_roms(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversi
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Profile"
-    DEPLOYMENT_POSITION = "m below Surface"
-    VERT_REF = "Water Surface"
+    DEPLOYMENT_POSITION = "0m below Surface"
+    VERT_REF = "m below Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'
     EMAIL = "Yvette <00114814@uwa.edu.au>"
@@ -136,7 +136,7 @@ def import_wamsi_wwmsp5_roms(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversi
                 LAT = site_coordinates["Lat"][0,0][0][0]
                 LONG = site_coordinates["Lon"][0,0][0][0]
 
-                TAG = AGENCY_CODE + "-" + PROGRAM.split("(")[1].strip(")") + "-" + "-".join(dir_header_raw.split("/")[-1].split("_")[0:2]).upper()
+                TAG = AGENCY_CODE + "-" + PROGRAM + "-" + "-".join(dir_header_raw.split("/")[-1].split("_")[0:2]).upper()
 
                 VARIABLE = " ".join(file.split("_")[3:-1])
                 VARIABLE_ID = var_id_name_df.loc[var_id_name_df["Name"] == VARIABLE, "Id"].iloc[0]

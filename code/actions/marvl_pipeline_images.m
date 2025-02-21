@@ -137,9 +137,9 @@ timeseries.alph = 0.5;
 
 timeseries.isFieldRange = 0;
 timeseries.fieldprctile = [10 90];
-timeseries.isHTML = 1;
+timeseries.isHTML = 0;
 
-timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];
+%timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];
 timeseries.plotAllsites = 1;
 if timeseries.plotAllsites == 0
     timeseries.plotsite = [6 10 29];
@@ -163,8 +163,7 @@ timeseries.skills = [1,... % r: regression coefficient (0-1)
     1,... % NRMS: RMSE normalized to mean observation
     1,... % MEF: model efficienty, Nash-Sutcliffe Efficiency
     ];
-timeseries.outputdirectory = [datapath,'marvl-images/raw/'];
-timeseries.htmloutput = [datapath,'data-warehouse/marvl-images/html/'];
+%timeseries.htmloutput = [datapath,'data-warehouse/marvl-images/html/'];
 timeseries.ErrFilename = [datapath,'data-warehouse/marvl-images/errormatrix.mat'];
 
 timeseries.ncfile(1).symbol = {'-';'-'};

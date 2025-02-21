@@ -2,3 +2,10 @@ At 2:33pm i am starting the memory tracker from a terminal ssh, not vs code
 Likewise i will run the bash script "run_Lac.sh" in the same way on a different terminal
 after this i will check the log file for two hydro logins and see their process numbers ect.
         I have now saved the tail of the log containing these details
+
+
+*update*
+we discussed piping the stdout and stderr of the initial bash script, because at the moment i am only piping matlab output.
+
+It crashed because i made a type error when i changed wamsi 3 sedpsd, that is fixed and running all of the imports that didnt finish.
+this is starting at 8:50 am 23-01-2025 (PID 1326326)

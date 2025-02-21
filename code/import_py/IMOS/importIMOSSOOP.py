@@ -15,8 +15,8 @@ def import_imos_soop(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Floating"
-    DEPLOYMENT_POSITION = "m below Surface"
-    VERT_REF = "Water Surface"
+    DEPLOYMENT_POSITION = "0m below Surface"
+    VERT_REF = "m below Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'
     EMAIL = "Yvette <00114814@uwa.edu.au>"

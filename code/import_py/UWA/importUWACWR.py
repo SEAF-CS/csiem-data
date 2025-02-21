@@ -7,7 +7,7 @@ def import_uwa_cwr(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,ma
     from import_py.utils.matlab_utils import get_datapath_from_matlab, get_conversion_data, get_variable_names, get_site_coordinates
 
     # specify constants
-    AGENCY_NAME = "The University of Western Australia"
+    AGENCY_NAME = "University of Western Australia"
     AGENCY_CODE = "UWA"
     PROGRAM = "Centre for Water Research (CWR)"
     PROJECT = "Southern Metropolitan Coastal Waters Study (SMCWS)" 
@@ -15,8 +15,8 @@ def import_uwa_cwr(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,ma
     TIME_ZONE = "GMT +8"
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Profile"
-    DEPLOYMENT_POSITION = "m below Surface"
-    VERT_REF = "Water Surface"
+    DEPLOYMENT_POSITION = "0m below Surface"
+    VERT_REF = "m below Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'
     EMAIL = "Yvette <00114814@uwa.edu.au>"

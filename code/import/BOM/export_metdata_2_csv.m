@@ -142,8 +142,8 @@ for i = 1:length(sites)
                     fprintf(fid,'National Station ID,%s\n',num2str(sitekey.bom.(thesites{foundsite}).ID));
                     fprintf(fid,'Site Description,%s\n',sitekey.bom.(thesites{foundsite}).Description);
                     fprintf(fid,'Deployment,%s\n','Fixed');
-                    fprintf(fid,'Deployment Position,%s\n','2.0m above Seabed');
-                    fprintf(fid,'Vertical Reference,%s\n','m above Seabed');
+                    fprintf(fid,'Deployment Position,%s\n','2.0m above Surface');
+                    fprintf(fid,'Vertical Reference,%s\n','m above Surface');
                     fprintf(fid,'Site Mean Depth,%s\n','');
                     
                     

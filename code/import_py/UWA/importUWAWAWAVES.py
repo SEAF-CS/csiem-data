@@ -8,7 +8,7 @@ def import_uwa_wawaves(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
     from import_py.utils.matlab_utils import get_datapath_from_matlab, get_conversion_data, get_variable_names, get_site_coordinates
 
     # specify constants
-    AGENCY_NAME = "The University of Western Australia"
+    AGENCY_NAME = "University of Western Australia"
     AGENCY_CODE = "UWA"
     PROGRAM = "Oceans Institute WA Waves"
     PROJECT = "Wave buoy data"
@@ -20,8 +20,8 @@ def import_uwa_wawaves(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
     VERT_DATUM = "mAHD"
     SITE_DESCRIPTION = "Hillarys buoy"
     DEPLOYMENT = "Floating"
-    DEPLOYMENT_POSITION = "m below Surface"
-    VERT_REF = "Water Surface"
+    DEPLOYMENT_POSITION = "0m below Surface"
+    VERT_REF = "m below Surface"
     SITE_MEAN_DEPTH = ""
     BAD_VALUE = 'NaN'
     EMAIL = "Yvette <00114814@uwa.edu.au>"

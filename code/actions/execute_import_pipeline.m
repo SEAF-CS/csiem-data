@@ -4,7 +4,7 @@ csiem_data_paths
 tic
 
 import_var_key_info;
-import_site_key;
+% import_site_key;
 csiem_file_cleaner
 
 
@@ -24,7 +24,7 @@ import_theme3 = 1;
 import_theme5 = 1;
 import_wc = 1;
 import_fpa = 1;
-import_bmt_wp_swan = 1;
+import_bmt_wp_swan =10;
 import_wamsitheme1 = 1;
 import_UKMO = 1;
 import_NASA = 1;
@@ -34,6 +34,14 @@ import_IMOSPlanktonvar = 1;
 import_WCWA1Phyto = 1;
 import_WCWA2Phyto = 1;
 import_WCWA3_9Phyto = 1;
+import_WCWA10_15Phyto = 1;
+import_WCWA16_22Phyto = 1;
+import_WCWA23_28Phyto = 1;
+import_WCWA29Phyto = 1;
+import_WCWA30Phyto = 1;
+import_WCWA31Phyto = 1;
+import_WCWA32Phyto = 1;
+
 import_UWA_AED_Phyto = 1;
 
 import_wamsiwaves = 1;
@@ -42,7 +50,7 @@ import_wamsiwaves = 1;
 create_smd = 1;
 
 create_matfiles = 1;
-create_parquet = 1;
+create_parquet = 0;
 
 create_dataplots = 0;
 plotnew_dataplots = 0;
@@ -59,14 +67,6 @@ run_marvl = 1;
 
 %___________________________________________________________________________
 
-
-
-if import_fpa
-    disp('PipeLine Importing: FPA')
-    cd ../import/FPA;
-    import_fpa_mqmp;
-    cd ../../actions;
-end
 
 
 if import_dwer
@@ -232,6 +232,14 @@ if import_wc
     cd ../../actions/
 end
 
+if import_fpa
+    disp('PipeLine Importing: FPA')
+    cd ../import/FPA;
+    import_fpa_mqmp;
+    cd ../../actions;
+end
+
+
 %WAMSI
 if import_theme5
     disp('PipeLine Importing: WWMSP5')
@@ -352,12 +360,82 @@ if import_WCWA3_9Phyto
     cd ../../../../actions/
 end
 
+if import_WCWA10_15Phyto
+    disp('PipeLine Importing: WCWA PHYTO10-15')
+    cd ../import/WCWA/Phytoplankton/WCWA10-15/
+    import_phytoplankton_Group_Staging
+    import_phytoplankton_Group_Staged
+    import_phytoplankton_Species_Staging
+    import_phytoplankton_Species_Staged
+    cd ../../../../actions/
+end
+
+if import_WCWA16_22Phyto
+    disp('PipeLine Importing: WCWA PHYTO16-22')
+    cd ../import/WCWA/Phytoplankton/WCWA16-22/
+    import_phytoplankton_Group
+    import_phytoplankton_Species
+    cd ../../../../actions/
+end
+
+if import_WCWA23_28Phyto
+    disp('PipeLine Importing: WCWA PHYTO23-28')
+    cd ../import/WCWA/Phytoplankton/WCWA23-28/
+    import_phytoplankton_Group_Staging
+    import_phytoplankton_Group_Staged
+    import_phytoplankton_Species_Staging
+    import_phytoplankton_Species_Staged
+    cd ../../../../actions/
+end
+
+if import_WCWA29Phyto
+    disp('PipeLine Importing: WCWA PHYTO29')
+    cd ../import/WCWA/Phytoplankton/WCWA29/
+    import_phytoplankton_29_Group_Staging
+    import_phytoplankton_29_Group_Staged
+    import_phytoplankton_29_Species_Staging
+    import_phytoplankton_29_Species_Staged
+    cd ../../../../actions/
+end
+
+if import_WCWA30Phyto
+    disp('PipeLine Importing: WCWA PHYTO30')
+    cd ../import/WCWA/Phytoplankton/WCWA30/
+    import_phytoplankton_30_Group_Staging
+    import_phytoplankton_30_Group_Staged
+    import_phytoplankton_30_Species_Staging
+    import_phytoplankton_30_Species_Staged
+    cd ../../../../actions/
+end
+
+
+if import_WCWA31Phyto
+    disp('PipeLine Importing: WCWA PHYTO31')
+    cd ../import/WCWA/Phytoplankton/WCWA31/
+    import_phytoplankton_31_Group_Staging
+    import_phytoplankton_31_Group_Staged
+    import_phytoplankton_31_Species_Staging
+    import_phytoplankton_31_Species_Staged
+    cd ../../../../actions/
+end
+
+if import_WCWA32Phyto
+    disp('PipeLine Importing: WCWA PHYTO32')
+    cd ../import/WCWA/Phytoplankton/WCWA32/
+    import_phytoplankton_32_Group_Staging
+    import_phytoplankton_32_Group_Staged
+    import_phytoplankton_32_Species_Staging
+    import_phytoplankton_32_Species_Staged
+    cd ../../../../actions/
+end
+
+
 if import_UWA_AED_Phyto
     disp('PipeLine Importing: UWA AED PHYTO')
     cd ../import/UWA/AED/swan-phytoplankton/
         cd subset1/
         PhytoGroup
-        %PhytoSpeciesNOTDONE 
+        PhytoSpecies 
         cd ../
 
         cd subset2/
@@ -388,10 +466,15 @@ if create_dataplots
 end
 
 if run_marvl
-    addpath(genpath(marvldatapath));
-    create_marvl_config_information;
-    run_AEDmarvl marvl_pipeline_images;
-    rmpath(genpath(marvldatapath));
+
+    for mv = [1 2 0]
+
+        addpath(genpath(marvldatapath));
+        create_marvl_config_information(mv);
+        run_AEDmarvl marvl_pipeline_images;
+        rmpath(genpath(marvldatapath));
+
+    end
 end
 
 if create_shapefiles

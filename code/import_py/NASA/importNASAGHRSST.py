@@ -17,7 +17,7 @@ def import_nasa_ghrsst(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_dat
     VERT_DATUM = "mAHD"
     DEPLOYMENT = "Satelite"
     DEPLOYMENT_POSITION = "0.0m below Surface"
-    VERT_REF = "Water Surface"
+    VERT_REF = "m below Surface"
     SITE_MEAN_DEPTH = "0.0000"
     BAD_VALUE = 'NaN'
     EMAIL = "Yvette <00114814@uwa.edu.au>"

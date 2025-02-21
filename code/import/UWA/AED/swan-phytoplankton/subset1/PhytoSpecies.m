@@ -120,9 +120,9 @@
                         fprintf(fid,"%s,%f,%f,N\n",Date,Depth,DataVal);
                         fclose(fid);
                     else
-                        %Unkown seafloor depth
+                        %Unknown seafloor depth (we still know its 0.5 above seafloor)
                         fid = fopen(fDATA,'a');                    
-                        fprintf(fid,"%s,%s,%f,N\n",Date,"0.5m above seafloor",DataVal);
+                        fprintf(fid,"%s,%s,%f,N\n",Date,"N/A",DataVal);
                         fclose(fid);
                   
                     end
@@ -225,8 +225,9 @@ end
 
 
 function opts = spreadsheetOptions()
+    % Headers.txt is a csv that i have copied the site names into. the xls has 2 empty cells that are hidden. so just adding those in too
     T = readcell('Headers.txt');
-    T = {T{1:8},' ',' ',T{10:end}};
+    T = {T{1:8},' ',' ',T{9:end}};
     opts = spreadsheetImportOptions('NumVariables',22,...
                                 'VariableNames',T,...
                                 'VariableTypes',{'char','char','int32','int32','int32','int32','int32','int32','int32','int32','double','double','double','double','double','double','double','double','double','double','double','double'}...

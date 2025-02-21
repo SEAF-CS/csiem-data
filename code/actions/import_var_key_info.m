@@ -30,13 +30,13 @@ for i = 1:length(varSymbol)
     end
 end
 
-[snum,sstr] = xlsread(filename,'Model_TFV','A2:F10000');
+[snum,sstr] = xlsread(filename,'Model_TFV','A2:H10000');
 
 tfvID = sstr(:,1);
 tfvName = sstr(:,4);
 tfvUnits = sstr(:,5);
 tfvConv = snum(:,4);
-
+marvlID = snum(:,6);
 
 for i = 1:length(varID)
     
@@ -55,10 +55,12 @@ for i = 1:length(varID)
         varkey.(varID{i}).tfvName = tfvName{sss};
         varkey.(varID{i}).tfvUnits = tfvUnits{sss};
         varkey.(varID{i}).tfvConv = tfvConv(sss);
+        varkey.(varID{i}).marvlID = marvlID(sss);
     else
         varkey.(varID{i}).tfvName = 'N/A';
         varkey.(varID{i}).tfvUnits = 'N/A';
         varkey.(varID{i}).tfvConv = NaN;
+        varkey.(varID{i}).marvlID = marvlID(sss);
     end
 end
 
@@ -146,6 +148,24 @@ agency.WCWA9_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species9");
 
 agency.WCWA10_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups10");
 agency.WCWA10_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species10");
+
+agency.WCWA16_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups16");
+agency.WCWA16_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species16"); 
+
+agency.WCWA23_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups23");
+agency.WCWA23_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species23");
+
+agency.WCWA29_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups29");
+agency.WCWA29_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species29");
+
+agency.WCWA30_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups30");
+agency.WCWA30_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species30");
+
+agency.WCWA31_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups31");
+agency.WCWA31_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species31");
+
+agency.WCWA32_PhytoplanktonGroup = import_agency_conv("WCWA Phyto Groups32");
+agency.WCWA32_PhytoplanktonSpecies = import_agency_conv("WCWA Phyto Species32");
 
 agency.SWANESTGroups = import_agency_conv("SWANEST Groups");
 agency.SWANESTSpecies = import_agency_conv("SWANEST Species");
