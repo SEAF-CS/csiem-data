@@ -17,3 +17,6 @@ This dataset is imported via 3 functions:
 
 ## Conversion Table
 ![Conversion Table](./PHYWQConversion.png)
+
+# Water Corporation Western Australia (WCWA) Phytoplankton
+The phytoplankton imports have their own [readme](./Phytoplankton/Readme.md)

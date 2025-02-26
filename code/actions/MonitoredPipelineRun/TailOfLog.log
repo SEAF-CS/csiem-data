@@ -36,3 +36,15 @@ Jan 22 14:37:32 davy sshd[1075556]: Accepted password for hydro from 10.40.40.2 
 Jan 22 14:37:32 davy sshd[1075556]: pam_unix(sshd:session): session opened for user hydro(uid=1001) by hydro(uid=0)
 Jan 22 14:37:32 davy systemd-logind[1076]: New session 3301 of user hydro.
 Jan 22 14:37:32 davy systemd[1]: Started session-3301.scope - Session 3301 of User hydro.
+...
+.
+.
+.
+Jan 23 08:47:29 davy sshd[1325623]: Accepted password for hydro from 10.40.34.14 port 50284 ssh2
+Jan 23 08:47:29 davy sshd[1325623]: pam_unix(sshd:session): session opened for user hydro(uid=1001) by hydro(uid=0)
+Jan 23 08:47:29 davy systemd-logind[1076]: New session 3448 of user hydro.
+Jan 23 08:47:29 davy systemd[1]: Started session-3448.scope - Session 3448 of User hydro.
+Jan 23 08:50:27 davy sshd[1325659]: Received disconnect from 10.40.34.14 port 50284:11: disconnected by user
+Jan 23 08:50:27 davy sshd[1325659]: Disconnected from user hydro 10.40.34.14 port 50284
+Jan 23 08:50:27 davy sshd[1325623]: pam_unix(sshd:session): session closed for user hydro
+Jan 23 08:50:27 davy systemd-logind[1076]: Session 3448 logged out. Waiting for processes to exit.

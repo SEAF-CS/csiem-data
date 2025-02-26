@@ -1,6 +1,6 @@
 % function Waves51()
     run('../../../actions/csiem_data_paths.m')
-    main_dir = [datapath,'data-lake/WAMSI/wwmsp5.1_waves/'];
+    main_dir = [datapath,'data-lake/WAMSI/WWMSP5/WWMSP5_waves/'];
    
     headers = headerstringcreator();
     filecell = RecursiveListDataFilesInDir(main_dir);

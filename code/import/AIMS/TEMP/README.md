@@ -1,6 +1,13 @@
-Header have not been finished
-The 27GB file has been interoogated and the unique sites and subsites have been sorted into unstructured text file, this is the output of some C code that stores the sites and subsites in two seperate data structures and a list of these structures is made. 
+# The AIMS Temperature Data
+## Raw Data
+This Dataset is an enormous 27gb collection of temperature data from all over australia. The 27GB file has been interogated and the unique sites and subsites have been sorted into unstructured text file using C code (faster than matlab when dealing with 27gb files), this is the output of some C code that stores the sites and subsites in two seperate data structures and a list of these structures is made. for use with the matlab code.
 
-The Sites have not been included in the site key because if both are included there are double ups of ID's (some subsite id's match site id's, but they are different places) The Sites and their subsites can be found in a text/csv file mentioned above.
+This dataset has broken down their data collection sites into "sites" and "subsites", where some one site can contain multiple subsites. Therefore to only include unique sites in our system we include the subsites, (however our systems calls them sites). All of the sites and their subsites can be found in a text/csv in this directory, a few sites that dont have lat and lon in the raw data file and so have been filled with 0's for both Latitude and Longitude. 
 
-There are a few sites that dont have lat and lon in the data file.
+The subsites have been plotted below 
+![alt text](SiteLocations.png) 
+The large Blue X's are the sites that have been imported into our system.
+
+## Importing
+The structure of the data in this document is a new line for each unique entry, with columns for details about the entry. There is only water temperature data in this dataset.
+To import the data, the 27Gb file was split into 1Gb chunks and read in, in parts and then its skips sites that arent of 'Interest' then it matches the subsite id with our system and processes the data. 

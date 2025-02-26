@@ -2,10 +2,11 @@
 
 The raw data has been split into 4 catagories:
 
-- WQ
-- ADCP
-- Met
-- Waves
+- [WQ](#wq)
+- [ADCP](#adcp)
+- [Met](#met)
+- [Waves](#waves)
+- [WWM](#wwm)
 
 ## WQ
 
@@ -53,3 +54,7 @@ The exact deployment height of the sensors is unknown and not listed in the Them
 
 ## Waves
 [Hyperlink to Waves Readme](./Waves/readme.md)
+
+
+## WWM
+[Hyperlink to WWM Readme](./WWM/readme.md)

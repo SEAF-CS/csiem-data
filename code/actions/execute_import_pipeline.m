@@ -24,7 +24,7 @@ import_theme3 = 1;
 import_theme5 = 1;
 import_wc = 1;
 import_fpa = 1;
-import_bmt_wp_swan =10;
+import_bmt_wp_swan =1;
 import_wamsitheme1 = 1;
 import_UKMO = 1;
 import_NASA = 1;
@@ -280,7 +280,8 @@ end
 if import_UKMO
     disp('PipeLine Importing: UKMO')
     cd ../import/UKMO
-    system('python3 ImportUKMO_OSTIA.py') 
+    virtualEnvironmentPath = [datapath,'/PyBusch/bin/python3'];
+    system( [virtualEnvironmentPath,' ImportUKMO_OSTIA.py']) 
     cd ../../actions/
 end
 

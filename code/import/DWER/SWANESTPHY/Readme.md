@@ -1,0 +1,8 @@
+# DWER Swanest Phytoplankton
+This dataset is a phytoplankton dataset containing phytoplankton concentrations (in cells/mL)  in the form of an excel table (xlsx), it stores data with columns to describe details and a new entry in the table for each unique combination of column details. Some columns were empty for some entries, in the case the time of measurement was blank It was assumed 00:00, (midnight)
+
+## Species Import
+The species from this dataset are imported by reading in the excel sheet and iterating through the table and matching the phytoplankton name with the names in our system (or if not they are noted in a text file called UnimportedSpecies.txt), and likewise with the site details, then the entry is processed.
+
+## Group Import
+The group information form this dataset is imported in two parts. First it is staged, so the whole table is iterated through and the plankton types are matched with our system names (or if not they are noted in a text file called UnimportedGroups.txt) likewise with the sites once matched a temporary file/process work file is created that will end up containing every entry for that group at that site. This means that there should be an entry from each species. Then the next script is run, the Staged script. In this script the duplicate entries/entries from each of the different species in the group are found. They are found by searching for all the entries that contain the same date. All entries with the same date,plankton type and site are summed together, giving the total cells/mL of that Group at each unique measurment time.  

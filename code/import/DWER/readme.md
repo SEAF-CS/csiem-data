@@ -13,3 +13,8 @@ Three scripts need to be run in order:
 All these scripts take a long time to run and produce the final output. Currently there is 4.1M data points which require a high degree of manipulation to fit the required data formats.
 
 
+# DWER CSPHY
+See the read me in the [DWER CSPHY directory](./CSPHY/Readme.md).
+
+# DWER SWANESTPHY
+See the read me in the [DWER SWANESTPHY directory](./SWANESTPHY/Readme.md)

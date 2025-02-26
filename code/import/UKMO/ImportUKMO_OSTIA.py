@@ -36,11 +36,10 @@ def Main(OutPutFolderPath,PathToDataFolder,MatFilePath,AgencyNameinAgency):
             # This is the code to handle the polygon files without lat and longs
         else:
             for filename in files:
-                if '.md' in filename:
+                if '.md' in filename or '.DS_Store' in filename:
                     continue
                 file_path = os.path.join(root, filename)                
                 print('\tWorking on file: %s)' % (file_path))
-
                 Table = pd.read_table(file_path, delimiter=',')
                 
                 col = 3
