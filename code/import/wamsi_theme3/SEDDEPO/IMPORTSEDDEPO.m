@@ -78,7 +78,7 @@ function IMPORTSEDDEPO()
     
     
                 for nn = 1:length(DataVec)
-                    if DataVec(nn) == nan
+                    if isnan(DataVec(nn))
                         continue
                     end
     

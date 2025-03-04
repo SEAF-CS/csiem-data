@@ -1,5 +1,9 @@
 # Department of Water and Environmental Regulation (DWER) Moorings
-    This Data has been imported via the function import_mooring_data_v2.m
+    This Data has been imported via the function import_csmooring.m
+
+## Raw Data
+Multiple files stored in the data lake with the same format just different variable names. These get matched to the variable key of our system, likewise with the site name. This is iterated through to import this dataset. 
+
 ## Variables
  - Air Temperature
  - Temperature

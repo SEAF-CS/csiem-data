@@ -12,9 +12,12 @@ This directory contains the Python pipeline for importing and processing data fr
 2. Execute the script:
     
     On Linux/Mac:
+
     ```
-    python3 execute_import_py_pipeline.py
+    /GIS_DATA/csiem-data-hub/PyBusch/bin/python3 execute_import_py_pipeline.py
     ```
+Python should be run from a virtual environment, one has been setup in the aabove directory, calling python in this way utilises the virtual env.
+
     
     On Windows:
     ```

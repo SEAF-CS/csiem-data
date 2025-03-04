@@ -24,11 +24,11 @@ sites = regexprep(sites,'1310','s1310');
 VarfeildNames = fieldnames(agency.wwmsp3);
 thevars = unique(data{:,8});
 Element2Delete = strcmp(thevars, 'Cond uncomp | (mS/cm)');
-thevars = thevars(~Element2Delete)
-% in the process of moving to a unified agency sorted varkey, not import sorted varkey
-% this code base broke because it iterated over the variables in its import sheet in varkey.
-% in the varkey we only used the "Cond uncomp | (uS/cm)" 
-% so i need to remove "Cond uncomp | (mS/cm)" from "thevars" variable to match how it would have looped before the var key changes.
+thevars = thevars(~Element2Delete);
+% in the process of moving to a unified agency sorted varkey, not an import code sorted varkey
+% this code base broke because it iterated over the variables in its import sheet in varkey. (because there were variables in the dataset not imported)
+% There was a double up of variables so in the varkey we only used the "Cond uncomp | (uS/cm)" 
+% so i need to remove "Cond uncomp | (mS/cm)" from "thevars" variable so that it doesnt try search for a variable not in the varkey.
 
 thesites = fieldnames(sitekey.wwmsp3);
 

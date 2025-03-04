@@ -1,7 +1,10 @@
 # Integrated Marine Observing System (IMOS)
 ## BioGeoChemical
     This data set is imported using the import_imos_bgc_2_csv.m function.
-### variables
+### Raw Data
+The data for IMOS BGC is in a large table in a csv file. It has site, date and all of the variables as columns. The rows are new entries.
+
+### Variables
  - Secchi Depth
  - Salinity
  - Dissolved Inorganic Carbon
@@ -66,7 +69,10 @@
 ![Conversion table 2](./IMOSBGC2.png)
 
 ## IMOS Profile
-    There are two importing codes import_imos_profile_2_csv and import_imos_profile_2_2010_csv these are then merged with the merger function called merge_files.m 
+There are two importing codes import_imos_profile_2_csv and import_imos_profile_2_2010_csv these are then merged with the merger function called merge_files.m
+
+### Raw Data
+This dataset is a big table in a csv format. All the site details, date and variables are all columns. The rows are new entries.
 
 ###  Variables
  - PRESSURE
@@ -84,7 +90,11 @@
 ![IMOS PROFILE conv Table](./IMOSPROFILE.png)
 
 ## Temperature and Salinity Data
-This data is imported via the function import_imos_temp_sal.m.
+This data is imported via the function import_imos_amnm_adcp.m (formerly import_imos_temp_sal.m).
+
+## Raw Data
+This is a 1Gb csv, with a large header and a simple table structure with the variables as columns and rows are unique data points.
+
 ## Variables
  - Temperature
  - Salinity
@@ -92,3 +102,6 @@ This data is imported via the function import_imos_temp_sal.m.
 
  ### Conversion table
     See IMOS Profile conversion table, Key Value should match the Variable Name
+
+## IMOS Phytoplankton
+The read me for IMOS Phytoplankton data can be found [here](./IMOSPHYTO/Readme.md)

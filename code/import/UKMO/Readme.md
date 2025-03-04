@@ -26,3 +26,6 @@ This data is copyied from the S3 Datalake into Davy datalake, in the form of csv
 ## Variables
  - sea surface temperature
 
+## Import Code
+This code is written in python and uses scipy to read in the matfile, however the difficulty with this is that everything is stored in arrays which means to access the dasired data needs lots of  "slicing"/ indexing.
+

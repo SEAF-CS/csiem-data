@@ -71,7 +71,7 @@ for i = 1:length(theyears)
                         end
                     end
                     
-                    if foundsite > 0 & foundagency > 0
+                    if foundsite > 0 && foundagency > 0
                     
                     thedata = [];
                     thedate = [];

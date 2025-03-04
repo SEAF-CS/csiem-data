@@ -3,6 +3,9 @@
 ## Marine Quality Monitoring Program (MQMP)
 This dataset summarises concentrations of polutants in the water and gets imported by import_fpa_mqmp.m
 
+ ### Raw Data
+ The raw data is stored in a large excel xlsx with multiple sheets, each sheet is iterated through (each sheet is a different area of sites) and the variable and site is matched with our systems naming scheme and the variable is processed. 
+
  ### Variables
  - Copper
  - Lead

@@ -2,8 +2,6 @@
 ## Light
     This data set is imported via the function import_theme2_light.m
 
-
-
 ### Variables
  - Temperature
  - Tilt
@@ -28,11 +26,16 @@
  - Spectral Photon Flux (WL - 656µmol)
  - Spectral Photon Flux (WL - 699µmol)
  - Daily Photosynthetically Active Photon Flux
+
 ### Conversion
 ![alt text](./WAMSI2Light.png)
 
+### Import Code
+This code loops over the columns of the excel spreadsheet matching the variable names, then iterates over the two sites and determines which site is currently being processed.
+
 ## Seagrass
     This dataset is imported by import_theme2_seagrass.m
+    
 ### Issues
     No dedicated Sheet for this agency in the variable key. The variables exist in the master key, but aren't being searched for and have each been hard coded. 
 

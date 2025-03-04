@@ -10,7 +10,7 @@ This site data is numerically simulated using data from sites we already have. W
 
 ## Raw Data
 
-This import code reads in from a matlab file and this file also contains sites from another organisation that need to get skipped through.
+This import code reads in from a structured matlab file. This file is a tiered structure, the top layer of the structure are site locations, then the variables measured/calculated at that site. Then the last layer contains the value, date and position of the site. This structure also contains sites from another organisation that we didnt want imported.
 
 ## Site matching
 

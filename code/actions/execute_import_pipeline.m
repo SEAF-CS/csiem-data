@@ -7,49 +7,48 @@ import_var_key_info;
 % import_site_key;
 csiem_file_cleaner
 
-
+%not in use
 import_dwer = 0;
-import_dwer_swanest_phy = 1;
-import_dot = 1;
-import_bom = 1;
-import_mafrl = 1;
-import_imos = 1;
 import_imos_srs = 0;
 
-import_dpird = 1;
-import_moorings = 1;
-import_theme2 = 1;
+import_dwer_swanest_phy = 0;
+import_dot = 0;
+import_bom = 0;
+import_mafrl = 0;
+import_imos = 0;
+import_dpird = 0;
+import_moorings = 0;
+import_theme2 = 0;
+import_theme3 = 0;
+import_theme5 = 0;
+import_wc = 0;
+import_fpa = 0;
+import_bmt_wp_swan = 0;
+import_wamsitheme1 = 0;
+import_UKMO = 0;
+import_NASA = 0;
+import_aims = 0;
+import_CSPHY = 0;
+import_IMOSPlanktonvar = 0;
+import_WCWA1Phyto = 0;
+import_WCWA2Phyto = 0;
+import_WCWA3_9Phyto = 0;
+import_WCWA10_15Phyto = 0;
+import_WCWA16_22Phyto = 0;
+import_WCWA23_28Phyto = 0;
+import_WCWA29Phyto = 0;
+import_WCWA30Phyto = 0;
+import_WCWA31Phyto = 0;
+import_WCWA32Phyto = 0;
 
-import_theme3 = 1;
-import_theme5 = 1;
-import_wc = 1;
-import_fpa = 1;
-import_bmt_wp_swan =1;
-import_wamsitheme1 = 1;
-import_UKMO = 1;
-import_NASA = 1;
-import_aims = 1;
-import_CSPHY = 1;
-import_IMOSPlanktonvar = 1;
-import_WCWA1Phyto = 1;
-import_WCWA2Phyto = 1;
-import_WCWA3_9Phyto = 1;
-import_WCWA10_15Phyto = 1;
-import_WCWA16_22Phyto = 1;
-import_WCWA23_28Phyto = 1;
-import_WCWA29Phyto = 1;
-import_WCWA30Phyto = 1;
-import_WCWA31Phyto = 1;
-import_WCWA32Phyto = 1;
+import_UWA_AED_Phyto = 0;
 
-import_UWA_AED_Phyto = 1;
-
-import_wamsiwaves = 1;
+import_wamsiwaves = 0;
 
 
-create_smd = 1;
+create_smd = 0;
 
-create_matfiles = 1;
+create_matfiles = 0;
 create_parquet = 0;
 
 create_dataplots = 0;
@@ -118,6 +117,7 @@ if import_bom
 
     cd ../../actions
 end
+
 %MAFRL
 if import_mafrl
     disp('PipeLine Importing: MAFRL')

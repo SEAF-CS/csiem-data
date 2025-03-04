@@ -1,7 +1,7 @@
 # Bureau Of Meteorology Import
 
 ## SWAN Meteorology Data
-    This data has been downloaded from BOM website to the data lake and extracted to a text file and is then imported into our format using run_bom_import.m
+    This data has been downloaded from BOM website to the data lake and extracted to a text file. This text file is laid out so that all of the columns are variables, site or other relevant information, and each row is a new entry of a data point. This is read in and then imported into our format using the matlab script run_BOM_IDY.m
 
 ### Variables
  - Precipitation
@@ -55,7 +55,7 @@
 - Relative Humidity
 
 ### Raw Data
-    This code Imports the above variables from csv format files located in the directory : /GIS_DATA/csiem-data-hub/data-lake/BOM/barra_tfv/
+    This code Imports the above variables from a few simple tables, in csv format, the files are located in the directory : /GIS_DATA/csiem-data-hub/data-lake/BOM/barra_tfv/. Columns are variables and the rows are each entry.
 
 ### Conversion
 ![Conversion for BOM Barra](./BOM%20Barra%20Conversion.png)

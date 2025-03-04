@@ -51,10 +51,10 @@ for i = 1:length(headers)
             continue
         end
 
-        agency.wwmsp2
-        thevars
-        thevars{varnum}
-        varnum
+        % agency.wwmsp2
+        % thevars
+        % thevars{varnum}
+        % varnum
         varID = agency.wwmsp2.(thevars{varnum}).ID;
         
         if strcmpi(varID,'Ignore') == 0
@@ -79,7 +79,7 @@ for i = 1:length(headers)
             fvarname = regexprep(varname,'µ','u');
             fvarname = regexprep(fvarname,'/','\');    
 
-            fvarname
+            fvarname;
             
             
             filename = [outdir,sitekey.wwmsp2.(thesites{sitenum}).AED,'_',regexprep(fvarname,' ','_'),'_DATA.csv'];

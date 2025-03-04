@@ -3,14 +3,14 @@
 The raw data has been split into 4 catagories:
 
 - [WQ](#wq)
-- [ADCP](#adcp)
+- [AWAC](awac)
 - [Met](#met)
 - [Waves](#waves)
 - [WWM](#wwm)
 
 ## WQ
 
-WQ data is imported directly from the data lake via the script import_netcdf_csv.m. Each netcdf is read and data is converted to csv and written tot he data warehouse. Validation images are automatically created and stored along side the csv files.
+WQ data is imported directly from the data lake via the script import_wwmsp5_wq (formerly import_netcdf_csv.m). Each netcdf is read and data is converted to csv and written tot he data warehouse. Validation images are automatically created and stored along side the csv files.
 
 ### Issues
 
@@ -24,9 +24,9 @@ Some of the data files are missing depth data. For these datasets a mean depth w
 
 
 
-## ADCP
+## AWAC (formerly ADCP)
 
-WQ data is imported directly from the data lake via the script import_netcdf_csv_ADCP.m. Each netcdf is read and data is converted to csv and written tot he data warehouse. Validation images are automatically created and stored along side the csv files.
+AWAC data is imported directly from the data lake via the script import_wwmsp5_awac (formerly import_netcdf_csv_ADCP.m). Each netcdf is read and data is converted to csv and written tot he data warehouse. Validation images are automatically created and stored along side the csv files.
 
 ### Issues
 
@@ -37,8 +37,7 @@ All single dimension ADCP data has been imported into the data lake. However, 2 
 
 ## Met
 
-
-All met has been imported from a single csv file "20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)" and imported vai the script import_met_csv.m. 
+All met has been imported from a single csv file "20220713_COL_CockburnCement_WSCR300_29784_Raw_(Prelim_Jul-Nov22)" and imported via the script import_wwmsp5_met.m (formerly import_met_csv.m). 
 
 ### Issues
 

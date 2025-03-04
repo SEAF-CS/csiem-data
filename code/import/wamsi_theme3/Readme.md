@@ -7,3 +7,6 @@
 
 ## SGREST
 [ReadMe.md for SGREST](./SGREST/README/ReadMe.md)
+
+## SEDDEPO
+[ReadMe.md for SEDDEPO](./SEDDEPO/Readme.md)
