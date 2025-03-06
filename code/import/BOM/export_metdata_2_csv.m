@@ -119,7 +119,7 @@ for i = 1:length(sites)
                     end
                     fclose(fid);
                     
-                    headerfile = regexprep(filename,'_DATA.csv','_HEADER.csv');
+                    headerfile = regexprep(filename,'_DATA\.csv','_HEADER.csv');
                     disp(headerfile);
                     fid = fopen(headerfile,'wt');
                     fprintf(fid,'Agency Name,Bureau of Meteorology\n');

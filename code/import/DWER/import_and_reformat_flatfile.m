@@ -98,7 +98,7 @@ for i = 1:length(sites)
                 fprintf(fid,'Project,%s\n',uproj{1});
                 thetag = ['DWER-',upper(uproj{1})];
                 fprintf(fid,'Tag,%s\n',thetag);
-                fprintf(fid,'Data File Name,%s\n',regexprep(filename,outdir,''));
+                fprintf(fid,'Data File Name,%s\n',replace(filename,outdir,''));
                 fprintf(fid,'Location,%s\n',['data-warehouse/csv/dwer/',lower(uproj{1})]);
                 
                 if max(mdates) >= datenum(2020,01,01)

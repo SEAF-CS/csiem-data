@@ -47,7 +47,7 @@ for i = 1:length(sites)
         fprintf(fid,'Program,CRP\n');
         fprintf(fid,'Project,temperature\n');
         fprintf(fid,'Tag,DPIRD-CRP\n');
-        fprintf(fid,'Data File Name,%s\n',regexprep(filename,outdir,''));
+        fprintf(fid,'Data File Name,%s\n',replace(filename,outdir,''));
         fprintf(fid,'Location,%s\n',outdir);
 
 

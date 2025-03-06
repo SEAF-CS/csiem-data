@@ -210,14 +210,14 @@ for j = 1:length(headers)
             for k = 1:length(temp)
                 g = temp{k};
                 if isnumeric(g)
-                    newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss,2})(k,1) = g;
+                    newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss,2})(k,1) = g;
                 else
-                    newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss,2})(k,1) = str2double(g);
+                    newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss,2})(k,1) = str2double(g);
                 end
             end
         else
             disp('Cell');
-            newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss,2}) = temp;
+            newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss,2}) = temp;
         end
     end
 end
@@ -322,14 +322,14 @@ for j = 1:length(headers)
             for k = 1:length(temp)
                 g = temp{k};
                 if isnumeric(g)
-                    newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss(1),2})(k,1) = g;
+                    newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss(1),2})(k,1) = g;
                 else
-                    newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss(1),2})(k,1) = str2double(g);
+                    newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss(1),2})(k,1) = str2double(g);
                 end
             end
         else
             disp('Cell');
-            newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss(1),2}) = temp;
+            newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss(1),2}) = temp;
         end
     else
         disp([headers{j},' not required']);
@@ -445,17 +445,17 @@ for j = 1:length(headers)
             for k = 1:length(temp)
                 g = temp{k};
                 if isnumeric(g)
-                    newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss(1),2})(k,1) = g;
+                    newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss(1),2})(k,1) = g;
                 else
-                    newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss(1),2})(k,1) = str2double(g);
+                    newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss(1),2})(k,1) = str2double(g);
                 end
             end
         else
             disp('Cell');
-            newswan11.(['p',regexprep(names,'.mat','')]).(conv{ss(1),2}) = temp;
+            newswan11.(['p',regexprep(names,'\.mat','')]).(conv{ss(1),2}) = temp;
         end
         
-        newswan11.(['p',regexprep(names,'.mat','')]).([(conv{ss(1),2}),'_QC']) = temp2;
+        newswan11.(['p',regexprep(names,'\.mat','')]).([(conv{ss(1),2}),'_QC']) = temp2;
         
         if strcmpi(headers{j},'Temperature (deg C)') == 1
             temp2
@@ -869,7 +869,7 @@ function remove_NAN_matfile(matfile)
 
 load(matfile);
 
-%fname = regexprep(matfile,'.mat','');
+%fname = regexprep(matfile,'\.mat','');
 fname = 'swan';
 eval(['fdata = ',fname,';']);
 eval(['clear ',fname,';']);
@@ -914,7 +914,7 @@ outdir = 'Site_Summary\';
 
 load(matfile);
 
-%eval(['swan = ',regexprep(matfile,'.mat',''),';']);
+%eval(['swan = ',regexprep(matfile,'\.mat',''),';']);
 swan = swan;
 sites = fieldnames(swan);
 

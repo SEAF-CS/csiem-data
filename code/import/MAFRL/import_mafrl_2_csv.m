@@ -163,7 +163,7 @@ for i = 1:length(theyears)
                     fprintf(fid,'Program,Cockburn Sound Marine Water Quality Monitoring\n');
                     fprintf(fid,'Project,CSMC-WQ\n');
                     fprintf(fid,'Tag,CSMC-WQ\n');
-                    fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+                    fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
                     fprintf(fid,'Location,%s\n',['data-warehouse/csv/csmc/',lower('CSMWQ-WQ')]);
                     
                     

@@ -37,7 +37,7 @@ for i = 1:length(filelist)
     
     filename = [filelist(i).folder,'/',filelist(i).name];
     
-    headerfile = regexprep(filename,'.nc','.txt');
+    headerfile = regexprep(filename,'\.nc','.txt');
     
     
     
@@ -144,7 +144,7 @@ for i = 1:length(filelist)
                             varunits = varkey.(agency.wwmsp5.(agencyvars{foundvar}).ID).Unit;
                             
                             thetxt = ['_',regexprep(varname,' ','_'),'_DATA.csv'];
-                            datafile = regexprep(filelist(i).name,'.nc',thetxt);
+                            datafile = regexprep(filelist(i).name,'\.nc',thetxt);
                             fullfile_1 = [outdir,datafile];
                             headerfile = regexprep(fullfile_1,'DATA.csv','HEADER.csv');
                             

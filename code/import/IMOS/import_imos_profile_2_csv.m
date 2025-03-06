@@ -105,7 +105,7 @@ for i = 19:length(headers)
             fprintf(fid,'Program,AMNM\n');
             fprintf(fid,'Project,amnmprofile\n');
             fprintf(fid,'Tag,IMOS-ANMN-PROFILE\n');
-            fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+            fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
             fprintf(fid,'Location,%s\n',outpath);
             
             

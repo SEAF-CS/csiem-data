@@ -108,7 +108,7 @@ for i = 9:width(Test)
             fprintf(fid,'Program,REF\n');
             fprintf(fid,'Project,bgc\n');
             fprintf(fid,'Tag,IMOS-REF-BGC\n');
-            fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+            fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
             fprintf(fid,'Location,%s\n',outpath);
             
             

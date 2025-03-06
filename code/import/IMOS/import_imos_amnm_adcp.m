@@ -96,7 +96,7 @@ for i = 1:length(procvars)
             fprintf(fid,'Program,AMNM\n');
             fprintf(fid,'Project,amnmadcp\n');
             fprintf(fid,'Tag,IMOS-ANMN-ADCP\n');
-            fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+            fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
             fprintf(fid,'Location,%s\n',outpath);
             
             

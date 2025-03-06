@@ -233,7 +233,7 @@
             fprintf(fid,'Program,CSMOORING\n');
             fprintf(fid,'Project,csmooring\n');
             fprintf(fid,'Tag,DWER-CS-MOORING\n');
-            fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+            fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
             fprintf(fid,'Location,%s\n',outpath);
 
 

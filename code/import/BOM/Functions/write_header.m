@@ -1,5 +1,5 @@
 function write_header(headerfile,lat,lon,ID,Desc,varID,Cat,varstring,wdate,sitedepth)
-filename = regexprep(headerfile,'_HEADER','_DATA');
+filename = regexprep(headerfile,'_HEADER.csv','_DATA.csv');
 
 temp = split(filename,filesep);
 filename_short = temp{end};

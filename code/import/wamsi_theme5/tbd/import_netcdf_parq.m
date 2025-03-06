@@ -31,7 +31,7 @@ for i = 1:length(filelist)
     
     filename = [filelist(i).folder,'/',filelist(i).name];
     
-    headerfile = regexprep(filename,'.nc','.txt');
+    headerfile = regexprep(filename,'\.nc','.txt');
     
     
     

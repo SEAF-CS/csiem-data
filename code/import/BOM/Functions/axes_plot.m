@@ -125,7 +125,7 @@ savename = [dirname,fname];
 
 %print(gcf,'-dpng',savename,'-zbuffer');
 saveas(gcf,savename,'png')
-print(gcf,'-depsc2',regexprep(savename,'.png','.eps'),'-opengl');
+print(gcf,'-depsc2',regexprep(savename,'\.png','.eps'),'-opengl');
 
 % filename = [dirname,'MyFile.txt');
 % 

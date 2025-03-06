@@ -222,7 +222,7 @@ end
 
 function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
     filevar = regexprep(VarStruct.Name,' ','_');
-    filevar = regexprep(filevar,'/','.');
+    filevar = regexprep(filevar,'\/','.');
     filesite = SiteStruct.AED;
 
     base = [outpath,filesite,'_',filevar];

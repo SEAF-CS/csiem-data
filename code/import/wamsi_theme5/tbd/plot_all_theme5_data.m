@@ -100,7 +100,7 @@ for iii = 1:length(filelist)
         yTop = (30-ySize)/2;
         set(gcf,'paperposition',[0 0 xSize ySize]);
         
-        print(gcf,[outdir,regexprep(filelist(iii).name,'.csv','.png')],'-dpng');
+        print(gcf,[outdir,regexprep(filelist(iii).name,'\.csv','.png')],'-dpng');
     close all;
     
     clear data;

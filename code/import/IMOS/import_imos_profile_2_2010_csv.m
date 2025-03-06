@@ -99,7 +99,7 @@ for i = 1:length(theagencyval)
                 fprintf(fid,'Program,AMNM\n');
                 fprintf(fid,'Project,amnmprofile\n');
                 fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
-                fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+                fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
                 fprintf(fid,'Location,%s\n',outpath);
 
 

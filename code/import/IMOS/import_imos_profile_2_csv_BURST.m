@@ -113,7 +113,7 @@ for i = 12:length(headers)
             fprintf(fid,'Program,amnmprofile\n');
             fprintf(fid,'Project,amnmprofile\n');
             fprintf(fid,'Tag,IMOS-ANMN-CTD\n');
-            fprintf(fid,'Data File Name,%s\n',regexprep(filename,outpath,''));
+            fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
             fprintf(fid,'Location,%s\n',['data-warehouse/csv/imos/',lower('bgc')]);
             
             
