@@ -55,7 +55,7 @@
 - Relative Humidity
 
 ### Raw Data
-    This code Imports the above variables from a few simple tables, in csv format, the files are located in the directory : /GIS_DATA/csiem-data-hub/data-lake/BOM/barra_tfv/. Columns are variables and the rows are each entry.
+This code Imports the above variables from a few simple tables, in csv format, the files are located in the directory : /GIS_DATA/csiem-data-hub/data-lake/BOM/barra_tfv/. Columns are variables and the rows are each entry.
 
 ### Conversion
 ![Conversion for BOM Barra](./BOM%20Barra%20Conversion.png)

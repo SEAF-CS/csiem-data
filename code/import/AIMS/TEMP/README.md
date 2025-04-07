@@ -1,8 +1,8 @@
 # The AIMS Temperature Data
 ## Raw Data
-This Dataset is an enormous 27gb collection of temperature data from all over australia. The 27GB file has been interogated and the unique sites and subsites have been sorted into unstructured text file using C code (faster than matlab when dealing with 27gb files), this is the output of some C code that stores the sites and subsites in two seperate data structures and a list of these structures is made. for use with the matlab code.
+This Dataset is an enormous 27gb collection of temperature data from all over australia. The 27GB file has been interogated and the unique sites and subsites have been sorted into an unstructured text file using C code (faster than matlab when dealing with 27gb files).
 
-This dataset has broken down their data collection sites into "sites" and "subsites", where some one site can contain multiple subsites. Therefore to only include unique sites in our system we include the subsites, (however our systems calls them sites). All of the sites and their subsites can be found in a text/csv in this directory, a few sites that dont have lat and lon in the raw data file and so have been filled with 0's for both Latitude and Longitude. 
+This dataset has broken down their data collection sites into "sites" and "subsites", where some sites contain multiple subsites. Therefore to only include unique sites in our system we only include the subsites, (however our systems calls them sites). All of the sites and their subsites can be found in a text/csv in this directory, a few sites that do not have lat and lon in the large csv file have been filled with 0's for both Latitude and Longitude. 
 
 The subsites have been plotted below 
 ![alt text](SiteLocations.png) 

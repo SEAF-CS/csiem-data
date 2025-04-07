@@ -14,6 +14,11 @@ for i = 1:length(FILES)
             delete(fullfile(AbsPath,RelativeName));
         end
 
+        if startsWith(AbsPath,'/GIS_DATA/csiem-data-hub/data-lake/')
+            fprintf(fid,'%s\t%s\n',RelativeName,FILES(i).folder);
+            delete(fullfile(AbsPath,RelativeName));
+        end
+
     end
 end
 fclose(fid);

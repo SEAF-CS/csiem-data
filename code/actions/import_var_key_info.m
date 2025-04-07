@@ -35,8 +35,10 @@ end
 tfvID = sstr(:,1);
 tfvName = sstr(:,4);
 tfvUnits = sstr(:,5);
-tfvConv = snum(:,4);
-marvlID = snum(:,6);
+tfvConv = snum(:,6);
+marvlID = snum(:,8);
+
+
 
 for i = 1:length(varID)
     
@@ -79,6 +81,9 @@ agency.wwmsp3 = import_agency_conv('WWMSP3');
     % agency.theme3sedpsd = import_agency_conv('WWMSP3SEDPSD'); %these two have same vars
     % agency.theme3sgrest = import_agency_conv('WWMSP3SGREST'); %these two have same vars
     % agency.WWMSP31SedimentDeposition = import_agency_conv('WWMSP3.1-Sediment-Deposition');
+    % added wamsi 3.3 porewater variables
+
+agency.wwmsp4 = import_agency_conv("WWMSP4");
 
 agency.wwmsp5 = import_agency_conv('WWMSP5');
     %This now contains:

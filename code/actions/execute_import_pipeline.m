@@ -8,9 +8,9 @@ import_var_key_info;
 csiem_file_cleaner
 
 %not in use
-import_dwer = 0;
 import_imos_srs = 0;
 
+import_dwer = 0;
 import_dwer_swanest_phy = 0;
 import_dot = 0;
 import_bom = 0;
@@ -18,13 +18,15 @@ import_mafrl = 0;
 import_imos = 0;
 import_dpird = 0;
 import_moorings = 0;
+import_wamsitheme1 = 0;
 import_theme2 = 0;
 import_theme3 = 0;
+import_wamsitheme4 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 import_bmt_wp_swan = 0;
-import_wamsitheme1 = 0;
+
 import_UKMO = 0;
 import_NASA = 0;
 import_aims = 0;
@@ -46,8 +48,10 @@ import_UWA_AED_Phyto = 0;
 import_wamsiwaves = 0;
 
 
+
 create_smd = 0;
 
+create_single_matfiles = 0;
 create_matfiles = 0;
 create_parquet = 0;
 
@@ -56,8 +60,9 @@ plotnew_dataplots = 0;
 
 create_shapefiles = 0;
 
+run_agency_marvl = 1;
 
-run_marvl = 1;
+run_marvl = 0;
 
 
 %___________________________________________________________________________
@@ -219,6 +224,14 @@ if import_theme3
 
     
 end
+
+if import_wamsitheme4
+    disp('PipeLine Importing: WWMSP4')
+    cd ../import/wamsi_theme4/
+    run import_ZooPlankton
+    cd ../../../actions
+end
+
 
 if import_wc
     % WC_Digitised
@@ -451,23 +464,44 @@ end
 
 
 if create_smd
+    disp('PipeLine SMD')
     calculate_SMD_for_headers
 end
 
+if create_single_matfiles
+    disp('PipeLine Matfiles')
+    csv_2_matfile_tfv_by_agency_single('bom');
+end
+
 if create_matfiles
+    disp('PipeLine Matfiles')
     csv_2_matfile_tfv_by_agency;
 end
 if create_parquet
+    disp('PipeLine Parquet')
     csv_2_parquet_by_agency;
     %csv_2_parquet_by_category;
 end
 
 if create_dataplots
+    disp('PipeLine Dataplot')
     plot_datawarehouse_csv_all(plotnew_dataplots);
 end
 
-if run_marvl
+if run_agency_marvl
+    disp('PipeLine MARVL')
+    for mv = [1 2 0]
 
+        addpath(genpath(marvldatapath));
+        create_marvl_config_information_agency(mv,'csiem_WAMSI_public');
+        run_AEDmarvl marvl_pipeline_images;
+        rmpath(genpath(marvldatapath));
+
+    end
+end
+
+if run_marvl
+    disp('PipeLine MARVL')
     for mv = [1 2 0]
 
         addpath(genpath(marvldatapath));
@@ -479,6 +513,7 @@ if run_marvl
 end
 
 if create_shapefiles
+    disp('PipeLine Shapefiles')
     header_to_shapefile;
 end
 

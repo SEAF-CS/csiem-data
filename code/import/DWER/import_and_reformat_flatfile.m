@@ -1,5 +1,5 @@
 function  import_and_reformat_flatfile%  clear all; close all;
-indir = 'D:\csiem/data-warehouse/csv_holding/dwer/swanest/';
+indir = '/GIS_DATA/csiem-data-hub/data-warehouse/csv_holding/dwer/swanest/'
 
 
 opts = detectImportOptions([indir,'WIR_FLATFILE_ALL_DATA.csv']);
@@ -27,7 +27,7 @@ vert = unique(data.VerticalRef);
 vars = unique(data.VarID);
 
 
-outputdir = 'D:/csiem/data-warehouse/csv/dwer/';
+outputdir = '/GIS_DATA/csiem-data-hub/data-warehouse/csv/dwer/';
 
 
 
@@ -76,7 +76,7 @@ for i = 1:length(sites)
                 
                     case 'm from datum'
                         fprintf(fid,'Date,Height,Data,QC\n');
-                    case 'm from surface'
+                    case 'm below surface'
                         fprintf(fid,'Date,Height,Data,QC\n');
                     case 'm above seabed'
                         disp('hi');

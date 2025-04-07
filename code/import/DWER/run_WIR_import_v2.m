@@ -11,14 +11,14 @@ addpath(genpath('Functions'));
 
 % There is a zipped folder in Raw Zipped. Unzip that folder and add it to the Raw directory. It's too big for Github unzipped.
 
-holding = '/Projects2/csiem-data-hub/data-warehouse/csv_holding/dwer/matfiles';
+holding = '/GIS_DATA/csiem-data-hub/data-warehouse/csv_holding/dwer/matfiles';
 %'D:\csiem\data-warehouse\csv_holding\dwer\matfiles\';
 
-swanestPath = '/Projects2/csiem-data-hub/data-lake/DWER/swanest/';
+swanestPath = '/GIS_DATA/csiem-data-hub/data-lake/DWER/SCE/swanest/';
 dirlist = dir(swanestPath);
 %'D:\csiem/data-lake/dwer/swanest/'
 
-for i = 71:length(dirlist)%3
+for i = 5:length(dirlist)%3
     
     filelist = dir([swanestPath,dirlist(i).name,'/*.xlsx']);
     
@@ -74,7 +74,7 @@ end
 
 
 %
-save /Projects2/csiem-data-hub/data-warehouse/csv_holding/dwer/swan.mat swam -mat -v7.3;
+save /GIS_DATA/csiem-data-hub/data-warehouse/csv_holding/dwer/swan.mat swam -mat -v7.3;
 %D:\csiem\data-warehouse\csv_holding\dwer\swan.mat swan -mat -v7.3;
 
 % import_drainage_data;

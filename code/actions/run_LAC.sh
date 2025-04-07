@@ -1,7 +1,7 @@
 #!/bin/bash
 matlab_exec=matlab
 echo "execute_import_pipeline();
-exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> 'MonitoredPipelineRun/MonitoredMatlab(10TryingMARVL).txt'
+exit();"| ${matlab_exec} -nodisplay -nosplash -nodesktop &> 'MonitoredPipelineRun/ZoopMARVL.txt'
 #'MonitoredPipelineRun/MonitoredFullRUN2.txt' 
 
 # #!/bin/bash

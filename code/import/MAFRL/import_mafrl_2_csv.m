@@ -97,7 +97,7 @@ for i = 1:length(theyears)
                                 
                                 deployment = ['Integrated'];
                                 pos = 'Water Column';
-                                ref = 'Water Surface';
+                                ref = 'm below Surface';
                                 meandepth = num2str(sitekey.mafrl.(thesiteval{foundsite}).Depth);
                                 
                                 type = 'Depth';

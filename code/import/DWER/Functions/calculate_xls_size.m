@@ -1,11 +1,15 @@
 function [rows,cols] = calculate_xls_size(filename)
 
-aa = xlsread(filename);
+aa = xlsread(filename,'A2:ZZ2');
 [~,gg] = xlsread(filename,'A2:ZZ2');
 
 
 [bb,~] = size(aa);
 A = length(gg);
+
+
+
+
 %A = A + 6;
 
 rows = bb + 2;

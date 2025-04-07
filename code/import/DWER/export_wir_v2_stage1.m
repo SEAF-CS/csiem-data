@@ -1,5 +1,5 @@
 function export_wir_v2_stage1% clear all; close all;
-load ../../../../data-warehouse/csv_holding/dwer/swan.mat;
+load /GIS_DATA/csiem-data-hub/data-warehouse/csv_holding/dwer/swan.mat;
 
 addpath(genpath('../../functions'));
 
@@ -37,7 +37,7 @@ end
 load ../../actions/varkey.mat;
 
 
-outputdir = 'D:\csiem/data-warehouse/csv_holding/dwer/swanest/';mkdir(outputdir);
+outputdir = '/GIS_DATA/csiem-data-hub/data-warehouse/csv_holding/dwer/swanest/';mkdir(outputdir);
 
 sites = fieldnames(swan);
 
@@ -122,28 +122,28 @@ for i = 1:length(sites)
                         disp('surface');
                         swan.(sites{i}).(vars{j}).Depth_Chx(k) = {'0.5'};
                         deploy = 'Floating';
-                        deppos = '0.5m from Surface';
-                        vertref = 'm from Surface';
+                        deppos = '0.5m below Surface';
+                        vertref = 'm below Surface';
                         SMD = [];
                     otherwise
                         if strcmpi(proj,'CSMWQ') == 1
                             swan.(sites{i}).(vars{j}).Depth_Chx(k) = {''};
                             deploy = 'Integrated';
                             deppos = 'Water Column';
-                            vertref = 'Water Surface';
+                            vertref = 'm below Surface.';
                             SMD = [];
                         else
                             deploy = 'Profile';
-                            deppos = 'm from Surface';
-                            vertref = 'Water Surface';
+                            deppos = 'm below Surface';
+                            vertref = 'm below Surface.';
                             SMD = [];
                             
                         end
                 end
             else
                 deploy = 'Profile';
-                deppos = 'm from Surface';
-                vertref = 'Water Surface';
+                deppos = 'm below Surface';
+                vertref = 'm below Surface.';
                 SMD = [];
                 
             end
@@ -158,69 +158,69 @@ for i = 1:length(sites)
                     
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     
                 case 'Mean Discharge'
                     %fprintf(fid,'Data Classification,HYDRO Flow\n');
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     data_class = 'HYDRO Flow';
                 case 'Min Discharge'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Flow\n');
                     data_class = 'HYDRO Flow';
                 case 'Discharge'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Flow\n');
                     data_class = 'HYDRO Flow';
                 case 'Max Stage Height CTF'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Level\n');
                     data_class = 'HYDRO Level';
                 case 'Mean Stage Height CTF'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Level\n');
                     data_class = 'HYDRO Level';
                 case 'Min Stage Height CTF'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Level\n');
                     data_class = 'HYDRO Level';
                 case 'Max Stage Height'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Level\n');
                     data_class = 'HYDRO Level';
                 case 'Mean Stage Height'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Level\n');
                     data_class = 'HYDRO Level';
                 case 'Min Stage Height'
                     deploy = 'Fixed';
                     deppos = 'm from Datum';
-                    vertref = 'm above Datum';
+                    vertref = 'm from Datum';
                     SMD = [];
                     %fprintf(fid,'Data Classification,HYDRO Level\n');
                     data_class = 'HYDRO Level';
@@ -240,15 +240,15 @@ for i = 1:length(sites)
                             case 'Profile'
                                 deploy = 'Integrated';
                                 deppos = 'Water Column';
-                                vertref = 'Water Surface';
+                                vertref = 'm below Surface.';
                             case 'Fixed'
                                 deploy = 'Integrated';
                                 deppos = 'Water Column';
-                                vertref = 'Water Surface';
+                                vertref = 'm below Surface.';
                             case 'Floating'
                                 deploy = 'Integrated';
                                 deppos = 'Water Column';
-                                vertref = 'Water Surface';
+                                vertref = 'm below Surface.';
                             otherwise
                         end
                         
@@ -261,15 +261,15 @@ for i = 1:length(sites)
                             case 'Profile'
                                 deploy = 'Integrated';
                                 deppos = 'Depth Range';
-                                vertref = 'Water Surface';
+                                vertref = 'm below Surface.';
                             case 'Fixed'
                                 deploy = 'Integrated';
                                 deppos = 'Depth Range';
-                                vertref = 'Water Surface';
+                                vertref = 'm below Surface.';
                             case 'Floating'
                                 deploy = 'Integrated';
                                 deppos = 'Depth Range';
-                                vertref = 'Water Surface';
+                                vertref = 'm below Surface.';
                             otherwise
                         end
                         

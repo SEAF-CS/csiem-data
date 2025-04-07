@@ -27,4 +27,4 @@ This dataset is structured into sheets, where each sheet contains a different ye
   - Turbidity
 
 # Import Code
-The import code for this dataset is "import_mafrl_2_csv.m". This import code reads in one at a time each sheet. Determines all how many sites there are in that sheet, Matches those sites to our naming scheme then iterates through each site, and any of the variables that are attacthed to those sites. The type depth data for each variable is stored in our variable key, once the type of depth is determined the code has a switch statement that will match for the correct depth/height. This is done for all sheets/years.
+The import code for this dataset is "import_mafrl_2_csv.m". This import code reads in one sheet at a time. Determines all/ how many sites there are in that sheet, Matches those sites to our naming scheme then iterates through each site, and any of the variables that are attacthed to those sites. The type depth data for each variable is stored in our variable key, once the type of depth is determined the code has a switch statement that will match for the correct depth/height. This is done for all sheets/years.

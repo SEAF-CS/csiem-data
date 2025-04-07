@@ -38,6 +38,9 @@ sitekey.WWMSP5ROMS = read_site_sheet("WWMSP5ROMS");
 sitekey.CSIRO = read_site_sheet("CSIRO");
 sitekey.DEP = read_site_sheet("DEP");
 sitekey.UWA = read_site_sheet("UWA");
+sitekey.wwmsp4 = read_site_sheet("WWMSP4");
+sitekey.wwmsp33Porewater = read_site_sheet("WWMSP3.3");
+
 
 
 save sitekey.mat sitekey -mat;

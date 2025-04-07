@@ -1,6 +1,6 @@
 # WAMSI Theme 1.1
 ## WRF
-This data set is imported via the matlab script ImportWRF.m. It is a numerically calculated dataset from created from data of pre-existing sites. This data set has been imported but the variables havent been formally processed so they have the default header name as variable names. This dataset has a calclulated variablet hat doesnt appear in the raw data, precipitation rate, which is the rate of change of the precipitation.
+This data set is imported via the matlab script ImportWRF.m. It is a numerically calculated dataset created from data of pre-existing sites. This data set has been imported but the variables havent been formally processed so they have the default header name as variable names. This dataset has a calclulated variable that doesnt appear in the raw data, precipitation rate, which is the rate of change of the precipitation.
 
 ### Raw Data
 This data is imported straight from the data lake in the form of csv's. There is one csv per site.

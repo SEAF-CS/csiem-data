@@ -1,6 +1,6 @@
 # BMT SWAN Data Import
 
-This site data is numerically simulated using data from sites we already have. We have three variables being imported in this code.
+This site data is numerically simulated using data from monitoring sites we already have. We have three variables being imported in this code.
 
 ## Variables
 

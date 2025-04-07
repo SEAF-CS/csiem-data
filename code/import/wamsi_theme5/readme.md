@@ -26,7 +26,7 @@ Some of the data files are missing depth data. For these datasets a mean depth w
 
 ## AWAC (formerly ADCP)
 
-AWAC data is imported directly from the data lake via the script import_wwmsp5_awac (formerly import_netcdf_csv_ADCP.m). Each netcdf is read and data is converted to csv and written tot he data warehouse. Validation images are automatically created and stored along side the csv files.
+AWAC data is imported directly from the data lake via the script import_wwmsp5_awac (formerly import_netcdf_csv_ADCP.m). Each netcdf is read and data is converted to csv and written to the data warehouse. Validation images are automatically created and stored along side the csv files.
 
 ### Issues
 

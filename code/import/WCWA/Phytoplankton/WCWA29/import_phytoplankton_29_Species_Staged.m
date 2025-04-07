@@ -77,7 +77,7 @@ function import_phytoplankton_Species_Staged()
                         fprintf(fid,'Site Description,%s\n',SiteStruct.Description);
                         fprintf(fid,'Deployment,%s\n',Deployment);
                         fprintf(fid,'Deployment Position,%s\n','Water Column'); % '0.0m above Seabed' 0m below surface);
-                        fprintf(fid,'Vertical Reference,%s\n','Water Surface');
+                        fprintf(fid,'Vertical Reference,%s\n','m below Surface');
                         fprintf(fid,'Site Mean Depth,%4.4f\n',0);
                         %%
     

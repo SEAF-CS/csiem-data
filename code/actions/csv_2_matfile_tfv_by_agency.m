@@ -32,6 +32,9 @@ function csv_2_matfile_tfv_by_agency
 
     inc = 1;
 
+    disp(unique_agency);
+    % stop
+
     for ag = 1:length(unique_agency)
     % for ag = length(unique_agency)
 
@@ -91,7 +94,11 @@ function csv_2_matfile_tfv_by_agency
                     if strcmpi(header.Deployment,'Profile') == 0
                         tt2 = timetable2table(retime(table2timetable(tab),'hourly','nearest'));
                     else
-                        tt2 = tab;
+                        if strcmpi(unique_agency{ag},'BOM') == 1
+                            tt2 = timetable2table(retime(table2timetable(tab),'hourly','nearest'));
+                        else
+                            tt2 = tab;
+                        end
                     end
                     disp('Finished Downsample');
                 else
@@ -188,6 +195,22 @@ function csv_2_matfile_tfv_by_agency
                 csiem.(sitecode).(tfv_name).Agency = header.Tag;
                 csiem.(sitecode).(tfv_name).Units = varkey.(header.Variable_ID).tfvUnits;
 
+                if strcmpi(unique_agency{ag},'BOM') == 1
+                    if isfield(csiem.(sitecode).(tfv_name),'oDepth')
+                        csiem.(sitecode).(tfv_name) = rmfield(csiem.(sitecode).(tfv_name),'oDepth');
+                    end
+                    csiem.(sitecode).(tfv_name) = rmfield(csiem.(sitecode).(tfv_name),'Data_Raw');
+
+                    %clip data to the year 2000
+                    %csiem stores dates as datenum.
+                    
+                    lowerlim = datenum('2000-01-01 00:00:00',"yyyy-mm-dd HH:MM:SS");
+                    Inds = csiem.(sitecode).(tfv_name).Date>lowerlim;
+
+                    csiem.(sitecode).(tfv_name).Date = csiem.(sitecode).(tfv_name).Date(Inds);
+                    csiem.(sitecode).(tfv_name).Data = csiem.(sitecode).(tfv_name).Data(Inds);
+                    csiem.(sitecode).(tfv_name).Depth = csiem.(sitecode).(tfv_name).Depth(Inds);
+                end
 
 
                 inc = inc + 1;
