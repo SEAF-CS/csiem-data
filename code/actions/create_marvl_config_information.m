@@ -75,6 +75,10 @@ switch marvl_id
     case 1
         fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n");
         fprintf(fid,"timeseries.outputdirectory = [datapath,'marvl-images/core/'];\n");
+    case 3
+            % The testing case
+            fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n");
+            fprintf(fid,"timeseries.outputdirectory = [datapath,'marvl-images/all/'];\n");
     otherwise
         fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n");
         fprintf(fid,"timeseries.outputdirectory = [datapath,'marvl-images/all/'];\n");   

@@ -51,7 +51,7 @@ import_wamsiwaves = 0;
 
 create_smd = 0;
 
-create_single_matfiles = 0;
+create_single_matfiles = 1;
 create_matfiles = 0;
 create_parquet = 0;
 
@@ -60,9 +60,9 @@ plotnew_dataplots = 0;
 
 create_shapefiles = 0;
 
-run_agency_marvl = 1;
+run_agency_marvl = 0;
 
-run_marvl = 0;
+run_marvl = 1;
 
 
 %___________________________________________________________________________
@@ -470,7 +470,7 @@ end
 
 if create_single_matfiles
     disp('PipeLine Matfiles')
-    csv_2_matfile_tfv_by_agency_single('bom');
+    csv_2_matfile_tfv_by_agency_single('wamsi');
 end
 
 if create_matfiles
