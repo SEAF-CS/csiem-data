@@ -75,6 +75,7 @@ agency.wwmsp1 = import_agency_conv('WWMSP1');
 agency.wwmsp2 = import_agency_conv('WWMSP2');
     % agency.theme2light = import_agency_conv('THEME2LIGHT');
     % THEME2.2
+    % Theme2SGPAR
 
 agency.wwmsp3 = import_agency_conv('WWMSP3');
     % agency.theme3ctd = import_agency_conv('THEME3CTD');

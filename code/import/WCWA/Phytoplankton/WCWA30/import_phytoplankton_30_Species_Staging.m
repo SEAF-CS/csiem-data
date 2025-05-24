@@ -13,7 +13,7 @@ function import_phytoplankton_Species_Staging()
     end
 
     SheetString = 'Sheet2';
-    DateStr = '2000-06-03 00:00:00';
+    DateStr = '1999-12-06 00:00:00';
     SiteIndexes = [6,9,12];
     SiteNames = {'200N', '200S', 'O'};
     SheetTable = importfile(inputfile,SheetString, [3,300]);

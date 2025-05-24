@@ -64,7 +64,7 @@
 
                 %Append to file
                 fid = fopen(fdata,'a');
-                fprintf(fid,"%s,%d,%f,%s\n",char(Date),Depth,ReadInValue,QC);
+                fprintf(fid,"%s,%f,%f,%s\n",char(Date),Depth,ReadInValue,QC);
                 fclose(fid);
           
 

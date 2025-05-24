@@ -1,6 +1,9 @@
 # WAMSI Theme 3
 ## CTD
-[Readmed.md for CTD](./CTD/Readme.md)
+[Readme.md for CTD](./CTD/Readme.md)
+
+## PORE
+[Readme.md for PORE](./PORE/Readme.md)
 
 ## SEDPSD
 [ReadMe.md For SEDPSD](./SEDPSD/README/ReadMe.md)

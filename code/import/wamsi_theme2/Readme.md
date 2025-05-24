@@ -46,3 +46,13 @@ This code loops over the columns of the excel spreadsheet matching the variable 
  - var00326	Posidonia Sinuosa Above Ground Biomass
  - var00327	Posidonia Sinuosa Below Ground Biomass
  - var00351	Posidonia Sinuosa Total Biomass
+  
+## SG PAR
+This is from wamsi theme 2 the seagrass restoration, this is specifically the Photosynthetically Active Radiation (PAR) portion of the dataset.
+
+### Code
+This dataset is imported by "import_theme2_SG_PAR.m". This dataset is split up into a different csv file for each site, so the code iterates through the csv files, The code determines the current site and then iterates over the PAR variables. It creates a datafile and a header file for each unique site and variable pair and fills in any meta data required.
+
+
+### Variables
+![Variables](SGPAR_Vars.png)

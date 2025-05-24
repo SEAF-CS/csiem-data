@@ -28,8 +28,8 @@ Insit = Insit(2:end,:);
 % Insert depth based on Sample Type
 for rowInd = 1:height(Insit)
     if isnan(Insit{rowInd,6})
-        temp = Insit{rowInd,5}{1};
-        Depth(rowInd) = SampleTypeDepthConv(temp);
+        SampleTypeStr = Insit{rowInd,5}{1};
+        Depth(rowInd) = SampleTypeDepthConv(SampleTypeStr);
    else
     Depth(rowInd) = Insit{rowInd,6};
    end
@@ -98,8 +98,8 @@ Mafrl{:,numberCols} = MafrlNumbersArray;
 
 % Insert depth based on Sample Type
 for rowInd = 1:height(Mafrl)
-        temp = Mafrl{rowInd,5}{1};
-        Depth(rowInd) = SampleTypeDepthConv(temp);
+        SampleTypeStr = Mafrl{rowInd,5}{1};
+        Depth(rowInd) = SampleTypeDepthConv(SampleTypeStr);
 end
 
 count = 1;

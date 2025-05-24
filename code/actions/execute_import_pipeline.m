@@ -10,7 +10,7 @@ csiem_file_cleaner
 %not in use
 import_imos_srs = 0;
 
-import_dwer = 0;
+import_dwer = 1;
 import_dwer_swanest_phy = 0;
 import_dot = 0;
 import_bom = 0;
@@ -20,7 +20,7 @@ import_dpird = 0;
 import_moorings = 0;
 import_wamsitheme1 = 0;
 import_theme2 = 0;
-import_theme3 = 0;
+import_theme3 = 1;
 import_wamsitheme4 = 0;
 import_theme5 = 0;
 import_wc = 0;
@@ -30,7 +30,7 @@ import_bmt_wp_swan = 0;
 import_UKMO = 0;
 import_NASA = 0;
 import_aims = 0;
-import_CSPHY = 0;
+import_dwer_cs_phy = 0;
 import_IMOSPlanktonvar = 0;
 import_WCWA1Phyto = 0;
 import_WCWA2Phyto = 0;
@@ -49,10 +49,10 @@ import_wamsiwaves = 0;
 
 
 
-create_smd = 0;
+create_smd = 1;
 
-create_single_matfiles = 1;
-create_matfiles = 0;
+create_single_matfiles = 0;
+create_matfiles = 1;
 create_parquet = 0;
 
 create_dataplots = 0;
@@ -94,6 +94,16 @@ if import_dwer_swanest_phy
         DWER_SWANEST_PHY_Species
     cd ../../../actions/
 end
+
+if import_dwer_cs_phy
+    disp('PipeLine Importing: DWER CS phy')
+    cd ../import/DWER/CSPHY/
+    import_CSPHY_SPECIES
+    import_CSPHY_GROUP_STAGING
+    import_CSPHY_GROUP
+    cd ../../../actions/
+end
+
 
 % DOT Export
 
@@ -328,16 +338,6 @@ if import_aims
     cd ../import/AIMS/TEMP/
     import_AIMS_TEMP
     cd ../../../actions
-end
-
-if import_CSPHY
-    disp('PipeLine Importing: DWER CSPHY')
-    cd ../import/DWER/CSPHY/
-    import_CSPHY_SPECIES
-
-    import_CSPHY_GROUP_STAGING
-    import_CSPHY_GROUP
-    cd ../../../actions/
 end
 
 if import_IMOSPlanktonvar

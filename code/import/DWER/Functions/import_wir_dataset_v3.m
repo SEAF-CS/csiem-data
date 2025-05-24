@@ -178,8 +178,8 @@ data_range = ['A2:',Column,num2str(Row)];
 
 [~,~,raw] = xlsread(filename,data_range);
 if ver == 1
-headers = raw(1,1:25);
-headers(26:length(raw1)) = raw1(26:end);
+    headers = raw(1,1:25);
+    headers(26:length(raw1)) = raw1(26:end);
 else
     headers = raw(1,1:24);
     headers(25:length(raw1)) = raw1(25:end);
