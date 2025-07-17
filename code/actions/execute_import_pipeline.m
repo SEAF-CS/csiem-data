@@ -10,27 +10,27 @@ csiem_file_cleaner
 %not in use
 import_imos_srs = 0;
 
-import_dwer = 1;
+import_dwer = 0;%
 import_dwer_swanest_phy = 0;
 import_dot = 0;
 import_bom = 0;
 import_mafrl = 0;
 import_imos = 0;
 import_dpird = 0;
-import_moorings = 0;
+import_moorings = 0;%
 import_wamsitheme1 = 0;
 import_theme2 = 0;
-import_theme3 = 1;
+import_theme3 = 0;
 import_wamsitheme4 = 0;
 import_theme5 = 0;
 import_wc = 0;
 import_fpa = 0;
 import_bmt_wp_swan = 0;
 
-import_UKMO = 0;
+import_UKMO = 0;%
 import_NASA = 0;
-import_aims = 0;
-import_dwer_cs_phy = 0;
+import_aims = 1;
+import_dwer_cs_phy = 1;
 import_IMOSPlanktonvar = 0;
 import_WCWA1Phyto = 0;
 import_WCWA2Phyto = 0;
@@ -49,10 +49,10 @@ import_wamsiwaves = 0;
 
 
 
-create_smd = 1;
+create_smd = 0;
 
 create_single_matfiles = 0;
-create_matfiles = 1;
+create_matfiles = 0;
 create_parquet = 0;
 
 create_dataplots = 0;
@@ -62,7 +62,7 @@ create_shapefiles = 0;
 
 run_agency_marvl = 0;
 
-run_marvl = 1;
+run_marvl = 0;
 
 
 %___________________________________________________________________________
@@ -92,7 +92,7 @@ if import_dwer_swanest_phy
         DWER_SWANEST_PHY_Groups_Staging
         DWER_SWANEST_PHY_Groups_Staged
         DWER_SWANEST_PHY_Species
-    cd ../../../actions/
+    cd ../../actions/
 end
 
 if import_dwer_cs_phy
@@ -101,7 +101,7 @@ if import_dwer_cs_phy
     import_CSPHY_SPECIES
     import_CSPHY_GROUP_STAGING
     import_CSPHY_GROUP
-    cd ../../../actions/
+    cd ../../actions/
 end
 
 
@@ -222,15 +222,15 @@ if import_theme3
     %Sediment
     cd ../import/wamsi_theme3/SEDPSD
     run ImportSEDPSDMain
-    cd ../../../actions
+    cd ../../actions
 
     cd ../import/wamsi_theme3/SGREST
     run ImportSGRESTMain
-    cd ../../../actions
+    cd ../../actions
 
     cd ../import/wamsi_theme3/SEDDEPO
     run IMPORTSEDDEPO
-    cd ../../../actions
+    cd ../../actions
 
     
 end
@@ -239,7 +239,7 @@ if import_wamsitheme4
     disp('PipeLine Importing: WWMSP4')
     cd ../import/wamsi_theme4/
     run import_ZooPlankton
-    cd ../../../actions
+    cd ../../actions
 end
 
 
@@ -303,7 +303,7 @@ end
 if import_UKMO
     disp('PipeLine Importing: UKMO')
     cd ../import/UKMO
-    virtualEnvironmentPath = [datapath,'/PyBusch/bin/python3'];
+    virtualEnvironmentPath = [datapath,'code/PyBusch/bin/python3'];
     system( [virtualEnvironmentPath,' ImportUKMO_OSTIA.py']) 
     cd ../../actions/
 end

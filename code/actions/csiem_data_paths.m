@@ -1,6 +1,7 @@
-datapath = '/GIS_DATA/csiem-data-hub/';
-marvldatapath = '/GIS_DATA/csiem-data-hub/marvl';
-
+datapath = '/CSIEM_DATA/csiem-data-master/csiem-data/';
+marvldatapath = '/CSIEM_DATA/csiem-data-master/marvl';
+%datapath = 'X:/csiem-data-dev/';
+%marvldatapath = 'X:/csiem-data-dev/marvl';
 % I have written python code that searches for datapath and takes the first hit,
 % This is to not also grab marvldatapath too
 % my code requires '' quotes, if the quotes are changed to ""
