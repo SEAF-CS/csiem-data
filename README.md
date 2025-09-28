@@ -1,23 +1,22 @@
-# CSIEM Environmental Information Management
+# CSIEM environmental data management repository
 
 
 
-The goal of the CSIEM Environmental Information Management framework, as presented herein, is to allow compatibility, inter-operability and between crticial data assets, and version control as is required for the development of a comprehensive and integrated modelling platform.
+The goal of the CSIEM environmental data management system, as presented herein, is to allow compatibility, inter-operability and between crticial data assets, and version control as is required for the development of a comprehensive and integrated modelling platform.
 
 The framework can be viewed as three separate systems:
 
-Data Collation
-Data Governance & Reporting
-Data Integration
-The relationship between the various iniatives, the CSIEM Environmental Information Management framework, and downstream model applications are outlined schematically below.
+- Data Collation
+- Data Governance & Reporting
+- Data Integration
 
+The relationship between the various data providers, the CSIEM environmental data framework, and downstream model applications are outlined schematically below.
 
 
 ![CSIEM Environmental Information Management](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/Information_Management.png "CSIEM Environmental Information Management")
 
 
 ## Data Collation
-
 
 The aim of the data collation step is to bring data together in a co-ordinated way. Data that is sourced and collated from various government agencies, researchers and industry groups is stored in a “data lake” in their raw format. Each data provider is assigned a unique agency identifier, and datasets are also grouped based on the main programs or iniatives the collection was associated with. Raw data is stored in a rigid folder structure based on these two identifiers :
 
