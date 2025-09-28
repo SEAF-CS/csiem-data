@@ -137,7 +137,7 @@
         for j = 2:2:sss-2
             thevar = headers{j};
             thevar = regexprep(thevar,char(65533),'');
-            
+            disp(['Var found: ', thevar]);
             
             %thedata = tab.(['Var',num2str(j)])(5:end);
             %theQC = tab.(['Var',num2str(j+1)])(5:end);
@@ -181,7 +181,13 @@
                 continue
 
             end
-            
+
+            % SG add this
+            if ismember(foundvar, 52:60)
+                disp(['Skipping variable index ', num2str(foundvar)])
+                continue
+            end
+
             if and(foundvar  == 3,foundsite == 7) ==  1
                 disp('Skipping empty Column')
                 continue

@@ -1,25 +1,31 @@
 # Please set the following variables to True to run the import pipeline for the desired datasets
 
-import_nasa_ghrsst = True
-import_nasa_modis = True
+import_nasa_ghrsst = False
+import_nasa_modis = False
 
-import_moi_nemo = True
-import_moi_pisces = True
-import_moi_seapodym = True
+import_moi_nemo = False
+import_moi_pisces = False
+import_moi_seapodym = False
 
-import_esa_globcolor = True
-import_esa_sentinel = True
+import_esa_globcolor = False
+import_esa_sentinel = False
 
-import_imos_soop = True
+import_imos_soop = False
 
-import_wamsi_wwmsp5_roms = True
+import_wamsi_wwmsp5_roms = False
 
-import_csiro_srfme = True
+import_wamsi_wwmsp4_zoop = False
 
-import_dep_smcws = True
+import_csiro_srfme = False
+import_csiro_dalseno = True
+import_dep_smcws = False
 
-import_uwa_wawaves = True
-import_uwa_cwr = True
+import_uwa_wawaves = False
+import_uwa_cwr = False
+
+
+
+
 
 #________________________________________________________________________________________#
 # IMPORTING SCRIPTS
@@ -30,10 +36,10 @@ from scipy.io import loadmat
 
 # Define the base directory
 current_path = Path(__file__).absolute()
-root_path = next(p for p in current_path.parents if p.name == "GIS_DATA")
+root_path = next(p for p in current_path.parents if p.name == "CSIEM_DATA")
 base_path = root_path.parent.absolute()
-ACTIONS_DIR = base_path / 'GIS_DATA' / "csiem-data-hub" / "csiem-data" / "code" / "actions"
-CODE_DIR = base_path / 'GIS_DATA' / "csiem-data-hub" / "csiem-data" / "code"
+ACTIONS_DIR = base_path / 'CSIEM_DATA' / "csiem-data-dev" / "code" / "actions"
+CODE_DIR = base_path / 'CSIEM_DATA' / "csiem-data-dev" / "code"
 
 print("Load MATLAB data:")
 print("Loading agency.mat") 
@@ -118,6 +124,13 @@ if import_csiro_srfme:
     import_csiro_srfme(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,matlab_data_variable_names,matlab_data_site_coordinates)
     print("Done")
 
+if import_csiro_dalseno:
+    print("Importing CSIRO Dalseno")
+    sys.path.append(str(CODE_DIR))
+    from import_py.CSIRO.importCSIRO_dalseno import import_csiro_dalseno
+    import_csiro_dalseno(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,matlab_data_variable_names,matlab_data_site_coordinates)
+    print("Done")    
+
 if import_dep_smcws:
     print("Importing DEP SMCWS")
     sys.path.append(str(CODE_DIR))
@@ -137,6 +150,13 @@ if import_uwa_cwr:
     sys.path.append(str(CODE_DIR))
     from import_py.UWA.importUWACWR import import_uwa_cwr
     import_uwa_cwr(CODE_DIR,ACTIONS_DIR,base_path,matlab_data_conversion_data,matlab_data_variable_names,matlab_data_site_coordinates)
+    print("Done")
+
+if import_wamsi_wwmsp4_zoop:
+    print("Importing WWMSP4 Zooplankton")
+    sys.path.append(str(CODE_DIR))
+    from import_py.WAMSI.importWAMSIWWMSP4_zoop import import_wamsi_wwmsp4_zoop
+    import_wamsi_wwmsp4_zoop(CODE_DIR, ACTIONS_DIR, base_path, matlab_data_conversion_data, matlab_data_variable_names, matlab_data_site_coordinates)
     print("Done")
 
 print("Pipeline complete")

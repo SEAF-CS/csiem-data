@@ -18,7 +18,33 @@ textformat = [repmat('%s ',1,x)];
 datacell = textscan(fid,textformat,'Headerlines',1,'Delimiter',',');
 fclose(fid);
 
-mDate = datenum(datacell{1},'yyyy-mm-dd HH:MM:SS');
+% Detect whether the timestamp is stored as yyyy-mm-dd or dd-mm-yyyy (some datasets swap day and year)
+dateStrings = datacell{1};
+if ischar(dateStrings)
+    dateStrings = cellstr(dateStrings);
+end
+sampleIdx = find(~cellfun(@isempty,dateStrings),1);
+dateFormat = 'yyyy-mm-dd HH:MM:SS';
+if ~isempty(sampleIdx)
+    sample = dateStrings{sampleIdx};
+    delim = '-';
+    if contains(sample,'/')
+        delim = '/';
+    elseif contains(sample,'.')
+        delim = '.';
+    end
+    if ~isempty(regexp(sample,['^\d{4}',delim],'once'))
+        dateFormat = ['yyyy',delim,'mm',delim,'dd HH:MM:SS'];
+    elseif ~isempty(regexp(sample,['^\d{2}',delim,'\d{2}',delim,'\d{4}'],'once'))
+        dateFormat = ['dd',delim,'mm',delim,'yyyy HH:MM:SS'];
+    end
+end
+try
+    mDate = datenum(dateStrings,dateFormat);
+catch
+    % fall back to ISO layout if the heuristic fails
+    mDate = datenum(dateStrings,'yyyy-mm-dd HH:MM:SS');
+end
 %data.Date =  datetime(datacell{1},'InputFormat','yyyy-mm-dd HH:MM:SS');
 mData = str2double(datacell{3});
 mQC = datacell{4};

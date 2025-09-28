@@ -1,4 +1,12 @@
-function create_marvl_config_information(marvl_id,matfile_name)
+function create_marvl_config_information(marvl_id,matfile_name,selected_vars)
+
+if nargin < 2 || isempty(matfile_name)
+    matfile_name = {};  % Process all .mat files
+end
+
+if nargin < 3
+    selected_vars = {}; % if this does not ocurru
+end
 
 disp(['Running group ',num2str(marvl_id)]);
 
@@ -10,19 +18,39 @@ allvars = fieldnames(varkey);
 
 matdir = [datapath,'data-warehouse/mat/agency/'];
 
-filelist = dir(fullfile(matdir, '**/*.mat'));  %get list of files and folders in any subfolder
-filelist = filelist(~[filelist.isdir]);  %remove folders from list
+
+ % Build file list
+ if isempty(matfile_name)
+     filelist = dir(fullfile(matdir, '**', '*.mat'));
+ else
+     filelist = [];
+ for k = 1:length(matfile_name)
+     files = dir(fullfile(matdir, '**', [matfile_name{k}, '.mat']));
+     filelist = [filelist; files];
+ end
+end
+filelist = filelist(~[filelist.isdir]);  % Remove any directories
+
+%filelist = dir(fullfile(matdir, '**/*.mat'));  %get list of files and folders in any subfolder
+%filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 fid = fopen('marvl_information.m','wt');
 
 fprintf(fid,'csiem_data_paths\n');
 
-fprintf(fid,'master.fielddata_files = {');
-
-%for i = 1:length(filelist)
-    fprintf(fid,'''%s'',',matfile_name);
-%end
-fprintf(fid,'};');
+fprintf(fid, 'master.fielddata_files = {');
+if isempty(matfile_name)
+    % Derive names from full file list
+    for i = 1:length(filelist)
+        [~, name, ~] = fileparts(filelist(i).name);
+        fprintf(fid, '''%s'',', name);
+    end
+else
+    for i = 1:length(matfile_name)
+        fprintf(fid, '''%s'',', matfile_name{i});
+    end
+end
+fprintf(fid, '};\n');
 
 fprintf(fid,'\n');
 fprintf(fid,'master.varname = {...\n');
@@ -44,8 +72,25 @@ count = 0;
 
 for i = 1:length(uvars)
     for j = 1:length(allvars)
-        if strcmpi(uvars{i},varkey.(allvars{j}).tfvName) == 1 & varkey.(allvars{j}).marvlID == marvl_id 
-            fprintf(fid,'''%s'',''%s'';...\n',uvars{i},varkey.(allvars{j}).Name);
+        tfv_match = strcmpi(uvars{i}, varkey.(allvars{j}).tfvName);
+
+        % if marvl_id -1, ignore this
+        if marvl_id == -1
+            id_match = true;
+        else
+            id_match = varkey.(allvars{j}).marvlID == marvl_id;
+        end
+
+        % specific variables
+        if isempty(selected_vars)
+            var_ok = true;
+        else
+            var_ok = any(strcmpi(varkey.(allvars{j}).Name, selected_vars)) || ...
+                     any(strcmpi(varkey.(allvars{j}).tfvName, selected_vars));
+        end
+
+        if tfv_match && id_match && var_ok
+            fprintf(fid,'''%s'',''%s'';...\n', uvars{i}, varkey.(allvars{j}).Name);
             count = count + 1;
         end
     end
@@ -81,9 +126,16 @@ switch marvl_id
         fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n");
         fprintf(fid,"timeseries.outputdirectory = [datapath,'marvl-images/all/'];\n");
 
+    case -1
+        fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/DWER_zone2.shp'];\n");%[datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n"
+        fprintf(fid,"timeseries.outputdirectory = [datapath,'/marvl-images/fast/'];\n"); 
+        fprintf(fid,"timeseries.htmloutput = [datapath,'/marvl-images/fast/HTML/'];\n"); 
+       
     otherwise
         fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n");
         fprintf(fid,"timeseries.outputdirectory = [datapath,'marvl-images/all/'];\n");   
 end
+
+
 
 fclose(fid);

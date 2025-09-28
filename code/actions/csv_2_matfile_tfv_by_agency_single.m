@@ -63,7 +63,7 @@ function csv_2_matfile_tfv_by_agency(agency_code)
             sitecode = regexprep(sitecode,'\.','');
             sitecode = regexprep(sitecode,' ','_');
             sitecode = [sitecode,'_',header.Deployment,'_',num2str(inc)];
-            sitecode = regexprep(sitecode,'-','_');
+            sitecode = regexprep(sitecode,'[-\s]+','_');
             %sitecode = [agency,'_',num2str(randi(10000,1))];
             %sitecode = [agency,'_',num2str(i)];
             tfv_name = varkey.(header.Variable_ID).tfvName;

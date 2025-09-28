@@ -80,11 +80,11 @@ marvl_information
 %     'WQ_DIAG_OGM_POP_SWI','POPSWI';...
 %     'WQ_DIAG_OGM_DOP_SWI','DOPSWI';...
 %     'WQ_DIAG_PHS_FRP_DSF','FRPDSF';...
-%     };
+ %    };
 master.add_human = 1; % option to use user-define names, if 0 use AED names
 
 % Models
-master.ncfile(1).name = 'W:/csiem/Model/TFV/csiem_model_tfvaed_1.1/outputs/results/csiem_v1_A001_20101001_20120101_WQ_lowRes_MACT1_WQ.nc';
+master.ncfile(1).name = 'Z:/csiem/Model/TFV/csiem_model_tfvaed_1.1/outputs/results/csiem_v1_A001_20101001_20120101_WQ_lowRes_MACT1_WQ.nc';
 master.ncfile(1).legend = 'V0';
 master.ncfile(1).tag = 'TFV';
 
@@ -164,7 +164,7 @@ timeseries.skills = [1,... % r: regression coefficient (0-1)
     1,... % MEF: model efficienty, Nash-Sutcliffe Efficiency
     ];
 %timeseries.htmloutput = [datapath,'data-warehouse/marvl-images/html/'];
-timeseries.ErrFilename = [datapath,'data-warehouse/marvl-images/errormatrix.mat'];
+%timeseries.ErrFilename = [datapath,'data-warehouse/marvl-images/errormatrix.mat'];
 
 timeseries.ncfile(1).symbol = {'-';'-'};
 timeseries.ncfile(1).colour = {[166,86,40]./255;[8,88,158]./255};% Surface and Bottom
@@ -178,8 +178,8 @@ timeseries.ncfile(2).col_pal_color_bot  =[[254,232,200]./255;[252,141,89]./255];
 
 
 % plotting configuration
-timeseries.datearray = datenum(1980:4:2024,1,1);
-timeseries.dateformat = 'yyyy';
+timeseries.datearray = datenum(2021:1:2024, 5*ones(1,length(2021:1:2024)), 1);%datenum(1980:4:2024,1,1);
+timeseries.dateformat = 'mm/yyyy';
 
 %timeseries.dimc = [0.9 0.9 0.9]; % dimmest (lightest) color
 timeseries.istitled = 1;
@@ -192,8 +192,9 @@ timeseries.dimensions = [20 10]; % Width & Height in cm
 timeseries.dailyave = 0; % 1 for daily average, 0 for off. Daily average turns off smoothing.
 %timeseries.smoothfactor = 3; % Must be odd number (set to 3 if none)
 
-%timeseries.fieldsymbol = {'.','.'}; % Cell with same number of levels
-%timeseries.fieldcolour = {'m',[0.6 0.6 0.6]}; % Cell with same number of levels
+timeseries.fieldsymbol = {'.','.'}; % Cell with same number of levels
+timeseries.fieldcolour = {'m',[0.6 0.6 0.6]}; % Cell with same number of levels
+timeseries.fieldsymbolsize = [4, 8];
 
 timeseries.legendlocation = 'northeastoutside';
 timeseries.filetype = 'png';
@@ -202,8 +203,12 @@ timeseries.filetype = 'png';
  for vvvv=1:size(MARVLs.master.varname,1)
      timeseries.cAxis(vvvv).value = [ ];
  end
+timeseries.cAxis(5).value = [2 13]; %OXY
 %timeseries.cAxis(4).value = [2 10];
 %timeseries.cAxis(5).value = [40 120];
+% if isfield(MARVLs.master, 'cAxisLimits')
+%     timeseries = set_timeseries_caxis(timeseries, MARVLs.master.varname(:,1), MARVLs.master.cAxisLimits);
+% end
 
 MARVLs.timeseries = timeseries; clear timeseries;
 

@@ -76,6 +76,8 @@ for i = 19:length(headers)
             thedata_raw = Table{sss,i-1} * agency.IMOS.(theagencyval{foundvar}).Conv;
             ttt = find(~isnan(thedata_raw) == 1);
             thedata = thedata_raw(ttt);
+
+            
             
             if ~isempty(thedata)
             disp('      Writing file')
