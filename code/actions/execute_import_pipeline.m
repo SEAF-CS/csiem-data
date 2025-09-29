@@ -4,7 +4,7 @@ csiem_data_paths
 tic
 
 import_var_key_info;
-% import_site_key;
+import_site_key;
 csiem_file_cleaner
 
 %not in use
@@ -27,10 +27,10 @@ import_wc = 0;
 import_fpa = 0;
 import_bmt_wp_swan = 0;
 
-import_UKMO = 0;%
+import_UKMO = 0;
 import_NASA = 0;
-import_aims = 1;
-import_dwer_cs_phy = 1;
+import_aims = 0;
+import_dwer_cs_phy = 0;
 import_IMOSPlanktonvar = 0;
 import_WCWA1Phyto = 0;
 import_WCWA2Phyto = 0;
@@ -43,15 +43,15 @@ import_WCWA30Phyto = 0;
 import_WCWA31Phyto = 0;
 import_WCWA32Phyto = 0;
 
-import_UWA_AED_Phyto = 0;
+import_UWA_AED_Phyto = 0;%
 
 import_wamsiwaves = 0;
 
 
 
-create_smd = 0;
+create_smd = 1;
 
-create_single_matfiles = 0;
+create_single_matfiles = 1;
 create_matfiles = 0;
 create_parquet = 0;
 
@@ -101,7 +101,7 @@ if import_dwer_cs_phy
     import_CSPHY_SPECIES
     import_CSPHY_GROUP_STAGING
     import_CSPHY_GROUP
-    cd ../../actions/
+    cd ../../../actions/
 end
 
 
@@ -470,7 +470,7 @@ end
 
 if create_single_matfiles
     disp('PipeLine Matfiles')
-    csv_2_matfile_tfv_by_agency_single('wamsi');
+    csv_2_matfile_tfv_by_agency_single('csiro');
 end
 
 if create_matfiles
