@@ -1,30 +1,34 @@
 # CSIEM environmental data management repository
 
+The goal of the CSIEM environmental data management system, as presented herein, is to allow compatibility, and inter-operability, between crticial data assets, needed for the operation of the comprehensive integrated modelling platform.
 
+A total of 165Gb of environmental data has been compiled for use in environmental assessment of Cockburn Sound.
 
-The goal of the CSIEM environmental data management system, as presented herein, is to allow compatibility, inter-operability and between crticial data assets, and version control as is required for the development of a comprehensive and integrated modelling platform.
+The goal of the CSIEM environmental data management repository, as presented herein, is to allow compatibility, inter-operability and comparison of these critical data assets. Version control and data governance is required to ensure a comprehensive and integrated modelling platform. 
 
-The framework can be viewed as three separate systems:
+<br>
 
-- Data Collation
-- Data Governance & Reporting
-- Data Integration
+## Structure of the data repository
 
-The relationship between the various data providers, the CSIEM environmental data framework, and downstream model applications are outlined schematically below.
-
-
-![CSIEM Environmental Information Management](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/Information_Management.png "CSIEM Environmental Information Management")
-
-
-## Data Collation
-
-The aim of the data collation step is to bring data together in a co-ordinated way. Data that is sourced and collated from various government agencies, researchers and industry groups is stored in a “data lake” in their raw format. Each data provider is assigned a unique agency identifier, and datasets are also grouped based on the main programs or iniatives the collection was associated with. Raw data is stored in a rigid folder structure based on these two identifiers :
+This data repository is based around the following structure:
 
 ```
-Agency/Program/ < ... data-sets ...>
+csiem-data/
+171M    ./code
+18M     ./data-governance
+31M     ./data-mapping
+165M    ./summary-images
+98G     ./data-lake          ! Raw data not included in this GitHub repository : see access for further information. 
+65G     ./data-warehouse.    ! Ingested (standardised) data not included in this repository : see access for further information. 
+TOTAL = 165G	
 ```
 
-![CSIEM Data Collation](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/data_collation.png "CSIEM Data Collation")
+<br>
 
+## Further information
 
-For more information, see the [The Cockburn Sound Integrated Ecosystem Model Manual](https://aquaticecodynamics.github.io/csiem-science/index.html)
+Examples of the compiled data-set can be seen in the [summary-images](https://github.com/SEAF-CS/csiem-data/blob/main/summary-images/2013_2024/SAL/0002_CS_KSMid.png) folder.
+
+For further information on access, and the controlled vocabularies used in the data-set, please refer to the [Wiki](https://github.com/SEAF-CS/csiem-data/wiki) pages.
+
+For an overaching summary of the data ecosystem, please see the [The Cockburn Sound Integrated Ecosystem Model Manual](https://aquaticecodynamics.github.io/csiem-science/index.html)
