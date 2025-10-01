@@ -49,14 +49,14 @@ import_wamsiwaves = 0;
 
 
 
-create_smd = 1;
+create_smd = 0;
 
-create_single_matfiles = 1;
+create_single_matfiles = 0;
 create_matfiles = 0;
 create_parquet = 0;
 
-create_dataplots = 0;
-plotnew_dataplots = 0;
+create_dataplots = 1;
+plotnew_dataplots = 1;
 
 create_shapefiles = 0;
 
