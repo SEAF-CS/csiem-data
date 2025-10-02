@@ -79,3 +79,8 @@
 | WCWA     | PSDP                | PSDP outfall monitoring (*)                         | PHYSCHEM, NUTRIENT | Y                                |*                       | 2025-02-21                     |
 | WCWA     | SDOOL               | Sepia Depression monitoring                         | PHYSCHEM, NUTRIENT | N                                |                       |                      |
 | WCWA     | WC-BMT              | Oxygen data from BMT report (*)                     | PHYSCHEM           | Y                                |*                       | *                     |
+
+#Steps to Add a New Resource
+
+- Go to /csiem-data/data-governance/
+- Modified variable_key: add the new variable to its corresponding agency sheet adding 
