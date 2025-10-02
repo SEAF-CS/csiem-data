@@ -37,7 +37,7 @@
 | FPA      | TIDE                | Tidal stations                                      | HYDRO              | N                                |                       |                      |
 | GA       | SKENE               | Skene et al sediment survey                         | SEDIMENT           | N                                |                       |                      |
 | IMOS     | AMNM                | Rottnest IMOS mooring data                          | HYDRO              | m                                | import/IMOS /import_imos_amnm_adcp.m         | 2025-01-30                    |
-|          |                     |                                                     | PHYSCHEM           | m                                | import/IMOS/(import_imos_profile_2_csv.m,import_imos_profile_2_2010_csv.m)  | 2025-01-30                     |
+|          |                     |                                                     | PHYSCHEM           | m                                | import/IMOS/  | 2025-01-30                     |
 | IMOS     | REF                 | Rottnest IMOS bgc / plankton data                   | NUTRIENT           | m                                | import/IMOS/import_imos_bgc_2_csv.m          |  2025-02-21                  |
 |          |                     |                                                     | PLANKTON           | m                                | import/IMOS/IMOSPHYTO/  | 2025-02-22              |
 | IMOS     | SOOP                | Ships of Opportunity (ferries and RV)               | PHYSCHEM           | py                               | import_py/IMOS/importIMOSSOOP.py            |  2025-02-21                  |
