@@ -4,7 +4,7 @@
 |:---------|:--------------------|:----------------------------------------------------|:-------------------|:-------------------------|:----------------------|:---------------------|
 | AIMS     | TEMP                | Temperature Logger Program                          | PHYSCHEM           | m                                | import/AIMS/TEMP/import_AIMS_TEMP.m                      |  2024-07-09                    |
 | BMT      | BNA                 | Breakwater model output                             | HYDRO              | N                                |                       |                      |
-| BMT      | SWAN                | SWAN model export                                   | HYDRO              | Y                                |                       |                      |
+| BMT      | SWAN                | SWAN model export                                   | HYDRO              | Y                                | import/BMT/WP/import_BMT_WP_SWAN                   | 2025-02-22                    |
 | BOM      | BARRA               | Gridded reanalysis export                           | MET                | Y              |                       |                      |
 | BOM      | IDO                 | Hillary’s tide station                              | HYDRO              | N                                |                       |                      |
 | BOM      | IDY                 | Weather stations                                    | MET                | Y                                |                       |                      |
