@@ -82,11 +82,23 @@
 
 # Steps to Add a New Resource
 
-- Go to */csiem-data/data-governance/*
-- Modified *variable_key*:
-    - Add the new variable to *MASTER KEY* in case that the variable do not exist with they respective units and symbols.
-    - Add the new variable in its respective agency sheet with its current Header an units, a conversion value is needed in case the values from the dataset differs form the standard variable unit that was stipulated in the *MASTER KEY*
-    - Update the new variable to *Model_TFV*, a conversion value is needed in case the Units of *MASTER KEY* are different with the TFV units
-- Modified *site_key* if the data collection site hasn't been add before:
-    - select the respective agency sheet  and add the location with its respective Lat and Long
-- Go to /csiem-data/data-governance/
+- Go to **/csiem-data/data-governance/**  
+- Modify **variable_key**:
+  - Add the new variable to **MASTER KEY** if it does not already exist, including its respective units and symbols.  
+  - Add the new variable to the corresponding agency sheet with its current header and units.  
+    - If the dataset units differ from the standard defined in the *MASTER KEY*, provide a conversion value.  
+  - Update the new variable in **Model_TFV**.  
+    - If the **MASTER KEY** units differ from the TFV units, provide a conversion value.  
+- Modify **site_key** if the data collection site has not been added before:  
+  - Select the corresponding agency sheet and add the location with its latitude and longitude.  
+- Go to **/csiem-data/code/actions** and run **import_site_key.m** and **import_var_key_info.m** to update **sitekey.mat** and **varkey.mat**.  
+- Create a Python script to import the data and save it in **/csiem-data/code/import_py/** under the respective agency folder.  
+- Modify **/csiem-data/code/actions_py/execute_import_py_pipeline.py** to link the new Python script to the pipeline (see the folder’s `Readme.md` for more details).  
+- If the process is successful, a new set of standardized CSV files will be created in **/csiem-data/data-warehouse/csv/**.  
+- To generate images of the imported data, go to **/csiem-data/code/actions/execute_import_pipeline.m** and set:  
+  - `create_dataplots = 1`  
+  - `plotnew_dataplots = 1`  
+- To update the new CSVs into the agency `.mat` files, go to **/csiem-data/code/actions/execute_import_pipeline.m** and set:  
+  - `create_smd = 1`  
+  - `run_agency_marvl = 1` (if only one `.mat` file needs updating)  
+  - `run_marvl = 1` (if all `.mat` files need updating). This will convert the CSVs in **/csiem-data/data-warehouse/csv/** into `.mat` files saved in **/csiem-data/data-warehouse/mat/**.
