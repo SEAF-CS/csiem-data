@@ -80,7 +80,13 @@
 | WCWA     | SDOOL               | Sepia Depression monitoring                         | PHYSCHEM, NUTRIENT | N                                |                       |                      |
 | WCWA     | WC-BMT              | Oxygen data from BMT report (*)                     | PHYSCHEM           | Y                                |*                       | *                     |
 
-#Steps to Add a New Resource
+# Steps to Add a New Resource
 
+- Go to */csiem-data/data-governance/*
+- Modified *variable_key*:
+    - Add the new variable to *MASTER KEY* in case that the variable do not exist with they respective units and symbols.
+    - Add the new variable in its respective agency sheet with its current Header an units, a conversion value is needed in case the values from the dataset differs form the standard variable unit that was stipulated in the *MASTER KEY*
+    - Update the new variable to *Model_TFV*, a conversion value is needed in case the Units of *MASTER KEY* are different with the TFV units
+- Modified *site_key* if the data collection site hasn't been add before:
+    - select the respective agency sheet  and add the location with its respective Lat and Long
 - Go to /csiem-data/data-governance/
-- Modified variable_key: add the new variable to its corresponding agency sheet adding 
