@@ -1,10 +1,8 @@
 # CSIEM environmental data management repository
 
-The goal of the CSIEM environmental data management system, as presented herein, is to allow compatibility, and inter-operability, between crticial data assets, needed for the operation of the comprehensive integrated modelling platform.
+The goal of the CSIEM environmental data management repository, as presented herein, is to allow compatibility, inter-operability and comparison of these critical data assets. Version control and data governance is required to ensure a comprehensive and integrated modelling platform. 
 
 A total of 165Gb of environmental data has been compiled for use in environmental assessment of Cockburn Sound.
-
-The goal of the CSIEM environmental data management repository, as presented herein, is to allow compatibility, inter-operability and comparison of these critical data assets. Version control and data governance is required to ensure a comprehensive and integrated modelling platform. 
 
 <br>
 
