@@ -33,7 +33,7 @@ fid = fopen(headerfile,'wt');
             %%
 
             fprintf(fid,'Bad or Unavailable Data Value,NaN\n');
-            fprintf(fid,'Contact Email,%s\n','Lachy Gill <00114282@uwa.edu.au> 27/11/2024');
+            fprintf(fid,'Contact Email,%s\n','Santiago Gil <00114911@uwa.edu.au> 06/10/2025');
 
             %%
             fprintf(fid,'Variable ID,%s\n',varID);

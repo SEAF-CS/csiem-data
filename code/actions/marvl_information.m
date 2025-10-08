@@ -1,13 +1,12 @@
 csiem_data_paths
-master.fielddata_files = {'csiem_DEP_public',};
+master.fielddata_files = {'csiem_WAMSI_public',};
 
 master.varname = {...
-'Light_Attenuation_Coefficient_6m','Light Attenuation Coefficient (6m)';...
-'WQ_DIAG_TOT_EXTC','Light Attenuation Coefficient';...
+'WQ_DIAG_TOT_TURBIDITY','Turbidity';...
 };
 
 timeseries.start_plot_ID = 1;
-timeseries.end_plot_ID = 2;
-timeseries.polygon_file = [datapath,'marvl/gis/DWER_zone2.shp'];
-timeseries.outputdirectory = [datapath,'/marvl-images/fast/'];
-timeseries.htmloutput = [datapath,'/marvl-images/fast/HTML/'];
+timeseries.end_plot_ID = 1;
+timeseries.polygon_file = [marvldatapath,'/gis/Zones/MLAU_Zones_v3_ll.shp'];
+timeseries.outputdirectory = [marvldatapath,'/outputs/fast/'];
+timeseries.htmloutput = [marvldatapath,'/outputs/fast/HTML/'];

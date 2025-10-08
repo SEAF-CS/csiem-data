@@ -20,7 +20,7 @@ import_dpird = 0;
 import_moorings = 0;%
 import_wamsitheme1 = 0;
 import_theme2 = 0;
-import_theme3 = 0;
+import_theme3 = 1;
 import_wamsitheme4 = 0;
 import_theme5 = 0;
 import_wc = 0;
@@ -51,12 +51,12 @@ import_wamsiwaves = 0;
 
 create_smd = 0;
 
-create_single_matfiles = 0;
+create_single_matfiles = 1;
 create_matfiles = 0;
 create_parquet = 0;
 
-create_dataplots = 1;
-plotnew_dataplots = 1;
+create_dataplots = 0;
+plotnew_dataplots = 0;
 
 create_shapefiles = 0;
 
@@ -213,24 +213,24 @@ end
 if import_theme3
     % wamsi_theme3
     disp('PipeLine Importing: WWMSP3')
-    cd ../import/wamsi_theme3/CTD
-    reformat_ctd;
-    import_theme3ctd_data;
+    %cd ../import/wamsi_theme3/CTD
+    %reformat_ctd;
+    %import_theme3ctd_data;
     
-    cd ../../../actions/
+    %cd ../../../actions/
 
     %Sediment
-    cd ../import/wamsi_theme3/SEDPSD
-    run ImportSEDPSDMain
-    cd ../../actions
+    %cd ../import/wamsi_theme3/SEDPSD
+    %run ImportSEDPSDMain
+    %cd ../../actions
 
-    cd ../import/wamsi_theme3/SGREST
-    run ImportSGRESTMain
-    cd ../../actions
+    %cd ../import/wamsi_theme3/SGREST
+    %run ImportSGRESTMain
+    %cd ../../actions
 
     cd ../import/wamsi_theme3/SEDDEPO
     run IMPORTSEDDEPO
-    cd ../../actions
+    cd ../../../actions
 
     
 end
@@ -470,7 +470,7 @@ end
 
 if create_single_matfiles
     disp('PipeLine Matfiles')
-    csv_2_matfile_tfv_by_agency_single('csiro');
+    csv_2_matfile_tfv_by_agency_single('wamsi');
 end
 
 if create_matfiles

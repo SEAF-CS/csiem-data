@@ -92,6 +92,26 @@ master.ncfile(1).tag = 'TFV';
 master.add_fielddata = 1;
 run('csiem_data_paths.m')
 master.fielddata_folder = [datapath,'data-warehouse/mat/agency/'];
+if master.add_fielddata
+    if isfield(master,'fielddata_matfile') && ~isempty(master.fielddata_matfile)
+        % nothing to do
+    elseif isfield(master,'fielddata_files') && ~isempty(master.fielddata_files)
+        if iscell(master.fielddata_files)
+            files = master.fielddata_files(~cellfun(@isempty, master.fielddata_files));
+        else
+            files = {master.fielddata_files};
+        end
+        if ~isempty(files)
+            if numel(files) > 1
+                warning('MARVL:FielddataFiles','Multiple fielddata files provided; using the first entry: %s', files{1});
+            end
+            master.fielddata_matfile = [master.fielddata_folder, files{1}, '.mat'];
+        end
+    end
+    if ~isfield(master,'fielddata_matfile') || isempty(master.fielddata_matfile)
+        error('MARVL:FielddataMissing', 'Field data is enabled but no fielddata_matfile could be resolved.');
+    end
+end
 
 % Build this dynamically...
 %master.fielddata_files = {'csiem_IMOS_public','csiem_DWER_public','csiem_DPIRD_public','csiem_CSMC_public','csiem_WCWA_public','csiem_WAMSI_public','csiem_DOT_public','csiem_FPA_public'};

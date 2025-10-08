@@ -498,8 +498,8 @@ if run_agency_marvl
     for mv = [-1]
         addpath(genpath(marvldatapath));
         %selected_vars ={'SAL','TEMP','WQ_DIAG_PHY_TCHLA','WQ_OXY_OXY','WQ_DIAG_TOT_TURBIDITY'};
-        selected_vars ={'WQ_DIAG_TOT_EXTC','Light_Attenuation_Coefficient_6m'};
-        create_marvl_config_information_agency(mv,{'csiem_DEP_public'},selected_vars);
+        selected_vars ={'WQ_DIAG_TOT_TURBIDITY'};
+        create_marvl_config_information_agency(mv,{'csiem_WAMSI_public'},selected_vars);
         run_AEDmarvl marvl_pipeline_images;
         rmpath(genpath(marvldatapath));
 

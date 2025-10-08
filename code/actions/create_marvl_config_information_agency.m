@@ -127,9 +127,9 @@ switch marvl_id
         fprintf(fid,"timeseries.outputdirectory = [datapath,'marvl-images/all/'];\n");
 
     case -1
-        fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/DWER_zone2.shp'];\n");%[datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n"
-        fprintf(fid,"timeseries.outputdirectory = [datapath,'/marvl-images/fast/'];\n"); 
-        fprintf(fid,"timeseries.htmloutput = [datapath,'/marvl-images/fast/HTML/'];\n"); 
+        fprintf(fid,"timeseries.polygon_file = [marvldatapath,'/gis/Zones/MLAU_Zones_v3_ll.shp'];\n");%[datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n"
+        fprintf(fid,"timeseries.outputdirectory = [marvldatapath,'/outputs/fast/'];\n"); 
+        fprintf(fid,"timeseries.htmloutput = [marvldatapath,'/outputs/fast/HTML/'];\n"); 
        
     otherwise
         fprintf(fid,"timeseries.polygon_file = [datapath,'marvl/gis/MLAU_Zones_v3_ll.shp'];\n");

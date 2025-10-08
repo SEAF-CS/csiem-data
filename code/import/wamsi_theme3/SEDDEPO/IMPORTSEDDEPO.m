@@ -1,7 +1,7 @@
 function IMPORTSEDDEPO()
     load ../../../actions/varkey.mat;
     load ../../../actions/agency.mat;
-     load ../../../actions/sitekey.mat;
+    load ../../../actions/sitekey.mat;
 
     VarListStruct = agency.wwmsp3;
     SiteListStruct = sitekey.WWMSP31SedimentDeposition;
@@ -12,44 +12,39 @@ function IMPORTSEDDEPO()
 
 
     
-    dataDir = [datapath,'data-lake/WAMSI/WWMSP3/WWMSP3.1_SedimentDeposition/Sediment Deposition Logger Data/'];
+    dataDir = [datapath,'data-lake/WAMSI/WWMSP3/Project 3.1/Data Reformatted by Data Team/Processed data - reformatting complete/Sediment Deposition Logger Data/'];
+    % data path was updated on 2024-06-10
     % The data is structured into folders of sites: so I want to iterate through each site folder,
     %  but theres a readme, so dont want to iterate over that.
-    FolderStructure = dir(dataDir);
-    for folderIndex = 3:length(FolderStructure)
-        % starts at 3 to skip ./ and ../
-        site = FolderStructure(folderIndex);
-        if site.isdir == 0
-            % Skipping readme
-            continue
-        end
-        sitefolder = fullfile(dataDir,site.name);
+    filelist = dir(fullfile(dataDir,'*.csv'));
+    for fileIndex = 1:length(filelist)
+       datafilename = fullfile(dataDir,filelist(fileIndex).name);
+       disp(['Processing file: ',filelist(fileIndex).name])
 
-        disp(['Site ' site.name]);
-    
-        AEDID = ['site',site.name];
+        parts = split(filelist(fileIndex).name,'_');
+        sitename = parts{2};
 
+        AEDID = ['site',sitename];
 
         SiteStruct = SearchSitelistbyAEDID(SiteListStruct,AEDID);
+        if isempty(SiteStruct)
+            continue
+        end
 
-        fileCell = {dir(sitefolder).name}';
-        fileCell = fileCell(3:end); %skips ./ and ../
+        warning('off','MATLAB:table:ModifiedAndSavedVarnames')
+        DataFilesTable = readtable(datafilename,"TreatAsMissing","NA");
+        warning('on','MATLAB:table:ModifiedAndSavedVarnames')
+        Vars = DataFilesTable.Properties.VariableDescriptions';
 
-        for i = 1:length(fileCell);
-            display(['   ',fileCell{i}])
-
-            datafilename = fullfile(sitefolder,fileCell{i});
-            warning('off','MATLAB:table:ModifiedAndSavedVarnames')
-            DataFilesTable = readtable(datafilename,"TreatAsMissing","NA");
-            warning('on','MATLAB:table:ModifiedAndSavedVarnames')
-            Vars = DataFilesTable.Properties.VariableDescriptions';
-    
-            % First elemetn is Date;
-            DateVec = DataFilesTable{:,1};
-            DepthVec = DataFilesTable{:,7};
-            % Desired format : "yyyy-mm-dd HH:MM:SS"
-            % Who it is read in "13/12/2022 11:40"
-            DateString = regexprep(string(DateVec),'/','-');
+        DateVec = DataFilesTable{:,3};
+        DepthVec = DataFilesTable{:,9};
+        try
+            DateDT = datetime(DateVec,'InputFormat','MM-dd-yyyy HH:mm:ss');
+        catch
+            DateDT = datetime(DateVec,'InputFormat','MM-dd-yyyy HH:mm');
+        end
+        DateDT.Format = 'yyyy-MM-dd HH:mm:ss';
+        DateString = cellstr(DateDT);
             
             % Skipping Date col
             for varIndex = 2:length(Vars)
@@ -59,6 +54,10 @@ function IMPORTSEDDEPO()
     
                 %workout what variable we are dealing with
                 AgencyStruct = SearchVarlist(VarListStruct,Vars,varIndex);
+
+                    if isempty(AgencyStruct)
+                          continue
+                 end
     
                 if strcmp(AgencyStruct.ID,'var00')
                     disp(['         ',Vars{varIndex}, 'is being skipped']);
@@ -83,7 +82,7 @@ function IMPORTSEDDEPO()
                     end
     
                     QC = 'N';
-                    fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString(nn),DepthVec(nn),DataVec(nn),QC);
+                    fprintf(fid,'%s,%4.4f,%4.4f,%s\n',DateString{nn},DepthVec(nn),DataVec(nn),QC);
                 end
                 fclose(fid);
     
@@ -111,8 +110,6 @@ function IMPORTSEDDEPO()
 
 
 
-end
-
 function VarStruct = SearchVarlist(VarListStruct,FileHeaders,varIndex)
     neverFound = true;
     VarlistFeilds = fields(VarListStruct);
@@ -131,12 +128,9 @@ function VarStruct = SearchVarlist(VarListStruct,FileHeaders,varIndex)
 
     end
     if neverFound == true
-        disp(FileHeaders{varIndex})
-        for StructVarIndex = 1:NumOfVariables
-            disp(VarListStruct.(VarlistFeilds{StructVarIndex}).Old)
-        end
-        stop
-        %not a keyword, intentially stop the code because issue has happend
+        disp([FileHeaders{varIndex}, ' not found in var-key; skipping column']);
+        VarStruct = [];
+        return
     end
 
 end
@@ -156,14 +150,9 @@ function SiteStruct = SearchSitelistbyAEDID(SiteListStruct,AEDID)
 
     end
     if neverFound == true
-        disp('DataFile site:');
-        disp(AEDID)
-        disp('Sitekey list:');
-        for StructSiteIndex = 1:NumOfVariables
-            disp(SiteListStruct.(SitelistFeilds{StructSiteIndex}).AED);                 
-        end
-        stop
-        %not a keyword, intentially stop the code because issue has happend
+        warning('Site %s not found in site-key; file will be skipped.', AEDID);
+        SiteStruct = [];
+        return
     end
 end
 
@@ -176,4 +165,8 @@ function [data,header] = filenamecreator(outpath,SiteStruct,VarStruct)
     header = [base,'_HEADER.csv'];
 
 end
+
+
+
+
 
