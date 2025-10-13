@@ -49,7 +49,7 @@ import_wamsiwaves = 0;
 
 
 
-create_smd = 0;
+create_smd = 1;
 
 create_single_matfiles = 1;
 create_matfiles = 0;

@@ -1,5 +1,5 @@
-datapath = '/CSIEM_DATA/csiem-data/';
-marvldatapath = '/CSIEM_DATA/csiem-marvl';
+datapath = 'G:\CSIEM\1.6.0\csiem-data';
+marvldatapath = 'G:\CSIEM\1.6.0\csiem-marvl';
 %datapath = 'X:/csiem-data-dev/';
 %marvldatapath = 'X:/csiem-data-dev/marvl';
 

@@ -12,11 +12,13 @@ function IMPORTSEDDEPO()
 
 
     
-    dataDir = [datapath,'data-lake/WAMSI/WWMSP3/Project 3.1/Data Reformatted by Data Team/Processed data - reformatting complete/Sediment Deposition Logger Data/'];
+    dataDir = [datapath,'data-lake/WAMSI/WWMSP3/WWMSP3.1_SEDDEPO/Sediment Deposition Logger Data/'];
     % data path was updated on 2024-06-10
-    % The data is structured into folders of sites: so I want to iterate through each site folder,
-    %  but theres a readme, so dont want to iterate over that.
+   
+
     filelist = dir(fullfile(dataDir,'*.csv'));
+    #Filter to not use the data that has ._ in the front of the file name, these are macOS temp files
+    filelist = filelist(arrayfun(@(x) ~startsWith(x.name, '._'), filelist)); # keep only files that do not start with '._'  
     for fileIndex = 1:length(filelist)
        datafilename = fullfile(dataDir,filelist(fileIndex).name);
        disp(['Processing file: ',filelist(fileIndex).name])
