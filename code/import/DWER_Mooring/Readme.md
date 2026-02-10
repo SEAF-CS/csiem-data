@@ -56,5 +56,3 @@ Multiple files stored in the data lake with the same format but different variab
   - Negative values were remove.
   - QC thresholds set from the empirical distribution (e.g., central 98% of values); values outside 7.8 - 8.5 were removed.
   - Modified CSV files:dwermooring6147030_pH_DATA,dwermooring6147031_pH_DATA,dwermooring6147034_pH_DATA,dwermooring6147035_pH_DATA
-### Turbidity:
-  - Values outside 0 - 20 NTU were removed.
