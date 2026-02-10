@@ -2,7 +2,7 @@
     addpath(genpath('../../functions/'));
     run('../../actions/csiem_data_paths.m')
 
-    filepath = [datapath,'data-lake/DWER/CSMOORING/csmooring/Cockburn Sound Mooring data/Cockburn Sound Buoy Data/'];
+    filepath = [datapath,'data-lake\DWER\CSMOORING\A-20230731\csmooring\Cockburn Sound Mooring data\Cockburn Sound Buoy Data'];
 
     filelist = dir(fullfile(filepath, '**/*.csv'));  %get list of files and folders in any subfolder
     %                                    / instead of \
@@ -16,7 +16,7 @@
     sitelist = fieldnames(sitekey.dwermooring);
     varlist = fieldnames(agency.dwer);
 
-    outpath = [datapath,'data-warehouse/csv/dwer/csmooring/']; mkdir(outpath);
+    outpath = [datapath,'data-warehouse/csv/dwer/csmooring/A/']; mkdir(outpath);
 
     for i = 1:length(filelist)
 
@@ -30,7 +30,7 @@
             end
         end
         if foundsite == 0
-            stop;
+            error('Site not found in sitekey: %s', st{1});
         end
 
 
@@ -137,6 +137,15 @@
         for j = 2:2:sss-2
             thevar = headers{j};
             thevar = regexprep(thevar,char(65533),'');
+            thevar = strrep(thevar, char(181), 'u'); % normalize micro symbol
+            thevar = strrep(thevar, 'uW', 'W'); % match varkey units
+            thevar = strrep(thevar, char(178), '2'); % normalize superscript 2
+            thevar = strrep(thevar, 'm^2', 'm2'); % normalize area units
+            thevar = strrep(thevar, 'umol', 'mol'); % normalize PAR units
+            thevar = strrep(thevar, 'uS', 's'); % normalize conductivity units
+            thevar = strrep(thevar, 'us', 's'); % normalize conductivity units
+            thevar = strrep(thevar, char(176), ''); % strip degree symbol
+            thevar = strrep(thevar, 'PAR (', 'PAR('); % match varkey spacing
             disp(['Var found: ', thevar]);
             
             %thedata = tab.(['Var',num2str(j)])(5:end);
@@ -162,16 +171,7 @@
                 end
             end
             if foundvar == 0;
-                format compact
-                thevar
-                thevarUnicode = double(thevar)
-                for k = 1:length(varlist)
-                    agency.dwer.(varlist{k}).Old
-                    double(agency.dwer.(varlist{k}).Old)
-                end
-
-
-                stop; 
+                error('Variable not found in varkey: %s', thevar);
             end
 
             varID = agency.dwer.(varlist{foundvar}).ID;
@@ -211,7 +211,7 @@
 
             filevar = regexprep(varkey.(varID).Name,' ','_');
 
-            filename = [outpath,sitekey.dwermooring.(sitelist{foundsite}).AED,'_',filevar,'_DATA.csv'];
+            filename = [outpath,sitekey.dwermooring.(sitelist{foundsite}).AED,'_',filevar,'_WQA_DATA.csv'];
             
             if i == 8
                 filename = regexprep(filename,'_DATA.csv','_Bottom_DATA.csv');
@@ -238,7 +238,7 @@
             fprintf(fid,'Agency Code,DWER\n');
             fprintf(fid,'Program,CSMOORING\n');
             fprintf(fid,'Project,csmooring\n');
-            fprintf(fid,'Tag,DWER-CS-MOORING\n');
+            fprintf(fid,'Tag,DWER-CSMOORING-WQA\n');
             fprintf(fid,'Data File Name,%s\n',replace(filename,outpath,''));
             fprintf(fid,'Location,%s\n',outpath);
 

@@ -13,6 +13,8 @@ fid2 = fopen("missed-images.log","wt");
 filelist = filelist(~[filelist.isdir]);  %remove folders from list
 
 for i = 1:length(filelist)
+    filename = '';
+    savename = '';
     try
         filename = [filelist(i).folder,'/',filelist(i).name];
         %    filename = [filelist(i).folder,'\',filelist(i).name];
@@ -40,8 +42,15 @@ for i = 1:length(filelist)
         else
             plot_datafile_all(filename,savename);
         end
-    catch
-     fprintf(fid2,"%s\n",savename);
+    catch err
+        if ~isempty(savename)
+            fprintf(fid2,"%s\n",savename);
+        elseif ~isempty(filename)
+            fprintf(fid2,"%s\n",filename);
+        else
+            fprintf(fid2,"index_%d\n",i);
+        end
+        fprintf(fid2,"Error: %s\n",err.message);
     end
 end
 fclose(fid2);

@@ -1,12 +1,12 @@
 # csiem-data import pipelines
 
-| Agency   | Program / Dataset   | Description                                         | Category           | Ingestion pipeline               | Path to import code   | Date last ingested   |
-|:---------|:--------------------|:----------------------------------------------------|:-------------------|:-------------------------|:----------------------|:---------------------|
-| AIMS     | TEMP                | Temperature Logger Program                          | PHYSCHEM           | m                                | import/AIMS/TEMP/import_AIMS_TEMP.m          |  2024-07-09                    |
-| BMT      | BNA                 | Breakwater model output                             | HYDRO              | N                                |                       |                      |
-| BMT      | SWAN                | SWAN model export                                   | HYDRO              | m                                | import/BMT/WP/import_BMT_WP_SWAN.m           | 2025-02-22                    |
-| BOM      | BARRA               | Gridded reanalysis export                           | MET                | m                                | import/BOM/import_BOM_BARRA_TFV.m            | 2025-02-25                       |
-| BOM      | IDO                 | Hillary’s tide station                              | HYDRO              | N                                |                       |                      |
+| Agency   | Program / Dataset   | Description                                         | Category           | Ingestion pipeline | Path to import code                 | Date last ingested|
+|:---------|:--------------------|:----------------------------------------------------|:-------------------|:--------------------|:-----------------------------------|:---------------------|
+| AIMS     | TEMP                | Temperature Logger Program                          | PHYSCHEM           | m                   | import/AIMS/TEMP/import_AIMS_TEMP.m | 2024-07-09                    |
+| BMT      | BNA                 | Breakwater model output                             | HYDRO              | N                   |                       |                      |
+| BMT      | SWAN                | SWAN model export                                   | HYDRO              | m                   | import/BMT/WP/import_BMT_WP_SWAN.m           | 2025-02-22                    |
+| BOM      | BARRA               | Gridded reanalysis export                           | MET                | m                   | import/BOM/import_BOM_BARRA_TFV.m            | 2025-02-25                       |
+| BOM      | IDO                 | Hillary�s tide station                             | HYDRO             | py                   | import_py/BOM/importBOMIDO.py               | 
 | BOM      | IDY                 | Weather stations                                    | MET                | m                                | import/BOM/export_metdata_2_csv.m            | 2025-02-21                     |
 | BOM      | NGIS                | Groundwater data                                    | HYDRO              | N                                |                       |                      |
 | BOM      | RAIN                | Rainfall stations                                   | MET                | N                                |                       |                      |
@@ -22,9 +22,12 @@
 | DOT      | WAVE                | DOT wave buoys                                      | HYDRO              | N                                |                       |                      |
 | DPIRD    | CRP                 | Crab Research Program                               | PHYSCHEM           | m                                | import/DPIRD/import_dpird_crp_data.m         | 2025-02-21                |
 | DWER     | BORE                | Groundwater monitoring                              | HYDRO              | N                                |                       |                      |
-| DWER     | CSMC-phy            | Phytoplankton taxonomy                              | PLANKTON           | m                                | import/DWER/CSPHY/              | 2025-03-13                      |
-| DWER     | CSMC-wq             | CSMC data via WIR                                   | PHYSCHEM, NUTRIENT | Y                                |*                       | 2025-05-04                     |
-| DWER     | CSMOORING           | WQ mooring deployments, incl spectral light         | LIGHT              | m                                |import/DWER_Mooring/import_csmooring.m        | 2025-07-03                     |
+| DWER     | CSMC-phy            | Phytoplankton taxonomy                              | PLANKTON           | m                                | import/DWER/CSPHY/              | 2025-03-13                       |
+| DWER     | CSMC-wq             | CSMC data via WIR                                   | PHYSCHEM, NUTRIENT | Y                                |*                       | 2025-05-04                       |
+| DWER     | CSMOORING-WQA       | WQ mooring deployments, incl spectral light         | LIGHT              | m                                |import/DWER_Mooring/import_csmooring.m   | 2025-07-03                     |
+| DWER     | CSMOORING-WQB       | WQB mooring deployments                              | PHYSCHEM, NUTRIENT | py                               |import_py/DWER/importDWER_CSMooring_WQB.py      |                      |
+| DWER     | CSMOORING-WQC       | WQC mooring deployment, incl Turbidity              | LIGHT              | py                               |import_py/DWER/importDWER_CSMooring_WQC.py | 2026-02-03 |
+| DWER     | CSMOORING_MS9D      | MS9D mooring deployments, incl Light Attenuation Coefficient| LIGHT        | py                                |import_py/DWER/importDWER_CSMooring_MS9D.py| 2026-02-04 |
 | DWER     | SCE-phy             | Phytoplankton taxonomy                              | PLANKTON           | N                                |                       |                      |
 | DWER     | SCE-est             | Estuary monitoring                                  | PHYSCHEM, NUTRIENT | Y                                |*                      |*                     |
 | ESA      | GC-Optics           | GlobColor ocean color satellite exports             | LIGHT              | py                               | import_py/ESA/importESAGLOBCOLOR.py          | 2025-02-21                     |
