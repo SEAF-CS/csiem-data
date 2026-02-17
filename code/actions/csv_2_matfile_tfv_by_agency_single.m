@@ -8,13 +8,13 @@ function csv_2_matfile_tfv_by_agency(agency_code)
     %             'D:/csiem/data-warehouse/mat/agency/';mkdir(outfilepath);
     filepath = [datapath,'data-warehouse/csv/',agency_code,'/'];
     %          'D:/csiem/data-warehouse/csv/';
-    mergepath = [datapath,'data-warehouse/mat/'];
-    %           'D:/csiem/data-warehouse/mat/';
-
     filelist = dir(fullfile(filepath, '**/*HEADER.csv'));  %get list of files and folders in any subfolder
     %filelist = dir(fullfile(filepath, '**\*HEADER.csv'));  %get list of files and folders in any subfolder
 
     filelist = filelist(~[filelist.isdir]);  %remove folders from list
+    % Feb 15, 2026: minimal guard so final merge/save does not fail when
+    % no agency matfiles were produced in this run.
+    csiem = struct;
 
     agency = [];
                 
@@ -251,23 +251,6 @@ function csv_2_matfile_tfv_by_agency(agency_code)
         clear csiem
     end
 
-    filelist = dir(fullfile(outfilepath, '**/*.mat'));  %get list of files and folders in any subfolder
-    %filelist = dir(fullfile(outfilepath, '**\*.mat'));  %get list of files and folders in any subfolder
-
-    filelist = filelist(~[filelist.isdir]);  %remove folders from list
-
-
-
-    for i = 1:length(filelist)
-        disp(filelist(i).name);
-        matdata = load([filelist(i).folder,'/',filelist(i).name]);
-        sites = fieldnames(matdata.csiem);
-        for j = 1:length(sites)
-            csiem.(sites{j}) = matdata.csiem.(sites{j});
-        end
-        
-        clear matdata;
-    end
-
-    save([mergepath,'csiem.mat'],'csiem','-mat','-v7.3');
 end
+
+

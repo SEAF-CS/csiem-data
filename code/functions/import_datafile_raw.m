@@ -18,32 +18,38 @@ textformat = [repmat('%s ',1,x)];
 datacell = textscan(fid,textformat,'Headerlines',1,'Delimiter',',');
 fclose(fid);
 
-% Detect whether the timestamp is stored as yyyy-mm-dd or dd-mm-yyyy (some datasets swap day and year)
+% Feb 15, 2026: tolerate date strings with or without seconds and with
+% single-digit day/month/hour/minute across '-', '/', and '.' delimiters.
 dateStrings = datacell{1};
 if ischar(dateStrings)
     dateStrings = cellstr(dateStrings);
 end
-sampleIdx = find(~cellfun(@isempty,dateStrings),1);
-dateFormat = 'yyyy-mm-dd HH:MM:SS';
-if ~isempty(sampleIdx)
-    sample = dateStrings{sampleIdx};
-    delim = '-';
-    if contains(sample,'/')
-        delim = '/';
-    elseif contains(sample,'.')
-        delim = '.';
-    end
-    if ~isempty(regexp(sample,['^\d{4}',delim],'once'))
-        dateFormat = ['yyyy',delim,'mm',delim,'dd HH:MM:SS'];
-    elseif ~isempty(regexp(sample,['^\d{2}',delim,'\d{2}',delim,'\d{4}'],'once'))
-        dateFormat = ['dd',delim,'mm',delim,'yyyy HH:MM:SS'];
+dateStrings = strtrim(dateStrings);
+
+% Add missing seconds when timestamps are HH:MM only.
+dateStrings = regexprep(dateStrings,'^(\\d{4}[-\\./]\\d{2}[-\\./]\\d{2}\\s\\d{1,2}:\\d{1,2})$','$1:00');
+dateStrings = regexprep(dateStrings,'^(\\d{1,2}[-\\./]\\d{1,2}[-\\./]\\d{4}\\s\\d{1,2}:\\d{1,2})$','$1:00');
+
+candidateFormats = {
+    'yyyy-MM-dd HH:mm:ss','yyyy/MM/dd HH:mm:ss','yyyy.MM.dd HH:mm:ss',...
+    'dd-MM-yyyy HH:mm:ss','dd/MM/yyyy HH:mm:ss','dd.MM.yyyy HH:mm:ss',...
+    'd-M-yyyy H:m:s','d/M/yyyy H:m:s','d.M.yyyy H:m:s'};
+
+parsed = false;
+for fi = 1:length(candidateFormats)
+    try
+        tDate = datetime(dateStrings,'InputFormat',candidateFormats{fi},'Format','yyyy-MM-dd HH:mm:ss');
+        if all(~isnat(tDate))
+            mDate = datenum(tDate);
+            parsed = true;
+            break;
+        end
+    catch
     end
 end
-try
-    mDate = datenum(dateStrings,dateFormat);
-catch
-    % fall back to ISO layout if the heuristic fails
-    mDate = datenum(dateStrings,'yyyy-mm-dd HH:MM:SS');
+
+if ~parsed
+    error('Failed to convert from text to date number.');
 end
 %data.Date =  datetime(datacell{1},'InputFormat','yyyy-mm-dd HH:MM:SS');
 mData = str2double(datacell{3});

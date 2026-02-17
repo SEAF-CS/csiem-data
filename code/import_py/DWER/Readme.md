@@ -48,6 +48,7 @@ For A, see:
     \CSIEM\1.7.0\csiem-data\data-warehouse\csv\dwer\csmooring\b\
 
 
+
 ## CSMOORING - WQC (Turbidity Provision)
 > [!NOTE]
 > This dataset is imported by `import_py/DWER/importDWER_CSMooring_WQC.py`.
@@ -64,3 +65,24 @@ For A, see:
 
 ### Processed Data
     \CSIEM\1.7.0\csiem-data\data-warehouse\csv\dwer\csmooring\c\
+
+
+## Data-Warehouse Quality Control CSMooring B:
+
+
+### Chlorophyll-a:
+  - QC thresholds set from the empirical distribution (e.g., central 99% of values); values outside 0 - 7 ug/l were removed.
+  - Modified CSV files: dwermooring6140265_Chlorophyll-a_WQB_DATA
+### Dissolved Oxygen:
+ - 2-11 mg/L
+ - Modified CSV files: dwermooring6140265_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6140266_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6140267_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6140268_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6140269_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6147032_Dissolved_Oxygen_WQB_DATA.csv,dwermooring6147033_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6147036_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6147037_Dissolved_Oxygen_WQB_DATA.csv, dwermooring6140281_Dissolved_Oxygen_WQB_DATA.csv
+### Salinity:
+ - 30-38 PSU
+ - Modified CSV files: dwermooring6140265_Salinity_WQB_DATA.csv, dwermooring6140266_Salinity_WQB_DATA.csv, dwermooring6140267_Salinity_WQB_DATA.csv, dwermooring6140268_Salinity_WQB_DATA.csv, dwermooring6140269_Salinity_WQB_DATA.csv, dwermooring6147032_Salinity_WQB_DATA.csv,dwermooring6147033_Salinity_WQB_DATA.csv, dwermooring6147036_Salinity_WQB_DATA.csv, dwermooring6147037_Salinity_WQB_DATA.csv, dwermooring6140281_Salinity_WQB_DATA.csv
+### Temperature:
+ - 14-28 C
+ - Modified CSV files: dwermooring6140265_Temperature_WQB_DATA.csv, dwermooring6140266_Temperature_WQB_DATA.csv, dwermooring6140267_Temperature_WQB_DATA.csv, dwermooring6140268_Temperature_WQB_DATA.csv, dwermooring6140269_Temperature_WQB_DATA.csv, dwermooring6147032_Temperature_WQB_DATA.csv,dwermooring6147033_Temperature_WQB_DATA.csv, dwermooring6147036_Temperature_WQB_DATA.csv, dwermooring6147037_Temperature_WQB_DATA.csv, dwermooring6140281_Temperature_WQB_DATA.csv 
+
+### pH:
+ - 14-28 C
+ - Modified CSV files: dwermooring6140265_Temperature_WQB_DATA.csv, dwermooring6140266_Temperature_WQB_DATA.csv, dwermooring6140267_Temperature_WQB_DATA.csv, dwermooring6140268_Temperature_WQB_DATA.csv, dwermooring6140269_Temperature_WQB_DATA.csv, dwermooring6147032_Temperature_WQB_DATA.csv,dwermooring6147033_Temperature_WQB_DATA.csv, dwermooring6147036_Temperature_WQB_DATA.csv, dwermooring6147037_Temperature_WQB_DATA.csv, dwermooring6140281_Temperature_WQB_DATA.csv  

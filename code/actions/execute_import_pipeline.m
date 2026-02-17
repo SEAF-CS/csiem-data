@@ -20,7 +20,7 @@ import_dpird = 0;
 import_moorings = 0;%
 import_wamsitheme1 = 0;
 import_theme2 = 0;
-import_theme3 = 1;
+import_theme3 = 0;
 import_wamsitheme4 = 0;
 import_theme5 = 0;
 import_wc = 0;
@@ -49,7 +49,7 @@ import_wamsiwaves = 0;
 
 
 
-create_smd = 1;
+create_smd = 0;
 
 create_single_matfiles = 1;
 create_matfiles = 0;
@@ -78,7 +78,7 @@ if import_dwer
     % DWER Export
     cd ../import/DWER;
     
-    %run_WIR_import_v2;
+    run_WIR_import_v2;
     export_wir_v2_stage1;
     import_and_reformat_flatfile;
     
@@ -470,7 +470,9 @@ end
 
 if create_single_matfiles
     disp('PipeLine Matfiles')
-    csv_2_matfile_tfv_by_agency_single('wamsi');
+    csv_2_matfile_tfv_by_agency_single('dwer');
+    % Comment this line to skip rebuilding data-warehouse/mat/csiem.mat
+    %join_matfiles;
 end
 
 if create_matfiles
@@ -493,7 +495,7 @@ if run_agency_marvl
     for mv = [1 2 0]
 
         addpath(genpath(marvldatapath));
-        create_marvl_config_information_agency(mv,'csiem_WAMSI_public');
+        create_marvl_config_information_agency(mv,'csiem_DWER_public');
         run_AEDmarvl marvl_pipeline_images;
         rmpath(genpath(marvldatapath));
 
@@ -520,6 +522,7 @@ end
 B = toc;
 
 disp(['Total Runtime: ',num2str(B/(60*60)),' Hours']);
+
 
 
 

@@ -11,7 +11,7 @@ sitekey.dwermooring = read_site_sheet('DWERMOORING');
 sitekey.wc = read_site_sheet('WC');
 sitekey.wwmsp5 = read_site_sheet('WWMSP5');
 sitekey.wwmsp2 = read_site_sheet('WWMSP2');
-sitekey.wwmsp3 = read_site_sheet('THEME3CTD');
+sitekey.wwmsp3 = read_site_sheet('WWMSP3.1.4_CTD');
 sitekey.fpamqmp = read_site_sheet('FPA-MQMP');
 sitekey.wwmsp2_seagrass = read_site_sheet('WWMSP2SG');
 
@@ -26,12 +26,12 @@ sitekey.bombarraftv = read_site_sheet('BOM-BARRA');
 sitekey.WWMSP31SedimentDeposition = read_site_sheet('WWMSP3.1-SedimentDeposition');
 sitekey.AIMS = read_site_sheet('AIMS');
 sitekey.DWERPhyto = read_site_sheet('DWERPHYTO');
-sitekey.IMOS_Phytoplankton =read_site_sheet("LachyIMOSPHYTO");
+sitekey.IMOS_Phytoplankton =read_site_sheet('IMOSPHYTO');
 sitekey.WCWA2Phyto = read_site_sheet("WCWA2Phyto");
 sitekey.WCWA3Phyto = read_site_sheet("WCWA3Phyto");
 sitekey.WCWA16Phyto = read_site_sheet("WCWA16Phyto");
 sitekey.SWANEST = read_site_sheet("SWANEST");
-sitekey.VirtualSensors = read_site_sheet("VirtualSensors");
+sitekey.VirtualSensors = read_site_sheet_if_exists('VirtualSensors');
 
 sitekey.IMOSSOOP = read_site_sheet("IMOSSOOP");
 sitekey.WWMSP5ROMS = read_site_sheet("WWMSP5ROMS");
@@ -180,3 +180,16 @@ end
 
 
 
+
+function data = read_site_sheet_if_exists(sheet)
+% Feb 14, 2026: optional sheet loader to keep import aligned with
+% site_key.xlsx variants across versions.
+filename = '../../data-governance/site_key.xlsx';
+[~, sheets] = xlsfinfo(filename);
+if any(strcmpi(sheets, sheet))
+    data = read_site_sheet(sheet);
+else
+    warning('Sheet "%s" not found in site_key.xlsx. Skipping.', sheet);
+    data = struct;
+end
+end
