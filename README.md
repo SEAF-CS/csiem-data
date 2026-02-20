@@ -1,32 +1,42 @@
 # CSIEM environmental data management repository
 
-The goal of the CSIEM environmental data management repository, as presented herein, is to allow compatibility, inter-operability and comparison of these critical data assets. Version control and data governance is required to ensure a comprehensive and integrated modelling platform. 
+This repository supports compatibility, interoperability, and comparison of CSIEM environmental data assets for Cockburn Sound assessments.
 
-A total of 165Gb of environmental data has been compiled for use in environmental assessment of Cockburn Sound.
+The full CSIEM data ecosystem contains approximately 165 GB of data, but the large raw and ingested stores are managed outside this GitHub repository.
 
-<br>
-
-## Structure of the data repository
-
-This data repository is based around the following structure:
+## Repository structure
 
 ```
 csiem-data/
+├── code/             import and processing pipelines (MATLAB + Python)
+├── data-governance/  variable keys, site keys, and catalogue workbooks
+├── data-mapping/     data mapping resources
+├── summary-images/   public summary plots and examples
+├── data-lake/        raw data (not tracked in GitHub)
+└── data-warehouse/   standardized outputs (not tracked in GitHub)
+```
+
+## Reference storage footprint
+
+Approximate size snapshot used by the project:
+
+```
 171M    ./code
 18M     ./data-governance
 31M     ./data-mapping
 165M    ./summary-images
-98G     ./data-lake          ! Raw data not included in this GitHub repository : see access for further information. 
-65G     ./data-warehouse.    ! Ingested (standardised) data not included in this repository : see access for further information. 
-TOTAL = 165G	
+98G     ./data-lake          ! Raw data not included in this GitHub repository : see access for further information.
+65G     ./data-warehouse     ! Ingested (standardised) data not included in this GitHub repository : see access for further information.
+TOTAL = 165G
 ```
 
-<br>
+## Operational references
 
-## Further information
+- Import pipeline catalogue and ingest status: [`code/README.md`](code/README.md)
+- Governance workflows and keys: [`data-governance/`](data-governance)
+- Example compiled data products: [`summary-images/`](summary-images)
 
-Examples of the compiled data-set can be seen in the [summary-images](https://github.com/SEAF-CS/csiem-data/blob/main/summary-images/2013_2024/SAL/0002_CS_KSMid.png) folder.
+## Wiki and documentation
 
-For further information on access, and the controlled vocabularies used in the data-set, please refer to the [Wiki](https://github.com/SEAF-CS/csiem-data/wiki) pages.
-
-For an overaching summary of the data ecosystem, please see the [The Cockburn Sound Integrated Ecosystem Model Manual](https://aquaticecodynamics.github.io/csiem-science/index.html)
+- Project wiki: <https://github.com/SEAF-CS/csiem-data/wiki>
+- CSIEM science manual: <https://aquaticecodynamics.github.io/csiem-science/index.html>

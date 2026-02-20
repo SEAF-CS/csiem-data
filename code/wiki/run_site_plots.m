@@ -13,7 +13,7 @@ if ~exist(outdir,'dir')
     mkdir(outdir);
 end
 
-filename = ['https://github.com/AquaticEcoDynamics/csiem-data/wiki/',agency,'_',project,'_',site];
+filename = ['https://github.com/SEAF-CS/csiem-data/wiki/',agency,'_',project,'_',site];
 
 writefile = ['../../../cseim-data-wiki/',agency,'_',project,'_',site,'.md'];
 
@@ -50,7 +50,7 @@ set(gcf,'paperposition',[0 0 xSize ySize])
 
 saveas(gcf,[outdir,'Map.png']);
 
-txt = ['![Basemap](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/summary/',agency,'/',project,'/',site,'/Map.png "Basemap")'];
+txt = ['![Basemap](https://github.com/SEAF-CS/csiem-data/wiki/images/summary/',agency,'/',project,'/',site,'/Map.png "Basemap")'];
 
 fprintf(fid,'%s\n',txt);            for kkk = 1:2; fprintf(fid,'\n'); end
 
@@ -125,7 +125,7 @@ for j = 1:length(vars)
     
     saveas(gcf,[outdir,seaf.(site).(vars{j}).Variable_ID,'.png']);
     
-    txt = ['![IMage](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/summary/',agency,'/',project,'/',site,'/',seaf.(site).(vars{j}).Variable_ID,'.png "Image")'];
+    txt = ['![IMage](https://github.com/SEAF-CS/csiem-data/wiki/images/summary/',agency,'/',project,'/',site,'/',seaf.(site).(vars{j}).Variable_ID,'.png "Image")'];
 
     fprintf(fid,'%s\n',txt);            for kkk = 1:2; fprintf(fid,'\n'); end
 

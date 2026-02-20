@@ -6,7 +6,7 @@
 | BMT      | BNA                 | Breakwater model output                             | HYDRO              | N                   |                       |                      |
 | BMT      | SWAN                | SWAN model export                                   | HYDRO              | m                   | import/BMT/WP/import_BMT_WP_SWAN.m           | 2025-02-22                    |
 | BOM      | BARRA               | Gridded reanalysis export                           | MET                | m                   | import/BOM/import_BOM_BARRA_TFV.m            | 2025-02-25                       |
-| BOM      | IDO                 | Hillary�s tide station                             | HYDRO             | py                   | import_py/BOM/importBOMIDO.py               | 
+| BOM      | IDO                 | Hillary's tide station                             | HYDRO             | py                   | import_py/BOM/importBOMIDO.py               | 
 | BOM      | IDY                 | Weather stations                                    | MET                | m                                | import/BOM/export_metdata_2_csv.m            | 2025-02-21                     |
 | BOM      | NGIS                | Groundwater data                                    | HYDRO              | N                                |                       |                      |
 | BOM      | RAIN                | Rainfall stations                                   | MET                | N                                |                       |                      |

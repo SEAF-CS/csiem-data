@@ -54,7 +54,7 @@ for i = 1:length(uagencies)
         
         fprintf(sidebar,'- [%s][%s]\n',thecode,comp.(uagencies{i}).Project{j});
         
-        fprintf(sidebar2,'[%s]: %s\n',comp.(uagencies{i}).Project{j},[' https://github.com/AquaticEcoDynamics/csiem-data/wiki/',regexprep(thefilename,'.md','')]);
+        fprintf(sidebar2,'[%s]: %s\n',comp.(uagencies{i}).Project{j},[' https://github.com/SEAF-CS/csiem-data/wiki/',regexprep(thefilename,'.md','')]);
         
         
         
@@ -114,7 +114,7 @@ for i = 1:length(uagencies)
         
         close;
         
-        txt = ['![Basemap](https://github.com/AquaticEcoDynamics/csiem-data/wiki/images/',uagencies{i},'_',comp.(uagencies{i}).Project{j},'.png "Basemap")'];
+        txt = ['![Basemap](https://github.com/SEAF-CS/csiem-data/wiki/images/',uagencies{i},'_',comp.(uagencies{i}).Project{j},'.png "Basemap")'];
         
         
         
