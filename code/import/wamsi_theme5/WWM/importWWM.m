@@ -37,8 +37,7 @@ function importWWM()
 
         SiteStruct = SearchSitelistbyLatLong(SiteListStruct,FileContentsTable{1,3},FileContentsTable{1,2});
         DateVec = FileContentsTable{:,1};
-        %replace / with - "yyyy-mm-dd HH:MM:SS"
-        DateString = regexprep(string(DateVec),'/','-');
+        DateString = parse_wwm_dates(DateVec,filelist(i).name);
         for varIndex = 4:6
             disp(['     Processing Variable ' fileHeaders{varIndex} ' ' num2str(height(FileContentsTable)) 'x1']);
             %workout what variable we are dealing with
@@ -73,6 +72,54 @@ function importWWM()
 
         end
     end
+end
+
+function DateString = parse_wwm_dates(rawDates,sourceFile)
+    if isdatetime(rawDates)
+        parsedDates = rawDates;
+    elseif isnumeric(rawDates)
+        parsedDates = datetime(rawDates,'ConvertFrom','datenum');
+    else
+        dateText = strip(string(rawDates));
+        parsedDates = NaT(size(dateText));
+        inputFormats = { ...
+            'yyyy-MM-dd HH:mm:ss', ...
+            'yyyy/MM/dd HH:mm:ss', ...
+            'dd-MM-yyyy HH:mm:ss', ...
+            'dd/MM/yyyy HH:mm:ss', ...
+            'dd-MM-yyyy HH:mm', ...
+            'dd/MM/yyyy HH:mm', ...
+            'MM-dd-yyyy HH:mm:ss', ...
+            'MM/dd/yyyy HH:mm:ss' ...
+        };
+
+        for ii = 1:length(inputFormats)
+            missing = isnat(parsedDates);
+            if ~any(missing)
+                break
+            end
+            try
+                parsedDates(missing) = datetime(dateText(missing),'InputFormat',inputFormats{ii});
+            catch
+                % Try next format.
+            end
+        end
+
+        missing = isnat(parsedDates);
+        if any(missing)
+            try
+                parsedDates(missing) = datetime(dateText(missing));
+            catch
+                % Keep NaT so we can fail with context below.
+            end
+        end
+
+        if any(isnat(parsedDates))
+            error('Unable to parse %d Date values in %s',sum(isnat(parsedDates)),sourceFile);
+        end
+    end
+
+    DateString = string(parsedDates,'yyyy-MM-dd HH:mm:ss');
 end
 
 function VarStruct = SearchVarlist(VarListStruct,FileHeaders,varIndex)

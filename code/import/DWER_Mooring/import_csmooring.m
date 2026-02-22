@@ -48,17 +48,7 @@
         headers = tab.Properties.VariableNames;
         
         
-        kk = strfind(filelist(i).name,'Par');
-        if isempty(kk)
-            if strcmpi(filelist(i).name,'6147036_Water Quality.csv') == 0
-                mdate = datenum(tab.Date(1:end),'HH:MM:SS dd/mm/yyyy'); 
-                %no longer var1, have actual names now it also now starts at 1 because i told it how big header was
-            else
-                mdate = datenum(tab.Date(1:end));%,'dd/mm/yyyy HH:MM');
-            end
-        else
-            mdate = datenum(tab.Date(1:end));%,'dd/mm/yyyy HH:MM');
-        end
+        mdate = parse_csmooring_dates(tab.Date(1:end), filelist(i).name);
         %sss = find(strcmpi(headers,'Sample Depth (m)') ==1 );
         sss = find(strcmpi(headers,'Sample Depth (m)') ==1 );
 
@@ -294,3 +284,52 @@
 end
 
 
+function mdate = parse_csmooring_dates(rawDates, sourceFile)
+    if isdatetime(rawDates)
+        mdate = datenum(rawDates);
+        return
+    end
+
+    if isnumeric(rawDates)
+        mdate = rawDates;
+        return
+    end
+
+    dateText = strip(string(rawDates));
+    parsedDates = NaT(size(dateText));
+    inputFormats = { ...
+        'HH:mm:ss dd/MM/yyyy', ...
+        'H:mm:ss dd/MM/yyyy', ...
+        'dd/MM/yyyy HH:mm:ss', ...
+        'dd/MM/yyyy H:mm:ss', ...
+        'dd/MM/yyyy HH:mm', ...
+        'dd/MM/yyyy H:mm' ...
+    };
+
+    for ii = 1:length(inputFormats)
+        missing = isnat(parsedDates);
+        if ~any(missing)
+            break
+        end
+        try
+            parsedDates(missing) = datetime(dateText(missing),'InputFormat',inputFormats{ii});
+        catch
+            % Try the next explicit format.
+        end
+    end
+
+    missing = isnat(parsedDates);
+    if any(missing)
+        try
+            parsedDates(missing) = datetime(dateText(missing));
+        catch
+            % Keep NaT so a clear error is raised below.
+        end
+    end
+
+    if any(isnat(parsedDates))
+        error('Unable to parse %d Date values in %s',sum(isnat(parsedDates)),sourceFile);
+    end
+
+    mdate = datenum(parsedDates);
+end
